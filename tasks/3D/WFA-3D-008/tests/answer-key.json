@@ -1,0 +1,1513 @@
+{
+  "task_id": "WFA-3D-008",
+  "seed": 20261032,
+  "note": "All values are AFTER change order CO-01. units: m, deg, frames@24fps.",
+  "rules": {
+    "gauge": 1.435,
+    "platform_edge_offset": 1.75,
+    "signal_offset": 2.5,
+    "mast_offset": 3.0,
+    "bridge_deck_below_rail": 0.35,
+    "fps": 24,
+    "frame_start": 1,
+    "frame_end": 1440
+  },
+  "river": {
+    "axis": "x",
+    "x": 464.1,
+    "width": 24.0
+  },
+  "units": {
+    "D01": {
+      "type": "turnout",
+      "zone": "A",
+      "params": {
+        "hand": "L",
+        "frog": "1:6",
+        "radius": 190.0,
+        "angle_deg": 9.46,
+        "main_length": 30.0,
+        "machine_side": "L"
+      },
+      "geom": {
+        "toe": [
+          -120.0,
+          0.0,
+          0.0
+        ],
+        "toe_heading": 0.0,
+        "main_end": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "div_end": [
+          -88.772,
+          2.584,
+          0.0
+        ],
+        "div_end_heading": 9.46
+      }
+    },
+    "D02": {
+      "type": "turnout",
+      "zone": "A",
+      "params": {
+        "hand": "R",
+        "frog": "1:6",
+        "radius": 190.0,
+        "angle_deg": 9.46,
+        "main_length": 30.0,
+        "machine_side": "L"
+      },
+      "geom": {
+        "toe": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "toe_heading": 180.0,
+        "main_end": [
+          70.0,
+          0.0,
+          0.0
+        ],
+        "div_end": [
+          68.772,
+          2.584,
+          0.0
+        ],
+        "div_end_heading": 170.54
+      }
+    },
+    "D03": {
+      "type": "turnout",
+      "zone": "A",
+      "params": {
+        "hand": "R",
+        "frog": "1:9",
+        "radius": 300.0,
+        "angle_deg": 6.34,
+        "main_length": 30.0,
+        "machine_side": "L"
+      },
+      "geom": {
+        "toe": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "toe_heading": 0.0,
+        "main_end": [
+          130.0,
+          0.0,
+          0.0
+        ],
+        "div_end": [
+          133.128,
+          -1.835,
+          0.0
+        ],
+        "div_end_heading": -6.34
+      }
+    },
+    "T01": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 160.0
+          }
+        ],
+        "z_start": 0.0,
+        "z_end": 0.0,
+        "masts": 7,
+        "mast_side": "L",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "start_heading": 0.0,
+        "end": [
+          70.0,
+          0.0,
+          0.0
+        ],
+        "end_heading": 0.0,
+        "length": 160.0
+      },
+      "zone": "A"
+    },
+    "T02": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 190.0,
+            "angle_deg": 9.46,
+            "dir": "R"
+          },
+          {
+            "type": "straight",
+            "length": 95.09
+          },
+          {
+            "type": "arc",
+            "radius": 190.0,
+            "angle_deg": 9.46,
+            "dir": "R"
+          }
+        ],
+        "z_start": 0.0,
+        "z_end": 0.0,
+        "masts": 2,
+        "mast_side": "L",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          -88.772,
+          2.584,
+          0.0
+        ],
+        "start_heading": 9.46,
+        "end": [
+          68.775,
+          2.584,
+          0.0
+        ],
+        "end_heading": -9.46,
+        "length": 157.831
+      },
+      "zone": "A"
+    },
+    "T03": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 10.0
+          },
+          {
+            "type": "arc",
+            "radius": 60.0,
+            "angle_deg": 90.0,
+            "dir": "L"
+          }
+        ],
+        "z_start": 0.0,
+        "z_end": 3.0,
+        "masts": 7,
+        "mast_side": "L",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          130.0,
+          0.0,
+          0.0
+        ],
+        "start_heading": 0.0,
+        "end": [
+          200.0,
+          60.0,
+          3.0
+        ],
+        "end_heading": 90.0,
+        "length": 104.248
+      },
+      "zone": "B"
+    },
+    "T04": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 20.0
+          },
+          {
+            "type": "arc",
+            "radius": 60.0,
+            "angle_deg": 90.0,
+            "dir": "L"
+          }
+        ],
+        "z_start": 3.0,
+        "z_end": 6.0,
+        "masts": 7,
+        "mast_side": "R",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          200.0,
+          60.0,
+          3.0
+        ],
+        "start_heading": 90.0,
+        "end": [
+          140.0,
+          140.0,
+          6.0
+        ],
+        "end_heading": -180.0,
+        "length": 114.248
+      },
+      "zone": "B"
+    },
+    "T05": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 90.0
+          }
+        ],
+        "z_start": 6.0,
+        "z_end": 6.0,
+        "masts": 7,
+        "mast_side": "L",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          140.0,
+          140.0,
+          6.0
+        ],
+        "start_heading": -180.0,
+        "end": [
+          50.0,
+          140.0,
+          6.0
+        ],
+        "end_heading": -180.0,
+        "length": 90.0
+      },
+      "zone": "C"
+    },
+    "T06": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 40.0
+          }
+        ],
+        "z_start": 6.0,
+        "z_end": 6.0,
+        "masts": 7,
+        "mast_side": "R",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          50.0,
+          140.0,
+          6.0
+        ],
+        "start_heading": -180.0,
+        "end": [
+          10.0,
+          140.0,
+          6.0
+        ],
+        "end_heading": -180.0,
+        "length": 40.0
+      },
+      "zone": "C"
+    },
+    "T07": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 130.0
+          }
+        ],
+        "z_start": 6.0,
+        "z_end": 6.0,
+        "masts": 5,
+        "mast_side": "R",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          10.0,
+          140.0,
+          6.0
+        ],
+        "start_heading": -180.0,
+        "end": [
+          -120.0,
+          140.0,
+          6.0
+        ],
+        "end_heading": -180.0,
+        "length": 130.0
+      },
+      "zone": "C"
+    },
+    "T08": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 70.0,
+            "angle_deg": 90.0,
+            "dir": "L"
+          }
+        ],
+        "z_start": 6.0,
+        "z_end": 3.0,
+        "masts": 6,
+        "mast_side": "R",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          -120.0,
+          140.0,
+          6.0
+        ],
+        "start_heading": -180.0,
+        "end": [
+          -190.0,
+          70.0,
+          3.0
+        ],
+        "end_heading": -90.0,
+        "length": 109.956
+      },
+      "zone": "D"
+    },
+    "T09": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 70.0,
+            "angle_deg": 90.0,
+            "dir": "L"
+          }
+        ],
+        "z_start": 3.0,
+        "z_end": 0.0,
+        "masts": 5,
+        "mast_side": "R",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          -190.0,
+          70.0,
+          3.0
+        ],
+        "start_heading": -90.0,
+        "end": [
+          -120.0,
+          0.0,
+          0.0
+        ],
+        "end_heading": 0.0,
+        "length": 109.956
+      },
+      "zone": "D"
+    },
+    "T10": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 120.0,
+            "angle_deg": 38.66,
+            "dir": "R"
+          },
+          {
+            "type": "straight",
+            "length": 60.0
+          }
+        ],
+        "z_start": 0.0,
+        "z_end": 2.0,
+        "masts": 7,
+        "mast_side": "L",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          133.128,
+          -1.835,
+          0.0
+        ],
+        "start_heading": -6.34,
+        "end": [
+          247.156,
+          -78.674,
+          2.0
+        ],
+        "end_heading": -45.0,
+        "length": 140.969
+      },
+      "zone": "E"
+    },
+    "T11": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "straight",
+            "length": 120.0
+          }
+        ],
+        "z_start": 2.0,
+        "z_end": 4.4,
+        "masts": 5,
+        "mast_side": "R",
+        "sleeper": "wood"
+      },
+      "geom": {
+        "start": [
+          247.156,
+          -78.674,
+          2.0
+        ],
+        "start_heading": -45.0,
+        "end": [
+          332.009,
+          -163.527,
+          4.4
+        ],
+        "end_heading": -45.0,
+        "length": 120.0
+      },
+      "zone": "E"
+    },
+    "T12": {
+      "type": "track",
+      "params": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 200.0,
+            "angle_deg": 30.0,
+            "dir": "L"
+          },
+          {
+            "type": "straight",
+            "length": 150.0
+          }
+        ],
+        "z_start": 4.4,
+        "z_end": 4.4,
+        "masts": 4,
+        "mast_side": "R",
+        "sleeper": "concrete"
+      },
+      "geom": {
+        "start": [
+          332.009,
+          -163.527,
+          4.4
+        ],
+        "start_heading": -45.0,
+        "end": [
+          566.556,
+          -254.114,
+          4.4
+        ],
+        "end_heading": -15.0,
+        "length": 254.72
+      },
+      "zone": "F",
+      "co_changed": true,
+      "params_before_co": {
+        "elements": [
+          {
+            "type": "arc",
+            "radius": 150.0,
+            "angle_deg": 45.0,
+            "dir": "L"
+          },
+          {
+            "type": "straight",
+            "length": 140.0
+          }
+        ]
+      }
+    },
+    "P01": {
+      "type": "platform",
+      "params": {
+        "length": 120.0,
+        "width": 6.0,
+        "height": 1.1,
+        "canopy": "double",
+        "canopy_columns": 8,
+        "benches": 5
+      },
+      "placement": {
+        "section": "T01",
+        "measure": "from_start",
+        "value": 80.0,
+        "side": "R"
+      },
+      "geom": {
+        "center_xy": [
+          -10.0,
+          -4.75
+        ],
+        "top_z": 1.1,
+        "heading_deg": 0.0,
+        "axis_point": [
+          -10.0,
+          0.0
+        ],
+        "chainage": 80.0
+      },
+      "zone": "A",
+      "derived": {
+        "column_rows": 2
+      }
+    },
+    "P02": {
+      "type": "platform",
+      "params": {
+        "length": 80.0,
+        "width": 4.5,
+        "height": 0.9,
+        "canopy": "single",
+        "canopy_columns": 6,
+        "benches": 3
+      },
+      "placement": {
+        "section": "T02",
+        "measure": "from_start",
+        "value": 78.92,
+        "side": "L"
+      },
+      "geom": {
+        "center_xy": [
+          -9.994,
+          9.168
+        ],
+        "top_z": 0.9,
+        "heading_deg": 0.0,
+        "axis_point": [
+          -9.994,
+          5.168
+        ],
+        "chainage": 78.92
+      },
+      "zone": "A",
+      "derived": {
+        "column_rows": 1
+      }
+    },
+    "P03": {
+      "type": "platform",
+      "params": {
+        "length": 60.0,
+        "width": 5.0,
+        "height": 0.55,
+        "canopy": "none",
+        "canopy_columns": 0,
+        "benches": 4
+      },
+      "placement": {
+        "section": "T12",
+        "measure": "from_end",
+        "value": 34.0,
+        "side": "L"
+      },
+      "geom": {
+        "center_xy": [
+          534.814,
+          -241.209
+        ],
+        "top_z": 4.95,
+        "heading_deg": -15.0,
+        "axis_point": [
+          533.714,
+          -245.314
+        ],
+        "chainage": 220.72
+      },
+      "zone": "F",
+      "co_dependent": true,
+      "derived": {
+        "column_rows": 0
+      }
+    },
+    "S01": {
+      "type": "station_building",
+      "params": {
+        "length": 48.0,
+        "depth": 16.0,
+        "floors": 2,
+        "bays": 11,
+        "roof": "hip",
+        "clock_tower": true,
+        "eave": 8.4
+      },
+      "placement": {
+        "section": "T01",
+        "measure": "from_start",
+        "value": 80.0,
+        "side": "R",
+        "facade_offset": 9.75
+      },
+      "geom": {
+        "footprint_center_xy": [
+          -10.0,
+          -17.75
+        ],
+        "heading_deg": 0.0,
+        "chainage": 80.0
+      },
+      "zone": "A",
+      "derived": {
+        "openings": 22
+      }
+    },
+    "S02": {
+      "type": "station_building",
+      "params": {
+        "length": 22.0,
+        "depth": 10.0,
+        "floors": 1,
+        "bays": 5,
+        "roof": "gable",
+        "clock_tower": false,
+        "eave": 4.6
+      },
+      "placement": {
+        "section": "T12",
+        "measure": "from_end",
+        "value": 34.0,
+        "side": "L",
+        "facade_offset": 8.25
+      },
+      "geom": {
+        "footprint_center_xy": [
+          537.143,
+          -232.516
+        ],
+        "heading_deg": -15.0,
+        "chainage": 220.72
+      },
+      "zone": "F",
+      "co_dependent": true,
+      "derived": {
+        "openings": 5
+      }
+    },
+    "X01": {
+      "type": "signal",
+      "params": {
+        "aspects": 3,
+        "colors": [
+          "G",
+          "Y",
+          "R"
+        ],
+        "ladder": true,
+        "height": 6.5
+      },
+      "placement": {
+        "section": "T01",
+        "measure": "from_start",
+        "value": 150.0,
+        "side": "R"
+      },
+      "geom": {
+        "mast_xy": [
+          60.0,
+          -2.5
+        ],
+        "base_z": 0.0,
+        "chainage": 150.0,
+        "track_heading_deg": 0.0
+      },
+      "zone": "A"
+    },
+    "X02": {
+      "type": "signal",
+      "params": {
+        "aspects": 2,
+        "colors": [
+          "G",
+          "R"
+        ],
+        "ladder": false,
+        "height": 5.0
+      },
+      "placement": {
+        "section": "T02",
+        "measure": "from_start",
+        "value": 124.0,
+        "side": "L"
+      },
+      "geom": {
+        "mast_xy": [
+          35.086,
+          7.668
+        ],
+        "base_z": 0.0,
+        "chainage": 124.0,
+        "track_heading_deg": 0.0
+      },
+      "zone": "A"
+    },
+    "X03": {
+      "type": "signal",
+      "params": {
+        "aspects": 4,
+        "colors": [
+          "Y",
+          "G",
+          "R",
+          "Y"
+        ],
+        "ladder": true,
+        "height": 7.5
+      },
+      "placement": {
+        "section": "T04",
+        "measure": "from_start",
+        "value": 10.0,
+        "side": "R"
+      },
+      "geom": {
+        "mast_xy": [
+          202.5,
+          70.0
+        ],
+        "base_z": 3.263,
+        "chainage": 10.0,
+        "track_heading_deg": 90.0
+      },
+      "zone": "B"
+    },
+    "X04": {
+      "type": "signal",
+      "params": {
+        "aspects": 3,
+        "colors": [
+          "Y",
+          "G",
+          "R"
+        ],
+        "ladder": false,
+        "height": 6.0
+      },
+      "placement": {
+        "section": "T09",
+        "measure": "from_start",
+        "value": 60.0,
+        "side": "R"
+      },
+      "geom": {
+        "mast_xy": [
+          -167.459,
+          15.192
+        ],
+        "base_z": 1.363,
+        "chainage": 60.0,
+        "track_heading_deg": -40.89
+      },
+      "zone": "D"
+    },
+    "X05": {
+      "type": "signal",
+      "params": {
+        "aspects": 2,
+        "colors": [
+          "Y",
+          "R"
+        ],
+        "ladder": true,
+        "height": 4.5
+      },
+      "placement": {
+        "section": "T12",
+        "measure": "from_end",
+        "value": 70.0,
+        "side": "R"
+      },
+      "geom": {
+        "mast_xy": [
+          498.294,
+          -238.411
+        ],
+        "base_z": 4.4,
+        "chainage": 184.72,
+        "track_heading_deg": -15.0
+      },
+      "zone": "F",
+      "co_dependent": true
+    },
+    "G01": {
+      "type": "tunnel_portal",
+      "params": {
+        "shape": "semicircular",
+        "voussoirs": 13,
+        "wing_walls": "splayed",
+        "open_w": 6.0,
+        "open_h": 7.2,
+        "face_w": 14.0,
+        "face_h": 10.0
+      },
+      "placement": {
+        "section": "T11",
+        "measure": "from_start",
+        "value": 20.0
+      },
+      "geom": {
+        "center_xy": [
+          261.298,
+          -92.817
+        ],
+        "rail_z": 2.4,
+        "face_normal_heading_deg": -45.0,
+        "chainage": 20.0
+      },
+      "zone": "E"
+    },
+    "G02": {
+      "type": "tunnel_portal",
+      "params": {
+        "shape": "horseshoe",
+        "voussoirs": 11,
+        "wing_walls": "straight",
+        "open_w": 6.0,
+        "open_h": 7.0,
+        "face_w": 12.0,
+        "face_h": 11.0
+      },
+      "placement": {
+        "section": "T11",
+        "measure": "from_start",
+        "value": 100.0
+      },
+      "geom": {
+        "center_xy": [
+          317.867,
+          -149.385
+        ],
+        "rail_z": 4.0,
+        "face_normal_heading_deg": -45.0,
+        "chainage": 100.0
+      },
+      "zone": "E"
+    },
+    "B01": {
+      "type": "bridge",
+      "params": {
+        "type": "warren_through",
+        "spans": 2,
+        "panels_per_span": 6,
+        "piers": 1,
+        "length": 40.0,
+        "width": 6.0,
+        "truss_h": 6.0
+      },
+      "placement": {
+        "section": "T06",
+        "measure": "from_start",
+        "value": 20.0
+      },
+      "geom": {
+        "center_xy": [
+          30.0,
+          140.0
+        ],
+        "deck_top_z": 5.65,
+        "heading_deg": -180.0,
+        "chainage": 20.0
+      },
+      "zone": "C",
+      "derived": {
+        "diag_islands": 48,
+        "note": "2 diagonals per panel x 2 truss planes"
+      }
+    },
+    "B02": {
+      "type": "bridge",
+      "params": {
+        "type": "stone_arch_deck",
+        "spans": 3,
+        "panels_per_span": 0,
+        "piers": 2,
+        "length": 48.0,
+        "width": 6.5,
+        "truss_h": 0.0
+      },
+      "placement": {
+        "section": "T12",
+        "measure": "river_crossing",
+        "value": null
+      },
+      "geom": {
+        "center_xy": [
+          464.1,
+          -226.661
+        ],
+        "deck_top_z": 4.05,
+        "heading_deg": -15.0,
+        "chainage": 148.65
+      },
+      "zone": "F",
+      "co_dependent": true,
+      "derived": {
+        "arch_islands": 3
+      }
+    },
+    "R1": {
+      "type": "train",
+      "params": {
+        "loco_type": "diesel",
+        "loco_axles": 6,
+        "n_vehicles": 5,
+        "vehicles": [
+          {
+            "id": "R1_V01",
+            "kind": "loco",
+            "length": 16.0,
+            "color": "#B22222"
+          },
+          {
+            "id": "R1_V02",
+            "kind": "coach",
+            "length": 14.0,
+            "color": "#F2E6C9"
+          },
+          {
+            "id": "R1_V03",
+            "kind": "coach",
+            "length": 14.0,
+            "color": "#B22222"
+          },
+          {
+            "id": "R1_V04",
+            "kind": "coach",
+            "length": 14.0,
+            "color": "#F2E6C9"
+          },
+          {
+            "id": "R1_V05",
+            "kind": "coach",
+            "length": 14.0,
+            "color": "#B22222"
+          }
+        ],
+        "total_length": 72.0
+      },
+      "zone": "R"
+    },
+    "R2": {
+      "type": "train",
+      "params": {
+        "loco_type": "steam",
+        "loco_axles": 4,
+        "n_vehicles": 5,
+        "vehicles": [
+          {
+            "id": "R2_V01",
+            "kind": "loco",
+            "length": 12.0,
+            "color": "#1C1C1C"
+          },
+          {
+            "id": "R2_V02",
+            "kind": "tender",
+            "length": 7.0,
+            "color": "#1C1C1C"
+          },
+          {
+            "id": "R2_V03",
+            "kind": "coach",
+            "length": 12.0,
+            "color": "#2E5E3A"
+          },
+          {
+            "id": "R2_V04",
+            "kind": "coach",
+            "length": 12.0,
+            "color": "#2E5E3A"
+          },
+          {
+            "id": "R2_V05",
+            "kind": "coach",
+            "length": 12.0,
+            "color": "#7A4A2A"
+          }
+        ],
+        "total_length": 55.0
+      },
+      "zone": "R"
+    },
+    "R3": {
+      "type": "train",
+      "params": {
+        "loco_type": "railcar",
+        "loco_axles": 4,
+        "n_vehicles": 2,
+        "vehicles": [
+          {
+            "id": "R3_V01",
+            "kind": "railcar",
+            "length": 18.0,
+            "color": "#E0A526"
+          },
+          {
+            "id": "R3_V02",
+            "kind": "railcar",
+            "length": 18.0,
+            "color": "#2B5FA8"
+          }
+        ],
+        "total_length": 36.0
+      },
+      "zone": "R"
+    }
+  },
+  "interfaces": [
+    {
+      "a": "D01.main_end",
+      "b": "T01.start",
+      "xyz": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T01.end",
+      "b": "D02.main_end",
+      "xyz": [
+        70.0,
+        0.0,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "D01.div_end",
+      "b": "T02.start",
+      "xyz": [
+        -88.772,
+        2.584,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T02.end",
+      "b": "D02.div_end",
+      "xyz": [
+        68.775,
+        2.584,
+        0.0
+      ],
+      "closure_err_m": 0.003
+    },
+    {
+      "a": "D02.toe",
+      "b": "D03.toe",
+      "xyz": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "D03.main_end",
+      "b": "T03.start",
+      "xyz": [
+        130.0,
+        0.0,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T03.end",
+      "b": "T04.start",
+      "xyz": [
+        200.0,
+        60.0,
+        3.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T04.end",
+      "b": "T05.start",
+      "xyz": [
+        140.0,
+        140.0,
+        6.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T05.end",
+      "b": "T06.start",
+      "xyz": [
+        50.0,
+        140.0,
+        6.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T06.end",
+      "b": "T07.start",
+      "xyz": [
+        10.0,
+        140.0,
+        6.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T07.end",
+      "b": "T08.start",
+      "xyz": [
+        -120.0,
+        140.0,
+        6.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T08.end",
+      "b": "T09.start",
+      "xyz": [
+        -190.0,
+        70.0,
+        3.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T09.end",
+      "b": "D01.toe",
+      "xyz": [
+        -120.0,
+        0.0,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "D03.div_end",
+      "b": "T10.start",
+      "xyz": [
+        133.128,
+        -1.835,
+        0.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T10.end",
+      "b": "T11.start",
+      "xyz": [
+        247.156,
+        -78.674,
+        2.0
+      ],
+      "closure_err_m": 0.0
+    },
+    {
+      "a": "T11.end",
+      "b": "T12.start",
+      "xyz": [
+        332.009,
+        -163.527,
+        4.4
+      ],
+      "closure_err_m": 0.0
+    }
+  ],
+  "timetable": [
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": null,
+      "dep": 48,
+      "platform_center_xy": [
+        -10.0,
+        -4.75
+      ],
+      "dwell_ref_xy": [
+        -10.0,
+        0.0
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": 720,
+      "dep": 816,
+      "platform_center_xy": [
+        -10.0,
+        -4.75
+      ],
+      "dwell_ref_xy": [
+        -10.0,
+        0.0
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": 1392,
+      "dep": null,
+      "platform_center_xy": [
+        -10.0,
+        -4.75
+      ],
+      "dwell_ref_xy": [
+        -10.0,
+        0.0
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R2",
+      "platform": "P02",
+      "arr": null,
+      "dep": 648,
+      "platform_center_xy": [
+        -9.994,
+        9.168
+      ],
+      "dwell_ref_xy": [
+        -9.994,
+        5.168
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R2",
+      "platform": "P02",
+      "arr": 1236,
+      "dep": null,
+      "platform_center_xy": [
+        -9.994,
+        9.168
+      ],
+      "dwell_ref_xy": [
+        -9.994,
+        5.168
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R3",
+      "platform": "P03",
+      "arr": null,
+      "dep": 96,
+      "platform_center_xy": [
+        534.814,
+        -241.209
+      ],
+      "dwell_ref_xy": [
+        533.714,
+        -245.314
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R3",
+      "platform": "P01",
+      "arr": 432,
+      "dep": 516,
+      "platform_center_xy": [
+        -10.0,
+        -4.75
+      ],
+      "dwell_ref_xy": [
+        -10.0,
+        0.0
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    },
+    {
+      "train": "R3",
+      "platform": "P03",
+      "arr": 888,
+      "dep": null,
+      "platform_center_xy": [
+        534.814,
+        -241.209
+      ],
+      "dwell_ref_xy": [
+        533.714,
+        -245.314
+      ],
+      "dwell_ref_note": "checks compare the train midpoint with dwell_ref_xy = projection of the platform midpoint on the track centreline (units.<P>.geom.axis_point); platform_center_xy is the deck centre, off the track"
+    }
+  ],
+  "zones": {
+    "A": {
+      "name_zh": "枢纽站场",
+      "name_en": "Hub yard",
+      "units": [
+        "D01",
+        "D02",
+        "D03",
+        "T01",
+        "T02",
+        "P01",
+        "P02",
+        "S01",
+        "X01",
+        "X02"
+      ]
+    },
+    "B": {
+      "name_zh": "东环爬坡",
+      "name_en": "East climb",
+      "units": [
+        "T03",
+        "T04",
+        "X03"
+      ]
+    },
+    "C": {
+      "name_zh": "北线与涧桥",
+      "name_en": "North line & creek bridge",
+      "units": [
+        "T05",
+        "T06",
+        "T07",
+        "B01"
+      ]
+    },
+    "D": {
+      "name_zh": "西环下坡",
+      "name_en": "West descent",
+      "units": [
+        "T08",
+        "T09",
+        "X04"
+      ]
+    },
+    "E": {
+      "name_zh": "支线与隧道",
+      "name_en": "Branch & tunnel",
+      "units": [
+        "T10",
+        "T11",
+        "G01",
+        "G02"
+      ]
+    },
+    "F": {
+      "name_zh": "河桥与终点站",
+      "name_en": "River bridge & terminus",
+      "units": [
+        "T12",
+        "B02",
+        "P03",
+        "S02",
+        "X05"
+      ]
+    },
+    "R": {
+      "name_zh": "列车",
+      "name_en": "Trains",
+      "units": [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    }
+  },
+  "stale_before_co": {
+    "P03": [
+      544.075,
+      -203.211
+    ],
+    "B02": [
+      464.1,
+      -207.461
+    ],
+    "T12_end": [
+      578.075,
+      -207.461
+    ]
+  },
+  "timetable_before_co": [
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": null,
+      "dep": 48
+    },
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": 720,
+      "dep": 816
+    },
+    {
+      "train": "R1",
+      "platform": "P01",
+      "arr": 1392,
+      "dep": null
+    },
+    {
+      "train": "R2",
+      "platform": "P02",
+      "arr": null,
+      "dep": 600
+    },
+    {
+      "train": "R2",
+      "platform": "P02",
+      "arr": 1200,
+      "dep": null
+    },
+    {
+      "train": "R3",
+      "platform": "P03",
+      "arr": null,
+      "dep": 72
+    },
+    {
+      "train": "R3",
+      "platform": "P01",
+      "arr": 400,
+      "dep": 480
+    },
+    {
+      "train": "R3",
+      "platform": "P03",
+      "arr": 820,
+      "dep": null
+    }
+  ]
+}

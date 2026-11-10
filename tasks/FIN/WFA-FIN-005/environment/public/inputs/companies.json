@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "NET",
+    "company_name": "Cloudflare, Inc.",
+    "filing": "NET.html"
+  },
+  {
+    "ticker": "HUBS",
+    "company_name": "HUBSPOT INC",
+    "filing": "HUBS.html"
+  },
+  {
+    "ticker": "U",
+    "company_name": "Unity Software Inc.",
+    "filing": "U.html"
+  },
+  {
+    "ticker": "BL",
+    "company_name": "BLACKLINE, INC.",
+    "filing": "BL.html"
+  },
+  {
+    "ticker": "AKAM",
+    "company_name": "AKAMAI TECHNOLOGIES INC",
+    "filing": "AKAM.html"
+  },
+  {
+    "ticker": "PEGA",
+    "company_name": "PEGASYSTEMS INC",
+    "filing": "PEGA.html"
+  },
+  {
+    "ticker": "QLYS",
+    "company_name": "QUALYS, INC.",
+    "filing": "QLYS.html"
+  },
+  {
+    "ticker": "TENB",
+    "company_name": "Tenable Holdings, Inc.",
+    "filing": "TENB.html"
+  },
+  {
+    "ticker": "VRNS",
+    "company_name": "VARONIS SYSTEMS INC",
+    "filing": "VRNS.html"
+  },
+  {
+    "ticker": "WK",
+    "company_name": "WORKIVA INC",
+    "filing": "WK.html"
+  },
+  {
+    "ticker": "BSY",
+    "company_name": "BENTLEY SYSTEMS INC",
+    "filing": "BSY.html"
+  },
+  {
+    "ticker": "FIVN",
+    "company_name": "Five9, Inc.",
+    "filing": "FIVN.html"
+  }
+]

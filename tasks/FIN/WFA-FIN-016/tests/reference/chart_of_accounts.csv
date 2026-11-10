@@ -1,0 +1,59 @@
+account,name,type,consolidation_only
+1000,Cash and cash equivalents,asset,no
+1100,Accounts receivable - trade,asset,no
+1150,Allowance for doubtful accounts,asset,no
+1200,Due from affiliates - trade,asset,no
+1250,Loans to affiliates,asset,no
+1260,Interest receivable - affiliates,asset,no
+1270,Dividends receivable - affiliates,asset,no
+1300,Inventory,asset,no
+1400,Prepaid expenses,asset,no
+1500,Investments in subsidiaries,asset,no
+1600,Land,asset,no
+1610,Buildings,asset,no
+1620,Machinery and equipment,asset,no
+1650,Accumulated depreciation,asset,no
+1700,Intangible assets,asset,yes
+1750,Accumulated amortization,asset,yes
+1800,Goodwill,asset,yes
+2000,Accounts payable - trade,liability,no
+2100,Due to affiliates - trade,liability,no
+2150,Loans from affiliates,liability,no
+2160,Interest payable - affiliates,liability,no
+2200,Accrued liabilities,liability,no
+2250,Dividends payable,liability,no
+2300,Income tax payable,liability,no
+2350,Sales tax / VAT payable,liability,no
+2400,Bank borrowings,liability,no
+2600,Contingent consideration liability,liability,no
+3000,Common stock,equity,no
+3100,Additional paid-in capital,equity,no
+3200,Retained earnings,equity,no
+3300,Dividends declared,equity,no
+3400,Accumulated OCI - cumulative translation adjustment,equity,yes
+3500,Non-controlling interests,equity,yes
+3550,Net income attributable to non-controlling interests,equity,yes
+4000,Sales - external,revenue,no
+4100,Sales - affiliates,revenue,no
+4200,Management fee income - affiliates,revenue,no
+4300,Interest income - affiliates,revenue,no
+4310,Interest income - bank,revenue,no
+4400,Dividend income - affiliates,revenue,no
+4500,Gain on disposal of equipment,revenue,no
+4600,Change in fair value of contingent consideration,revenue,no
+5000,Cost of goods sold,expense,no
+6000,Salaries and wages,expense,no
+6100,Rent,expense,no
+6200,Utilities,expense,no
+6300,Marketing,expense,no
+6400,Depreciation,expense,no
+6500,Amortization of intangibles,expense,yes
+6600,Management fee expense - affiliates,expense,no
+6700,Professional fees,expense,no
+6750,Insurance,expense,no
+6800,Bad debt expense,expense,no
+6900,Other operating expenses,expense,no
+7000,Interest expense - bank,expense,no
+7100,Interest expense - affiliates,expense,no
+7200,Foreign exchange (gain) loss,expense,no
+8000,Income tax expense,expense,no

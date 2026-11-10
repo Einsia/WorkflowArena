@@ -1,0 +1,381 @@
+{
+  "task_id": "WFA-LAW-018",
+  "source": {
+    "dataset": "MultiLJP (CURRENTF/HRN dataset-v5, data_v5.03)",
+    "record": "train-8801"
+  },
+  "ungraded_circumstances": [],
+  "corrections": [
+    "H: 补寻衅滋事罪、开设赌场罪（依照条文含293、303）",
+    "I: 补开设赌场罪；补未成年",
+    "程X 为匿名化遗漏的同案被告人，不要求作答",
+    "probation: 依照条文中 F 含第七十二条 → 缓刑；H/I/B/D/C/E/A 依照条文无72条 → 否"
+  ],
+  "defendants": {
+    "[被告A]": {
+      "original_code": "[被告E]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 15,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "累犯",
+          "从犯"
+        ],
+        "term": "有期徒刑一年零三个月"
+      }
+    },
+    "[被告B]": {
+      "original_code": "[被告D]",
+      "charges": [
+        "聚众斗殴罪",
+        "故意伤害罪"
+      ],
+      "articles": [
+        234,
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯",
+        "故意伤害罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 15,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "故意伤害罪"
+        ],
+        "laws": [
+          292,
+          234
+        ],
+        "states": [
+          "累犯",
+          "从犯"
+        ],
+        "term": "有期徒刑一年零三个月"
+      }
+    },
+    "[被告C]": {
+      "original_code": "[被告F]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "拘役",
+        "months": 3,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "拘役三个月，"
+      }
+    },
+    "[被告D]": {
+      "original_code": "[被告B]",
+      "charges": [
+        "寻衅滋事罪",
+        "开设赌场罪"
+      ],
+      "articles": [
+        293,
+        303
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯",
+        "开设赌场罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 18,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪",
+          "开设赌场罪"
+        ],
+        "laws": [
+          293,
+          303
+        ],
+        "states": [
+          "累犯"
+        ],
+        "term": "有期徒刑一年零六个月"
+      }
+    },
+    "[被告E]": {
+      "original_code": "[被告G]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "拘役",
+        "months": 1,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "拘役一个月"
+      }
+    },
+    "[被告F]": {
+      "original_code": "[被告C]",
+      "charges": [
+        "寻衅滋事罪",
+        "故意伤害罪",
+        "开设赌场罪"
+      ],
+      "articles": [
+        234,
+        293,
+        303
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯",
+        "故意伤害罪": "从犯",
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 12,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪",
+          "故意伤害罪",
+          "开设赌场罪"
+        ],
+        "laws": [
+          293,
+          234,
+          303
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "有期徒刑一年"
+      }
+    },
+    "[被告G]": {
+      "original_code": "[被告H]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪",
+        "故意伤害罪",
+        "开设赌场罪"
+      ],
+      "articles": [
+        234,
+        292,
+        293,
+        303
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯",
+        "寻衅滋事罪": "从犯",
+        "故意伤害罪": "从犯",
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 44,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "故意伤害罪"
+        ],
+        "laws": [
+          292,
+          234
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "有期徒刑三年零八个月"
+      }
+    },
+    "[被告H]": {
+      "original_code": "[被告I]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪",
+        "故意伤害罪",
+        "开设赌场罪"
+      ],
+      "articles": [
+        234,
+        292,
+        293,
+        303
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯",
+        "寻衅滋事罪": "不区分",
+        "故意伤害罪": "从犯",
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "未成年"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 32,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [
+        "寻衅滋事两起中一起主犯一起从犯 → 不计分"
+      ],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪",
+          "故意伤害罪"
+        ],
+        "laws": [
+          292,
+          293,
+          234
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "有期徒刑二年零八个月"
+      }
+    },
+    "[被告I]": {
+      "original_code": "[被告A]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 10,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "有期徒刑十个月"
+      }
+    }
+  }
+}

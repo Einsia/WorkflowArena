@@ -1,0 +1,18 @@
+{
+  "task_id": "WFA-SCI-013",
+  "sources": [
+    {
+      "what": "paper",
+      "url": "https://doi.org/10.1038/s41524-020-00362-y"
+    },
+    {
+      "what": "author repository",
+      "url": "https://github.com/CJBartel/TestStabilityML",
+      "tarball_sha256": "3240bc95ba7d67714f85037bddfb5e9742a18f15a398f0b43abab44b5c7ac50a",
+      "retrieved": "2026-10-23",
+      "commit": "4559c918da8edecea12f86774910b17cae3c7a09",
+      "commit_date": "2020-07-12",
+      "pinned_by": "P2 2026-10-24 (git clone, master HEAD)"
+    }
+  ]
+}

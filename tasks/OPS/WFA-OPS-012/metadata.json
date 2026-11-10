@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-OPS-012",
+  "domain": "OPS",
+  "task_form": "OPS-XSYS",
+  "title": "Information rights desk",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "authored_scenario_on_real_public_records",
+    "url": "",
+    "revision": "",
+    "license": "Supplier and counterparty names from UK public bodies' published spend-over-£500 returns. Per-source evidence in provenance/licenses/LEDGER.json (A = publisher CKAN metadata, B = data.gov.uk catalogue, C = publisher page, D = no licence declared)."
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

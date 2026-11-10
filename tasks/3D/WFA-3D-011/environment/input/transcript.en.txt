@@ -1,0 +1,3 @@
+line_door (Lin): Grandma, I'm home.
+line_warn (Mei): Careful, it's hot.
+line_thanks (Lin): Thanks. It smells great.

@@ -1,0 +1,57 @@
+[
+  {
+    "ticker": "PLD",
+    "company_name": "Prologis, Inc.",
+    "filing": "PLD.html"
+  },
+  {
+    "ticker": "EQIX",
+    "company_name": "EQUINIX INC",
+    "filing": "EQIX.html"
+  },
+  {
+    "ticker": "WELL",
+    "company_name": "WELLTOWER INC.",
+    "filing": "WELL.html"
+  },
+  {
+    "ticker": "ARE",
+    "company_name": "ALEXANDRIA REAL ESTATE EQUITIES, INC.",
+    "filing": "ARE.html"
+  },
+  {
+    "ticker": "EXR",
+    "company_name": "Extra Space Storage Inc.",
+    "filing": "EXR.html"
+  },
+  {
+    "ticker": "KIM",
+    "company_name": "KIMCO REALTY CORP",
+    "filing": "KIM.html"
+  },
+  {
+    "ticker": "HST",
+    "company_name": "HOST HOTELS & RESORTS, INC.",
+    "filing": "HST.html"
+  },
+  {
+    "ticker": "FRT",
+    "company_name": "FEDERAL REALTY INVESTMENT TRUST",
+    "filing": "FRT.html"
+  },
+  {
+    "ticker": "REXR",
+    "company_name": "Rexford Industrial Realty, Inc.",
+    "filing": "REXR.html"
+  },
+  {
+    "ticker": "STAG",
+    "company_name": "STAG Industrial, Inc.",
+    "filing": "STAG.html"
+  },
+  {
+    "ticker": "BRX",
+    "company_name": "Brixmor Property Group Inc.",
+    "filing": "BRX.html"
+  }
+]

@@ -1,0 +1,35 @@
+{
+ "cwd": "/app",
+ "runner": "pytest",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 2400,
+   "framework": "pytest",
+   "runner": "pytest",
+   "command": [
+    "bash", "-lc",
+    "cd /app && PYTHONPATH=/app:/tests python -m pytest $(cat /tests/f1-files.txt) -p leafids -p no:cacheprovider -q --continue-on-collection-errors 2>&1 | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the model layer's own acceptance surface: the 36 test modules whose subject is one of the eight carved files, restored by the verifier"
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 2400,
+   "framework": "pytest",
+   "runner": "pytest",
+   "command": [
+    "bash", "-lc",
+    "cd /app && PYTHONPATH=/app:/tests python -m pytest $(cat /tests/p2p-files.txt) -p leafids -p no:cacheprovider -q --continue-on-collection-errors 2>&1 | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "the retained modules -- constrained types, networks, colour, _internal, the vendored v1 tree, the plugin and experimental packages, the mypy plugin -- which reach the carved layer only as consumers; green on the reference implementation and scored for regressions"
+  }
+ ]
+}

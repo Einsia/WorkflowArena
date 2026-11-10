@@ -1,0 +1,22 @@
+{
+  "task_id": "WFA-SCI-009",
+  "sources": [
+    {
+      "what": "paper",
+      "url": "https://doi.org/10.1038/s42254-023-00655-3",
+      "arxiv": "2305.17274"
+    },
+    {
+      "what": "data+scripts",
+      "url": "https://archive.materialscloud.org/records/yf0rj-w3r97/files/ACWF-verification-data-and-scripts.zip",
+      "md5": "6bd97a883b439507d0be4638c1bc7514",
+      "sha256": "b92255790ce222c6d6f429e907819cb6e8903b4bcd2592609d9d34ec4feb9242",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "what": "pseudopotentials",
+      "url": "https://archive.materialscloud.org/records/rcyfm-68h65/files/SSSP_1.3.0_PBE_precision.tar.gz",
+      "md5": "fde94756886f32ada7bf597547557eb5"
+    }
+  ]
+}

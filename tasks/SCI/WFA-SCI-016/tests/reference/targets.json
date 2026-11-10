@@ -1,0 +1,96 @@
+{
+  "task_id": "WFA-SCI-016",
+  "full_success": {
+    "min_targets_passed": 5
+  },
+  "targets": [
+    {
+      "id": "T1",
+      "file": "T1_alpha.csv",
+      "mode": "cells",
+      "keys": [
+        "stimset",
+        "recording"
+      ],
+      "values": {
+        "alpha": {
+          "atol": 0.05
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T2",
+      "file": "T2_stimvar.csv",
+      "mode": "cells",
+      "keys": [
+        "stimset",
+        "recording"
+      ],
+      "values": {
+        "stim_var_fraction": {
+          "atol": 0.01
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T3",
+      "file": "T3_spectrum.csv",
+      "mode": "series",
+      "keys": [
+        "pc"
+      ],
+      "group": "recording",
+      "value": "log10_var",
+      "corr_min": 0.98,
+      "rmse_max": 0.15,
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T4",
+      "file": "T4_decoding.csv",
+      "mode": "cells",
+      "keys": [
+        "recording",
+        "n_neurons"
+      ],
+      "values": {
+        "accuracy": {
+          "atol": 0.03
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T5",
+      "file": "T5_alpha_vs_spont_pcs.csv",
+      "mode": "cells",
+      "keys": [
+        "recording",
+        "n_spont_pcs_removed"
+      ],
+      "values": {
+        "alpha": {
+          "atol": 0.06
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T6",
+      "file": "T6_natimg32_cumvar.csv",
+      "mode": "cells",
+      "keys": [
+        "recording",
+        "pc"
+      ],
+      "values": {
+        "cum_var_fraction": {
+          "atol": 0.03
+        }
+      },
+      "pass_frac": 0.85
+    }
+  ]
+}

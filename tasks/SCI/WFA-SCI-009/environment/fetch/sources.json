@@ -1,0 +1,542 @@
+{
+  "distribution": "upstream-fetch",
+  "archives": [
+    {
+      "url": "https://archive.materialscloud.org/records/rcyfm-68h65/files/SSSP_1.3.0_PBE_precision.tar.gz?download=1",
+      "archive": "acwf_SSSP_1.3.0_PBE_precision.tar.gz",
+      "sha256": "d91db6b4b3788501d535a5b84ebabf3859ea3e3ac6ea154c4be3718da50f0c85",
+      "format": "tar.gz",
+      "transform": "identity",
+      "files": [
+        {
+          "member": "./Zr_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Zr_pbe_v1.uspp.F.UPF",
+          "sha256": "d56e2997788a4b3d90bb829416161ff9eb6ccdfe377cb52acfbdd2175f4b4acf"
+        },
+        {
+          "member": "./B_pbe_v1.01.uspp.F.UPF",
+          "target": "pseudos/B_pbe_v1.01.uspp.F.UPF",
+          "sha256": "7a1249cabd9c3afd7708ab1d8a10faa8f9b432831d9d2ec91ec23859e2ee0c17"
+        },
+        {
+          "member": "./In.pbe-dn-rrkjus_psl.0.2.2.UPF",
+          "target": "pseudos/In.pbe-dn-rrkjus_psl.0.2.2.UPF",
+          "sha256": "ac76860606654bf63d2950129329ee50267d50ad92296728a7d42e9355bcfb39"
+        },
+        {
+          "member": "./Na.paw.z_9.ld1.psl.v1.0.0-low.upf",
+          "target": "pseudos/Na.paw.z_9.ld1.psl.v1.0.0-low.upf",
+          "sha256": "0ca410cdc5e02c4907346d683cf086bf0c1d6a088f476aebd2d1c877043c2e8e"
+        },
+        {
+          "member": "./Sr_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Sr_pbe_v1.uspp.F.UPF",
+          "sha256": "292f7f1da5cae4b18da817ab2e82943ad90e74f267a06a6172db8dbcb6edf0ce"
+        },
+        {
+          "member": "./Rh_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Rh_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "e9b88f5513e25cd2833cd4587d2d34b46dd0be86aaa0e7b00404147510a87504"
+        },
+        {
+          "member": "./v_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/v_pbe_v1.4.uspp.F.UPF",
+          "sha256": "4fc8afef98a911c82908fb9142edf71b2f598dd98762b355a6d291d834fb6d0c"
+        },
+        {
+          "member": "./Re_pbe_v1.2.uspp.F.UPF",
+          "target": "pseudos/Re_pbe_v1.2.uspp.F.UPF",
+          "sha256": "61146e72676c25b08fce566316216ce8c1e4ec1317f418513daf36e6e52a65eb"
+        },
+        {
+          "member": "./Sn_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Sn_pbe_v1.uspp.F.UPF",
+          "sha256": "2985a215143f6458f0a627315a843123d534bff482dc09b40415af4605359431"
+        },
+        {
+          "member": "./Pt.pbe-spfn-rrkjus_psl.1.0.0.UPF",
+          "target": "pseudos/Pt.pbe-spfn-rrkjus_psl.1.0.0.UPF",
+          "sha256": "08199992ba773f9fb708a9a33d360df089d3dc82a620accfdebdaad86634fe21"
+        },
+        {
+          "member": "./Y_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Y_pbe_v1.uspp.F.UPF",
+          "sha256": "5be8c6f04a4624425acd919bf34103b4498606638e23b0adb6386ce4f6fc86fc"
+        },
+        {
+          "member": "./Th.paw.z_12.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Th.paw.z_12.ld1.uni-marburg.v0.upf",
+          "sha256": "49ca7222bde3238b4a06d01f8a4cc5908f11a1f11681684b16b107600e15c96c"
+        },
+        {
+          "member": "./As.nc.z_15.oncvpsp3.dojo.v4-std.upf",
+          "target": "pseudos/As.nc.z_15.oncvpsp3.dojo.v4-std.upf",
+          "sha256": "39d557b0496b28f758c2e3e5c0bafa35c8095b7fd72ec30cb3f912c3f0c0f68f"
+        },
+        {
+          "member": "./Cd.paw.z_20.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Cd.paw.z_20.ld1.psl.v1.0.0-high.upf",
+          "sha256": "2fa874218b9c9ad6b65fdbd87e80a7cc6ffaa26aea6131726f889b6bac399a93"
+        },
+        {
+          "member": "./ni_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/ni_pbe_v1.4.uspp.F.UPF",
+          "sha256": "f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25"
+        },
+        {
+          "member": "./Fr.paw.z_19.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Fr.paw.z_19.ld1.psl.v1.0.0-high.upf",
+          "sha256": "ff14b36a6bb5eef48a88a2dac5b8f1624f583936423fa3c1ab982aec6fc307b1"
+        },
+        {
+          "member": "./Gd.paw.z_18.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Gd.paw.z_18.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "ef4295b158490f8742559c5815e161256f1accfb54cb864be8ed2d0dec2ac085"
+        },
+        {
+          "member": "./Mo_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Mo_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "bf2bf79aec40a5e0f0b390faabb4be1a33829e8e25d28040e01a08f0ab1dcb03"
+        },
+        {
+          "member": "./Ce.paw.z_12.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Ce.paw.z_12.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "08bdca0ececbc70371a9fa2169f406c5dccac5b4ead0a53b358e09301d047460"
+        },
+        {
+          "member": "./Pm.paw.z_15.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Pm.paw.z_15.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "6bbcf0610301712e228cb498212d92b73a056081a4d702cb0075c6d4b99ce91e"
+        },
+        {
+          "member": "./Pa.paw.z_13.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Pa.paw.z_13.ld1.uni-marburg.v0.upf",
+          "sha256": "7449f12dca36bf20749ef39ff0b8faab5ed351f2934c83da08e5f27eea429ce8"
+        },
+        {
+          "member": "./Er.paw.z_22.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Er.paw.z_22.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "90381456dc3b00a71dbfe262ea4f521ca05ae7f5a0a0dfc36178b00407e36c4d"
+        },
+        {
+          "member": "./Np.paw.z_15.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Np.paw.z_15.ld1.uni-marburg.v0.upf",
+          "sha256": "126ce51b5b9f3fb574662090752cdb6aaf9bdf41df307ade714d2f5abcf967af"
+        },
+        {
+          "member": "./Ir.us.z_31.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Ir.us.z_31.ld1.psl.v1.0.0-high.upf",
+          "sha256": "5539369c08e5f2686f71329956edd6dc8aecc7243baba59d40f34cae9069b2f0"
+        },
+        {
+          "member": "./Ac.us.z_11.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Ac.us.z_11.ld1.psl.v1.0.0-high.upf",
+          "sha256": "c5b5399b2e84313f16c1196504101b4d6ed341a346df193ea1a987be439edff2"
+        },
+        {
+          "member": "./Kr.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Kr.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "sha256": "278cc395da8bf09a46d02189c36cbce78d1b7fe99772cf56ceb94eced96e66c6"
+        },
+        {
+          "member": "./Cm.paw.z_18.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Cm.paw.z_18.ld1.uni-marburg.v0.upf",
+          "sha256": "a0fba038964467c51250b82c4c6b75f062cebcf1099a2ea040815c62b4201caf"
+        },
+        {
+          "member": "./Nd.paw.z_14.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Nd.paw.z_14.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "443c472700a658d76d39503670c5923a9fd47338bcc543050ba6968b393bc292"
+        },
+        {
+          "member": "./br_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/br_pbe_v1.4.uspp.F.UPF",
+          "sha256": "611dc0ac2804aed2e5b8a3c138f272b2a4e131009aad5279454170f948176951"
+        },
+        {
+          "member": "./Al.pbe-n-kjpaw_psl.1.0.0.UPF",
+          "target": "pseudos/Al.pbe-n-kjpaw_psl.1.0.0.UPF",
+          "sha256": "fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97"
+        },
+        {
+          "member": "./F.oncvpsp.upf",
+          "target": "pseudos/F.oncvpsp.upf",
+          "sha256": "ba6ca6af365222805e3ce85564616b50a2feb562106dfbf1d725170cc7afd7b8"
+        },
+        {
+          "member": "./mg_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/mg_pbe_v1.4.uspp.F.UPF",
+          "sha256": "84a2ce998da82ed0d4e82253bbad1ee281cae4c3001fceba688e54f450c096bf"
+        },
+        {
+          "member": "./Ag_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Ag_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "0494aa5927b754b42d3e72535636f215b4658e9b437e639dbc09674c36c8059a"
+        },
+        {
+          "member": "./Lr.paw.z_25.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Lr.paw.z_25.ld1.uni-marburg.v0.upf",
+          "sha256": "590342d887bf4a904da6b265946b4871f6627da7d08a65e35cf79f2d96373820"
+        },
+        {
+          "member": "./Tm.paw.z_23.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Tm.paw.z_23.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "c1c41a375fa615f449e5f0e107a8de867587817dbc4669f1b184a1a31ed40c63"
+        },
+        {
+          "member": "./ge_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/ge_pbe_v1.4.uspp.F.UPF",
+          "sha256": "1b95046ab0f3228e0404719ca66d0309af5a62313be0b22171b963566c90430b"
+        },
+        {
+          "member": "./C.pbe-n-kjpaw_psl.1.0.0.UPF",
+          "target": "pseudos/C.pbe-n-kjpaw_psl.1.0.0.UPF",
+          "sha256": "9900d1efd50b9848e31849f39094b33348486b400ee51e0f3922f716137cf3d7"
+        },
+        {
+          "member": "./s_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/s_pbe_v1.4.uspp.F.UPF",
+          "sha256": "84ad731864187f416f714e961c3ad2f04dcbf811618e724d277885c18cb470df"
+        },
+        {
+          "member": "./Dy.paw.z_20.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Dy.paw.z_20.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "c8718e1b6a5eee3d72c8c9a9d527bb351409cd27de3ebb3ecb4c9206df77d06d"
+        },
+        {
+          "member": "./Cf.paw.z_20.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Cf.paw.z_20.ld1.uni-marburg.v0.upf",
+          "sha256": "9450bbbdf5df930ab80112b19e81b133f99bb0d688e3d0e0c02a928776bd6922"
+        },
+        {
+          "member": "./Pu.paw.z_16.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Pu.paw.z_16.ld1.uni-marburg.v0.upf",
+          "sha256": "4b39845d3f496ab5d81ea832d92ec46570943277b6fc037b619187ecede5e97f"
+        },
+        {
+          "member": "./Ar.paw.z_8.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Ar.paw.z_8.ld1.psl.v1.0.0-high.upf",
+          "sha256": "53dbff00c32448ad482d4ffdaf31ad86f405836ace2984d641c22005cbcb15fd"
+        },
+        {
+          "member": "./Tb.paw.z_19.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Tb.paw.z_19.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "3374f9a6df6df6d5eaac70e5570b4f1bdeac3b8480715ef0b02d760278bee16f"
+        },
+        {
+          "member": "./Fm.paw.z_22.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Fm.paw.z_22.ld1.uni-marburg.v0.upf",
+          "sha256": "ee3245963570b07aed869f3a0df85709e219f890a53ed21cff248b23704e4ece"
+        },
+        {
+          "member": "./Es.paw.z_21.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Es.paw.z_21.ld1.uni-marburg.v0.upf",
+          "sha256": "98d4a354b114c632b1370635677cca0399ac900b62550a904e7980195032fb91"
+        },
+        {
+          "member": "./Co_pbe_v1.2.uspp.F.UPF",
+          "target": "pseudos/Co_pbe_v1.2.uspp.F.UPF",
+          "sha256": "a5f392a0d35fc78cc9e2ac1636bb1cd02e9b80a063ea368e85be83b0e4523c45"
+        },
+        {
+          "member": "./Rn.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Rn.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "sha256": "9ab17308f2bc98387509c8ba531f169663b7221aa278083888f6a61965b6b33a"
+        },
+        {
+          "member": "./He_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/He_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "27fca1dad6cd2df7dbc35d5f5df3bd4e1104db0cdd929d1cab1eb6687276b035"
+        },
+        {
+          "member": "./O.pbe-n-kjpaw_psl.0.1.UPF",
+          "target": "pseudos/O.pbe-n-kjpaw_psl.0.1.UPF",
+          "sha256": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa"
+        },
+        {
+          "member": "./Bk.paw.z_19.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Bk.paw.z_19.ld1.uni-marburg.v0.upf",
+          "sha256": "481c54a2d52a5914f6b341bd707d3621147164a1b55b738b24f9fadbdb0ffae5"
+        },
+        {
+          "member": "./No.paw.z_24.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/No.paw.z_24.ld1.uni-marburg.v0.upf",
+          "sha256": "73f25a88748f4e88ef7a33c3e47b6481ec64d50d38acc75a28a828e632c2ffca"
+        },
+        {
+          "member": "./Ra.paw.z_20.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Ra.paw.z_20.ld1.psl.v1.0.0-high.upf",
+          "sha256": "8cd1f59313a70ea8674f095ef7417e3203133d64348d082e424356c0d9543432"
+        },
+        {
+          "member": "./cr_pbe_v1.5.uspp.F.UPF",
+          "target": "pseudos/cr_pbe_v1.5.uspp.F.UPF",
+          "sha256": "c7449bbfea358d76832cf2f7b43dc89101ead6891806773121bfaa93a140f6de"
+        },
+        {
+          "member": "./Hg.us.z_12.uspp.gbrv.v1.upf",
+          "target": "pseudos/Hg.us.z_12.uspp.gbrv.v1.upf",
+          "sha256": "faaa3ab646d00c57941b898e420d46bebb0e4b3b385059693af302f5c647cb71"
+        },
+        {
+          "member": "./H_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/H_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "69d631780c0178c5239ed3dcb4a3e22c13bd13cde9beb97e123d036949da5c09"
+        },
+        {
+          "member": "./Eu.paw.z_17.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Eu.paw.z_17.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "0f920edc4c3a6a7521fb8f1452c9e7ce3b3e69522f55ab9199c54e06a6fffbd3"
+        },
+        {
+          "member": "./Nb.pbe-spn-kjpaw_psl.0.3.0.UPF",
+          "target": "pseudos/Nb.pbe-spn-kjpaw_psl.0.3.0.UPF",
+          "sha256": "ccf07218ea34daaa63ff57d9f44ca8b4b529728cccbc8f74dd5fc804ac01e48e"
+        },
+        {
+          "member": "./Pr.paw.z_13.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Pr.paw.z_13.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "09468e74ab83a13d0e1438c4b25f404cfa2f5702f1879efc06327b5850b6ca83"
+        },
+        {
+          "member": "./Ru_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Ru_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "b9e3df964a103d42e34c2027028361cb6592bdb0bff60275bbaa48c5eaf2adff"
+        },
+        {
+          "member": "./li_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/li_pbe_v1.4.uspp.F.UPF",
+          "sha256": "02cc4b3810e28a43b570277840d9631ca24f634d922928200c047b72c0a86bf5"
+        },
+        {
+          "member": "./Tl_pbe_v1.2.uspp.F.UPF",
+          "target": "pseudos/Tl_pbe_v1.2.uspp.F.UPF",
+          "sha256": "018619075345aa953f960db6fbb6d7bba035adf76a8b210d57179489d14b1be2"
+        },
+        {
+          "member": "./Te.us.z_6.ld1.psl.v1.0.0-low.upf",
+          "target": "pseudos/Te.us.z_6.ld1.psl.v1.0.0-low.upf",
+          "sha256": "66e19d27182ab8f64e558f3d998fa3da3ca161ff830dcfeeac2cbe9cbd6b2f7c"
+        },
+        {
+          "member": "./U.paw.z_14.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/U.paw.z_14.ld1.uni-marburg.v0.upf",
+          "sha256": "93edc03742fddf3f1b6676de2a4bb6a853ee00dc8ac9fdae7adf5e99e125ba2d"
+        },
+        {
+          "member": "./N.oncvpsp.upf",
+          "target": "pseudos/N.oncvpsp.upf",
+          "sha256": "36f1fc9a24ff5c788a536d4c1a53f82adca7b1fd132827fc654c124d69f274ca"
+        },
+        {
+          "member": "./Rb_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Rb_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "b5f77d0adb6f4ae9fbae600bd3a16681e6fc46c301f5502e94f741491e065d90"
+        },
+        {
+          "member": "./At.us.z_17.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/At.us.z_17.ld1.psl.v1.0.0-high.upf",
+          "sha256": "7c5e13cdb4f4abe012c5b8488e11882110e569728feaff6c85b45a36eda03032"
+        },
+        {
+          "member": "./P.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "target": "pseudos/P.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "sha256": "2d112dfec2e2d9b75a971574d9116aa92249988177791659bbcd2ba15f23c20c"
+        },
+        {
+          "member": "./ti_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/ti_pbe_v1.4.uspp.F.UPF",
+          "sha256": "747afa52fa17dc061e9eff72bcea534e81ffa5a4a5d33af3eb8fc9f1b3aee580"
+        },
+        {
+          "member": "./Cu.paw.z_11.ld1.psl.v1.0.0-low.upf",
+          "target": "pseudos/Cu.paw.z_11.ld1.psl.v1.0.0-low.upf",
+          "sha256": "b31028b2bae60cd9903260715a49b4c6d2b6dc654558c87023fa5206e427a16d"
+        },
+        {
+          "member": "./Be_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Be_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "b4dce3e0681dfb886f2c2b7cc136f29c671495fe814d0c33dafe3a6072708926"
+        },
+        {
+          "member": "./Au_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Au_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "3c3760361623288c265c193dddce2d5c6ced6f95bdb9138307530d51bc5ca9f0"
+        },
+        {
+          "member": "./Zn_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Zn_pbe_v1.uspp.F.UPF",
+          "sha256": "7710c776159022cdfa14188f04942712811d9a24ad0e74db5ce7c3bdfb95dbbf"
+        },
+        {
+          "member": "./Po.pbe-dn-rrkjus_psl.1.0.0.UPF",
+          "target": "pseudos/Po.pbe-dn-rrkjus_psl.1.0.0.UPF",
+          "sha256": "f4ac4279ab48d0c0ac9c4c16a6cff4dbe5546b636bb64c97daf98837a8126e11"
+        },
+        {
+          "member": "./mn_pbe_v1.5.uspp.F.UPF",
+          "target": "pseudos/mn_pbe_v1.5.uspp.F.UPF",
+          "sha256": "c5b6117e22f571895b69dbec8491df6afb2efee1206dad54680881dbd33eb8f0"
+        },
+        {
+          "member": "./Sm.paw.z_16.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Sm.paw.z_16.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "184c92f8b08a6ef2411da67d63638f02e1cab575ce51a077558a9a123cbe2a4b"
+        },
+        {
+          "member": "./Pb.pbe-dn-kjpaw_psl.0.2.2.UPF",
+          "target": "pseudos/Pb.pbe-dn-kjpaw_psl.0.2.2.UPF",
+          "sha256": "b67ab5c757bc89933ccd96deecdf3b629c72783a38b6c23d78457e4abb61219d"
+        },
+        {
+          "member": "./Ba.nc.z_10.oncvpsp4.dojo.v4-sp.upf",
+          "target": "pseudos/Ba.nc.z_10.oncvpsp4.dojo.v4-sp.upf",
+          "sha256": "bd79700a760d137cd37b98353af7c7cb5316d999bd15e19999931d219abd3c97"
+        },
+        {
+          "member": "./La.paw.z_11.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/La.paw.z_11.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "8d610fb41db376d5e24de33648147b807d560114cebc0041310599c9333eafa2"
+        },
+        {
+          "member": "./Ho.paw.z_21.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Ho.paw.z_21.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "80f5abc892b8f7f6a6af10c76a3fcab97a5e24cc14bae801532e7ddeafd60df3"
+        },
+        {
+          "member": "./Yb.paw.z_24.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Yb.paw.z_24.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "c966c2b8d6efeb97b0a77c05df8d658eb48bbe6ab00a099679c8b4aeff212ff6"
+        },
+        {
+          "member": "./Xe.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Xe.paw.z_18.ld1.psl.v1.0.0-high.upf",
+          "sha256": "3bf666d69436ebd3e7b35bae80e129d57dac9bbc21447d7fcbd7ff7eb2ea2ae2"
+        },
+        {
+          "member": "./Sc.pbe-spn-kjpaw_psl.0.2.3.UPF",
+          "target": "pseudos/Sc.pbe-spn-kjpaw_psl.0.2.3.UPF",
+          "sha256": "a0d64b2e0386e888e0081e71073e0b019f94e7a64c300ef548a35723c6a355b7"
+        },
+        {
+          "member": "./Cs.nc.z_9.oncvpsp3.dojo.v4-str.upf",
+          "target": "pseudos/Cs.nc.z_9.oncvpsp3.dojo.v4-str.upf",
+          "sha256": "fca9b791147aa97d0743a59902fd715f5b6d6d29e57ebae8b1c00a58bf20d4ec"
+        },
+        {
+          "member": "./Ta_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Ta_pbe_v1.uspp.F.UPF",
+          "sha256": "e0850b94d7007d47691d131db1fa5ffdaaa6f6a573c1ebf1fb425e46ed891ee1"
+        },
+        {
+          "member": "./Cl.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "target": "pseudos/Cl.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "sha256": "a673d3adf336817175b7ffcbce2f811dd5929176c94a2c829cd1fc578ca924b8"
+        },
+        {
+          "member": "./K.pbe-spn-kjpaw_psl.1.0.0.UPF",
+          "target": "pseudos/K.pbe-spn-kjpaw_psl.1.0.0.UPF",
+          "sha256": "1dcce1298a9d62eb5625f379743a3da1f4dca353d989d7893ad12e9b3a561c21"
+        },
+        {
+          "member": "./Ne.paw.z_8.ld1.psl.v1.0.0-high.upf",
+          "target": "pseudos/Ne.paw.z_8.ld1.psl.v1.0.0-high.upf",
+          "sha256": "dd980ba077bb7e59c76a7396450b8dbf70174f62fcb94487243bb3b7ba880c90"
+        },
+        {
+          "member": "./Pd_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Pd_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "ef259baba5cf16c89389729e960cfb851e4cba656aef62fd8bf1a93de2124020"
+        },
+        {
+          "member": "./Md.paw.z_23.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Md.paw.z_23.ld1.uni-marburg.v0.upf",
+          "sha256": "7a9fa74b12905256c3f17950be0ac441746acee08515f5c3b50166127736fbb4"
+        },
+        {
+          "member": "./Ga.pbe-dn-kjpaw_psl.1.0.0.UPF",
+          "target": "pseudos/Ga.pbe-dn-kjpaw_psl.1.0.0.UPF",
+          "sha256": "cf8a2be9b30552dd9bb12304d2aa96978e5d10636ca562b42d5a37dc385acd15"
+        },
+        {
+          "member": "./Ca_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Ca_pbe_v1.uspp.F.UPF",
+          "sha256": "5887acb75823f7f92df1b3117fece4e43498cafccaaaf9cfa653615af1a20d6e"
+        },
+        {
+          "member": "./sb_pbe_v1.4.uspp.F.UPF",
+          "target": "pseudos/sb_pbe_v1.4.uspp.F.UPF",
+          "sha256": "efe7c83d2aca3ab7d66eb1fc5b50c6e865e18521318454a41a9c106cb1f456d0"
+        },
+        {
+          "member": "./I.nc.z_17.oncvpsp4.sg15.v0.upf",
+          "target": "pseudos/I.nc.z_17.oncvpsp4.sg15.v0.upf",
+          "sha256": "3f9f10c4a18a430dce972c57ee1c8a4a5e87b32fa700b2630321dd99a6f27fea"
+        },
+        {
+          "member": "./Lu.paw.z_25.atompaw.wentzcovitch.v1.2.upf",
+          "target": "pseudos/Lu.paw.z_25.atompaw.wentzcovitch.v1.2.upf",
+          "sha256": "db462df8ffad370ffec0bdb77b723e9cdc66f6a46c9ca7597736a8f66ab6b352"
+        },
+        {
+          "member": "./Am.paw.z_17.ld1.uni-marburg.v0.upf",
+          "target": "pseudos/Am.paw.z_17.ld1.uni-marburg.v0.upf",
+          "sha256": "6cf417f19b4b44e749ef70821b4577db6845e5c1ddc8f73f39a3f537f5411950"
+        },
+        {
+          "member": "./Bi_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Bi_pbe_v1.uspp.F.UPF",
+          "sha256": "56e4e097a6b5a74149ba3b3bb75c03f2b022b509f53767143653dcd7b079e97d"
+        },
+        {
+          "member": "./W_pbe_v1.2.uspp.F.UPF",
+          "target": "pseudos/W_pbe_v1.2.uspp.F.UPF",
+          "sha256": "3cb024d05ba2413340c9e993bc149bf94d44fb23e609642466d87ca30c88c569"
+        },
+        {
+          "member": "./Si.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "target": "pseudos/Si.pbe-n-rrkjus_psl.1.0.0.UPF",
+          "sha256": "ae3aefd0811f9499dbc4a72f1f9ae02ef4fc7f3568bf6f559b68668719c69e2b"
+        },
+        {
+          "member": "./Tc_ONCV_PBE-1.0.oncvpsp.upf",
+          "target": "pseudos/Tc_ONCV_PBE-1.0.oncvpsp.upf",
+          "sha256": "5a01ef59369df4bb2bf87ebf1db024bc5387caaa3924f19280e97bbce4b9fa21"
+        },
+        {
+          "member": "./Os_pbe_v1.2.uspp.F.UPF",
+          "target": "pseudos/Os_pbe_v1.2.uspp.F.UPF",
+          "sha256": "fb26113f4c4f67a8e0f996bff2a6411a1abdbd12c0d023912361536fdfde4d28"
+        },
+        {
+          "member": "./Hf-sp.oncvpsp.upf",
+          "target": "pseudos/Hf-sp.oncvpsp.upf",
+          "sha256": "f019947b40f1831f9bd44a630e9445a07c1e864ce81f0ac6286035a1e0c2080b"
+        },
+        {
+          "member": "./Fe.pbe-spn-kjpaw_psl.0.2.1.UPF",
+          "target": "pseudos/Fe.pbe-spn-kjpaw_psl.0.2.1.UPF",
+          "sha256": "2317a0d3b136c09b6263e1ba328b505fb1ebf33bb4b28dc3df9e39af3184ef19"
+        },
+        {
+          "member": "./Se_pbe_v1.uspp.F.UPF",
+          "target": "pseudos/Se_pbe_v1.uspp.F.UPF",
+          "sha256": "fcb1fe6e9c54d43fd3537f1103b9003ba92975e80c0a0214b21d1bf4abb494c8"
+        }
+      ]
+    },
+    {
+      "url": "https://archive.materialscloud.org/records/rcyfm-68h65/files/SSSP_1.3.0_PBE_precision.json?download=1",
+      "archive": "acwf_SSSP_1.3.0_PBE_precision.json",
+      "sha256": "7b7b648915e54c8397cd8143a7385c17eeed3104ad1236cecd905126d338a4e3",
+      "format": "file",
+      "transform": "identity",
+      "files": [
+        {
+          "target": "pseudos/SSSP_1.3.0_PBE_precision.json",
+          "sha256": "7b7b648915e54c8397cd8143a7385c17eeed3104ad1236cecd905126d338a4e3"
+        }
+      ]
+    }
+  ]
+}

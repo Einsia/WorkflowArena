@@ -1,0 +1,2650 @@
+{
+  "task_id": "WFA-CDN-012",
+  "page_mapping": "outlook-report.pdf: PDF page = printed page + 3; case-descriptions.pdf: PDF page = printed page + 4",
+  "checkpoints": [
+    {
+      "id": "K01",
+      "topic": "Baseline is not a forecast",
+      "where": "outlook-report.pdf printed p4 (PDF p7) footnote 3; Foreword PDF p4 'not a set of predictions'",
+      "value": "'It should not be regarded as the most likely of the cases.' Reference case renamed Counterfactual Baseline.",
+      "items": [
+        "C06"
+      ]
+    },
+    {
+      "id": "K02",
+      "topic": "Electricity use range",
+      "where": "tables/*_table8.xlsx Total Electricity Use; report p14 (PDF p17) 0.9%–1.6%/yr; p15–16 (PDF p18–19) 25%–50%",
+      "value": {
+        "cb2026": [
+          4298.2734,
+          5995.2148,
+          39.5,
+          1.34
+        ],
+        "highmacro": [
+          4299.4688,
+          6343.938,
+          47.6,
+          1.57
+        ],
+        "lowmacro": [
+          4296.9883,
+          5677.5845,
+          32.1,
+          1.12
+        ],
+        "highogs": [
+          4298.2734,
+          6104.4326,
+          42.0,
+          1.41
+        ],
+        "lowogs": [
+          4298.2744,
+          5794.6992,
+          34.8,
+          1.2
+        ],
+        "highZTC": [
+          4298.2808,
+          5990.9453,
+          39.4,
+          1.34
+        ],
+        "lowZTC": [
+          4298.2808,
+          6024.9697,
+          40.2,
+          1.36
+        ],
+        "altelec": [
+          4298.2744,
+          6031.3174,
+          40.3,
+          1.36
+        ],
+        "alttrnp": [
+          4298.1841,
+          5439.0894,
+          26.5,
+          0.95
+        ],
+        "electrnp": [
+          4298.1826,
+          5477.4468,
+          27.4,
+          0.97
+        ],
+        "higheldmd": [
+          4298.2769,
+          6469.6138,
+          50.5,
+          1.65
+        ]
+      },
+      "note": "[2025 BkWh, 2050 BkWh, growth %, CAGR %]. Low end AltTrnp, high end HighElDmd.",
+      "items": [
+        "C02",
+        "R04"
+      ]
+    },
+    {
+      "id": "K03",
+      "topic": "Real vs nominal across cases",
+      "where": "tables/*_table8.xlsx End-Use Prices (2025 cents) vs (nominal cents); table20 GDP chain-type price index",
+      "value": {
+        "cb2026": [
+          14.0458,
+          23.1667,
+          2.2821
+        ],
+        "highmacro": [
+          13.9822,
+          22.3168,
+          2.2082
+        ],
+        "lowmacro": [
+          13.5575,
+          31.8867,
+          3.2717
+        ],
+        "highogs": [
+          13.1153,
+          21.7426,
+          2.2938
+        ],
+        "lowogs": [
+          16.6215,
+          27.2669,
+          2.2698
+        ],
+        "highZTC": [
+          14.0684,
+          23.2341,
+          2.2851
+        ],
+        "lowZTC": [
+          13.4015,
+          22.1299,
+          2.2848
+        ],
+        "altelec": [
+          13.6565,
+          22.4872,
+          2.2783
+        ],
+        "alttrnp": [
+          14.2433,
+          23.3132,
+          2.2647
+        ],
+        "electrnp": [
+          13.8265,
+          22.5922,
+          2.2608
+        ],
+        "higheldmd": [
+          14.267,
+          23.4471,
+          2.2739
+        ]
+      },
+      "note": "[2050 real 2025¢, 2050 nominal ¢, deflator 2050]. Low Economic Growth has a much higher price index path (3.27 vs 2.28) so its nominal price (~31.9¢) ranks highest while its real price (~13.6¢) is among the lowest.",
+      "items": [
+        "R01"
+      ]
+    },
+    {
+      "id": "K04",
+      "topic": "Price ranges and gas linkage (2025$)",
+      "where": "table8 All Sectors Average (2025 cents); table1 Henry Hub (2025 dollars per MMBtu); report p16 (PDF p19) gas–power price correlation; p18 (PDF p21) $3 / $10 per MMBtu real 2025",
+      "value": {
+        "cb2026": [
+          14.0458,
+          4.6363
+        ],
+        "highmacro": [
+          13.9822,
+          4.8588
+        ],
+        "lowmacro": [
+          13.5575,
+          4.5389
+        ],
+        "highogs": [
+          13.1153,
+          2.7485
+        ],
+        "lowogs": [
+          16.6215,
+          13.671
+        ],
+        "highZTC": [
+          14.0684,
+          4.6589
+        ],
+        "lowZTC": [
+          13.4015,
+          4.4207
+        ],
+        "altelec": [
+          13.6565,
+          4.6072
+        ],
+        "alttrnp": [
+          14.2433,
+          4.6826
+        ],
+        "electrnp": [
+          13.8265,
+          4.765
+        ],
+        "higheldmd": [
+          14.267,
+          4.761
+        ]
+      },
+      "note": "[2050 avg price 2025¢/kWh, 2050 Henry Hub 2025$/MMBtu]. figure-data.xlsx sheet 17_HHnatgasspot labels Henry Hub only 'U.S. dollars per million British thermal units' (no dollar year); values equal table1 2025-dollar row. 1 MMBtu = 293.07 kWh.",
+      "items": [
+        "C05",
+        "R08"
+      ]
+    },
+    {
+      "id": "K05",
+      "topic": "Data-centre server electricity: report vs case descriptions",
+      "where": "outlook-report.pdf printed p14 (PDF p17): 818 BkWh HighElDmd 2050, 84% above baseline; figure-data.xlsx 7_DataCenters (2050: CB 445.6, HighElDmd 818.7 BkWh; 2020 = 49.4); case-descriptions.pdf printed p8 (PDF p12) Table 3: 800 / 1,440 TWh/yr",
+      "value": {
+        "report_figdata_bkwh_2050": {
+          "cb": 445.6,
+          "higheldmd": 818.7
+        },
+        "case_desc_table3_twh_2050": {
+          "cb": 800,
+          "higheldmd": 1440
+        },
+        "ratio_check": [
+          1.837,
+          1.8
+        ]
+      },
+      "note": "TWh = billion kWh, so the two documents give different magnitudes for what is labelled server energy consumption; ratios agree (~1.8). '16 times 2020' in the report checks out against figure data (818.7/49.4=16.6).",
+      "items": [
+        "C07"
+      ]
+    },
+    {
+      "id": "K06",
+      "topic": "kWh ↔ quads; delivered vs incl. losses",
+      "where": "table2 Purchased Electricity, Delivered Energy, Electricity-Related Losses, Total; table8 sales",
+      "value": {
+        "sales_x_3412_quads_2050_cb": 19.02,
+        "table2_purchased_quads_2050_cb": 19.0161,
+        "delivered_quads_2050_cb": 76.5167,
+        "losses_quads_2050_cb": 16.1893,
+        "total_quads_2050_cb": 93.1977,
+        "share_delivered_pct": 24.9,
+        "share_total_excl_losses_pct": 20.4,
+        "share_total_incl_losses_pct": 37.8
+      },
+      "note": "3,412 Btu/kWh reproduces Table 2 purchased electricity to <0.1%.",
+      "items": [
+        "C10",
+        "R03"
+      ]
+    },
+    {
+      "id": "K07",
+      "topic": "AltTrnp gap metric",
+      "where": "report printed p12 (PDF p15) '9% less electricity sales'; table8",
+      "value": {
+        "sales_vs_cb_pct": -10.0,
+        "use_vs_cb_pct": -9.3
+      },
+      "items": [
+        "R05"
+      ]
+    },
+    {
+      "id": "K08",
+      "topic": "Coal share",
+      "where": "report printed p16 (PDF p19); table8",
+      "value": {
+        "cb2026": 0.1,
+        "highmacro": 0.1,
+        "lowmacro": 0.1,
+        "highogs": 0.1,
+        "lowogs": 0.8,
+        "highZTC": 0.1,
+        "lowZTC": 0.1,
+        "altelec": 5.0,
+        "alttrnp": 0.1,
+        "electrnp": 5.2,
+        "higheldmd": 0.1
+      },
+      "items": [
+        "C04"
+      ]
+    },
+    {
+      "id": "K09",
+      "topic": "Baseline 2050 generation mix",
+      "where": "table8 Total Net Electricity Generation by Fuel; report p16 (PDF p19) ~40% gas, 20% wind, 20% solar",
+      "value": {
+        "gas": 40.9,
+        "renewable": 46.4,
+        "nuclear": 12.8,
+        "coal": 0.1
+      },
+      "items": [
+        "C03"
+      ]
+    },
+    {
+      "id": "K10",
+      "topic": "Single varied assumption per case",
+      "where": "case-descriptions.pdf printed pp4–8 (PDF pp8–12); report pp4–5 (PDF pp7–8)",
+      "value": {
+        "AltTrnp": "removes EPA MY2027+ LDV GHG, Phase 3 truck GHG and low-NOx truck standards",
+        "AltElec": "removes April 2024 CAA s.111 power-plant CO2 rule",
+        "Combination": "AltElec + AltTrnp",
+        "HighElDmd": "data-centre server stock/power-draw assumptions",
+        "High/LowEcon": "GDP 2.2%/1.2% vs 1.7%",
+        "High/LowOGS": "EUR, undiscovered resources and technology rates ±50%",
+        "High/LowZTC": "zero-carbon capital costs frozen / 40% below baseline by 2050",
+        "Combination_additivity_elec_use_pct": [
+          -8.6,
+          -9.3,
+          0.6
+        ]
+      },
+      "items": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "K11",
+      "topic": "HighElDmd vs HighEcon",
+      "where": "report printed p14 (PDF p17)",
+      "value": "1.6%/yr vs 1.5%/yr in report text; tables give 1.65% and 1.57%; HighElDmd increment is commercial-only by design.",
+      "items": [
+        "C08"
+      ]
+    },
+    {
+      "id": "K12",
+      "topic": "GDP basis",
+      "where": "table20 'Real Gross Domestic Product' (billion chained 2012 dollars); report p7 (PDF p10) 'trillion 2012 dollars'; case-descriptions Table 2 (PDF p8)",
+      "value": {
+        "cb2026": 33560.5156,
+        "highmacro": 37958.3984,
+        "lowmacro": 29698.5703
+      },
+      "items": [
+        "R09"
+      ]
+    },
+    {
+      "id": "K14",
+      "topic": "Service-category prices (2025¢/kWh, 2050)",
+      "where": "table8 Prices by Service Category; report p15 (PDF p18)",
+      "value": {
+        "cb2026": [
+          6.4126,
+          2.663,
+          4.9209
+        ],
+        "alttrnp": [
+          6.3577,
+          2.7871,
+          5.0421
+        ],
+        "higheldmd": [
+          6.6163,
+          2.6769,
+          4.9283
+        ]
+      },
+      "note": "[generation, transmission, distribution]",
+      "items": [
+        "C09"
+      ]
+    },
+    {
+      "id": "K15",
+      "topic": "Price growth real vs nominal (baseline)",
+      "where": "table8 All Sectors Average rows",
+      "value": {
+        "real_2025": 13.5374,
+        "real_2050": 14.0458,
+        "real_change_pct": 3.8,
+        "real_cagr_pct": 0.15,
+        "nominal_2050": 23.1667,
+        "nominal_cagr_pct": 2.17
+      },
+      "items": [
+        "R02"
+      ]
+    }
+  ],
+  "case_values": {
+    "cb2026": {
+      "name": "Counterfactual Baseline",
+      "elec_use_bkwh": {
+        "2025": 4298.2734,
+        "2030": 4562.0083,
+        "2035": 4937.1118,
+        "2040": 5367.4951,
+        "2045": 5715.77,
+        "2050": 5995.2148,
+        "_src": "tables/cb2026_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2781,
+        "2030": 4290.3623,
+        "2035": 4639.7065,
+        "2040": 5032.8032,
+        "2045": 5340.7114,
+        "2050": 5574.8159,
+        "_src": "tables/cb2026_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5374,
+        "2030": 13.1395,
+        "2035": 13.6325,
+        "2040": 13.957,
+        "2045": 13.9818,
+        "2050": 14.0458,
+        "_src": "tables/cb2026_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5374,
+        "2030": 14.6404,
+        "2035": 16.889,
+        "2040": 19.1016,
+        "2045": 21.0693,
+        "2050": 23.1667,
+        "_src": "tables/cb2026_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6793,
+        "2030": 16.283,
+        "2035": 16.7474,
+        "2040": 17.1379,
+        "2045": 17.251,
+        "2050": 17.4499,
+        "_src": "tables/cb2026_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5758,
+        "2030": 6.7862,
+        "2035": 6.9297,
+        "2040": 6.9553,
+        "2045": 6.6793,
+        "2050": 6.4126,
+        "_src": "tables/cb2026_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1086,
+        "2035": 2.2841,
+        "2040": 2.4198,
+        "2045": 2.537,
+        "2050": 2.663,
+        "_src": "tables/cb2026_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2133,
+        "2035": 4.3784,
+        "2040": 4.5392,
+        "2045": 4.7189,
+        "2050": 4.9209,
+        "_src": "tables/cb2026_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.562,
+        "2030": 4734.4106,
+        "2035": 5126.3062,
+        "2040": 5585.1558,
+        "2045": 5962.9941,
+        "2050": 6273.2744,
+        "_src": "tables/cb2026_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.4432,
+        "2030": 470.8072,
+        "2035": 122.7504,
+        "2040": 67.0234,
+        "2045": 16.7713,
+        "2050": 5.3145,
+        "_src": "tables/cb2026_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.2411,
+        "2030": 1711.5856,
+        "2035": 1808.7076,
+        "2040": 2034.4727,
+        "2045": 2338.5403,
+        "2050": 2563.1631,
+        "_src": "tables/cb2026_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7424,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/cb2026_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3567,
+        "2030": 1740.8945,
+        "2035": 2389.2297,
+        "2040": 2680.7522,
+        "2045": 2809.8145,
+        "2050": 2907.9485,
+        "_src": "tables/cb2026_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.4761,
+        "2035": 5.0494,
+        "2040": 5.3579,
+        "2045": 4.9969,
+        "2050": 4.6363,
+        "_src": "tables/cb2026_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.9873,
+        "2035": 6.2556,
+        "2040": 7.3328,
+        "2045": 7.5298,
+        "2050": 7.6469,
+        "_src": "tables/cb2026_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2916,
+        "2030": 92.5135,
+        "2035": 89.4737,
+        "2040": 89.7701,
+        "2045": 91.1182,
+        "2050": 93.1977,
+        "_src": "tables/cb2026_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8801,
+        "2030": 14.629,
+        "2035": 15.8208,
+        "2040": 17.165,
+        "2045": 18.2178,
+        "2050": 19.0161,
+        "_src": "tables/cb2026_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9617,
+        "2030": 75.4147,
+        "2035": 74.2504,
+        "2040": 74.2947,
+        "2045": 75.1257,
+        "2050": 76.5167,
+        "_src": "tables/cb2026_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0714,
+        "2030": 16.8566,
+        "2035": 14.8681,
+        "2040": 15.0596,
+        "2045": 15.5402,
+        "2050": 16.1893,
+        "_src": "tables/cb2026_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24183.5449,
+        "2035": 26611.9629,
+        "2040": 28966.25,
+        "2045": 31240.248,
+        "2050": 33560.5156,
+        "_src": "tables/cb2026_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5417,
+        "2035": 1.7142,
+        "2040": 1.8937,
+        "2045": 2.085,
+        "2050": 2.2821,
+        "_src": "tables/cb2026_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 40.9,
+        "renewable": 46.4,
+        "nuclear": 12.8,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 39.5,
+      "elec_use_cagr_pct": 1.34,
+      "nominal_over_real_2050": 1.649,
+      "vs_baseline_2050_pct": {
+        "elec_use": 0.0,
+        "sales": 0.0
+      }
+    },
+    "highmacro": {
+      "name": "High Economic Growth",
+      "elec_use_bkwh": {
+        "2025": 4299.4688,
+        "2030": 4607.0435,
+        "2035": 5065.7812,
+        "2040": 5579.8813,
+        "2045": 5982.5645,
+        "2050": 6343.938,
+        "_src": "tables/highmacro_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.4241,
+        "2030": 4332.1577,
+        "2035": 4761.4648,
+        "2040": 5234.5127,
+        "2045": 5592.335,
+        "2050": 5902.6357,
+        "_src": "tables/highmacro_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5361,
+        "2030": 13.0963,
+        "2035": 13.6414,
+        "2040": 13.8476,
+        "2045": 13.9948,
+        "2050": 13.9822,
+        "_src": "tables/highmacro_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5361,
+        "2030": 14.5567,
+        "2035": 16.7284,
+        "2040": 18.5673,
+        "2045": 20.5201,
+        "2050": 22.3168,
+        "_src": "tables/highmacro_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6748,
+        "2030": 16.2009,
+        "2035": 16.7959,
+        "2040": 17.1122,
+        "2045": 17.3957,
+        "2050": 17.5495,
+        "_src": "tables/highmacro_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5826,
+        "2030": 6.8141,
+        "2035": 7.0549,
+        "2040": 6.9807,
+        "2045": 6.839,
+        "2050": 6.5287,
+        "_src": "tables/highmacro_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8819,
+        "2030": 2.079,
+        "2035": 2.2421,
+        "2040": 2.3803,
+        "2045": 2.4934,
+        "2050": 2.607,
+        "_src": "tables/highmacro_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0476,
+        "2030": 4.1701,
+        "2035": 4.305,
+        "2040": 4.4494,
+        "2045": 4.6214,
+        "2050": 4.7984,
+        "_src": "tables/highmacro_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4518.6782,
+        "2030": 4780.9463,
+        "2035": 5261.9194,
+        "2040": 5808.7466,
+        "2045": 6240.3276,
+        "2050": 6641.8208,
+        "_src": "tables/highmacro_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 737.4698,
+        "2030": 487.697,
+        "2035": 137.3993,
+        "2040": 73.6644,
+        "2045": 20.1884,
+        "2050": 5.4424,
+        "_src": "tables/highmacro_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1817.8419,
+        "2030": 1730.2115,
+        "2035": 1841.3599,
+        "2040": 2037.0746,
+        "2045": 2363.647,
+        "2050": 2632.7722,
+        "_src": "tables/highmacro_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7434,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/highmacro_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.8353,
+        "2030": 1751.4963,
+        "2035": 2475.9661,
+        "2040": 2895.1924,
+        "2045": 3058.7583,
+        "2050": 3207.3948,
+        "_src": "tables/highmacro_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4667,
+        "2030": 4.4663,
+        "2035": 5.2873,
+        "2040": 5.5017,
+        "2045": 5.5268,
+        "2050": 4.8588,
+        "_src": "tables/highmacro_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4667,
+        "2030": 4.9644,
+        "2035": 6.4839,
+        "2040": 7.3769,
+        "2045": 8.1037,
+        "2050": 7.7551,
+        "_src": "tables/highmacro_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2933,
+        "2030": 93.618,
+        "2035": 91.8623,
+        "2040": 93.2795,
+        "2045": 95.6024,
+        "2050": 99.5172,
+        "_src": "tables/highmacro_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8805,
+        "2030": 14.7722,
+        "2035": 16.2359,
+        "2040": 17.8528,
+        "2045": 19.0757,
+        "2050": 20.134,
+        "_src": "tables/highmacro_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9614,
+        "2030": 76.277,
+        "2035": 76.3259,
+        "2040": 77.781,
+        "2045": 79.4515,
+        "2050": 82.4959,
+        "_src": "tables/highmacro_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0707,
+        "2030": 17.0912,
+        "2035": 15.15,
+        "2040": 15.0449,
+        "2045": 15.643,
+        "2050": 16.4686,
+        "_src": "tables/highmacro_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22181.4629,
+        "2030": 24908.1504,
+        "2035": 28028.4004,
+        "2040": 31288.7676,
+        "2045": 34447.832,
+        "2050": 37958.3984,
+        "_src": "tables/highmacro_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3835,
+        "2030": 1.5378,
+        "2035": 1.6966,
+        "2040": 1.8551,
+        "2045": 2.0286,
+        "2050": 2.2082,
+        "_src": "tables/highmacro_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 39.6,
+        "renewable": 48.3,
+        "nuclear": 12.1,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 47.6,
+      "elec_use_cagr_pct": 1.57,
+      "nominal_over_real_2050": 1.596,
+      "vs_baseline_2050_pct": {
+        "elec_use": 5.8,
+        "sales": 5.9
+      }
+    },
+    "lowmacro": {
+      "name": "Low Economic Growth",
+      "elec_use_bkwh": {
+        "2025": 4296.9883,
+        "2030": 4459.8262,
+        "2035": 4779.9644,
+        "2040": 5156.5972,
+        "2045": 5456.8096,
+        "2050": 5677.5845,
+        "_src": "tables/lowmacro_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.0845,
+        "2030": 4193.1187,
+        "2035": 4493.9131,
+        "2040": 4840.7144,
+        "2045": 5110.1885,
+        "2050": 5296.7407,
+        "_src": "tables/lowmacro_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.6114,
+        "2030": 13.0712,
+        "2035": 13.5576,
+        "2040": 13.6581,
+        "2045": 13.589,
+        "2050": 13.5575,
+        "_src": "tables/lowmacro_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.6114,
+        "2030": 15.6451,
+        "2035": 19.1597,
+        "2040": 22.9,
+        "2045": 27.0193,
+        "2050": 31.8867,
+        "_src": "tables/lowmacro_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.7821,
+        "2030": 16.172,
+        "2035": 16.6309,
+        "2040": 16.7544,
+        "2045": 16.7267,
+        "2050": 16.7636,
+        "_src": "tables/lowmacro_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.587,
+        "2030": 6.6163,
+        "2035": 6.7668,
+        "2040": 6.611,
+        "2045": 6.295,
+        "2050": 5.9852,
+        "_src": "tables/lowmacro_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.9072,
+        "2030": 2.1472,
+        "2035": 2.3128,
+        "2040": 2.4344,
+        "2045": 2.5191,
+        "2050": 2.6171,
+        "_src": "tables/lowmacro_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.093,
+        "2030": 4.2799,
+        "2035": 4.4426,
+        "2040": 4.5755,
+        "2045": 4.7315,
+        "2050": 4.9099,
+        "_src": "tables/lowmacro_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4516.1577,
+        "2030": 4625.8066,
+        "2035": 4957.0093,
+        "2040": 5360.645,
+        "2045": 5687.8262,
+        "2050": 5936.6104,
+        "_src": "tables/lowmacro_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 737.2533,
+        "2030": 452.2927,
+        "2035": 112.9815,
+        "2040": 58.5402,
+        "2045": 10.0654,
+        "2050": 5.1658,
+        "_src": "tables/lowmacro_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.5121,
+        "2030": 1636.4503,
+        "2035": 1781.0844,
+        "2040": 1879.1196,
+        "2045": 2182.9888,
+        "2050": 2362.9932,
+        "_src": "tables/lowmacro_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7367,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/lowmacro_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1157.8843,
+        "2030": 1725.7728,
+        "2035": 2257.3892,
+        "2040": 2620.4963,
+        "2045": 2696.0623,
+        "2050": 2770.8269,
+        "_src": "tables/lowmacro_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4857,
+        "2030": 4.2876,
+        "2035": 5.1039,
+        "2040": 5.166,
+        "2045": 5.0001,
+        "2050": 4.5389,
+        "_src": "tables/lowmacro_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4857,
+        "2030": 5.1318,
+        "2035": 7.2128,
+        "2040": 8.6617,
+        "2045": 9.9418,
+        "2050": 10.6754,
+        "_src": "tables/lowmacro_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2912,
+        "2030": 90.4862,
+        "2035": 87.1181,
+        "2040": 86.2971,
+        "2045": 86.9186,
+        "2050": 87.7956,
+        "_src": "tables/lowmacro_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8795,
+        "2030": 14.2961,
+        "2035": 15.3237,
+        "2040": 16.51,
+        "2045": 17.4317,
+        "2050": 18.0679,
+        "_src": "tables/lowmacro_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9608,
+        "2030": 73.8785,
+        "2035": 72.1406,
+        "2040": 71.5583,
+        "2045": 71.6341,
+        "2050": 71.963,
+        "_src": "tables/lowmacro_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0727,
+        "2030": 16.3681,
+        "2035": 14.654,
+        "2040": 14.3649,
+        "2045": 14.8793,
+        "2050": 15.3991,
+        "_src": "tables/lowmacro_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 21911.6191,
+        "2030": 23257.3633,
+        "2035": 25071.0293,
+        "2040": 26699.8008,
+        "2045": 28158.8867,
+        "2050": 29698.5703,
+        "_src": "tables/lowmacro_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3911,
+        "2030": 1.665,
+        "2035": 1.9659,
+        "2040": 2.3324,
+        "2045": 2.7659,
+        "2050": 3.2717,
+        "_src": "tables/lowmacro_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 39.8,
+        "renewable": 46.7,
+        "nuclear": 13.5,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 32.1,
+      "elec_use_cagr_pct": 1.12,
+      "nominal_over_real_2050": 2.352,
+      "vs_baseline_2050_pct": {
+        "elec_use": -5.3,
+        "sales": -5.0
+      }
+    },
+    "highogs": {
+      "name": "High Oil and Gas Supply",
+      "elec_use_bkwh": {
+        "2025": 4298.2734,
+        "2030": 4593.0903,
+        "2035": 4988.3931,
+        "2040": 5444.874,
+        "2045": 5815.9302,
+        "2050": 6104.4326,
+        "_src": "tables/highogs_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2778,
+        "2030": 4320.9551,
+        "2035": 4692.3267,
+        "2040": 5112.9546,
+        "2045": 5444.8706,
+        "2050": 5687.3442,
+        "_src": "tables/highogs_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5373,
+        "2030": 12.5759,
+        "2035": 13.0804,
+        "2040": 13.0332,
+        "2045": 12.9078,
+        "2050": 13.1153,
+        "_src": "tables/highogs_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5373,
+        "2030": 14.0226,
+        "2035": 16.3371,
+        "2040": 18.0208,
+        "2045": 19.6114,
+        "2050": 21.7426,
+        "_src": "tables/highogs_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6783,
+        "2030": 15.6597,
+        "2035": 16.1134,
+        "2040": 16.1082,
+        "2045": 16.0605,
+        "2050": 16.4229,
+        "_src": "tables/highogs_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5757,
+        "2030": 6.2665,
+        "2035": 6.4653,
+        "2040": 6.134,
+        "2045": 5.7057,
+        "2050": 5.5698,
+        "_src": "tables/highogs_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.0883,
+        "2035": 2.2277,
+        "2040": 2.3558,
+        "2045": 2.4772,
+        "2050": 2.6128,
+        "_src": "tables/highogs_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0526,
+        "2030": 4.1929,
+        "2035": 4.3491,
+        "2040": 4.504,
+        "2045": 4.6814,
+        "2050": 4.8857,
+        "_src": "tables/highogs_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5889,
+        "2030": 4767.0859,
+        "2035": 5177.7334,
+        "2040": 5665.394,
+        "2045": 6068.1011,
+        "2050": 6388.2197,
+        "_src": "tables/highogs_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.5422,
+        "2030": 370.074,
+        "2035": 98.674,
+        "2040": 52.9302,
+        "2045": 5.4019,
+        "2050": 5.3233,
+        "_src": "tables/highogs_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.1718,
+        "2030": 1931.3333,
+        "2035": 2420.9929,
+        "2040": 2853.801,
+        "2045": 3247.3418,
+        "2050": 3512.6643,
+        "_src": "tables/highogs_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7452,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 791.5323,
+        "2050": 783.58,
+        "_src": "tables/highogs_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3558,
+        "2030": 1653.347,
+        "2035": 1850.7627,
+        "2040": 1955.1461,
+        "2045": 2024.8418,
+        "2050": 2089.1646,
+        "_src": "tables/highogs_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4673,
+        "2030": 2.9626,
+        "2035": 3.4223,
+        "2040": 3.3,
+        "2045": 2.9209,
+        "2050": 2.7485,
+        "_src": "tables/highogs_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4673,
+        "2030": 3.3034,
+        "2035": 4.2744,
+        "2040": 4.5629,
+        "2045": 4.4379,
+        "2050": 4.5565,
+        "_src": "tables/highogs_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.3075,
+        "2030": 93.6099,
+        "2035": 92.9716,
+        "2040": 94.8746,
+        "2045": 97.443,
+        "2050": 100.4928,
+        "_src": "tables/highogs_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8808,
+        "2030": 14.7327,
+        "2035": 16.0001,
+        "2040": 17.438,
+        "2045": 18.5726,
+        "2050": 19.4001,
+        "_src": "tables/highogs_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9981,
+        "2030": 76.1498,
+        "2035": 75.0585,
+        "2040": 75.8995,
+        "2045": 77.2662,
+        "2050": 79.072,
+        "_src": "tables/highogs_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0723,
+        "2030": 17.2179,
+        "2035": 17.5729,
+        "2040": 18.5664,
+        "2045": 19.7265,
+        "2050": 20.9377,
+        "_src": "tables/highogs_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24390.2676,
+        "2035": 26716.3652,
+        "2040": 29136.6133,
+        "2045": 31468.1641,
+        "2050": 33826.0156,
+        "_src": "tables/highogs_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5428,
+        "2035": 1.7281,
+        "2040": 1.9131,
+        "2045": 2.1022,
+        "2050": 2.2938,
+        "_src": "tables/highogs_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 55.0,
+        "renewable": 32.7,
+        "nuclear": 12.3,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 42.0,
+      "elec_use_cagr_pct": 1.41,
+      "nominal_over_real_2050": 1.658,
+      "vs_baseline_2050_pct": {
+        "elec_use": 1.8,
+        "sales": 2.0
+      }
+    },
+    "lowogs": {
+      "name": "Low Oil and Gas Supply",
+      "elec_use_bkwh": {
+        "2025": 4298.2744,
+        "2030": 4415.4141,
+        "2035": 4775.7197,
+        "2040": 5235.9756,
+        "2045": 5539.6396,
+        "2050": 5794.6992,
+        "_src": "tables/lowogs_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2769,
+        "2030": 4143.9648,
+        "2035": 4472.5649,
+        "2040": 4891.8257,
+        "2045": 5149.0752,
+        "2050": 5352.8213,
+        "_src": "tables/lowogs_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5375,
+        "2030": 14.39,
+        "2035": 15.2315,
+        "2040": 15.5778,
+        "2045": 16.2777,
+        "2050": 16.6215,
+        "_src": "tables/lowogs_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5375,
+        "2030": 16.0801,
+        "2035": 18.665,
+        "2040": 20.9204,
+        "2045": 24.2719,
+        "2050": 27.2669,
+        "_src": "tables/lowogs_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6801,
+        "2030": 17.5711,
+        "2035": 18.4939,
+        "2040": 19.0242,
+        "2045": 19.8926,
+        "2050": 20.444,
+        "_src": "tables/lowogs_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5758,
+        "2030": 7.9206,
+        "2035": 8.3704,
+        "2040": 8.4271,
+        "2045": 8.8161,
+        "2050": 8.829,
+        "_src": "tables/lowogs_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1559,
+        "2035": 2.3607,
+        "2040": 2.5102,
+        "2045": 2.6324,
+        "2050": 2.7565,
+        "_src": "tables/lowogs_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0526,
+        "2030": 4.2858,
+        "2035": 4.4569,
+        "2040": 4.5904,
+        "2045": 4.7804,
+        "2050": 4.9846,
+        "_src": "tables/lowogs_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5234,
+        "2030": 4576.8501,
+        "2035": 4957.6392,
+        "2040": 5460.6709,
+        "2045": 5786.8091,
+        "2050": 6066.7285,
+        "_src": "tables/lowogs_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.4436,
+        "2030": 542.2714,
+        "2035": 167.5987,
+        "2040": 75.8096,
+        "2045": 54.4992,
+        "2050": 47.3146,
+        "_src": "tables/lowogs_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.2024,
+        "2030": 1390.5646,
+        "2035": 1209.168,
+        "2040": 1109.0676,
+        "2045": 1122.5751,
+        "2050": 1124.3147,
+        "_src": "tables/lowogs_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.719,
+        "2035": 793.0438,
+        "2040": 836.2533,
+        "2045": 910.6785,
+        "2050": 916.1346,
+        "_src": "tables/lowogs_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3599,
+        "2030": 1832.5194,
+        "2035": 2786.2898,
+        "2040": 3443.5676,
+        "2045": 3710.1926,
+        "2050": 3994.77,
+        "_src": "tables/lowogs_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4675,
+        "2030": 6.914,
+        "2035": 8.6202,
+        "2040": 10.3812,
+        "2045": 12.454,
+        "2050": 13.671,
+        "_src": "tables/lowogs_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4675,
+        "2030": 7.7261,
+        "2035": 10.5633,
+        "2040": 13.9415,
+        "2045": 18.5703,
+        "2050": 22.4267,
+        "_src": "tables/lowogs_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.3069,
+        "2030": 88.3569,
+        "2035": 83.3542,
+        "2040": 82.24,
+        "2045": 81.8889,
+        "2050": 82.3971,
+        "_src": "tables/lowogs_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8808,
+        "2030": 14.1312,
+        "2035": 15.25,
+        "2040": 16.6839,
+        "2045": 17.5638,
+        "2050": 18.2587,
+        "_src": "tables/lowogs_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9978,
+        "2030": 71.976,
+        "2035": 69.8709,
+        "2040": 69.263,
+        "2045": 68.4236,
+        "2050": 68.7597,
+        "_src": "tables/lowogs_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0723,
+        "2030": 16.157,
+        "2035": 13.164,
+        "2040": 12.5958,
+        "2045": 13.0461,
+        "2050": 13.1978,
+        "_src": "tables/lowogs_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 23781.623,
+        "2035": 26289.3105,
+        "2040": 28734.4082,
+        "2045": 30655.7871,
+        "2050": 32939.8438,
+        "_src": "tables/lowogs_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5461,
+        "2035": 1.6955,
+        "2040": 1.8582,
+        "2045": 2.0632,
+        "2050": 2.2698,
+        "_src": "tables/lowogs_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 18.5,
+        "renewable": 65.8,
+        "nuclear": 15.1,
+        "coal": 0.8
+      },
+      "elec_use_growth_2025_2050_pct": 34.8,
+      "elec_use_cagr_pct": 1.2,
+      "nominal_over_real_2050": 1.64,
+      "vs_baseline_2050_pct": {
+        "elec_use": -3.3,
+        "sales": -4.0
+      }
+    },
+    "highZTC": {
+      "name": "High Zero-carbon Technology Cost",
+      "elec_use_bkwh": {
+        "2025": 4298.2808,
+        "2030": 4547.1011,
+        "2035": 4928.7637,
+        "2040": 5364.2192,
+        "2045": 5710.0469,
+        "2050": 5990.9453,
+        "_src": "tables/highZTC_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2793,
+        "2030": 4275.21,
+        "2035": 4630.4424,
+        "2040": 5031.6479,
+        "2045": 5338.9893,
+        "2050": 5579.2778,
+        "_src": "tables/highZTC_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5331,
+        "2030": 13.0349,
+        "2035": 13.7812,
+        "2040": 14.0143,
+        "2045": 14.1172,
+        "2050": 14.0684,
+        "_src": "tables/highZTC_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5331,
+        "2030": 14.5177,
+        "2035": 17.0994,
+        "2040": 19.2202,
+        "2045": 21.3101,
+        "2050": 23.2341,
+        "_src": "tables/highZTC_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6658,
+        "2030": 16.1382,
+        "2035": 16.8915,
+        "2040": 17.1938,
+        "2045": 17.3838,
+        "2050": 17.4617,
+        "_src": "tables/highZTC_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5715,
+        "2030": 6.6825,
+        "2035": 7.0942,
+        "2040": 7.0249,
+        "2045": 6.827,
+        "2050": 6.4429,
+        "_src": "tables/highZTC_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1064,
+        "2035": 2.2699,
+        "2040": 2.4117,
+        "2045": 2.5286,
+        "2050": 2.6551,
+        "_src": "tables/highZTC_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2179,
+        "2035": 4.3765,
+        "2040": 4.533,
+        "2045": 4.7144,
+        "2050": 4.9172,
+        "_src": "tables/highZTC_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5669,
+        "2030": 4718.7026,
+        "2035": 5113.9854,
+        "2040": 5581.7495,
+        "2045": 5956.8579,
+        "2050": 6267.5244,
+        "_src": "tables/highZTC_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.5305,
+        "2030": 489.403,
+        "2035": 138.734,
+        "2040": 66.2732,
+        "2045": 21.305,
+        "2050": 5.3124,
+        "_src": "tables/highZTC_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.1357,
+        "2030": 1700.2939,
+        "2035": 1882.4218,
+        "2040": 2101.5923,
+        "2045": 2425.1692,
+        "2050": 2673.884,
+        "_src": "tables/highZTC_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7344,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/highZTC_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3601,
+        "2030": 1717.4441,
+        "2035": 2285.7505,
+        "2040": 2608.9375,
+        "2045": 2710.178,
+        "2050": 2789.6191,
+        "_src": "tables/highZTC_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.341,
+        "2035": 5.2506,
+        "2040": 5.4162,
+        "2045": 5.0424,
+        "2050": 4.6589,
+        "_src": "tables/highZTC_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.8348,
+        "2035": 6.5148,
+        "2040": 7.4282,
+        "2045": 7.6115,
+        "2050": 7.6941,
+        "_src": "tables/highZTC_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2916,
+        "2030": 92.5022,
+        "2035": 89.7559,
+        "2040": 89.8986,
+        "2045": 91.3829,
+        "2050": 93.4642,
+        "_src": "tables/highZTC_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8801,
+        "2030": 14.5775,
+        "2035": 15.7892,
+        "2040": 17.1611,
+        "2045": 18.2119,
+        "2050": 19.0314,
+        "_src": "tables/highZTC_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9618,
+        "2030": 75.2911,
+        "2035": 74.1147,
+        "2040": 74.2335,
+        "2045": 75.0777,
+        "2050": 76.4472,
+        "_src": "tables/highZTC_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0713,
+        "2030": 16.969,
+        "2035": 15.2877,
+        "2040": 15.2501,
+        "2045": 15.8493,
+        "2050": 16.5275,
+        "_src": "tables/highZTC_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24187.8242,
+        "2035": 26582.0996,
+        "2040": 28931.4629,
+        "2045": 31221.998,
+        "2050": 33560.4492,
+        "_src": "tables/highZTC_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.541,
+        "2035": 1.7168,
+        "2040": 1.8976,
+        "2045": 2.0886,
+        "2050": 2.2851,
+        "_src": "tables/highZTC_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 42.7,
+        "renewable": 44.5,
+        "nuclear": 12.8,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 39.4,
+      "elec_use_cagr_pct": 1.34,
+      "nominal_over_real_2050": 1.652,
+      "vs_baseline_2050_pct": {
+        "elec_use": -0.1,
+        "sales": 0.1
+      }
+    },
+    "lowZTC": {
+      "name": "Low Zero-carbon Technology Cost",
+      "elec_use_bkwh": {
+        "2025": 4298.2808,
+        "2030": 4549.8774,
+        "2035": 4943.2642,
+        "2040": 5389.0107,
+        "2045": 5742.5068,
+        "2050": 6024.9697,
+        "_src": "tables/lowZTC_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2786,
+        "2030": 4277.5166,
+        "2035": 4632.834,
+        "2040": 5021.9893,
+        "2045": 5308.6118,
+        "2050": 5509.1113,
+        "_src": "tables/lowZTC_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5331,
+        "2030": 13.042,
+        "2035": 13.4007,
+        "2040": 13.4825,
+        "2045": 13.4077,
+        "2050": 13.4015,
+        "_src": "tables/lowZTC_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5331,
+        "2030": 14.5249,
+        "2035": 16.6146,
+        "2040": 18.4764,
+        "2045": 20.2254,
+        "2050": 22.1299,
+        "_src": "tables/lowZTC_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6655,
+        "2030": 16.141,
+        "2035": 16.5037,
+        "2040": 16.6463,
+        "2045": 16.6537,
+        "2050": 16.7677,
+        "_src": "tables/lowZTC_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5715,
+        "2030": 6.6843,
+        "2035": 6.7107,
+        "2040": 6.5009,
+        "2045": 6.1196,
+        "2050": 5.7662,
+        "_src": "tables/lowZTC_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1092,
+        "2035": 2.2895,
+        "2040": 2.4342,
+        "2045": 2.5641,
+        "2050": 2.7106,
+        "_src": "tables/lowZTC_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2167,
+        "2035": 4.372,
+        "2040": 4.5288,
+        "2045": 4.7127,
+        "2050": 4.921,
+        "_src": "tables/lowZTC_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5669,
+        "2030": 4720.6162,
+        "2035": 5133.3726,
+        "2040": 5607.0977,
+        "2045": 5989.3638,
+        "2050": 6307.3545,
+        "_src": "tables/lowZTC_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.5638,
+        "2030": 469.3142,
+        "2035": 101.9812,
+        "2040": 51.942,
+        "2045": 8.9102,
+        "2050": 5.1499,
+        "_src": "tables/lowZTC_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.1268,
+        "2030": 1690.5287,
+        "2035": 1689.118,
+        "2040": 1657.9957,
+        "2045": 1756.2928,
+        "2050": 1715.9578,
+        "_src": "tables/lowZTC_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7434,
+        "2035": 800.8567,
+        "2040": 824.0269,
+        "2045": 798.8181,
+        "2050": 772.3706,
+        "_src": "tables/lowZTC_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.358,
+        "2030": 1749.3325,
+        "2035": 2538.3223,
+        "2040": 3075.2319,
+        "2045": 3439.7305,
+        "2050": 3839.3274,
+        "_src": "tables/lowZTC_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4681,
+        "2030": 4.4003,
+        "2035": 5.0097,
+        "2040": 5.1773,
+        "2045": 4.6701,
+        "2050": 4.4207,
+        "_src": "tables/lowZTC_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4681,
+        "2030": 4.9006,
+        "2035": 6.2112,
+        "2040": 7.0949,
+        "2045": 7.0448,
+        "2050": 7.3,
+        "_src": "tables/lowZTC_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2919,
+        "2030": 92.3274,
+        "2035": 88.8503,
+        "2040": 88.6027,
+        "2045": 89.1731,
+        "2050": 89.894,
+        "_src": "tables/lowZTC_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8801,
+        "2030": 14.5855,
+        "2035": 15.7966,
+        "2040": 17.1276,
+        "2045": 18.1077,
+        "2050": 18.792,
+        "_src": "tables/lowZTC_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9621,
+        "2030": 75.3027,
+        "2035": 74.1869,
+        "2040": 74.2406,
+        "2045": 75.0689,
+        "2050": 76.1185,
+        "_src": "tables/lowZTC_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0713,
+        "2030": 16.7829,
+        "2035": 14.3066,
+        "2040": 13.9458,
+        "2045": 13.6457,
+        "2050": 13.2887,
+        "_src": "tables/lowZTC_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24190.4102,
+        "2035": 26603.7578,
+        "2040": 28947.2598,
+        "2045": 31228.2676,
+        "2050": 33535.4219,
+        "_src": "tables/lowZTC_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.541,
+        "2035": 1.7155,
+        "2040": 1.8961,
+        "2045": 2.0872,
+        "2050": 2.2848,
+        "_src": "tables/lowZTC_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 27.2,
+        "renewable": 60.9,
+        "nuclear": 12.2,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 40.2,
+      "elec_use_cagr_pct": 1.36,
+      "nominal_over_real_2050": 1.651,
+      "vs_baseline_2050_pct": {
+        "elec_use": 0.5,
+        "sales": -1.2
+      }
+    },
+    "altelec": {
+      "name": "Alternative Electricity",
+      "elec_use_bkwh": {
+        "2025": 4298.2744,
+        "2030": 4566.8149,
+        "2035": 4959.6997,
+        "2040": 5395.4902,
+        "2045": 5747.752,
+        "2050": 6031.3174,
+        "_src": "tables/altelec_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2778,
+        "2030": 4295.1606,
+        "2035": 4661.8921,
+        "2040": 5060.7681,
+        "2045": 5372.5854,
+        "2050": 5611.7495,
+        "_src": "tables/altelec_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5374,
+        "2030": 13.0455,
+        "2035": 13.4154,
+        "2040": 13.6414,
+        "2045": 13.6174,
+        "2050": 13.6565,
+        "_src": "tables/altelec_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5374,
+        "2030": 14.5311,
+        "2035": 16.6102,
+        "2040": 18.6657,
+        "2045": 20.499,
+        "2050": 22.4872,
+        "_src": "tables/altelec_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6795,
+        "2030": 16.1766,
+        "2035": 16.5179,
+        "2040": 16.8061,
+        "2045": 16.8497,
+        "2050": 17.0233,
+        "_src": "tables/altelec_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5758,
+        "2030": 6.7008,
+        "2035": 6.762,
+        "2040": 6.6976,
+        "2045": 6.367,
+        "2050": 6.0681,
+        "_src": "tables/altelec_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.106,
+        "2035": 2.2449,
+        "2040": 2.3771,
+        "2045": 2.4993,
+        "2050": 2.633,
+        "_src": "tables/altelec_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2107,
+        "2035": 4.3704,
+        "2040": 4.5288,
+        "2045": 4.7074,
+        "2050": 4.9078,
+        "_src": "tables/altelec_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5635,
+        "2030": 4738.9312,
+        "2035": 5147.7427,
+        "2040": 5610.6274,
+        "2045": 5994.4321,
+        "2050": 6311.7861,
+        "_src": "tables/altelec_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.4584,
+        "2030": 565.6096,
+        "2035": 423.4278,
+        "2040": 390.4499,
+        "2045": 348.6203,
+        "2050": 316.27,
+        "_src": "tables/altelec_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.2317,
+        "2030": 1646.8406,
+        "2035": 1837.1992,
+        "2040": 2037.8728,
+        "2045": 2382.2192,
+        "2050": 2612.0425,
+        "_src": "tables/altelec_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7294,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.7181,
+        "2050": 801.6908,
+        "_src": "tables/altelec_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3604,
+        "2030": 1714.187,
+        "2035": 2077.1191,
+        "2040": 2375.342,
+        "2045": 2459.0688,
+        "2050": 2579.637,
+        "_src": "tables/altelec_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4671,
+        "2030": 4.2912,
+        "2035": 5.1149,
+        "2040": 5.3548,
+        "2045": 4.9985,
+        "2050": 4.6072,
+        "_src": "tables/altelec_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4671,
+        "2030": 4.7799,
+        "2035": 6.333,
+        "2040": 7.3271,
+        "2045": 7.5246,
+        "2050": 7.5864,
+        "_src": "tables/altelec_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2916,
+        "2030": 92.5232,
+        "2035": 91.0479,
+        "2040": 91.315,
+        "2045": 92.8836,
+        "2050": 94.6511,
+        "_src": "tables/altelec_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8801,
+        "2030": 14.6449,
+        "2035": 15.8941,
+        "2040": 17.2582,
+        "2045": 18.3251,
+        "2050": 19.142,
+        "_src": "tables/altelec_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9618,
+        "2030": 75.4375,
+        "2035": 74.4393,
+        "2040": 74.4533,
+        "2045": 75.3637,
+        "2050": 76.7126,
+        "_src": "tables/altelec_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0714,
+        "2030": 16.8429,
+        "2035": 16.2426,
+        "2040": 16.4359,
+        "2045": 17.0578,
+        "2050": 17.4456,
+        "_src": "tables/altelec_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24189.3145,
+        "2035": 26622.2871,
+        "2040": 28953.3984,
+        "2045": 31252.8984,
+        "2050": 33577.707,
+        "_src": "tables/altelec_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5412,
+        "2035": 1.7131,
+        "2040": 1.8933,
+        "2045": 2.0829,
+        "2050": 2.2783,
+        "_src": "tables/altelec_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 41.4,
+        "renewable": 40.9,
+        "nuclear": 12.7,
+        "coal": 5.0
+      },
+      "elec_use_growth_2025_2050_pct": 40.3,
+      "elec_use_cagr_pct": 1.36,
+      "nominal_over_real_2050": 1.647,
+      "vs_baseline_2050_pct": {
+        "elec_use": 0.6,
+        "sales": 0.7
+      }
+    },
+    "alttrnp": {
+      "name": "Alternative Transportation",
+      "elec_use_bkwh": {
+        "2025": 4298.1841,
+        "2030": 4513.02,
+        "2035": 4671.6709,
+        "2040": 4936.8345,
+        "2045": 5192.6875,
+        "2050": 5439.0894,
+        "_src": "tables/alttrnp_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.1858,
+        "2030": 4241.1074,
+        "2035": 4373.2134,
+        "2040": 4599.5156,
+        "2045": 4816.2622,
+        "2050": 5015.936,
+        "_src": "tables/alttrnp_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5373,
+        "2030": 13.1623,
+        "2035": 13.6554,
+        "2040": 14.0507,
+        "2045": 14.0097,
+        "2050": 14.2433,
+        "_src": "tables/alttrnp_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5373,
+        "2030": 14.6619,
+        "2035": 16.8833,
+        "2040": 19.1493,
+        "2045": 20.9493,
+        "2050": 23.3132,
+        "_src": "tables/alttrnp_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6796,
+        "2030": 16.3896,
+        "2035": 17.0764,
+        "2040": 17.7127,
+        "2045": 17.8589,
+        "2050": 18.2606,
+        "_src": "tables/alttrnp_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5757,
+        "2030": 6.7945,
+        "2035": 6.816,
+        "2040": 6.8222,
+        "2045": 6.4488,
+        "2050": 6.3577,
+        "_src": "tables/alttrnp_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1193,
+        "2035": 2.3458,
+        "2040": 2.5227,
+        "2045": 2.661,
+        "2050": 2.7871,
+        "_src": "tables/alttrnp_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2194,
+        "2035": 4.4513,
+        "2040": 4.6548,
+        "2045": 4.8463,
+        "2050": 5.0421,
+        "_src": "tables/alttrnp_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.4141,
+        "2030": 4682.3838,
+        "2035": 4844.0034,
+        "2040": 5130.7734,
+        "2045": 5409.2334,
+        "2050": 5683.999,
+        "_src": "tables/alttrnp_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.5025,
+        "2030": 482.9923,
+        "2035": 115.8641,
+        "2040": 66.8306,
+        "2045": 12.0538,
+        "2050": 5.1542,
+        "_src": "tables/alttrnp_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.0469,
+        "2030": 1665.9037,
+        "2035": 1750.2686,
+        "2040": 1860.6487,
+        "2045": 2048.6272,
+        "2050": 2259.5259,
+        "_src": "tables/alttrnp_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7429,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/alttrnp_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.358,
+        "2030": 1722.6542,
+        "2035": 2172.7126,
+        "2040": 2401.667,
+        "2045": 2551.21,
+        "2050": 2622.8525,
+        "_src": "tables/alttrnp_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4673,
+        "2030": 4.6005,
+        "2035": 5.0391,
+        "2040": 5.3486,
+        "2045": 4.8422,
+        "2050": 4.6826,
+        "_src": "tables/alttrnp_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4673,
+        "2030": 5.1246,
+        "2035": 6.2303,
+        "2040": 7.2894,
+        "2045": 7.2408,
+        "2050": 7.6645,
+        "_src": "tables/alttrnp_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2896,
+        "2030": 92.8085,
+        "2035": 90.7749,
+        "2040": 91.525,
+        "2045": 92.9017,
+        "2050": 94.81,
+        "_src": "tables/alttrnp_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8798,
+        "2030": 14.4608,
+        "2035": 14.9127,
+        "2040": 15.6882,
+        "2045": 16.4303,
+        "2050": 17.1115,
+        "_src": "tables/alttrnp_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9594,
+        "2030": 75.807,
+        "2035": 75.9461,
+        "2040": 76.8701,
+        "2045": 78.1814,
+        "2050": 79.4439,
+        "_src": "tables/alttrnp_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0717,
+        "2030": 16.7483,
+        "2035": 14.5745,
+        "2040": 14.3975,
+        "2045": 14.461,
+        "2050": 15.1014,
+        "_src": "tables/alttrnp_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24157.8555,
+        "2035": 26589.7129,
+        "2040": 28932.7559,
+        "2045": 31281.3691,
+        "2050": 33570.8633,
+        "_src": "tables/alttrnp_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5413,
+        "2035": 1.7107,
+        "2040": 1.8857,
+        "2045": 2.069,
+        "2050": 2.2647,
+        "_src": "tables/alttrnp_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 39.8,
+        "renewable": 46.1,
+        "nuclear": 14.1,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 26.5,
+      "elec_use_cagr_pct": 0.95,
+      "nominal_over_real_2050": 1.637,
+      "vs_baseline_2050_pct": {
+        "elec_use": -9.3,
+        "sales": -10.0
+      }
+    },
+    "electrnp": {
+      "name": "Alternative Electricity and Alternative Transportation (Combination)",
+      "elec_use_bkwh": {
+        "2025": 4298.1826,
+        "2030": 4519.2344,
+        "2035": 4690.6064,
+        "2040": 4965.5269,
+        "2045": 5226.3682,
+        "2050": 5477.4468,
+        "_src": "tables/electrnp_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.1851,
+        "2030": 4247.709,
+        "2035": 4391.4653,
+        "2040": 4629.7236,
+        "2045": 4851.3535,
+        "2050": 5055.7173,
+        "_src": "tables/electrnp_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5373,
+        "2030": 13.0168,
+        "2035": 13.4265,
+        "2040": 13.7295,
+        "2045": 13.5949,
+        "2050": 13.8265,
+        "_src": "tables/electrnp_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5373,
+        "2030": 14.4937,
+        "2035": 16.5854,
+        "2040": 18.7016,
+        "2045": 20.3058,
+        "2050": 22.5922,
+        "_src": "tables/electrnp_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6794,
+        "2030": 16.2327,
+        "2035": 16.8308,
+        "2040": 17.3702,
+        "2045": 17.3919,
+        "2050": 17.7923,
+        "_src": "tables/electrnp_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5757,
+        "2030": 6.6556,
+        "2035": 6.6302,
+        "2040": 6.5574,
+        "2045": 6.0826,
+        "2050": 5.9862,
+        "_src": "tables/electrnp_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1161,
+        "2035": 2.3129,
+        "2040": 2.4825,
+        "2045": 2.6248,
+        "2050": 2.757,
+        "_src": "tables/electrnp_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0525,
+        "2030": 4.2175,
+        "2035": 4.4442,
+        "2040": 4.6423,
+        "2045": 4.8337,
+        "2050": 5.0286,
+        "_src": "tables/electrnp_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.4624,
+        "2030": 4687.2334,
+        "2035": 4863.6104,
+        "2040": 5157.8701,
+        "2045": 5442.6934,
+        "2050": 5722.5557,
+        "_src": "tables/electrnp_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.5041,
+        "2030": 570.3521,
+        "2035": 396.618,
+        "2040": 365.3205,
+        "2045": 325.1123,
+        "2050": 299.6273,
+        "_src": "tables/electrnp_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.0576,
+        "2030": 1608.9407,
+        "2035": 1714.3333,
+        "2040": 1801.1279,
+        "2045": 2032.7933,
+        "2050": 2238.5469,
+        "_src": "tables/electrnp_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7303,
+        "2035": 801.718,
+        "2040": 800.7493,
+        "2045": 801.7181,
+        "2050": 801.6908,
+        "_src": "tables/electrnp_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3599,
+        "2030": 1696.1029,
+        "2035": 1943.0719,
+        "2040": 2187.0459,
+        "2045": 2282.5959,
+        "2050": 2381.9924,
+        "_src": "tables/electrnp_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4673,
+        "2030": 4.4103,
+        "2035": 5.1744,
+        "2040": 5.7678,
+        "2045": 4.8816,
+        "2050": 4.765,
+        "_src": "tables/electrnp_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4673,
+        "2030": 4.9107,
+        "2035": 6.3918,
+        "2040": 7.8566,
+        "2045": 7.2913,
+        "2050": 7.7859,
+        "_src": "tables/electrnp_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2896,
+        "2030": 92.847,
+        "2035": 92.0082,
+        "2040": 92.8361,
+        "2045": 94.4437,
+        "2050": 95.9889,
+        "_src": "tables/electrnp_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8798,
+        "2030": 14.4826,
+        "2035": 14.9746,
+        "2040": 15.7913,
+        "2045": 16.55,
+        "2050": 17.2473,
+        "_src": "tables/electrnp_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9594,
+        "2030": 75.8682,
+        "2035": 76.0893,
+        "2040": 76.9385,
+        "2045": 78.348,
+        "2050": 79.6058,
+        "_src": "tables/electrnp_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0717,
+        "2030": 16.7241,
+        "2035": 15.6634,
+        "2040": 15.645,
+        "2045": 15.8358,
+        "2050": 16.1166,
+        "_src": "tables/electrnp_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24166.6523,
+        "2035": 26595.5781,
+        "2040": 28925.5449,
+        "2045": 31294.1719,
+        "2050": 33582.9492,
+        "_src": "tables/electrnp_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5406,
+        "2035": 1.7092,
+        "2040": 1.8847,
+        "2045": 2.0666,
+        "2050": 2.2608,
+        "_src": "tables/electrnp_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 39.1,
+        "renewable": 41.6,
+        "nuclear": 14.0,
+        "coal": 5.2
+      },
+      "elec_use_growth_2025_2050_pct": 27.4,
+      "elec_use_cagr_pct": 0.97,
+      "nominal_over_real_2050": 1.634,
+      "vs_baseline_2050_pct": {
+        "elec_use": -8.6,
+        "sales": -9.3
+      }
+    },
+    "higheldmd": {
+      "name": "High Electricity Demand",
+      "elec_use_bkwh": {
+        "2025": 4298.2769,
+        "2030": 4572.9678,
+        "2035": 5018.2041,
+        "2040": 5541.5264,
+        "2045": 6010.8394,
+        "2050": 6469.6138,
+        "_src": "tables/higheldmd_table8.xlsx row 67 (ESD000:ia_TotalConsumpt); 2025 col C, 2050 col AB"
+      },
+      "sales_bkwh": {
+        "2025": 4069.2776,
+        "2030": 4301.0308,
+        "2035": 4719.0674,
+        "2040": 5204.271,
+        "2045": 5631.9814,
+        "2050": 6045.1313,
+        "_src": "tables/higheldmd_table8.xlsx row 65 (ESD000:ia_Total); 2025 col C, 2050 col AB"
+      },
+      "price_avg_2025c": {
+        "2025": 13.5375,
+        "2030": 13.1824,
+        "2035": 13.7457,
+        "2040": 14.0471,
+        "2045": 14.1877,
+        "2050": 14.267,
+        "_src": "tables/higheldmd_table8.xlsx row 75 (ESD000:ja_AllSectorsAve); 2025 col C, 2050 col AB"
+      },
+      "price_avg_nominal_c": {
+        "2025": 13.5375,
+        "2030": 14.6875,
+        "2035": 17.0267,
+        "2040": 19.2012,
+        "2045": 21.3379,
+        "2050": 23.4471,
+        "_src": "tables/higheldmd_table8.xlsx row 81 (ESD000:nom_AllSectorsAv); 2025 col C, 2050 col AB"
+      },
+      "price_res_2025c": {
+        "2025": 16.6789,
+        "2030": 16.3293,
+        "2035": 16.8419,
+        "2040": 17.2425,
+        "2045": 17.582,
+        "2050": 17.9443,
+        "_src": "tables/higheldmd_table8.xlsx row 71 (ESD000:ja_Residential); 2025 col C, 2050 col AB"
+      },
+      "price_generation_2025c": {
+        "2025": 7.5753,
+        "2030": 6.8332,
+        "2035": 7.0182,
+        "2040": 6.9983,
+        "2045": 6.8403,
+        "2050": 6.6163,
+        "_src": "tables/higheldmd_table8.xlsx row 85 (ESD000:ka_Generation); 2025 col C, 2050 col AB"
+      },
+      "price_transmission_2025c": {
+        "2025": 1.8851,
+        "2030": 2.1078,
+        "2035": 2.2974,
+        "2040": 2.4458,
+        "2045": 2.561,
+        "2050": 2.6769,
+        "_src": "tables/higheldmd_table8.xlsx row 86 (ESD000:ka_Transmission); 2025 col C, 2050 col AB"
+      },
+      "price_distribution_2025c": {
+        "2025": 4.0531,
+        "2030": 4.2126,
+        "2035": 4.3917,
+        "2040": 4.5606,
+        "2045": 4.7416,
+        "2050": 4.9283,
+        "_src": "tables/higheldmd_table8.xlsx row 87 (ESD000:ka_Distribution); 2025 col C, 2050 col AB"
+      },
+      "gen_total_bkwh": {
+        "2025": 4517.5425,
+        "2030": 4745.2998,
+        "2035": 5210.3125,
+        "2040": 5769.2964,
+        "2045": 6275.875,
+        "2050": 6775.5151,
+        "_src": "tables/higheldmd_table8.xlsx row 55 (ESD000:ga_TotalElectric); 2025 col C, 2050 col AB"
+      },
+      "gen_coal_bkwh": {
+        "2025": 738.4372,
+        "2030": 476.7034,
+        "2035": 138.3279,
+        "2040": 83.2151,
+        "2045": 21.2796,
+        "2050": 5.3513,
+        "_src": "tables/higheldmd_table8.xlsx row 48 (ESD000:xx_CoalInSocks); 2025 col C, 2050 col AB"
+      },
+      "gen_gas_bkwh": {
+        "2025": 1816.2249,
+        "2030": 1715.7352,
+        "2035": 1827.8054,
+        "2040": 2051.7852,
+        "2045": 2457.9297,
+        "2050": 2805.051,
+        "_src": "tables/higheldmd_table8.xlsx row 50 (ESD000:xx_NaturalGas); 2025 col C, 2050 col AB"
+      },
+      "gen_nuclear_bkwh": {
+        "2025": 783.9165,
+        "2030": 801.7429,
+        "2035": 801.718,
+        "2040": 801.718,
+        "2045": 801.718,
+        "2050": 801.6908,
+        "_src": "tables/higheldmd_table8.xlsx row 51 (ESD000:xx_NuclearPower); 2025 col C, 2050 col AB"
+      },
+      "gen_renewable_bkwh": {
+        "2025": 1158.3657,
+        "2030": 1741.4927,
+        "2035": 2438.0857,
+        "2040": 2830.9324,
+        "2045": 2998.8274,
+        "2050": 3168.2122,
+        "_src": "tables/higheldmd_table8.xlsx row 52 (ESD000:xx_RenewableSour); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_2025usd_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.4205,
+        "2035": 5.0994,
+        "2040": 5.3101,
+        "2045": 5.024,
+        "2050": 4.761,
+        "_src": "tables/higheldmd_table1.xlsx row 53 (SUP000:ha_GasPriceHenry); 2025 col C, 2050 col AB"
+      },
+      "henry_hub_nominal_mmbtu": {
+        "2025": 3.4672,
+        "2030": 4.9252,
+        "2035": 6.3166,
+        "2040": 7.2585,
+        "2045": 7.556,
+        "2050": 7.8244,
+        "_src": "tables/higheldmd_table1.xlsx row 63 (SUP000:nom_Gas@HenryHub); 2025 col C, 2050 col AB"
+      },
+      "total_energy_quads": {
+        "2025": 95.2914,
+        "2030": 92.5869,
+        "2035": 89.9574,
+        "2040": 90.5623,
+        "2045": 92.6642,
+        "2050": 95.8356,
+        "_src": "tables/higheldmd_table1.xlsx row 48 (SUP000:fa_Total); 2025 col C, 2050 col AB"
+      },
+      "purchased_elec_quads": {
+        "2025": 13.8801,
+        "2030": 14.6658,
+        "2035": 16.0916,
+        "2040": 17.75,
+        "2045": 19.2115,
+        "2050": 20.6208,
+        "_src": "tables/higheldmd_table2.xlsx row 111 (QUA000:ga_Electricity); 2025 col C, 2050 col AB"
+      },
+      "delivered_energy_quads": {
+        "2025": 75.9616,
+        "2030": 75.4179,
+        "2035": 74.5028,
+        "2040": 74.9133,
+        "2045": 76.1872,
+        "2050": 78.2354,
+        "_src": "tables/higheldmd_table2.xlsx row 112 (QUA000:ga_DeliveredEner); 2025 col C, 2050 col AB"
+      },
+      "elec_losses_quads": {
+        "2025": 19.0714,
+        "2030": 16.9273,
+        "2035": 15.1003,
+        "2040": 15.2327,
+        "2045": 16.0196,
+        "2050": 17.1088,
+        "_src": "tables/higheldmd_table2.xlsx row 113 (QUA000:ga_ElectricityRe); 2025 col C, 2050 col AB"
+      },
+      "gdp_2012usd_bn": {
+        "2025": 22086.084,
+        "2030": 24183.9043,
+        "2035": 26613.5195,
+        "2040": 28991.9727,
+        "2045": 31272.7344,
+        "2050": 33638.5391,
+        "_src": "tables/higheldmd_table20.xlsx row 12 (MEI000:ba_RealGrossDome); 2025 col C, 2050 col AB"
+      },
+      "gdp_deflator_2012eq1": {
+        "2025": 1.3836,
+        "2030": 1.5416,
+        "2035": 1.7139,
+        "2040": 1.8913,
+        "2045": 2.081,
+        "2050": 2.2739,
+        "_src": "tables/higheldmd_table20.xlsx row 26 (MEI000:da_GDPChain-Type); 2025 col C, 2050 col AB"
+      },
+      "share_2050_pct": {
+        "gas": 41.4,
+        "renewable": 46.8,
+        "nuclear": 11.8,
+        "coal": 0.1
+      },
+      "elec_use_growth_2025_2050_pct": 50.5,
+      "elec_use_cagr_pct": 1.65,
+      "nominal_over_real_2050": 1.643,
+      "vs_baseline_2050_pct": {
+        "elec_use": 7.9,
+        "sales": 8.4
+      }
+    }
+  },
+  "excluded_note": "Stale AEO2021 table (aeotab_1.xlsx) on the agency site was excluded from input/."
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "WFA-SWE-009",
+  "reference_passed": 160,
+  "reference_skipped": 88,
+  "reference_total": 248,
+  "source": "Successful author reference run on the pinned task environment. Skipped count includes explicitly expected failures."
+}

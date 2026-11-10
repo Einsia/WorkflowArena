@@ -1,0 +1,90 @@
+{
+  "units": "metre",
+  "kitchen": {
+    "room": [
+      4.2,
+      3.4,
+      2.6
+    ],
+    "window": "north wall, above the sink; winter evening outside",
+    "counter_height": 0.9,
+    "stove": {
+      "type": "two-burner gas hob set into the counter",
+      "position_xy": [
+        2.6,
+        3.05
+      ]
+    },
+    "table": {
+      "size": [
+        1.0,
+        0.7,
+        0.75
+      ],
+      "position_xy": [
+        1.4,
+        1.2
+      ]
+    },
+    "doorway": {
+      "wall": "south",
+      "position_x": 3.6,
+      "width": 0.85,
+      "leads_to": "unheated entrance hall"
+    }
+  },
+  "props": {
+    "pot": {
+      "inner_diameter": 0.24,
+      "height": 0.16,
+      "material": "enamelled steel, cream outside",
+      "contents": "clear broth with vegetables, about 70 percent full"
+    },
+    "pot_lid": {
+      "diameter": 0.25,
+      "material": "glass with steel rim",
+      "knob": "black, about 4 cm diameter"
+    },
+    "ladle": {
+      "bowl_diameter": 0.08,
+      "length": 0.3,
+      "material": "stainless steel"
+    },
+    "bowl": {
+      "rim_diameter": 0.15,
+      "height": 0.07,
+      "material": "glazed ceramic, blue-white"
+    }
+  },
+  "characters": {
+    "mei": {
+      "role": "grandmother, cooking",
+      "look": "grey hair tied back, dark green cardigan, apron",
+      "handedness": "right"
+    },
+    "lin": {
+      "role": "grandson, about 16, arriving home",
+      "look": "navy winter coat, red knitted scarf"
+    }
+  },
+  "dialogue": {
+    "line_door": {
+      "speaker": "lin",
+      "text": "Grandma, I'm home."
+    },
+    "line_warn": {
+      "speaker": "mei",
+      "text": "Careful, it's hot."
+    },
+    "line_thanks": {
+      "speaker": "lin",
+      "text": "Thanks. It smells great."
+    }
+  },
+  "identity_constraints": [
+    "same pot, lid, ladle and bowl wherever they appear",
+    "same mei (face, cardigan, apron) in S1, S2 and S4",
+    "same lin (face, coat, scarf) in S3, S4 and S5"
+  ],
+  "task_id": "WFA-3D-011"
+}

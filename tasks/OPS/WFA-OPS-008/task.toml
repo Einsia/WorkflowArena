@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/state.db", "/workspace/submission"]
+
+[task]
+name = "WFA-OPS-008"
+version = "0.1.0"
+description = "Supplier accreditation round"
+
+[metadata]
+domain = "OPS"
+subcategory = "OPS-XSYS"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 1800
+cpus = 2
+memory_mb = 4096
+storage_mb = 4096
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 1800
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 4096

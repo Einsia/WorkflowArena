@@ -1,0 +1,3 @@
+BUILD_CMD='cd /work && export FFLAGS=-fallow-argument-mismatch NPY_NUM_BUILD_JOBS=16 && python setup.py build_ext --inplace -j 16'
+IMPORT_CHECK='cd /work && python -c "import scipy, scipy.stats, scipy.optimize; print(\"import ok\", scipy.__version__)"'
+TEST_CMD='cd /work && python -m pytest -p no:cacheprovider -q -rfE --continue-on-collection-errors -n 8 scipy/stats/tests/test_qmc.py > /tmp/test.log 2>&1; rc=$?; tail -n 40 /tmp/test.log; echo "--- pytest summary"; grep -E "^(FAILED|ERROR) " /tmp/test.log | head -60; sed "s/\x1b\[[0-9;]*m//g" /tmp/test.log | grep -E "[0-9]+ (passed|failed|errors?)" | tail -1; exit $rc'

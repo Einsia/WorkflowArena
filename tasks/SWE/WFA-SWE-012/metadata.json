@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-012",
+  "domain": "SWE",
+  "task_form": "SWE-REIMPL",
+  "title": "Re-implement Nushell's completion engine",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_release_subsystem_removal",
+    "url": "https://codeload.github.com/nushell/nushell/tar.gz/refs/tags/0.116.1",
+    "revision": "0.116.1",
+    "license": "MIT"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "criterion": "All required fail-to-pass tests and preserved behaviors pass, with no protected-file integrity violation or incomplete grader execution."
+  }
+}

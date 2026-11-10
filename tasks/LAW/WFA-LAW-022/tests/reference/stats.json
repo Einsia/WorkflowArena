@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-022",
+  "src": "train-18853",
+  "case_no": "（2019）赣1002刑初560号",
+  "year": 2019,
+  "n_defendants": 9,
+  "charges": [
+    "寻衅滋事罪",
+    "诈骗罪"
+  ],
+  "n_principal": 2,
+  "n_accessory": 7,
+  "n_role_items": 11,
+  "n_leaders": 2,
+  "facts_chars": 3194,
+  "n_probation_graded": 2
+}

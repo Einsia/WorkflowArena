@@ -1,0 +1,62 @@
+{
+  "units": "metre; dimensions guide identity and layout, not metrology",
+  "attic": {
+    "floor": [
+      5.0,
+      4.0
+    ],
+    "ridge_height": 2.8,
+    "eave_height": 1.2,
+    "ridge_axis": "x",
+    "materials": "old pine floorboards, exposed rafters, plaster gable walls",
+    "gable_wall_with_window": "north (+y)"
+  },
+  "window": {
+    "type": "single wooden casement, side-hinged, opens inward",
+    "opening": [
+      0.7,
+      0.9
+    ],
+    "sill_height": 0.9,
+    "centre_x": 1.2,
+    "hardware": "brass latch at the free edge"
+  },
+  "curtain": {
+    "fabric": "thin unlined cotton, faded ochre",
+    "size": [
+      1.1,
+      1.35
+    ],
+    "hung_from": "wooden rod 0.12 m above the window opening, inside the room"
+  },
+  "pendant_lamp": {
+    "type": "single tungsten bulb in a green enamel shade",
+    "hook": [
+      2.6,
+      2.0,
+      2.8
+    ],
+    "drop_hook_to_bulb": 0.9
+  },
+  "desk": {
+    "size": [
+      1.2,
+      0.6,
+      0.75
+    ],
+    "centre": [
+      2.6,
+      1.6
+    ],
+    "items": "a few letters, a closed tin box"
+  },
+  "character": {
+    "name": "MARA",
+    "description": "woman in her sixties, grey hair in a low bun, dark green cardigan over a light shirt",
+    "only_person_in_the_film": true
+  },
+  "exterior": "night, heavy rain and gusting wind; no other building visible through the window",
+  "dialogue": {
+    "line": "That latch won't hold."
+  }
+}

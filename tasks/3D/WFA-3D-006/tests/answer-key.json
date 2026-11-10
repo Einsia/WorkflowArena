@@ -1,0 +1,2158 @@
+{
+  "task_id": "WFA-3D-006",
+  "frames": [
+    1,
+    1440
+  ],
+  "fps": 24,
+  "convention": "front view = from -Y; omega deg/frame, + = clockwise seen from front = +rotation about +Y",
+  "layers_y": {
+    "L1": -3.7,
+    "L2": -3.45,
+    "L3": -3.2,
+    "L4": -2.95,
+    "L5": -2.7,
+    "L6": -2.45,
+    "L7": -2.2,
+    "L8": -1.95,
+    "L9": -1.7,
+    "L10": -1.45,
+    "L11": -1.2,
+    "L12": -0.95
+  },
+  "dial_y": -4.25,
+  "reference_drives": {
+    "M": {
+      "omega": 3.0,
+      "phase_frame1_deg": 0.0
+    },
+    "SB": {
+      "omega": -0.75
+    },
+    "H_phase_frame1_deg": 300.0,
+    "time_at_frame1": "10:00"
+  },
+  "arbors": {
+    "C": {
+      "x": 2.4728,
+      "z": 12.7414,
+      "omega_deg_per_frame": -0.083333,
+      "total_deg_f1_to_f1440": -119.92,
+      "omega_original_issue": -0.083333
+    },
+    "D24": {
+      "x": -2.8517,
+      "z": 12.7262,
+      "omega_deg_per_frame": -0.125,
+      "total_deg_f1_to_f1440": -179.88,
+      "omega_original_issue": -0.125
+    },
+    "E": {
+      "x": 0.4933,
+      "z": 12.7743,
+      "omega_deg_per_frame": 18.0,
+      "total_deg_f1_to_f1440": 25902.0,
+      "omega_original_issue": 18.0
+    },
+    "F": {
+      "x": 0.3575,
+      "z": 17.5058,
+      "omega_deg_per_frame": 60.0,
+      "total_deg_f1_to_f1440": 86340.0,
+      "omega_original_issue": 60.0
+    },
+    "G": {
+      "x": -0.6873,
+      "z": 11.8776,
+      "omega_deg_per_frame": 0.375,
+      "total_deg_f1_to_f1440": 539.62,
+      "omega_original_issue": 0.375
+    },
+    "H": {
+      "x": 0.0,
+      "z": 12.8,
+      "omega_deg_per_frame": 0.25,
+      "total_deg_f1_to_f1440": 359.75,
+      "omega_original_issue": 0.25
+    },
+    "J": {
+      "x": -0.6276,
+      "z": 16.8451,
+      "omega_deg_per_frame": 1.5,
+      "total_deg_f1_to_f1440": 2158.5,
+      "omega_original_issue": 1.5
+    },
+    "K2": {
+      "x": -0.1697,
+      "z": 12.9697,
+      "omega_deg_per_frame": -1.0,
+      "total_deg_f1_to_f1440": -1439.0,
+      "omega_original_issue": -1.0
+    },
+    "K3a": {
+      "x": -0.9021,
+      "z": 12.4717,
+      "omega_deg_per_frame": -0.166667,
+      "total_deg_f1_to_f1440": -239.83,
+      "omega_original_issue": -0.166667
+    },
+    "K3b": {
+      "x": -1.9063,
+      "z": 12.5595,
+      "omega_deg_per_frame": 0.125,
+      "total_deg_f1_to_f1440": 179.88,
+      "omega_original_issue": 0.125
+    },
+    "K4a": {
+      "x": 0.0732,
+      "z": 13.6368,
+      "omega_deg_per_frame": -0.333333,
+      "total_deg_f1_to_f1440": -479.67,
+      "omega_original_issue": -0.333333
+    },
+    "K4b": {
+      "x": 0.0224,
+      "z": 14.1201,
+      "omega_deg_per_frame": 0.484848,
+      "total_deg_f1_to_f1440": 697.7,
+      "omega_original_issue": 0.416667
+    },
+    "K5": {
+      "x": 0.1197,
+      "z": 12.4711,
+      "omega_deg_per_frame": -0.333333,
+      "total_deg_f1_to_f1440": -479.67,
+      "omega_original_issue": -0.333333
+    },
+    "K6a": {
+      "x": 0.9353,
+      "z": 12.26,
+      "omega_deg_per_frame": -0.125,
+      "total_deg_f1_to_f1440": -179.88,
+      "omega_original_issue": -0.125
+    },
+    "K6b": {
+      "x": 1.7478,
+      "z": 12.4033,
+      "omega_deg_per_frame": 0.083333,
+      "total_deg_f1_to_f1440": 119.92,
+      "omega_original_issue": 0.083333
+    },
+    "M": {
+      "x": 0.0,
+      "z": 12.8,
+      "omega_deg_per_frame": 3.0,
+      "total_deg_f1_to_f1440": 4317.0,
+      "omega_original_issue": 3.0
+    },
+    "MO": {
+      "x": 0.0461,
+      "z": 14.7997,
+      "omega_deg_per_frame": -0.093567,
+      "total_deg_f1_to_f1440": -134.64,
+      "omega_original_issue": -0.063559
+    },
+    "P1": {
+      "x": -1.4644,
+      "z": 16.7719,
+      "omega_deg_per_frame": -0.5,
+      "total_deg_f1_to_f1440": -719.5,
+      "omega_original_issue": -0.5
+    },
+    "P2": {
+      "x": 1.046,
+      "z": 16.8085,
+      "omega_deg_per_frame": 0.5,
+      "total_deg_f1_to_f1440": 719.5,
+      "omega_original_issue": 0.5
+    },
+    "R": {
+      "x": 0.0,
+      "z": 12.8,
+      "omega_deg_per_frame": 0.222222,
+      "total_deg_f1_to_f1440": 319.78,
+      "omega_original_issue": 0.222222
+    },
+    "S1": {
+      "x": 0.5413,
+      "z": 17.097,
+      "omega_deg_per_frame": 3.75,
+      "total_deg_f1_to_f1440": 5396.25,
+      "omega_original_issue": 3.75
+    },
+    "S2": {
+      "x": 0.5134,
+      "z": 17.4158,
+      "omega_deg_per_frame": -15.0,
+      "total_deg_f1_to_f1440": -21585.0,
+      "omega_original_issue": -15.0
+    },
+    "SB": {
+      "x": 0.0,
+      "z": 16.9,
+      "omega_deg_per_frame": -0.75,
+      "total_deg_f1_to_f1440": -1079.25,
+      "omega_original_issue": -0.75
+    },
+    "T": {
+      "x": 0.2819,
+      "z": 12.6974,
+      "omega_deg_per_frame": -12.0,
+      "total_deg_f1_to_f1440": -17268.0,
+      "omega_original_issue": -12.0
+    },
+    "X1": {
+      "x": -0.4718,
+      "z": 12.4696,
+      "omega_deg_per_frame": -1.5,
+      "total_deg_f1_to_f1440": -2158.5,
+      "omega_original_issue": -1.5
+    }
+  },
+  "gears": {
+    "GT1_a": {
+      "unit": "GT1",
+      "arbor": "G",
+      "z": 72,
+      "module_mm": 14,
+      "layer": "L6",
+      "y": -2.45,
+      "x": -0.6873,
+      "zc": 11.8776,
+      "pitch_d_m": 1.008,
+      "tip_d_m": 1.036,
+      "spokes": 8,
+      "face_mm": 50,
+      "omega": 0.375,
+      "changed": false
+    },
+    "GT1_b": {
+      "unit": "GT1",
+      "arbor": "X1",
+      "z": 18,
+      "module_mm": 14,
+      "layer": "L6",
+      "y": -2.45,
+      "x": -0.4718,
+      "zc": 12.4696,
+      "pitch_d_m": 0.252,
+      "tip_d_m": 0.28,
+      "spokes": 0,
+      "face_mm": 60,
+      "omega": -1.5,
+      "changed": false
+    },
+    "GT1_c": {
+      "unit": "GT1",
+      "arbor": "X1",
+      "z": 64,
+      "module_mm": 12,
+      "layer": "L7",
+      "y": -2.2,
+      "x": -0.4718,
+      "zc": 12.4696,
+      "pitch_d_m": 0.768,
+      "tip_d_m": 0.792,
+      "spokes": 0,
+      "face_mm": 50,
+      "omega": -1.5,
+      "changed": false
+    },
+    "GT1_d": {
+      "unit": "GT1",
+      "arbor": "M",
+      "z": 32,
+      "module_mm": 12,
+      "layer": "L7",
+      "y": -2.2,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.384,
+      "tip_d_m": 0.408,
+      "spokes": 8,
+      "face_mm": 40,
+      "omega": 3.0,
+      "changed": false
+    },
+    "GT9_a": {
+      "unit": "GT9",
+      "arbor": "M",
+      "z": 60,
+      "module_mm": 8,
+      "layer": "L8",
+      "y": -1.95,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.48,
+      "tip_d_m": 0.496,
+      "spokes": 8,
+      "face_mm": 40,
+      "omega": 3.0,
+      "changed": false
+    },
+    "GT9_b": {
+      "unit": "GT9",
+      "arbor": "T",
+      "z": 15,
+      "module_mm": 8,
+      "layer": "L8",
+      "y": -1.95,
+      "x": 0.2819,
+      "zc": 12.6974,
+      "pitch_d_m": 0.12,
+      "tip_d_m": 0.136,
+      "spokes": 5,
+      "face_mm": 80,
+      "omega": -12.0,
+      "changed": false
+    },
+    "GT9_c": {
+      "unit": "GT9",
+      "arbor": "T",
+      "z": 45,
+      "module_mm": 6,
+      "layer": "L9",
+      "y": -1.7,
+      "x": 0.2819,
+      "zc": 12.6974,
+      "pitch_d_m": 0.27,
+      "tip_d_m": 0.282,
+      "spokes": 8,
+      "face_mm": 80,
+      "omega": -12.0,
+      "changed": false
+    },
+    "GT9_d": {
+      "unit": "GT9",
+      "arbor": "E",
+      "z": 30,
+      "module_mm": 6,
+      "layer": "L9",
+      "y": -1.7,
+      "x": 0.4933,
+      "zc": 12.7743,
+      "pitch_d_m": 0.18,
+      "tip_d_m": 0.192,
+      "spokes": 5,
+      "face_mm": 70,
+      "omega": 18.0,
+      "changed": false
+    },
+    "GT2_a": {
+      "unit": "GT2",
+      "arbor": "M",
+      "z": 12,
+      "module_mm": 10,
+      "layer": "L2",
+      "y": -3.45,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.12,
+      "tip_d_m": 0.14,
+      "spokes": 8,
+      "face_mm": 50,
+      "omega": 3.0,
+      "changed": false
+    },
+    "GT2_b": {
+      "unit": "GT2",
+      "arbor": "K2",
+      "z": 36,
+      "module_mm": 10,
+      "layer": "L2",
+      "y": -3.45,
+      "x": -0.1697,
+      "zc": 12.9697,
+      "pitch_d_m": 0.36,
+      "tip_d_m": 0.38,
+      "spokes": 4,
+      "face_mm": 70,
+      "omega": -1.0,
+      "changed": false
+    },
+    "GT2_c": {
+      "unit": "GT2",
+      "arbor": "K2",
+      "z": 12,
+      "module_mm": 8,
+      "layer": "L3",
+      "y": -3.2,
+      "x": -0.1697,
+      "zc": 12.9697,
+      "pitch_d_m": 0.096,
+      "tip_d_m": 0.112,
+      "spokes": 6,
+      "face_mm": 70,
+      "omega": -1.0,
+      "changed": false
+    },
+    "GT2_d": {
+      "unit": "GT2",
+      "arbor": "H",
+      "z": 48,
+      "module_mm": 8,
+      "layer": "L3",
+      "y": -3.2,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.384,
+      "tip_d_m": 0.4,
+      "spokes": 8,
+      "face_mm": 60,
+      "omega": 0.25,
+      "changed": false
+    },
+    "GT5_a": {
+      "unit": "GT5",
+      "arbor": "H",
+      "z": 40,
+      "module_mm": 10,
+      "layer": "L4",
+      "y": -2.95,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.4,
+      "tip_d_m": 0.42,
+      "spokes": 5,
+      "face_mm": 60,
+      "omega": 0.25,
+      "changed": false
+    },
+    "GT5_b": {
+      "unit": "GT5",
+      "arbor": "K5",
+      "z": 30,
+      "module_mm": 10,
+      "layer": "L4",
+      "y": -2.95,
+      "x": 0.1197,
+      "zc": 12.4711,
+      "pitch_d_m": 0.3,
+      "tip_d_m": 0.32,
+      "spokes": 5,
+      "face_mm": 60,
+      "omega": -0.333333,
+      "changed": false
+    },
+    "GT5_c": {
+      "unit": "GT5",
+      "arbor": "K5",
+      "z": 28,
+      "module_mm": 10,
+      "layer": "L5",
+      "y": -2.7,
+      "x": 0.1197,
+      "zc": 12.4711,
+      "pitch_d_m": 0.28,
+      "tip_d_m": 0.3,
+      "spokes": 0,
+      "face_mm": 40,
+      "omega": -0.333333,
+      "changed": false
+    },
+    "GT5_d": {
+      "unit": "GT5",
+      "arbor": "R",
+      "z": 42,
+      "module_mm": 10,
+      "layer": "L5",
+      "y": -2.7,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.42,
+      "tip_d_m": 0.44,
+      "spokes": 6,
+      "face_mm": 40,
+      "omega": 0.222222,
+      "changed": false
+    },
+    "GT3_a": {
+      "unit": "GT3",
+      "arbor": "H",
+      "z": 32,
+      "module_mm": 24,
+      "layer": "L1",
+      "y": -3.7,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.768,
+      "tip_d_m": 0.816,
+      "spokes": 4,
+      "face_mm": 60,
+      "omega": 0.25,
+      "changed": false
+    },
+    "GT3_b": {
+      "unit": "GT3",
+      "arbor": "K3a",
+      "z": 48,
+      "module_mm": 24,
+      "layer": "L1",
+      "y": -3.7,
+      "x": -0.9021,
+      "zc": 12.4717,
+      "pitch_d_m": 1.152,
+      "tip_d_m": 1.2,
+      "spokes": 8,
+      "face_mm": 50,
+      "omega": -0.166667,
+      "changed": false
+    },
+    "GT3_c": {
+      "unit": "GT3",
+      "arbor": "K3a",
+      "z": 36,
+      "module_mm": 24,
+      "layer": "L2",
+      "y": -3.45,
+      "x": -0.9021,
+      "zc": 12.4717,
+      "pitch_d_m": 0.864,
+      "tip_d_m": 0.912,
+      "spokes": 4,
+      "face_mm": 60,
+      "omega": -0.166667,
+      "changed": false
+    },
+    "GT3_d": {
+      "unit": "GT3",
+      "arbor": "K3b",
+      "z": 48,
+      "module_mm": 24,
+      "layer": "L2",
+      "y": -3.45,
+      "x": -1.9063,
+      "zc": 12.5595,
+      "pitch_d_m": 1.152,
+      "tip_d_m": 1.2,
+      "spokes": 0,
+      "face_mm": 60,
+      "omega": 0.125,
+      "changed": false
+    },
+    "GT3_e": {
+      "unit": "GT3",
+      "arbor": "K3b",
+      "z": 40,
+      "module_mm": 24,
+      "layer": "L3",
+      "y": -3.2,
+      "x": -1.9063,
+      "zc": 12.5595,
+      "pitch_d_m": 0.96,
+      "tip_d_m": 1.008,
+      "spokes": 4,
+      "face_mm": 80,
+      "omega": 0.125,
+      "changed": false
+    },
+    "GT3_f": {
+      "unit": "GT3",
+      "arbor": "D24",
+      "z": 40,
+      "module_mm": 24,
+      "layer": "L3",
+      "y": -3.2,
+      "x": -2.8517,
+      "zc": 12.7262,
+      "pitch_d_m": 0.96,
+      "tip_d_m": 1.008,
+      "spokes": 0,
+      "face_mm": 80,
+      "omega": -0.125,
+      "changed": false
+    },
+    "GT6_a": {
+      "unit": "GT6",
+      "arbor": "H",
+      "z": 30,
+      "module_mm": 24,
+      "layer": "L6",
+      "y": -2.45,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.72,
+      "tip_d_m": 0.768,
+      "spokes": 5,
+      "face_mm": 60,
+      "omega": 0.25,
+      "changed": false
+    },
+    "GT6_b": {
+      "unit": "GT6",
+      "arbor": "K6a",
+      "z": 60,
+      "module_mm": 24,
+      "layer": "L6",
+      "y": -2.45,
+      "x": 0.9353,
+      "zc": 12.26,
+      "pitch_d_m": 1.44,
+      "tip_d_m": 1.488,
+      "spokes": 6,
+      "face_mm": 40,
+      "omega": -0.125,
+      "changed": false
+    },
+    "GT6_c": {
+      "unit": "GT6",
+      "arbor": "K6a",
+      "z": 30,
+      "module_mm": 22,
+      "layer": "L8",
+      "y": -1.95,
+      "x": 0.9353,
+      "zc": 12.26,
+      "pitch_d_m": 0.66,
+      "tip_d_m": 0.704,
+      "spokes": 0,
+      "face_mm": 70,
+      "omega": -0.125,
+      "changed": false
+    },
+    "GT6_d": {
+      "unit": "GT6",
+      "arbor": "K6b",
+      "z": 45,
+      "module_mm": 22,
+      "layer": "L8",
+      "y": -1.95,
+      "x": 1.7478,
+      "zc": 12.4033,
+      "pitch_d_m": 0.99,
+      "tip_d_m": 1.034,
+      "spokes": 4,
+      "face_mm": 40,
+      "omega": 0.083333,
+      "changed": false
+    },
+    "GT6_e": {
+      "unit": "GT6",
+      "arbor": "K6b",
+      "z": 40,
+      "module_mm": 20,
+      "layer": "L9",
+      "y": -1.7,
+      "x": 1.7478,
+      "zc": 12.4033,
+      "pitch_d_m": 0.8,
+      "tip_d_m": 0.84,
+      "spokes": 6,
+      "face_mm": 70,
+      "omega": 0.083333,
+      "changed": false
+    },
+    "GT6_f": {
+      "unit": "GT6",
+      "arbor": "C",
+      "z": 40,
+      "module_mm": 20,
+      "layer": "L9",
+      "y": -1.7,
+      "x": 2.4728,
+      "zc": 12.7414,
+      "pitch_d_m": 0.8,
+      "tip_d_m": 0.84,
+      "spokes": 8,
+      "face_mm": 40,
+      "omega": -0.083333,
+      "changed": false
+    },
+    "GT4_a": {
+      "unit": "GT4",
+      "arbor": "H",
+      "z": 40,
+      "module_mm": 24,
+      "layer": "L11",
+      "y": -1.2,
+      "x": 0.0,
+      "zc": 12.8,
+      "pitch_d_m": 0.96,
+      "tip_d_m": 1.008,
+      "spokes": 8,
+      "face_mm": 40,
+      "omega": 0.25,
+      "changed": false
+    },
+    "GT4_b": {
+      "unit": "GT4",
+      "arbor": "K4a",
+      "z": 30,
+      "module_mm": 24,
+      "layer": "L11",
+      "y": -1.2,
+      "x": 0.0732,
+      "zc": 13.6368,
+      "pitch_d_m": 0.72,
+      "tip_d_m": 0.768,
+      "spokes": 6,
+      "face_mm": 50,
+      "omega": -0.333333,
+      "changed": false
+    },
+    "GT4_c": {
+      "unit": "GT4",
+      "arbor": "K4a",
+      "z": 32,
+      "module_mm": 18,
+      "layer": "L12",
+      "y": -0.95,
+      "x": 0.0732,
+      "zc": 13.6368,
+      "pitch_d_m": 0.576,
+      "tip_d_m": 0.612,
+      "spokes": 5,
+      "face_mm": 50,
+      "omega": -0.333333,
+      "changed": true
+    },
+    "GT4_d": {
+      "unit": "GT4",
+      "arbor": "K4b",
+      "z": 22,
+      "module_mm": 18,
+      "layer": "L12",
+      "y": -0.95,
+      "x": 0.0224,
+      "zc": 14.1201,
+      "pitch_d_m": 0.396,
+      "tip_d_m": 0.432,
+      "spokes": 0,
+      "face_mm": 40,
+      "omega": 0.484848,
+      "changed": true
+    },
+    "GT4_e": {
+      "unit": "GT4",
+      "arbor": "K4b",
+      "z": 22,
+      "module_mm": 10,
+      "layer": "L10",
+      "y": -1.45,
+      "x": 0.0224,
+      "zc": 14.1201,
+      "pitch_d_m": 0.22,
+      "tip_d_m": 0.24,
+      "spokes": 8,
+      "face_mm": 40,
+      "omega": 0.484848,
+      "changed": true
+    },
+    "GT7_a": {
+      "unit": "GT7",
+      "arbor": "SB",
+      "z": 80,
+      "module_mm": 12,
+      "layer": "L3",
+      "y": -3.2,
+      "x": 0.0,
+      "zc": 16.9,
+      "pitch_d_m": 0.96,
+      "tip_d_m": 0.984,
+      "spokes": 6,
+      "face_mm": 40,
+      "omega": -0.75,
+      "changed": false
+    },
+    "GT7_b": {
+      "unit": "GT7",
+      "arbor": "S1",
+      "z": 16,
+      "module_mm": 12,
+      "layer": "L3",
+      "y": -3.2,
+      "x": 0.5413,
+      "zc": 17.097,
+      "pitch_d_m": 0.192,
+      "tip_d_m": 0.216,
+      "spokes": 5,
+      "face_mm": 80,
+      "omega": 3.75,
+      "changed": false
+    },
+    "GT7_c": {
+      "unit": "GT7",
+      "arbor": "S1",
+      "z": 64,
+      "module_mm": 8,
+      "layer": "L4",
+      "y": -2.95,
+      "x": 0.5413,
+      "zc": 17.097,
+      "pitch_d_m": 0.512,
+      "tip_d_m": 0.528,
+      "spokes": 4,
+      "face_mm": 50,
+      "omega": 3.75,
+      "changed": false
+    },
+    "GT7_d": {
+      "unit": "GT7",
+      "arbor": "S2",
+      "z": 16,
+      "module_mm": 8,
+      "layer": "L4",
+      "y": -2.95,
+      "x": 0.5134,
+      "zc": 17.4158,
+      "pitch_d_m": 0.128,
+      "tip_d_m": 0.144,
+      "spokes": 0,
+      "face_mm": 70,
+      "omega": -15.0,
+      "changed": false
+    },
+    "GT8_a": {
+      "unit": "GT8",
+      "arbor": "S2",
+      "z": 48,
+      "module_mm": 6,
+      "layer": "L5",
+      "y": -2.7,
+      "x": 0.5134,
+      "zc": 17.4158,
+      "pitch_d_m": 0.288,
+      "tip_d_m": 0.3,
+      "spokes": 8,
+      "face_mm": 50,
+      "omega": -15.0,
+      "changed": false
+    },
+    "GT8_b": {
+      "unit": "GT8",
+      "arbor": "F",
+      "z": 12,
+      "module_mm": 6,
+      "layer": "L5",
+      "y": -2.7,
+      "x": 0.3575,
+      "zc": 17.5058,
+      "pitch_d_m": 0.072,
+      "tip_d_m": 0.084,
+      "spokes": 8,
+      "face_mm": 60,
+      "omega": 60.0,
+      "changed": false
+    },
+    "GT10_a": {
+      "unit": "GT10",
+      "arbor": "SB",
+      "z": 60,
+      "module_mm": 14,
+      "layer": "L6",
+      "y": -2.45,
+      "x": 0.0,
+      "zc": 16.9,
+      "pitch_d_m": 0.84,
+      "tip_d_m": 0.868,
+      "spokes": 6,
+      "face_mm": 80,
+      "omega": -0.75,
+      "changed": false
+    },
+    "GT10_b": {
+      "unit": "GT10",
+      "arbor": "P2",
+      "z": 90,
+      "module_mm": 14,
+      "layer": "L6",
+      "y": -2.45,
+      "x": 1.046,
+      "zc": 16.8085,
+      "pitch_d_m": 1.26,
+      "tip_d_m": 1.288,
+      "spokes": 0,
+      "face_mm": 50,
+      "omega": 0.5,
+      "changed": false
+    },
+    "GT10_c": {
+      "unit": "GT10",
+      "arbor": "SB",
+      "z": 60,
+      "module_mm": 14,
+      "layer": "L7",
+      "y": -2.2,
+      "x": 0.0,
+      "zc": 16.9,
+      "pitch_d_m": 0.84,
+      "tip_d_m": 0.868,
+      "spokes": 5,
+      "face_mm": 50,
+      "omega": -0.75,
+      "changed": false
+    },
+    "GT10_d": {
+      "unit": "GT10",
+      "arbor": "J",
+      "z": 30,
+      "module_mm": 14,
+      "layer": "L7",
+      "y": -2.2,
+      "x": -0.6276,
+      "zc": 16.8451,
+      "pitch_d_m": 0.42,
+      "tip_d_m": 0.448,
+      "spokes": 4,
+      "face_mm": 40,
+      "omega": 1.5,
+      "changed": false
+    },
+    "GT10_e": {
+      "unit": "GT10",
+      "arbor": "P1",
+      "z": 90,
+      "module_mm": 14,
+      "layer": "L7",
+      "y": -2.2,
+      "x": -1.4644,
+      "zc": 16.7719,
+      "pitch_d_m": 1.26,
+      "tip_d_m": 1.288,
+      "spokes": 8,
+      "face_mm": 80,
+      "omega": -0.5,
+      "changed": false
+    },
+    "MP1_ring": {
+      "unit": "MP1",
+      "arbor": "MO",
+      "z": 114,
+      "module_mm": 10,
+      "layer": "L10",
+      "y": -1.45,
+      "x": 0.0461,
+      "zc": 14.7997,
+      "pitch_d_m": 1.14,
+      "tip_d_m": 1.16,
+      "spokes": 6,
+      "face_mm": 50,
+      "omega": -0.093567,
+      "changed": true
+    },
+    "ES1_escape": {
+      "unit": "ES1",
+      "arbor": "E",
+      "z": 30,
+      "module_mm": 6,
+      "layer": "L10",
+      "y": -1.45,
+      "x": 0.4933,
+      "zc": 12.7743,
+      "pitch_d_m": 0.18,
+      "tip_d_m": 0.18,
+      "spokes": 4,
+      "face_mm": 30,
+      "omega": 18.0,
+      "changed": false,
+      "tip_d_rule_m": 0.192,
+      "tip_d_note": "ES1 sheet dimensions the escape-wheel tip D as 0.180 (= m*z, saw-tooth Graham wheel); the sheet governs the unit. The global m(z+2)=0.192 is also accepted by checks (M04)."
+    }
+  },
+  "meshes": [
+    {
+      "a": "GT1_d",
+      "b": "GT1_c",
+      "train": "GT1",
+      "azimuth_deg": 215,
+      "centre_distance_m": 0.576,
+      "ratio_b_over_a": -0.5
+    },
+    {
+      "a": "GT1_b",
+      "b": "GT1_a",
+      "train": "GT1",
+      "azimuth_deg": 250,
+      "centre_distance_m": 0.63,
+      "ratio_b_over_a": -0.25
+    },
+    {
+      "a": "GT9_a",
+      "b": "GT9_b",
+      "train": "GT9",
+      "azimuth_deg": 340,
+      "centre_distance_m": 0.3,
+      "ratio_b_over_a": -4.0
+    },
+    {
+      "a": "GT9_c",
+      "b": "GT9_d",
+      "train": "GT9",
+      "azimuth_deg": 20,
+      "centre_distance_m": 0.225,
+      "ratio_b_over_a": -1.5
+    },
+    {
+      "a": "GT2_a",
+      "b": "GT2_b",
+      "train": "GT2",
+      "azimuth_deg": 135,
+      "centre_distance_m": 0.24,
+      "ratio_b_over_a": -0.333333
+    },
+    {
+      "a": "GT2_c",
+      "b": "GT2_d",
+      "train": "GT2",
+      "azimuth_deg": 315,
+      "centre_distance_m": 0.24,
+      "ratio_b_over_a": -0.25
+    },
+    {
+      "a": "GT5_a",
+      "b": "GT5_b",
+      "train": "GT5",
+      "azimuth_deg": 290,
+      "centre_distance_m": 0.35,
+      "ratio_b_over_a": -1.333333
+    },
+    {
+      "a": "GT5_c",
+      "b": "GT5_d",
+      "train": "GT5",
+      "azimuth_deg": 110,
+      "centre_distance_m": 0.35,
+      "ratio_b_over_a": -0.666667
+    },
+    {
+      "a": "GT3_a",
+      "b": "GT3_b",
+      "train": "GT3",
+      "azimuth_deg": 200,
+      "centre_distance_m": 0.96,
+      "ratio_b_over_a": -0.666667
+    },
+    {
+      "a": "GT3_c",
+      "b": "GT3_d",
+      "train": "GT3",
+      "azimuth_deg": 175,
+      "centre_distance_m": 1.008,
+      "ratio_b_over_a": -0.75
+    },
+    {
+      "a": "GT3_e",
+      "b": "GT3_f",
+      "train": "GT3",
+      "azimuth_deg": 170,
+      "centre_distance_m": 0.96,
+      "ratio_b_over_a": -1.0
+    },
+    {
+      "a": "GT6_a",
+      "b": "GT6_b",
+      "train": "GT6",
+      "azimuth_deg": 330,
+      "centre_distance_m": 1.08,
+      "ratio_b_over_a": -0.5
+    },
+    {
+      "a": "GT6_c",
+      "b": "GT6_d",
+      "train": "GT6",
+      "azimuth_deg": 10,
+      "centre_distance_m": 0.825,
+      "ratio_b_over_a": -0.666667
+    },
+    {
+      "a": "GT6_e",
+      "b": "GT6_f",
+      "train": "GT6",
+      "azimuth_deg": 25,
+      "centre_distance_m": 0.8,
+      "ratio_b_over_a": -1.0
+    },
+    {
+      "a": "GT4_a",
+      "b": "GT4_b",
+      "train": "GT4",
+      "azimuth_deg": 85,
+      "centre_distance_m": 0.84,
+      "ratio_b_over_a": -1.333333
+    },
+    {
+      "a": "GT4_c",
+      "b": "GT4_d",
+      "train": "GT4",
+      "azimuth_deg": 96,
+      "centre_distance_m": 0.486,
+      "ratio_b_over_a": -1.454545
+    },
+    {
+      "a": "GT4_e",
+      "b": "MP1_ring",
+      "train": "GT4",
+      "azimuth_deg": 88,
+      "centre_distance_m": 0.68,
+      "ratio_b_over_a": -0.192982
+    },
+    {
+      "a": "GT7_a",
+      "b": "GT7_b",
+      "train": "GT7",
+      "azimuth_deg": 20,
+      "centre_distance_m": 0.576,
+      "ratio_b_over_a": -5.0
+    },
+    {
+      "a": "GT7_c",
+      "b": "GT7_d",
+      "train": "GT7",
+      "azimuth_deg": 95,
+      "centre_distance_m": 0.32,
+      "ratio_b_over_a": -4.0
+    },
+    {
+      "a": "GT8_a",
+      "b": "GT8_b",
+      "train": "GT8",
+      "azimuth_deg": 150,
+      "centre_distance_m": 0.18,
+      "ratio_b_over_a": -4.0
+    },
+    {
+      "a": "GT10_a",
+      "b": "GT10_b",
+      "train": "GT10",
+      "azimuth_deg": 355,
+      "centre_distance_m": 1.05,
+      "ratio_b_over_a": -0.666667
+    },
+    {
+      "a": "GT10_c",
+      "b": "GT10_d",
+      "train": "GT10",
+      "azimuth_deg": 185,
+      "centre_distance_m": 0.63,
+      "ratio_b_over_a": -2.0
+    },
+    {
+      "a": "GT10_e",
+      "b": "GT10_d",
+      "train": "GT10",
+      "azimuth_deg": 5,
+      "centre_distance_m": 0.84,
+      "ratio_b_over_a": -3.0
+    }
+  ],
+  "units": {
+    "TW1": {
+      "type": "storey",
+      "zone": "A",
+      "params": {
+        "z0": 0.0,
+        "z1": 6.0,
+        "width": 8.4,
+        "depth": 8.4,
+        "buttresses_per_corner": 2,
+        "front_door_arches": 3,
+        "plinth_h": 0.6,
+        "string_courses": 1
+      }
+    },
+    "TW2": {
+      "type": "storey",
+      "zone": "A",
+      "params": {
+        "z0": 6.0,
+        "z1": 15.6,
+        "width": 8.4,
+        "depth": 8.4,
+        "cut_wall": "east",
+        "side_windows_west": 4,
+        "pilasters_front": 4,
+        "cornice": true
+      }
+    },
+    "TW3": {
+      "type": "storey",
+      "zone": "A",
+      "params": {
+        "z0": 15.6,
+        "z1": 21.2,
+        "width": 7.6,
+        "depth": 7.6,
+        "cut_wall": "east",
+        "belfry_openings_per_face": 2,
+        "opening_form": "pointed",
+        "balustrade_posts": 13
+      }
+    },
+    "TW4": {
+      "type": "spire",
+      "zone": "A",
+      "params": {
+        "z0": 21.2,
+        "z1": 31.0,
+        "base": 7.6,
+        "form": "octagonal",
+        "dormers": 4,
+        "corner_pinnacles": 4,
+        "finial": "orb-and-star"
+      }
+    },
+    "DL1": {
+      "type": "dial",
+      "zone": "B",
+      "params": {
+        "arbor_min": "M",
+        "arbor_hour": "H",
+        "r_outer": 1.5,
+        "r_inner": 1.18,
+        "hour_markers": 12,
+        "numeral": "roman",
+        "minute_ticks": 60,
+        "minute_hand_len": 1.38,
+        "hour_hand_len": 0.98,
+        "minute_tip": "arrow",
+        "hour_tip": "sun"
+      },
+      "derived": {
+        "centre_xz": [
+          0.0,
+          12.8
+        ],
+        "minute_angle_f1": 0,
+        "hour_angle_f1": 300,
+        "minute_angle_f721": 0.0,
+        "hour_angle_f721": 120.0
+      }
+    },
+    "AS1": {
+      "type": "astrolabe",
+      "zone": "B",
+      "params": {
+        "arbor": "R",
+        "r_plate": 1.15,
+        "tympan_circles": 3,
+        "ecliptic_r": 0.72,
+        "ecliptic_offset": 0.33,
+        "zodiac_divisions": 12,
+        "star_pointers": 7,
+        "sun_pointer": false
+      }
+    },
+    "DL2": {
+      "type": "disc24",
+      "zone": "B",
+      "params": {
+        "arbor": "D24",
+        "r": 0.66,
+        "markers": 24,
+        "numeral": "roman",
+        "night_sector": true,
+        "index": "fixed-top"
+      }
+    },
+    "CR1": {
+      "type": "calendar",
+      "zone": "B",
+      "params": {
+        "arbor": "C",
+        "r": 0.7,
+        "segments": 12,
+        "medallions": 12,
+        "index": "fixed-top"
+      }
+    },
+    "MP1": {
+      "type": "moon",
+      "zone": "B",
+      "params": {
+        "arbor": "MO",
+        "ring_z": 114,
+        "ring_m": 10,
+        "visible_r": 0.3,
+        "moon_discs": 2,
+        "stars": 9,
+        "aperture": "twin-arc"
+      }
+    },
+    "ES1": {
+      "type": "escapement",
+      "zone": "C",
+      "params": {
+        "arbor": "E",
+        "escape_z": 30,
+        "escape_m": 6,
+        "anchor_above": 0.34,
+        "anchor_span_teeth": 7.5,
+        "form": "graham"
+      },
+      "derived": {
+        "escape_xz": [
+          0.4933,
+          12.7743
+        ],
+        "anchor_pivot_xz": [
+          0.4933,
+          13.1143
+        ],
+        "escape_tip_d_m": 0.18
+      }
+    },
+    "PD1": {
+      "type": "pendulum",
+      "zone": "C",
+      "params": {
+        "pivot": "anchor",
+        "length": 1.75,
+        "bob": "lenticular",
+        "bob_d": 0.36,
+        "amplitude_deg": 4.0,
+        "rod": "wood"
+      },
+      "derived": {
+        "pivot_xz": [
+          0.4933,
+          13.1143
+        ],
+        "period_frames": 63.691,
+        "swing_plane_y": -0.7
+      }
+    },
+    "WT1": {
+      "type": "weight",
+      "zone": "C",
+      "params": {
+        "arbor": "G",
+        "drum_d": 0.6,
+        "drum_len": 0.7,
+        "weight_form": "cylinder",
+        "weight_h": 0.8,
+        "weight_d": 0.4,
+        "start_bottom_z": 9.0,
+        "pulley": false
+      },
+      "derived": {
+        "drum_xz": [
+          -0.6873,
+          11.8776
+        ],
+        "drum_y": -0.3,
+        "rope_side": "right",
+        "rope_x": -0.38730000000000003,
+        "drop_m_f1_to_f1440": 2.825,
+        "bottom_z_f1440": 6.175
+      }
+    },
+    "WT2": {
+      "type": "weight",
+      "zone": "E",
+      "params": {
+        "arbor": "SB",
+        "drum_d": 0.44,
+        "drum_len": 0.55,
+        "weight_form": "stack",
+        "stack_discs": 5,
+        "weight_d": 0.36,
+        "start_bottom_z": 12.6,
+        "pulley": false
+      },
+      "derived": {
+        "drum_xz": [
+          0.0,
+          16.9
+        ],
+        "drum_y": 0.45,
+        "rope_side": "left",
+        "rope_x": -0.22,
+        "drop_m_f1_to_f1440": 4.144,
+        "bottom_z_f1440": 8.456
+      }
+    },
+    "BL1": {
+      "type": "bell",
+      "zone": "E",
+      "params": {
+        "centre_xz": [
+          0.0,
+          19.4
+        ],
+        "lip_d": 1.1,
+        "height": 0.95,
+        "canons": 6,
+        "hammers": 1,
+        "profile": "heavy"
+      }
+    },
+    "BL2": {
+      "type": "bell",
+      "zone": "E",
+      "params": {
+        "centre_xz": [
+          -2.2,
+          19.6
+        ],
+        "lip_d": 0.62,
+        "height": 0.55,
+        "canons": 4,
+        "hammers": 2,
+        "profile": "light"
+      }
+    },
+    "AU1": {
+      "type": "parade",
+      "zone": "F",
+      "params": {
+        "arbor": "P1",
+        "r": 0.7,
+        "figures": 8,
+        "figure_h": 0.42,
+        "window": "round-arch"
+      }
+    },
+    "AU2": {
+      "type": "parade",
+      "zone": "F",
+      "params": {
+        "arbor": "P2",
+        "r": 0.7,
+        "figures": 10,
+        "figure_h": 0.42,
+        "window": "trefoil"
+      }
+    },
+    "AU3": {
+      "type": "striker",
+      "zone": "F",
+      "params": {
+        "cam_arbor": "SB",
+        "cam_lobes": 8,
+        "arm_len": 0.9,
+        "figure": "skeleton",
+        "pivot_xz": [
+          1.15,
+          19.5
+        ],
+        "strikes_bell": "BL1"
+      },
+      "derived": {
+        "strikes_f1_to_f1440": 23.98
+      }
+    },
+    "GT1": {
+      "type": "geartrain",
+      "zone": "C",
+      "params": {
+        "teeth": {
+          "a": 72,
+          "b": 18,
+          "c": 64,
+          "d": 32
+        },
+        "module_mm": {
+          "a": 14,
+          "b": 14,
+          "c": 12,
+          "d": 12
+        },
+        "spokes": {
+          "a": 8,
+          "b": 0,
+          "c": 0,
+          "d": 8
+        },
+        "layers": {
+          "a": "L6",
+          "b": "L6",
+          "c": "L7",
+          "d": "L7"
+        },
+        "arbor_xz": {
+          "G": [
+            -0.6873,
+            11.8776
+          ],
+          "X1": [
+            -0.4718,
+            12.4696
+          ],
+          "M": [
+            0.0,
+            12.8
+          ]
+        },
+        "omega": {
+          "G": 0.375,
+          "X1": -1.5,
+          "M": 3.0
+        }
+      }
+    },
+    "GT9": {
+      "type": "geartrain",
+      "zone": "C",
+      "params": {
+        "teeth": {
+          "a": 60,
+          "b": 15,
+          "c": 45,
+          "d": 30
+        },
+        "module_mm": {
+          "a": 8,
+          "b": 8,
+          "c": 6,
+          "d": 6
+        },
+        "spokes": {
+          "a": 8,
+          "b": 5,
+          "c": 8,
+          "d": 5
+        },
+        "layers": {
+          "a": "L8",
+          "b": "L8",
+          "c": "L9",
+          "d": "L9"
+        },
+        "arbor_xz": {
+          "M": [
+            0.0,
+            12.8
+          ],
+          "T": [
+            0.2819,
+            12.6974
+          ],
+          "E": [
+            0.4933,
+            12.7743
+          ]
+        },
+        "omega": {
+          "M": 3.0,
+          "T": -12.0,
+          "E": 18.0
+        }
+      }
+    },
+    "GT2": {
+      "type": "geartrain",
+      "zone": "D",
+      "params": {
+        "teeth": {
+          "a": 12,
+          "b": 36,
+          "c": 12,
+          "d": 48
+        },
+        "module_mm": {
+          "a": 10,
+          "b": 10,
+          "c": 8,
+          "d": 8
+        },
+        "spokes": {
+          "a": 8,
+          "b": 4,
+          "c": 6,
+          "d": 8
+        },
+        "layers": {
+          "a": "L2",
+          "b": "L2",
+          "c": "L3",
+          "d": "L3"
+        },
+        "arbor_xz": {
+          "M": [
+            0.0,
+            12.8
+          ],
+          "K2": [
+            -0.1697,
+            12.9697
+          ],
+          "H": [
+            0.0,
+            12.8
+          ]
+        },
+        "omega": {
+          "M": 3.0,
+          "K2": -1.0,
+          "H": 0.25
+        }
+      }
+    },
+    "GT5": {
+      "type": "geartrain",
+      "zone": "D",
+      "params": {
+        "teeth": {
+          "a": 40,
+          "b": 30,
+          "c": 28,
+          "d": 42
+        },
+        "module_mm": {
+          "a": 10,
+          "b": 10,
+          "c": 10,
+          "d": 10
+        },
+        "spokes": {
+          "a": 5,
+          "b": 5,
+          "c": 0,
+          "d": 6
+        },
+        "layers": {
+          "a": "L4",
+          "b": "L4",
+          "c": "L5",
+          "d": "L5"
+        },
+        "arbor_xz": {
+          "H": [
+            0.0,
+            12.8
+          ],
+          "K5": [
+            0.1197,
+            12.4711
+          ],
+          "R": [
+            0.0,
+            12.8
+          ]
+        },
+        "omega": {
+          "H": 0.25,
+          "K5": -0.333333,
+          "R": 0.222222
+        }
+      }
+    },
+    "GT3": {
+      "type": "geartrain",
+      "zone": "D",
+      "params": {
+        "teeth": {
+          "a": 32,
+          "b": 48,
+          "c": 36,
+          "d": 48,
+          "e": 40,
+          "f": 40
+        },
+        "module_mm": {
+          "a": 24,
+          "b": 24,
+          "c": 24,
+          "d": 24,
+          "e": 24,
+          "f": 24
+        },
+        "spokes": {
+          "a": 4,
+          "b": 8,
+          "c": 4,
+          "d": 0,
+          "e": 4,
+          "f": 0
+        },
+        "layers": {
+          "a": "L1",
+          "b": "L1",
+          "c": "L2",
+          "d": "L2",
+          "e": "L3",
+          "f": "L3"
+        },
+        "arbor_xz": {
+          "H": [
+            0.0,
+            12.8
+          ],
+          "K3a": [
+            -0.9021,
+            12.4717
+          ],
+          "K3b": [
+            -1.9063,
+            12.5595
+          ],
+          "D24": [
+            -2.8517,
+            12.7262
+          ]
+        },
+        "omega": {
+          "H": 0.25,
+          "K3a": -0.166667,
+          "K3b": 0.125,
+          "D24": -0.125
+        }
+      }
+    },
+    "GT6": {
+      "type": "geartrain",
+      "zone": "D",
+      "params": {
+        "teeth": {
+          "a": 30,
+          "b": 60,
+          "c": 30,
+          "d": 45,
+          "e": 40,
+          "f": 40
+        },
+        "module_mm": {
+          "a": 24,
+          "b": 24,
+          "c": 22,
+          "d": 22,
+          "e": 20,
+          "f": 20
+        },
+        "spokes": {
+          "a": 5,
+          "b": 6,
+          "c": 0,
+          "d": 4,
+          "e": 6,
+          "f": 8
+        },
+        "layers": {
+          "a": "L6",
+          "b": "L6",
+          "c": "L8",
+          "d": "L8",
+          "e": "L9",
+          "f": "L9"
+        },
+        "arbor_xz": {
+          "H": [
+            0.0,
+            12.8
+          ],
+          "K6a": [
+            0.9353,
+            12.26
+          ],
+          "K6b": [
+            1.7478,
+            12.4033
+          ],
+          "C": [
+            2.4728,
+            12.7414
+          ]
+        },
+        "omega": {
+          "H": 0.25,
+          "K6a": -0.125,
+          "K6b": 0.083333,
+          "C": -0.083333
+        }
+      }
+    },
+    "GT4": {
+      "type": "geartrain",
+      "zone": "D",
+      "params": {
+        "teeth": {
+          "a": 40,
+          "b": 30,
+          "c": 32,
+          "d": 22,
+          "e": 22
+        },
+        "module_mm": {
+          "a": 24,
+          "b": 24,
+          "c": 18,
+          "d": 18,
+          "e": 10
+        },
+        "spokes": {
+          "a": 8,
+          "b": 6,
+          "c": 5,
+          "d": 0,
+          "e": 8
+        },
+        "layers": {
+          "a": "L11",
+          "b": "L11",
+          "c": "L12",
+          "d": "L12",
+          "e": "L10"
+        },
+        "arbor_xz": {
+          "H": [
+            0.0,
+            12.8
+          ],
+          "K4a": [
+            0.0732,
+            13.6368
+          ],
+          "K4b": [
+            0.0224,
+            14.1201
+          ]
+        },
+        "omega": {
+          "H": 0.25,
+          "K4a": -0.333333,
+          "K4b": 0.484848
+        }
+      }
+    },
+    "GT7": {
+      "type": "geartrain",
+      "zone": "E",
+      "params": {
+        "teeth": {
+          "a": 80,
+          "b": 16,
+          "c": 64,
+          "d": 16
+        },
+        "module_mm": {
+          "a": 12,
+          "b": 12,
+          "c": 8,
+          "d": 8
+        },
+        "spokes": {
+          "a": 6,
+          "b": 5,
+          "c": 4,
+          "d": 0
+        },
+        "layers": {
+          "a": "L3",
+          "b": "L3",
+          "c": "L4",
+          "d": "L4"
+        },
+        "arbor_xz": {
+          "SB": [
+            0.0,
+            16.9
+          ],
+          "S1": [
+            0.5413,
+            17.097
+          ],
+          "S2": [
+            0.5134,
+            17.4158
+          ]
+        },
+        "omega": {
+          "SB": -0.75,
+          "S1": 3.75,
+          "S2": -15.0
+        }
+      }
+    },
+    "GT8": {
+      "type": "geartrain",
+      "zone": "E",
+      "params": {
+        "teeth": {
+          "a": 48,
+          "b": 12
+        },
+        "module_mm": {
+          "a": 6,
+          "b": 6
+        },
+        "spokes": {
+          "a": 8,
+          "b": 8
+        },
+        "layers": {
+          "a": "L5",
+          "b": "L5"
+        },
+        "arbor_xz": {
+          "S2": [
+            0.5134,
+            17.4158
+          ],
+          "F": [
+            0.3575,
+            17.5058
+          ]
+        },
+        "omega": {
+          "S2": -15.0,
+          "F": 60.0
+        },
+        "fan_vanes": 4
+      }
+    },
+    "GT10": {
+      "type": "geartrain",
+      "zone": "F",
+      "params": {
+        "teeth": {
+          "a": 60,
+          "b": 90,
+          "c": 60,
+          "d": 30,
+          "e": 90
+        },
+        "module_mm": {
+          "a": 14,
+          "b": 14,
+          "c": 14,
+          "d": 14,
+          "e": 14
+        },
+        "spokes": {
+          "a": 6,
+          "b": 0,
+          "c": 5,
+          "d": 4,
+          "e": 8
+        },
+        "layers": {
+          "a": "L6",
+          "b": "L6",
+          "c": "L7",
+          "d": "L7",
+          "e": "L7"
+        },
+        "arbor_xz": {
+          "SB": [
+            0.0,
+            16.9
+          ],
+          "P2": [
+            1.046,
+            16.8085
+          ],
+          "J": [
+            -0.6276,
+            16.8451
+          ],
+          "P1": [
+            -1.4644,
+            16.7719
+          ]
+        },
+        "omega": {
+          "SB": -0.75,
+          "P2": 0.5,
+          "J": 1.5,
+          "P1": -0.5
+        }
+      }
+    }
+  },
+  "zones": {
+    "A": {
+      "name_en": "Tower shell",
+      "name_zh": "塔身",
+      "units": [
+        "TW1",
+        "TW2",
+        "TW3",
+        "TW4"
+      ]
+    },
+    "B": {
+      "name_en": "Front dials",
+      "name_zh": "正立面钟盘",
+      "units": [
+        "DL1",
+        "AS1",
+        "DL2",
+        "CR1",
+        "MP1"
+      ]
+    },
+    "C": {
+      "name_en": "Going side & escapement",
+      "name_zh": "走时动力与擒纵",
+      "units": [
+        "GT1",
+        "GT9",
+        "ES1",
+        "PD1",
+        "WT1"
+      ]
+    },
+    "D": {
+      "name_en": "Dial-work trains",
+      "name_zh": "表盘传动轮系",
+      "units": [
+        "GT2",
+        "GT5",
+        "GT3",
+        "GT6",
+        "GT4"
+      ]
+    },
+    "E": {
+      "name_en": "Striking side & bells",
+      "name_zh": "报时与钟铃",
+      "units": [
+        "WT2",
+        "GT7",
+        "GT8",
+        "BL1",
+        "BL2"
+      ]
+    },
+    "F": {
+      "name_en": "Automata",
+      "name_zh": "人偶",
+      "units": [
+        "GT10",
+        "AU1",
+        "AU2",
+        "AU3"
+      ]
+    }
+  },
+  "change_order": [
+    {
+      "unit": "GT4",
+      "item": "gears c/d",
+      "from": "c 30T / d 24T",
+      "to": "c 32T / d 22T (module unchanged)"
+    },
+    {
+      "unit": "MP1",
+      "item": "ring teeth",
+      "from": "118T",
+      "to": "114T, centre distance to its driving pinion unchanged"
+    },
+    {
+      "unit": "DL2",
+      "item": "numerals",
+      "from": "24 markers, arabic",
+      "to": "24 markers, roman, disc r 0.72 -> 0.66"
+    },
+    {
+      "unit": "AU2",
+      "item": "figures",
+      "from": "6",
+      "to": "10"
+    },
+    {
+      "unit": "TW3",
+      "item": "belfry openings per face",
+      "from": "3",
+      "to": "2"
+    }
+  ],
+  "interfaces": {
+    "coaxial_ports": {
+      "M": [
+        0.0,
+        12.8
+      ],
+      "H": [
+        0.0,
+        12.8
+      ],
+      "R": [
+        0.0,
+        12.8
+      ],
+      "SB": [
+        0.0,
+        16.9
+      ],
+      "D24": [
+        -2.8517,
+        12.7262
+      ],
+      "C": [
+        2.4728,
+        12.7414
+      ],
+      "MO": [
+        0.0461,
+        14.7997
+      ],
+      "P1": [
+        -1.4644,
+        16.7719
+      ],
+      "P2": [
+        1.046,
+        16.8085
+      ]
+    },
+    "mesh_count": 23,
+    "cross_unit_meshes": [
+      {
+        "a": "GT4_e",
+        "b": "MP1_ring",
+        "train": "GT4",
+        "azimuth_deg": 88,
+        "centre_distance_m": 0.68,
+        "ratio_b_over_a": -0.192982
+      }
+    ],
+    "pendulum_on_anchor": [
+      0.4933,
+      13.1143
+    ],
+    "weights_descend": true,
+    "striker_hits": "BL1",
+    "no_collision_same_layer": true
+  },
+  "change_effects": {
+    "MO_omega_original": -0.063559,
+    "MO_omega_changed": -0.093567,
+    "K4b_omega_original": 0.416667,
+    "K4b_omega_changed": 0.484848,
+    "GT4_e_teeth_implied": 22
+  },
+  "workload": {
+    "units": 28,
+    "gears": 46,
+    "meshes": 23
+  },
+  "facade": [
+    {
+      "id": "DL1",
+      "x": 0.0,
+      "z": 12.8,
+      "r": 1.5
+    },
+    {
+      "id": "DL2",
+      "x": -2.8517,
+      "z": 12.7262,
+      "r": 0.66
+    },
+    {
+      "id": "CR1",
+      "x": 2.4728,
+      "z": 12.7414,
+      "r": 0.7
+    },
+    {
+      "id": "MP1",
+      "x": 0.0461,
+      "z": 14.7997,
+      "r": 0.3
+    },
+    {
+      "id": "AU1",
+      "x": -1.4644,
+      "z": 16.7719,
+      "r": 0.82
+    },
+    {
+      "id": "AU2",
+      "x": 1.046,
+      "z": 16.8085,
+      "r": 0.82
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-013",
+  "domain": "SWE",
+  "task_form": "SWE-REIMPL",
+  "title": "Query Evaluation for a Time-Series Monitoring Server",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_release_subsystem_removal",
+    "url": "https://codeload.github.com/prometheus/prometheus/tar.gz/refs/tags/v3.13.5",
+    "revision": "v3.13.5",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "criterion": "All required fail-to-pass tests and preserved behaviors pass, with no protected-file integrity violation or incomplete grader execution."
+  }
+}

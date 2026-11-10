@@ -1,0 +1,424 @@
+{
+  "file_map": {
+    "public/input/main-report.pdf": "NIST TN 2252 (NETTRA, July 2023)",
+    "public/input/companion-report.pdf": "NIST TN 2135 (Fire Progression Timeline, Jan 2021)"
+  },
+  "task_id": "WFA-CDN-013",
+  "status": "verified against pdftotext + page render 2026-10-24",
+  "page_offsets": {
+    "TN2252": "PDF = printed + 38 (arabic pages; roman front matter: p.iii = PDF 5, p.xxxiii = PDF 35)",
+    "TN2135": "PDF = printed + 30"
+  },
+  "headline_TN2252_abstract_p.iii_PDF5": {
+    "evacuated": "40 000 people",
+    "fatalities": 85,
+    "structures_destroyed": ">18 000",
+    "TRAs": 31,
+    "TRA_civilians": ">1200",
+    "EA/R_events": 198,
+    "EA/R_civilians": ">=1000",
+    "NETTRA_observations": ">2600"
+  },
+  "table11_TN2252_p56_PDF94_subset": {
+    "_cols": "zone: first_fire, warning_req, order_req, codered_first",
+    "Pulga": [
+      "06:58",
+      null,
+      "06:55",
+      "07:13"
+    ],
+    "Concow": [
+      "06:45",
+      "07:22",
+      "07:37",
+      null
+    ],
+    "Paradise 3": [
+      "07:50",
+      "07:32",
+      "07:46",
+      "07:57"
+    ],
+    "Paradise 8": [
+      "07:49",
+      "07:32",
+      "07:46",
+      "07:57"
+    ],
+    "Paradise 14": [
+      "08:47",
+      "07:32",
+      "07:46",
+      "07:57"
+    ],
+    "Lower Pentz": [
+      "08:54",
+      "07:32",
+      "07:46",
+      "07:57"
+    ],
+    "Paradise 2": [
+      "08:15",
+      "07:55",
+      "08:01",
+      "08:32"
+    ],
+    "Paradise 6": [
+      "07:57",
+      "08:01 (broad request)",
+      null,
+      "08:32"
+    ],
+    "Paradise 7": [
+      "08:00",
+      "07:55",
+      "08:01",
+      "08:32"
+    ],
+    "Paradise 13": [
+      "09:00",
+      "07:55",
+      "08:01",
+      "08:32"
+    ],
+    "Paradise 1": [
+      "08:31",
+      "08:01",
+      "08:49",
+      "16:17 (order CodeRED; warning CodeRED 08:43)"
+    ],
+    "Paradise 4": [
+      "08:41",
+      "08:01",
+      "08:49",
+      null
+    ],
+    "Paradise 5": [
+      "08:43",
+      "08:01",
+      "08:49",
+      "08:43 warning / 09:09 order"
+    ],
+    "Paradise 9": [
+      "08:41",
+      "08:01",
+      "08:49",
+      null
+    ],
+    "Paradise 11": [
+      "08:30",
+      "08:01",
+      "08:49",
+      "08:46 warning / 16:12 order"
+    ],
+    "Lower Clark": [
+      "10:00",
+      "08:01",
+      "08:49",
+      "10:07 warning / 13:34 order"
+    ],
+    "Old Magalia": [
+      "08:41",
+      null,
+      "08:49",
+      "09:15"
+    ],
+    "_note": "Exact column alignment of Table 11 is complex; graders use the PDF table (render PDF 94) as ground truth; values above were checked against the text on p.58–61."
+  },
+  "burnovers_TN2252_Table30_p125-126_PDF163-164": [
+    [
+      1,
+      "Hoffman Rd",
+      "Concow",
+      1,
+      "07:50"
+    ],
+    [
+      2,
+      "Concow Rd",
+      "Concow",
+      2,
+      "07:50"
+    ],
+    [
+      20,
+      "Camelot Ln",
+      "Concow",
+      1,
+      "07:55 (first obs.)"
+    ],
+    [
+      3,
+      "Chapman Ln",
+      "Paradise",
+      1,
+      "08:30"
+    ],
+    [
+      4,
+      "Skyway (upper)",
+      "Paradise",
+      1,
+      "08:30"
+    ],
+    [
+      5,
+      "Windermere Ln",
+      "Concow",
+      1,
+      "08:35 (first obs.)"
+    ],
+    [
+      6,
+      "Pentz Rd",
+      "Paradise",
+      1,
+      "08:45"
+    ],
+    [
+      7,
+      "Pearson Rd",
+      "Paradise",
+      1,
+      "09:15"
+    ],
+    [
+      8,
+      "Bille Rd",
+      "Paradise",
+      1,
+      "09:25"
+    ],
+    [
+      21,
+      "Edgewood Ln",
+      "Paradise",
+      1,
+      "09:30"
+    ],
+    [
+      9,
+      "Wagstaff Rd",
+      "Paradise",
+      2,
+      "09:30"
+    ],
+    [
+      10,
+      "Clark Rd / American Way",
+      "Paradise",
+      2,
+      "10:00"
+    ],
+    [
+      11,
+      "Clark Rd / Airport Rd",
+      "Butte County",
+      2,
+      "10:00"
+    ],
+    [
+      12,
+      "Skyway (lower)",
+      "Paradise",
+      2,
+      "10:15"
+    ],
+    [
+      13,
+      "Jordan Hill Rd / Granite Hill Rd",
+      "Concow",
+      1,
+      "11:30"
+    ],
+    [
+      22,
+      "Neal Rd",
+      "Paradise",
+      1,
+      "11:30"
+    ],
+    [
+      23,
+      "Clark Rd / Cypress Ln",
+      "Paradise",
+      2,
+      "11:45"
+    ],
+    [
+      14,
+      "Clark Rd / Black Bear Diner",
+      "Paradise",
+      2,
+      "13:10 (first obs.)"
+    ],
+    [
+      15,
+      "Rattlesnake Flats Rd",
+      "Butte County",
+      1,
+      "15:15"
+    ],
+    [
+      16,
+      "Coutolenc Rd",
+      "Magalia",
+      2,
+      "00:00 Nov 9"
+    ],
+    [
+      17,
+      "Chestnut Cir",
+      "Magalia",
+      1,
+      "06:00 Nov 9"
+    ],
+    [
+      18,
+      "Ponderosa Way",
+      "Magalia",
+      2,
+      "07:15 Nov 9"
+    ],
+    [
+      19,
+      "Concow Fire Station 37",
+      "Concow",
+      1,
+      "07:15 Nov 9"
+    ]
+  ],
+  "burnover_fatalities_Table30": {
+    "#5": 1,
+    "#7": 1,
+    "#21": 5
+  },
+  "gridlock_before_fire_Table30_footnote_d": [
+    4,
+    6,
+    7,
+    8,
+    22
+  ],
+  "map_pages": {
+    "TN2252": {
+      "Fig.11 evacuation zones": "PDF 69 (p.31)",
+      "Fig.24 burnover map": "PDF 162 (p.124)",
+      "Fig.25 TRA map": "PDF 168 (p.130)",
+      "Fig.15 notification interval plot (not a map)": "PDF 100 (p.62)"
+    },
+    "TN2135": {
+      "Figure 47 burnover map": "PDF 150 (p.120)",
+      "Figure 51 spot fires in Paradise before 10:30": "PDF 159 (p.129)",
+      "large-format progression maps": "later pages / plates"
+    }
+  },
+  "hidden_points": {
+    "H01": {
+      "claim": "TN 2135 identified 19 burnovers; TN 2252 lists 23 (#20–23 added after TN 2135 during rescue-data analysis, Sec. 10 / App. F)",
+      "pages": [
+        "TN2252 p.7 / PDF 45",
+        "TN2252 p.123 / PDF 161",
+        "TN2135 p.117 / PDF 147 ('nineteen identified burnovers')"
+      ]
+    },
+    "H02": {
+      "claim": "Severity split from tables: TN2252 Table 30 = 14 Cat1 (1,20,3,4,5,6,7,8,21,13,22,15,17,19) + 9 Cat2 (2,9,10,11,12,23,14,16,18). TN2252 text p.123 says 'fourteen ... Category 1 ... and seven ... Category 2' (sums to 21). TN2135 text p.117 says eleven Cat1 and seven Cat2 (=18 of 19); its Table 33 (p.119/PDF 149) gives 11 Cat1 + 8 Cat2.",
+      "pages": [
+        "TN2252 p.123 / PDF 161",
+        "TN2252 Table 30 PDF 163–164",
+        "TN2135 p.117 / PDF 147",
+        "TN2135 Table 33 PDF 149"
+      ]
+    },
+    "H03": {
+      "claim": "Before 10:00 Nov 8, Table 30 lists 11 burnovers (#1,2,20,3,4,5,6,7,8,21,9) = 9 Cat1 + 2 Cat2; TN2252 text p.123 repeats TN2135's 'nine ... seven Category 1, two Category 2' (true only for the original 19). TN2252 p.137 also says 10 burnovers by 09:35 in Concow+Paradise.",
+      "pages": [
+        "TN2252 p.123 / PDF 161",
+        "TN2135 p.117 / PDF 147",
+        "TN2252 p.137 / PDF 175"
+      ],
+      "scoring_note": "2026-10-24 threshold review: H03 is conditional - only scored if the deck states a pre-10:00/morning burnover count; H02 split is now required by the instruction (Section 4 sentence)."
+    },
+    "H04": {
+      "claim": "Table 39: Total 352 min / 569 max is a person×exposure count; unique individuals 261 min / 416 max. 261 = 70 Concow + 191 Paradise.",
+      "pages": [
+        "TN2252 p.157–158 / PDF 195–196",
+        "TF-TRA 7 p.xxxiii / PDF 35"
+      ]
+    },
+    "H05": {
+      "claim": "8 high-urgency-of-formation TRAs with civilians (A,B,C,E,G,H,I,J); 6 had high peak hazard (A,B,C,H,I,J); E and G were moderate (▲▲). TF-TRA 7 says 'High hazard conditions impacted at least 261 civilians in eight TRAs'.",
+      "pages": [
+        "TN2252 p.xxxiii / PDF 35",
+        "p.129 Table 31 / PDF 167",
+        "p.137 / PDF 175",
+        "p.158 / PDF 196"
+      ]
+    },
+    "H06": {
+      "claim": "Table 11: Zone 6 first fire 07:57 (before 08:01 request), Zone 4 first fire 08:41. Text p.61 says 'Zone 4 was the only zone in which fire had already started, with the first fire observation at 07:57'.",
+      "pages": [
+        "TN2252 p.56 / PDF 94",
+        "p.61 / PDF 99"
+      ]
+    },
+    "H07": {
+      "claim": "TN2252 p.60: 'first observation of fire directly by firefighters in the Concow zone occurred by an engine on Rim Road at 07:32'; p.63: 'first in-person observation of fire in Concow by first responders was at 07:20'. TN2135 p.122: 'Firsthand observations on Rim Road at 07:20 on November 8'.",
+      "pages": [
+        "TN2252 p.60 / PDF 98",
+        "TN2252 p.63 / PDF 101",
+        "TN2135 p.122 / PDF 152"
+      ]
+    },
+    "H08": {
+      "claim": "Zones 3/8: order request 07:46 is 4/3 min before first fire 07:50/07:49 (Table 11 Δ 00:04/00:03); CodeRED 07:57 is 7/8 min after first fire (derived; not printed as such). Text p.58: order 'three minutes ahead of the fire's arrival in Zone 8'; CodeRED 07:57 'the quickest CodeRED implementation of the day'.",
+      "pages": [
+        "TN2252 p.56 / PDF 94",
+        "p.58 / PDF 96"
+      ]
+    },
+    "H09": {
+      "claim": "Table 30 footnote d: traffic gridlocked/obstructed before fire arrival at #4 Skyway(upper), #6 Pentz, #7 Pearson, #8 Bille, #22 Neal. p.59: 'The impact of the delayed notifications on the other zones is beyond the scope of this study and would be difficult to quantify' (also for zones without reverse-911 calls). Unsupported: 'earlier orders would have prevented burnovers/deaths', any lives-saved number.",
+      "pages": [
+        "TN2252 PDF 163–164",
+        "p.59 / PDF 97"
+      ]
+    },
+    "H10": {
+      "claim": "Table 4 (p.28): Paradise 927, Magalia 1264, Concow 164 OHU/egress lane; ratio 'not an explicit measure of road capacity'. Table 5 (p.32): Zones 3,8,14 = 316; Zones 10,11,Lower Neal = 278; Valley View/Ridge = 187. Table 6 (p.33): merging south of Paradise 2950 or 2529; Paradise used 1588; Magalia 2527. 'The values in Tables 4 through 6 do not include any reductions of lanes caused by fire or obstructions.' Supported counterfactual-type statement p.93 (Clark Rd backup): 'Had the backup extended further, or had the fire advanced faster, additional civilian exposure to fire would have occurred.'",
+      "pages": [
+        "TN2252 p.28 / PDF 66",
+        "p.32 / PDF 70",
+        "p.33 / PDF 71",
+        "p.93 / PDF 131"
+      ]
+    },
+    "H11": {
+      "claim": "TN2135 p.140: initial high ember flux zone reached 1 km (0.6 mi) into Paradise; significant spot fires to 3.4 km (2.1 mi); 'extensive fuel treatments reaching hundreds of meters from the community would be required ... very significant environmental and financial impacts ... difficult to initially implement and subsequently maintain'. p.136: effectiveness of fuel treatments 'beyond the scope of this report'.",
+      "pages": [
+        "TN2135 p.136 / PDF 166",
+        "TN2135 p.140 / PDF 170"
+      ]
+    },
+    "H12": {
+      "claim": "Table 30 footnote e / Table 12 footnote a: #20 Camelot 07:55 and #5 Windermere 08:35 (and #14 13:10) are earliest available observations; burnover conditions existed before; Table 12 intervals for #20/#5 (1:10/0:18, 1:50/0:58) are therefore bounds.",
+      "pages": [
+        "TN2252 p.63 / PDF 101",
+        "PDF 163–164"
+      ]
+    },
+    "H14": {
+      "claim": "TN2135 p.122: shortly before 08:00 spot fires east of Pentz Rd; by 08:30 main front reached Paradise Apple View Way–Merrill Rd 1 km; a little over 70 min later 2.8 km (1.9 mi) front. TN2252 Table 11: first fire Zone 8 07:49, Zone 3 07:50. TN2252 p.158: fire front hit Paradise ~08:30.",
+      "pages": [
+        "TN2135 p.122 / PDF 152",
+        "TN2252 p.56 / PDF 94",
+        "p.158 / PDF 196"
+      ]
+    }
+  },
+  "traps": {
+    "T01": "TN2135 appendix technical-discussion comments (e.g., TD-076 'even with hours of notice, there still would have been casualties') are interviewee statements, not NIST findings (TN2135 PDF 403).",
+    "T02": "Wind-vs-fire-induced-wind driver of front arrival in Paradise 'not possible to determine' (TN2135 p.122) — claiming a definitive driver is unsupported."
+  }
+}

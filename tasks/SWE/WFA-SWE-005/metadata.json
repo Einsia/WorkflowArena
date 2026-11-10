@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-005",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Implement a multi-bath hierarchical equations of motion (HEOM) solver for QuTiP",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/qutip/qutip/pull/1601",
+    "revision": "merge 9f065865b061fd6a99e0270d77286d30812bde7a (base 6d099443f7a96cda669580bc40d62f7b97e5cf0f)",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

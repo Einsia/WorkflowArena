@@ -1,0 +1,23 @@
+{
+ "n_findings_posting_amount_mismatch": 5,
+ "n_findings_extension_error": 5,
+ "n_findings_tax_calc_error": 5,
+ "n_findings_price_anomaly": 5,
+ "n_findings_duplicate_posting": 5,
+ "n_findings_cutoff_error": 5,
+ "n_findings_misclassification": 5,
+ "n_findings_missing_approval": 5,
+ "n_findings_sod_violation": 5,
+ "n_findings_fx_rate_error": 5,
+ "n_findings_ic_counterparty_error": 5,
+ "n_findings_unrecorded_document": 5,
+ "total_findings": 60,
+ "total_pretax_misstatement_usd": 35184.76,
+ "entities_above_materiality": [
+  "S1",
+  "S3",
+  "S5",
+  "S6"
+ ],
+ "entity_with_most_findings": "P"
+}

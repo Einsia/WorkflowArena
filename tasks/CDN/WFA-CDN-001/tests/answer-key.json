@@ -1,0 +1,234 @@
+{
+  "task_id": "WFA-CDN-001",
+  "reviewer_only": true,
+  "total_frames_required": 1650,
+  "slots": [
+    {
+      "slot": 1,
+      "correct_source": "39",
+      "clip_frames": 240,
+      "must_keep_source_frames": [
+        45,
+        210
+      ],
+      "source_window_s": [
+        22.0,
+        30.0
+      ],
+      "motion_dependent": true,
+      "near_miss": [
+        {
+          "id": "37",
+          "why": "SAME source window as the key, synthetic handheld jitter ramping in over the second half (fails \"steady, even speed\")"
+        },
+        {
+          "id": "31",
+          "why": "same aerial already over the snowfield (no crag/blue-ice foreground), then a hard cut to a low-angle walker with staff (not single shot)"
+        },
+        {
+          "id": "23",
+          "why": "face in snow -> blizzard aerial of a hut with slow diagonal drift (no fly-forward) -> staff in snow"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "correct_source": "06",
+      "clip_frames": 216,
+      "must_keep_source_frames": [
+        60,
+        200
+      ],
+      "source_window_s": [
+        74.2,
+        81.4
+      ],
+      "motion_dependent": true,
+      "near_miss": [
+        {
+          "id": "14",
+          "why": "SAME source window as the key + synthetic zoom-out 1.35->1.00: the push-in is cancelled, net framing holds or widens"
+        },
+        {
+          "id": "22",
+          "why": "opens on the woman lying beside a standing figure (wider, different framing), then cuts to the face"
+        },
+        {
+          "id": "32",
+          "why": "later part of the same face shot, then a hard cut to the hut aerial (not single shot)"
+        },
+        {
+          "id": "25",
+          "why": "warm indoor face close-up after an old man close-up, near static, fades to black"
+        }
+      ]
+    },
+    {
+      "slot": 3,
+      "correct_source": "29",
+      "clip_frames": 318,
+      "must_keep_source_frames": [
+        45,
+        240
+      ],
+      "source_window_s": [
+        151.0,
+        161.6
+      ],
+      "motion_dependent": true,
+      "near_miss": [
+        {
+          "id": "30",
+          "why": "SAME source window as the key + synthetic lateral pan (82% crop window sliding across), framing changes inside both shots"
+        },
+        {
+          "id": "04",
+          "why": "starts mid-panorama (no fade-up from black) and ends with a third shot (dark wipe / girl at wall)"
+        },
+        {
+          "id": "33",
+          "why": "black, then the panorama fades up; no alley shot"
+        },
+        {
+          "id": "11",
+          "why": "warm interior wide, near static, then a cut to a close shot holding the creature"
+        }
+      ]
+    },
+    {
+      "slot": 4,
+      "correct_source": "35",
+      "clip_frames": 360,
+      "must_keep_source_frames": [
+        6,
+        330
+      ],
+      "source_window_s": [
+        162.2,
+        174.2
+      ],
+      "motion_dependent": false,
+      "near_miss": [
+        {
+          "id": "28",
+          "why": "same tracking shot but starts later: the dark mass covers only the left part at frame 0 (no near-full-frame occlusion sweeping away)"
+        },
+        {
+          "id": "24",
+          "why": "end of the wall shot -> girl turns -> start of the alley run (extra shots)"
+        },
+        {
+          "id": "13",
+          "why": "snow walker with staff, low-angle handheld follow (different subject/location)"
+        }
+      ]
+    },
+    {
+      "slot": 5,
+      "correct_source": "05",
+      "clip_frames": 234,
+      "must_keep_source_frames": [
+        5,
+        225
+      ],
+      "source_window_s": [
+        176.5,
+        184.3
+      ],
+      "motion_dependent": false,
+      "near_miss": [
+        {
+          "id": "09",
+          "why": "starts mid-run / climbing, ends on a static face close-up; no opening turn-away"
+        },
+        {
+          "id": "40",
+          "why": "opens on the creature push-in, then face, then creature (wrong order, no run/climb)"
+        },
+        {
+          "id": "08",
+          "why": "wall shot end -> turn -> run start; no roof climb, no creature"
+        }
+      ]
+    },
+    {
+      "slot": 6,
+      "correct_source": "27",
+      "clip_frames": 252,
+      "must_keep_source_frames": [
+        10,
+        235
+      ],
+      "source_window_s": [
+        196.5,
+        204.9
+      ],
+      "motion_dependent": true,
+      "near_miss": [
+        {
+          "id": "16",
+          "why": "SAME source window as the key + synthetic progressive push-in: the face close-ups are no longer locked off and the middle pull-back is largely cancelled"
+        },
+        {
+          "id": "18",
+          "why": "kneeling wide shot pulling back -> reaching hand -> face -> start of hand/creature shot (no smile)"
+        },
+        {
+          "id": "26",
+          "why": "face -> creature lying on tiles (tilt along wing, no hand) -> worried face (no smile)"
+        },
+        {
+          "id": "07",
+          "why": "second half of the pull-back -> smile -> creature roaring -> interior (extra shots, no opening gaze)"
+        }
+      ]
+    },
+    {
+      "slot": 7,
+      "correct_source": "19",
+      "clip_frames": 300,
+      "must_keep_source_frames": [
+        60,
+        255
+      ],
+      "source_window_s": [
+        224.2,
+        234.2
+      ],
+      "motion_dependent": true,
+      "near_miss": [
+        {
+          "id": "12",
+          "why": "SAME source window as the key + synthetic push-in from the first frame (no static opening)"
+        },
+        {
+          "id": "17",
+          "why": "same overhead shot but the push is already under way at frame 0"
+        },
+        {
+          "id": "21",
+          "why": "opens on a feet/plate close-up, then the overhead room fully static (no push)"
+        },
+        {
+          "id": "15",
+          "why": "fast push through bright, flying debris throughout; no static phase"
+        }
+      ]
+    }
+  ],
+  "feasibility": {
+    "sum_must_keep": 1464,
+    "sum_full_clips": 1920,
+    "note": "1650 lies between the two sums, so a valid trim exists; e.g. keep each must-keep range and distribute the remaining frames."
+  },
+  "filler_ids": [
+    "01",
+    "02",
+    "03",
+    "10",
+    "20",
+    "34",
+    "36",
+    "38"
+  ]
+}

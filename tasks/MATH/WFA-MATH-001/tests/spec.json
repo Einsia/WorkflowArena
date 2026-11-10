@@ -1,0 +1,20 @@
+{
+  "kind": "lean-blueprint",
+  "import": "Discretization.Infinite.NormDiscretization",
+  "build_targets": [
+    "Discretization.Infinite.NormDiscretization"
+  ],
+  "names": [
+    "Discretization.Infinite.exists_discretization"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "BasicResults",
+      "Discretization"
+    ],
+    "target_file": "Discretization/Infinite/NormDiscretization.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

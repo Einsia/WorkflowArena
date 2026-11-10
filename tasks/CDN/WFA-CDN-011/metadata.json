@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-011",
+  "domain": "CDN",
+  "task_form": "CDN-DOC",
+  "title": "When and Why Did the Curve Turn?",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "publisher document inputs",
+    "url": "https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf",
+    "revision": "2026-10-24",
+    "license": "CC-BY-NC-SA-3.0-IGO (WHO publications; non-commercial use)",
+    "credits": "environment/CREDITS.md"
+  }
+}

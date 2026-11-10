@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-001",
+  "domain": "FIN",
+  "task_form": "FIN-ANA",
+  "title": "半导体覆盖组：资本开支与现金质量穿透分析",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "SEC EDGAR financial filings with an authored machine contract",
+    "companies": [
+      "AMD",
+      "DIOD",
+      "MCHP",
+      "MPWR",
+      "INTC",
+      "TXN",
+      "ON",
+      "NXPI"
+    ],
+    "url": "https://www.sec.gov/edgar/search/",
+    "provenance": "environment/public/SOURCE.json",
+    "source_identity_verified": true,
+    "verification": "45 filing identities confirmed against SEC indexes; unchanged packaged HTML hashes recorded."
+  }
+}

@@ -1,0 +1,263 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "dp_ftr_match_initial",
+   "id": "M01",
+   "text": "Give the distribution of answers to `dp_ftr_match_initial` across all 14 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "dp_tail_length",
+   "id": "M02",
+   "text": "Give the distribution of answers to `dp_tail_length` across all 14 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_so_stock_threshold",
+      "eq": "Greater than 50% but not \"all or substantially all\""
+     },
+     {
+      "dp": "dp_so_fpov_sole",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_so_stock_threshold` = «Greater than 50% but not \"all or substantially all\"» AND `dp_so_fpov_sole` = «No»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_noshop_rep_liability",
+      "eq": "Yes"
+     },
+     {
+      "dp": "dp_tail_still_pending",
+      "eq": "Yes"
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_noshop_rep_liability` = «Yes» AND `dp_tail_still_pending` = «Yes»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_cor_match_initial",
+      "eq": "4 business days"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_limitations",
+       "has": "Any breach of no-shop"
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_cor_match_initial` = «4 business days» AND NOT (`dp_ftr_limitations` includes «Any breach of no-shop»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ftr_match_initial",
+      "eq": "5 business days"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_match_additional",
+       "eq": "2 business days or less"
+      }
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `dp_ftr_match_initial` = «5 business days» AND NOT (`dp_ftr_match_additional` = «2 business days or less»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_so_fpov_sole",
+      "eq": "No"
+     },
+     {
+      "dp": "dp_tail_public_yn",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `dp_so_fpov_sole` = «No» AND `dp_tail_public_yn` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_cor_match_additional",
+      "eq": "2 business days or less"
+     },
+     {
+      "dp": "dp_cor_so_standard",
+      "eq": "\"Inconsistent\" with fiduciary duties"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `dp_cor_match_additional` = «2 business days or less» AND `dp_cor_so_standard` = «\"Inconsistent\" with fiduciary duties». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_so_asset_threshold",
+      "eq": "50%"
+     },
+     {
+      "dp": "dp_tail_still_pending",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M09",
+   "text": "List every agreement that satisfies: `dp_so_asset_threshold` = «50%» AND `dp_tail_still_pending` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "none"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "not": {
+       "dp": "dp_so_stock_threshold",
+       "same_as": "dp_so_asset_threshold"
+      }
+     }
+    ]
+   },
+   "id": "M10",
+   "text": "List every agreement that satisfies: NOT (`dp_so_stock_threshold` gives the same answer as `dp_so_asset_threshold`). If no agreement qualifies, answer with an empty list [].",
+   "kind": "cross"
+  },
+  {
+   "op": "extremum",
+   "mode": "max",
+   "score": {
+    "type": "set_size",
+    "dp": "dp_ftr_limitations",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M11",
+   "text": "Which agreement(s) have the highest value of the number of options selected for `dp_ftr_limitations` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "gen_consideration",
+   "max_holders": 3,
+   "id": "M12",
+   "text": "For `gen_consideration`, list every agreement whose answer is shared by at most 3 of the 14 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "gen_consideration",
+   "max_holders": 1,
+   "id": "M13",
+   "text": "For `gen_consideration`, list every agreement whose answer is shared by at most 1 of the 14 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "dp_cor_match_initial",
+    "dp_cor_match_additional",
+    "dp_ftr_match_initial",
+    "dp_ftr_match_additional",
+    "dp_ftr_limitations",
+    "dp_so_stock_threshold",
+    "dp_so_asset_threshold",
+    "dp_so_fpov_sole",
+    "dp_cor_so_standard",
+    "dp_noshop_rep_liability",
+    "dp_tail_length",
+    "dp_tail_still_pending",
+    "dp_tail_public_yn",
+    "gen_consideration"
+   ],
+   "min_dev": 9,
+   "id": "M14",
+   "text": "Consider the deal points `dp_cor_match_initial`, `dp_cor_match_additional`, `dp_ftr_match_initial`, `dp_ftr_match_additional`, `dp_ftr_limitations`, `dp_so_stock_threshold`, `dp_so_asset_threshold`, `dp_so_fpov_sole`, `dp_cor_so_standard`, `dp_noshop_rep_liability`, `dp_tail_length`, `dp_tail_still_pending`, `dp_tail_public_yn`, `gen_consideration`. For each of them, take the most common answer across the 14 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 9 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "dp_cor_match_initial",
+    "dp_ftr_match_additional",
+    "dp_fidout_trigger"
+   ],
+   "id": "M15",
+   "text": "Considering only `dp_cor_match_initial`, `dp_ftr_match_additional`, `dp_fidout_trigger`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "dp_cor_match_additional",
+    "dp_fidout_trigger",
+    "dp_tail_still_pending"
+   ],
+   "id": "M16",
+   "text": "Considering only `dp_cor_match_additional`, `dp_fidout_trigger`, `dp_tail_still_pending`: how many distinct answer combinations occur among the 14 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A04",
+   "dps": [
+    "dp_cor_match_initial",
+    "dp_cor_match_additional",
+    "dp_ftr_match_initial",
+    "dp_ftr_match_additional",
+    "dp_ftr_limitations",
+    "dp_so_stock_threshold",
+    "dp_so_asset_threshold",
+    "dp_so_fpov_sole",
+    "dp_cor_so_standard",
+    "dp_fidout_trigger",
+    "dp_noshop_rep_liability",
+    "dp_tail_length",
+    "dp_tail_still_pending",
+    "dp_tail_public_yn",
+    "gen_consideration"
+   ],
+   "id": "M17",
+   "text": "Which other agreement(s) give the same answer as A04 on the largest number of the 15 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

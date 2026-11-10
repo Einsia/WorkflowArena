@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-LAW-019",
+  "domain": "LAW",
+  "task_form": "LAW-ADJ",
+  "title": "Multi-defendant criminal case adjudication",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "Anonymized excerpts of official judicial facts and official legal texts; authored task and scoring contract",
+    "url": "https://github.com/CURRENTF/HRN",
+    "revision": "dataset-v5 data_v5.03, commit 9c6e0786ce89279b6aa42557d65d1430dd2e52e6",
+    "license": "Official judicial and legal texts: PRC Copyright Law, Article 5(1); no license grant over the upstream dataset as a whole is asserted.",
+    "license_evidence": "https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

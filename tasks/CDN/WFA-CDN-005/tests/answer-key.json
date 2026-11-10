@@ -1,0 +1,581 @@
+{
+  "task_id": "WFA-CDN-005",
+  "reviewer_only": true,
+  "fps": 24,
+  "total_frames_required": 1248,
+  "min_edge_gap_frames": 12,
+  "slots": [
+    {
+      "slot": 1,
+      "correct_source": "45",
+      "clip_frames": 276,
+      "source_film_frames": [
+        972,
+        1248
+      ],
+      "must_cover_clip_frames": [
+        48,
+        266
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        173
+      ],
+      "near_miss": [
+        {
+          "source": "18",
+          "source_film_frames": [
+            804,
+            1042
+          ],
+          "why": "darkness only, ends as the face starts to show — onset without exit"
+        },
+        {
+          "source": "42",
+          "source_film_frames": [
+            1032,
+            1181
+          ],
+          "why": "emergence and cut, but ends while still crawling — no stand-up/stretch"
+        },
+        {
+          "source": "21",
+          "source_film_frames": [
+            1109,
+            1339
+          ],
+          "why": "opens with face already lit — no emergence from darkness"
+        }
+      ],
+      "tier": "mid"
+    },
+    {
+      "slot": 2,
+      "correct_source": "27",
+      "clip_frames": 183,
+      "source_film_frames": [
+        1347,
+        1530
+      ],
+      "must_cover_clip_frames": [
+        4,
+        121
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        109
+      ],
+      "near_miss": [
+        {
+          "source": "43",
+          "source_film_frames": [
+            1248,
+            1454
+          ],
+          "why": "burrow exit + sky rise, ends before the smiling medium close-up"
+        },
+        {
+          "source": "30",
+          "source_film_frames": [
+            1399,
+            1591
+          ],
+          "why": "opens with him already risen — no rise into frame"
+        },
+        {
+          "source": "01",
+          "source_film_frames": [
+            1458,
+            1663
+          ],
+          "why": "smile then flowers/sniff — no rise"
+        }
+      ],
+      "tier": "mid"
+    },
+    {
+      "slot": 3,
+      "correct_source": "32",
+      "clip_frames": 279,
+      "source_film_frames": [
+        1532,
+        1811
+      ],
+      "must_cover_clip_frames": [
+        16,
+        243
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        134,
+        179,
+        231
+      ],
+      "near_miss": [
+        {
+          "source": "01",
+          "source_film_frames": [
+            1458,
+            1663
+          ],
+          "why": "approach + sniff but ends there — no wide/voyeur/close-up"
+        },
+        {
+          "source": "07",
+          "source_film_frames": [
+            1598,
+            1762
+          ],
+          "why": "opens mid-sniff (no approach), ends before the close-up"
+        },
+        {
+          "source": "28",
+          "source_film_frames": [
+            1668,
+            1918
+          ],
+          "why": "opens on the wide from behind — no approach; adds top-down butterfly"
+        }
+      ],
+      "tier": "mid"
+    },
+    {
+      "slot": 4,
+      "correct_source": "24",
+      "clip_frames": 230,
+      "source_film_frames": [
+        2530,
+        2760
+      ],
+      "must_cover_clip_frames": [
+        14,
+        186
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        174
+      ],
+      "near_miss": [
+        {
+          "source": "41",
+          "source_film_frames": [
+            2396,
+            2566
+          ],
+          "why": "voyeur POV then butterfly approach; ends ~10 frames BEFORE it settles on the nose (onset only)"
+        },
+        {
+          "source": "03",
+          "source_film_frames": [
+            2592,
+            2784
+          ],
+          "why": "opens after the touch-down: circling, laugh, walk-away (result only)"
+        },
+        {
+          "source": "10",
+          "source_film_frames": [
+            1814,
+            2002
+          ],
+          "why": "top-down shot of butterfly circling him (same motif, other shot)"
+        },
+        {
+          "source": "11",
+          "source_film_frames": [
+            3048,
+            3240
+          ],
+          "why": "at the trunk, butterfly hovering above head, squirrel peeking"
+        }
+      ],
+      "tier": "gate"
+    },
+    {
+      "slot": 5,
+      "correct_source": "15",
+      "clip_frames": 163,
+      "source_film_frames": [
+        3580,
+        3743
+      ],
+      "must_cover_clip_frames": [
+        3,
+        116
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [],
+      "near_miss": [
+        {
+          "source": "44",
+          "source_film_frames": [
+            3515,
+            3677
+          ],
+          "why": "aerial shot then trunk; ends before the fruit drops"
+        },
+        {
+          "source": "35",
+          "source_film_frames": [
+            3646,
+            3840
+          ],
+          "why": "opens with third animal already climbing — not \"only one at first\"; continues to wide"
+        },
+        {
+          "source": "09",
+          "source_film_frames": [
+            3862,
+            4030
+          ],
+          "why": "all three already present plotting, intercut with protagonist"
+        },
+        {
+          "source": "19",
+          "source_film_frames": [
+            2832,
+            3010
+          ],
+          "why": "three together in a group close shot holding the fruit"
+        }
+      ],
+      "tier": "mid"
+    },
+    {
+      "slot": 6,
+      "correct_source": "31",
+      "clip_frames": 164,
+      "source_film_frames": [
+        4228,
+        4392
+      ],
+      "must_cover_clip_frames": [
+        1,
+        116
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        38,
+        104
+      ],
+      "near_miss": [
+        {
+          "source": "25",
+          "source_film_frames": [
+            4176,
+            4325
+          ],
+          "why": "STRONGEST: medium hits, trunk throw, wide pelting — ends 2 frames before the red fruit enters frame (no red-fruit impact); thumbnails ~identical to key"
+        },
+        {
+          "source": "26",
+          "source_film_frames": [
+            4070,
+            4254
+          ],
+          "why": "medium shot already being hit, then trunk throw — result before onset, no wide"
+        },
+        {
+          "source": "14",
+          "source_film_frames": [
+            4268,
+            4462
+          ],
+          "why": "opens in the wide already being pelted — no opening throw"
+        },
+        {
+          "source": "16",
+          "source_film_frames": [
+            4334,
+            4543
+          ],
+          "why": "trunk throws then close-up with butterfly — no impact"
+        },
+        {
+          "source": "29",
+          "source_film_frames": [
+            3745,
+            3918
+          ],
+          "why": "unaware wide, plotting, medium — no throw"
+        }
+      ],
+      "tier": "gate"
+    },
+    {
+      "slot": 7,
+      "correct_source": "08",
+      "clip_frames": 206,
+      "source_film_frames": [
+        5372,
+        5578
+      ],
+      "must_cover_clip_frames": [
+        26,
+        158
+      ],
+      "must_cover_note": "segment source_frames [a,b) must satisfy a<=lo and b>=hi",
+      "internal_cuts_clip_frames": [
+        58,
+        146
+      ],
+      "near_miss": [
+        {
+          "source": "37",
+          "source_film_frames": [
+            5293,
+            5490
+          ],
+          "why": "frown medium + fruit-strewn wide + run-in + trunk; ends before the triumph wide"
+        },
+        {
+          "source": "17",
+          "source_film_frames": [
+            5432,
+            5640
+          ],
+          "why": "opens at the trunk — no run-in"
+        },
+        {
+          "source": "40",
+          "source_film_frames": [
+            5520,
+            5797
+          ],
+          "why": "triumph wide then long glum medium — result only"
+        },
+        {
+          "source": "23",
+          "source_film_frames": [
+            5081,
+            5290
+          ],
+          "why": "antagonists with butterfly and spiky fruit — onset only, no attack"
+        }
+      ],
+      "tier": "gate"
+    }
+  ],
+  "internal_cuts_by_clip": {
+    "01": [
+      73
+    ],
+    "02": [
+      33
+    ],
+    "03": [
+      112
+    ],
+    "04": [
+      66,
+      126,
+      151
+    ],
+    "05": [
+      38,
+      78,
+      118,
+      158
+    ],
+    "06": [],
+    "07": [
+      68,
+      113
+    ],
+    "08": [
+      58,
+      146
+    ],
+    "09": [
+      33,
+      57,
+      127
+    ],
+    "10": [
+      105
+    ],
+    "11": [],
+    "12": [
+      133,
+      180
+    ],
+    "13": [
+      40,
+      77,
+      111
+    ],
+    "14": [
+      64
+    ],
+    "15": [],
+    "16": [
+      129
+    ],
+    "17": [
+      86,
+      147
+    ],
+    "18": [],
+    "19": [
+      69,
+      131
+    ],
+    "20": [
+      28,
+      68,
+      108,
+      148,
+      188
+    ],
+    "21": [
+      36
+    ],
+    "22": [
+      138,
+      178
+    ],
+    "23": [
+      50
+    ],
+    "24": [
+      174
+    ],
+    "25": [
+      51,
+      90
+    ],
+    "26": [
+      157
+    ],
+    "27": [
+      109
+    ],
+    "28": [
+      43,
+      95,
+      145
+    ],
+    "29": [
+      115,
+      150
+    ],
+    "30": [
+      57,
+      132
+    ],
+    "31": [
+      38,
+      104
+    ],
+    "32": [
+      134,
+      179,
+      231
+    ],
+    "33": [
+      90
+    ],
+    "34": [
+      68
+    ],
+    "35": [
+      98
+    ],
+    "36": [],
+    "37": [
+      78,
+      137
+    ],
+    "38": [
+      38,
+      118
+    ],
+    "39": [],
+    "40": [
+      59
+    ],
+    "41": [
+      98
+    ],
+    "42": [
+      113
+    ],
+    "43": [
+      98
+    ],
+    "44": [
+      63
+    ],
+    "45": [
+      173
+    ]
+  },
+  "feasibility": {
+    "key_full_length_sum": 1501,
+    "must_cover_sum": 1094,
+    "target": 1248,
+    "example_valid_plan_not_a_reference_render": [
+      [
+        1,
+        "45",
+        [
+          48,
+          276
+        ]
+      ],
+      [
+        2,
+        "27",
+        [
+          4,
+          183
+        ]
+      ],
+      [
+        3,
+        "32",
+        [
+          16,
+          279
+        ]
+      ],
+      [
+        4,
+        "24",
+        [
+          14,
+          230
+        ]
+      ],
+      [
+        5,
+        "15",
+        [
+          3,
+          118
+        ]
+      ],
+      [
+        6,
+        "31",
+        [
+          1,
+          116
+        ]
+      ],
+      [
+        7,
+        "08",
+        [
+          26,
+          158
+        ]
+      ]
+    ]
+  },
+  "motion_or_phase_only_slots": [
+    4,
+    6,
+    7
+  ]
+}

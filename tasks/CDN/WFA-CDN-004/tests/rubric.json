@@ -1,0 +1,181 @@
+{
+  "task_id": "WFA-CDN-004",
+  "pass_rule_zh": "Perfect = 全部 16 条计分判定通过且 P01 未违规。另报“槽位正确数/6”。",
+  "score": "连续分 = Σ(通过判定 weight)，满分 100",
+  "decisions": [
+    {
+      "id": "B1",
+      "tier": "base",
+      "group": "format",
+      "critical": true,
+      "criterion_zh": "solution.mp4 可解码：H.264/yuv420p、1280×720、SAR 1:1、恒定 30/1 fps、无音轨，解码帧数 = 858；output/ 恰为 solution.mp4、solution.json、events.csv 三个文件。",
+      "criterion_en": "solution.mp4 decodes: H.264/yuv420p, 1280x720, SAR 1:1, constant 30/1 fps, no audio, decoded frame count = 858; output/ holds exactly solution.mp4, solution.json, events.csv.",
+      "verify": "ffprobe stream fields + ffmpeg -v error -f null 全解码无错误 + -count_frames；ls output/。缺失或无法解码 = 整题验收失败（连续分照报）。",
+      "weight": 6.25
+    },
+    {
+      "id": "B2",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "solution.json 组装合同：恰 6 段按槽序；source 为合法且互不相同的 ID；output_frames 与 beats.json 各槽 [start_frame,end_frame) 完全相等；每段 b−a = d−c（1 倍速、无增减帧）；0 ≤ a < b ≤ 该候选解码帧数。",
+      "criterion_en": "solution.json assembly contract: exactly 6 segments in slot order; valid distinct source IDs; output_frames equal the beats.json slot ranges exactly; b−a = d−c for every segment (1x, no dropped/added frames); 0 ≤ a < b ≤ candidate decoded frame count.",
+      "verify": "确定性 JSON 检查，对照 public/input/beats.json 与 provenance.json 中 frames。",
+      "weight": 6.25
+    },
+    {
+      "id": "B3",
+      "tier": "base",
+      "group": "integrity",
+      "critical": false,
+      "criterion_zh": "画面诚实：成片第 c+i 帧与所声明候选第 a+i 帧逐帧 SSIM ≥ 0.95（灰度、最长边 360 px、11×11 高斯窗 σ=1.5），覆盖全部 858 帧。",
+      "criterion_en": "Honesty: every output frame c+i matches declared candidate frame a+i with SSIM ≥ 0.95 (gray, max side 360 px, 11x11 Gaussian σ=1.5), all 858 frames.",
+      "verify": "逐帧解码比对；任一段失败则本条判否，且该槽 T 判定记 0（组级门槛）。",
+      "weight": 6.25
+    },
+    {
+      "id": "B4",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "events.csv：表头恰为 slot,source,source_frame,output_frame；6 行、每槽 1 行；slot/source 与 solution.json 一致；a ≤ source_frame < b 且 output_frame − c = source_frame − a。",
+      "criterion_en": "events.csv: header exactly slot,source,source_frame,output_frame; 6 rows, one per slot; slot/source agree with solution.json; a ≤ source_frame < b and output_frame − c = source_frame − a.",
+      "verify": "确定性 CSV 解析与算术核对。",
+      "weight": 6.25
+    },
+    {
+      "id": "S1",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽1 所选候选 ID 等于隐藏答案（09）。近似干扰：18, 11, 13, 21。",
+      "criterion_en": "Slot 1 chosen candidate equals the hidden key (09). Near-miss distractors: 18, 11, 13, 21.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "S2",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽2 所选候选 ID 等于隐藏答案（16）。近似干扰：26, 43, 23。",
+      "criterion_en": "Slot 2 chosen candidate equals the hidden key (16). Near-miss distractors: 26, 43, 23.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "S3",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽3 所选候选 ID 等于隐藏答案（06）。近似干扰：31, 04, 37。",
+      "criterion_en": "Slot 3 chosen candidate equals the hidden key (06). Near-miss distractors: 31, 04, 37.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "S4",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽4 所选候选 ID 等于隐藏答案（44）。近似干扰：12, 39, 04, 37。",
+      "criterion_en": "Slot 4 chosen candidate equals the hidden key (44). Near-miss distractors: 12, 39, 04, 37.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "S5",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽5 所选候选 ID 等于隐藏答案（05）。近似干扰：15, 28, 33, 29。",
+      "criterion_en": "Slot 5 chosen candidate equals the hidden key (05). Near-miss distractors: 15, 28, 33, 29.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "S6",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽6 所选候选 ID 等于隐藏答案（34）。近似干扰：29, 02, 24, 25。",
+      "criterion_en": "Slot 6 chosen candidate equals the hidden key (34). Near-miss distractors: 29, 02, 24, 25.",
+      "verify": "确定性比对 answer-key.json；干扰构造见 answer-key near_miss.why（同镜头只含前态/只含后态的截取 + 同类状态变化的异内容镜头）。",
+      "weight": 6.667
+    },
+    {
+      "id": "T1",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽1 转换点卡拍：S1 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [97,102]（候选 09 的帧号）；|output_frame − 72| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 1 change point on the accent: S1 passes; declared source_frame lies in the hidden plausibility window [97,102] (frames of candidate 09); |output_frame − 72| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "T2",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽2 转换点卡拍：S2 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [141,148]（候选 16 的帧号）；|output_frame − 204| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 2 change point on the accent: S2 passes; declared source_frame lies in the hidden plausibility window [141,148] (frames of candidate 16); |output_frame − 204| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "T3",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽3 转换点卡拍：S3 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [120,171]（候选 06 的帧号）；|output_frame − 360| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 3 change point on the accent: S3 passes; declared source_frame lies in the hidden plausibility window [120,171] (frames of candidate 06); |output_frame − 360| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "T4",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽4 转换点卡拍：S4 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [108,123]（候选 44 的帧号）；|output_frame − 480| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 4 change point on the accent: S4 passes; declared source_frame lies in the hidden plausibility window [108,123] (frames of candidate 44); |output_frame − 480| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "T5",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽5 转换点卡拍：S5 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [183,213]（候选 05 的帧号）；|output_frame − 630| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 5 change point on the accent: S5 passes; declared source_frame lies in the hidden plausibility window [183,213] (frames of candidate 05); |output_frame − 630| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "T6",
+      "tier": "gate",
+      "group": "change_point",
+      "critical": false,
+      "criterion_zh": "槽6 转换点卡拍：S6 通过；events.csv 声明的 source_frame 落在隐藏合理窗 [165,213]（候选 34 的帧号）；|output_frame − 780| ≤ 1；且该段 B3 逐帧核对通过。",
+      "criterion_en": "Slot 6 change point on the accent: S6 passes; declared source_frame lies in the hidden plausibility window [165,213] (frames of candidate 34); |output_frame − 780| ≤ 1; and this segment passes the B3 frame check.",
+      "verify": "确定性：按声明帧测量（不信任自述）；窗取\"后一状态成立\"的合理解读：下沿为逐帧实测后一状态开始成立的帧（闪白起始/黑场/破壁过半/线缆铺开/冷绿过半），上沿为后一状态已完全成立的帧（突变槽约 0.2–0.5 s，渐变槽 1.0–1.7 s）。由于重拍前后各留 ≥54 帧，窗内命中即保证前态、转换、后态都在本槽画面内。",
+      "weight": 5.833
+    },
+    {
+      "id": "P01",
+      "tier": "integrity",
+      "group": "access",
+      "critical": false,
+      "criterion_zh": "未访问评审专用材料、未联网、未用生成内容替代；依据已打开文件路径日志或工作区清单判定，绝不以文本匹配判定。",
+      "criterion_en": "No access to reviewer-only material, no network, no generated substitutes; decided from opened-path logs or workspace listing, never from text matches.",
+      "verify": "不由本评分器判定（权重 0，rubric_score.py 自动记 na，不送评委）；作为整题门槛由评测方在评分器之外依据运行日志/工作区清单审计，违规 = 整题验收失败（作弊），连续分照报。",
+      "weight": 0
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "what": "QA predictions (participants, stage 1, QMODE1/2)",
+      "url": "https://predictioncenter.org/download_area/CASP16/predictions/QA/<T>.QA_1.tar.gz",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "oligo predictions (model files)",
+      "url": "https://predictioncenter.org/download_area/CASP16/predictions/oligo/<T>.tar.gz",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "per-model evaluation table",
+      "url": "https://predictioncenter.org/download_area/CASP16/results/tables/CASP16_prot_oligo.scores.csv",
+      "version": "Last-Modified 2024-11-26",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "official EMA per-target result tables (text view)",
+      "url": "https://predictioncenter.org/casp16/qa_global_fold.cgi?target=<T|avg>&view=txt ; https://predictioncenter.org/casp16/qa_global_iface.cgi?target=<T|avg>&view=txt",
+      "sha256": {
+        "fold_avg.txt": "a30db9b375bdc593ce73cc37f5fd8c87a6db7081e76efa3df0bff8cbb58c689f",
+        "iface_avg.txt": "4af87c7955c0f9de42f94ae7614381a3810d47302249388f0252569fc07443f7"
+      },
+      "derived": "tests/reference/official/casp16_qa_global_{fold,iface}.csv",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "target sequences and stoichiometry",
+      "url": "https://predictioncenter.org/download_area/CASP16/sequences/casp16.{H1,T1}.seq.txt ; https://predictioncenter.org/casp16/targetlist.cgi?type=csv ; https://predictioncenter.org/casp16/target.cgi?target=H1215&view=sequence",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "QMODE3 MassiveFold per-model scores (inspected, not used)",
+      "url": "https://predictioncenter.org/download_area/CASP16/results/QA/QMODE3_MassiveFold.scores.tgz",
+      "sha256": "c812066e026ea5efb6ce6f9ec77a5eb81e4b15b213efa152f763eedf103585e5",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    }
+  ],
+  "derived": {
+    "anonymization": "Models ordered by sha256(target|model|b2-casp16-ema), with original prediction-method identities withheld from the solver.",
+    "targets": "tests/reference/targets_summary.json",
+    "labels": "tests/reference/model_scores.csv",
+    "evaluator": "tests/verify.py"
+  },
+  "distribution": "Original model/input files are fetched from the publisher using environment/fetch/sources.json; locally prepared files are excluded from Git. Evaluator reference values are derived numerical assessments with source attribution."
+}

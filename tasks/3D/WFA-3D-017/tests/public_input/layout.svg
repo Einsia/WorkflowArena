@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="-6 -8 22 15" font-family="sans-serif" font-size="0.45">
+<!-- top view, metres; world (x, y) is drawn at (x, -y) -->
+<rect x="-6" y="-8" width="22" height="15" fill="#2b2b2b"/>
+<rect x="0" y="0" width="14" height="4" fill="#6d6d6d"/>
+<rect x="0" y="4" width="14" height="3" fill="#8a7f72"/>
+<line x1="0" y1="0" x2="14" y2="0" stroke="#ccc" stroke-width="0.12"/>
+<line x1="0" y1="0" x2="0" y2="4" stroke="#ccc" stroke-width="0.12"/>
+<ellipse cx="8.0" cy="-0.8" rx="0.9" ry="0.55" fill="#4a6e8a"/>
+<circle cx="0.5" cy="0.5" r="0.22" fill="#ffb347"/>
+<line x1="0.5" y1="0.5" x2="0.5" y2="-1.2" stroke="#ffb347" stroke-width="0.08"/>
+<circle cx="7.0" cy="0.5" r="0.18" fill="#ddd"/>
+<circle cx="6.4" cy="0.7" r="0.22" fill="#c33"/>
+<rect x="4.2" y="3.85" width="1.6" height="0.2" fill="#2ff"/>
+<text x="7.2" y="-1.6" fill="#fff">PUDDLE</text>
+<text x="0.8" y="1.4" fill="#ffb347">STREETLAMP (head over lane)</text>
+<text x="7.4" y="0.9" fill="#ddd">BUS_STOP N7</text>
+<text x="5.0" y="1.9" fill="#f88">COMMUTER</text>
+<text x="4.0" y="3.6" fill="#2ff">NEON_SIGN</text>
+<text x="1" y="5.6" fill="#fff">corner-block shopfront (y = -4)</text>
+<text x="1" y="2.6" fill="#fff">footway</text>
+<text x="-5.6" y="-3.5" fill="#fff">near lane: bus from -x</text>
+<text x="-5.6" y="-6.5" fill="#bbb">road (y &gt; 0) / cross street (x &lt; 0); layout reference only</text>
+</svg>

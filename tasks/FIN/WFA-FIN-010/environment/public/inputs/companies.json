@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "DOV",
+    "company_name": "DOVER Corp",
+    "filing": "DOV.html"
+  },
+  {
+    "ticker": "CARR",
+    "company_name": "CARRIER GLOBAL Corp",
+    "filing": "CARR.html"
+  },
+  {
+    "ticker": "FTV",
+    "company_name": "Fortive Corp",
+    "filing": "FTV.html"
+  },
+  {
+    "ticker": "IR",
+    "company_name": "Ingersoll Rand Inc.",
+    "filing": "IR.html"
+  },
+  {
+    "ticker": "AME",
+    "company_name": "AMETEK INC/",
+    "filing": "AME.html"
+  },
+  {
+    "ticker": "PNR",
+    "company_name": "PENTAIR plc",
+    "filing": "PNR.html"
+  },
+  {
+    "ticker": "GGG",
+    "company_name": "GRACO INC",
+    "filing": "GGG.html"
+  },
+  {
+    "ticker": "LII",
+    "company_name": "LENNOX INTERNATIONAL INC",
+    "filing": "LII.html"
+  },
+  {
+    "ticker": "TKR",
+    "company_name": "TIMKEN CO",
+    "filing": "TKR.html"
+  },
+  {
+    "ticker": "WAB",
+    "company_name": "WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP",
+    "filing": "WAB.html"
+  },
+  {
+    "ticker": "AGCO",
+    "company_name": "AGCO CORP /DE",
+    "filing": "AGCO.html"
+  },
+  {
+    "ticker": "CR",
+    "company_name": "Crane Co",
+    "filing": "CR.html"
+  }
+]

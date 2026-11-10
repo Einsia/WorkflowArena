@@ -1,0 +1,85 @@
+{
+  "units": "metre; +z up; ground plane z=0 (road), kerb top z=0.12",
+  "street_corner": {
+    "roads": "two two-lane asphalt streets meeting at a right angle; footway on the corner block",
+    "kerb_corner": [
+      0.0,
+      0.0
+    ],
+    "footway_extent": {
+      "x": [
+        0.0,
+        14.0
+      ],
+      "y": [
+        -4.0,
+        0.0
+      ]
+    },
+    "road_width": 7.0
+  },
+  "STREETLAMP": {
+    "base": [
+      0.5,
+      -0.5,
+      0.12
+    ],
+    "height": 5.0,
+    "head": "single cobra-head luminaire on an arm overhanging the near lane, head at about [0.5, 1.2, 5.0]",
+    "lamp_colour": "low-pressure sodium amber"
+  },
+  "PUDDLE": {
+    "centre": [
+      8.0,
+      0.8,
+      0.0
+    ],
+    "size": [
+      1.8,
+      1.1
+    ],
+    "shape": "irregular, in the road gutter beside the kerb, a few cm deep"
+  },
+  "shopfront": "corner-block building facade along y = -4.0 from x = 0 to x = 14, ground-floor shop closed for the night",
+  "NEON_SIGN": {
+    "position": [
+      5.0,
+      -3.95,
+      3.0
+    ],
+    "facing": "+y",
+    "text": "NOODLE",
+    "colour": "cyan",
+    "note": "mounted on the corner-block shopfront behind the bus stop"
+  },
+  "BUS_STOP": {
+    "pole": [
+      7.0,
+      -0.5,
+      0.12
+    ],
+    "plate_text": "N7"
+  },
+  "bus_route": "night bus N7 approaches along the near lane from -x towards the stop (screen-left in the corner views)",
+  "COMMUTER": {
+    "description": "adult woman, dark knee-length coat, grey scarf",
+    "props": {
+      "UMBRELLA": "red, closed and held at the start",
+      "PHONE": "black smartphone, in the coat pocket at the start"
+    },
+    "start_mark": [
+      6.4,
+      -0.7,
+      0.12
+    ]
+  },
+  "weather": "steady rain at night; all exterior surfaces wet",
+  "dialogue": {
+    "line": "The bus is here. I'll call you when I'm home."
+  },
+  "identity_constraints": [
+    "S1 and S5 show the same corner, lamp, puddle and bus stop",
+    "the puddle in S2 and S3 is the same PUDDLE object seen in S1"
+  ],
+  "task_id": "WFA-3D-017"
+}

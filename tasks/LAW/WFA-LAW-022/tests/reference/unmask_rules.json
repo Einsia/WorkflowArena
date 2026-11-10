@@ -1,0 +1,42 @@
+{
+ "rules": {
+  "code_persons": [
+   "[被告G]2"
+  ]
+ },
+ "note": "",
+ "counts": {
+  "restorations": 0,
+  "code_person_labels": 0,
+  "person_labels": 3,
+  "distinct_person_labels": 3,
+  "masked_chars_to_box": 0,
+  "number_redactions": 0,
+  "left_ambiguous": 0,
+  "number_boundary_splits": 0
+ },
+ "restorations": {},
+ "code_persons": {
+  "[被告G]2": {
+   "label": "案外人甲",
+   "count": 0
+  }
+ },
+ "persons": {
+  "肖X": {
+   "label": "肖某甲",
+   "count": 1
+  },
+  "肖X2": {
+   "label": "肖某乙",
+   "count": 1
+  },
+  "江X": {
+   "label": "江某甲",
+   "count": 1
+  }
+ },
+ "words": {},
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {}
+}

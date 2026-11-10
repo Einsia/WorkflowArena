@@ -1,0 +1,15 @@
+[
+  {
+    "task_id": "WFA-FIN-006",
+    "criterion": "scope/IDA/report_end",
+    "frozen_expected": "2026-07-24",
+    "corrected_expected": "2026-06-30",
+    "reason": "封面流通股统计日误作财报终点。",
+    "source_index": "gold-v2/finance-hard-06/IDA-source.json",
+    "source_locator": {
+      "table": 0,
+      "row": 3
+    },
+    "source_quote": "For the quarterly period ended June 30, 2026"
+  }
+]

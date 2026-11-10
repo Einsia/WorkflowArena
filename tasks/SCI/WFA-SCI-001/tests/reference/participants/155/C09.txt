@@ -1,0 +1,10 @@
+# rank 1 unmapped (T122_S20.M01 src=T122_U16.M53)
+# rank 2 unmapped (T122_S20.M02 src=T122_U20.M04)
+# rank 3 unmapped (T122_S20.M03 src=T122_U20.M05)
+# rank 4 unmapped (T122_S20.M04 src=T122_U20.M01)
+5 C09_D1574
+# rank 6 unmapped (T122_S20.M06 src=T122_U16.M09)
+7 C09_D1738
+8 C09_D1818
+9 C09_D1033
+10 C09_D2134

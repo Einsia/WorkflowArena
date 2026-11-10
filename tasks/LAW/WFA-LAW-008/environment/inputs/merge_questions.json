@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `mae_co_prohibited_actions` across all 18 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `kn_definition` across all 18 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `oc_pandemic_carveout` = «Yes» AND `nc_consent_standard` = «Consent may not be unreasonably withheld, conditioned or delayed»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `oc_past_practice` = «Yes» AND NOT (`ef_antitrust_standard` = «Commercially reasonable efforts»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `cc_covenant_compliance` = «All Covenants» AND `cc_general_bringdown_timing` = «At Signing & At Closing»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `oc_pandemic_carveout` = «No» AND `nc_pandemic_carveout` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `oc_consent_standard` = «Consent may not be unreasonably withheld, conditioned or delayed» AND `nc_pandemic_carveout` = «Yes». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `mae_co_required_actions` = «No» AND `mae_co_buyer_consent` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `oc_pandemic_carveout` = «Yes» AND `nc_consent_standard` = «Flat consent». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "List every agreement that satisfies: NOT (`oc_consent_standard` gives the same answer as `nc_consent_standard`). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "For `kn_identified_persons`, list every agreement whose answer is shared by at most 3 of the 18 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `rem_specific_performance`, list every agreement whose answer is shared by at most 3 of the 18 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "Consider the deal points `oc_consent_standard`, `oc_past_practice`, `oc_efforts_standard`, `oc_pandemic_carveout`, `nc_consent_standard`, `nc_consent_application`, `nc_pandemic_carveout`, `ef_antitrust_standard`, `rem_specific_performance`, `kn_definition`, `kn_identified_persons`, `gen_consideration`, `cc_covenant_compliance`, `cc_general_bringdown_timing`, `mae_co_required_actions`, `mae_co_prohibited_actions`, `mae_co_buyer_consent`. For each of them, take the most common answer across the 18 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 7 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Considering only `oc_past_practice`, `oc_efforts_standard`, `nc_consent_application`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `oc_efforts_standard`, `nc_consent_application`, `ef_antitrust_standard`: how many distinct answer combinations occur among the 18 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M16",
+  "question": "Which other agreement(s) give the same answer as A15 on the largest number of the 17 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

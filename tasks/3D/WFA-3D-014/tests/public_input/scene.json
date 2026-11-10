@@ -1,0 +1,153 @@
+{
+  "units": "metre; +z up; floor at z=0; aisle C runs along +x",
+  "warehouse": {
+    "floor_extent_x": [
+      -2.0,
+      24.0
+    ],
+    "floor_extent_y": [
+      -6.0,
+      8.0
+    ],
+    "clear_height": 9.0,
+    "floor": "sealed grey concrete, worn tyre tracks",
+    "lighting": "high-bay LED fixtures at z=8.5 along y=0.2, every 4 m from x=2 to x=18, neutral white; night shift, no daylight"
+  },
+  "aisle_C": {
+    "centerline_y": 0.2,
+    "clear_width": 3.4,
+    "edges_y": [
+      -1.5,
+      1.9
+    ]
+  },
+  "RACK_C": {
+    "type": "selective pallet racking, orange beams, blue upright frames",
+    "aisle_face_y": 1.9,
+    "frame_depth": 1.1,
+    "upright_section": [
+      0.1,
+      0.075
+    ],
+    "upright_x": [
+      0.0,
+      2.8,
+      5.6,
+      8.4,
+      11.2
+    ],
+    "upright_names": [
+      "UPRIGHT_C1",
+      "UPRIGHT_C2",
+      "UPRIGHT_C3",
+      "UPRIGHT_C4",
+      "UPRIGHT_C5"
+    ],
+    "beam_top_levels_z": [
+      1.5,
+      3.0,
+      4.5
+    ],
+    "total_height": 6.0,
+    "bays": {
+      "C1": [
+        0.0,
+        2.8
+      ],
+      "C2": [
+        2.8,
+        5.6
+      ],
+      "C3": [
+        5.6,
+        8.4
+      ],
+      "C4": [
+        8.4,
+        11.2
+      ]
+    },
+    "lower_levels": "loaded with wrapped pallets of cartons, all bays"
+  },
+  "RACK_D": {
+    "type": "same racking, opposite side of aisle",
+    "aisle_face_y": -1.5,
+    "frame_depth": 1.1,
+    "upright_x": [
+      0.0,
+      2.8,
+      5.6,
+      8.4,
+      11.2
+    ]
+  },
+  "PALLET_TOP": {
+    "location": "bay C3, top beam level (z=4.5), centred on the bay",
+    "pallet": [
+      0.8,
+      1.2,
+      0.144
+    ],
+    "pallet_long_side": "along y (rack depth)",
+    "load": "12 cartons BOX_01..BOX_12, 2 x 2 per layer, 3 layers, not stretch-wrapped",
+    "carton": [
+      0.4,
+      0.6,
+      0.4
+    ],
+    "carton_mass_kg": 12.0,
+    "carton_look": "brown corrugated board, printed shipping labels"
+  },
+  "FORKLIFT": {
+    "type": "counterbalance forklift, yellow body, black overhead guard",
+    "overall_length_without_forks": 2.3,
+    "fork_length": 1.15,
+    "width": 1.15,
+    "overhead_guard_height": 2.15,
+    "start_pose": {
+      "rear_x": 8.9,
+      "centerline_y": 0.6,
+      "forks_point": "+x",
+      "forks_lowered": true,
+      "load": "none"
+    },
+    "motion": "reversing toward -x along the aisle at walking pace",
+    "reverse_alarm": "rear-mounted"
+  },
+  "DRIVER": {
+    "height": 1.78,
+    "look": "hi-vis vest over dark jacket, hard hat",
+    "seat": "in FORKLIFT"
+  },
+  "PICKER": {
+    "height": 1.65,
+    "look": "hi-vis vest, grey hoodie, gloves",
+    "start_position": [
+      15.5,
+      -0.6
+    ],
+    "with": "CART (two-tier picking cart, 1.0 x 0.6 x 1.0) and RADIO (handheld two-way radio clipped to belt)"
+  },
+  "SAFETY_LINE": {
+    "type": "yellow painted floor line across the aisle, 0.1 wide",
+    "x": 17.0,
+    "safe_side": "+x"
+  },
+  "DISPATCHER": {
+    "presence": "off-screen; heard only through RADIO"
+  },
+  "dialogue": {
+    "line_dispatch": {
+      "speaker": "DISPATCHER",
+      "text": "Aisle C, I heard a crash. Report."
+    },
+    "line_picker": {
+      "speaker": "PICKER",
+      "text": "Top pallet came down. Nobody's hurt."
+    }
+  },
+  "identity_constraints": [
+    "one warehouse, one aisle, one rack run: the same RACK_C, FORKLIFT, PALLET_TOP, cartons, PICKER and SAFETY_LINE in every shot",
+    "S5 is seen from the S1 camera set-up"
+  ]
+}

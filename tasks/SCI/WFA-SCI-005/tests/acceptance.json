@@ -1,0 +1,9 @@
+{
+  "metric": "score_organizer_half_split",
+  "operator": "le",
+  "threshold": -1.956,
+  "reference_count": 382,
+  "baseline_type": "same_split_available_competitor_median",
+  "task_id": "WFA-SCI-005",
+  "equality_passes": true
+}

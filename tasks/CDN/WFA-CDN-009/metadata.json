@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-009",
+  "domain": "CDN",
+  "task_form": "CDN-DOC",
+  "title": "The door plug briefing",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "publisher document inputs",
+    "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf",
+    "revision": "2026-10-24",
+    "license": "U.S. federal government works; public domain in the United States",
+    "credits": "environment/CREDITS.md"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "WFA-FIN-008",
+  "files": {
+    "inputs/BMY.html": "946368ef943f7b384a90762a78e5632a75bcf445a5161f160304f0be386d8715",
+    "inputs/LLY.html": "379d84d8be1eaf92941257ee1b1e5eba98ee66a87dca71b07949761eaa6210f8",
+    "inputs/PFE.html": "3b475f275e8801623fd8aafc99f81cfabe4ccc846cab8af5a1fc409b56216719",
+    "inputs/AMGN.html": "a1e044c7cfe6ac00e4862b697a48b1dcea31ecda64ea99ba947c870c52b54a53",
+    "inputs/JNJ.html": "e402c6abfc1da0eab389970ee82eebff6f42a5e3a58e9ef6272832cae204d54a",
+    "inputs/REGN.html": "3d3fbe96d03c9181f4175f76562d218a3fe3777d24b381173ff8e752ec934734",
+    "inputs/VRTX.html": "07a8de9d73bb94b2ad19582f5f194551c205ccf88e711019b16de40bd03d2800",
+    "inputs/INCY.html": "2f0c02b03203eda44d99b7fbc9c2d6c98030a9a12303ff728409f3d7b8759672",
+    "inputs/ZTS.html": "669df02e343245297ceabdb7c90855eb24332ada2c259f74074a71b56db67d6f",
+    "inputs/UTHR.html": "d3777ee43d6e89bb0c8b55e29b164a106bc627570a8c902f4289ee015bba1daf",
+    "inputs/ALKS.html": "3429631948d90755bc136df049e6e8bb091b285f3adce31d3cec85c474d5c965",
+    "inputs/EXEL.html": "f519ce7f7814497e2bab7ef182acb5b9b4f28a0d002854098734286e54b546a7",
+    "inputs/HALO.html": "666465e2cd768566b215ecbbd79414cd3a28628834520f8fa2c6579313a90f6b",
+    "inputs/ACAD.html": "37d8e75d25474c8183103382efd74a7b314974608b42744b1235819dd39741be"
+  },
+  "boundary": "This manifest records frozen local files, not an assertion of outside authenticity."
+}

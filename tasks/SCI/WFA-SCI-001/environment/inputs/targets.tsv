@@ -1,0 +1,11 @@
+target	n_decoys	chains	receptor_chains	ligand_chains
+C01	1787	BA	B	A
+C02	1706	BA	B	A
+C03	1464	AB	A	B
+C04	1417	CF	C	F
+C05	2593	AD	A	D
+C06	2184	DA	A	D
+C07	1745	BA	A	B
+C08	1379	AB	B	A
+C09	2389	ABC	AB	C
+C10	1231	AB	A	B

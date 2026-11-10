@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-005",
+  "domain": "FIN",
+  "task_form": "FIN-ANA",
+  "title": "软件：预收款、资本化成本与现金利润",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "SEC EDGAR financial filings with an authored machine contract",
+    "external_authenticity_asserted": true,
+    "companies": [
+      "NET",
+      "HUBS",
+      "U",
+      "BL",
+      "AKAM",
+      "PEGA",
+      "QLYS",
+      "TENB",
+      "VRNS",
+      "WK",
+      "BSY",
+      "FIVN"
+    ],
+    "url": "https://www.sec.gov/edgar/search/",
+    "provenance": "environment/public/SOURCE.json",
+    "verification": "All delivered HTML hashes match original per-filing acquisition records, including source URLs and raw-document hashes."
+  }
+}

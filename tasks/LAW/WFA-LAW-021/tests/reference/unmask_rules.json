@@ -1,0 +1,47 @@
+{
+ "rules": {},
+ "note": "",
+ "counts": {
+  "restorations": 0,
+  "code_person_labels": 0,
+  "person_labels": 11,
+  "distinct_person_labels": 6,
+  "masked_chars_to_box": 14,
+  "number_redactions": 0,
+  "left_ambiguous": 0,
+  "number_boundary_splits": 0
+ },
+ "restorations": {},
+ "code_persons": {},
+ "persons": {
+  "傅X2": {
+   "label": "傅某甲",
+   "count": 3
+  },
+  "汤X": {
+   "label": "汤某甲",
+   "count": 2
+  },
+  "傅X": {
+   "label": "傅某乙",
+   "count": 2
+  },
+  "金X": {
+   "label": "金某甲",
+   "count": 2
+  },
+  "傅X3": {
+   "label": "傅某丙",
+   "count": 1
+  },
+  "邢X": {
+   "label": "邢某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "白X→白□": 14
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {}
+}

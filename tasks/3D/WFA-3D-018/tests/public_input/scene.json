@@ -1,0 +1,128 @@
+{
+  "units": "metre; world axes x east, y north, z up; origin at south-west corner of the gate hall",
+  "dimensions_note": "dimensions guide identity and plan layout, not engineering metrology",
+  "gate_hall": {
+    "room_xy": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        6.0,
+        8.0
+      ]
+    ],
+    "ceiling": 3.2,
+    "e_gates": [
+      {
+        "id": "gate 1",
+        "centre_xy": [
+          2.0,
+          3.0
+        ]
+      },
+      {
+        "id": "gate 2",
+        "centre_xy": [
+          3.4,
+          3.0
+        ],
+        "note": "the passenger's gate"
+      }
+    ],
+    "e_gate": "waist-high stainless cabinet pair with two glass flaps; boarding-pass reader on the cabinet top; walking direction south -> north",
+    "officer_post_xy": [
+      4.3,
+      4.0
+    ]
+  },
+  "partition": {
+    "wall_x": 6.0,
+    "material": "painted wall, lower half; frosted glass, upper half",
+    "door_south_y": [
+      0.6,
+      1.8
+    ],
+    "door_north_y": [
+      6.2,
+      7.4
+    ]
+  },
+  "screening_lane": {
+    "room_xy": [
+      [
+        6.0,
+        0.0
+      ],
+      [
+        13.0,
+        8.0
+      ]
+    ],
+    "ceiling": 3.2,
+    "conveyor": {
+      "from_xy": [
+        7.0,
+        3.0
+      ],
+      "to_xy": [
+        12.6,
+        3.0
+      ],
+      "belt_width": 0.62,
+      "belt_height": 0.72,
+      "flow": "entry (west) -> x-ray tunnel -> exit roller bed (east)"
+    },
+    "xray_tunnel": {
+      "x_range": [
+        8.8,
+        10.4
+      ],
+      "opening_w_h": [
+        0.64,
+        0.42
+      ],
+      "lead_curtains": true
+    },
+    "operator_station_xy": [
+      9.6,
+      1.9
+    ],
+    "monitor": "single flat monitor on the operator station, facing the operator (south side)",
+    "belt_stop_button": "red mushroom push button on the operator station, right of the monitor",
+    "search_table": {
+      "centre_xy": [
+        11.6,
+        6.0
+      ],
+      "size": [
+        1.2,
+        0.7,
+        0.9
+      ]
+    },
+    "trays": "grey plastic screening trays, about 0.60 x 0.40 x 0.12"
+  },
+  "characters": {
+    "passenger": "adult traveller in a grey wool coat; carries a red duffel bag (about 0.50 x 0.28 x 0.28, two carry handles) and a paper boarding pass",
+    "screener": "adult security screener, navy uniform, handheld radio on the station",
+    "officer": "adult security officer, navy uniform, shoulder radio microphone; posted beyond gate 2"
+  },
+  "props": {
+    "bag": "the passenger's red duffel, travels on the belt inside a grey tray",
+    "second_tray": "another passenger's tray with a dark backpack, following the red bag on the belt"
+  },
+  "dialogue": {
+    "screener": "Lane two, hold the passenger in the grey coat.",
+    "officer": "Ma'am, one moment, please."
+  },
+  "identity_constraints": [
+    "same passenger (grey coat) in S1, S2, S4 and S6",
+    "same red bag and tray in S1, S3, S5 and S6",
+    "same screener in S3, S5 and S6; same officer in S4 and S6",
+    "the two spaces keep the plan geometry of layout.svg"
+  ],
+  "continuity": {
+    "lane_screen_direction": "in lane shots seen from the operator side, the belt runs screen-left to screen-right"
+  }
+}

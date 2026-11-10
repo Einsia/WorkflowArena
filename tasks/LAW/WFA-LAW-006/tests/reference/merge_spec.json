@@ -1,0 +1,265 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "dp_tail_ap_timing",
+   "id": "M01",
+   "text": "Give the distribution of answers to `dp_tail_ap_timing` across all 16 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (count each agreement once for every option included in its answer).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "rem_specific_performance",
+   "id": "M02",
+   "text": "Give the distribution of answers to `rem_specific_performance` across all 16 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_tail_public_yn",
+      "eq": "Yes"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_limitations",
+       "has": "Material breach of no-shop"
+      }
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 16 agreements satisfy ALL of the following: `dp_tail_public_yn` = «Yes» AND NOT (`dp_ftr_limitations` includes «Material breach of no-shop»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_tail_still_pending",
+      "eq": "Yes"
+     },
+     {
+      "dp": "dp_cor_board_only",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 16 agreements satisfy ALL of the following: `dp_tail_still_pending` = «Yes» AND `dp_cor_board_only` = «No»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_noshop_rep_liability",
+      "eq": "Yes"
+     },
+     {
+      "not": {
+       "dp": "dp_so_asset_threshold",
+       "eq": "50%"
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 16 agreements satisfy ALL of the following: `dp_noshop_rep_liability` = «Yes» AND NOT (`dp_so_asset_threshold` = «50%»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_tail_still_pending",
+      "eq": "No"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_match_initial",
+       "eq": "3 business days"
+      }
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `dp_tail_still_pending` = «No» AND NOT (`dp_ftr_match_initial` = «3 business days»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_noshop_rep_standard",
+      "eq": "Reasonable standard"
+     },
+     {
+      "dp": "dp_so_stock_threshold",
+      "eq": "50%"
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `dp_noshop_rep_standard` = «Reasonable standard» AND `dp_so_stock_threshold` = «50%». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_tail_public_triggers",
+      "has": "“Publicly disclosed” requirement applies to Acquisition Proposal + No-Vote / MTC Failure Trigger"
+     },
+     {
+      "dp": "dp_cor_ie_yn",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `dp_tail_public_triggers` includes «“Publicly disclosed” requirement applies to Acquisition Proposal + No-Vote / MTC Failure Trigger» AND `dp_cor_ie_yn` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_tail_public_yn",
+      "eq": "No"
+     },
+     {
+      "dp": "dp_tail_public_triggers",
+      "has": "“Publicly disclosed” requirement applies to Acquisition Proposal + Outside Date Trigger"
+     }
+    ]
+   },
+   "id": "M09",
+   "text": "List every agreement that satisfies: `dp_tail_public_yn` = «No» AND `dp_tail_public_triggers` includes «“Publicly disclosed” requirement applies to Acquisition Proposal + Outside Date Trigger». If no agreement qualifies, answer with an empty list [].",
+   "kind": "none"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "not": {
+       "dp": "dp_so_stock_threshold",
+       "same_as": "dp_so_asset_threshold"
+      }
+     }
+    ]
+   },
+   "id": "M10",
+   "text": "List every agreement that satisfies: NOT (`dp_so_stock_threshold` gives the same answer as `dp_so_asset_threshold`). If no agreement qualifies, answer with an empty list [].",
+   "kind": "cross"
+  },
+  {
+   "op": "extremum",
+   "mode": "min",
+   "score": {
+    "type": "set_size",
+    "dp": "dp_tail_ap_timing",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M11",
+   "text": "Which agreement(s) have the lowest value of the number of options selected for `dp_tail_ap_timing` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "dp_tail_length",
+   "max_holders": 2,
+   "id": "M12",
+   "text": "For `dp_tail_length`, list every agreement whose answer is shared by at most 2 of the 16 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "dp_noshop_rep_liability",
+   "max_holders": 2,
+   "id": "M13",
+   "text": "For `dp_noshop_rep_liability`, list every agreement whose answer is shared by at most 2 of the 16 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "dp_tail_ap_timing",
+    "dp_tail_public_yn",
+    "dp_tail_public_triggers",
+    "dp_tail_still_pending",
+    "dp_tail_length",
+    "dp_ftr_limitations",
+    "dp_ftr_match_initial",
+    "dp_cor_board_only",
+    "dp_cor_ie_yn",
+    "dp_noshop_rep_liability",
+    "dp_noshop_rep_standard",
+    "dp_so_asset_threshold",
+    "gen_consideration",
+    "rem_specific_performance"
+   ],
+   "min_dev": 11,
+   "id": "M14",
+   "text": "Consider the deal points `dp_tail_ap_timing`, `dp_tail_public_yn`, `dp_tail_public_triggers`, `dp_tail_still_pending`, `dp_tail_length`, `dp_ftr_limitations`, `dp_ftr_match_initial`, `dp_cor_board_only`, `dp_cor_ie_yn`, `dp_noshop_rep_liability`, `dp_noshop_rep_standard`, `dp_so_asset_threshold`, `gen_consideration`, `rem_specific_performance`. For each of them, take the most common answer across the 16 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 11 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "dp_cor_ie_yn",
+    "dp_so_stock_threshold",
+    "dp_so_asset_threshold"
+   ],
+   "id": "M15",
+   "text": "Considering only `dp_cor_ie_yn`, `dp_so_stock_threshold`, `dp_so_asset_threshold`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "dp_tail_length",
+    "dp_cor_board_only",
+    "dp_noshop_rep_standard"
+   ],
+   "id": "M16",
+   "text": "Considering only `dp_tail_length`, `dp_cor_board_only`, `dp_noshop_rep_standard`: how many distinct answer combinations occur among the 16 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A05",
+   "dps": [
+    "dp_tail_ap_timing",
+    "dp_tail_public_yn",
+    "dp_tail_public_triggers",
+    "dp_tail_still_pending",
+    "dp_tail_length",
+    "dp_ftr_limitations",
+    "dp_ftr_match_initial",
+    "dp_cor_board_only",
+    "dp_cor_ie_yn",
+    "dp_noshop_rep_liability",
+    "dp_noshop_rep_standard",
+    "dp_so_stock_threshold",
+    "dp_so_asset_threshold",
+    "gen_consideration",
+    "rem_specific_performance"
+   ],
+   "id": "M17",
+   "text": "Which other agreement(s) give the same answer as A05 on the largest number of the 15 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-004",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Implement molecular self-consistent GW methods (evGW, qsGW) and exact / contour-deformation G0W0 for PySCF",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/pyscf/pyscf/pull/3236",
+    "revision": "merge edbefc387a82012020a1eac7a4ef5cf3829fe319 (base d3305ac1caca551dafb12d1a95a53ff7497e97ee)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

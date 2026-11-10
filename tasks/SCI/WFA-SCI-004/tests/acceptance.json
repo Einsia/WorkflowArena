@@ -1,0 +1,9 @@
+{
+  "metric": "overall",
+  "operator": "ge",
+  "threshold": 6.332,
+  "reference_count": 29,
+  "baseline_type": "participant_median_excludes_community_ensemble",
+  "task_id": "WFA-SCI-004",
+  "equality_passes": true
+}

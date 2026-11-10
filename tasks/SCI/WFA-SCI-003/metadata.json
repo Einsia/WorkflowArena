@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-003",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Quality assessment of protein complex models (blind prediction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "community blind prediction (CASP16 EMA category)",
+    "url": "https://predictioncenter.org/download_area/CASP16/",
+    "revision": "CASP16 predictions/QA/<T>.QA_1.tar.gz, predictions/oligo/<T>.tar.gz, results/tables/CASP16_prot_oligo.scores.csv (2024-11-26), casp16/qa_global_{fold,iface}.cgi?view=txt (downloaded 2026-10-23)",
+    "license": "Upstream rights retained. Model/input originals are fetched directly from the publisher, not redistributed in Git.",
+    "distribution": "upstream-fetch",
+    "preparation": "environment/fetch/sources.json"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

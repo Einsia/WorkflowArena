@@ -1,0 +1,10 @@
+[
+ {
+  "name": "mls_hullin.json.tar.gz",
+  "url": "https://raw.githubusercontent.com/CJBartel/TestStabilityML/4559c918da8edecea12f86774910b17cae3c7a09/mlstabilitytest/mp_data/data/hullin.json.tar.gz",
+  "size": 31112742,
+  "sha256": "f249747d16bf63ced97775ca5e8262facfdd2142c48034fd55fb4bdabe2b1015",
+  "extract": "tar",
+  "dest": "data"
+ }
+]

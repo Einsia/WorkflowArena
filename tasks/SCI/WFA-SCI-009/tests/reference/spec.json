@@ -1,0 +1,50 @@
+{
+  "task_id": "WFA-SCI-009",
+  "gold_source": "Materials Cloud Archive materialscloud:s4-3h, ACWF-verification-data-and-scripts.zip, acwf_paper_plots/code-data/results-*-quantum_espresso-SSSP-1.3-PBE-precision.json (BM fits)",
+  "targets": [
+    {
+      "id": "G1_simple_metals",
+      "file": "eos.csv",
+      "keys": [
+        "system",
+        "quantity"
+      ],
+      "value": "value",
+      "gold": "gold/G1_simple_metals.csv",
+      "pass_fraction": 0.85
+    },
+    {
+      "id": "G2_covalent_TM",
+      "file": "eos.csv",
+      "keys": [
+        "system",
+        "quantity"
+      ],
+      "value": "value",
+      "gold": "gold/G2_covalent_TM.csv",
+      "pass_fraction": 0.85
+    },
+    {
+      "id": "G3_oxides_a",
+      "file": "eos.csv",
+      "keys": [
+        "system",
+        "quantity"
+      ],
+      "value": "value",
+      "gold": "gold/G3_oxides_a.csv",
+      "pass_fraction": 0.85
+    },
+    {
+      "id": "G4_oxides_b",
+      "file": "eos.csv",
+      "keys": [
+        "system",
+        "quantity"
+      ],
+      "value": "value",
+      "gold": "gold/G4_oxides_b.csv",
+      "pass_fraction": 0.85
+    }
+  ]
+}

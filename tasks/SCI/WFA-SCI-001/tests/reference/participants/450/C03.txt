@@ -1,0 +1,10 @@
+1 C03_D0139
+2 C03_D1180
+# rank 3 unmapped (T176_S07.M03 src=T176_U08.M02)
+# rank 4 unmapped (T176_S07.M04 src=T176_U08.M04)
+# rank 5 unmapped (T176_S07.M05 src=T176_U08.M22)
+6 C03_D0218
+7 C03_D0495
+# rank 8 unmapped (T176_S07.M08 src=T176_U24.M03)
+# rank 9 unmapped (T176_S07.M09 src=T176_U11.M08)
+# rank 10 unmapped (T176_S07.M10 src=T176_U11.M01)

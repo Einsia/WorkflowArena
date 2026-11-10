@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-003",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Implement a Trotter error analysis framework for vibrational / vibronic Hamiltonians in PennyLane Labs",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/PennyLaneAI/pennylane/pull/7034",
+    "revision": "merge b9f5dba16aa38bbe7e63f87c56f7f4c4e87a947c (base 7e94b1379bf7a73a0b24de672399a905477b3a37)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

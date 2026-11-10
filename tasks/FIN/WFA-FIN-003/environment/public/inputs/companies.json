@@ -1,0 +1,57 @@
+[
+  {
+    "ticker": "TRV",
+    "company_name": "TRAVELERS COMPANIES, INC.",
+    "filing": "TRV.html"
+  },
+  {
+    "ticker": "AIG",
+    "company_name": "AMERICAN INTERNATIONAL GROUP, INC.",
+    "filing": "AIG.html"
+  },
+  {
+    "ticker": "WRB",
+    "company_name": "BERKLEY W R CORP",
+    "filing": "WRB.html"
+  },
+  {
+    "ticker": "MKL",
+    "company_name": "MARKEL GROUP INC.",
+    "filing": "MKL.html"
+  },
+  {
+    "ticker": "SIGI",
+    "company_name": "SELECTIVE INSURANCE GROUP INC",
+    "filing": "SIGI.html"
+  },
+  {
+    "ticker": "KNSL",
+    "company_name": "Kinsale Capital Group, Inc.",
+    "filing": "KNSL.html"
+  },
+  {
+    "ticker": "THG",
+    "company_name": "HANOVER INSURANCE GROUP, INC.",
+    "filing": "THG.html"
+  },
+  {
+    "ticker": "AIZ",
+    "company_name": "ASSURANT, INC.",
+    "filing": "AIZ.html"
+  },
+  {
+    "ticker": "PLMR",
+    "company_name": "Palomar Holdings, Inc.",
+    "filing": "PLMR.html"
+  },
+  {
+    "ticker": "HCI",
+    "company_name": "HCI Group, Inc.",
+    "filing": "HCI.html"
+  },
+  {
+    "ticker": "UFCS",
+    "company_name": "UNITED FIRE GROUP INC",
+    "filing": "UFCS.html"
+  }
+]

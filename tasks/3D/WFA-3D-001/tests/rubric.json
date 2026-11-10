@@ -1,0 +1,422 @@
+{
+  "task_id": "WFA-3D-001",
+  "version": "w01-v1 (2026-10-24)",
+  "scoring": "每条判定二元（部分满足即否），连续分 = Σ weight × pass（0–100）。组级门槛：B01 失败或 B03 失败 → 除 B05–B07 外全部记 0（场景组清零）。整题门槛仅两种：output/scene.blend 缺失或无法打开，或作弊（联网、访问隐藏文件）→ 记“验收失败”，连续分照常报告。B05 的画面内容部分与 G14 由评审模型依据渲染图判定，其余各项由 checks.py 确定性判定。真值一律取 answer-key.json 的 units_final（已应用 CO-01）。",
+  "tolerances": "通用容差：平面位置 ±0.5 m；尺寸 ±3% 或 ±0.10 m 取大者；台基顶标高 ±3% 或 ±0.10 m 取大者；脊顶/宝顶标高 ±5% 或 ±0.30 m 取大者；角度 ±2°；计数必须精确。所有包围盒均取 evaluated mesh（depsgraph，含修改器/几何节点/曲线）世界坐标，对象实例化的几何（集合实例、几何节点实例）计入该实例化对象。",
+  "tier_counts": {
+    "base": 7,
+    "mid": 11,
+    "gate": 14
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "南门庭",
+      "name_en": "South gate court",
+      "units": [
+        "MN01",
+        "QL01",
+        "QL02",
+        "QL03",
+        "SS01",
+        "SS02",
+        "MN02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "前朝中轴",
+      "name_en": "Outer-court axis",
+      "units": [
+        "YD01",
+        "DN01",
+        "DN02",
+        "DN03",
+        "RG01",
+        "RG02"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东庑",
+      "name_en": "East wing",
+      "units": [
+        "PD01",
+        "PD03",
+        "LW01",
+        "LW03",
+        "LW05",
+        "TT01"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西庑",
+      "name_en": "West wing",
+      "units": [
+        "PD02",
+        "PD04",
+        "LW02",
+        "LW04",
+        "LW06",
+        "TT02"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "后寝中轴",
+      "name_en": "Inner-court axis",
+      "units": [
+        "MN03",
+        "YD02",
+        "DN04",
+        "DN05",
+        "DL03"
+      ]
+    },
+    {
+      "id": "F",
+      "name_zh": "后寝两庑与陈设",
+      "name_en": "Inner wings & furnishings",
+      "units": [
+        "PD05",
+        "PD06",
+        "LW07",
+        "LW08",
+        "DL01",
+        "DL02"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "output/scene.blend 存在且可在 Blender 4.3 后台打开，无报错。",
+      "criterion_en": "scene.blend exists and opens headless in Blender 4.3.",
+      "verify": "blender -b output/scene.blend --python-expr \"import bpy\"；返回码 0，无 Traceback。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "单位合同：公制、米、unit scale = 1.0；场景内地面位于 z≈0，Z 轴向上（MN01 集合包围盒 min z 在 [−0.05, 0.05]）。",
+      "criterion_en": "Units metric/metres/scale 1.0; ground at z≈0, Z up.",
+      "verify": "scene.unit_settings.system==\"METRIC\" and length_unit==\"METERS\" and abs(scale_length-1)<1e-6；MN01 集合 bbox.min.z ∈ [−0.05,0.05]。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "contract",
+      "critical": true,
+      "criterion_zh": "集合合同：存在 36 个名称恰为单元编号的集合与 SITE 集合，且每个集合内至少有一个含几何的对象。",
+      "criterion_en": "All 36 unit collections + SITE exist, each non-empty.",
+      "verify": "bpy.data.collections 名称集合 ⊇ answer-key 中 36 个 ID ∪ {SITE}；每个集合 all_objects 中至少一个几何对象（MESH/CURVE/SURFACE/META/FONT）的 evaluated 顶点数>0（含修改器/几何节点），或一个带实例化几何的对象。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "命名合同：所有 DN/MN/PD/TT/LW 集合内均存在 `ID_platform_1`、至少一个 `ID_col_###` 与 `ID_roof_1`；QL/SS/YD/RG/DL 集合内存在题面表格列出的主体对象（deck/lion/road/dial 或 vessel/body）。",
+      "criterion_en": "Required named parts present in every unit collection.",
+      "verify": "按题面命名表逐集合检查对象名前缀；任一集合缺任一必需主体即否。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "overview.png 存在，1920×1080，非空白（像素标准差>8），且可见建筑群主体（画面内容由评审模型判定：画面中无建筑则否）。",
+      "criterion_en": "overview.png 1920x1080, non-blank, shows the compound.",
+      "verify": "PIL 读尺寸与灰度标准差（缺失/尺寸不符/标准差≤8 由 checks 直接判否）；文件部分通过后，评审模型判断画面中是否可见多栋中式建筑。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "axis_south.png 与 east_wing.png 均存在、1920×1080、非空白。",
+      "criterion_en": "The two extra renders exist at 1920x1080, non-blank.",
+      "verify": "PIL 尺寸 + 标准差>8。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "manifest.json 可解析，含 36 项，每项含 id/collection/built/params，params 含题面规定的该类型全部字段。",
+      "criterion_en": "manifest.json parses with 36 entries and required per-type fields.",
+      "verify": "json.load；按类型核对字段名集合。",
+      "weight": 3.5714
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "A区（南门庭：MN01、QL01、QL02、QL03、SS01、SS02、MN02）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone A (South gate court): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "B区（前朝中轴：YD01、DN01、DN02、DN03、RG01、RG02）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone B (Outer-court axis): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "C区（东庑：PD01、PD03、LW01、LW03、LW05、TT01）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone C (East wing): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "D区（西庑：PD02、PD04、LW02、LW04、LW06、TT02）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone D (West wing): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "E区（后寝中轴：MN03、YD02、DN04、DN05、DL03）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone E (Inner-court axis): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "zone_F",
+      "critical": false,
+      "criterion_zh": "F区（后寝两庑与陈设：PD05、PD06、LW07、LW08、DL01、DL02）全部单元已建，且每单元平面位置与主尺寸正确（建筑/碑亭：底层台基外轮廓中心与长宽；廊：按各段中线端点与台明宽度重建的台明范围；桥：桥面中心、长、宽；御道：长、宽；小品：底座中心）。",
+      "criterion_en": "Zone F (Inner wings & furnishings): every unit built, placed and sized correctly in plan.",
+      "verify": "对每个单元：建筑取 `ID_platform_1` 世界 bbox 的 XY 中心与 X/Y 边长，对照 answer-key units_final（朝 E/W 者面阔对应 Y 向）；廊取 `ID_platform_1` bbox，与按 segments 中线起止点、宽度 w+2×0.60 m（题面规则 4 的台明出柱中 0.60 m；L 形转角处外延至外角，两端不外延）重建的期望 bbox 比较（L 形取各段并集 bbox）；QL 取 `ID_deck` bbox；YD 取 `ID_road` bbox（y 起止 = y_start/y_end）；小品取 `ID_base_1` bbox 中心。全部满足通用容差为是，区内任一单元缺失或超差即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "vertical",
+      "critical": false,
+      "criterion_zh": "中轴建筑（MN01–03、DN01–05）竖向全对：台基顶标高（`ID_platform_*` 最高点）与脊顶/宝顶标高（`ID_roof_*` 最高点）均符合（DN04 按变更单）。",
+      "criterion_en": "Axis buildings: platform-top and ridge-top elevations correct.",
+      "verify": "各单元 max z of platform objects 对 platform_top_m；max z of roof objects 对 ridge_top_m；通用容差。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "vertical",
+      "critical": false,
+      "criterion_zh": "两翼建筑（PD01–06、TT01–02、LW01–08）竖向全对：台基/台明顶标高与脊顶/宝顶标高（PD03/PD04 按变更单）。",
+      "criterion_en": "Wing buildings, pavilions and corridors: vertical elevations correct.",
+      "verify": "同 M07；廊的 ridge_top 取 `ID_roof_1` 最高点。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "vertical",
+      "critical": false,
+      "criterion_zh": "桥、石狮、御道、礼器竖向全对：桥面中点标高（crown_height）、石狮总高与座高、御道高、日晷/嘉量底座高、鼎缸总高。",
+      "criterion_en": "Bridges, lions, roads, instruments: heights correct.",
+      "verify": "QL：`ID_deck` 在桥中心 ±0.5 m 内顶面最高点；SS：集合 max z 与 `ID_base_*` max z；YD：`ID_road` max z；RG：`ID_base_*` max z；DL：集合 max z；通用容差。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest 与实测一致：36 项 params 中的离散字段（开间、进深、台基层数、形制、檐数、斗拱、门间、TT 平面与柱数、廊段间数与单/双面、拱数、望柱数、雌雄、座层数、块数、牙子石、量器方圆、足耳环数）与 .blend 实测逐项相符（不论是否等于真值）。",
+      "criterion_en": "Manifest discrete params (bays, depth bays, platform tiers, roof form, eaves, dougong, door bays, TT plan/columns, corridor segment bays and gallery, arches, posts per side, lion sex, base tiers, slabs, curb, vessel shape, legs/ears/rings) agree with the measured scene for all units.",
+      "verify": "用 G 组同一测量脚本得到实测离散值，与 manifest 比对；任一不符即否。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "SITE：地面覆盖场地范围（x −100…100, y −30…380），金水河河道位于 y 25…35、x −60…60、河道在地面处敞开（可有水面）、河底低于地面 1.5 m（±0.2），三座桥桥面两端均落在河岸之外。",
+      "criterion_en": "SITE ground covers the site; the river channel is open at ground level (a water surface is allowed) with its bed 1.5 m below ground; bridges span the river.",
+      "verify": "SITE 集合 bbox 覆盖场地（容差 0.5 m）；在 (x=±30, y=30) 处自上向下逐次 ray_cast 记录穿过的所有表面：第一个表面须低于 −0.1（河道敞开，水面可有），且其中有一个表面 z∈[−1.7,−1.3]（河底）；在 (x=±30, y=22/38) 第一个命中 |z|≤0.1；QL deck bbox y 范围覆盖 [25,35]。",
+      "weight": 3.6364
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "discrete_A",
+      "critical": false,
+      "criterion_zh": "A区（南门庭）离散特征全对：正门/二门的开间、进深间数、台基层数、屋顶形制与檐数、斗拱、门间数；三桥拱数与每侧望柱数；石狮雌雄、须弥座层数与朝向。",
+      "criterion_en": "Zone A discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "discrete_B",
+      "critical": false,
+      "criterion_zh": "B区（前朝中轴）离散特征全对：正殿/中殿/后殿的开间、进深间数、台基层数、屋顶形制与檐数、斗拱、门间数；御道御路石块数与牙子石有无；日晷晷面倾角与朝向、底座层数；嘉量量器方圆、器耳数与底座层数。",
+      "criterion_en": "Zone B discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "discrete_C",
+      "critical": false,
+      "criterion_zh": "C区（东庑）离散特征全对：PD01/PD03 开间、进深间数、台基层数、屋顶形制、斗拱、门间数；LW01/LW03/LW05 各段间数、单/双面廊与实墙侧、卷棚/尖山；TT01 平面形状、柱数、檐数、碑。",
+      "criterion_en": "Zone C discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "discrete_D",
+      "critical": false,
+      "criterion_zh": "D区（西庑）离散特征全对：PD02/PD04、LW02/LW04/LW06、TT02 同上口径（TT02 为八角亭）。",
+      "criterion_en": "Zone D discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "discrete_E",
+      "critical": false,
+      "criterion_zh": "E区（后寝中轴）离散特征全对：内门/寝殿/后寝殿的开间、进深间数、台基层数、屋顶形制与檐数、斗拱、门间数；后寝御道块数与牙子石；铜缸铺首衔环数、无足无耳。",
+      "criterion_en": "Zone E discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "discrete_F",
+      "critical": false,
+      "criterion_zh": "F区（后寝两庑与陈设）离散特征全对：PD05/PD06 开间、进深、悬山、无斗拱、门间数；LW07/LW08 段间数、双面空廊、尖山；三足鼎与方鼎的足数、耳数、器身方圆。",
+      "criterion_en": "Zone F discrete features all correct (as built, after change order).",
+      "verify": "开间：`ID_col_*` 位置投影到面阔轴、0.3 m 聚类，前檐一排（最靠正面一排）柱数 = bays_front+1，侧面一排 = bays_depth+1；台基层数 = `ID_platform_*` 个数；檐数 = `ID_roof_*` 个数；屋顶形制按最上一重 roof 网格判定：攒尖=最高点下 0.1 m 内顶点簇的水平对角跨度 < max(0.6 m, 0.1×台基短边)（宝顶计入屋面）；庑殿=正脊长 < 面阔柱跨的 0.8 且屋面无高于檐口 1 m、面积>2 m² 的竖直面；歇山=存在高于屋面最低点 1 m、法向沿面阔轴（|n·a|>0.95）、合并面积>2 m² 且距屋面沿面阔两端均 >0.3 m（内收）的竖直山花面；悬山=屋面沿面阔方向超出山墙外皮（`ID_wall_*`，无墙时取最外柱中心 ±0.5 m）≥0.3 m 且无内收山花；硬山=超出 ≤0.15 m；卷棚/尖山：在 `ID_roof_1` 每段 30/50/70% 处做横向竖直射线剖面，两侧坡面在 |横向|∈[0.15w,0.28w] 与 [0.28w,0.45w] 各拟合直线外推至中线，取外推交点高出实际脊顶（中线 ±0.6 m 内最高点）的量 e（各站取中位数）；e≥0.07 m 为卷棚（圆脊低于两坡交线），e≤0.04 m 为尖山（脊帽/脊条在两坡交线上方不影响）；斗拱=有无 `ID_dougong_*`；门间=`ID_door_*` 个数且位于居中开间；廊段间数=每段柱投影聚类数−1；单面廊=`ID_wall_*` 存在且位于图示一侧；桥：`ID_post_*` 按桥轴两侧分组计数，拱数=在 z=−0.5 与 z=+0.3 两个高度沿 X 方向（顺流）对桥集合做 0.25 m 间距水平射线（覆盖桥的 y 全长），两侧均被桥身命中夹住的未命中段数，取两高度中的较大值；石狮：`ID_ball`/`ID_cub` 二择一且 `ID_head` 质心相对底座中心偏向正面（南）；`ID_base_*` 个数；御道：`ID_slab_*` 个数、`ID_curb_*` 有无；日晷：`ID_dial` 主法向与水平面夹角 = 90°−倾角，晷面朝北上（法向 y 分量>0、z 分量>0），晷针方向与法向夹角<5°；嘉量：`ID_vessel` 俯视轮廓方/圆（bbox 填充率>0.9 为方）、`ID_ear_*` 个数；鼎缸：leg/ear/ring 计数。逐单元对照 answer-key units_final，区内任一不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "change_order",
+      "critical": false,
+      "criterion_zh": "变更单第 1 条落实：DN04 为重檐歇山（`DN04_roof_*` 2 个且上重为歇山判定）、台基两层（下层外缘仍为原尺寸，上层每边出柱中线 1.20 m）、台基顶 +3.90、脊顶 +21.30。",
+      "criterion_en": "CO item 1 applied to DN04 (double-eave xieshan, 2-tier platform, new elevations).",
+      "verify": "计数与形制判定同 G 组；`DN04_platform_1` bbox 42.6×22.8，`DN04_platform_2` bbox 40.2×20.4（通用容差）；max z 对 3.90 / 21.30。",
+      "weight": 2.5
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "change_order",
+      "critical": false,
+      "criterion_zh": "变更单第 2 条落实：PD03 与 PD04 两栋均为单檐歇山、均有斗拱、脊顶 +10.00，且仍互为镜像（只改一栋判否）。",
+      "criterion_en": "CO item 2 applied to both PD03 and PD04.",
+      "verify": "形制判定同 G 组；`PD0x_dougong_*` 存在；roof max z；镜像检查同 G10。",
+      "weight": 2.5
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "change_order",
+      "critical": false,
+      "criterion_zh": "变更单第 3 条落实（含牵连）：LW05 为北行 54.10 m（13 间）+ 西行 60.80 m（14 间），B 端接 MN03 东山墙且满足端接规则；原走线（y≈225 西行段）不复存在，DN03 东山墙外 2 m 内无 LW05 几何；LW06 仍按原图接 DN03 西山墙。",
+      "criterion_en": "CO item 3: LW05 rerouted to MN03 east gable; old route removed; LW06 unchanged.",
+      "verify": "LW05 柱投影分段计数；`LW05_platform_1` 端面与 MN03_platform_1 东缘 x=14.2 的间隙/插入 ≤0.15 m、廊中线 y=270±0.2；在 DN03 东缘 x∈[30,32]、y∈[215,235] 内 LW05 顶点数 = 0；LW06 同 I2 检查。",
+      "weight": 2.5
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "中轴对称（I1）：所有对称配对（变更后：PD01/02、PD03/04、PD05/06、LW01/02、LW03/04、LW07/08、QL02/03、SS01/02）的集合包围盒关于 x=0 镜像，且轴线单元（MN01–03、DN01–05、QL01、YD01–02）包围盒中心 |x|≤0.2 m。",
+      "criterion_en": "Axial symmetry of all mirror pairs and centring of axis units.",
+      "verify": "对每对集合 bbox：|minx_A + maxx_B|≤0.2、|maxx_A + minx_B|≤0.2、y/z 范围差 ≤0.2；轴线单元 |(minx+maxx)/2|≤0.2。",
+      "weight": 2.5
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "廊庑端接（I2）：16 个廊端全部合格——`LWxx_platform_1` 端面与所接单元 `*_platform_1` 外缘间隙 ≤0.15 m 且插入 ≤0.15 m，廊中线与所接单元面阔中线偏差 ≤0.2 m（LW05 按变更后）。",
+      "criterion_en": "All 16 corridor junctions meet the gable/platform rule.",
+      "verify": "对 answer-key junctions 每一项：沿廊轴取 LW 台明 bbox 端面坐标与所接台基 bbox 对应边坐标之差（|d|≤0.15）；横向取 LW 台明端面 0.5 m 内顶点的横向中点与 junction point 的偏差（≤0.2）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G12",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "等级逐级（I3）：按变更后等级（DN04 为二等），任一高等级单元台基顶面严格高于任一低一等级单元（含廊，廊计四等）。各单元台基顶的绝对标高由 M07/M08 判定，本条不重复扣分。",
+      "criterion_en": "Grade ordering of platform tops holds strictly across all graded units (after the change order; corridors are grade 4).",
+      "verify": "实测各单元 `*_platform_*` max z；缺台基即否；按 answer-key grade 分组，检查 min(G_n) > max(G_n+1)（n=1..3）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G13",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "中轴御道连续（I4）：YD01、YD02 中线在 x=0（±0.2），两端分别与 MN02/DN01、MN03/DN04 底层台基外缘相接（间隙与插入 ≤0.15 m）。",
+      "criterion_en": "Imperial ways are centred and butt the gate/hall platforms at both ends.",
+      "verify": "`YDxx_road` bbox 与相应 `*_platform_1` bbox 的 y 边比较。",
+      "weight": 2.5
+    },
+    {
+      "id": "G14",
+      "tier": "gate",
+      "group": "visual",
+      "critical": false,
+      "criterion_zh": "视觉盲审：overview.png 可辨认为中轴对称的宫殿群，六个区均有成形建筑；一至三等屋面为黄色、廊庑屋面为绿色，柱为朱红；无明显漂浮或缺失建筑。",
+      "criterion_en": "Blind visual review of overview.png: an axially symmetric palace compound with formed buildings in all six zones; grade 1-3 roofs yellow, corridor roofs green, columns vermilion; no obvious floating or missing buildings.",
+      "verify": "评审模型仅依据 overview.png（可参考 axis_south.png / east_wing.png）判定；任一条明显不满足即否。",
+      "weight": 2.5
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-SCENE",
+    "all_critical_items_must_pass": true
+  }
+}

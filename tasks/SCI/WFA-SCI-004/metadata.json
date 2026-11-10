@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-004",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Inferring transcriptional regulatory networks from gene expression compendia (blind prediction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "community blind prediction (DREAM5 challenge 4, transcriptional network inference)",
+    "url": "https://doi.org/10.1038/nmeth.2016 (Supplementary Data 1-3, Springer static ESM, no login)",
+    "revision": "Supp Data 1 (MOESM584, sha256 7c221091...), Supp Data 2 (MOESM585 xls, sha256 24471491...), Supp Data 3 (MOESM586, sha256 c43cbcd3...); downloaded 2026-10-23",
+    "license": "Upstream rights retained. Model/input originals are fetched directly from the publisher, not redistributed in Git.",
+    "distribution": "upstream-fetch",
+    "preparation": "environment/fetch/sources.json"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

@@ -1,0 +1,7 @@
+row,street_zh,street_en,facade_faces,building_line,along_axis,start,end,lots_in_order
+A,码头街,Quay Street,-Y,y=12.00,x,0.00,42.20,A01 A02 A03 A04 A05
+B,码头街,Quay Street,-Y,y=12.00,x,52.20,91.90,B01 B02 B03 B04 B05
+C,绳索巷,Ropewalk Lane,-Y,y=86.00,x,0.00,37.30,C01 C02 C03 C04 C05
+D,绳索巷,Ropewalk Lane,-Y,y=86.00,x,53.00,92.60,D01 D02 D03 D04 D05
+E,市场街,Market Street,+X,x=42.20,y,30.00,70.30,E01 E02 E03 E04 E05
+F,市场街,Market Street,-X,x=52.20,y,68.80,30.00,F01 F02 F03 F04 F05

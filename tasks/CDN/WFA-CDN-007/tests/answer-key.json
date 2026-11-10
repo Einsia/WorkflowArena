@@ -1,0 +1,284 @@
+{
+  "task_id": "WFA-CDN-007",
+  "reviewer_only": true,
+  "windows": [
+    {
+      "window": 1,
+      "output_frames": [
+        0,
+        210
+      ],
+      "key": "28",
+      "key_source_s": [
+        44.0,
+        53.0
+      ],
+      "accept_source_frames": "any 210 within [0,270)",
+      "near_miss": [
+        {
+          "id": "34",
+          "source_start_s": 58.5,
+          "frames": 300,
+          "why_wrong": "school far above in open water over a brain coral; nothing streams past the lens"
+        },
+        {
+          "id": "23",
+          "source_start_s": 63.5,
+          "frames": 300,
+          "why_wrong": "same far-school shot, later part"
+        },
+        {
+          "id": "09",
+          "source_start_s": 10.3,
+          "frames": 231,
+          "why_wrong": "school near the surface against sunburst; reef is only a dark silhouette"
+        },
+        {
+          "id": "32",
+          "source_start_s": 36.0,
+          "frames": 270,
+          "why_wrong": "sparse sergeant majors; dense school only after internal cut at frame 174 (96 clean frames < 210)"
+        },
+        {
+          "id": "17",
+          "source_start_s": 310.0,
+          "frames": 285,
+          "why_wrong": "branching thicket with fish (window-6 key); fish among branches, not streaming past the lens"
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "output_frames": [
+        210,
+        390
+      ],
+      "key": "07",
+      "key_source_s": [
+        145.3,
+        152.5
+      ],
+      "accept_source_frames": "any 180 within [0,216)",
+      "near_miss": [
+        {
+          "id": "27",
+          "source_start_s": 335.4,
+          "frames": 180,
+          "why_wrong": "polyps EXTENDED (fuzzy tissue), then cut to plate coral"
+        },
+        {
+          "id": "25",
+          "source_start_s": 347.0,
+          "frames": 270,
+          "why_wrong": "lobe coral, extended/fuzzy polyps"
+        },
+        {
+          "id": "01",
+          "source_start_s": 140.0,
+          "frames": 240,
+          "why_wrong": "dome coral against blue; cups only after cut at frame 152 (88 clean < 180)"
+        },
+        {
+          "id": "29",
+          "source_start_s": 129.5,
+          "frames": 225,
+          "why_wrong": "mixed reef surface with swimming gobies, no full-frame regular cup array"
+        },
+        {
+          "id": "22",
+          "source_start_s": 114.4,
+          "frames": 204,
+          "why_wrong": "brain-coral meanders, no round cups"
+        },
+        {
+          "id": "36",
+          "source_start_s": 183.5,
+          "frames": 195,
+          "why_wrong": "night close-up dotted with white bundles"
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "output_frames": [
+        390,
+        630
+      ],
+      "key": "10",
+      "key_source_s": [
+        167.3,
+        176.7
+      ],
+      "accept_source_frames": "any 240 within [0,282)",
+      "near_miss": [
+        {
+          "id": "08",
+          "source_start_s": 158.0,
+          "frames": 267,
+          "why_wrong": "same night brain colony type, surface essentially smooth with isolated specks (pre-set state)"
+        },
+        {
+          "id": "15",
+          "source_start_s": 172.0,
+          "frames": 300,
+          "why_wrong": "set bundles for first ~150 frames, then a large fish crosses and camera tilts off the colony into open water"
+        },
+        {
+          "id": "36",
+          "source_start_s": 183.5,
+          "frames": 195,
+          "why_wrong": "texture-only close-up; the whole colony never visible"
+        },
+        {
+          "id": "14",
+          "source_start_s": 190.3,
+          "frames": 300,
+          "why_wrong": "different (star) coral mound; surface not dotted, plume far behind"
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "output_frames": [
+        630,
+        870
+      ],
+      "key": "16",
+      "key_source_s": [
+        208.9,
+        218.5
+      ],
+      "accept_source_frames": "start a in [12,42] (pull-back onset ref frame 132, band 120-150, must land at output 735±15)",
+      "near_miss": [
+        {
+          "id": "19",
+          "source_start_s": 210.5,
+          "frames": 180,
+          "why_wrong": "same shot, only 180 frames: cannot fill the 240-frame window"
+        },
+        {
+          "id": "06",
+          "source_start_s": 214.5,
+          "frames": 300,
+          "why_wrong": "wide only, no close-up pink spheres opening, no pull-back"
+        },
+        {
+          "id": "31",
+          "source_start_s": 203.8,
+          "frames": 240,
+          "why_wrong": "quiet wide colony, cut at ~frame 147 to close-up; no pull-back"
+        },
+        {
+          "id": "33",
+          "source_start_s": 225.0,
+          "frames": 210,
+          "why_wrong": "extreme close-up of surface under gamete slick"
+        },
+        {
+          "id": "14",
+          "source_start_s": 190.3,
+          "frames": 300,
+          "why_wrong": "plume rising far behind a non-releasing mound"
+        }
+      ]
+    },
+    {
+      "window": 5,
+      "output_frames": [
+        870,
+        1080
+      ],
+      "key": "37",
+      "key_source_s": [
+        246.0,
+        255.0
+      ],
+      "accept_source_frames": "any 210 within [0,270)",
+      "near_miss": [
+        {
+          "id": "35",
+          "source_start_s": 240.5,
+          "frames": 300,
+          "why_wrong": "reef visible at bottom edge for frames 0-140 (dark, needs brightening); clean tail 159 frames < 210"
+        },
+        {
+          "id": "26",
+          "source_start_s": 233.5,
+          "frames": 285,
+          "why_wrong": "coral mound inside gamete cloud throughout"
+        },
+        {
+          "id": "30",
+          "source_start_s": 176.5,
+          "frames": 201,
+          "why_wrong": "fish crossing, camera tilting off the brain colony; colony visible early, rubble lower right"
+        }
+      ]
+    },
+    {
+      "window": 6,
+      "output_frames": [
+        1080,
+        1290
+      ],
+      "key": "17",
+      "key_source_s": [
+        310.0,
+        319.5
+      ],
+      "accept_source_frames": "any 210 within [0,285)",
+      "near_miss": [
+        {
+          "id": "11",
+          "source_start_s": 297.5,
+          "frames": 330,
+          "why_wrong": "coral head with sea fans (gorgonians), no branching thicket"
+        },
+        {
+          "id": "03",
+          "source_start_s": 280.0,
+          "frames": 300,
+          "why_wrong": "sea-fan field swaying, a single fish"
+        },
+        {
+          "id": "18",
+          "source_start_s": 265.0,
+          "frames": 270,
+          "why_wrong": "sea fans and sea rods, no school"
+        },
+        {
+          "id": "28",
+          "source_start_s": 44.0,
+          "frames": 270,
+          "why_wrong": "dense school over reef by day (window-1 key), no branching thicket"
+        }
+      ]
+    }
+  ],
+  "cue": {
+    "line_time_s": 24.5,
+    "output_frame": 735,
+    "tolerance_frames": 15,
+    "ref_source_frame_clip16": 132,
+    "plausible_band": [
+      120,
+      150
+    ]
+  },
+  "state_gate_windows": [
+    3,
+    5
+  ],
+  "sync_gate_window": 4,
+  "fillers": [
+    "02",
+    "04",
+    "05",
+    "12",
+    "13",
+    "20",
+    "21",
+    "24"
+  ],
+  "note": "No reference cut was produced by design. Pull-back onset 132 annotated from a 3-frame-step contact sheet; confirm by a second annotator before grading."
+}

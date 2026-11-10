@@ -1,0 +1,381 @@
+{
+  "task_id": "WFA-3D-013",
+  "version": "hidden-rubric-v2 (2026-10-25 cleanup: measurements moved into checks.py)",
+  "scoring": {
+    "zh": "每条判定二元（0/1），部分满足即0。reward = Σ(权重×通过)/Σ(权重)（权重合计100）。除 G01 与 G11 的画面部分由评委看成片联系表判定外（且仅在其机测部分通过时），其余全部由 checks.py 机测（ffprobe/ffmpeg 解码、numpy 音频分析、Blender 后台逐帧导出与低采样重渲）。按 events.csv 声明帧测量；片中第 f 帧对应场景第 frame_start+f 帧。Blender 导出超时/脚本错误时相关条目各自判否并写明原因。",
+    "en": "Binary criteria; partial = 0. reward = Σ(weight×pass)/Σ(weight) (weights sum to 100). Everything except the visual parts of G01 and G11 (judged from the film contact sheets, and only when their measured parts pass) is measured by checks.py (ffprobe/ffmpeg decoding, numpy audio analysis, headless Blender per-frame export and low-sample re-renders). Measurements anchor on declared events.csv frames; film frame f = scene frame frame_start+f. A Blender export timeout/script error fails the affected items individually with the reason.",
+    "public_vs_hidden": "公开：剪辑点（6/11/17/23 s、L-cut 0.5 s、1.0 s 叠化、修订 2.0 s）、交付契约、对象名、事件 id。隐藏：所有数值阈值、单摆/色温/雷后于闪等合理性规则、重渲比对方法。"
+  },
+  "frames": {
+    "fps": 24,
+    "total": 672,
+    "cuts": {
+      "T12": 144,
+      "T23": 264,
+      "T34": 408
+    },
+    "dissolve_base": [
+      540,
+      563
+    ],
+    "dissolve_revision": [
+      528,
+      575
+    ],
+    "line_end_s": 6.5
+  },
+  "tiers": {
+    "base": {
+      "n": 8,
+      "weight": 25.0,
+      "mean_pass": 0.835
+    },
+    "mid": {
+      "n": 12,
+      "weight": 39.9996,
+      "mean_pass": 0.508
+    },
+    "gate": {
+      "n": 11,
+      "weight": 34.9998,
+      "mean_pass": 0.225
+    }
+  },
+  "judgments": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "基础版成片编码契约：H.264、yuv420p、1280×536、SAR 1:1、恒定 24 fps、解码恰好 672 帧。",
+      "criterion_en": "Base film contract: H.264, yuv420p, 1280x536, SAR 1:1, CFR 24 fps, exactly 672 decoded frames.",
+      "verify": "ffprobe 流参数 + 逐帧解码计数；r_frame_rate=avg_frame_rate=24/1。",
+      "weight": 3.125
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "音频契约：AAC 立体声 48 kHz，时长覆盖全部画面（差值 ≤ 1 帧）。",
+      "criterion_en": "Audio contract: AAC stereo 48 kHz covering the picture (within 1 frame).",
+      "verify": "ffprobe 音频流；音视频时长差 ≤ 41.7 ms。",
+      "weight": 3.125
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "母带：两版综合响度 −23 ±1 LUFS，真峰值 ≤ −1 dBTP，无连续 ≥3 个满幅采样。",
+      "criterion_en": "Master: both versions −23±1 LUFS integrated, true peak ≤ −1 dBTP, no run of ≥3 full-scale samples.",
+      "verify": "ffmpeg ebur128=peak=true 两版；解码 PCM 查削波。",
+      "weight": 3.125
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "修订版编码契约同基础版（672 帧、1280×536、24 fps CFR），且有 revision/timeline.json。",
+      "criterion_en": "Revision film has the same contract (672 frames, 1280x536, 24 fps CFR) plus revision/timeline.json.",
+      "verify": "同 B01 对 revision/output.mp4；文件存在且 JSON 可解析。",
+      "weight": 3.125
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "三条分轨齐全（48 kHz PCM、28.0 s ±1 帧），按声明母带增益相加后与解码混音一致：1/3 倍频程带能量（100 ms 帧，50 Hz–14 kHz，仅计该帧最强带以下 40 dB 内的带）逐点差绝对值中位数 ≤ 0.75 dB、95 分位 ≤ 3 dB。",
+      "criterion_en": "Three stems present (48 kHz PCM, 28.0 s ±1 frame); gain-weighted sum matches the decoded mix: 1/3-octave band energies (100 ms frames, 50 Hz–14 kHz, bands within 40 dB of the frame max) differ by median ≤0.75 dB and 95th pct ≤3 dB.",
+      "verify": "解码 AAC 至 48k；对齐（允许 ≤2048 样本编码延迟）后比带能量。不用波形相减：AAC 对高频噪声（雨）用 PNS 等感知编码，正确混音的波形残差也可达 −5 dB。",
+      "weight": 3.125
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "events.csv 表头准确，11 个必需事件齐全，帧号为 0 起算的成片帧（frame=round(t×24)）0–671 整数，且时序合理：line_start<line_end；window_burst 在 S2 [144,264)；flash_peak 在 258–270；thunder_1>flash_peak；lamp_swing_start≥window_burst；curtain_grab<window_shut≤latch_click；thunder_far 在 S5（S5 自叠化起点第 540 帧起算，即 540–671）。",
+      "criterion_en": "events.csv header exact, all 11 required ids, integer 0-based film frames 0–671 (frame = round(t×24)), and plausible order (line_start < line_end; window_burst in S2 [144, 264); flash_peak 258–270; thunder_1 after flash_peak; lamp_swing_start ≥ window_burst; curtain_grab < window_shut ≤ latch_click; thunder_far in S5, counted from the dissolve start: frames 540–671).",
+      "verify": "checks.py：CSV 解析 + 上述规则表。",
+      "weight": 3.125
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "project/scene.blend 可在 Blender 4.3 后台打开；全部必需对象名存在且类型正确（MARA_RIG 为 ARMATURE、LAMP_LIGHT/LIGHTNING 为 LIGHT、CAM_S1–S5 为 CAMERA）；场景存在自定义属性 dissolve_frames。",
+      "criterion_en": "scene.blend opens headless in Blender 4.3; all required names exist with correct types (MARA_RIG ARMATURE, LAMP_LIGHT/LIGHTNING LIGHT, CAM_S1–S5 CAMERA); scene custom property dissolve_frames exists.",
+      "verify": "checks.py：blender -b -y scene.blend 静态导出（_cdc_blend.rich_dump，只求值第 0 帧，超时 600 s）对象表与场景属性。逐帧导出的超时/错误不影响本条（相关条目各自判否）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "credits.md 与 qa.md 存在（qa.md 非空）；credits.md 说明台词制作方式（如 espeak-ng/TTS/合成/录制）；交付文本文件与 scene.blend 媒体路径中无凭据、无联网 TTS/付费服务调用痕迹（服务端点、API key）、无 URL 媒体引用。仅提及服务名（如“未使用 ElevenLabs”）不算痕迹。",
+      "criterion_en": "credits.md and qa.md exist (qa.md non-empty); credits.md states how the spoken line was produced (e.g. espeak-ng / TTS / synthesised / recorded); no credentials, no online-TTS/paid-service API traces (service endpoints, API keys) and no URL media references in the delivery text files or in scene.blend media paths. Merely naming a service (e.g. \"no ElevenLabs was used\") is not a trace.",
+      "verify": "checks.py：文件存在性 + 制作方式关键词 + 凭据/服务端点/URL 媒体正则；scene.blend 的 images/sounds/movieclips/libraries 路径不含 \"://\"。",
+      "weight": 3.125
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "镜头结构：恰好五个镜头 S1→S5；T12 在 144±1、T34 在 408±1 为硬切且无混合帧（相邻帧差 < 切点帧差的35%）；其他位置无硬切（141–147、405–411、闪电窗 250–285、叠化 534–570 之外）；T45 叠化在 539–565 内有 ≥16 个混合帧（该帧在4倍降采样模糊亮度上可由第 538、566 帧线性组合拟合，R²≥0.85，混合比例5–95%）；无定格（全分辨率解码后连续 ≥6 帧且每帧与前一帧 PSNR ≥60 dB，即除编码噪声外完全相同；带渲染噪声或任何运动的固定机位不算）；若工程用时间线标记绑定相机，则第 72/200/330/480/620 帧的活动相机须依次为 CAM_S1…CAM_S5（未绑定时由 G10 按 CAM_Sn 重渲验证）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Shot structure: exactly five shots S1→S5; hard cuts at 144±1 and 408±1 with no blend frames (the neighbouring frame differences are <35% of the cut difference); no other hard cut (outside 141–147, 405–411, the flash window 250–285 and the dissolve 534–570); the T45 dissolve has ≥16 blend frames in 539–565 (frame = linear mix of frames 538 and 566 on a 4×-downscaled blurred luma, R² ≥0.85, mix share 5–95%); no freeze (≥6 consecutive decoded frames, each within PSNR ≥60 dB of the previous one at full resolution, i.e. identical up to encoder noise; a locked-off shot with render noise or any motion is not a freeze); if the project binds cameras to timeline markers, the cameras active at film frames 72/200/330/480/620 are CAM_S1…CAM_S5 (otherwise the per-shot camera is verified by the G10 re-render). (film frame f = scene frame frame_start+f)",
+      "verify": "checks.py：320 px 灰度帧差硬切检测 + 混合帧线性拟合 + 全分辨率逐帧流式 PSNR 定格检测 + Blender 标记/相机绑定。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "sound_edit",
+      "critical": true,
+      "criterion_zh": "对白 L-cut：dialogue 分轨中台词在 S1 内起音，并在 6.50 ±0.084 s（±2 帧）结束（之后 ≤ −50 dBFS，至 S2 结束）；全片仅此一句台词。",
+      "criterion_en": "Dialogue L-cut: the line starts inside S1 and ends at 6.50±0.084 s (±2 frames) on the dialogue stem (≤ −50 dBFS afterwards through S2); no other speech.",
+      "verify": "checks.py：dialogue 分轨 20 ms RMS 包络，−40 dBFS 门限定起止（停顿 <0.4 s 合并）；首段之后至 11 s ≤ −50 dBFS 且无第二段。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "sound_edit",
+      "critical": false,
+      "criterion_zh": "台词声明准确：dialogue 分轨实测起止（20 ms RMS、−40 dBFS 门限，同 M02）与 events.csv 的 line_start/line_end 相差均 ≤4 帧。（可懂度不计分：评分镜像无 ASR 模型。）",
+      "criterion_en": "Line declared truthfully: the measured dialogue-stem onset/offset (20 ms RMS, −40 dBFS gate, as in M02) lies within 4 frames of events.csv line_start/line_end. (Intelligibility is not scored: no ASR model in the verifier image.)",
+      "verify": "checks.py：M02 的实测起止 vs 声明帧/24。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "character",
+      "critical": false,
+      "criterion_zh": "口型同步：在台词区间（实测起点前6帧至终点后6帧）内，MARA 至少一条口部通道（MARA_RIG 上 jaw/chin/mouth/lip/teeth 姿态骨的旋转角或位移，或受 MARA_RIG 驱动网格上的 jaw/mouth/viseme 形态键）与 dialogue 分轨 24 fps RMS 包络在 ±2 帧（≤83 ms）滞后内相关系数 r ≥0.4。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Lip sync: within the spoken line (measured onset −6 frames to offset +6 frames) at least one MARA mouth channel — rotation angle or translation of a jaw/chin/mouth/lip/teeth pose bone of MARA_RIG, or a jaw/mouth/viseme shape key on a mesh deformed by MARA_RIG — correlates with the 24 fps RMS envelope of the dialogue stem with r ≥0.4 at a lag within ±2 frames (≤83 ms). (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧导出口部骨骼 matrix_basis 旋转角/位移与形态键值；checks.py 求各滞后皮尔逊相关取最大。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "camera",
+      "critical": true,
+      "criterion_zh": "基于工程数据的镜头语法（宽松；等效焦距=lens×36/传感器宽，竖向适配时 lens×24/传感器高）：S1（CAM_S1，0–143）平视（每帧相机高度在 MARA 眼高 ±0.4 m 内、|俯仰|≤10°），推近 ≥0.05 m（沿初始视轴或朝 MARA），等效焦距 35–60 mm 且不变；S2（CAM_S2，144–263）手持：相对15帧滑动平均的最大位置偏离 2–60 mm（或视向抖动 ≥0.15° 且位置抖动 ≤60 mm），且非纯正弦（抖动频谱最强相邻3个频点能量占比 <80%）；S3（CAM_S3，264–407）相机高度中位数低于 MARA 眼高，每帧仰角 ≥5°，等效焦距 ≤32 mm，位移 <1 cm；S4（CAM_S4，408–539）位移 <1 cm，每帧景深开启且 f≤5.6；S5（CAM_S5，540–671）每帧俯角 ≥10°，后拉 ≥0.15 m（沿初始视轴或远离 MARA），焦距不变。MARA 眼高=MARA_RIG 头部骨中点（无则 MARA 网格包围盒顶端下 0.1 m）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Camera grammar from project data (lenient; equivalent focal = lens×36/sensor width, or lens×24/sensor height for vertical fit): S1 (CAM_S1, 0–143) eye level (camera height within ±0.4 m of MARA eye height every frame, |pitch| ≤10°), dolly-in ≥0.05 m (along the initial view axis or toward MARA), constant 35–60 mm equivalent; S2 (CAM_S2, 144–263) handheld: max position deviation from the 15-frame moving average 2–60 mm (or view-direction jitter ≥0.15° with position jitter ≤60 mm), not a pure sinusoid (the strongest 3 adjacent spectral bins of the jitter hold <80% of its energy); S3 (CAM_S3, 264–407) median camera height below MARA eye height, tilted up ≥5° every frame, ≤32 mm equivalent, displacement <1 cm; S4 (CAM_S4, 408–539) displacement <1 cm, DOF on with f ≤5.6 every frame; S5 (CAM_S5, 540–671) high angle (pitch ≤ −10° every frame), pulls back ≥0.15 m (along the initial view axis or away from MARA), constant focal length. MARA eye height = midpoint of the MARA_RIG head bone (else top of the MARA mesh bbox −0.1 m). (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧导出 CAM_S* matrix_world、lens、传感器、dof/fstop 与 MARA_RIG 骨骼；checks.py 逐镜头判定。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "cloth",
+      "critical": true,
+      "criterion_zh": "布料模拟：CURTAIN 带 Cloth 修改器，缓存已烘焙进 scene.blend 或以 .bphys/blendcache 文件随 project/ 交付；网格 ≥400 顶点；顶边顶点（布料钉固顶点组中权重≥0.5者；无则第0帧最高2%高度带）每隔4帧采样距 CURTAIN_ROD 几何表面 ≤5 cm（允许挂环与沿杆滑动）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Cloth sim: CURTAIN has a Cloth modifier whose cache is baked into scene.blend or shipped as .bphys/blendcache files in project/; mesh ≥400 vertices; top-edge vertices (the cloth pin group, weight ≥0.5; else the top 2% height band at frame 0) stay within 5 cm of the CURTAIN_ROD surface in every 4th film frame (rings and sliding along the rod allowed). (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 物理/缓存信息 + 逐帧求值网格；顶边顶点到杆 BVH 最近距离。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "cloth",
+      "critical": false,
+      "criterion_zh": "窗帘对风的响应：声明 window_burst 后 0.5 s 内 CURTAIN 顶点平均位移速率 ≥ 之前 0.5 s 的 3 倍；声明 window_shut 之后至片尾的最后 1 s 平均速率 ≤ S3 平均的 40%。",
+      "criterion_en": "Curtain responds: mean vertex speed in 0.5 s after window_burst ≥3× the 0.5 s before; last 1 s after window_shut ≤40% of S3 mean.",
+      "verify": "rich_dump 逐帧求值 CURTAIN 顶点（≤1500 个均匀子集）平均位移速率。M06 不通过则本项记 0（组级门槛）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "weight": 3.3333
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "action",
+      "critical": true,
+      "criterion_zh": "窗扇与窗闩动作和声音一致：WINDOW_SASH 在声明 window_burst ±3 帧开始转动（相对第0帧 >1°），向内打开（最大开角时其中心朝室内即 DESK 方向移动 ≥1 cm）且最大开角 ≥25°；自 window_shut 起至片尾与初始朝向相差 ≤3°；latch_click 之后 WINDOW_LATCH 世界矩阵不变；foley 分轨在声明 latch_click ±2 帧有瞬态（5 ms RMS 峰值高于前 200 ms 内 5 ms RMS 中位数 ≥10 dB）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Casement/latch action matches sound: WINDOW_SASH starts rotating (>1° from frame 0) within ±3 frames of window_burst, opens inward (its centre moves ≥1 cm toward the room — toward DESK — at maximum opening) by ≥25°, is within 3° of its initial orientation from window_shut to the end; WINDOW_LATCH world matrix unchanged after latch_click; foley transient within ±2 frames of latch_click (5 ms RMS peak ≥10 dB above the median 5 ms RMS of the prior 200 ms). (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧世界矩阵 + 窗扇包围盒中心 + foley 包络瞬态检测。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "action",
+      "critical": false,
+      "criterion_zh": "手物接触：MARA_RIG 手部/手指骨段在声明 curtain_grab ±2 帧内距 CURTAIN（求值后布料顶点）≤5 cm，在 window_shut ±2 帧内距 WINDOW_SASH（表面采样点）≤5 cm；S4 中在 CAM_S4 画面内可见的每只手（手/手指骨点投影在画面内）有 ≥4 条手指链（每链 ≥3 骨，按手指名或手骨下拓扑）在 S4（408–551）有关键帧动画；S4 内（每2帧）及 window_shut ±2 帧任一手指骨点（头/中/尾）进入 WINDOW_SASH 内部深度均 ≤2 cm。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Hand contact: a MARA_RIG hand/finger bone segment is ≤5 cm from the CURTAIN (evaluated cloth vertices) within ±2 frames of curtain_grab and ≤5 cm from WINDOW_SASH (surface samples) within ±2 frames of window_shut; each MARA hand visible in CAM_S4 during S4 (hand/finger bone points projected inside the frame) has ≥4 finger chains (≥3 bones each, by finger name or bone topology under the hand) keyed and animated across S4 (408–551); no finger bone point (head/middle/tail) is deeper than 2 cm inside WINDOW_SASH in S4 (every 2nd frame) or at window_shut ±2. (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 骨骼世界坐标、fcurve 关键帧、相机投影；Blender 内 BVH 最近点+法线判穿透深度。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "sound_design",
+      "critical": false,
+      "criterion_zh": "雷光先后与声明：storm 分轨（<200 Hz、50 ms RMS 包络）上，thunder_1 低频起点（thunder_1 ±0.5 s 内首个比 [thunder_1−1.5 s, thunder_1−0.5 s] 中位数高 ≥6 dB 且距 thunder_1 后 3 s 内峰值不超过 20 dB 的窗）在 thunder_1 ±3 帧内，且 thunder_1 后 3 s 内峰值比该中位数高 ≥10 dB；thunder_1 晚于 flash_peak 0.15–10 s；thunder_far 在 S5 内（第 540–671 帧）、低频为主（Welch 谱 1/3 倍频程带上，相对其前 2.5 s 的能量增量中 300 Hz 以下各带占 ≥70%，持续的雨声不计入）且峰值低于 thunder_1 ≥6 dB；两次雷声均非恒定增益噪声（声明帧后 3 s / 2.5 s 内 <200 Hz 50 ms 包络动态范围 ≥10 dB；对 input 噪声做滤波+包络塑形属正当加工）。",
+      "criterion_en": "Thunder after lightning and declared truthfully: on the storm stem (<200 Hz, 50 ms RMS envelope) the thunder_1 LF onset — first window in thunder_1 ±0.5 s that is ≥6 dB above the median of [thunder_1 −1.5 s, thunder_1 −0.5 s] and within 20 dB of the peak of the 3 s after thunder_1 — lies within ±3 frames of thunder_1, and the peak within 3 s after thunder_1 is ≥10 dB above that median; thunder_1 lags flash_peak by 0.15–10 s; thunder_far in S5 (frames 540–671), LF-dominant (in 1/3-octave bands of the Welch spectrum, bands below 300 Hz hold ≥70% of the energy increase over the preceding 2.5 s, so continuing rain does not count against it), peak ≥6 dB below thunder_1; both thunders are not constant-gain noise (LF 50 ms envelope range ≥10 dB in the 3 s / 2.5 s after the declared frame; filtering + envelope shaping of the input noise is legitimate).",
+      "verify": "checks.py：storm 分轨 FFT 低通包络；thunder_far 段与其前 2.5 s 的 Welch 1/3 倍频程带能量差。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "revision",
+      "critical": true,
+      "criterion_zh": "叠化修订：修订版在第 526 帧前与 578 帧后与基础版画面一致（320 px 亮度 PSNR ≥35 dB）；修订版叠化在 527–576 内有 ≥40 个混合帧（由修订版第 526、577 帧线性组合拟合，同 M01），且叠化中心（混合比例 0.1–0.9、R²≥0.7 的帧上对混合比例作线性拟合，其等于 0.5 的帧）为 552±2；叠化把手为真实运动（528–575 内全分辨率相邻帧 PSNR <50 dB 的比例 ≥80%）；音频与基础版零差（≤ −50 dB；独立编码时改用带能量中位差 ≤0.25 dB）；场景属性 dissolve_frames 为 24 或 48，且若序列编辑器有交叉/伽马交叉/擦除转场条带，其长度等于 dissolve_frames（±1）。",
+      "criterion_en": "Dissolve revision: revision picture identical to base before 526 and after 578 (320 px luma PSNR ≥35 dB); revision dissolve has ≥40 blend frames in 527–576 (linear mix of revision frames 526 and 577, as in M01) and its centre (frame where a linear fit of the mix share over frames with share 0.1–0.9, R² ≥0.7, crosses 0.5) is 552±2; the dissolve handles are real motion (≥80% of consecutive full-resolution frame pairs in 528–575 with PSNR <50 dB); audio null ≤ −50 dB vs base (or band-energy median diff ≤0.25 dB if independently encoded); scene[\"dissolve_frames\"] is 24 or 48 and, if the sequencer has a cross/gamma-cross/wipe transition strip, its length equals dissolve_frames (±1).",
+      "verify": "checks.py：逐帧 PSNR、混合帧拟合、全分辨率把手运动、音频相减；Blender 导出场景属性与序列条带。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "证据一致：两份 timeline.json 中含实测镜头边界 T12/T23/T34（M01/G07 检测到的硬切；名义 144/264/408）及各自叠化范围（基础版 540–563、修订版 528–575；终点含或不含均可），以帧号或秒表示，误差 ≤1 帧；修订版母带增益与基础版在 B05 中重建混音的增益一致（±0.5 dB）。",
+      "criterion_en": "Evidence consistent: both timeline.json files contain the measured shot boundaries T12/T23/T34 (hard cuts found by M01/G07; nominal 144/264/408) and their dissolve range (base 540–563, revision 528–575; end inclusive or exclusive) as frame numbers or seconds within ±1 frame; the revision master gains equal the base gains that reproduce the mix in B05 (±0.5 dB).",
+      "verify": "checks.py：遍历 timeline.json 全部数值（帧或秒×24）匹配；增益用 B05 的定位与拟合。",
+      "weight": 3.3333
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "realism",
+      "critical": true,
+      "criterion_zh": "写实观感（组级门槛）。机测：平涂块指数（亮度均值 24–235 的 8×8 块中，块内方差 <1.0 且均值与上下左右4个相邻块相差 <0.5 的比例；每镜头 3 帧非闪电帧全分辨率取中位数）在 5 个镜头中至少 3 个 ≤0.35；MARA、CURTAIN、DESK、PENDANT_LAMP、WINDOW_SASH 网格使用节点式 BSDF 材质；≥3 个物体有表面变化（图像/程序纹理或连接到 Principled 的输入）；Cycles 渲染开启降噪。画面（评委看联系表）：无镜头呈平面着色/卡通/无光照/白模。",
+      "criterion_en": "Photoreal look (group gate). Measured: the flat-block index (share of 8×8 luma blocks with mean 24–235 whose variance <1.0 and whose mean is within 0.5 of all 4 neighbouring blocks; median over 3 non-flash frames per shot, full resolution) is ≤0.35 in at least 3 of the 5 shots; MARA, CURTAIN, DESK, PENDANT_LAMP and WINDOW_SASH meshes use node-based BSDF materials; ≥3 objects have surface variation (an image/procedural texture or a linked Principled input); a Cycles render has denoising on. Visual (judge, contact sheets): no shot looks flat-shaded, cartoon-like, unlit or untextured.",
+      "verify": "checks.py 先测机测部分，不合格直接判否（触发组级门槛）；合格时交评委看联系表判画面观感（评委判否不触发门槛）。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "light",
+      "critical": true,
+      "criterion_zh": "无偷光：除 LAMP_LIGHT 与 LIGHTNING 外，任一采样帧（每2帧）均不存在位于室内或距窗平面 5 cm 以内、可渲染且能量 >0 的 LIGHT 对象（窗平面=第0帧关闭的 WINDOW_SASH；室内=朝 DESK 一侧）；LAMP_LIGHT 从不隐藏且能量从不低于其最大值的 25%（无逐镜头开关）；其他室内灯无可见性/能量动画。允许世界背景照明。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "No cheat lights: apart from LAMP_LIGHT and LIGHTNING, no LIGHT object is renderable with energy >0 in any sampled film frame (every 2nd) while located inside the room or within 5 cm of the window plane (window plane = the closed WINDOW_SASH at frame 0; room side = toward DESK); LAMP_LIGHT is never hidden and its energy never drops below 25% of its maximum (no per-shot switching); no other interior light has animated visibility/energy. World/background lighting is allowed. (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧导出所有 LIGHT 的能量、hide_render、世界位置与 fcurve。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "light",
+      "critical": true,
+      "criterion_zh": "灯随灯动：LAMP_LIGHT 每帧距 PENDANT_LAMP 求值包围盒中心 ≤5 cm（或位于其包围盒 ±2 cm 内）；摆角（悬点→灯中心向量相对 lamp_swing_start 之前静止方向中位数的夹角，故允许恒定的非竖直静止偏角）在 lamp_swing_start 之前 <2°、之后峰值 ≥8°；悬点（求值后 LAMP_CORD 最高点，网格或曲线均可）全片漂移 ≤2 cm（相对其自身首帧）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Light rides with the lamp: LAMP_LIGHT within 5 cm of the PENDANT_LAMP evaluated bbox centre (or inside its bbox ±2 cm) every frame; swing angle (angle of the pivot→lamp-centre vector from its median rest direction before lamp_swing_start, so a constant off-vertical rest offset is tolerated) <2° before lamp_swing_start and ≥8° peak after; the pivot (highest point of the evaluated LAMP_CORD, mesh or curve) drifts ≤2 cm over the film (relative to its own first frame). (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧导出灯罩求值包围盒、LAMP_CORD 求值网格最高点、LAMP_LIGHT 世界位置。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "light",
+      "critical": true,
+      "criterion_zh": "影随灯动（成片可测）：S3（第 max(280, lamp_swing_start)–407 帧）与 S5（570–665 帧）中，LAMP_LIGHT 投影到 CAM_S3/CAM_S5 画面的位置序列与解码成片亮度加权质心序列（均去线性趋势）在 ±3 帧滞后内 |r| ≥0.5（取投影灯泡移动 ≥画面 0.5% 的轴）。S5 中投影移动 <0.5%（摆动已衰减）则跳过；S3 必须有该移动。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Shadows move with the lamp (measured on the film): in S3 (frames max(280, lamp_swing_start)–407) and S5 (570–665) the bulb (LAMP_LIGHT) projected into CAM_S3/CAM_S5 and the luminance-weighted centroid of the decoded frame (both linearly detrended) correlate with |r| ≥0.5 at a lag within ±3 frames, on the image axis along which the projected bulb moves ≥0.5% of the frame. S5 is skipped if the projected bulb moves <0.5% there (swing died out); S3 must show such motion. (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧相机矩阵/内参 + LAMP_LIGHT 位置，与 bpy_extras.world_to_camera_view 一致的投影；320 px 灰度成片质心。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "light",
+      "critical": false,
+      "criterion_zh": "单摆可信：s(t)=灯中心相对悬点的水平位移（扣除静止值）在主摆动轴上的投影；周期 T=window_shut 之后相邻上行过零点间隔的中位数（需 ≥3 个过零点，否则用第 264–671 帧）；T/(2π√(L/g)) 在 0.67–1.5 之间，L 取悬点到灯中心或悬点到 LAMP_LIGHT 的距离（取对求解者有利者）；window_shut 之后各半周期 |s| 峰值在摆动两侧分别非增（后者 ≤ 同侧前一峰值×1.05；首尾不完整半周期不计）；S5 末摆幅（最后 24 帧 |s| 最大值）< S3 峰值（264–407 帧 |s| 最大值）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Plausible pendulum: s(t) = horizontal lamp-centre displacement from the pivot (rest removed) along the principal swing axis; period T = median interval between upward zero crossings after window_shut (needs ≥3 crossings, else frames 264–671); T / (2π√(L/g)) within 0.67–1.5 for L = pivot-to-lamp-centre or pivot-to-LAMP_LIGHT (whichever favours the solver); after window_shut the half-cycle peaks of |s| are non-increasing on each side of the swing (each ≤ the previous peak on the same side ×1.05; partial first/last half-cycles ignored); the S5 end amplitude (max |s| over the last 24 frames) < the S3 peak (max |s| in 264–407). (film frame f = scene frame frame_start+f)",
+      "verify": "checks.py：G03 的逐帧灯中心/悬点序列，SVD 主轴、过零点、峰值序列。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "light",
+      "critical": true,
+      "criterion_zh": "闪电来自窗外且偏冷：LIGHTNING（点/聚/面光）在 flash_peak ±6 帧内均位于窗平面外侧 ≥0.3 m（窗平面=第0帧关闭的 WINDOW_SASH，外侧=远离 DESK 一侧）；SUN 类型则光线方向自窗外射入（与室内窗法线夹角 <80°）；230–299 帧内无其他灯能量变化；S2（255–263 内最亮帧对第 234 帧）与 S3（264–275 内最亮帧对第 330 帧）中，增亮最多的像素（亮度增量前 10%）的 CIE b* 中位数比参考帧吊灯照亮像素（未削顶的亮度前 20%）低 ≥5。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Lightning comes from outside and is cooler: LIGHTNING (point/spot/area) is ≥0.3 m outside the window plane in all frames flash_peak ±6 (window plane = the closed WINDOW_SASH at frame 0, outside = away from DESK); for a SUN light its direction enters through the window (<80° from the inward window normal); no other light changes energy in frames 230–299; in S2 (brightest frame 255–263 vs frame 234) and S3 (brightest frame 264–275 vs frame 330) the pixels that brighten most (top 10% of the luminance increase) have a median CIE b* at least 5 lower than the lamp-lit pixels (top 20% luminance, unclipped) of the reference frame. (film frame f = scene frame frame_start+f)",
+      "verify": "rich_dump 逐帧灯光位置/能量 + 窗扇几何；成片 RGB 解码（640 px）转 CIE Lab（D65）。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "闪白隐藏剪辑真实成立：T23 在 264±1（250–280 内首个零均值归一化亮度与第 280 帧相关高于与第 250 帧相关的帧）；262–266 帧平均亮度 ≥ 第 234–257 帧均值的 2.5 倍；255–274 帧中无一帧为均匀白场（全分辨率 ≥99% 像素 ≥250 且亮度标准差 <2；保留画面结构的过曝白闪允许）；LIGHTNING 能量有动画且逐帧最大值落在第 258–270 帧（场景内闪电照明，非后期叠白）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Flash-hidden cut is genuine: the T23 cut is at 264±1 (first frame in 250–280 whose zero-mean normalised luma correlates better with frame 280 than with frame 250); frames 262–266 mean luminance ≥2.5× the mean of frames 234–257; no frame in 255–274 is a uniform white card (≥99% of full-resolution pixels ≥250 AND luma std <2 — a literal white-out with picture structure is allowed); LIGHTNING energy is animated and its per-frame maximum falls in film frames 258–270 (in-scene lightning, not a comp flash). (film frame f = scene frame frame_start+f)",
+      "verify": "checks.py：320 px / 全分辨率亮度统计 + rich_dump 逐帧 LIGHTNING 能量。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "light",
+      "critical": false,
+      "criterion_zh": "跨镜头曝光与色温连续（成片可测）：在非闪电帧 S1 24/72/120、S3 300/340/380、S4 430/470/510、S5 590/630/660 中，未削顶像素中最亮 20% 的 CIE b* 中位数在每个镜头（取该镜头各帧中位数）均 ≥8（暖色钨丝灯），且这些镜头之间该区域线性亮度中位数两两相差 ≤1.0 EV。",
+      "criterion_en": "Exposure/colour continuity (measured on the film): in the non-flash frames S1 24/72/120, S3 300/340/380, S4 430/470/510, S5 590/630/660, the brightest 20% of unclipped pixels have a median CIE b* ≥8 (warm tungsten) in every one of these shots (median over the shot's frames), and their median linear luminance differs by ≤1.0 EV between any two of these shots.",
+      "verify": "checks.py：成片 RGB 解码（640 px）转 CIE Lab（D65）与线性亮度。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "cloth",
+      "critical": true,
+      "criterion_zh": "布料不穿模：每 4 帧采样，CURTAIN 任一顶点（≤1500 个均匀子集）都未位于 WINDOW_SASH 或窗所在墙体网格（包围盒包含关闭窗扇中心的网格）表面背面 2 cm 以上（正面取最近面法线一侧；若某网格离 DESK 最近的面使 DESK 位于其背面，即法线背向室内，则正反互换）。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Cloth does not penetrate: sampled every 4th film frame, no CURTAIN vertex (uniform subset ≤1500) lies more than 2 cm behind the surface of WINDOW_SASH or of the wall mesh(es) around the window (meshes whose bbox contains the closed sash centre; front side = side the nearest face normal points to, swapped for a mesh whose nearest face to DESK has DESK behind it, i.e. normals facing away from the room). (film frame f = scene frame frame_start+f)",
+      "verify": "Blender 内 BVH 最近点 + 法线判穿透深度。M06 不通过则本项记 0。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "evidence",
+      "critical": true,
+      "criterion_zh": "工程即真实来源：评分方从 scene.blend 重渲第 72/200/330/480/620 帧（480×201、8 spp、降噪；用标记绑定相机，无则依次 CAM_S1…CAM_S5；求解者渲染器无输出时改用 Cycles），与成片 480×201 SSIM 均 ≥0.75。重渲失败/超时判否。（片中第 f 帧 = 场景第 frame_start+f 帧）",
+      "criterion_en": "Project is the source of truth: the grader re-renders film frames 72/200/330/480/620 from scene.blend (480×201, 8 spp, denoised; marker-bound camera, else CAM_S1…CAM_S5; Cycles fallback if the solver engine writes no image); each has SSIM ≥0.75 against the film at 480×201. A failed/timed-out re-render fails this item. (film frame f = scene frame frame_start+f)",
+      "verify": "checks.py：blender -b -y 渲染单帧 + numpy SSIM。",
+      "weight": 3.1818
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "narrative",
+      "critical": true,
+      "criterion_zh": "无字卡叙事。机测：storm+foley 在 23.5–28 s 的 RMS 比 6–23 s 低 ≥4 dB（结尾归于平静）。画面（评委看两版联系表）：按顺序可见窗被吹开且窗帘鼓入、大全景中吊灯摇晃的光影、双手拉窗帘/窗扇、结尾窗已关闭窗帘下垂；无字幕、片名/说明字卡或叠加图形。",
+      "criterion_en": "Narrative without cards. Measured: storm+foley RMS in 23.5–28 s is ≥4 dB below 6–23 s (the film calms). Visual (judge, contact sheets of both films): in order, the window blown open with the curtain billowing, the swinging-lamp light in the wide shot, hands on curtain/sash, and a closed window with a hanging curtain at the end; no subtitles, title cards or graphic overlays.",
+      "verify": "checks.py 先测 RMS 下降，不合格直接判否；合格时交评委看联系表判画面部分。",
+      "weight": 3.1818
+    }
+  ],
+  "group_gates": [
+    {
+      "id": "GG-realism",
+      "zh": "G01 机测部分不通过（平涂块指数、材质/降噪）→ G02–G06、G08 记0。评委对画面部分的判否、或 Blender 检查失败不触发本门槛。",
+      "en": "G01 measured part fails (flat-block index, materials/denoise) -> G02–G06 and G08 = 0. A judge fail of the visual part or a Blender inspection failure does not trigger this gate."
+    },
+    {
+      "id": "GG-cloth",
+      "zh": "M06 不通过 → M07、G09 记0。",
+      "en": "M06 fails -> M07 and G09 = 0."
+    }
+  ],
+  "summary": {
+    "weight_total": 99.9994,
+    "tier_share": {
+      "base": 0.25,
+      "mid": 0.4,
+      "gate": 0.35
+    },
+    "judge_weight_complete_submission": "G01 + G11 visual parts only (6.36 of 100), and only when their measured parts pass"
+  },
+  "release_acceptance": {
+    "task_form": "3D-FILM",
+    "all_critical_items_must_pass": true
+  }
+}

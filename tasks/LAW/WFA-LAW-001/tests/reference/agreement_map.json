@@ -1,0 +1,66 @@
+{
+ "A01": {
+  "maud_contract": "contract_30",
+  "chars": 257643
+ },
+ "A02": {
+  "maud_contract": "contract_130",
+  "chars": 297460
+ },
+ "A03": {
+  "maud_contract": "contract_87",
+  "chars": 261135
+ },
+ "A04": {
+  "maud_contract": "contract_44",
+  "chars": 469184
+ },
+ "A05": {
+  "maud_contract": "contract_124",
+  "chars": 267484
+ },
+ "A06": {
+  "maud_contract": "contract_54",
+  "chars": 399949
+ },
+ "A07": {
+  "maud_contract": "contract_113",
+  "chars": 257039
+ },
+ "A08": {
+  "maud_contract": "contract_25",
+  "chars": 308775
+ },
+ "A09": {
+  "maud_contract": "contract_21",
+  "chars": 238772
+ },
+ "A10": {
+  "maud_contract": "contract_39",
+  "chars": 288068
+ },
+ "A11": {
+  "maud_contract": "contract_102",
+  "chars": 250166
+ },
+ "A12": {
+  "maud_contract": "contract_119",
+  "chars": 205202
+ },
+ "A13": {
+  "maud_contract": "contract_55",
+  "chars": 256231
+ },
+ "A14": {
+  "maud_contract": "contract_89",
+  "chars": 318460
+ },
+ "A15": {
+  "maud_contract": "contract_106",
+  "chars": 242795
+ },
+ "A16": {
+  "maud_contract": "contract_136",
+  "chars": 268299
+ }
+}

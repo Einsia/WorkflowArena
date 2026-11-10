@@ -1,0 +1,488 @@
+{
+  "task_id": "WFA-LAW-016",
+  "source": {
+    "dataset": "MultiLJP (CURRENTF/HRN dataset-v5, data_v5.03)",
+    "record": "test-1506"
+  },
+  "ungraded_circumstances": [],
+  "corrections": [
+    "G/I/C/J/F: 补累犯（MultiLJP 漏标）",
+    "G: 补自首",
+    "寻衅滋事罪中法院未区分主从（驳回 D/I/E 系从犯的意见）→ 不计分"
+  ],
+  "defendants": {
+    "[被告A]": {
+      "original_code": "[被告C]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白",
+        "立功",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 42,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "坦白",
+          "立功"
+        ],
+        "term": "有期徒刑三年六个月"
+      }
+    },
+    "[被告B]": {
+      "original_code": "[被告G]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 51,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [],
+        "term": "有期徒刑四年三个月"
+      }
+    },
+    "[被告C]": {
+      "original_code": "[被告J]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 30,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑二年六个月"
+      }
+    },
+    "[被告D]": {
+      "original_code": "[被告H]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        292,
+        293
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯",
+        "寻衅滋事罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 42,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          292,
+          293
+        ],
+        "states": [
+          "自首"
+        ],
+        "term": "有期徒刑三年六个月"
+      }
+    },
+    "[被告E]": {
+      "original_code": "[被告E]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        292,
+        293
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯",
+        "寻衅滋事罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 27,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          292,
+          293
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑二年三个月"
+      }
+    },
+    "[被告F]": {
+      "original_code": "[被告I]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        292,
+        293
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯",
+        "寻衅滋事罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 36,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          292,
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑三年"
+      }
+    },
+    "[被告G]": {
+      "original_code": "[被告B]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        292,
+        293
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯",
+        "寻衅滋事罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 42,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          292,
+          293
+        ],
+        "states": [
+          "自首"
+        ],
+        "term": "有期徒刑三年六个月"
+      }
+    },
+    "[被告H]": {
+      "original_code": "[被告K]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 27,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑二年三个月"
+      }
+    },
+    "[被告I]": {
+      "original_code": "[被告L]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首",
+        "立功"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 24,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "从犯",
+          "自首",
+          "立功"
+        ],
+        "term": "有期徒刑二年，"
+      }
+    },
+    "[被告J]": {
+      "original_code": "[被告F]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首",
+        "立功",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 27,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "从犯",
+          "自首",
+          "立功"
+        ],
+        "term": "有期徒刑二年三个月"
+      }
+    },
+    "[被告K]": {
+      "original_code": "[被告A]",
+      "charges": [
+        "聚众斗殴罪"
+      ],
+      "articles": [
+        292
+      ],
+      "roles": {
+        "聚众斗殴罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 42,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪"
+        ],
+        "laws": [
+          292
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑三年六个月"
+      }
+    },
+    "[被告L]": {
+      "original_code": "[被告D]",
+      "charges": [
+        "聚众斗殴罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        292,
+        293
+      ],
+      "roles": {
+        "聚众斗殴罪": "从犯",
+        "寻衅滋事罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 27,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "聚众斗殴罪",
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          292,
+          293
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑二年三个月"
+      }
+    }
+  }
+}

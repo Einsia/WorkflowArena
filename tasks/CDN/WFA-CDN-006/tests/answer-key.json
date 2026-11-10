@@ -1,0 +1,332 @@
+{
+  "task_id": "WFA-CDN-006",
+  "reviewer_only": true,
+  "fps": 24,
+  "versions": {
+    "comedy": {
+      "segments": [
+        {
+          "slot": "A1",
+          "source": "23",
+          "frames": 240,
+          "output_frames": [
+            0,
+            240
+          ],
+          "source_window_s": [
+            324.0,
+            334.0
+          ],
+          "why_correct": "C1 KEY: tight trio strut -> low-angle hanging log overhead -> giant arm sweeps in -> leader with nut",
+          "near_miss": [
+            {
+              "id": "08",
+              "why_wrong": "C1 near-miss: opens on low-angle hanging log (no strut intro), leader ECU, nut flies"
+            },
+            {
+              "id": "22",
+              "why_wrong": "C1 near-miss: trio mid -> bow ECU -> canopy -> trio close; ends before hazard is shown"
+            },
+            {
+              "id": "03",
+              "why_wrong": "C1 near-miss: bow ECU -> canopy -> trio close -> start of low angle log"
+            },
+            {
+              "id": "33",
+              "why_wrong": "C1 near-miss: trio mid shots intercut with bow-making ECUs and canopy vines; no hanging hazard"
+            }
+          ]
+        },
+        {
+          "slot": "A2",
+          "source": "35",
+          "frames": 223,
+          "output_frames": [
+            240,
+            463
+          ],
+          "source_window_s": [
+            381.35,
+            390.65
+          ],
+          "why_correct": "C2+S3 KEY (shared): single locked-off shot: trunk FG left, bird right; flyer peeks, hides; bird struck from off-screen, leaves; empty branch",
+          "near_miss": [
+            {
+              "id": "15",
+              "why_wrong": "C2/S3 near-miss: opens at tree base shot, then peek; ends before the strike"
+            },
+            {
+              "id": "18",
+              "why_wrong": "C2/S3 near-miss: peek already in progress, strike, then branch + bush POV (multi-shot)"
+            },
+            {
+              "id": "25",
+              "why_wrong": "C2/S3 near-miss: sky -> hunter waiting wide -> tree base -> first frames of peek"
+            }
+          ]
+        },
+        {
+          "slot": "A3",
+          "source": "09",
+          "frames": 288,
+          "output_frames": [
+            463,
+            751
+          ],
+          "source_window_s": [
+            344.5,
+            356.5
+          ],
+          "why_correct": "C3 KEY: calm hold -> boulder rolls past -> stake topples -> hollow log lands -> creature alone, unharmed",
+          "near_miss": [
+            {
+              "id": "37",
+              "why_wrong": "C3/S4 near-miss: calm hold -> boulder rolls past -> creature still sitting (one hazard, resolved)"
+            },
+            {
+              "id": "19",
+              "why_wrong": "S4 KEY: long static hold on unaware creature -> boulder enters and looms; cut before outcome"
+            },
+            {
+              "id": "14",
+              "why_wrong": "C3/C4/S2 near-miss: starts mid-sequence (boulder leaving), stake, log, hunter starts entering"
+            },
+            {
+              "id": "16",
+              "why_wrong": "S4/C3 near-miss: sky with nut -> static hold on creature; nothing enters"
+            }
+          ]
+        },
+        {
+          "slot": "A4",
+          "source": "27",
+          "frames": 240,
+          "output_frames": [
+            751,
+            991
+          ],
+          "source_window_s": [
+            357.0,
+            367.0
+          ],
+          "why_correct": "C4+S2 KEY (shared): creature busy by log; giant steps in from frame edge behind it and stands; one framing",
+          "near_miss": [
+            {
+              "id": "34",
+              "why_wrong": "C4/S2 near-miss: same framing, giant already fully in at frame 0 (entry not seen)"
+            },
+            {
+              "id": "32",
+              "why_wrong": "C4/S2 near-miss: giant already in frame from first frame; ends on wider sapling-trap framing"
+            },
+            {
+              "id": "26",
+              "why_wrong": "C4/S2 near-miss: giant already present; ends on sapling-trap wide"
+            },
+            {
+              "id": "14",
+              "why_wrong": "C3/C4/S2 near-miss: starts mid-sequence (boulder leaving), stake, log, hunter starts entering"
+            }
+          ]
+        },
+        {
+          "slot": "A5",
+          "source": "39",
+          "frames": 218,
+          "output_frames": [
+            991,
+            1209
+          ],
+          "source_window_s": [
+            451.9,
+            461.0
+          ],
+          "why_correct": "C5 KEY: flyer edges along branch to giant back -> grabbed -> two-shot grin -> fading down (last frame dark but not fully black, YAVG~18)",
+          "near_miss": [
+            {
+              "id": "36",
+              "why_wrong": "C5 near-miss: tumbling flyer, spikes FG, edging toward giant; no grab"
+            },
+            {
+              "id": "30",
+              "why_wrong": "C5 near-miss: opens mid-approach/grab, grin, black, then wide tree field (tail after black)"
+            },
+            {
+              "id": "21",
+              "why_wrong": "C5 near-miss: happy giant face close -> butterfly button; no capture"
+            },
+            {
+              "id": "28",
+              "why_wrong": "C5 near-miss: flyer as kite ECU -> kite -> field -> giant smile; ending button, no capture"
+            }
+          ]
+        }
+      ],
+      "total_frames": 1209
+    },
+    "suspense": {
+      "segments": [
+        {
+          "slot": "B1",
+          "source": "31",
+          "frames": 214,
+          "output_frames": [
+            0,
+            214
+          ],
+          "source_window_s": [
+            305.3,
+            314.2
+          ],
+          "why_correct": "S1 KEY: low wide approach on path -> leader wipes lens -> high-angle POV through leaves, dark mass intrudes FG -> trio mid unaware",
+          "near_miss": [
+            {
+              "id": "10",
+              "why_wrong": "S1 near-miss: far grass walk -> path wide -> wipe -> POV start; no dark intrusion"
+            },
+            {
+              "id": "07",
+              "why_wrong": "S1 near-miss: opens on POV (no approach/wipe) -> trio mid -> bow ECU"
+            },
+            {
+              "id": "01",
+              "why_wrong": "S1 near-miss: lone flyer on branch -> bush POV -> flyer close; no trio, no intrusion"
+            }
+          ]
+        },
+        {
+          "slot": "B2",
+          "source": "27",
+          "frames": 240,
+          "output_frames": [
+            214,
+            454
+          ],
+          "source_window_s": [
+            357.0,
+            367.0
+          ],
+          "why_correct": "C4+S2 KEY (shared): creature busy by log; giant steps in from frame edge behind it and stands; one framing",
+          "near_miss": [
+            {
+              "id": "34",
+              "why_wrong": "C4/S2 near-miss: same framing, giant already fully in at frame 0 (entry not seen)"
+            },
+            {
+              "id": "14",
+              "why_wrong": "C3/C4/S2 near-miss: starts mid-sequence (boulder leaving), stake, log, hunter starts entering"
+            },
+            {
+              "id": "32",
+              "why_wrong": "C4/S2 near-miss: giant already in frame from first frame; ends on wider sapling-trap framing"
+            },
+            {
+              "id": "26",
+              "why_wrong": "C4/S2 near-miss: giant already present; ends on sapling-trap wide"
+            }
+          ]
+        },
+        {
+          "slot": "B3",
+          "source": "35",
+          "frames": 223,
+          "output_frames": [
+            454,
+            677
+          ],
+          "source_window_s": [
+            381.35,
+            390.65
+          ],
+          "why_correct": "C2+S3 KEY (shared): single locked-off shot: trunk FG left, bird right; flyer peeks, hides; bird struck from off-screen, leaves; empty branch",
+          "near_miss": [
+            {
+              "id": "15",
+              "why_wrong": "C2/S3 near-miss: opens at tree base shot, then peek; ends before the strike"
+            },
+            {
+              "id": "18",
+              "why_wrong": "C2/S3 near-miss: peek already in progress, strike, then branch + bush POV (multi-shot)"
+            },
+            {
+              "id": "25",
+              "why_wrong": "C2/S3 near-miss: sky -> hunter waiting wide -> tree base -> first frames of peek"
+            }
+          ]
+        },
+        {
+          "slot": "B4",
+          "source": "19",
+          "frames": 180,
+          "output_frames": [
+            677,
+            857
+          ],
+          "source_window_s": [
+            340.0,
+            347.5
+          ],
+          "why_correct": "S4 KEY: long static hold on unaware creature -> boulder enters and looms; cut before outcome",
+          "near_miss": [
+            {
+              "id": "37",
+              "why_wrong": "C3/S4 near-miss: calm hold -> boulder rolls past -> creature still sitting (one hazard, resolved)"
+            },
+            {
+              "id": "09",
+              "why_wrong": "C3 KEY: calm hold -> boulder rolls past -> stake topples -> hollow log lands -> creature alone, unharmed"
+            },
+            {
+              "id": "16",
+              "why_wrong": "S4/C3 near-miss: sky with nut -> static hold on creature; nothing enters"
+            }
+          ]
+        },
+        {
+          "slot": "B5",
+          "source": "17",
+          "frames": 162,
+          "output_frames": [
+            857,
+            1019
+          ],
+          "source_window_s": [
+            417.45,
+            424.2
+          ],
+          "why_correct": "S5 KEY: low wide empty ground, fruit drops in and bounces -> ECU impaled on hidden spikes -> static wide spike field, no characters",
+          "near_miss": [
+            {
+              "id": "29",
+              "why_wrong": "S5 near-miss: flyer on branch with fruit -> fruit falls -> bounces; no spikes"
+            },
+            {
+              "id": "11",
+              "why_wrong": "S5 near-miss: spikes/impale/wide, then flyer glides + hunter pointing (ends on characters)"
+            },
+            {
+              "id": "06",
+              "why_wrong": "S5 near-miss: sky -> top-down spikes -> flyer tumbling -> spikes FG with flyer"
+            },
+            {
+              "id": "04",
+              "why_wrong": "S5 near-miss: gliding flyer -> far sky -> top-down spike field"
+            }
+          ]
+        }
+      ],
+      "total_frames": 1019
+    }
+  },
+  "repurpose_notes": {
+    "shared_clips": {
+      "35": "comedy A2 / suspense B3",
+      "27": "comedy A4 / suspense B2"
+    },
+    "intent_split_same_scene": {
+      "09": "comedy A3 (escalation + resolved, victim unharmed)",
+      "19": "suspense B4 (single hazard, cut before outcome)",
+      "note": "each is a near-miss for the other version slot; a1 (resolved single hazard) fails both"
+    }
+  }
+}

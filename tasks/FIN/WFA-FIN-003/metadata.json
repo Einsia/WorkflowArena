@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-003",
+  "domain": "FIN",
+  "task_form": "FIN-ANA",
+  "title": "保险：准备金释放能否支撑承保改善",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "SEC EDGAR financial filings with an authored machine contract",
+    "external_authenticity_asserted": true,
+    "companies": [
+      "TRV",
+      "AIG",
+      "WRB",
+      "MKL",
+      "SIGI",
+      "KNSL",
+      "THG",
+      "AIZ",
+      "PLMR",
+      "HCI",
+      "UFCS"
+    ],
+    "url": "https://www.sec.gov/edgar/search/",
+    "provenance": "environment/public/SOURCE.json",
+    "verification": "All delivered HTML hashes match original per-filing acquisition records, including source URLs and raw-document hashes."
+  }
+}

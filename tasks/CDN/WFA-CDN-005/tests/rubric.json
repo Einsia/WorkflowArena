@@ -1,0 +1,178 @@
+{
+  "task_id": "WFA-CDN-005",
+  "visibility": "reviewer-only",
+  "calibrated": false,
+  "scoring": {
+    "continuous": "sum(weight × pass) over 15 binary decisions, 0–100",
+    "acceptance_perfect": "all 15 decisions pass",
+    "slot_accuracy": "correct slots / 7, reported separately",
+    "task_level_gates": [
+      "B1 deliverable missing/undecodable → acceptance fail",
+      "cheating (reading reviewer-only files, network, generated content) → acceptance fail, score 0"
+    ],
+    "group_gates": [
+      "B5 failure on a segment zeroes that slot’s selection item"
+    ]
+  },
+  "tier_weights": {
+    "base": 25,
+    "mid": 40,
+    "gate": 35
+  },
+  "decisions": [
+    {
+      "id": "B1",
+      "tier": "base",
+      "group": "deliverable",
+      "critical": true,
+      "criterion_zh": "output/ 恰好只有 solution.mp4 与 solution.json；mp4 可完整解码，json 可解析。",
+      "criterion_en": "output/ contains exactly solution.mp4 and solution.json; the mp4 decodes fully and the json parses.",
+      "verify": "ls output/；ffmpeg -v error -i solution.mp4 -f null - 无错误；json.load 成功。缺失或无法解码 = 整题验收失败（连续分照常计算其余可评项）。",
+      "weight": 5
+    },
+    {
+      "id": "B2",
+      "tier": "base",
+      "group": "format",
+      "critical": false,
+      "criterion_zh": "视频规格：H.264、yuv420p、640×360、SAR 1:1、恒定 24/1 fps、无音轨。",
+      "criterion_en": "Video spec: H.264, yuv420p, 640×360, SAR 1:1, constant 24/1 fps, no audio track.",
+      "verify": "ffprobe 读取 codec_name/pix_fmt/width/height/sample_aspect_ratio/r_frame_rate（须为 24/1）/avg_frame_rate（与 24 相差 ≤0.1%，容许无损拼接的 23.998）；无 audio 流；逐帧 pts 间隔与 1/24 s 相差 ≤2 ms。",
+      "weight": 5
+    },
+    {
+      "id": "B3",
+      "tier": "base",
+      "group": "format",
+      "critical": false,
+      "criterion_zh": "总长卡点：solution.mp4 解码帧数恰为 1248。",
+      "criterion_en": "Fixed length: decoded frame count of solution.mp4 is exactly 1248.",
+      "verify": "ffprobe -count_frames nb_read_frames == 1248（清单终点 = 1248 由 B4 检查，不重复计分）。",
+      "weight": 5
+    },
+    {
+      "id": "B4",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "清单合同：恰 7 段、slot 依次为 1–7；source 为 01–45 中互不相同的编号；output_frames 自 0 首尾相接无隙无叠；每段 d−c = b−a（1 倍速）；0 ≤ a < b ≤ 该候选帧数。",
+      "criterion_en": "Manifest contract: exactly 7 segments with slot 1–7 in order; distinct source IDs in 01–45; output_frames contiguous from 0; d−c = b−a for every segment (1×); 0 ≤ a < b ≤ candidate frame count.",
+      "verify": "确定性脚本按 provenance.json 中各候选 frames 校验。",
+      "weight": 5
+    },
+    {
+      "id": "B5",
+      "tier": "base",
+      "group": "honesty",
+      "critical": false,
+      "criterion_zh": "诚实拼接：每段输出帧与所声称候选的 source_frames 逐帧一致（无缩放、裁切、镜像、滤镜、变速、加字）。",
+      "criterion_en": "Honest splice: every output frame matches the claimed candidate source_frames frame-for-frame (no scale, crop, mirror, filter, retime, text).",
+      "verify": "逐帧 SSIM（灰度、原尺寸、11×11 高斯 σ=1.5）≥0.95，首尾帧均含。若某段失败，该段对应槽的选择项（M1–M4/G1–G3）同时记 0（组级门槛）。",
+      "weight": 5
+    },
+    {
+      "id": "M1",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽1（洞口暗场→显形→出洞伸展）所选 source 等于隐藏答案 45。近似干扰：18、42、21。",
+      "criterion_en": "Slot 1 chosen source equals the hidden key 45. Near-miss decoys: 18、42、21.",
+      "verify": "确定性比对 solution.json segments[0].source；干扰说明见 answer-key.json。",
+      "weight": 7
+    },
+    {
+      "id": "M2",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽2（仰拍升入画→中近景微笑）所选 source 等于隐藏答案 27。近似干扰：43、30、01。",
+      "criterion_en": "Slot 2 chosen source equals the hidden key 27. Near-miss decoys: 43、30、01.",
+      "verify": "确定性比对 solution.json segments[1].source；干扰说明见 answer-key.json。",
+      "weight": 7
+    },
+    {
+      "id": "M3",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽3（走近闻花→背影远景→窥视视角→陶醉近景）所选 source 等于隐藏答案 32。近似干扰：01、07、28。",
+      "criterion_en": "Slot 3 chosen source equals the hidden key 32. Near-miss decoys: 01、07、28.",
+      "verify": "确定性比对 solution.json segments[2].source；干扰说明见 answer-key.json。",
+      "weight": 7
+    },
+    {
+      "id": "M4",
+      "tier": "mid",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽5（树干后由一只到三只集结、果子落地）所选 source 等于隐藏答案 15。近似干扰：44、35、09、19。",
+      "criterion_en": "Slot 5 chosen source equals the hidden key 15. Near-miss decoys: 44、35、09、19.",
+      "verify": "确定性比对 solution.json segments[4].source；干扰说明见 answer-key.json。",
+      "weight": 7
+    },
+    {
+      "id": "M5",
+      "tier": "mid",
+      "group": "assembly",
+      "critical": false,
+      "criterion_zh": "无闪帧：每段入点 a 与出点 b 距所选候选内部任一原有剪切 ≥12 帧（对 a<cut<b 的每个 cut：cut−a≥12 且 b−cut≥12）。",
+      "criterion_en": "No flash frames: for every segment and every original cut inside it (a<cut<b), cut−a ≥ 12 and b−cut ≥ 12.",
+      "verify": "用 answer-key.json internal_cuts_by_clip（对所选的任意候选，不限正解）确定性检查；7 段全部满足才通过。",
+      "weight": 6
+    },
+    {
+      "id": "M6",
+      "tier": "mid",
+      "group": "assembly",
+      "critical": false,
+      "criterion_zh": "修剪不伤叙事（中间层槽）：槽 1/2/3/5 中凡选对的槽，其 source_frames 均完整覆盖该槽隐藏必要相位区间 must_cover；且这四槽至少选对 2 槽。",
+      "criterion_en": "Trim keeps the story (mid slots): for every correctly chosen slot among 1/2/3/5, source_frames fully cover the hidden must_cover range; at least 2 of these four slots must be correct.",
+      "verify": "a ≤ must_cover[0] 且 b ≥ must_cover[1]（answer-key.json）。与选择项分开计：考察的是“为卡总长而修剪时是否切掉了描述要求的起势或结果”。",
+      "weight": 6
+    },
+    {
+      "id": "G1",
+      "tier": "gate",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽4所选 source 等于隐藏答案 24（蝴蝶飞入→落鼻尖→盘旋大笑→背影走向大树；最强干扰在落鼻前约 10 帧结束，或从落鼻之后开始）。近似干扰：41、03、10、11。",
+      "criterion_en": "Slot 4 chosen source equals the hidden key 24 (butterfly flies in → lands on the nose → circles, big laugh → back view walking toward the big tree; the strongest decoys end about 10 frames before the nose landing, or start after it). Near-miss decoys: 41、03、10、11.",
+      "verify": "确定性比对 solution.json segments[3].source。",
+      "weight": 9
+    },
+    {
+      "id": "G2",
+      "tier": "gate",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽6所选 source 等于隐藏答案 31（树干后出手→远景连中→红果正中头顶→切回继续出手；最强干扰 25 与正解共享出手与连砸，仅在红果入画前 2 帧结束）。近似干扰：25、26、14、16、29。",
+      "criterion_en": "Slot 6 chosen source equals the hidden key 31 (throw from behind the trunk → wide shot of repeated hits → the red fruit lands squarely on the head → cut back to more throwing; the strongest decoy 25 shares the throw and the repeated hits with the key and ends only 2 frames before the red fruit enters frame). Near-miss decoys: 25、26、14、16、29.",
+      "verify": "确定性比对 solution.json segments[5].source。",
+      "weight": 10
+    },
+    {
+      "id": "G3",
+      "tier": "gate",
+      "group": "selection",
+      "critical": false,
+      "criterion_zh": "槽7所选 source 等于隐藏答案 08（冲入→果雨中奔向树干→树后探身→三只雀跃；干扰分别缺冲入起势或缺雀跃结果）。近似干扰：37、17、40、23。",
+      "criterion_en": "Slot 7 chosen source equals the hidden key 08 (rushes in → runs to the trunk through the rain of fruit → leans out from behind the tree → the three jump for joy; the decoys lack either the rush-in onset or the jump-for-joy result). Near-miss decoys: 37、17、40、23.",
+      "verify": "确定性比对 solution.json segments[6].source。",
+      "weight": 8
+    },
+    {
+      "id": "G4",
+      "tier": "gate",
+      "group": "assembly",
+      "critical": false,
+      "criterion_zh": "修剪不伤叙事（门槛层槽）：槽 4/6/7 中凡选对的槽，其 source_frames 均完整覆盖 must_cover（蝴蝶落鼻帧、红果命中帧、冲入与雀跃帧均保留）；且这三槽至少选对 1 槽。",
+      "criterion_en": "Trim keeps the story (gate slots): for every correctly chosen slot among 4/6/7, source_frames fully cover must_cover (nose touch-down, red-fruit impact, run-in and triumph frames retained); at least 1 of these three slots correct.",
+      "verify": "a ≤ must_cover[0] 且 b ≥ must_cover[1]。这些相位持续很短（落鼻约 12 帧、红果命中约 2 帧），按截帧修剪极易误切。",
+      "weight": 8
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

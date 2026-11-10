@@ -1,0 +1,26 @@
+{
+  "paper": {
+    "title": "The effect of large-scale anti-contagion policies on the COVID-19 pandemic",
+    "journal": "Nature",
+    "year": 2020,
+    "doi": "10.1038/s41586-020-2404-8"
+  },
+  "code_and_data": {
+    "url": "https://github.com/bolliger32/gpl-covid",
+    "commit": "84369c56b76f67c6b91f42872ea124636450c82a",
+    "license": "code MIT, data CC0-1.0",
+    "downloaded": "2026-10-23"
+  },
+  "public_inputs": "data/processed/adm1/{FRA,IRN,ITA,KOR,USA}_processed.csv, data/processed/adm2/{CHN,ITA}_processed.csv, data/raw/usa/state_name_abbrev_xwalk.csv, data/interim/multi_country/under_reporting.csv (ifr=0.0075 rows) -> case_detection_fraction.csv, models/gamma_est.csv -> recovery_rate_estimates.csv",
+  "gold": {
+    "source": "results/source_data (Nature Source Data)",
+    "sha256": {
+      "Figure2_data.csv": "9ced4929025a5f89ed78343080d693502e1a16243ed2b7726921c44db43c9981",
+      "Figure3_data.csv": "7335b2225c84ff24e6fcd1065e5bf0792d90f2ace45f92d990b270903b0ab84c",
+      "Figure4_data.csv": "b4bb961a22814d9eb40580d31786174eefe8dad64797622a20642bf9f0a5d89e",
+      "ExtendedDataFigure3_cross_valid.csv": "742022909f4adf4b2f5eb0c3c39eb002ef927a7b2f2018ce3bdc5ab82eed2a67",
+      "ExtendedDataFigure7.csv": "cb28809aa451278c6330a83adcfdad94338d5c7429a2ec3a21ba162110b6efb9"
+    },
+    "extraction": "the reference-value extraction script"
+  }
+}

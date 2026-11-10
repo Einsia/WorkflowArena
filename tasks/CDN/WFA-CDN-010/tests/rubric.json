@@ -1,0 +1,617 @@
+{
+  "task_id": "WFA-CDN-010",
+  "scoring": "binary per item; item weight = tier share / items in tier (base 25, mid 40, gate 35); group weight = sum of its items; total 100. Group gate: GATE-P fail => G6 = 0. Task gates (GATE-W, GATE-X) => not accepted; continuous score still reported.",
+  "judge_policy": "Judge from a different model family than the solver; solver self-reports (playback-check.md) are not evidence. Items decided by tests/checks.py are not sent to the judge.",
+  "groups": {
+    "G1": {
+      "name_zh": "叙事与结构",
+      "weight": 12.53
+    },
+    "G2": {
+      "name_zh": "视觉设计与可读性",
+      "weight": 9.41
+    },
+    "G3": {
+      "name_zh": "材料覆盖（含附录/图注隐藏考点）",
+      "weight": 28.64
+    },
+    "G4": {
+      "name_zh": "抽样逐页忠实度",
+      "weight": 10.0
+    },
+    "G5": {
+      "name_zh": "技术-管理多因推理",
+      "weight": 12.69
+    },
+    "G6": {
+      "name_zh": "原生媒体、图表与交付",
+      "weight": 26.73
+    }
+  },
+  "gates": [
+    {
+      "id": "GATE-W",
+      "scope": "整题",
+      "criterion_zh": "output/ 中 presentation.pptx、slides.pdf、script.md、evidence-index.csv、events.csv 均存在，且 PPTX 可被 PowerPoint 或 LibreOffice 读取；否则所有判定记否、整题不验收。",
+      "verify": "文件存在性 + python-pptx 读取 + PowerPoint COM Presentations.Open"
+    },
+    {
+      "id": "GATE-X",
+      "scope": "整题",
+      "criterion_zh": "无作弊：未联网、未访问 reviewer-only、未引入材料包外的事实来源冒充材料；否则整题不验收（连续分照常报告）。",
+      "verify": "容器网络/文件访问日志；evidence-index 中出现非 input/ 源文件即查"
+    },
+    {
+      "id": "GATE-P",
+      "scope": "组 G6",
+      "criterion_zh": "presentation.pptx 在 Windows 桌面版 PowerPoint 16.x 中经 Presentations.Open(ReadOnly) 与 Open(ReadWrite) 均无错误、无修复提示（不使用 OpenAndRepair）；否则 G6 记 0。",
+      "verify": "windows_dynamic COM 脚本（同 D01-R3 协议），记录对话框截图"
+    }
+  ],
+  "items": [
+    {
+      "id": "N01",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "14–18 页、16:9，每页都有论断式标题（完整陈述句/主张，而非“Background”“Timeline”类标签）。",
+      "criterion_en": "14–18 slides, 16:9, every slide has a claim-style title.",
+      "verify": "checks.py (fail-only): slide count 14–18, 16:9 ±1 %, every slide has a title (title placeholder text, or for blank layouts the top-most text shape starting in the top 20 % of the slide); otherwise the judge decides whether every title is a claim.",
+      "weight": 3.125
+    },
+    {
+      "id": "N00",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "每页都有非空演讲者备注；script.md 每页都给出预计时长。",
+      "criterion_en": "Every slide has non-empty speaker notes; script.md gives a duration per slide.",
+      "verify": "python-pptx notes_slide + script 解析",
+      "weight": 3.125
+    },
+    {
+      "id": "N02",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "叙事依次为：发生了什么 → 为什么（技术与管理/监管两层）→ 可执行结论与证据边界；最后一页用一句话回答题面问题并列出仍不确定之处。",
+      "criterion_en": "Arc: what happened → why (technical and management/regulatory) → actions and evidence boundary; final slide answers the question in one sentence and lists what remains uncertain.",
+      "verify": "逐页大纲比对；末页人工核查",
+      "weight": 1.5385
+    },
+    {
+      "id": "N03",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "在首次使用处为非专家听众解释所用术语（至少：可燃粉尘、爆燃/粉尘爆炸、一次与二次爆炸，以及所用的任何粉尘爆炸性参数如 MIE/Kst）；不只用术语代替解释。",
+      "criterion_en": "Terms explained at first use for non-specialists (combustible dust, deflagration, primary vs secondary explosion, any explosibility parameter used).",
+      "verify": "页面+讲稿检索术语首次出现处",
+      "weight": 1.5385
+    },
+    {
+      "id": "N04",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "讲稿与备注逐页一致；以 130–150 词/分钟区间内任一语速计，讲稿字数加解说音轨时长可落在 12–15 分钟（即 [字数/150+音轨, 字数/130+音轨] 与 [12,15] 分钟有交集）；逐页声明时长与该页字数估计（140 词/分钟，含该页音轨时长）相差不超过 ±25% 或 ±10 s（取较宽者）。",
+      "criterion_en": "Script equals notes per slide; at some rate within 130–150 wpm, words plus narration length fall in 12–15 min; per-slide declared duration within ±25% or ±10 s (whichever wider) of the estimate at 140 wpm incl. that slide's audio.",
+      "verify": "脚本确定性计算：notes 与 script.md 文本相似度≥0.9；字数/时长",
+      "weight": 1.5385
+    },
+    {
+      "id": "N05",
+      "tier": "gate",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "全篇以一致且有图例说明的视觉编码区分“材料确认的事实”“调查方分析判断”“演讲者自己的推断”，并在每个承载事实的页面上正确应用（抽查 5 页，判断归类无一错误）。",
+      "criterion_en": "Consistent, legended visual code distinguishing confirmed facts / investigators' analytical findings / presenter inference, applied correctly on every fact-bearing slide (5-slide audit, no misclassification).",
+      "verify": "人工抽查 5 页；例如把附件 E 的模型推定标为“确认事实”即判否",
+      "weight": 1.6667
+    },
+    {
+      "id": "V01",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "没有任何一页超过 6 条要点。",
+      "criterion_en": "No slide exceeds 6 bullets.",
+      "verify": "checks.py cdc_layout.bullets_per_slide: per slide, non-empty paragraphs of body/object placeholders (all levels, unless buNone) plus paragraphs with explicit bullets in other text shapes; captions/source lines and connector-linked diagram nodes excluded; >6 on any slide ⇒ fail.",
+      "weight": 3.125
+    },
+    {
+      "id": "V02",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "正文 ≥20 pt；图注、出处行、标题与表格文字 ≥12 pt——均按有效字号计（显式或继承字号 × 自动缩放比例）。",
+      "criterion_en": "Body text ≥20 pt; captions, source lines, titles and table text ≥12 pt — at effective size (explicit or inherited size × autofit scale).",
+      "verify": "checks.py cdc_layout.font_violations: run size = rPr@sz, else inherited (shape lstStyle → layout/master placeholder → master txStyles / presentation defaultTextStyle → 18 pt), × bodyPr/normAutofit@fontScale (estimated shrink when autofit stores no scale); caption/source line = text starting with Source/Fig./Credit/… or a small box (<0.6 in) carrying a source/page reference. pass/fail.",
+      "weight": 1.5385
+    },
+    {
+      "id": "V03",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "静态版面：任一页均无文字溢出文本框、无形状超出页面边界、无文字相互重叠（不含带动画的形状，后者由 V04 判定）。",
+      "criterion_en": "Static layout: on no slide does text overflow its box, a shape extend beyond the slide edge, or text overlap other text (shapes without animation; animated shapes are V04).",
+      "verify": "checks.py cdc_layout.layout_issues: estimated text height (characters × 0.5 em per line, 1.2 line height, effective sizes, insets) > 1.25 × box height + 6 pt without autofit ⇒ overflow; box beyond the slide by >1 % ⇒ fail; estimated text areas of two text shapes/tables intersecting by >5 % of the smaller ⇒ overlap. pass/fail.",
+      "weight": 1.5385
+    },
+    {
+      "id": "V04",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "所有动画状态下均无遮挡：由书签或点击显示的标注彼此不重叠、不与同时可见的其他文字重叠，且任一标注遮挡图片或图表的面积不超过 30%。",
+      "criterion_en": "No occlusion in any animation state: bookmark- or click-revealed annotations never overlap each other or other text visible at the same time, and none covers more than 30 % of a figure or chart.",
+      "verify": "checks.py cdc_layout.animation_occlusion: visibility states from p:timing (mainSeq click groups in order; bookmark/click interactiveSeqs in any order; exit effects hide), estimated text areas vs picture/chart frames; pass/fail.",
+      "weight": 1.6667
+    },
+    {
+      "id": "V05",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每个原生图表：每条可见坐标轴都有标题，数值轴标题注明单位；≥2 个系列的图表有图例。",
+      "criterion_en": "Every native chart: each visible axis has a title, the value-axis title states the unit, and charts with ≥2 series have a legend.",
+      "verify": "checks.py cdc_layout.chart_axis_issues: c:valAx/c:catAx/c:dateAx need c:title text unless c:delete=1; value-axis title must contain a unit token; c:legend required when ≥2 c:ser. Label legibility is not scored.",
+      "weight": 1.5385
+    },
+    {
+      "id": "C01",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "给出时间与伤亡：2017-05-31 约 23:00（中部时间），5 人死亡、14 人受伤；在场 19 人/全厂 124 人如使用须准确。",
+      "criterion_en": "Date/time and casualties: 31 May 2017 ~11:00 p.m. (Central), 5 fatalities, 14 injured; 19 onsite / 124 employed if used.",
+      "verify": "answer-key K01/K06（report PDF 12, 46）",
+      "weight": 3.125
+    },
+    {
+      "id": "C02",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "后果准确：多功能楼、F 磨坊、锅炉房完全倒塌，D 磨坊严重结构损坏；财产损失 $15,375,959 标为企业估计（若用新闻稿“超过 1500 万美元”须与报告值一致并注明来源）；无厂外后果。",
+      "criterion_en": "Consequences: Multipurpose Building, F Mill, Boiler House completely collapsed, D Mill severe damage; $15,375,959 labelled as company estimate (release's 'over $15 million' consistent and attributed); no off-site consequences.",
+      "verify": "K02/K03",
+      "weight": 1.5385
+    },
+    {
+      "id": "C03",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "事件序列与报告“可能的进展”一致：约 22:30 闻到/看到烟 → 搜寻 15–25 分钟未停机 → 设备内一次爆炸（Explosion 1）→ 管路内传播 → 1B 二次爆炸（Explosion 2）与 Dry Grit Filter 火球 → 全厂二次爆炸与倒塌；无线电通话冲突妨碍撤离通知。",
+      "criterion_en": "Sequence matches the report's likely progression (smoke ~10:30, 15–25 min search without shutdown, Explosion 1 inside equipment, propagation, Explosion 2 + filter fireball, secondary explosions/collapse; radio congestion).",
+      "verify": "K05–K08（PDF 42–46, 53）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C04",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "指出当日为提产临时把两台齿盘磨（gap mill）出料/旋风连接在一起，且该临时变更未经针对粉尘危害的变更管理（MOC）评估。",
+      "criterion_en": "States the same-day temporary connection of two gap mills' discharge to raise output, not assessed for dust hazards under MOC.",
+      "verify": "K04；report §4.6（PDF 123–126）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C05",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "给出互联程度：Dry Grit Filter 连接至少 46 台设备、跨至少 4 个工艺与 3 栋建筑，且无隔爆（isolation）措施。",
+      "criterion_en": "Interconnection: Dry Grit Filter linked ≥46 pieces of equipment across ≥4 processes and 3 buildings, with no isolation.",
+      "verify": "K09（PDF 83）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C06",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "结构机理：预制/共用墙的扩建结构未按泄爆或抗爆设计，倒塌在 3–5 秒内发生，员工来不及逃离。",
+      "criterion_en": "Structural mechanism: add-on precast/shared-wall construction without venting or pressure-resistant design; collapse in 3–5 s.",
+      "verify": "K12（PDF 76）；report §4.4（PDF 109–112）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C07",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "粉尘爆炸性：CSB 检测所有样品均为可燃粉尘（KSt>0），并引用至少一组正确的 KSt/Pmax/MEC 值及单位；指出企业自己的 SDS 已警示可燃粉尘并列出爆炸参数。",
+      "criterion_en": "Explosibility: all CSB samples combustible (KSt>0) with ≥1 correct KSt/Pmax/MEC set and units; company's own SDS already warned and listed explosion parameters.",
+      "verify": "K11（PDF 79, 83）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C08",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "既往事件：给出报告结论“5 年内至少 6 次类似事件”并至少点名 2012 年 South BM 火灾与本次的相似性（出料管阴燃、进气过滤器吹掉、火沿管道走）。",
+      "criterion_en": "Prior incidents: 'at least six similar incidents in five years' and the 2012 South BM fire's specific similarities.",
+      "verify": "K15/K22（PDF 134, 138, 141）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C09",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "外部预警：2010 OSHA 一般责任条款传讯、2012 保险审核、2013 OSHA 危害警示信（HAL，含粉尘收集计算不当）三者年份与机构正确，且说明发现事项在事故前未被处理。",
+      "criterion_en": "External warnings: 2010 OSHA GDC citation, 2012 insurer audit, 2013 OSHA HAL (incl. inadequate dust-collector calculations), correct years/bodies, unaddressed before the incident.",
+      "verify": "K16（PDF 147–149）",
+      "weight": 1.5385
+    },
+    {
+      "id": "C10",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "监管层：OSHA 无综合性可燃粉尘标准；粮食处理设施标准 29 CFR 1910.272 不含 DHA/MOC/事故调查等管理体系要求；新建议对象与数量正确（Didion 9 条、OSHA 3 条、NFPA 1 条，共 13 条），不加入报告发布后的执行状态。",
+      "criterion_en": "Regulatory: no comprehensive OSHA dust rule; 1910.272 lacks DHA/MOC/incident investigation; recommendations correct (9 Didion, 3 OSHA, 1 NFPA = 13); no post-publication status.",
+      "verify": "K19/K21（PDF 15, 17–20）",
+      "weight": 1.5385
+    },
+    {
+      "id": "H01",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏·附录E] 说明附录 E 的分析结论：齿盘磨可喷出的可燃粉尘至多约 5.8 kg（12.8 lb），远低于造成 1B 观察损伤所需的量，因此首个破坏性爆炸必须有 1B 室内积尘（fugitive dust）参与——把“清洁管理”接入因果链，而非仅作附带问题。",
+      "criterion_en": "[Hidden·App E] ≤5.8 kg (12.8 lb) ejected from gap mill is far below the mass needed; fugitive dust in Level 1 Mill B was necessary for the first damaging explosion.",
+      "verify": "appendix-e PDF 10 / 107（正文无此数）",
+      "weight": 1.6667
+    },
+    {
+      "id": "H02",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏·附录E] 讲到泄爆/建筑设计时保留附录 E 的边界：模型中 1B 约 11 m² 泄爆面积“可能”缓解传播，但竖向风井仍是火焰/超压通道；多功能楼需约 20% 墙面（约 250 m²）泄爆并加强结构连续性。不得声称“加泄爆板就能避免倒塌/死亡”。",
+      "criterion_en": "[Hidden·App E] Venting boundary: ~11 m² in Level 1 Mill B 'may have mitigated' but the air shaft remains a path; Multipurpose Building would need ~20% of wall area (~250 m²) plus structural continuity; no claim that vents alone would have prevented collapse.",
+      "verify": "appendix-e PDF 10 / 107–108",
+      "weight": 1.6667
+    },
+    {
+      "id": "H03",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏·附录E] 若引用云团规模/压力，保留方法归属：NFPA 68 法得最小 20–30 m³（2–3%，对应门损伤起始），CFD 得 40–100 m³（约 45–110 lb，4–10%），满室云团 82 psi 仅考虑风井泄放；不把两法合并成一个数或互相替换。未引用则须在证据边界中说明附录 E 为模型推定（任一满足即可）。",
+      "criterion_en": "[Hidden·App E] If cloud size/pressure is cited, keep method attribution: NFPA 68 minimum 20–30 m³ (2–3 %, onset of door damage) vs CFD 40–100 m³ (~45–110 lb, 4–10 %); 82 psi for a full-volume cloud with shaft-only relief; the two methods are never merged into one number or swapped. If not cited, the evidence boundary states that the Appendix E results are model-based (either way satisfies the item).",
+      "verify": "appendix-e PDF 9 / 107",
+      "weight": 1.6667
+    },
+    {
+      "id": "H04",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏·附录G] 使用附录 G 的点火敏感性对比：除尘器/滤器与粗磨样品 MIE 10–30 mJ，低于成品麸皮与面粉的 30–100 mJ（静电放电即可点燃）；或指出最高 KSt 样品为 D4 Flex Kleen 滤器（159）。至少其一且数值与单位正确。",
+      "criterion_en": "[Hidden·App G] Dust-collector/filter and coarse-grinder samples MIE 10–30 mJ vs bran/flour 30–100 mJ; or highest KSt = D4 Flex Kleen filter (159). At least one, values and units correct.",
+      "verify": "appendix-g PDF 4 / 10（正文无 MIE 数值）",
+      "weight": 1.6667
+    },
+    {
+      "id": "H05",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏·附录G] 引用实验室爆炸性数据时说明其为干燥（<5% 水分）并细化至约 <75 µm 后的条件化样品值，代表最不利情况而非事故当晚粉尘的实际状态（附录 G 来样水分 7 到 >15 wt%）。",
+      "criterion_en": "[Hidden·App G] Lab explosibility values described as conditioned (dried <5% moisture, ~<75 µm) worst-case values, not the as-found state (as-received moisture 7 to >15 wt%).",
+      "verify": "appendix-g PDF 4；report PDF 82",
+      "weight": 1.6667
+    },
+    {
+      "id": "H06",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏·脚注] 若提及 NFPA 61 关于磨机除尘系统不得与其他设备汇管的规定被违反，须同时保留报告脚注限定“与本次事故无直接因果”；不得把它画成因果图中的直接原因（未提及则判通过）。",
+      "criterion_en": "[Hidden·footnote] If the NFPA 61 manifolding violation is mentioned, keep the footnote qualifier 'not directly causal'; never drawn as a direct cause (pass if not mentioned).",
+      "verify": "report PDF 85 脚注 a",
+      "weight": 1.6667
+    },
+    {
+      "id": "H07",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏·正文限定+脚注] 必须提到 5 月 29 日干燥机火灾，作为“被错过的预警”而非触发原因（报告称“无直接关联证据/不太可能相关”），并点出 5/29 后约 6 小时即复产、未完成调查；若另提 5 月 31 日上午的锤磨未遂事件，也须作为被错过的预警并保留其发生在“无关工艺”中的限定（可选，不提不扣）。未提 5/29 火灾、漏掉 6 小时复产，或把任一事件说成本次触发原因，即否（这是题面问的“本可事先识别”的关键证据）。",
+      "criterion_en": "[Hidden] Must present the May 29 dryer fire as a missed warning, not a trigger ('no evidence directly related'), including the restart ~6 h later before the investigation was complete; if the May 31 morning near miss is also mentioned, it must likewise be a missed warning with its 'unrelated process' qualifier (optional). Omitting May 29, omitting the 6 h restart, or presenting either event as the trigger fails.",
+      "verify": "report PDF 137–138 + 脚注",
+      "weight": 1.6667
+    },
+    {
+      "id": "F01",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #1（由 checks.py 按页面文字+备注中的数字个数降序排定的第 1 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #1 (the 1st-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "F02",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #2（由 checks.py 按页面文字+备注中的数字个数降序排定的第 2 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #2 (the 2nd-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "F03",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #3（由 checks.py 按页面文字+备注中的数字个数降序排定的第 3 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #3 (the 3rd-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "F04",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #4（由 checks.py 按页面文字+备注中的数字个数降序排定的第 4 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #4 (the 4th-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "F05",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #5（由 checks.py 按页面文字+备注中的数字个数降序排定的第 5 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #5 (the 5th-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "F06",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "抽样页 #6（由 checks.py 按页面文字+备注中的数字个数降序排定的第 6 页）：页面、图表与备注中的每个数字/日期/单位/人数都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 该页行中声明为推导值），且没有任何数字、建筑/设备名称或因果归属与 answer-key 矛盾；出现一处即否。",
+      "criterion_en": "Sampled slide #6 (the 6th-ranked slide by count of numbers in slide text + notes, fixed by checks.py): every number, date, unit or count on the slide, its charts and notes is traceable (printed in the input material, in the answer key, or declared as derived in an evidence-index.csv row of that slide), and no number, building/equipment name or causal attribution contradicts the answer key; one error fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.6667
+    },
+    {
+      "id": "B01",
+      "tier": "mid",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "因果链每一环都标出证据类型（目击、过程趋势数据、实物/方向指示、模型），并区分一次爆炸（设备内）与二次爆炸（室内积尘），说明为何二次爆炸造成主要破坏。",
+      "criterion_en": "Each link of the chain labelled with evidence type (eyewitness, trend data, physical/directional indicators, model); primary vs secondary explosions distinguished and why secondary caused major damage.",
+      "verify": "人工对照 K07/K08 与附录 E",
+      "weight": 1.5385
+    },
+    {
+      "id": "B02",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "证据边界：明确阴燃巢的确切位置未能确定、过程趋势“并非决定性”、点火源为“可能”；不把可能性表述升级为确定事实（全篇无一处升级）。",
+      "criterion_en": "Evidence boundary: nest location undetermined, trends 'not definitive', ignition 'likely'; never upgraded to certainty anywhere in deck/notes/narration.",
+      "verify": "全文检索 'caused by'/'started in' 等确定性措辞并对照 K07",
+      "weight": 1.6667
+    },
+    {
+      "id": "B03",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "解释企业粉尘收集计算为何不能证明安全：只取 <425 µm 颗粒、按稳态平均浓度（最高 12% MEC）计算，忽略脉冲清灰时局部高于 MEC 的瞬态——并援引 OSHA 2013 的质疑。",
+      "criterion_en": "Explains why the company's dust-collector calculation (≤12% of MEC) did not prove safety: excluded >425 µm, steady-state average, ignored pulse-jet transients; cites OSHA 2013 critique.",
+      "verify": "K10/K23（PDF 85–86, 149）",
+      "weight": 1.5385
+    },
+    {
+      "id": "B04",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "做出至少一项可追溯的定量推理连接技术与管理：例如 70 m³×500 g/m³=35 kg≈77 lb（附录称约 80 lb）足以使多功能楼失稳，对照月度卫生检查中长期“重积尘”记录；或 5.8 kg 仅为所需 20–50 kg（45–110 lb）的约 1/8–1/3。算式、单位与出处正确，并在图表工作簿或备注中可见。",
+      "criterion_en": "At least one traceable quantitative inference linking technical and management layers, e.g. 70 m³ × 500 g/m³ = 35 kg ≈ 77 lb (the appendix says about 80 lb), enough to destabilise the Multipurpose Building, set against the chronic 'heavy dust' findings of the monthly housekeeping inspections; or 5.8 kg is only about 1/8–1/3 of the 20–50 kg (45–110 lb) needed. Arithmetic, units and source correct and visible in a chart workbook or the notes.",
+      "verify": "answer-key CALC X01/X02",
+      "weight": 1.6667
+    },
+    {
+      "id": "B05",
+      "tier": "mid",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "至少 3 个管理/组织因素各自对应到它使哪一道具体技术屏障缺失（如事故调查薄弱→出料管堵塞阴燃反复；MOC 缺失→临时并联旋风；外部审核未闭环→无隔爆/泄爆；以食品安全体系管粉尘→积尘长期存在），每条有材料出处。",
+      "criterion_en": "≥3 management factors each mapped to the specific technical barrier it left missing, each sourced.",
+      "verify": "人工核；参考 report §4.5–4.9",
+      "weight": 1.5385
+    },
+    {
+      "id": "B06",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "“本可事先识别”的论证按时间排列至少 4 个有日期的事前信号，并指出它们未被闭环（OSHA/保险审核/HAL 各项事实是否正确由 C09 判定，5/29 火灾由 H07 判定）。",
+      "criterion_en": "Chronological 'recognisable beforehand' argument with ≥4 dated pre-incident signals and their non-closure (correctness of the individual OSHA/insurer/HAL facts is scored in C09, the May 29 fire in H07).",
+      "verify": "Reviewer vs K14–K17/K22: count dated signals and check that their non-closure is stated.",
+      "weight": 1.6667
+    },
+    {
+      "id": "B07",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "监管/标准层作为促成条件而非开脱：说明 1910.272 不要求 DHA/MOC、威斯康星州事故前未采纳 IFC 粉尘设计条款，同时指出企业已通过 SDS、OSHA 与保险方获知危害，责任不因监管缺口而消失。",
+      "criterion_en": "Regulatory gaps framed as contributing conditions, not excuses: 1910.272 lacks DHA/MOC; Wisconsin had not adopted IFC dust design provisions pre-incident; company nonetheless knew via SDS/OSHA/insurer.",
+      "verify": "K20/K21/K16",
+      "weight": 1.5385
+    },
+    {
+      "id": "B08",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "给听众的行动建议可执行且有出处：至少 4 条，分别覆盖设备隔离/泄爆、积尘管理、变更与事故调查、应急报警/阻燃 PPE，且各对应到报告建议编号或章节；不混淆对企业、OSHA、NFPA 的建议对象。",
+      "criterion_en": "≥4 actionable recommendations covering isolation/venting, fugitive dust, MOC & incident investigation, alarm/FR PPE, each tied to a report recommendation number or section; recipients not confused.",
+      "verify": "K19；report §6",
+      "weight": 1.5385
+    },
+    {
+      "id": "D01",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "slides.pdf 页数与 PPTX 一致；script.md、evidence-index.csv、events.csv 均可解析且列齐全。",
+      "criterion_en": "slides.pdf page count equals PPTX; script.md, evidence-index.csv, events.csv parse with required columns.",
+      "verify": "pdfinfo + csv 解析",
+      "weight": 3.125
+    },
+    {
+      "id": "D02",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "页面上标明 AI 制作；源材料单独署名；无暗示调查机构/涉事企业审阅或背书的表述或徽标使用。",
+      "criterion_en": "AI-made disclosure; separate source credit; no implied endorsement by agency/company (incl. logos).",
+      "verify": "页面文字检索 + 人工",
+      "weight": 3.125
+    },
+    {
+      "id": "D03",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "解说音轨为 PPTX 内部嵌入媒体（非链接），30–60 s，页面标明为演讲者制作；真实放映中从上一页进入或直接进入该页，1 s 内处于播放状态；只复制 PPTX 到新文件夹离线后仍能播放。",
+      "criterion_en": "Narration is embedded (not linked), 30–60 s, labelled presenter-made; autoplays within 1 s on entry (both from previous slide and direct entry); plays after copy-only offline move.",
+      "verify": "rels 检查 TargetMode；COM SlideShowWindow.View.Player(...).State；复制到新目录重测",
+      "weight": 1.5385
+    },
+    {
+      "id": "D04",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "PowerPoint MediaFormat.MediaBookmarks 至少 3 个，且各书签时刻与 events.csv 声明值相差 ≤0.05 s、名称一致。",
+      "criterion_en": "PowerPoint MediaFormat.MediaBookmarks lists ≥3 bookmarks matching events.csv times within 0.05 s and names.",
+      "verify": "COM 读取 MediaBookmarks(i).Position/Name",
+      "weight": 1.6667
+    },
+    {
+      "id": "D05",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "每个书签各自触发一个独立、可编辑的原生标注入场：Effect.Timing.TriggerType = msoAnimTriggerOnMediaBookmark(5) 且 TriggerBookmark 为对应书签、标注叠加在报告原图上；定时截屏中标注出现时刻与播放器位置相差 ≤0.30 s。",
+      "criterion_en": "Each bookmark triggers one separate editable native annotation (TriggerType=5 bound to that bookmark) over an original report figure; in timed capture it appears within ±0.30 s.",
+      "verify": "COM 读 TimeLine.MainSequence/InteractiveSequences；定时截屏协议（同 D01-R3 windows_dynamic）",
+      "weight": 1.6667
+    },
+    {
+      "id": "D06",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "events.csv 每行：所列句子逐字出现在 script.md 中，书签时刻按句子在讲稿中的先后递增，每个时刻都落在解说音轨之内且处于有语音（非静音）处，被触发标注的文字与该句及材料一致。",
+      "criterion_en": "Each events.csv row: the sentence appears verbatim in script.md, bookmark times increase in the order the sentences occur in the script, each time lies inside the narration and on speech (not silence) in the embedded audio, and the triggered annotation's text matches that sentence and the materials.",
+      "verify": "checks.py (fail-only): normalised verbatim match in script.md, increasing times consistent with script order, 0 ≤ t ≤ narration duration, speech energy (50 ms RMS within 30 dB of peak) in [t−0.5 s, t+1.0 s] of the embedded audio; any violation ⇒ fail. Otherwise judge compares annotation text (slide text) with the events.csv sentence and the answer key. No ASR is run.",
+      "weight": 1.6667
+    },
+    {
+      "id": "D07",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "至少 2 个原生 PowerPoint 图表（非图片），每个 ChartData.Activate() 成功且嵌入工作簿首表有非空数据区。",
+      "criterion_en": "≥2 native charts (not images); ChartData.Activate() succeeds and the embedded workbook has a non-empty used range.",
+      "verify": "COM ChartData.Activate + openpyxl",
+      "weight": 3.125
+    },
+    {
+      "id": "D07b",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "图表嵌入工作簿列出出处页码与单位；凡不是材料原文印有数值的数字单元格（即换算/推导值）都以活公式表示。",
+      "criterion_en": "Embedded chart workbooks list source pages and units, and every numeric cell that is not a value printed in the material (i.e. a conversion or derived value) is a live formula.",
+      "verify": "checks.py: per embedded workbook (all sheets) a page/source reference and a unit word in the cell strings; numeric cells not found in pdftotext of the inputs (print rounding allowed) must carry a formula (columns headed page/ref/source/year/id are exempt). pass/fail.",
+      "weight": 1.5385
+    },
+    {
+      "id": "D08",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "图表绘制值与材料原值一致（允许印刷取整）——每个值都在材料或 answer-key 中出现、或为工作簿活公式，且与工作簿单元格一致；不含编造数据点；不把口径不同的量画在同一数值轴上作直接比较。",
+      "criterion_en": "Plotted values match the materials (print rounding allowed) — each is printed in the material, in the answer key, or a live workbook formula, and equals its workbook cell; no invented points; no incomparable quantities on one axis.",
+      "verify": "checks.py (fail-only): c:numCache vs workbook cell and vs pdftotext numbers of the inputs (print rounding) / answer key / formula cell; any miss ⇒ fail. Otherwise judge decides comparability from the chart_data evidence (series, categories, values, axis titles).",
+      "weight": 1.5385
+    },
+    {
+      "id": "D09",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "存在一张由原生可编辑形状与连接线构成的因果图（非图片），节点≥6。",
+      "criterion_en": "A causal diagram of native editable shapes and connectors (not an image) with ≥6 nodes exists.",
+      "verify": "python-pptx 形状/连接线计数",
+      "weight": 3.125
+    },
+    {
+      "id": "D09b",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "因果图同时含技术、企业管理、外部监管/标准三个层面的节点各≥1，且任一连线都不与报告因果分析相矛盾。",
+      "criterion_en": "Causal diagram has ≥1 node at each of technical, company-management, external regulatory/standards levels; no link contradicts the report's causal analysis.",
+      "verify": "对照报告 §3–4 与 Cause 段人工核",
+      "weight": 1.5385
+    },
+    {
+      "id": "D10",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "至少 3 幅材料中的真实图被清晰裁切并保留图例/标注，各配原生可编辑标注说明；无整页截图充当解释。",
+      "criterion_en": "≥3 real figures from the materials, cleanly cropped with legends/labels, each explained with native editable annotations; no full-page screenshot as explanation.",
+      "verify": "图片与原 PDF 图做感知哈希/人工比对",
+      "weight": 1.5385
+    },
+    {
+      "id": "D11",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 中随机抽取（固定种子）10 条含数字的事实行，≥9 条所给源文件与 PDF 页码确实包含所引数字；此类行少于 5 条即判否。（不核对图/表/附录编号。）",
+      "criterion_en": "Of 10 random numeric fact rows in evidence-index.csv (fixed seed), ≥9 cite a source file and PDF page that actually contain the quoted number(s); fewer than 5 such rows fails. (Figure/table/appendix ids are not checked.)",
+      "verify": "checks.py: pdftotext per page; source cell matched to an input file name (substring/stem, e.g. 'Appendix E (appendix-e.pdf)'); rows with a recalculation/conversion transformation excluded; ≥half of the row's numbers must occur on the cited page. pass/fail.",
+      "weight": 1.5385
+    }
+  ],
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "tier_count": {
+    "base": 8,
+    "mid": 26,
+    "gate": 21
+  },
+  "release_acceptance": {
+    "task_form": "CDN-DOC",
+    "all_critical_items_must_pass": true
+  }
+}

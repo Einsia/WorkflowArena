@@ -1,0 +1,391 @@
+{
+  "task_id": "WFA-CDN-011",
+  "status": "VERIFIED",
+  "report": {
+    "file": "input/report.pdf",
+    "pdf_pages": 40,
+    "printed_equals_pdf_page": true
+  },
+  "traps": {
+    "T01": {
+      "desc_zh": "两套病例口径：截至 2/20 NRS 累计报告 75,465 例 vs IDIS 实验室确诊 55,924 例；“cases”≠实验室确诊",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 5,
+          "quote": "As of 20 February 2020, a cumulative total of 75,465 COVID-19 cases were reported in China. Reported cases are based on the National Reporting System (NRS)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 6,
+          "quote": "The epidemic curves presented in Figures 2 and 3 are generated using China’s National Infectious Disease Information System (IDIS)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 8,
+          "quote": "Among 55,924 laboratory confirmed cases reported as of 20 February 2020",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T02": {
+      "desc_zh": "WHO 通报 2/13 只计实验室确诊，湖北当夜 14,840 例中 13,332 例临床诊断未计入",
+      "evidence": [
+        {
+          "file": "sitrep-24.pdf",
+          "pdf_page": 1,
+          "quote": "Overnight 14’840 cases, including 13’332 clinically diagnosed cases were",
+          "verified_verbatim": true
+        },
+        {
+          "file": "sitrep-24.pdf",
+          "pdf_page": 1,
+          "quote": "For consistency,",
+          "verified_verbatim": true
+        },
+        {
+          "file": "sitrep-24.pdf",
+          "pdf_page": 1,
+          "quote": "46 550 confirmed (1820 new)",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T03": {
+      "desc_zh": "WHO 通报 2/20 起中国数字含临床诊断病例（脚注），同期取消临床诊断分类；通报序列口径不一致",
+      "evidence": [
+        {
+          "file": "sitrep-31.pdf",
+          "pdf_page": 1,
+          "quote": "74 675 confirmed (399 new)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "sitrep-31.pdf",
+          "pdf_page": 1,
+          "quote": "which includes both laboratory confirmed and clinically diagnosed cases (currently only applicable to Hubei province, China)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "sitrep-31.pdf",
+          "pdf_page": 1,
+          "quote": "China has revised their guidance on case classification for COVID-19, removing",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T04": {
+      "desc_zh": "粗病死率 3.8% = 2114/55,924 实验室确诊（含脚注：早期粗 CFR 有偏；部分病例按含肺部疾病的定义识别）",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 12,
+          "quote": "As of 20 February, 2114 of the 55,924 laboratory confirmed cases have died (crude fatality ratio [CFR2] 3.8%)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 12,
+          "quote": "The Joint Mission acknowledges the known challenges and biases of reporting crude CFR early in an epidemic.",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T05": {
+      "desc_zh": "按发病队列的 CFR 17.3%→0.7% 与发病至死亡 2–8 周：2/1 后发病者至 2/20 随访不足（右删失）；报告另归因于诊疗标准演进",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 12,
+          "quote": "(17.3% for cases with symptom onset from 1- 10 January) and has reduced over time to 0.7% for patients with symptom onset after 1 February (Figure 4)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 14,
+          "quote": "Among patients who have died, the time from symptom onset to outcome ranges from 2-8 weeks.",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 12,
+          "quote": "The Joint Mission noted that the standard of care has evolved over the course of the outbreak.",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T06": {
+      "desc_zh": "儿童“attack rate (2.4% of all reported cases)”实为病例构成比，不是罹患率；报告自称无法确定儿童感染程度",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 11,
+          "quote": "there is a relatively low attack rate in this age group (2.4% of all reported cases)",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 11,
+          "quote": "it is not possible to determine the extent of infection among children",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T07": {
+      "desc_zh": "78%–85% 是“聚集性疫情（clusters）”中家庭聚集的比例，单位为聚集而非病例；家庭续发率 3–10% 为初步",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 8,
+          "quote": "Among 344 clusters involving 1308 cases (out of a total 1836 cases reported) in Guangdong Province and Sichuan Province, most clusters (78%-85%) have occurred in families.",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 8,
+          "quote": "estimate the secondary attack rate in households ranges from 3-10%",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T08": {
+      "desc_zh": "深圳密接百分比与分母不符：2240/2842 印为 72%（应约 79%），88/2842 印为 2.8%（应约 3.1%）；3/11 更新版已改为 79%/3.1%",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 8,
+          "quote": "in Shenzhen City, among 2842 identified close contacts, 2842 (100%) were traced and 2240 (72%) have completed medical observation. Among the close contacts, 88 (2.8%) were found to be infected with COVID-19.",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T09": {
+      "desc_zh": "图 3：按发病日期与按报告日期的曲线在 2/5、2/12、2/20 三个快照（图内 N=34537/49971/56848，仅见图中）；近期发病日数据因确诊延迟而不完整；发病至确诊中位数 12→3 天（武汉 15→5）",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 7,
+          "quote": "Figure 3 presents epidemic curves of laboratory-confirmed cases, by symptom onset and separately by date of report, at 5, 12, and 20 February 2020.",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 13,
+          "quote": "the median time from symptom onset to laboratory confirmation nationally decreased from 12 days (range 8-18 days) in early January to 3 days (1-7) by early February 2020",
+          "verified_verbatim": true
+        }
+      ],
+      "figure_only_values": {
+        "panel_ns": [
+          34537,
+          49971,
+          56848
+        ],
+        "note": "Figure 3 面板标题中的 N，仅在图像中，pdftotext 不可得；与正文 55,924 不同（数据源/时刻不同）"
+      }
+    },
+    "T10": {
+      "desc_zh": "转折描述：1/10–22 快速增长，1/23–27 达峰并平台，此后下降（2/1 报告尖峰除外）；1/23 武汉交通管制",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 7,
+          "quote": "the epidemic rapidly grew from 10-22 January, reported cases peaked and plateaued between 23 January and 27 January, and have been steadily declining since then, apart from the spike that was reported on 1 February",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 15,
+          "quote": "On 23 January, Wuhan implemented strict traffic restrictions.",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T11": {
+      "desc_zh": "每日新增确诊 2478（考察首日）→409（考察末日）为报告日计数；下降有多源佐证（发热门诊等）",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 17,
+          "quote": "2478 newly confirmed cases of COVID-19 reported in China. Two weeks later, on the final day of this Mission, China reported 409 newly confirmed cases.",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 17,
+          "quote": "Several sources of data support this conclusion, including the steep decline in fever clinic visits",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 9,
+          "quote": "from a peak of 0.47% positive on 30 January to 0.02% on 16 February",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T12": {
+      "desc_zh": "“避免或至少推迟数十万例”是基于省际粗罹患率比较的估计，不是计数",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 17,
+          "quote": "Based on a comparison of crude attack rates across provinces, the Joint Mission estimates that",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 17,
+          "quote": "averted or at least delayed hundreds of thousands of COVID-19 cases",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T13": {
+      "desc_zh": "18264 (24%) 康复的分母是 75,465 全部报告病例而非 55,924 确诊",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 14,
+          "quote": "as of 20 February, 18264 (24%) reported cases have recovered",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T14": {
+      "desc_zh": "通报省级表人口单位为“万人(10,000s)”；湖北 2/20 累计 62031、人口 5917 万",
+      "evidence": [
+        {
+          "file": "sitrep-31.pdf",
+          "pdf_page": 3,
+          "quote": "Hubei 5917 349 880 108 62031 2029",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T15": {
+      "desc_zh": "医护人员 2,055 例实验室确诊（476 家医院），88% 来自湖北，湖北外 246 例；多数可能为家庭内感染",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 11,
+          "quote": "there were 2,055 COVID-19 laboratory-confirmed cases reported among HCW from 476 hospitals across China. The majority of HCW cases (88%) were reported from Hubei.",
+          "verified_verbatim": true
+        },
+        {
+          "file": "report.pdf",
+          "pdf_page": 11,
+          "quote": "(i.e. 246 of the total 2055 HCW cases)",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T16": {
+      "desc_zh": "严重程度构成：约 80% 轻/中（含肺炎）、13.8% 重症、6.1% 危重，分母为实验室确诊",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 12,
+          "quote": "Approximately 80% of laboratory confirmed patients have had mild to moderate disease, which includes non-pneumonia and pneumonia cases, 13.8% have severe disease",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T17": {
+      "desc_zh": "R0 2–2.5 为无干预时",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 10,
+          "quote": "may explain a relatively high R0 (2- 2.5) in the absence of interventions",
+          "verified_verbatim": true
+        }
+      ]
+    },
+    "T18": {
+      "desc_zh": "广东发热门诊 0.14% 阳性的分母是约 32 万“次筛查”",
+      "evidence": [
+        {
+          "file": "report.pdf",
+          "pdf_page": 9,
+          "quote": "Overall in Guangdong, 0.14% of approximately 320,000 fever clinic screenings were positive for COVID-19.",
+          "verified_verbatim": true
+        }
+      ]
+    }
+  },
+  "calculations": {
+    "K01": {
+      "desc": "粗 CFR（报告口径）",
+      "formula": "2114/55924",
+      "result": 3.78,
+      "unit": "%"
+    },
+    "K02": {
+      "desc": "以通报 2/20 数（含临床诊断）计算的死亡/病例",
+      "formula": "2121/74675",
+      "result": 2.84,
+      "unit": "%",
+      "note": "与 K01 分母口径不同，不可并列为同一 CFR"
+    },
+    "K03a": {
+      "desc": "深圳完成医学观察比例复算",
+      "formula": "2240/2842",
+      "result": 78.8,
+      "unit": "%",
+      "printed": "72%"
+    },
+    "K03b": {
+      "desc": "深圳密接感染比例复算",
+      "formula": "88/2842",
+      "result": 3.1,
+      "unit": "%",
+      "printed": "2.8%"
+    },
+    "K04": {
+      "desc": "康复比例分母核对",
+      "formula": "18264/75465 vs 18264/55924",
+      "result": [
+        24.2,
+        32.7
+      ],
+      "unit": "%"
+    },
+    "K05": {
+      "desc": "湖北 vs 广东累计报告率（每 10 万，通报 2/20 表，人口单位万人）",
+      "formula": "62031/(5917*1e4)*1e5 ; 1332/(11346*1e4)*1e5",
+      "result": [
+        104.8,
+        1.17
+      ],
+      "unit": "per 100,000",
+      "ratio": 89.0
+    },
+    "K06": {
+      "desc": "每日新增确诊下降幅度",
+      "formula": "(2478-409)/2478",
+      "result": 83.5,
+      "unit": "%"
+    },
+    "K07": {
+      "desc": "湖北 2/13（仅实验室确诊）34874 → 2/20（含临床诊断）62031 不能当作增长",
+      "formula": "n/a",
+      "result": null
+    },
+    "K08": {
+      "desc": "湖北外医护占比核对",
+      "formula": "246/2055",
+      "result": 12.0,
+      "unit": "%",
+      "note": "与 88% 来自湖北一致"
+    },
+    "K09": {
+      "desc": "2/1 后发病队列至 2/20 最长随访天数 vs 发病至死亡 2–8 周",
+      "formula": "20 Feb - 1 Feb",
+      "result": 19,
+      "unit": "days"
+    }
+  }
+}

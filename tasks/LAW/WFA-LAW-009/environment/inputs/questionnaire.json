@@ -1,0 +1,194 @@
+[
+ {
+  "id": "dp_ie_materiality",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Intervening Event definition: does it contain a materiality standard (e.g., a \"material\" event, development or change)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_ie_knowledge",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Intervening Event definition: what knowledge requirement applies as of signing?",
+  "multi_select": false,
+  "options": [
+   "Known, but consequences unknown or not reasonably foreseeable, at signing",
+   "Known, but consequences unknown, at signing",
+   "Not known and not reasonably foreseeable at signing",
+   "Not known at signing"
+  ]
+ },
+ {
+  "id": "dp_ie_after_signing",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Intervening Event definition: must the event occur or arise after signing?",
+  "multi_select": false,
+  "options": [
+   "May occur or arise prior to signing",
+   "Must occur or arise after signing"
+  ]
+ },
+ {
+  "id": "dp_ie_knowledge_mgmt",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Intervening Event definition: is the knowledge test measured by reference to Target management (rather than, or in addition to, the board)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_cor_ie_standard",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Change of recommendation in response to an Intervening Event: what fiduciary-duty standard must the board determine is met?",
+  "multi_select": false,
+  "options": [
+   "\"Breach\" of fiduciary duties",
+   "\"Inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected breach\" of fiduciary duties",
+   "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected violation\" of fiduciary duties",
+   "\"Required to comply\" with fiduciary duties",
+   "\"Violation\" of fiduciary duties",
+   "More likely than not violate fiduciary duties",
+   "Other specified standard"
+  ]
+ },
+ {
+  "id": "dp_cor_so_standard",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Change of recommendation in response to a Superior Offer: what fiduciary-duty standard must the board determine is met?",
+  "multi_select": false,
+  "options": [
+   "\"Breach\" of fiduciary duties",
+   "\"Inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected breach\" of fiduciary duties",
+   "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected violation\" of fiduciary duties",
+   "\"Required to comply\" with fiduciary duties",
+   "\"Violation\" of fiduciary duties",
+   "More likely than not violate fiduciary duties",
+   "Other specified standard"
+  ]
+ },
+ {
+  "id": "dp_cor_board_only",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Is a change of recommendation permitted on the basis of a board fiduciary determination alone (i.e., not tied to a Superior Offer or an Intervening Event)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_fidout_trigger",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Fiduciary exception to the no-shop: what kind of third-party proposal permits the Target to engage (furnish information / negotiate)?",
+  "multi_select": false,
+  "options": [
+   "Acquisition Proposal only",
+   "Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+  ]
+ },
+ {
+  "id": "dp_fidout_standard",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Fiduciary exception to the no-shop: what fiduciary-duty standard must the board determine is met (regarding failure to engage)?",
+  "multi_select": false,
+  "options": [
+   "\"Breach\" of fiduciary duties",
+   "\"Inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected breach\" of fiduciary duties",
+   "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+   "\"Reasonably likely/expected violation\" of fiduciary duties",
+   "\"Required to comply\" with fiduciary duties",
+   "\"Violation\" of fiduciary duties",
+   "More likely than not violate fiduciary duties",
+   "Other specified standard"
+  ]
+ },
+ {
+  "id": "dp_cor_match_initial",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Buyer's matching right before a change of recommendation: length of the initial matching (notice) period?",
+  "multi_select": false,
+  "options": [
+   "2 business days or less",
+   "3 business days",
+   "3 calendar days",
+   "4 business days",
+   "4 calendar days",
+   "5 business days",
+   "Greater than 5 business days"
+  ]
+ },
+ {
+  "id": "dp_cor_match_additional",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Buyer's matching right before a change of recommendation: length of the additional matching period after a material modification of the proposal?",
+  "multi_select": false,
+  "options": [
+   "2 business days or less",
+   "3 business days",
+   "3 days",
+   "4 business days",
+   "5 business days",
+   "> 5 business days"
+  ]
+ },
+ {
+  "id": "dp_ftr_match_initial",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Buyer's matching right before the Target terminates to accept a Superior Offer (fiduciary termination right): length of the initial matching period?",
+  "multi_select": false,
+  "options": [
+   "2 business days or less",
+   "3 business days",
+   "3 calendar days",
+   "4 business days",
+   "4 calendar days",
+   "5 business days",
+   "5 calendar days",
+   "Greater than 5 business days"
+  ]
+ },
+ {
+  "id": "dp_ftr_limitations",
+  "category": "Deal Protection and Related Provisions",
+  "question": "What breaches by the Target preclude it from exercising its fiduciary termination right? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "(Material) breach of other provisions of agreement",
+   "Any breach of no-shop",
+   "Breach of no-shop resulting in a Superior Offer",
+   "Material breach of no-shop",
+   "Material breach of no-shop resulting in a Superior Offer",
+   "Other"
+  ]
+ },
+ {
+  "id": "kn_definition",
+  "category": "Knowledge",
+  "question": "Target knowledge definition: actual knowledge only, or constructive knowledge (e.g., knowledge after reasonable inquiry, or that would reasonably be expected to be known)?",
+  "multi_select": false,
+  "options": [
+   "Actual knowledge",
+   "Constructive knowledge"
+  ]
+ },
+ {
+  "id": "kn_identified_persons",
+  "category": "Knowledge",
+  "question": "Target knowledge definition: is knowledge limited to one or more identified persons (e.g., persons named or listed in a schedule)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ }
+]

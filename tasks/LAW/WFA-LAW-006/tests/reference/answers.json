@@ -1,0 +1,78 @@
+{
+ "M01": {
+  "Different Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period (no closing requirement)": 1,
+  "Different Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period and transaction must close after Tail Period": 0,
+  "Different Acquisition Proposal - Must sign during Tail Period (no closing requirement)": 8,
+  "Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period": 5,
+  "Different Acquisition Proposal must close during Tail Period": 1,
+  "Same Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period and transaction must close after Tail Period": 0,
+  "Same Acquisition Proposal - Must be approved or not opposed to (or another similar action) during Tail Period (no closing requirement)": 1,
+  "Same Acquisition Proposal - Must close during Tail Period": 1,
+  "Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)": 8,
+  "Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period": 6
+ },
+ "M02": {
+  "\"entitled to seek\" specific performance": 3,
+  "\"entitled to\" specific performance": 13
+ },
+ "M03": 10,
+ "M04": 10,
+ "M05": 8,
+ "M06": [
+  "A02",
+  "A03",
+  "A12"
+ ],
+ "M07": [
+  "A01",
+  "A02",
+  "A08",
+  "A09",
+  "A10"
+ ],
+ "M08": [
+  "A02",
+  "A16"
+ ],
+ "M09": [],
+ "M10": [
+  "A02"
+ ],
+ "M11": [
+  "A11"
+ ],
+ "M12": [
+  "A02",
+  "A05",
+  "A11"
+ ],
+ "M13": [
+  "A06"
+ ],
+ "M14": [
+  "A02"
+ ],
+ "M15": [
+  [
+   "A01",
+   "A04",
+   "A08",
+   "A09",
+   "A10",
+   "A12"
+  ],
+  [
+   "A03",
+   "A05",
+   "A06",
+   "A07",
+   "A11",
+   "A13",
+   "A14"
+  ]
+ ],
+ "M16": 6,
+ "M17": [
+  "A11"
+ ]
+}

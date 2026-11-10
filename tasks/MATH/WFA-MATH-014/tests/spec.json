@@ -1,0 +1,20 @@
+{
+  "kind": "lean-blueprint",
+  "import": "SNumbers.MaxDifference",
+  "build_targets": [
+    "SNumbers.MaxDifference"
+  ],
+  "names": [
+    "SNumbers.max_gelfandNumber_kolmogorovNumber_le_e_mul_bernsteinNumber"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "BasicResults",
+      "SNumbers"
+    ],
+    "target_file": "SNumbers/MaxDifference.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

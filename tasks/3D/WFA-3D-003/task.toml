@@ -1,0 +1,41 @@
+schema_version = "1.4"
+artifacts = ["/workspace/output"]
+
+[task]
+name = "WFA-3D-003"
+version = "0.1.0"
+description = "Final assembly of the modular orbital station 'Tianshu'"
+
+[metadata]
+domain = "3D"
+subcategory = "3D-SCENE"
+evaluation_mode = "harbor_native"
+benchmark = "BlenderParallelBuild"
+family = "BLD"
+difficulty = "hard"
+created_date = "2026-10-25"
+grader = "rubric_score.py (checks.py deterministic via blender -b extraction + gemini-3.8-flash per-item judge)"
+llm_judge = "gemini-3.8-flash"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 1800
+cpus = 4
+memory_mb = 16384
+storage_mb = 32768
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "separate"
+# public: the rubric's non-deterministic items are judged by gemini-3.8-flash (verifier-only Gemini credentials)
+network_mode = "public"
+
+[verifier.environment]
+cpus = 4
+memory_mb = 16384
+storage_mb = 32768

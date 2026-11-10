@@ -1,0 +1,145 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14",
+  "A15"
+ ],
+ "deal_points": {
+  "mae_taken_as_whole": {
+   "options": [
+    "Applies to Target and subsidiaries \"taken as a whole\"",
+    "No"
+   ],
+   "multi": false
+  },
+  "mae_ability_to_consummate": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_ability_subject_to_carveouts": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_fls_yn": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_fls_standard": {
+   "options": [
+    "\"Could\" (reasonably) be expected to",
+    "\"Would\"",
+    "\"Would\" (reasonably) be expected to",
+    "No",
+    "Other forward-looking standard"
+   ],
+   "multi": false
+  },
+  "mae_fls_applies_to": {
+   "options": [
+    "No",
+    "ability to consummate transaction",
+    "business and operation of Target"
+   ],
+   "multi": true
+  },
+  "mae_relational_yn": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_relational_scope": {
+   "options": [
+    "All MAE carveouts",
+    "No",
+    "Some MAE carveouts"
+   ],
+   "multi": false
+  },
+  "mae_relational_terms": {
+   "options": [
+    "\"Arising from/out of\"",
+    "\"Attributable to\"",
+    "\"Relating to\"",
+    "\"Resulting from\"",
+    "No",
+    "Other",
+    "Relational language varies among carveouts"
+   ],
+   "multi": true
+  },
+  "mae_co_apc_scope": {
+   "options": [
+    "No",
+    "announcement",
+    "consummation",
+    "pendency"
+   ],
+   "multi": true
+  },
+  "mae_co_required_actions": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_buyer_consent": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_stockholder_litigation": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_disclosure_schedules": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_buyer_actions": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_prohibited_actions": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  }
+ }
+}

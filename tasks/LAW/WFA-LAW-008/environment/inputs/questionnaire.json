@@ -1,0 +1,182 @@
+[
+ {
+  "id": "oc_consent_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: is the Buyer's consent to deviate from the ordinary course a flat consent or one that may not be unreasonably withheld, conditioned or delayed?",
+  "multi_select": false,
+  "options": [
+   "Consent may not be unreasonably withheld, conditioned or delayed",
+   "Flat consent"
+  ]
+ },
+ {
+  "id": "oc_past_practice",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: does it require operation in the ordinary course \"consistent with past practice\"?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "oc_efforts_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: what efforts standard qualifies the Target's obligation to operate in the ordinary course?",
+  "multi_select": false,
+  "options": [
+   "Commercially reasonable efforts",
+   "Flat covenant (no efforts standard)",
+   "Reasonable best efforts"
+  ]
+ },
+ {
+  "id": "oc_pandemic_carveout",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: does it include an exception for actions taken in response to the pandemic (e.g., COVID-19 measures)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "nc_consent_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants (list of prohibited actions): is the Buyer's consent a flat consent or one that may not be unreasonably withheld, conditioned or delayed?",
+  "multi_select": false,
+  "options": [
+   "Consent may not be unreasonably withheld, conditioned or delayed",
+   "Flat consent"
+  ]
+ },
+ {
+  "id": "nc_consent_application",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants: does the \"not unreasonably withheld\" consent standard apply to all of the negative covenants or only to specified ones?",
+  "multi_select": false,
+  "options": [
+   "Applies only to specified negative covenants",
+   "Applies to all negative covenants"
+  ]
+ },
+ {
+  "id": "nc_pandemic_carveout",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants: do they include an exception for actions taken in response to the pandemic (e.g., COVID-19 measures)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "ef_antitrust_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "What general efforts standard applies to obtaining antitrust/regulatory approvals?",
+  "multi_select": false,
+  "options": [
+   "Commercially reasonable efforts",
+   "Flat standard",
+   "Reasonable best efforts"
+  ],
+  "note": "\"Flat standard\" = the covenant on obtaining antitrust/regulatory approvals is not qualified by \"reasonable best efforts\" or \"commercially reasonable efforts\" (e.g. the parties \"shall take all actions necessary\" to obtain the approvals, or use plain \"best efforts\"). If that covenant is qualified by reasonable best efforts or commercially reasonable efforts, choose that option, even if a separate clause (e.g. a divestiture / hell-or-high-water undertaking) is unqualified."
+ },
+ {
+  "id": "rem_specific_performance",
+  "category": "Remedies",
+  "question": "Specific performance: are the parties \"entitled to\" specific performance, or only \"entitled to seek\" it?",
+  "multi_select": false,
+  "options": [
+   "\"entitled to seek\" specific performance",
+   "\"entitled to\" specific performance"
+  ]
+ },
+ {
+  "id": "kn_definition",
+  "category": "Knowledge",
+  "question": "Target knowledge definition: actual knowledge only, or constructive knowledge (e.g., knowledge after reasonable inquiry, or that would reasonably be expected to be known)?",
+  "multi_select": false,
+  "options": [
+   "Actual knowledge",
+   "Constructive knowledge"
+  ]
+ },
+ {
+  "id": "kn_identified_persons",
+  "category": "Knowledge",
+  "question": "Target knowledge definition: is knowledge limited to one or more identified persons (e.g., persons named or listed in a schedule)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "gen_consideration",
+  "category": "General Information",
+  "question": "Type of merger consideration paid to Target stockholders?",
+  "multi_select": false,
+  "options": [
+   "All Cash",
+   "All Stock",
+   "Mixed Cash/Stock",
+   "Mixed Cash/Stock: Election"
+  ]
+ },
+ {
+  "id": "cc_covenant_compliance",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on the Target's performance of covenants: is the materiality standard applied to the covenants collectively or to each covenant individually?",
+  "multi_select": false,
+  "options": [
+   "All Covenants",
+   "Each Covenant",
+   "Hybrid/Other Standard"
+  ],
+  "note": "\"All Covenants\" = the Target shall have performed in all material respects all covenants/obligations (collective); \"Each Covenant\" = each covenant/obligation shall have been performed in all material respects."
+ },
+ {
+  "id": "cc_general_bringdown_timing",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on accuracy of the Target's general representations and warranties: as of which time(s) must they be accurate?",
+  "multi_select": false,
+  "options": [
+   "At Closing Only",
+   "At Signing & At Closing"
+  ]
+ },
+ {
+  "id": "mae_co_required_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions required to be taken (or taken in compliance with) the merger agreement?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_prohibited_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: the Target's failure to take an action that is prohibited by the agreement (e.g., under the interim operating covenants) where the Buyer withheld consent?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_buyer_consent",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions taken (or not taken) at the request of, or with the consent or approval of, the Buyer?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ }
+]

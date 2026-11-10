@@ -1,0 +1,493 @@
+{
+  "task_id": "WFA-LAW-019",
+  "source": {
+    "dataset": "MultiLJP (CURRENTF/HRN dataset-v5, data_v5.03)",
+    "record": "valid-47"
+  },
+  "ungraded_circumstances": [],
+  "corrections": [
+    "A: 补诈骗罪（一人犯数罪）",
+    "G: MultiLJP 标从犯(3)，本院认为为主犯 → 改",
+    "缓刑: 本院认为明示 E/H/I/F/K/J/B/L 宣告缓刑；其余按穷尽列举推定为否"
+  ],
+  "defendants": {
+    "[被告A]": {
+      "original_code": "[被告J]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 8,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑八个月，"
+      }
+    },
+    "[被告B]": {
+      "original_code": "[被告L]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 8,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑八个月，"
+      }
+    },
+    "[被告C]": {
+      "original_code": "[被告B]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 7,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑七个月，"
+      }
+    },
+    "[被告D]": {
+      "original_code": "[被告K]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 8,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑八个月，"
+      }
+    },
+    "[被告E]": {
+      "original_code": "[被告I]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 10,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑十个月，"
+      }
+    },
+    "[被告F]": {
+      "original_code": "[被告H]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 12,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑一年，"
+      }
+    },
+    "[被告G]": {
+      "original_code": "[被告C]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 36,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [],
+        "term": "有期徒刑三年"
+      }
+    },
+    "[被告H]": {
+      "original_code": "[被告D]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 18,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "自首"
+        ],
+        "term": "有期徒刑一年六个月"
+      }
+    },
+    "[被告I]": {
+      "original_code": "[被告G]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白",
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 8,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "累犯",
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑八个月"
+      }
+    },
+    "[被告J]": {
+      "original_code": "[被告E]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 14,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑一年二个月"
+      }
+    },
+    "[被告K]": {
+      "original_code": "[被告M]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 7,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "自首"
+        ],
+        "term": "有期徒刑七个月"
+      }
+    },
+    "[被告L]": {
+      "original_code": "[被告A]",
+      "charges": [
+        "开设赌场罪",
+        "诈骗罪"
+      ],
+      "articles": [
+        266,
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "主犯",
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 36,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "自首"
+        ],
+        "term": "有期徒刑三年"
+      }
+    },
+    "[被告M]": {
+      "original_code": "[被告F]",
+      "charges": [
+        "开设赌场罪"
+      ],
+      "articles": [
+        303
+      ],
+      "roles": {
+        "开设赌场罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "自首"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 10,
+        "death_any": false
+      },
+      "probation": true,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "开设赌场罪"
+        ],
+        "laws": [
+          303
+        ],
+        "states": [
+          "从犯",
+          "自首"
+        ],
+        "term": "有期徒刑十个月，"
+      }
+    }
+  }
+}

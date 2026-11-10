@@ -1,0 +1,156 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14",
+  "A15",
+  "A16"
+ ],
+ "deal_points": {
+  "mae_taken_as_whole": {
+   "options": [
+    "Applies to Target and subsidiaries \"taken as a whole\"",
+    "No"
+   ],
+   "multi": false
+  },
+  "mae_co_political": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_industry": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_gaap": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_apc": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_apc_scope": {
+   "options": [
+    "No",
+    "announcement",
+    "consummation",
+    "pendency"
+   ],
+   "multi": true
+  },
+  "mae_co_projections": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_market_price": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_wnaf_scope": {
+   "options": [
+    "\"act of God\"",
+    "Natural disaster",
+    "No",
+    "War or terrorism",
+    "force majeure"
+   ],
+   "multi": true
+  },
+  "mae_co_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_political": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_industry": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_law": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_gaap": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_wnaf": {
+   "options": [
+    "\"act of God\"",
+    "Natural disaster",
+    "No",
+    "War or terrorism",
+    "force majeure"
+   ],
+   "multi": true
+  }
+ }
+}

@@ -1,0 +1,167 @@
+entry_id,account,amount,category,description
+EL001,3000,1000000.00,investment,Eliminate investment in S1 against share capital
+EL001,3100,14000000.00,investment,Eliminate investment in S1 against share capital
+EL001,1500,-15000000.00,investment,Eliminate investment in S1 against share capital
+EL002,3000,500000.00,investment,Eliminate investment in S2 against share capital
+EL002,3100,7500000.00,investment,Eliminate investment in S2 against share capital
+EL002,1500,-6400000.00,investment,Eliminate investment in S2 against share capital
+EL002,3500,-1600000.00,investment,Eliminate investment in S2 against share capital
+EL003,3000,899200.00,investment,Eliminate investment in S3 against share capital
+EL003,3100,4720800.00,investment,Eliminate investment in S3 against share capital
+EL003,1500,-3934000.00,investment,Eliminate investment in S3 against share capital
+EL003,3500,-1686000.00,investment,Eliminate investment in S3 against share capital
+EL004,3000,912000.00,investment,Eliminate investment in S4 against share capital
+EL004,3100,5928000.00,investment,Eliminate investment in S4 against share capital
+EL004,1500,-6840000.00,investment,Eliminate investment in S4 against share capital
+EL005,3000,1000000.00,investment,Eliminate investment in S6 against share capital
+EL005,3100,14000000.00,investment,Eliminate investment in S6 against share capital
+EL005,1500,-15000000.00,investment,Eliminate investment in S6 against share capital
+EL006,3200,668532.54,nci_opening,NCI share of opening retained earnings of S2
+EL006,3500,-668532.54,nci_opening,NCI share of opening retained earnings of S2
+EL007,3200,664626.59,nci_opening,NCI share of opening retained earnings of S3
+EL007,3500,-664626.59,nci_opening,NCI share of opening retained earnings of S3
+EL008,3400,-68455.82,nci_opening,NCI share of opening CTA of S3
+EL008,3500,68455.82,nci_opening,NCI share of opening CTA of S3
+EL009,3200,46888.08,up_opening,Realization of opening UP S1->P
+EL009,5000,-46888.08,up_opening,Realization of opening UP S1->P
+EL010,3200,52173.18,up_opening,Realization of opening UP S1->S2
+EL010,5000,-52173.18,up_opening,Realization of opening UP S1->S2
+EL011,3200,39821.30,up_opening,Realization of opening UP S1->S3
+EL011,5000,-39821.30,up_opening,Realization of opening UP S1->S3
+EL012,3200,16372.49,up_opening,Realization of opening UP S3->S2
+EL012,3500,7016.78,up_opening,Realization of opening UP S3->S2
+EL012,5000,-23389.27,up_opening,Realization of opening UP S3->S2
+EL013,3200,51999.50,up_opening,Realization of opening UP S4->S2
+EL013,5000,-51999.50,up_opening,Realization of opening UP S4->S2
+EL014,5000,50359.00,up_closing,Unrealized profit in closing inventory S1->P
+EL014,1300,-50359.00,up_closing,Unrealized profit in closing inventory S1->P
+EL015,5000,50839.51,up_closing,Unrealized profit in closing inventory S1->S2
+EL015,1300,-50839.51,up_closing,Unrealized profit in closing inventory S1->S2
+EL016,5000,39976.98,up_closing,Unrealized profit in closing inventory S1->S3
+EL016,1300,-39976.98,up_closing,Unrealized profit in closing inventory S1->S3
+EL017,5000,17035.58,up_closing,Unrealized profit in closing inventory S1->S5
+EL017,1300,-17035.58,up_closing,Unrealized profit in closing inventory S1->S5
+EL018,5000,18411.43,up_closing,Unrealized profit in closing inventory S3->S2
+EL018,1300,-18411.43,up_closing,Unrealized profit in closing inventory S3->S2
+EL019,5000,22276.81,up_closing,Unrealized profit in closing inventory S4->S2
+EL019,1300,-22276.81,up_closing,Unrealized profit in closing inventory S4->S2
+EL020,5000,13115.67,up_closing,Unrealized profit in closing inventory S5->P
+EL020,1300,-13115.67,up_closing,Unrealized profit in closing inventory S5->P
+EL021,2100,166500.00,ic_balances,Eliminate 1200/2100: P receivable from S1
+EL021,1200,-166500.00,ic_balances,Eliminate 1200/2100: P receivable from S1
+EL022,2100,109500.00,ic_balances,Eliminate 1200/2100: P receivable from S2
+EL022,1200,-109500.00,ic_balances,Eliminate 1200/2100: P receivable from S2
+EL023,2100,125546.19,ic_balances,Eliminate 1200/2100: P receivable from S3
+EL023,1200,-125546.19,ic_balances,Eliminate 1200/2100: P receivable from S3
+EL024,2100,119389.76,ic_balances,Eliminate 1200/2100: P receivable from S4
+EL024,1200,-119389.76,ic_balances,Eliminate 1200/2100: P receivable from S4
+EL025,2100,69300.00,ic_balances,Eliminate 1200/2100: P receivable from S5
+EL025,1200,-69300.00,ic_balances,Eliminate 1200/2100: P receivable from S5
+EL026,2100,39600.00,ic_balances,Eliminate 1200/2100: P receivable from S6
+EL026,1200,-39600.00,ic_balances,Eliminate 1200/2100: P receivable from S6
+EL027,2100,255814.68,ic_balances,Eliminate 1200/2100: S1 receivable from P
+EL027,1200,-255814.68,ic_balances,Eliminate 1200/2100: S1 receivable from P
+EL028,2100,232467.45,ic_balances,Eliminate 1200/2100: S1 receivable from S2
+EL028,1200,-232467.45,ic_balances,Eliminate 1200/2100: S1 receivable from S2
+EL029,2100,168752.71,ic_balances,Eliminate 1200/2100: S1 receivable from S3
+EL029,1200,-168752.71,ic_balances,Eliminate 1200/2100: S1 receivable from S3
+EL030,2100,130606.14,ic_balances,Eliminate 1200/2100: S1 receivable from S5
+EL030,1200,-130606.14,ic_balances,Eliminate 1200/2100: S1 receivable from S5
+EL031,2100,102594.92,ic_balances,Eliminate 1200/2100: S3 receivable from S2
+EL031,1200,-102594.92,ic_balances,Eliminate 1200/2100: S3 receivable from S2
+EL032,2100,77365.09,ic_balances,Eliminate 1200/2100: S4 receivable from S2
+EL032,1200,-77365.09,ic_balances,Eliminate 1200/2100: S4 receivable from S2
+EL033,2100,69162.42,ic_balances,Eliminate 1200/2100: S5 receivable from P
+EL033,1200,-69162.42,ic_balances,Eliminate 1200/2100: S5 receivable from P
+EL034,2150,1250000.00,ic_balances,Eliminate 1250/2150: S6 receivable from S2
+EL034,1250,-1250000.00,ic_balances,Eliminate 1250/2150: S6 receivable from S2
+EL035,2150,2140600.00,ic_balances,Eliminate 1250/2150: S6 receivable from S3
+EL035,1250,-2140600.00,ic_balances,Eliminate 1250/2150: S6 receivable from S3
+EL036,2150,1006659.00,ic_balances,Eliminate 1250/2150: S6 receivable from S4
+EL036,1250,-1006659.00,ic_balances,Eliminate 1250/2150: S6 receivable from S4
+EL037,2150,1200000.00,ic_balances,Eliminate 1250/2150: S6 receivable from S5
+EL037,1250,-1200000.00,ic_balances,Eliminate 1250/2150: S6 receivable from S5
+EL038,2160,16406.25,ic_balances,Eliminate 1260/2160: S6 receivable from S2
+EL038,1260,-16406.25,ic_balances,Eliminate 1260/2160: S6 receivable from S2
+EL039,2160,20068.13,ic_balances,Eliminate 1260/2160: S6 receivable from S3
+EL039,1260,-20068.13,ic_balances,Eliminate 1260/2160: S6 receivable from S3
+EL040,2160,5662.46,ic_balances,Eliminate 1260/2160: S6 receivable from S4
+EL040,1260,-5662.46,ic_balances,Eliminate 1260/2160: S6 receivable from S4
+EL041,2160,18000.00,ic_balances,Eliminate 1260/2160: S6 receivable from S5
+EL041,1260,-18000.00,ic_balances,Eliminate 1260/2160: S6 receivable from S5
+EL042,2250,1593000.00,ic_balances,Eliminate 1270/2250: P receivable from S1
+EL042,1270,-1593000.00,ic_balances,Eliminate 1270/2250: P receivable from S1
+EL043,2250,610400.00,ic_balances,Eliminate 1270/2250: P receivable from S2
+EL043,1270,-610400.00,ic_balances,Eliminate 1270/2250: P receivable from S2
+EL044,4200,666000.00,ic_pl,Eliminate management fees P->S1
+EL044,6600,-666000.00,ic_pl,Eliminate management fees P->S1
+EL045,4200,438000.00,ic_pl,Eliminate management fees P->S2
+EL045,6600,-438000.00,ic_pl,Eliminate management fees P->S2
+EL046,4200,503142.71,ic_pl,Eliminate management fees P->S3
+EL046,6600,-503142.71,ic_pl,Eliminate management fees P->S3
+EL047,4200,482912.51,ic_pl,Eliminate management fees P->S4
+EL047,6600,-482912.51,ic_pl,Eliminate management fees P->S4
+EL048,4200,138600.00,ic_pl,Eliminate management fees P->S5
+EL048,6600,-138600.00,ic_pl,Eliminate management fees P->S5
+EL049,4200,158400.00,ic_pl,Eliminate management fees P->S6
+EL049,6600,-158400.00,ic_pl,Eliminate management fees P->S6
+EL050,4400,2920000.00,ic_dividends,Eliminate dividends declared by S1
+EL050,3300,-2920000.00,ic_dividends,Eliminate dividends declared by S1
+EL051,4400,1133600.00,ic_dividends,Eliminate dividends declared by S2
+EL051,3500,283400.00,ic_dividends,Eliminate dividends declared by S2
+EL051,3300,-1417000.00,ic_dividends,Eliminate dividends declared by S2
+EL052,4400,406984.20,ic_dividends,Eliminate dividends declared by S3
+EL052,3500,174421.80,ic_dividends,Eliminate dividends declared by S3
+EL052,3300,-581406.00,ic_dividends,Eliminate dividends declared by S3
+EL053,4400,903278.68,ic_dividends,Eliminate dividends declared by S4
+EL053,3300,-903278.68,ic_dividends,Eliminate dividends declared by S4
+EL054,4400,2007000.00,ic_dividends,Eliminate dividends declared by S6
+EL054,3300,-2007000.00,ic_dividends,Eliminate dividends declared by S6
+EL055,4100,3124625.17,ic_pl,Eliminate IC sales S1->P
+EL055,5000,-3124625.17,ic_pl,Eliminate IC sales S1->P
+EL056,4100,3257668.50,ic_pl,Eliminate IC sales S1->S2
+EL056,5000,-3257668.50,ic_pl,Eliminate IC sales S1->S2
+EL057,4100,2406146.08,ic_pl,Eliminate IC sales S1->S3
+EL057,5000,-2406146.08,ic_pl,Eliminate IC sales S1->S3
+EL058,4100,725504.92,ic_pl,Eliminate IC sales S1->S5
+EL058,5000,-725504.92,ic_pl,Eliminate IC sales S1->S5
+EL059,4100,1452528.98,ic_pl,Eliminate IC sales S3->S2
+EL059,5000,-1452528.98,ic_pl,Eliminate IC sales S3->S2
+EL060,4100,1125552.33,ic_pl,Eliminate IC sales S4->S2
+EL060,5000,-1125552.33,ic_pl,Eliminate IC sales S4->S2
+EL061,4100,386237.06,ic_pl,Eliminate IC sales S5->P
+EL061,5000,-386237.06,ic_pl,Eliminate IC sales S5->P
+EL062,4300,72187.50,ic_pl,Eliminate IC interest S6->S2
+EL062,7100,-72187.50,ic_pl,Eliminate IC interest S6->S2
+EL063,4300,80425.65,ic_pl,Eliminate IC interest S6->S3
+EL063,7100,-80425.65,ic_pl,Eliminate IC interest S6->S3
+EL064,4300,32536.51,ic_pl,Eliminate IC interest S6->S4
+EL064,7100,-32536.51,ic_pl,Eliminate IC interest S6->S4
+EL065,4300,30000.00,ic_pl,Eliminate IC interest S6->S5
+EL065,7100,-30000.00,ic_pl,Eliminate IC interest S6->S5
+EL066,3000,200000.00,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,3100,2300000.00,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,3200,3551800.05,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1300,36164.50,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1600,517447.90,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1610,681830.91,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1620,30827.29,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1700,3095960.00,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1800,3085969.35,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL066,1500,-13500000.00,acquisition,Eliminate investment in S5; recognize fair value step-ups and goodwill
+EL067,6400,13580.82,ppa_subsequent,Depreciation of PP&E fair value step-ups
+EL067,1650,-13580.82,ppa_subsequent,Depreciation of PP&E fair value step-ups
+EL068,6500,446883.84,ppa_subsequent,Amortization of acquired intangibles
+EL068,1750,-446883.84,ppa_subsequent,Amortization of acquired intangibles
+EL069,5000,36164.50,ppa_subsequent,Release of inventory fair value step-up to COGS
+EL069,1300,-36164.50,ppa_subsequent,Release of inventory fair value step-up to COGS
+EL070,3200,97226.13,fx_designated_loan,Reclassify cumulative prior-year FX on designated loan to CTA
+EL070,3400,-97226.13,fx_designated_loan,Reclassify cumulative prior-year FX on designated loan to CTA
+EL071,7200,-29400.00,fx_designated_loan,Reclassify current-period FX on designated loan to CTA
+EL071,3400,29400.00,fx_designated_loan,Reclassify current-period FX on designated loan to CTA
+EL072,3550,327452.41,nci_profit,NCI share of current-period profit of S2
+EL072,3500,-327452.41,nci_profit,NCI share of current-period profit of S2
+EL073,3550,212410.88,nci_profit,NCI share of current-period profit of S3
+EL073,3500,-212410.88,nci_profit,NCI share of current-period profit of S3
+EL074,3400,-32198.76,nci_oci,NCI share of current-period translation adjustment of S3
+EL074,3500,32198.76,nci_oci,NCI share of current-period translation adjustment of S3

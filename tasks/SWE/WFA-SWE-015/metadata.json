@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-015",
+  "domain": "SWE",
+  "task_form": "SWE-REIMPL",
+  "title": "Query Optimization for a SQL Transpiler",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_release_subsystem_removal",
+    "url": "https://codeload.github.com/tobymao/sqlglot/tar.gz/refs/tags/v30.20.0",
+    "revision": "v30.20.0",
+    "license": "MIT"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "criterion": "All required fail-to-pass tests and preserved behaviors pass, with no protected-file integrity violation or incomplete grader execution."
+  }
+}

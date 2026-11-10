@@ -1,0 +1,42 @@
+{
+ "fps": 30,
+ "total_frames": 858,
+ "slots": [
+  {
+   "slot": 1,
+   "start_frame": 0,
+   "end_frame": 150,
+   "accent_frame": 72
+  },
+  {
+   "slot": 2,
+   "start_frame": 150,
+   "end_frame": 276,
+   "accent_frame": 204
+  },
+  {
+   "slot": 3,
+   "start_frame": 276,
+   "end_frame": 420,
+   "accent_frame": 360
+  },
+  {
+   "slot": 4,
+   "start_frame": 420,
+   "end_frame": 534,
+   "accent_frame": 480
+  },
+  {
+   "slot": 5,
+   "start_frame": 534,
+   "end_frame": 690,
+   "accent_frame": 630
+  },
+  {
+   "slot": 6,
+   "start_frame": 690,
+   "end_frame": 858,
+   "accent_frame": 780
+  }
+ ]
+}

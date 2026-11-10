@@ -1,0 +1,19 @@
+{
+  "task_id": "WFA-CDN-013",
+  "files": [
+    {
+      "file": "environment/input/main-report.pdf",
+      "sha256": "7d5385adfc6c86f74f43f81fd193e476ac2b3e333e17bd7f468fb98a40f200b4",
+      "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2252.pdf",
+      "title": "A Case Study of the Camp Fire - Notification, Evacuation, Traffic, and Temporary Refuge Areas (NETTRA)"
+    },
+    {
+      "file": "environment/input/companion-report.pdf",
+      "sha256": "c9d692047c570a47a5fba7100ca5e2cfd6b5ce3af6caa81d660e45dc8de9dae1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2135.pdf",
+      "title": "A Case Study of the Camp Fire - Fire Progression Timeline"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "U.S. federal government works; public domain in the United States"
+}

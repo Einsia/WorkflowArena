@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "ErgodicTheory.TwoSided.SplittingAssembly",
+  "build_targets": [
+    "ErgodicTheory.TwoSided.SplittingAssembly"
+  ],
+  "names": [
+    "ErgodicTheory.oseledets_splitting"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "ErgodicTheory"
+    ],
+    "target_file": "ErgodicTheory/TwoSided/SplittingAssembly.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

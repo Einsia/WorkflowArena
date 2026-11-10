@@ -1,0 +1,627 @@
+{
+ "A01": {
+  "maud_contract": "contract_50",
+  "entities": [
+   {
+    "original": [
+     "Eagle Parent Holdings",
+     "Eagle Merger Sub"
+    ],
+    "pseudonym": "Dreandent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Extended Stay America",
+     "ESH Hospitality"
+    ],
+    "pseudonym": "Traethex",
+    "original_abbr": [
+     "ESA",
+     "ESH"
+    ],
+    "pseudonym_abbr": "TRT"
+   },
+   {
+    "original": [
+     "Blackstone Real Estate Partners",
+     "Blackstone"
+    ],
+    "pseudonym": "Fisara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Starwood Distressed Opportunity Fund",
+     "Starwood"
+    ],
+    "pseudonym": "Stealyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Dreandent": 16,
+   "Traethex": 16,
+   "Fisara": 12,
+   "Stealyn": 11,
+   "fisara": 2,
+   "TRT": 3
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 11,
+   "signatures": 16,
+   "name_fields": 16,
+   "attention_fields": 5
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_75",
+  "entities": [
+   {
+    "original": [
+     "Sanofi"
+    ],
+    "pseudonym": "Quomane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Latour Merger Sub",
+     "Latour"
+    ],
+    "pseudonym": "Peandis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Kadmon Holdings",
+     "Kadmon"
+    ],
+    "pseudonym": "Douvyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Belumosudil",
+     "belumosudil"
+    ],
+    "pseudonym": "Quurell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "ROCKSTAR"
+    ],
+    "pseudonym": "Trastent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Nano Terra"
+    ],
+    "pseudonym": "Fosion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quomane": 4,
+   "Peandis": 3,
+   "Douvyn": 16,
+   "Quurell": 10,
+   "Fosion": 11,
+   "Trastent": 3,
+   "quomane": 1,
+   "douvyn": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_74",
+  "entities": [
+   {
+    "original": [
+     "SPB Hospitality"
+    ],
+    "pseudonym": "Broment",
+    "original_abbr": [
+     "SPB"
+    ],
+    "pseudonym_abbr": "BRM"
+   },
+   {
+    "original": [
+     "Titan Merger Sub"
+    ],
+    "pseudonym": "Quailyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "J. Alexander’s Holdings",
+     "J. Alexander's Holdings",
+     "J. Alexander’s",
+     "J. Alexander's",
+     "J. Alexander"
+    ],
+    "pseudonym": "Kostis",
+    "original_abbr": [
+     "JAX"
+    ],
+    "pseudonym_abbr": "KST"
+   },
+   {
+    "original": [
+     "Drawbridge Special Opportunities Fund",
+     "Drawbridge"
+    ],
+    "pseudonym": "Sintix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Fortress Investment Group",
+     "Fortress"
+    ],
+    "pseudonym": "Starkon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Broment": 4,
+   "Quailyn": 3,
+   "Kostis": 9,
+   "Sintix": 1,
+   "KST": 11,
+   "Starkon": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_70",
+  "entities": [
+   {
+    "original": [
+     "IEC Electronics"
+    ],
+    "pseudonym": "Heavent",
+    "original_abbr": [
+     "IEC"
+    ],
+    "pseudonym_abbr": "HVN"
+   },
+   {
+    "original": [
+     "Creation Technologies International",
+     "Creation Technologies",
+     "CTI Acquisition"
+    ],
+    "pseudonym": "Taivell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Taivell": 13,
+   "Heavent": 12
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_146",
+  "entities": [
+   {
+    "original": [
+     "W. R. Grace & Co",
+     "W.R. Grace",
+     "Grace"
+    ],
+    "pseudonym": "Vedian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Gibraltar Acquisition Holdings",
+     "Gibraltar Merger Sub",
+     "Gibraltar"
+    ],
+    "pseudonym": "Droulvex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Standard Industries Holdings",
+     "Standard Industries"
+    ],
+    "pseudonym": "Stairkova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vedian": 19,
+   "Droulvex": 7,
+   "Stairkova": 3,
+   "vedian": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_62",
+  "entities": [
+   {
+    "original": [
+     "Roche Holdings",
+     "F. Hoffmann-La Roche",
+     "Hoffmann-La Roche",
+     "Hoffmann-La",
+     "Roche"
+    ],
+    "pseudonym": "Deathane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Chugai"
+    ],
+    "pseudonym": "Bruntur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Geronimo Acquisition"
+    ],
+    "pseudonym": "Tholara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "GenMark Diagnostics",
+     "GenMark"
+    ],
+    "pseudonym": "Helvur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Deathane": 6,
+   "Tholara": 3,
+   "Helvur": 14,
+   "deathane": 1,
+   "Bruntur": 3
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_40",
+  "entities": [
+   {
+    "original": [
+     "Covanta Holding",
+     "Covanta"
+    ],
+    "pseudonym": "Rorkur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Covert Intermediate",
+     "Covert Mergeco",
+     "Covert"
+    ],
+    "pseudonym": "Stearron",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "EQT Infrastructure",
+     "EQT"
+    ],
+    "pseudonym": "Nontix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Rorkur": 19,
+   "Stearron": 6,
+   "Nontix": 10,
+   "rorkur": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 10,
+   "signatures": 5,
+   "name_fields": 5,
+   "attention_fields": 4
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_30",
+  "entities": [
+   {
+    "original": [
+     "Community Bankers Trust",
+     "Essex Bank"
+    ],
+    "pseudonym": "Quaimur",
+    "original_abbr": [
+     "CBTC"
+    ],
+    "pseudonym_abbr": "QMR"
+   },
+   {
+    "original": [
+     "United Bankshares",
+     "United Bank",
+     "re:United(?!\\s(?:States¦Kingdom¦Nations¦Arab¦Mexican))"
+    ],
+    "pseudonym": "Haerketh",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Haerketh": 633,
+   "Quaimur": 119,
+   "QMR": 701
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 2,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_142",
+  "entities": [
+   {
+    "original": [
+     "Horizon Therapeutics",
+     "Horizon"
+    ],
+    "pseudonym": "Derrara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Teiripic Merger Sub",
+     "Teiripic"
+    ],
+    "pseudonym": "Laethis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Viela Bio",
+     "Viela",
+     "Uplizna",
+     "UPLIZNA"
+    ],
+    "pseudonym": "Quorion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "MedImmune"
+    ],
+    "pseudonym": "Ciorrur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quorion": 15,
+   "Derrara": 9,
+   "Laethis": 3,
+   "Ciorrur": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 9,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 5
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_16",
+  "entities": [
+   {
+    "original": [
+     "Mitsubishi HC Capital",
+     "Mitsubishi"
+    ],
+    "pseudonym": "Creamix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cattleya"
+    ],
+    "pseudonym": "Varion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "CAI International"
+    ],
+    "pseudonym": "Praelon",
+    "original_abbr": [
+     "CAI"
+    ],
+    "pseudonym_abbr": "PRL"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Creamix": 4,
+   "Varion": 3,
+   "Praelon": 8
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 6
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_34",
+  "entities": [
+   {
+    "original": [
+     "Goodyear Tire & Rubber",
+     "Goodyear"
+    ],
+    "pseudonym": "Pastur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Vulcan Merger Sub"
+    ],
+    "pseudonym": "Breandane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cooper Tire & Rubber",
+     "Cooper Tire",
+     "Cooper"
+    ],
+    "pseudonym": "Thevis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Pastur": 7,
+   "Breandane": 3,
+   "Thevis": 4,
+   "pastur": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_150",
+  "entities": [
+   {
+    "original": [
+     "Advanced Micro Devices"
+    ],
+    "pseudonym": "Trestent",
+    "original_abbr": [
+     "AMD"
+    ],
+    "pseudonym_abbr": "TRS"
+   },
+   {
+    "original": [
+     "Thrones Merger Sub"
+    ],
+    "pseudonym": "Giorrion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Xilinx"
+    ],
+    "pseudonym": "Paivian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Trestent": 5,
+   "Giorrion": 3,
+   "Paivian": 6,
+   "paivian": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ }
+}

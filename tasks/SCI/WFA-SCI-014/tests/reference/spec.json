@@ -1,0 +1,60 @@
+{
+  "task_id": "WFA-SCI-014",
+  "gold_source": "Zenodo 10.5281/zenodo.17096693 Source Data (txt + Mathematica notebooks, parsed by A1 nbparse.py)",
+  "targets": [
+    {
+      "id": "T1_energy_1d",
+      "file": "energy_1d.csv",
+      "keys": [
+        "n",
+        "U"
+      ],
+      "value": "value",
+      "gold": "gold/energy_1d.csv",
+      "pass_fraction": 1.0
+    },
+    {
+      "id": "T2_double_occupancy",
+      "file": "double_occupancy.csv",
+      "keys": [
+        "n",
+        "U"
+      ],
+      "value": "value",
+      "gold": "gold/double_occupancy.csv",
+      "pass_fraction": 1.0
+    },
+    {
+      "id": "T3_af_susceptibility",
+      "file": "af_susceptibility.csv",
+      "keys": [
+        "U",
+        "T"
+      ],
+      "value": "value",
+      "gold": "gold/af_susceptibility.csv",
+      "pass_fraction": 1.0
+    },
+    {
+      "id": "T4_charge_gap_2d",
+      "file": "charge_gap_2d.csv",
+      "keys": [
+        "tp",
+        "U"
+      ],
+      "value": "value",
+      "gold": "gold/charge_gap_2d.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "T5_uc_vs_tp",
+      "file": "uc_vs_tp.csv",
+      "keys": [
+        "abs_tp"
+      ],
+      "value": "value",
+      "gold": "gold/uc_vs_tp.csv",
+      "pass_fraction": 0.9
+    }
+  ]
+}

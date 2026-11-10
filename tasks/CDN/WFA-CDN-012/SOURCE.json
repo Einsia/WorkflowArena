@@ -1,0 +1,355 @@
+{
+  "task_id": "WFA-CDN-012",
+  "files": [
+    {
+      "file": "environment/input/case-descriptions.pdf",
+      "sha256": "116180844b57893d957b7394e44083e719e03ede5fafb5379eeec6897677fc96",
+      "url": "https://www.eia.gov/outlooks/aeo/assumptions/pdf/case_descriptions.pdf",
+      "title": "case-descriptions.pdf"
+    },
+    {
+      "file": "environment/input/figure-data.xlsx",
+      "sha256": "df4f0f741d8521a7166501063fee12d1bacd5e72291ce5dd55876ded85fb0556",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/Narrative_Figures.xlsx",
+      "title": "figure-data.xlsx"
+    },
+    {
+      "file": "environment/input/outlook-report.pdf",
+      "sha256": "92c1bc9f93537e6e11cac422b66fea420f5b930d6e384607976158980bf91ed0",
+      "url": "https://www.eia.gov/outlooks/aeo/pdf/AEO_Narrative.pdf",
+      "title": "outlook-report.pdf"
+    },
+    {
+      "file": "environment/input/tables/altelec_table1.xlsx",
+      "sha256": "dd4dafc2a1313e4af57cb3fcac879aba25867d49c36fba172a7590ed0f8639ab",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab1.xlsx",
+      "title": "altelec_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/altelec_table2.xlsx",
+      "sha256": "eff5577dadf59df36393835d4a33ac52c173c4ae2e0819ff49e7b74a3618c832",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab2.xlsx",
+      "title": "altelec_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/altelec_table20.xlsx",
+      "sha256": "1347bab03ba1d8c73c51ab38e8c7ac8e8ca83b25b13f94c77d6f2de7da04b63e",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab20.xlsx",
+      "title": "altelec_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/altelec_table3.xlsx",
+      "sha256": "ad8a2981113513fb6302644759a84317e10990debc89ae22f22550a72691035a",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab3.xlsx",
+      "title": "altelec_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/altelec_table8.xlsx",
+      "sha256": "80cba19890932bb32330aae7e110cc430d7370b6fdfd0a81cac8ebde76a493f0",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab8.xlsx",
+      "title": "altelec_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/alttrnp_table1.xlsx",
+      "sha256": "51b52ea2b887088f4fab84f7d372cc7a23f7b298ea2af646251f1f1fe4727b19",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab1.xlsx",
+      "title": "alttrnp_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/alttrnp_table2.xlsx",
+      "sha256": "215c006cae3bec27f8970bf3f2e78457b90ddea4d20a3ad38cf9a30704618277",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab2.xlsx",
+      "title": "alttrnp_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/alttrnp_table20.xlsx",
+      "sha256": "33c58d96f943f5fb78e3c05b3e5bbbcc90c84fc0db2f164425ed490ce4554fc2",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab20.xlsx",
+      "title": "alttrnp_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/alttrnp_table3.xlsx",
+      "sha256": "8234ef6fb55a20a75eddbc8c5de6b520fe8a47a90f766d957adc1801d2854b13",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab3.xlsx",
+      "title": "alttrnp_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/alttrnp_table8.xlsx",
+      "sha256": "ccdbf38ef70acde4a125691ed5ee80b81cc850c7e17f9b59a46a4e57f7160ac5",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab8.xlsx",
+      "title": "alttrnp_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/cb2026_table1.xlsx",
+      "sha256": "71d3a903d2b4da3e30ae8eea7d098458a9344d1f3c059f26a4a88b5515cbc770",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/aeotab1.xlsx",
+      "title": "cb2026_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/cb2026_table2.xlsx",
+      "sha256": "f5480e1326df8d7a5b94fa68f9e5c9b40e680294231ac749c65fa21e0210e6d9",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/aeotab2.xlsx",
+      "title": "cb2026_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/cb2026_table20.xlsx",
+      "sha256": "ee792ccdf58485c7028eddf08c25385755908c58a482e9d04436c1a0908d6a5b",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/aeotab20.xlsx",
+      "title": "cb2026_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/cb2026_table3.xlsx",
+      "sha256": "35581bcd7ad579cf37650393606cf304b536835ca06a2ff4fcdcbaecb83f55f8",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/aeotab3.xlsx",
+      "title": "cb2026_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/cb2026_table8.xlsx",
+      "sha256": "be1418a11ad0e5882f0210b7932695b3dc0be0b6b27f0dcc88ce8198052ca976",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/aeotab8.xlsx",
+      "title": "cb2026_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/electrnp_table1.xlsx",
+      "sha256": "6acbc87e8acaf2bb5adfa09b9a2db92152acaede6cb12008c619c3a8ee9b2dad",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab1.xlsx",
+      "title": "electrnp_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/electrnp_table2.xlsx",
+      "sha256": "9aa052b1646d10ca0a67ca28287643a94cce2e96c129edb4f08f89eb4f425a41",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab2.xlsx",
+      "title": "electrnp_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/electrnp_table20.xlsx",
+      "sha256": "836d8dd9c917fe717ab31babe42d5e39b334f1d95568612bf02f2bd1e3ebe063",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab20.xlsx",
+      "title": "electrnp_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/electrnp_table3.xlsx",
+      "sha256": "067b8f8ec5ecc6c1570bff07941dd972dafbf3ec0b3e0bd298adbef80e30bfc5",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab3.xlsx",
+      "title": "electrnp_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/electrnp_table8.xlsx",
+      "sha256": "8ba270cb691bede82204ea79159f143e3abd29b43543377007cb697445d84b15",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab8.xlsx",
+      "title": "electrnp_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highZTC_table1.xlsx",
+      "sha256": "0f621401ec0e4dcfc7ab793530f2d6a0b2dd30a9941e6524c722f95776e35049",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab1.xlsx",
+      "title": "highZTC_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highZTC_table2.xlsx",
+      "sha256": "5645a9537c9a3273a7160d1b187d09546608b98961e27ee5b2df4885484b854d",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab2.xlsx",
+      "title": "highZTC_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highZTC_table20.xlsx",
+      "sha256": "c4d3517fe5bd3d44c1ce18dfbc2fc6ce5f41f8639a410b296230d8ac8b41400b",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab20.xlsx",
+      "title": "highZTC_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highZTC_table3.xlsx",
+      "sha256": "762056e52c9ec50819b6fbc1437e73a2752852e1f43298a1682579349fd6ab15",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab3.xlsx",
+      "title": "highZTC_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highZTC_table8.xlsx",
+      "sha256": "88ce47578ad9e216760cdd91f44e66255a7c0850dcdf58416b62dd4d66fae5d3",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab8.xlsx",
+      "title": "highZTC_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/higheldmd_table1.xlsx",
+      "sha256": "10fdaac0fdd3da92d0c9413c811059d948eae54a264272718e38434b22d50bd5",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab1.xlsx",
+      "title": "higheldmd_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/higheldmd_table2.xlsx",
+      "sha256": "567f6b2afaed183ad3ecac2e69a1d5aada030df31a48af6c816343d930d0935a",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab2.xlsx",
+      "title": "higheldmd_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/higheldmd_table20.xlsx",
+      "sha256": "5eab002fa6decfffabff0178878ae4ab9397c5620422a44b0f24a19df83bd40c",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab20.xlsx",
+      "title": "higheldmd_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/higheldmd_table3.xlsx",
+      "sha256": "b5a194b9c4b7bd3029961367af2b632ab311d1fbe953d540820659a6b09008a0",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab3.xlsx",
+      "title": "higheldmd_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/higheldmd_table8.xlsx",
+      "sha256": "c85b731ea60a00643343a3aeae2bb2e0ed30506a648b33f55f476f35edca17a8",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab8.xlsx",
+      "title": "higheldmd_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highmacro_table1.xlsx",
+      "sha256": "b84621d1df7bd1a5aca4325deaf029d6b2b027c4d0f74a83f6e21b1b8a630de5",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab1.xlsx",
+      "title": "highmacro_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highmacro_table2.xlsx",
+      "sha256": "23409a05c5543014c1799c1d6c9e947eb5069913806b87eb77c2c14260d5bd1a",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab2.xlsx",
+      "title": "highmacro_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highmacro_table20.xlsx",
+      "sha256": "4b1ad513ea57873f6e9c1f398471d566662ea56370c0356c7fc9eab584a586b9",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab20.xlsx",
+      "title": "highmacro_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highmacro_table3.xlsx",
+      "sha256": "4274c56057f7a1acf7af73f871a4c0353ee8b4c90015f3d80df23c917d0dc45e",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab3.xlsx",
+      "title": "highmacro_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highmacro_table8.xlsx",
+      "sha256": "d41e083155fb76a77c032e4f52fbc985e1e3ae807101cbd319d4c6629594c8e4",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab8.xlsx",
+      "title": "highmacro_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highogs_table1.xlsx",
+      "sha256": "8ac95fb60e7fc6cb32a5537b519e36d793e3464866d205f5204797fbb9fa5f45",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab1.xlsx",
+      "title": "highogs_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highogs_table2.xlsx",
+      "sha256": "c4ccd27a66e12d290b4b3f4f0fda9383394f48e294e0c9db4d3a4eaac05be249",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab2.xlsx",
+      "title": "highogs_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highogs_table20.xlsx",
+      "sha256": "72faa844e1e1d3c0026ad210d806a05dda6e0b574d8a25bab7a1551c46177204",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab20.xlsx",
+      "title": "highogs_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highogs_table3.xlsx",
+      "sha256": "1c38582da5e7fb1e3b858ffe1fbc958fdfa03060e3f86a3d0fb71e5626ba2ee3",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab3.xlsx",
+      "title": "highogs_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/highogs_table8.xlsx",
+      "sha256": "4a51504e31cae96750ea791090231ed341771b86cd0bfff7b6340153b792e12d",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab8.xlsx",
+      "title": "highogs_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowZTC_table1.xlsx",
+      "sha256": "177bed235865a8cfc9f791c02eae0030e250b4b56c8d5a8e55e2b247c73fcaae",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab1.xlsx",
+      "title": "lowZTC_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowZTC_table2.xlsx",
+      "sha256": "59e8230dc4af5493563b05e6383efa5839e3faaf3e0040ed7efa51a79ced8b0d",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab2.xlsx",
+      "title": "lowZTC_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowZTC_table20.xlsx",
+      "sha256": "b3a4928aee0df31496267c73403fd1ea0cc66560b68d0b4f959fec50c6b93288",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab20.xlsx",
+      "title": "lowZTC_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowZTC_table3.xlsx",
+      "sha256": "c33e32d2bc5b660fd4b0106f6e2bef2daa9b8d80e083eeefe676980ebca40737",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab3.xlsx",
+      "title": "lowZTC_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowZTC_table8.xlsx",
+      "sha256": "0b591c909970be6bd85d14785337254a253df12157fa2caf4113713487a56722",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab8.xlsx",
+      "title": "lowZTC_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowmacro_table1.xlsx",
+      "sha256": "194d823f10d7244c2270cb3c1753eb9e9cb90734a9cbdd46e766355f7037ee42",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab1.xlsx",
+      "title": "lowmacro_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowmacro_table2.xlsx",
+      "sha256": "858770437c4c4b4192bf93d58c6af2a370542fb3e2a458c3c63cd2f25dbbdfdc",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab2.xlsx",
+      "title": "lowmacro_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowmacro_table20.xlsx",
+      "sha256": "649e6feaf0f877dc35841bdac07d7c49f8e35daf99755d7c957069407a5d7fcd",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab20.xlsx",
+      "title": "lowmacro_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowmacro_table3.xlsx",
+      "sha256": "931f4791d2ff71e4cd2e3bdb90846a5f0b9cb7ee02939c6e60ce01cb59ce18c0",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab3.xlsx",
+      "title": "lowmacro_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowmacro_table8.xlsx",
+      "sha256": "3ea95507ecf260ada7e00dfa6513b84ef8dd67c61a68e797574e4797180a4e2a",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab8.xlsx",
+      "title": "lowmacro_table8.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowogs_table1.xlsx",
+      "sha256": "26fc678cc66d139d2f6626eef5177b1cf5866a3d0be2413707bfbcf6f98a7b54",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab1.xlsx",
+      "title": "lowogs_table1.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowogs_table2.xlsx",
+      "sha256": "aea6cfc6a496d42835e222e4769f9489709c4fd8140674dfd5305b4541f2ce08",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab2.xlsx",
+      "title": "lowogs_table2.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowogs_table20.xlsx",
+      "sha256": "28c164610c589887cad8d038868ac73994c063e1170dfbe69c554330e548bb7b",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab20.xlsx",
+      "title": "lowogs_table20.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowogs_table3.xlsx",
+      "sha256": "7f4b48920db906a8601ffefcf3077f7fbc971c7444e86e4dd7cdecaff0afaa6c",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab3.xlsx",
+      "title": "lowogs_table3.xlsx"
+    },
+    {
+      "file": "environment/input/tables/lowogs_table8.xlsx",
+      "sha256": "c9d1ece62482e98084c3f9143ecc75903c3bfaefb2d185e603ca89e6e48108ca",
+      "url": "https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab8.xlsx",
+      "title": "lowogs_table8.xlsx"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "U.S. federal government works; public domain in the United States"
+}

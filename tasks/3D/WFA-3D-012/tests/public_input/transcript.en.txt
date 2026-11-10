@@ -1,0 +1,2 @@
+line_black: Your flag is hanging.
+line_arbiter: Time. Black wins.

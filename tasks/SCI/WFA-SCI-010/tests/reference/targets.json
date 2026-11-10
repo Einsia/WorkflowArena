@@ -1,0 +1,102 @@
+{
+  "task_id": "WFA-SCI-010",
+  "full_success": {
+    "min_targets_passed": 4
+  },
+  "targets": [
+    {
+      "id": "T1",
+      "file": "T1_coefficients.csv",
+      "mode": "cells",
+      "keys": [
+        "country",
+        "term"
+      ],
+      "values": {
+        "beta": {
+          "atol": 0.01
+        },
+        "se": {
+          "atol": 0.01
+        }
+      },
+      "pass_frac": 0.9
+    },
+    {
+      "id": "T2",
+      "file": "T2_daily_growth.csv",
+      "mode": "cells",
+      "keys": [
+        "country",
+        "date"
+      ],
+      "values": {
+        "growth_with_policy": {
+          "atol": 0.02
+        },
+        "growth_no_policy": {
+          "atol": 0.02
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T3",
+      "file": "T3_projection.csv",
+      "mode": "cells",
+      "keys": [
+        "country",
+        "date"
+      ],
+      "values": {
+        "cum_cases_with_policy": {
+          "log10_atol": 0.05
+        },
+        "cum_cases_no_policy": {
+          "log10_atol": 0.05
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T4",
+      "file": "T4_leave_one_out.csv",
+      "mode": "cells",
+      "keys": [
+        "country",
+        "dropped_unit",
+        "term"
+      ],
+      "values": {
+        "beta": {
+          "atol": 0.01
+        }
+      },
+      "pass_frac": 0.85
+    },
+    {
+      "id": "T5",
+      "file": "T5_sensitivity.csv",
+      "mode": "cells",
+      "keys": [
+        "gamma",
+        "sigma"
+      ],
+      "values": {
+        "predicted_cum_confirmed_cases_true": {
+          "log10_atol": 0.05
+        },
+        "predicted_cum_confirmed_cases_no_policy": {
+          "log10_atol": 0.05
+        },
+        "cases_saved": {
+          "log10_atol": 0.05
+        },
+        "infections_saved": {
+          "log10_atol": 0.05
+        }
+      },
+      "pass_frac": 0.85
+    }
+  ]
+}

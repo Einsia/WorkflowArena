@@ -1,0 +1,2 @@
+BUILD_CMD='cd /work && SETUPTOOLS_SCM_PRETEND_VERSION=0.13.0.dev0 python setup.py build_ext --inplace -j 16'
+IMPORT_CHECK='cd /work && python -c "import statsmodels.api as sm, statsmodels.tsa.api; print(\"import ok\")"'

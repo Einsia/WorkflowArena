@@ -1,0 +1,32 @@
+{
+  "task_id": "WFA-SCI-006",
+  "sources": [
+    {
+      "type": "github",
+      "url": "https://github.com/samplchallenges/SAMPL4",
+      "version": "commit 743a38da2b7dc6e97a14764a54d458f5ba651ae6",
+      "archive_sha256": "ab077c4c3f77c35fea8bd7b67aeb3b8f77e56217a7ee97120946e75a064ae403",
+      "license": "MIT (code) + CC-BY-4.0 (LICENSE_other)",
+      "date": "challenge May-Aug 2013",
+      "paths": [
+        "hydration_free_energy/sampl4_xfer/{blind,supplementary}/title_vs_smiles.txt",
+        "submissions/SAMPL4_share/sampl4_xfer/*.data"
+      ]
+    },
+    {
+      "type": "paper",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4006301/",
+      "doi": "10.1007/s10822-014-9718-2",
+      "used": "Table 1 (official per-submission statistics, 43 entries) and Table 2 (47 scored compounds); parsed from PMC HTML 2026-10-23",
+      "license": "author manuscript (PMC); only numbers used"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/MobleyLab/FreeSolv",
+      "version": "master as of 2026-10-23, database.txt v0.52 (sha256 2d13f095713bc39b85f85dd7b4e5483fbb12fc694bf253bb1d92a4c4d484f260; archive sha256 ca070ff1bb6d7efe96a45e85c2aa49884bf96995dea76c5b8b81cf537951226e)",
+      "license": "CC-BY-4.0 / MIT (FreeSolv LICENSE files; not re-read in detail)",
+      "used": "experimental hydration free energies (truth reconstructed by isomeric-SMILES match)"
+    }
+  ],
+  "release_checksums": "../../../../provenance/files.jsonl (paths relative to the dataset root)"
+}

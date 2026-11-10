@@ -1,0 +1,419 @@
+{
+  "task_id": "WFA-3D-007",
+  "version": "w07-v1 (2026-10-24)",
+  "scoring": "每条判定二元（部分满足即否），连续分=Σweight×pass（0–100）。组级门槛：B01 或 B02 失败→除 B05–B07 外全部记 0（场景组）；manifest 无法解析→M10 记 0。output/scene.blend 缺失或打不开时 B01/B02 失败，按上述门槛处理。评分以 .blend 实测为准；manifest 仅作声明。只有 G14 交评审模型（视觉复核，只扣分，权重 2.5%）；其余 33 条由 checks.py 对 .blend 实测判定。",
+  "tier_counts": {
+    "base": 8,
+    "mid": 12,
+    "gate": 14
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "入口广场区",
+      "units": [
+        "G01",
+        "V01",
+        "F01",
+        "M01",
+        "K01",
+        "K02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "湖区",
+      "units": [
+        "L01",
+        "B01",
+        "B02",
+        "P01",
+        "H01"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东翼",
+      "units": [
+        "R01",
+        "R02",
+        "R03",
+        "R10",
+        "K03"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西翼",
+      "units": [
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "K04"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "北翼",
+      "units": [
+        "R09",
+        "R04",
+        "R11",
+        "R12",
+        "K05"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "contract",
+      "critical": true,
+      "criterion_zh": "scene.blend 可由 Blender 4.3 无修复打开；公制、Unit Scale=1.0；帧范围 1–720；24 fps。",
+      "criterion_en": "scene.blend opens in Blender 4.3; metric, unit scale 1.0; frames 1–720; 24 fps.",
+      "verify": "blender -b output/scene.blend --python 检查 scene.unit_settings.system=='METRIC' 且 scale_length==1.0；frame_start==1、frame_end==720；render.fps==24 且 fps_base==1。",
+      "weight": 3.125
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "contract",
+      "critical": true,
+      "criterion_zh": "集合合同：26 个单元集合名恰好为单元编号且另有 SITE 集合；除 K05 外每个单元集合含至少一个可渲染网格。",
+      "criterion_en": "26 unit collections named exactly by ID plus SITE; every unit collection except K05 contains renderable mesh.",
+      "verify": "bpy.data.collections 名称集合 ⊇ {26 个 ID, 'SITE'}；递归统计各集合 type=='MESH' 且未 hide_render 的物体数 ≥1（K05 不计）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "运动件与入口命名：12 个 <ID>_MAIN 与 12 个 <ID>_ENTRY（空物体）均存在且位于各自集合；R01/R07 有 _CAR01、R02/R09 有 _HORSE01、R05/R10 有 _SEAT01、R06/R11/R08 有 _SUB01。",
+      "criterion_en": "Moving-part and entry naming present in the right collections.",
+      "verify": "按名称查 bpy.data.objects，检查 users_collection 含对应单元集合；_ENTRY 的 type=='EMPTY'。",
+      "weight": 3.125
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "SITE 集合含地面、PATH_E01–PATH_E11 与 12 个 SPUR_<设施ID>。",
+      "criterion_en": "SITE holds ground, PATH_E01–E11 and 12 SPUR_<rideID>.",
+      "verify": "按名称查物体并检查其集合归属为 SITE。",
+      "weight": 3.125
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "renders",
+      "critical": false,
+      "criterion_zh": "renders/overview.png 存在、1920×1080、非空白（亮度标准差 >10）。",
+      "criterion_en": "overview.png exists, 1920×1080, not blank.",
+      "verify": "PIL 读取尺寸；灰度 np.std>10。",
+      "weight": 3.125
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "renders",
+      "critical": false,
+      "criterion_zh": "renders/wing_east.png 与 renders/lake.png 均存在、1920×1080、非空白。",
+      "criterion_en": "wing_east.png and lake.png exist, 1920×1080, not blank.",
+      "verify": "同 B05。",
+      "weight": 3.125
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest.json 可解析，恰含 26 项，id 与 collection 对应，type 与题面表一致，params 含该 type 全部规定字段及 x/y/rot_deg。",
+      "criterion_en": "manifest.json parses, 26 entries, required fields per type present.",
+      "verify": "json.load；按题面字段表逐项检查键存在（值不在本条判定）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "场景无越界与漂浮：各单元集合包围盒落在场地 X∈[-150,150]、Y∈[-135,140]，最低点 z∈[-1.7,0.3]（帧 1）。",
+      "criterion_en": "All unit collections inside site bounds and grounded at frame 1.",
+      "verify": "帧 1 求各集合 AABB；L01 最低点允许至 -1.7。",
+      "weight": 3.125
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "入口广场区（A 区：G01、V01、F01、M01、K01、K02）全部单元已建，平面定位与主要尺寸正确。",
+      "criterion_en": "Zone A (Entrance plaza): all units built, placed and dimensioned correctly.",
+      "verify": "通用测量：bpy 打开 output/scene.blend，scene.frame_set(f) 后用 depsgraph 求 evaluated 网格的世界坐标顶点；集合包围盒=集合内（含子集合）全部 evaluated mesh 顶点的 AABB；计数用“集合内按名称前缀的物体数”或“连通块计数（bmesh 岛）”二者取与图纸一致者，须精确相等。尺寸容差：±3% 或 ±0.3 m 取大者；位置容差：平面 ±1.0 m；角度 ±2°；升降高度 ±0.3 m。 定位：集合（设施取帧1 静止部件）平面中心与答案键 position 距离 ≤1.0 m（设施取地块中心）。尺寸项：G01(G): 总宽、塔身高；V01(V): 面宽×进深、檐高；F01(F): 水池直径；M01(M): 总高、底层边长；K01(K): 面宽×进深、檐高；K02(K): 面宽×进深、檐高。全部满足才通过。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "湖区（B 区：L01、B01、B02、P01、H01）全部单元已建，平面定位与主要尺寸正确。",
+      "criterion_en": "Zone B (Lake): all units built, placed and dimensioned correctly.",
+      "verify": "通用测量：bpy 打开 output/scene.blend，scene.frame_set(f) 后用 depsgraph 求 evaluated 网格的世界坐标顶点；集合包围盒=集合内（含子集合）全部 evaluated mesh 顶点的 AABB；计数用“集合内按名称前缀的物体数”或“连通块计数（bmesh 岛）”二者取与图纸一致者，须精确相等。尺寸容差：±3% 或 ±0.3 m 取大者；位置容差：平面 ±1.0 m；角度 ±2°；升降高度 ±0.3 m。 定位：集合（设施取帧1 静止部件）平面中心与答案键 position 距离 ≤1.0 m（设施取地块中心）。尺寸项：L01(L): 湖面椭圆长短半轴（沿水面网格边界 16 方位采样，径向误差≤0.5 m）与水面标高±0.05；B01(B): 跨度、桥面净宽（B02 按原图纸或变更值均不在本条判定）；B02(B): 跨度、桥面净宽（B02 按原图纸或变更值均不在本条判定）；P01(P): 外接圆直径、总高；H01(H): 面宽×进深、檐高。全部满足才通过。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "东翼（C 区：R01、R02、R03、R10、K03）全部单元已建，平面定位与主要尺寸正确。R04、R10 的平面位置不在本条判定（见 G09），其尺寸仍判定。",
+      "criterion_en": "Zone C (East wing): all units built, placed and dimensioned correctly.",
+      "verify": "通用测量：bpy 打开 output/scene.blend，scene.frame_set(f) 后用 depsgraph 求 evaluated 网格的世界坐标顶点；集合包围盒=集合内（含子集合）全部 evaluated mesh 顶点的 AABB；计数用“集合内按名称前缀的物体数”或“连通块计数（bmesh 岛）”二者取与图纸一致者，须精确相等。尺寸容差：±3% 或 ±0.3 m 取大者；位置容差：平面 ±1.0 m；角度 ±2°；升降高度 ±0.3 m。 定位：集合（设施取帧1 静止部件）平面中心与答案键 position 距离 ≤1.0 m（设施取地块中心）。尺寸项：R01(FW): MAIN 转轮外径（垂直于轮轴方向 AABB 尺寸，帧1）与轮毂中心高（MAIN 原点或转轴 z）；R02(CR): 转盘直径（MAIN 平面 AABB）与包络内总高；R03(PS): 转轴高度（MAIN 旋转枢轴 z）、摆臂长（枢轴至船底，帧1）、船长；R10(CS): 塔高、帧1 座椅所在圆半径（=顶盘半径+链长·sin外摆角）；K03(K): 面宽×进深、檐高。全部满足才通过。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "西翼（D 区：R05、R06、R07、R08、K04）全部单元已建，平面定位与主要尺寸正确。",
+      "criterion_en": "Zone D (West wing): all units built, placed and dimensioned correctly.",
+      "verify": "通用测量：bpy 打开 output/scene.blend，scene.frame_set(f) 后用 depsgraph 求 evaluated 网格的世界坐标顶点；集合包围盒=集合内（含子集合）全部 evaluated mesh 顶点的 AABB；计数用“集合内按名称前缀的物体数”或“连通块计数（bmesh 岛）”二者取与图纸一致者，须精确相等。尺寸容差：±3% 或 ±0.3 m 取大者；位置容差：平面 ±1.0 m；角度 ±2°；升降高度 ±0.3 m。 定位：集合（设施取帧1 静止部件）平面中心与答案键 position 距离 ≤1.0 m（设施取地块中心）。尺寸项：R05(CS): 塔高、帧1 座椅所在圆半径（=顶盘半径+链长·sin外摆角）；R06(TC): 主盘直径；R07(FW): MAIN 转轮外径（垂直于轮轴方向 AABB 尺寸，帧1）与轮毂中心高（MAIN 原点或转轴 z）；R08(FB): 转轴高度、摆臂长（枢轴至盘面，帧1）、转盘直径；K04(K): 面宽×进深、檐高。全部满足才通过。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "北翼（E 区：R09、R04、R11、R12）全部单元已建，平面定位与主要尺寸正确。R04、R10 的平面位置不在本条判定（见 G09），其尺寸仍判定。",
+      "criterion_en": "Zone E (North wing): all units built, placed and dimensioned correctly.",
+      "verify": "通用测量：bpy 打开 output/scene.blend，scene.frame_set(f) 后用 depsgraph 求 evaluated 网格的世界坐标顶点；集合包围盒=集合内（含子集合）全部 evaluated mesh 顶点的 AABB；计数用“集合内按名称前缀的物体数”或“连通块计数（bmesh 岛）”二者取与图纸一致者，须精确相等。尺寸容差：±3% 或 ±0.3 m 取大者；位置容差：平面 ±1.0 m；角度 ±2°；升降高度 ±0.3 m。 定位：集合（设施取帧1 静止部件）平面中心与答案键 position 距离 ≤1.0 m（设施取地块中心）。尺寸项：R09(CR): 转盘直径（MAIN 平面 AABB）与包络内总高；R04(DT): 塔高（集合静止部分最高点）与帧1 吊舱座底 z；R11(TC): 主盘直径；R12(RT): 塔高、舱体外径。全部满足才通过。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "步道网络几何：PATH_E01–E11 中心线与宽度符合 paths.csv（E09 的宽度不在本条判定），面标高 +0.05。",
+      "criterion_en": "Path geometry matches paths.csv (E09 width excluded), surface +0.05.",
+      "verify": "对每个 PATH 物体取 evaluated 顶点：沿中心线法向的最大/最小偏移得宽度（±0.2 m），沿线端点 ±0.5 m；E02 环带内外半径 15/21 ±0.2；顶面 z 0.05±0.05。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "入口点与入口支路：除 R04、R10 外 10 台设施的 <ID>_ENTRY 位于答案键 entry 点，SPUR_<ID> 自入口沿朝向直线连至环园大道中心线、宽 3.0 m。",
+      "criterion_en": "ENTRY empties and spurs of the 10 non-swapped rides are correct.",
+      "verify": "ENTRY 世界坐标与答案键 entry 距离 ≤0.5 m（z 0.05±0.1）；SPUR AABB 与答案键 spur 线段（宽 3.0±0.2）两端 ±0.5 m。依赖包络半径 R 读图正确。设施：R01、R02、R03、R05、R06、R07、R08、R09、R11、R12",
+      "weight": 3.3333
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "动画存在且起点正确：12 个 <ID>_MAIN 在帧 1、241、481、720 的世界矩阵不全相同；帧 1 为图纸起点（转角 0±2°；DT/RT 处于下限 ±0.3 m；PS/FB 摆臂竖直 ±2°；R01/R07 的 CAR01 位于最低点）。",
+      "criterion_en": "All 12 rides animated; frame-1 start poses match sheets.",
+      "verify": "frame_set 后读 matrix_world；转角由 MAIN 局部轴相对静止父级的旋转分解；CAR01 世界 z 在 R01/R07 全部 CAR 中最小。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "摩天轮座舱：R01、R07 的 CAR 物体数等于图纸座舱数，均布于轮缘（到轮轴距离 = 外径/2 ±0.5 m），且在帧 1、181、361、541 均保持竖直（局部 Z 与世界 Z 夹角 ≤5°）。",
+      "criterion_en": "Ferris gondolas: count, rim placement and upright attitude through the run.",
+      "verify": "计数按名称前缀 _CAR；距离=CAR 原点到 MAIN 轮轴线的距离；姿态取 matrix_world 第 3 列与 (0,0,1) 夹角。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest 与实测一致：全部 26 项中，manifest 声明的计数类字段与 .blend 实测相等、尺寸/周期字段与实测在容差内、x/y/rot_deg 与实测定位一致。",
+      "criterion_en": "Manifest declarations agree with measured scene for all 26 units.",
+      "verify": "对每项 params 逐字段与 M01–M05、M11、G01–G05 中的同口径测量比较：x/y、设施 rot_deg（入口方位）、可测尺寸（±3%/±0.3 m）、名称前缀计数（CAR、HORSE 总数、SEAT〔双人座 n 或 2n〕、SUB）、运动声明（用声明周期/方向/幅值预测抽样帧，±3°）、built 与集合有无几何；园区件计数字段（arches、towers、tiers、jets、clock_faces、windows、bays、storeys、rail_posts_per_side、sides、awning_stripes）在 G01–G05 实测与图纸一致时与 manifest 比较。形制字符串与不可测字段不比对。任一不符即否（不判 manifest 是否等于答案键）。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "湖与桥的连接几何：湖心岛半径 10±0.3、岛面 +0.05±0.05；B01 桥面跨 y∈[-6,10]、B02 跨 y∈[30,46]（两端 ±0.3 m），轴线 x=0±0.3。",
+      "criterion_en": "Island and bridge spans correctly located.",
+      "verify": "L01 岛面网格 AABB；B01/B02 桥面网格沿 Y 的范围与中心 x。",
+      "weight": 3.3333
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "朝向：除 R04/R10 外 10 台设施的局部 +X（MAIN 原点→ENTRY 方位）与地块朝向差 ≤2°；G01 长轴沿 X；V01、H01、K01–K04 主立面外法线与 rot_deg 差 ≤10°（主立面 = 带门洞/服务窗/窗/临水平台等特征的一侧）；若某建筑没有任何一侧可由几何特征区分为主立面，本条判否。",
+      "criterion_en": "Ride entrance directions (≤2°) and park-unit main-facade orientations (≤10°) correct; a building whose main facade cannot be identified from its geometry fails.",
+      "verify": "设施：atan2(ENTRY−中心)。建筑依次用：①名称含 window/door/counter/awning/terrace 等关键词的部件相对主体中心的偏移方向；②主体之外凸出物（平台、遮阳篷）使集合中心偏移 >0.3 m 的方向；③四个立面各自的正投影栅格中的窗/门特征数（材质不同、独立部件、凹凸 >0.04 m 或贯通洞口），特征数唯一最多的一侧为主立面。三种方法都无法判定 → fail。",
+      "weight": 3.3333
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "入口广场区（A 区）图纸离散计数全对：G01 拱券 5、塔 4；V01 主立面 2 层 × 每层 8 窗（开间 8）；F01 水盘 3 层、环形喷头 16；M01 逐层收分 3 层、钟面 2（仅南、北两面）；K01 主立面服务窗 1；K02 主立面服务窗 2。形制（塔尖、屋顶）不在本条判定（见 G14）。",
+      "criterion_en": "Zone A discrete counts all correct: G01 5 arches / 4 towers; V01 2 storeys x 8 main-facade windows; F01 3 basin tiers / 16 ring jets; M01 3 tapering tiers / 2 clock faces (N and S only); K01 1 and K02 2 service windows. Roof/spire forms are judged in G14, not here.",
+      "verify": "checks.py 在帧 1 取单元集合全部 evaluated 网格（含集合/几何节点实例）的世界三角形实测：G01 拱券 = z=2.0 水平截面沿门楼长向投影的贯通缺口数（宽 ≥0.8 m），塔 = z=0.75×塔身高(12 m) 截面上宽 ≥1.0 m 的实体段数；V01/K01/K02 窗 = 主立面（rot_deg 方向，带宽 ±0.6 m）正投影栅格（0.1 m）中与墙面不同的连通区（材质不同、独立部件、凹凸 >0.04 m 或贯通洞口四种口径任一给出图纸值即可；尺寸 0.3–3.5 × 0.3–3.0 m，底边 ≥0.25 m 以排除门），V01 按窗中心高度分行，须恰为 [8, 8]；F01 水盘层 = 半径 ≤0.65×池半径、z ≥ 池壁+0.15 的水平面按高度聚类（间隔 >0.3 m、面积 ≥1 m²）的层数，喷头 = 中心半径在 0.55R–(R−0.15) 之间、尺寸 ≤1.5 m 的独立部件数；M01 层数 = 每 0.2 m 水平截面的最小平面尺寸形成的平台段（变化 >0.15 m 分段、段高 ≥1 m）数，钟面 = 顶层四个立面正投影中 1.0–3.8 m 见方的特征区，须南、北各 ≥1、东、西为 0。任一不符即 fail。",
+      "weight": 2.5
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "湖区（B 区）图纸离散特征全对：B01 为拱桥（拱顶升高 1.6±0.3 m）、每侧栏杆立柱 9；B02 为平梁桥（升高 ≤0.15 m）、中间桥墩 2、每侧栏杆立柱 11；P01 平台为 8 边形、柱 8；H01 主立面窗（开间）6、临水平台进深 5.0±0.3 m。湖心岛半径与水位由 M02/M11 判定。屋顶形制见 G14。",
+      "criterion_en": "Zone B discrete features all correct: B01 arch bridge (rise 1.6±0.3 m) with 9 rail posts per side; B02 flat beam bridge (rise ≤0.15 m) on 2 intermediate piers with 11 rail posts per side; P01 8-sided platform with 8 columns; H01 6 main-facade windows and a 5.0±0.3 m lakeside terrace. Island/water are judged in M02/M11, roof forms in G14.",
+      "verify": "checks.py 帧 1 evaluated 三角形实测：桥面纵断面 = 桥轴线竖直截面的顶面高 h(s)，升高 = 跨内最高点 − 两端 0.15 m 处平均；栏杆立柱 = 以 h(s) 为基准、桥面上 0.45 m 截面在两侧边缘带（距桥边 0.6 m 内）沿桥轴的实体段数（每段 ≤0.8 m）；桥墩 = z=−0.7 截面沿桥轴、位于两端 0.8 m 以内的实体段数；P01 边数 = 台基顶下 0.1 m 截面轮廓的极半径曲线（1° 分格）的角点数（起伏 <0.1 m 视为圆形），柱 = 台基顶以上 1.5 m 截面中距中心 ≥1 m、尺寸 ≤1.2 m 的连通块数；H01 窗同 G01 的主立面方法，平台进深 = 全部低于 1.5 m 的三角形沿主立面法向的最远点 − 进深/2。任一不符即 fail。",
+      "weight": 2.5
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "东翼（C 区）可测离散特征全对：R01 座舱 32、转向 cw（自入口看）；R02 木马各圈 [22, 16, 10]、转向 ccw、每圈起伏 4 次；R03 首摆 +X；R10 双人座 SEAT 18 个（36 座）、转向 cw；K03 主立面服务窗 3、遮阳篷条纹 7。",
+      "criterion_en": "Zone C measurable discrete features correct: R01 32 gondolas cw; R02 horse rows [22,16,10] ccw with 4 bobs/rev; R03 first swing +X; R10 36 double seats cw; K03 3 service windows and 7 awning stripes.",
+      "verify": "checks.py 实测：设施部分按名称前缀计数（CAR、SEAT〔双人座按 n 或 2n〕、SUB）、木马按帧 1 半径聚类分圈、转向由帧 7 角度符号（同 G06–G08 口径）、PS/FB 首摆与摆面由帧 7/61 摆角；摊位窗数同 G01 主立面方法，遮阳篷条纹 = 篷体（檐下 0.05–0.75 m）正投影或俯视栅格中同材质（或同部件）连通区的个数。座椅排数/座位数、茶杯数、跳楼机座数以及屋顶/顶棚/座舱形制不在本条判定（形制见 G14）。任一不符即 fail。",
+      "weight": 2.5
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "西翼（D 区）可测离散特征全对：R05 单人座 28、转向 ccw；R06 子盘 4、主盘 cw/子盘 ccw；R07 座舱 15、转向 cw；R08 摆动平面 YZ、首摆 +Y、转盘 cw；K04 主立面服务窗 2、遮阳篷条纹 9。",
+      "criterion_en": "Zone D measurable discrete features correct: R05 28 single seats ccw; R06 4 sub-platters, main cw / sub ccw; R07 15 gondolas cw; R08 swing plane YZ, first swing +Y, disc cw; K04 2 service windows and 9 awning stripes.",
+      "verify": "checks.py 实测：设施部分按名称前缀计数（CAR、SEAT〔双人座按 n 或 2n〕、SUB）、木马按帧 1 半径聚类分圈、转向由帧 7 角度符号（同 G06–G08 口径）、PS/FB 首摆与摆面由帧 7/61 摆角；摊位窗数同 G01 主立面方法，遮阳篷条纹 = 篷体（檐下 0.05–0.75 m）正投影或俯视栅格中同材质（或同部件）连通区的个数。座椅排数/座位数、茶杯数、跳楼机座数以及屋顶/顶棚/座舱形制不在本条判定（形制见 G14）。任一不符即 fail。",
+      "weight": 2.5
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "北翼（E 区）可测离散特征全对：R09 木马各圈 [14, 9]、转向 cw、每圈起伏 2 次；R11 子盘 3、主盘 ccw/子盘 cw；R12 舱体转向 ccw。",
+      "criterion_en": "Zone E measurable discrete features correct: R09 horse rows [14,9] cw with 2 bobs/rev; R11 3 sub-platters, main ccw / sub cw; R12 cabin spin ccw.",
+      "verify": "checks.py 实测：设施部分按名称前缀计数（CAR、SEAT〔双人座按 n 或 2n〕、SUB）、木马按帧 1 半径聚类分圈、转向由帧 7 角度符号（同 G06–G08 口径）、PS/FB 首摆与摆面由帧 7/61 摆角；摊位窗数同 G01 主立面方法，遮阳篷条纹 = 篷体（檐下 0.05–0.75 m）正投影或俯视栅格中同材质（或同部件）连通区的个数。座椅排数/座位数、茶杯数、跳楼机座数以及屋顶/顶棚/座舱形制不在本条判定（形制见 G14）。任一不符即 fail。",
+      "weight": 2.5
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "东翼设施运动学全对：R01、R02、R03、R10 在抽样帧的转角/摆角/升降高度与图纸规律一致，含转向、周期、幅值、相位与分段曲线。",
+      "criterion_en": "Zone C ride kinematics match sheets at sampled frames.",
+      "verify": "抽样帧 61,133,241,361,487,600,720；与 answer-key.json motion_samples 比较：转角（mod 360）±2°，摆角 ±2°（正值=偏向首摆方向），升降 ±0.3 m；TC 子盘取相对主盘角；CR 另检 HORSE01 竖向位移相位（每圈起伏次数）；CS 另检帧 1、361 座椅外摆角 ±2°。全部设施全部抽样帧满足才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "西翼设施运动学全对：R05、R06、R07、R08 在抽样帧的转角/摆角/升降高度与图纸规律一致，含转向、周期、幅值、相位与分段曲线（R07 仅判转向与起点；其周期见 G10）。",
+      "criterion_en": "Zone D ride kinematics match sheets at sampled frames.",
+      "verify": "抽样帧 61,133,241,361,487,600,720；与 answer-key.json motion_samples 比较：转角（mod 360）±2°，摆角 ±2°（正值=偏向首摆方向），升降 ±0.3 m；TC 子盘取相对主盘角；CR 另检 HORSE01 竖向位移相位（每圈起伏次数）；CS 另检帧 1、361 座椅外摆角 ±2°。全部设施全部抽样帧满足才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "北翼设施运动学全对：R09、R04、R11、R12 在抽样帧的转角/摆角/升降高度与图纸规律一致，含转向、周期、幅值、相位与分段曲线。",
+      "criterion_en": "Zone E ride kinematics match sheets at sampled frames.",
+      "verify": "抽样帧 61,133,241,361,487,600,720；与 answer-key.json motion_samples 比较：转角（mod 360）±2°，摆角 ±2°（正值=偏向首摆方向），升降 ±0.3 m；TC 子盘取相对主盘角；CR 另检 HORSE01 竖向位移相位（每圈起伏次数）；CS 另检帧 1、361 座椅外摆角 ±2°。全部设施全部抽样帧满足才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "变更 1 落实：R04 位于 PN2、R10 位于 PE4（中心 ±1.0 m，局部 +X 对准新地块朝向 ±2°）；R04_ENTRY/R10_ENTRY 与 SPUR_R04/SPUR_R10 按新位置重建（答案键 entry/spur ±0.5 m），原位置旧支路不残留。",
+      "criterion_en": "CO item 1: R04/R10 swapped with entries and spurs rebuilt; no stale spurs.",
+      "verify": "答案键：R04 entry {'x': -22.0, 'y': 107.0, 'z': 0.05}，spur {'width': 3.0, 'x1': -22.0, 'y1': 107.0, 'x2': -22.0, 'y2': 95.0}；R10 entry {'x': 65.0, 'y': -26.0, 'z': 0.05}，spur {'width': 3.0, 'x1': 65.0, 'y1': -26.0, 'x2': 75.0, 'y2': -26.0}。旧支路不残留：原状态 R04 在 PE4 的入口为 (59.0,-26.0)，其旧支路落在 R10 新包络内的区段 x∈[59.5,62.5]、y=-26±1.5 处不得有任何步道顶面（原 R10 旧支路被 R04 新支路覆盖，不另检）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "变更 2–4 落实：R07 周期 36 s（帧 241、481 转角 ±2°）；B02 桥面净宽 5.0 m 且 E09 宽 5.0 m（±0.1）；K05 集合为空（无网格）且 manifest 中 K05 built:false。",
+      "criterion_en": "CO items 2–4: R07 period 36 s, B02 and E09 width 5.0 m, K05 cancelled.",
+      "verify": "R07 原图纸周期 32.0 s；按 36 s 期望帧 241 转角 -100.0°、帧 487 为 -202.5°。四项全满足才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "步道网络连通（I1）：自门楼通道 (0,-119) 出发，沿可通行面可到达全部 12 个 <ID>_ENTRY 与湖心岛中心。",
+      "criterion_en": "Walkable network connects gate to all 12 entries and the island.",
+      "verify": "帧 1，将 SITE 的 PATH_*/SPUR_*、B01/B02 桥面、L01 岛面、F01 外环路等顶面 z∈[0,2.0] 且法线 z>0.7 的三角形投影到 0.25 m 栅格并做 8 邻域洪泛；台阶高差 >0.3 m 的相邻格不连通；12 个 ENTRY（须位于答案键 entry ±0.5 m）与 (0,20) 均被到达。",
+      "weight": 2.5
+    },
+    {
+      "id": "G12",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "运行包络与净距（I2/I3）：帧 1–720 每 6 帧抽样，每台设施集合全部顶点位于其包络圆柱内（R、H 各 +0.05）；任意两台设施的扫掠顶点水平距离 ≥3.0 m；设施扫掠顶点到非本设施入口支路的步道/支路/桥面边缘水平距离 ≥1.5 m。",
+      "criterion_en": "Swept geometry stays within envelopes; inter-ride and path clearances hold over the run.",
+      "verify": "120 帧 × 12 设施 evaluated 顶点；包络中心取答案键 position；距离用 scipy cKDTree（设施-设施）与步道多边形的 2D 距离（设施-步道）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G13",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "桥头对接（I4）：B01、B02 各两端桥面顶与相接路面/岛面高差 ≤0.05 m，平面缝隙 ≤0.3 m，桥面与路面无重叠抬升造成的台阶。",
+      "criterion_en": "Bridge heads flush with paths/island (≤0.05 m step, ≤0.3 m gap).",
+      "verify": "帧 1：桥面部件（沿桥轴 16 m、宽≈桥宽）两端 0.3 m 范围内的最高顶点 z，与相接 PATH_E08/E09 顶面、岛面（M11 认定的岛对象顶面；找不到时取岛面附近顶点 z 的中位数）比较，差 ≤0.05；端头沿轴向与相接面边界的缝 ≤0.3 m。（拱桥端头 1 m 内已升高约 0.3 m，故取 0.3 m 带。）",
+      "weight": 2.5
+    },
+    {
+      "id": "G14",
+      "tier": "gate",
+      "group": "visual",
+      "critical": false,
+      "criterion_zh": "视觉复核（只扣分）：overview.png 一眼可辨为色彩明快的主题乐园，12 台设施形态可区分，非白模/单色方块，无大面积穿插或漂浮；渲染图中可见的形制不与图纸明显矛盾（门楼洋葱形塔尖、钟楼圆锥尖顶、V01 四坡顶、H01/K02 双坡顶、K01 圆锥顶、P01 ogee 顶、R02 scallop 顶、R09 onion 顶、R06 有顶棚、R11 无顶棚、R01 封闭座舱、R07 开敞座舱）。看不清的特征不扣分。",
+      "criterion_en": "Visual review (deduct-only): overview.png reads as a bright, colourful theme park with 12 distinguishable rides (not grey-box / single-colour blocks, no large intersections or floating parts), and roof/spire/canopy/gondola forms that are visible in the renders do not clearly contradict the sheets. Features not visible are not penalised.",
+      "verify": "评审模型看 renders/*.png（overview、wing_east、lake）与 .blend 摘要中的对象名；只有在画面空白/白模/大面积穿插漂浮，或某个可见形制与图纸明显矛盾时判否。本条是唯一交评审模型的条目（权重 2.5%）。",
+      "weight": 2.5
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-SCENE",
+    "all_critical_items_must_pass": true
+  }
+}

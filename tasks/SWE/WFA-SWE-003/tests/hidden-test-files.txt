@@ -1,0 +1,4 @@
+pennylane/labs/tests/trotter_error/fragments/test_trotter.py
+pennylane/labs/tests/trotter_error/fragments/test_vibrational.py
+pennylane/labs/tests/trotter_error/fragments/test_vibronic.py
+pennylane/labs/tests/trotter_error/realspace/test_matrix.py

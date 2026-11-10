@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-016",
+  "domain": "FIN",
+  "task_form": "FIN-ACCT",
+  "title": "Halvard Group — FY2026 audit: transaction testing of all seven entities",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "synthetic simulator (SIMCO world)",
+    "url": "",
+    "revision": "scenario simco-09 seed 1909; error seed 9099 (finlegal-v0/simco world generator, built 2026-10-24)",
+    "license": "generated synthetic data (no third-party content)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

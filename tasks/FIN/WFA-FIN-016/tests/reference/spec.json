@@ -1,0 +1,42 @@
+{
+ "tables": [
+  {
+   "file": "findings.csv",
+   "keys": [
+    "entity",
+    "doc_id",
+    "error_type"
+   ],
+   "values": [
+    "expected_value"
+   ],
+   "role": "branch",
+   "text_cols": [
+    "expected_value"
+   ],
+   "lenient_text": true
+  },
+  {
+   "file": "entity_impact.csv",
+   "keys": [
+    "entity"
+   ],
+   "values": [
+    "pretax_misstatement_local",
+    "pretax_misstatement_usd"
+   ],
+   "role": "branch"
+  }
+ ],
+ "summary_roles": {},
+ "hard": [
+  {
+   "name": "deliverables_present",
+   "type": "present",
+   "files": [
+    "findings.csv",
+    "summary.json"
+   ]
+  }
+ ]
+}

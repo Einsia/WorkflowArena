@@ -1,0 +1,98 @@
+{
+ "rules": {
+  "code_persons": [
+   "[被告I]2",
+   "[被告K]2"
+  ]
+ },
+ "note": "",
+ "counts": {
+  "restorations": 0,
+  "code_person_labels": 0,
+  "person_labels": 43,
+  "distinct_person_labels": 14,
+  "masked_chars_to_box": 10,
+  "number_redactions": 3,
+  "left_ambiguous": 2,
+  "number_boundary_splits": 0
+ },
+ "restorations": {},
+ "code_persons": {
+  "[被告I]2": {
+   "label": "案外人甲",
+   "count": 0
+  },
+  "[被告K]2": {
+   "label": "案外人乙",
+   "count": 0
+  }
+ },
+ "persons": {
+  "黄X2": {
+   "label": "黄某甲",
+   "count": 9
+  },
+  "小X4": {
+   "label": "小某甲",
+   "count": 2
+  },
+  "李X2": {
+   "label": "李某甲",
+   "count": 1
+  },
+  "小X3": {
+   "label": "小某乙",
+   "count": 5
+  },
+  "小X2": {
+   "label": "小某丙",
+   "count": 1
+  },
+  "余X": {
+   "label": "余某甲",
+   "count": 2
+  },
+  "余X2": {
+   "label": "余某乙",
+   "count": 1
+  },
+  "禚X": {
+   "label": "禚某甲",
+   "count": 4
+  },
+  "潘X": {
+   "label": "潘某甲",
+   "count": 11
+  },
+  "牛X": {
+   "label": "牛某甲",
+   "count": 2
+  },
+  "罗X": {
+   "label": "罗某甲",
+   "count": 1
+  },
+  "涂X": {
+   "label": "涂某甲",
+   "count": 2
+  },
+  "刘X": {
+   "label": "刘某甲",
+   "count": 1
+  },
+  "比X": {
+   "label": "比某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "布X→布□": 6,
+  "小X→小□": 2,
+  "盖X→盖□": 2
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {
+  "黄X21020": 1,
+  "黄X2": 1
+ }
+}

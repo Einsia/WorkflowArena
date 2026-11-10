@@ -1,0 +1,178 @@
+{
+  "CategoryTheory.GradedObject.HasGoodTensorTensor\u2082\u2083": {
+    "role": "req",
+    "fp": "def 889981467 3449255773"
+  },
+  "CategoryTheory.GradedObject.HasGoodTensor\u2081\u2082Tensor": {
+    "role": "req",
+    "fp": "def 889981467 910567314"
+  },
+  "CategoryTheory.GradedObject.HasLeftTensor\u2083ObjExt": {
+    "role": "dep",
+    "fp": "def 3843258819 744897999"
+  },
+  "CategoryTheory.GradedObject.HasTensor": {
+    "role": "req",
+    "fp": "def 4211404251 1626965249"
+  },
+  "CategoryTheory.GradedObject.HasTensor.match_1": {
+    "role": "dep",
+    "fp": "def 3357648086 4187213614"
+  },
+  "CategoryTheory.GradedObject.HasTensor\u2084ObjExt": {
+    "role": "req",
+    "fp": "def 3821384944 4290418341"
+  },
+  "CategoryTheory.GradedObject.Monoidal.associator": {
+    "role": "req",
+    "fp": "def 4191677923 3937202877"
+  },
+  "CategoryTheory.GradedObject.Monoidal.braiding": {
+    "role": "req",
+    "fp": "def 1439825058 3509906370"
+  },
+  "CategoryTheory.GradedObject.Monoidal.instHasMapProdObjFunctorMapBifunctorCurriedTensorSingle\u2080TensorUnit": {
+    "role": "dep",
+    "fp": "def 3447129258 2192938622"
+  },
+  "CategoryTheory.GradedObject.Monoidal.instHasMapProdObjFunctorMapBifunctorCurriedTensorSingle\u2080TensorUnit_1": {
+    "role": "dep",
+    "fp": "def 2240667617 3406147425"
+  },
+  "CategoryTheory.GradedObject.Monoidal.instHasTensorTensorUnit": {
+    "role": "dep",
+    "fp": "def 1524389695 4019829988"
+  },
+  "CategoryTheory.GradedObject.Monoidal.instHasTensorTensorUnit_1": {
+    "role": "dep",
+    "fp": "def 2675809778 465690418"
+  },
+  "CategoryTheory.GradedObject.Monoidal.leftUnitor": {
+    "role": "dep",
+    "fp": "def 58598441 1865719037"
+  },
+  "CategoryTheory.GradedObject.Monoidal.rightUnitor": {
+    "role": "dep",
+    "fp": "def 1583146688 3046536516"
+  },
+  "CategoryTheory.GradedObject.Monoidal.r\u2081\u2082\u2083": {
+    "role": "dep",
+    "fp": "def 2306667259 3311185268"
+  },
+  "CategoryTheory.GradedObject.Monoidal.r\u2081\u2082\u2083.match_1": {
+    "role": "dep",
+    "fp": "def 1299111381 2195319550"
+  },
+  "CategoryTheory.GradedObject.Monoidal.tensorHom": {
+    "role": "dep",
+    "fp": "def 3811237683 2263091731"
+  },
+  "CategoryTheory.GradedObject.Monoidal.tensorObj": {
+    "role": "req",
+    "fp": "def 2282782299 877856511"
+  },
+  "CategoryTheory.GradedObject.Monoidal.tensorObjDesc": {
+    "role": "dep",
+    "fp": "def 1275482276 2111358397"
+  },
+  "CategoryTheory.GradedObject.Monoidal.tensorUnit": {
+    "role": "dep",
+    "fp": "def 463916665 3499266876"
+  },
+  "CategoryTheory.GradedObject.Monoidal.whiskerLeft": {
+    "role": "req",
+    "fp": "def 1407298285 1227692338"
+  },
+  "CategoryTheory.GradedObject.Monoidal.whiskerRight": {
+    "role": "req",
+    "fp": "def 598834420 3530661046"
+  },
+  "CategoryTheory.GradedObject.Monoidal.\u03b9TensorObj": {
+    "role": "dep",
+    "fp": "def 3386263656 1982086351"
+  },
+  "CategoryTheory.GradedObject.Monoidal.\u03c1\u2081\u2082": {
+    "role": "dep",
+    "fp": "def 4074689033 4111142896"
+  },
+  "CategoryTheory.GradedObject.Monoidal.\u03c1\u2082\u2083": {
+    "role": "dep",
+    "fp": "def 3624141722 501314944"
+  },
+  "CategoryTheory.GradedObject.braidedCategory": {
+    "role": "req",
+    "fp": "def 2760719398 1747179051"
+  },
+  "CategoryTheory.GradedObject.isInitialSingleObjApply": {
+    "role": "dep",
+    "fp": "def 3935632602 2101363330"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorAssociator": {
+    "role": "dep",
+    "fp": "def 1879696993 4121776195"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorLeftUnitor": {
+    "role": "dep",
+    "fp": "def 1606585974 383787059"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorLeftUnitorCofan": {
+    "role": "dep",
+    "fp": "def 4265750600 468892343"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorLeftUnitorCofanIsColimit": {
+    "role": "dep",
+    "fp": "def 2576930410 2212274624"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorObjObjSingle\u2080IsInitial": {
+    "role": "dep",
+    "fp": "def 3196519921 2076005934"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorObjObjSingle\u2080Iso": {
+    "role": "dep",
+    "fp": "def 322616253 3943589399"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorObjSingle\u2080ObjIsInitial": {
+    "role": "dep",
+    "fp": "def 659057350 3833238201"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorObjSingle\u2080ObjIso": {
+    "role": "dep",
+    "fp": "def 2280166550 267770812"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorRightUnitor": {
+    "role": "dep",
+    "fp": "def 4275369998 2727062037"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorRightUnitorCofan": {
+    "role": "dep",
+    "fp": "def 3829316032 1887262707"
+  },
+  "CategoryTheory.GradedObject.mapBifunctorRightUnitorCofanIsColimit": {
+    "role": "dep",
+    "fp": "def 1862794388 3964241154"
+  },
+  "CategoryTheory.GradedObject.monoidalCategory": {
+    "role": "req",
+    "fp": "def 2203304981 3595410509"
+  },
+  "CategoryTheory.GradedObject.single": {
+    "role": "dep",
+    "fp": "def 1303389208 2871339343"
+  },
+  "CategoryTheory.GradedObject.singleObjApplyIso": {
+    "role": "dep",
+    "fp": "def 231520014 1454529018"
+  },
+  "CategoryTheory.GradedObject.singleObjApplyIsoOfEq": {
+    "role": "dep",
+    "fp": "def 347131804 2830858428"
+  },
+  "CategoryTheory.GradedObject.single\u2080": {
+    "role": "dep",
+    "fp": "def 3671762507 1870734881"
+  },
+  "CategoryTheory.GradedObject.symmetricCategory": {
+    "role": "req",
+    "fp": "def 916110245 1148446435"
+  }
+}

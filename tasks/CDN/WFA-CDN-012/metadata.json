@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-012",
+  "domain": "CDN",
+  "task_form": "CDN-DOC",
+  "title": "What the Outlook's Cases Tell a Resource Planner",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "publisher document inputs",
+    "url": "https://www.eia.gov/outlooks/aeo/assumptions/pdf/case_descriptions.pdf",
+    "revision": "2026-10-24",
+    "license": "U.S. federal government works; public domain in the United States",
+    "credits": "environment/CREDITS.md"
+  }
+}

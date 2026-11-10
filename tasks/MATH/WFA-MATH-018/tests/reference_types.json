@@ -1,0 +1,8 @@
+{
+  "NumberField.dedekindZeta": "3652232315",
+  "NumberField.dedekindZeta_residue": "3468814388",
+  "NumberField.dedekindZeta_residue_def": "1811241999",
+  "NumberField.dedekindZeta_residue_ne_zero": "299294285",
+  "NumberField.dedekindZeta_residue_pos": "976645605",
+  "NumberField.tendsto_sub_one_mul_dedekindZeta_nhdsGT": "2897125571"
+}

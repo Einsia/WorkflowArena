@@ -1,0 +1,68 @@
+{
+ "tables": [
+  {
+   "file": "remeasurement.csv",
+   "keys": [
+    "entity",
+    "month",
+    "account",
+    "counterparty"
+   ],
+   "values": [
+    "amount_usd"
+   ],
+   "role": "branch"
+  },
+  {
+   "file": "translated_tb.csv",
+   "keys": [
+    "entity",
+    "account"
+   ],
+   "values": [
+    "amount_usd"
+   ],
+   "role": "branch"
+  },
+  {
+   "file": "cta_rollforward.csv",
+   "keys": [
+    "entity"
+   ],
+   "values": [
+    "cta_opening",
+    "translation_adjustment",
+    "cta_closing",
+    "nci_share_closing",
+    "parent_share_closing"
+   ],
+   "role": "merge"
+  },
+  {
+   "file": "ic_balances_usd.csv",
+   "keys": [
+    "entity",
+    "counterparty",
+    "account"
+   ],
+   "values": [
+    "amount_usd"
+   ],
+   "role": "merge"
+  }
+ ],
+ "summary_roles": {
+  "fx_7200_P": "branch",
+  "fx_7200_S1": "branch",
+  "fx_7200_S2": "branch",
+  "fx_7200_S6": "branch"
+ },
+ "hard": [
+  {
+   "name": "ic_balances_agree_pairwise",
+   "type": "pairwise_ic",
+   "file": "ic_balances_usd.csv",
+   "value": "amount_usd"
+  }
+ ]
+}

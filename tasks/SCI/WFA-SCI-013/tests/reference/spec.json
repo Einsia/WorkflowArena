@@ -1,0 +1,66 @@
+{
+  "task_id": "WFA-SCI-013",
+  "gold_source": "author repository CJBartel/TestStabilityML @4559c918 ml_data/Ef/<experiment>/<model>/ml_results.json (allMP, LiMnTMO stats; re-run of the author hull code reproduces them); U_screen (P2 2026-10-24): author-stored smact predictions re-analysed with the deterministic smallest-space rule stated in the prompt (author code picks a PYTHONHASHSEED-dependent space; stored Table-1 counts 685/528/619 are not reproducible)",
+  "targets": [
+    {
+      "id": "U_allMP_ElFrac",
+      "file": "results.csv",
+      "keys": [
+        "experiment",
+        "model",
+        "metric"
+      ],
+      "value": "value",
+      "gold": "gold/U_allMP_ElFrac.csv",
+      "pass_fraction": 0.8
+    },
+    {
+      "id": "U_LiMnTMO",
+      "file": "results.csv",
+      "keys": [
+        "experiment",
+        "model",
+        "metric"
+      ],
+      "value": "value",
+      "gold": "gold/U_LiMnTMO.csv",
+      "pass_fraction": 0.8
+    },
+    {
+      "id": "U_allMP_Meredig",
+      "file": "results.csv",
+      "keys": [
+        "experiment",
+        "model",
+        "metric"
+      ],
+      "value": "value",
+      "gold": "gold/U_allMP_Meredig.csv",
+      "pass_fraction": 0.8
+    },
+    {
+      "id": "U_allMP_Magpie",
+      "file": "results.csv",
+      "keys": [
+        "experiment",
+        "model",
+        "metric"
+      ],
+      "value": "value",
+      "gold": "gold/U_allMP_Magpie.csv",
+      "pass_fraction": 0.8
+    },
+    {
+      "id": "U_screen",
+      "file": "results.csv",
+      "keys": [
+        "experiment",
+        "model",
+        "metric"
+      ],
+      "value": "value",
+      "gold": "gold/U_screen.csv",
+      "pass_fraction": 0.8
+    }
+  ]
+}

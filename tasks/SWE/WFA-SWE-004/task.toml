@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/pyscf"]
+
+[task]
+name = "WFA-SWE-004"
+version = "0.1.0"
+description = "Extend PySCF molecular GW: exact density-fitted G0W0, contour-deformation GW, evGW and qsGW (R/U)"
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-FEAT"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 7200
+cpus = 24
+memory_mb = 32768
+storage_mb = 20480
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 24
+memory_mb = 32768
+storage_mb = 20480

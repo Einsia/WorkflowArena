@@ -1,0 +1,35 @@
+unit_id,zone,type_name,type,anchor_x,anchor_y,placement_note
+A01,Z7,Apse,APSE,28.00,0.00,apse centre; wall circumradius 7.0
+E01,Z6,Transept bay,TRANSEPT_BAY,0.00,10.50,y 7.0..14.0
+E02,Z6,Transept bay,TRANSEPT_BAY,0.00,17.50,y 14.0..21.0
+E03,Z6,Transept bay,TRANSEPT_BAY,0.00,-10.50,y -14.0..-7.0
+E04,Z6,Transept bay,TRANSEPT_BAY,0.00,-17.50,y -21.0..-14.0
+F01,Z4,Flying buttress group,FLYER,-45.50,12.00,"grid lines 2,3,4,5"
+F02,Z4,Flying buttress group,FLYER,-21.00,12.00,"grid lines 6,7,8"
+F03,Z5,Flying buttress group,FLYER,-45.50,-12.00,"grid lines 2,3,4,5"
+F04,Z5,Flying buttress group,FLYER,-21.00,-12.00,"grid lines 6,7,8"
+K01,Z7,Radiating chapel,CHAPEL,30.68,8.23,axis bearing 72.0 deg from +X
+K02,Z7,Radiating chapel,CHAPEL,36.66,0.00,axis bearing 0.0 deg from +X
+K03,Z7,Radiating chapel,CHAPEL,30.68,-8.23,axis bearing -72.0 deg from +X
+L01,Z4,Aisle segment,AISLE,-49.00,10.50,x -63.0..-35.0
+L02,Z4,Aisle segment,AISLE,-21.00,10.50,x -35.0..-7.0
+L03,Z5,Aisle segment,AISLE,-49.00,-10.50,x -63.0..-35.0
+L04,Z5,Aisle segment,AISLE,-21.00,-10.50,x -35.0..-7.0
+N01,Z2,Nave bay,NAVE_BAY,-59.50,0.00,x -63.0..-56.0
+N02,Z2,Nave bay,NAVE_BAY,-52.50,0.00,x -56.0..-49.0
+N03,Z2,Nave bay,NAVE_BAY,-45.50,0.00,x -49.0..-42.0
+N04,Z2,Nave bay,NAVE_BAY,-38.50,0.00,x -42.0..-35.0
+N05,Z3,Nave bay,NAVE_BAY,-31.50,0.00,x -35.0..-28.0
+N06,Z3,Nave bay,NAVE_BAY,-24.50,0.00,x -28.0..-21.0
+N07,Z3,Nave bay,NAVE_BAY,-17.50,0.00,x -21.0..-14.0
+N08,Z3,Nave bay,NAVE_BAY,-10.50,0.00,x -14.0..-7.0
+P01,Z1,"West front, central block",WEST_FRONT,-67.50,0.00,x -72.0..-63.0
+Q01,Z7,Choir bay,CHOIR_BAY,10.50,0.00,x 7.0..14.0
+Q02,Z7,Choir bay,CHOIR_BAY,17.50,0.00,x 14.0..21.0
+Q03,Z7,Choir bay,CHOIR_BAY,24.50,0.00,x 21.0..28.0
+R01,Z1,Rose window,ROSE,-72.00,0.00,host P01 west face
+R02,Z6,Transept front,TRANSEPT_FRONT,0.00,22.00,outer face y=22.5
+R03,Z6,Transept front,TRANSEPT_FRONT,0.00,-22.00,outer face y=-22.5
+T01,Z1,West tower,TOWER,-67.50,11.50,9.0 x 9.0 footprint
+T02,Z1,West tower,TOWER,-67.50,-11.50,9.0 x 9.0 footprint
+X01,Z6,Crossing & lantern tower,CROSSING,0.00,0.00,x/y -7.0..7.0

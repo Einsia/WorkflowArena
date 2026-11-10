@@ -1,0 +1,13 @@
+{
+  "metric": "aggregate.mean_pearson_TM",
+  "operator": "ge",
+  "threshold": 0.4210790765383644,
+  "reference_count": 26,
+  "baseline_type": "same_targets_recomputed_reference_median",
+  "task_id": "WFA-SCI-002",
+  "equality_passes": true,
+  "coverage": {
+    "metric": "aggregate.n_targets_covered",
+    "required": 12
+  }
+}

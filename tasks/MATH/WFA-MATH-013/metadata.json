@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-013",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Riemann hypothesis for hyperelliptic curves over finite fields (Stepanov's method)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "Mathematical reference for the benchmark proof scaffold",
+    "url": "https://github.com/math-inc/RiemannHypothesisCurves",
+    "revision": "commit c99880dff2a087d59147ab832074379ac28f7e68 (2026-01-16)",
+    "license": "No license to the upstream proof implementation is granted. Lean and fetched dependencies retain their own licenses.",
+    "distribution": "The package contains a theorem statement with a proof hole, Lean project configuration, and the benchmark verifier. The upstream proof implementation is not included."
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

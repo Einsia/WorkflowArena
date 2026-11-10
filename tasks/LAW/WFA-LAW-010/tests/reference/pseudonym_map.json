@@ -1,0 +1,607 @@
+{
+ "A01": {
+  "maud_contract": "contract_114",
+  "entities": [
+   {
+    "original": [
+     "Project Kafka Parent",
+     "Project Kafka Merger Sub",
+     "Project Kafka",
+     "Kafka"
+    ],
+    "pseudonym": "Kintane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Proofpoint"
+    ],
+    "pseudonym": "Fastora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Thoma Bravo"
+    ],
+    "pseudonym": "Lourrell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kintane": 6,
+   "Fastora": 6,
+   "Lourrell": 4,
+   "fastora": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 10,
+   "signatures": 0,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_113",
+  "entities": [
+   {
+    "original": [
+     "Eli Lilly and Company",
+     "Eli Lilly",
+     "Lilly"
+    ],
+    "pseudonym": "Laedis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Tyto Acquisition"
+    ],
+    "pseudonym": "Molvell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Prevail Therapeutics",
+     "Prevail"
+    ],
+    "pseudonym": "Dindis",
+    "original_abbr": [
+     "PR001",
+     "PR004",
+     "PR006"
+    ],
+    "pseudonym_abbr": "DND"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Laedis": 7,
+   "Molvell": 3,
+   "Dindis": 4,
+   "DND": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 3,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_48",
+  "entities": [
+   {
+    "original": [
+     "Eidos Therapeutics",
+     "Eidos"
+    ],
+    "pseudonym": "Sonton",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "BridgeBio Pharma",
+     "BridgeBio"
+    ],
+    "pseudonym": "Noundix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Globe Merger Sub"
+    ],
+    "pseudonym": "Draentyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Sonton": 3,
+   "Noundix": 5,
+   "Draentyn": 6,
+   "noundix": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_27",
+  "entities": [
+   {
+    "original": [
+     "Coherent"
+    ],
+    "pseudonym": "Dunyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "II-VI"
+    ],
+    "pseudonym": "Stionent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Watson Merger Sub"
+    ],
+    "pseudonym": "Rodex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Finisar"
+    ],
+    "pseudonym": "Tinteth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Dunyn": 8,
+   "Stionent": 7,
+   "Rodex": 3,
+   "Tinteth": 4,
+   "dunyn": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 8,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_117",
+  "entities": [
+   {
+    "original": [
+     "Diamondback Energy",
+     "Diamondback"
+    ],
+    "pseudonym": "Tealvara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bohemia Merger Sub"
+    ],
+    "pseudonym": "Sendis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "QEP Resources"
+    ],
+    "pseudonym": "Naedyn",
+    "original_abbr": [
+     "QEP"
+    ],
+    "pseudonym_abbr": "NDY"
+   },
+   {
+    "original": [
+     "Viper Energy Partners",
+     "Viper"
+    ],
+    "pseudonym": "Loustur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Rattler Midstream",
+     "Rattler"
+    ],
+    "pseudonym": "Nantova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Tealvara": 5,
+   "Sendis": 3,
+   "Naedyn": 10,
+   "Loustur": 9,
+   "Nantova": 9
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_122",
+  "entities": [
+   {
+    "original": [
+     "Viasat"
+    ],
+    "pseudonym": "Braevix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Royal Acquisition Sub"
+    ],
+    "pseudonym": "Balvell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "RigNet",
+     "Intelie"
+    ],
+    "pseudonym": "Piris",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Braevix": 4,
+   "Balvell": 3,
+   "Piris": 10
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_119",
+  "entities": [
+   {
+    "original": [
+     "Raven Industries",
+     "Raven"
+    ],
+    "pseudonym": "Vaistara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "CNH Industrial South Dakota",
+     "CNH Industrial"
+    ],
+    "pseudonym": "Trindis",
+    "original_abbr": [
+     "CNH"
+    ],
+    "pseudonym_abbr": "TRN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vaistara": 5,
+   "Trindis": 8
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 3
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_124",
+  "entities": [
+   {
+    "original": [
+     "First Bancorp",
+     "First Bank"
+    ],
+    "pseudonym": "Naesis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Select Bancorp",
+     "Select Bank & Trust Company",
+     "Select Bank"
+    ],
+    "pseudonym": "Broundane",
+    "original_abbr": [
+     "SB"
+    ],
+    "pseudonym_abbr": "BRN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Broundane": 10,
+   "Naesis": 13,
+   "BRN": 959
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 0,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_67",
+  "entities": [
+   {
+    "original": [
+     "HMS Holdings"
+    ],
+    "pseudonym": "Lorkis",
+    "original_abbr": [
+     "HMS"
+    ],
+    "pseudonym_abbr": "LRK"
+   },
+   {
+    "original": [
+     "Gainwell Acquisition",
+     "Gainwell Intermediate Holding",
+     "Gainwell"
+    ],
+    "pseudonym": "Houdis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Mustang MergerCo"
+    ],
+    "pseudonym": "Contur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Veritas Capital Fund",
+     "Veritas Capital",
+     "Veritas"
+    ],
+    "pseudonym": "Lomur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Houdis": 8,
+   "Contur": 3,
+   "Lorkis": 4,
+   "Lomur": 2
+  },
+  "redactions": {
+   "urls": 2,
+   "emails": 7,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_71",
+  "entities": [
+   {
+    "original": [
+     "Iconix Brand Group",
+     "Iconix Acquisition",
+     "Iconix Merger Sub",
+     "Iconix"
+    ],
+    "pseudonym": "Drilis",
+    "original_abbr": [
+     "IBG"
+    ],
+    "pseudonym_abbr": "DRL"
+   },
+   {
+    "original": [
+     "Umbro"
+    ],
+    "pseudonym": "Theamane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Ecko"
+    ],
+    "pseudonym": "Croulvon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Danskin"
+    ],
+    "pseudonym": "Brostion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Candie’s",
+     "Candie's",
+     "Candies"
+    ],
+    "pseudonym": "Hirrora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Lancer Capital",
+     "Lancer"
+    ],
+    "pseudonym": "Rusova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Drilis": 17,
+   "Rusova": 1,
+   "Theamane": 1,
+   "Croulvon": 1,
+   "Brostion": 1,
+   "Hirrora": 1,
+   "DRL": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_44",
+  "entities": [
+   {
+    "original": [
+     "Bridge Bancorp",
+     "BNB Bank",
+     "Bridgehampton"
+    ],
+    "pseudonym": "Trustis",
+    "original_abbr": [
+     "BNB"
+    ],
+    "pseudonym_abbr": "TRS"
+   },
+   {
+    "original": [
+     "Dime Community Bancshares",
+     "Dime Community Bank",
+     "Dime Community",
+     "Dime"
+    ],
+    "pseudonym": "Queasova",
+    "original_abbr": [
+     "DCB"
+    ],
+    "pseudonym_abbr": "QSV"
+   }
+  ],
+  "tickers": {
+   "DCOM": "SMX"
+  },
+  "replacements_by_pseudonym": {
+   "Trustis": 1097,
+   "Queasova": 83,
+   "QSV": 1073,
+   "SMX": 2,
+   "TRS": 13
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 0
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_137",
+  "entities": [
+   {
+    "original": [
+     "RMR Mortgage Trust",
+     "The RMR Group",
+     "Tremont Realty Advisors",
+     "RMR"
+    ],
+    "pseudonym": "Pimur",
+    "original_abbr": [
+     "RMRM"
+    ],
+    "pseudonym_abbr": "PMR"
+   },
+   {
+    "original": [
+     "Tremont Mortgage Trust",
+     "Tremont"
+    ],
+    "pseudonym": "Calvur",
+    "original_abbr": [
+     "TRMT"
+    ],
+    "pseudonym_abbr": "CLV"
+   }
+  ],
+  "tickers": {
+   "SHRC": "FNTY"
+  },
+  "replacements_by_pseudonym": {
+   "Pimur": 8,
+   "Calvur": 4,
+   "CLV": 1079,
+   "PMR": 1070,
+   "FNTY": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 4
+  }
+ }
+}

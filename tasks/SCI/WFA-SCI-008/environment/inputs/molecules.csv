@@ -1,0 +1,12 @@
+id,isomeric_smiles
+LP01,c1ccc2c(c1)c(ncn2)Nc3cccc(c3)C(F)(F)F
+LP02,c1ccc2c(c1)c(ncn2)NCc3ccc(cc3)Cl
+LP03,c1ccc(cc1)CNc2c3ccccc3ncn2
+LP04,Cc1ccc2c(c1)c(c(c(=O)[nH]2)CC(=O)O)c3ccccc3
+LP05,COc1cccc(c1)Nc2c3ccccc3ncn2.Cl
+LP06,c1ccc(cc1)n2c3c(cn2)c(ncn3)N
+LP07,c1ccc2c(c1)c(ncn2)Nc3cccc(c3)Cl.Cl
+LP08,Cc1cccc(c1)Nc2c3cc(c(cc3ncn2)OC)OC
+LP09,c1ccc(cc1)n2cnc3c2ccc(c3)N
+LP10,c1ccc2c(c1)ncn2c3ccc(cc3)O
+LP11,c1cc(c(c(c1)Cl)C(=O)Nc2ccncc2)Cl

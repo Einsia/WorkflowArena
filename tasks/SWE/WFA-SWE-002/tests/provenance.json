@@ -1,0 +1,10 @@
+{
+  "source_url": "https://github.com/astropy/astropy/pull/11127",
+  "repo": "https://github.com/astropy/astropy",
+  "merge_commit": "dc3927e01c9e8e57ac5552dbcd97aa0205dd5a30",
+  "start_commit": "d3c8efb5fc82d5e9997263829c62ca459647591e",
+  "reference_patch_sha256": "70277b6154a6b7c268a3407c8a2fd8dfdfdf4cd0e5baac2f86385e3e9210a712",
+  "license": "BSD-3-Clause",
+  "retrieved": "2026-10-23",
+  "bench_overlap_check": "PR 编号不在 SWE-bench(test)、FEA-Bench、AInsteinBench(msb) 清单中；SWE-bench Science 只含 issue 级修复题（按标题人工比对无重叠）"
+}

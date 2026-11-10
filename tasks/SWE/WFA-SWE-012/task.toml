@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-012"
+version = "0.1.0"
+description = "Re-implement a shell's tab-completion engine behind the contract it already has: cursor-site classification, per-source completers, matching and ranking, the user-completer protocol, caching and the background worker."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out"
+language = "Rust"
+source_repo = "nushell/nushell"
+base_tag = "0.116.1"
+carved_files = 22
+carved_code_lines = 6405
+carved_raw_lines = 7819
+stubbed_function_bodies = 275
+contract_symbols = 64
+lines_per_contract_symbol = 100
+required_tests = 307
+regression_tests = 165
+inline_tests_removed_with_implementation = 23
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 5400
+cpus = 16
+memory_mb = 32768
+storage_mb = 51200
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

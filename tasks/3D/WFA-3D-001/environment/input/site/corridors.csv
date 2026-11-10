@@ -1,0 +1,9 @@
+id,name_zh,end_A_unit,end_A_gable,end_B_unit,end_B_gable,corner_x_m,corner_y_m,mirror_pair
+LW01,东南廊,MN02,E,PD01,S,75,60,LW02
+LW02,西南廊,MN02,W,PD02,S,-75,60,LW01
+LW03,东中廊,PD01,N,PD03,S,,,LW04
+LW04,西中廊,PD02,N,PD04,S,,,LW03
+LW05,东北廊,PD03,N,DN03,E,75,225,LW06
+LW06,西北廊,PD04,N,DN03,W,-75,225,LW05
+LW07,东寝廊,DN04,E,PD05,S,50,310,LW08
+LW08,西寝廊,DN04,W,PD06,S,-50,310,LW07

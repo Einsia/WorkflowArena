@@ -1,0 +1,52 @@
+{
+ "note": "Signed trial-balance amounts in USD (debit positive, credit negative) as at 31 Dec 2025.",
+ "foreign_subsidiaries": {
+  "S3": {
+   "functional_currency": "EUR",
+   "historical_rate_share_capital": 1.124,
+   "common_stock_usd": "-899200.00",
+   "apic_usd": "-4720800.00",
+   "retained_earnings_opening_usd": "-70804.02",
+   "cta_opening_usd": "196060.61"
+  },
+  "S4": {
+   "functional_currency": "JPY",
+   "historical_rate_share_capital": 0.00912,
+   "common_stock_usd": "-912000.00",
+   "apic_usd": "-5928000.00",
+   "retained_earnings_opening_usd": "-2666092.44",
+   "cta_opening_usd": "2257174.75"
+  }
+ },
+ "investment_cost_in_P_books": {
+  "S1": "15000000.00",
+  "S2": "6400000.00",
+  "S3": "3934000.00",
+  "S4": "6840000.00",
+  "S6": "15000000.00"
+ },
+ "designated_loan_S6_to_S3_cumulative_fx_in_profit_or_loss_through_2025": "-66956.32",
+ "opening_consolidated_trial_balance": {
+  "1000": "51024651.55",
+  "1100": "6973301.95",
+  "1300": "4266093.88",
+  "1600": "4693875.67",
+  "1610": "15333185.49",
+  "1620": "6266439.44",
+  "1650": "-4572018.28",
+  "2000": "-1619006.37",
+  "2200": "-772514.95",
+  "2300": "-371062.50",
+  "2350": "-384670.06",
+  "2400": "-12166000.00",
+  "3000": "-5000000.00",
+  "3100": "-40000000.00",
+  "3200": "-22306346.15",
+  "3400": "2327460.86",
+  "3500": "-3693390.53"
+ },
+ "opening_nci_by_subsidiary": {
+  "S2": "-2051379.35",
+  "S3": "-1642011.18"
+ }
+}

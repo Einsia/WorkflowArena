@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-015",
+  "src": "train-17534",
+  "case_no": "（2018）浙0206刑初533号",
+  "year": 2018,
+  "n_defendants": 18,
+  "charges": [
+    "故意伤害罪",
+    "诈骗罪"
+  ],
+  "n_principal": 12,
+  "n_accessory": 6,
+  "n_role_items": 18,
+  "n_leaders": 0,
+  "facts_chars": 30261,
+  "n_probation_graded": 5
+}

@@ -1,0 +1,16 @@
+{
+  "distribution": "upstream-fetch",
+  "destination": "input",
+  "files": [
+    {
+      "target": "appendix-e.pdf",
+      "url": "https://www.csb.gov/assets/1/20/didion_appendix_e_abs_blast_analysis_final_report_r0_9-19-182.pdf",
+      "sha256": "28ca94249a2d05c9c4c67a8f86b105638ab83703f14286efe8f3237a21f900d2"
+    },
+    {
+      "target": "appendix-g.pdf",
+      "url": "https://www.csb.gov/assets/1/20/didion_appendix_g_dust_explosibility_testing_report.pdf",
+      "sha256": "a445ff099b9cd2cbbfa6b4b79b795a9986b973ef2142403515536b34d84ec9b7"
+    }
+  ]
+}

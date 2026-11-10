@@ -1,0 +1,966 @@
+{
+ "A01": {
+  "maud_contract": "contract_111",
+  "entities": [
+   {
+    "original": [
+     "Lake Holdings",
+     "Lake Guarantor",
+     "Lake Merger Sub"
+    ],
+    "pseudonym": "Creavora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Pluralsight"
+    ],
+    "pseudonym": "Stourent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Vista Equity Partners",
+     "Vista"
+    ],
+    "pseudonym": "Stulent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Creavora": 12,
+   "Stourent": 10,
+   "Stulent": 4,
+   "stourent": 1
+  },
+  "redactions": {
+   "urls": 2,
+   "emails": 11,
+   "signatures": 6,
+   "name_fields": 6,
+   "attention_fields": 5
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_12",
+  "entities": [
+   {
+    "original": [
+     "BioTelemetry"
+    ],
+    "pseudonym": "Trolvix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Koninklijke Philips",
+     "Philips Holding USA",
+     "Philips"
+    ],
+    "pseudonym": "Standur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Davies Merger Sub"
+    ],
+    "pseudonym": "Zaidell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Trolvix": 5,
+   "Standur": 8,
+   "Zaidell": 4,
+   "standur": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 6,
+   "signatures": 5,
+   "name_fields": 7,
+   "attention_fields": 4
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_69",
+  "entities": [
+   {
+    "original": [
+     "Hill-Rom Holdings",
+     "Hill-Rom"
+    ],
+    "pseudonym": "Traithell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Baxter International",
+     "Baxter"
+    ],
+    "pseudonym": "Thulvora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bel Air Subsidiary"
+    ],
+    "pseudonym": "Stondyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Traithell": 11,
+   "Thulvora": 5,
+   "Stondyn": 3,
+   "thulvora": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 3
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_49",
+  "entities": [
+   {
+    "original": [
+     "Razorback Technology",
+     "Razorback"
+    ],
+    "pseudonym": "Truthex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Endurance International Group",
+     "Endurance"
+    ],
+    "pseudonym": "Mearrova",
+    "original_abbr": [
+     "EIGI",
+     "EIG"
+    ],
+    "pseudonym_abbr": "MRR"
+   },
+   {
+    "original": [
+     "Clearlake Capital",
+     "Clearlake"
+    ],
+    "pseudonym": "Harell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Siris Capital",
+     "Siris"
+    ],
+    "pseudonym": "Quiothis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Mearrova": 7,
+   "Truthex": 6,
+   "Harell": 6,
+   "MRR": 3,
+   "mearrova": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_3",
+  "entities": [
+   {
+    "original": [
+     "Carter Intermediate",
+     "Carter Acquisition"
+    ],
+    "pseudonym": "Kantion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Aegion"
+    ],
+    "pseudonym": "Drodane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kantion": 14,
+   "Drodane": 8,
+   "drodane": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 9,
+   "name_fields": 9,
+   "attention_fields": 4
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_110",
+  "entities": [
+   {
+    "original": [
+     "Perspecta",
+     "DXC"
+    ],
+    "pseudonym": "Sastion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Peraton"
+    ],
+    "pseudonym": "Vantara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Jaguar ParentCo",
+     "Jaguar Merger Sub",
+     "Jaguar"
+    ],
+    "pseudonym": "Braelvent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Veritas Capital Fund",
+     "Veritas Capital",
+     "Veritas"
+    ],
+    "pseudonym": "Trasell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Sastion": 9,
+   "Braelvent": 6,
+   "Vantara": 3,
+   "Trasell": 4,
+   "sastion": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_38",
+  "entities": [
+   {
+    "original": [
+     "Sunshine Software"
+    ],
+    "pseudonym": "Drethix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cornerstone OnDemand",
+     "Cornerstone"
+    ],
+    "pseudonym": "Troneth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Clearlake Capital",
+     "Clearlake"
+    ],
+    "pseudonym": "Lostell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Troneth": 9,
+   "Drethix": 6,
+   "Lostell": 17,
+   "lostell": 2
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_92",
+  "entities": [
+   {
+    "original": [
+     "Meredith Holdings",
+     "Meredith"
+    ],
+    "pseudonym": "Thiondyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "WNEM-TV",
+     "WSHM-LD",
+     "WGGB-TV"
+    ],
+    "pseudonym": "Queantane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Gray Television",
+     "Gray Hawkeye Stations",
+     "Gray"
+    ],
+    "pseudonym": "Kainon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kainon": 15,
+   "Thiondyn": 16,
+   "Queantane": 6
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 0,
+   "signatures": 6,
+   "name_fields": 6,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_97",
+  "entities": [
+   {
+    "original": [
+     "Navistar International",
+     "Navistar",
+     "NAVMOT"
+    ],
+    "pseudonym": "Casis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "TRATON",
+     "Traton"
+    ],
+    "pseudonym": "Brerara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Dusk Inc",
+     "Dusk"
+    ],
+    "pseudonym": "Breamex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Volkswagen"
+    ],
+    "pseudonym": "Raerkent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Casis": 40,
+   "Brerara": 4,
+   "Breamex": 3,
+   "brerara": 2,
+   "casis": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 6,
+   "name_fields": 6,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_95",
+  "entities": [
+   {
+    "original": [
+     "Tyler Technologies",
+     "Tyler"
+    ],
+    "pseudonym": "Douleth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Topos Acquisition"
+    ],
+    "pseudonym": "Lerkis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "NIC Inc"
+    ],
+    "pseudonym": "Groulion",
+    "original_abbr": [
+     "NIC"
+    ],
+    "pseudonym_abbr": "GRL"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Douleth": 413,
+   "Lerkis": 5,
+   "Groulion": 10,
+   "GRL": 1401
+  },
+  "redactions": {
+   "urls": 2,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_63",
+  "entities": [
+   {
+    "original": [
+     "General Finance",
+     "Pac-Van",
+     "Royal Wolf"
+    ],
+    "pseudonym": "Feameth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "United Rentals (North America)",
+     "United Rentals",
+     "UR Merger Sub"
+    ],
+    "pseudonym": "Maendara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Feameth": 5,
+   "Maendara": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 5,
+   "name_fields": 5,
+   "attention_fields": 4
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_116",
+  "entities": [
+   {
+    "original": [
+     "QAD"
+    ],
+    "pseudonym": "Vendell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Project Quick Ultimate Parent",
+     "Project Quick Parent",
+     "Project Quick Merger Sub",
+     "Project Quick"
+    ],
+    "pseudonym": "Thulane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Thoma Bravo"
+    ],
+    "pseudonym": "Zoulvur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vendell": 6,
+   "Thulane": 7,
+   "Zoulvur": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A13": {
+  "maud_contract": "contract_120",
+  "entities": [
+   {
+    "original": [
+     "Mirasol Parent",
+     "Mirasol Merger Sub",
+     "Mirasol"
+    ],
+    "pseudonym": "Laerara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "RealPage"
+    ],
+    "pseudonym": "Zaerkyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Thoma Bravo"
+    ],
+    "pseudonym": "Crostent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Laerara": 6,
+   "Zaerkyn": 5,
+   "Crostent": 10,
+   "zaerkyn": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 9,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A14": {
+  "maud_contract": "contract_99",
+  "entities": [
+   {
+    "original": [
+     "Newport Holdings",
+     "Newport Merger Sub",
+     "Newport"
+    ],
+    "pseudonym": "Salvara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "The New Home Company",
+     "New Home Company",
+     "New Home"
+    ],
+    "pseudonym": "Grolvis",
+    "original_abbr": [
+     "TNHC"
+    ],
+    "pseudonym_abbr": "GRL"
+   },
+   {
+    "original": [
+     "Apollo"
+    ],
+    "pseudonym": "Laestion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Salvara": 9,
+   "Grolvis": 5,
+   "Laestion": 11,
+   "laestion": 2,
+   "GRL": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A15": {
+  "maud_contract": "contract_55",
+  "entities": [
+   {
+    "original": [
+     "Amgen"
+    ],
+    "pseudonym": "Touthora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Franklin Acquisition Sub"
+    ],
+    "pseudonym": "Prouvix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Five Prime Therapeutics",
+     "Five Prime"
+    ],
+    "pseudonym": "Gaithell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Touthora": 5,
+   "Prouvix": 3,
+   "Gaithell": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A16": {
+  "maud_contract": "contract_133",
+  "entities": [
+   {
+    "original": [
+     "Telenav99",
+     "Telenav",
+     "TeleNav"
+    ],
+    "pseudonym": "Colent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "V99"
+    ],
+    "pseudonym": "Souvon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Souvon": 6,
+   "Colent": 13,
+   "colent": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 6,
+   "name_fields": 6,
+   "attention_fields": 5
+  }
+ },
+ "A17": {
+  "maud_contract": "contract_7",
+  "entities": [
+   {
+    "original": [
+     "IRC Superman Midco",
+     "Superman Merger Sub",
+     "Superman",
+     "Innovative Renal Care"
+    ],
+    "pseudonym": "Gundora",
+    "original_abbr": [
+     "IRC"
+    ],
+    "pseudonym_abbr": "GND"
+   },
+   {
+    "original": [
+     "American Renal Associates Holdings",
+     "American Renal Associates",
+     "American Renal"
+    ],
+    "pseudonym": "Kourkis",
+    "original_abbr": [
+     "ARA"
+    ],
+    "pseudonym_abbr": "KRK"
+   },
+   {
+    "original": [
+     "Nautic Partners",
+     "Nautic"
+    ],
+    "pseudonym": "Ferrion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Centerbridge Capital Partners",
+     "Centerbridge"
+    ],
+    "pseudonym": "Drisur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Gundora": 7,
+   "Kourkis": 8,
+   "Ferrion": 6,
+   "Drisur": 7,
+   "ferrion": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A18": {
+  "maud_contract": "contract_47",
+  "entities": [
+   {
+    "original": [
+     "Echo Global Logistics",
+     "Echo"
+    ],
+    "pseudonym": "Paenex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Einstein MidCo",
+     "Einstein Merger Sub",
+     "Einstein"
+    ],
+    "pseudonym": "Hondion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Resolute Fund",
+     "The Jordan Company"
+    ],
+    "pseudonym": "Dourkane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Paenex": 6,
+   "Hondion": 6,
+   "Dourkane": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 3
+  }
+ },
+ "A19": {
+  "maud_contract": "contract_26",
+  "entities": [
+   {
+    "original": [
+     "Sky Parent",
+     "Project Sky Merger Sub",
+     "Project Sky"
+    ],
+    "pseudonym": "Besteth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cloudera",
+     "Hortonworks",
+     "Gazzang"
+    ],
+    "pseudonym": "Fearrora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Kohlberg Kravis Roberts",
+     "KKR"
+    ],
+    "pseudonym": "Pasane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Clayton, Dubilier & Rice",
+     "CD&R"
+    ],
+    "pseudonym": "Goument",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Besteth": 6,
+   "Fearrora": 9,
+   "Goument": 2,
+   "Pasane": 3,
+   "fearrora": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 11,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 6
+  }
+ },
+ "A20": {
+  "maud_contract": "contract_60",
+  "entities": [
+   {
+    "original": [
+     "Front Yard Residential",
+     "Front Yard"
+    ],
+    "pseudonym": "Thairrane",
+    "original_abbr": [
+     "FYR"
+    ],
+    "pseudonym_abbr": "THR"
+   },
+   {
+    "original": [
+     "Pretium Midway Holdco",
+     "Pretium",
+     "Midway AcquisitionCo",
+     "Midway"
+    ],
+    "pseudonym": "Stundora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Altisource"
+    ],
+    "pseudonym": "Vathyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Ares Management",
+     "Ares"
+    ],
+    "pseudonym": "Greathex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Thairrane": 13,
+   "Stundora": 33,
+   "THR": 3,
+   "Greathex": 6,
+   "Vathyn": 1,
+   "stundora": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 9,
+   "name_fields": 9,
+   "attention_fields": 4
+  }
+ }
+}

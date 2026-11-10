@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-016",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "High-dimensional geometry of population responses of ~10,000 neurons in mouse primary visual cortex: cross-validated PCA spectra and power-law exponents (paper reproduction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal paper + figshare data + author MATLAB code",
+    "url": "https://github.com/MouseLand/stringer-pachitariu-et-al-2018b",
+    "revision": "commit 58443d1461830315fb35ddfd49c1078228590c4a; figshare 6845348 v4",
+    "license": "CC-BY-NC-4.0 (Figshare data); GPL-3.0 (upstream code)",
+    "license_evidence": "https://github.com/MouseLand/stringer-pachitariu-et-al-2018b/blob/58443d1461830315fb35ddfd49c1078228590c4a/LICENSE",
+    "distribution": "companion-assets",
+    "preparation": "environment/fetch/sources.json"
+  }
+}

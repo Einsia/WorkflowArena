@@ -1,0 +1,172 @@
+{
+  "task_id": "WFA-CDN-001",
+  "title": "Sintel (2010)",
+  "creator": "Blender Foundation / Durian Open Movie Project",
+  "source_url": "https://durian.blender.org",
+  "license": "CC-BY-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "license_evidence": "https://durian.blender.org/sharing/",
+  "modifications": "silent, letterboxed 1280x720, 30 fps CFR, SAR 1:1, libx264 veryfast CRF17, all container/x264-info metadata stripped; synthetic kinds: shake/pullout/pan/zoom (see build_inputs.py)",
+  "files": [
+    {
+      "file": "environment/input/01.mp4",
+      "sha256": "67c77a0fa9e4aebb00462538f1161d007d64313e3e17038bdec07f6d3ab33ed0"
+    },
+    {
+      "file": "environment/input/02.mp4",
+      "sha256": "3933e640c9771d174b40a86821d5bb5b7cdf5bf9eaea1c93e5708ad8c34a73d3"
+    },
+    {
+      "file": "environment/input/03.mp4",
+      "sha256": "cd1a9bad052176321e11659632c21cb310784a090d6d8c907223ca5577869700"
+    },
+    {
+      "file": "environment/input/04.mp4",
+      "sha256": "fa4e243c720720c6d2b1ec49f3165495b0f1d943813a8122f8cbdb466fb96a0c"
+    },
+    {
+      "file": "environment/input/05.mp4",
+      "sha256": "7526e2304d1d656a874be6709e4b7ce8ef2e449e1f52181509e521131af6751b"
+    },
+    {
+      "file": "environment/input/06.mp4",
+      "sha256": "fe1f257533264875cbd05c2e0c9a61a1980b8d101eab92ff64e8f13870a391ec"
+    },
+    {
+      "file": "environment/input/07.mp4",
+      "sha256": "66acd808f6fc996567e1b83d7e28008c9a36c0e9ae0133329ba087ef2795692d"
+    },
+    {
+      "file": "environment/input/08.mp4",
+      "sha256": "7f18e4899e0d23bc6855627bebeda25f1a2002dd20d1f31bced38b8c47e083ee"
+    },
+    {
+      "file": "environment/input/09.mp4",
+      "sha256": "123f55c4a006e72082767b20c7f19d2a6b11bb4672f9f5abd87a2da48b510efb"
+    },
+    {
+      "file": "environment/input/10.mp4",
+      "sha256": "3b52c35d7f8005e2aaa0b733e3d7c6d067ba8b4d0ed0c92c0ca79620a04f1b77"
+    },
+    {
+      "file": "environment/input/11.mp4",
+      "sha256": "744df554650f8c00a508a0fd970d36fa134017b054299d2c3601bbbfd1da6ade"
+    },
+    {
+      "file": "environment/input/12.mp4",
+      "sha256": "5e69714c995411199bf66bb55af52a11f4c748b61b29999ac523d84531431f10"
+    },
+    {
+      "file": "environment/input/13.mp4",
+      "sha256": "d5fbbef5955e6a4530d84354dcefe5f1a98b10a4bf0d0784499a2ff97e64e760"
+    },
+    {
+      "file": "environment/input/14.mp4",
+      "sha256": "50bfdda81159a1b25cd6198d1fd12b6e70ab532f5c388bf3c483e1b54ef48180"
+    },
+    {
+      "file": "environment/input/15.mp4",
+      "sha256": "024c4f4ca0b12479f74e819a20aca7f15e9b12ebfe6d1efe9dbbfe737f36a602"
+    },
+    {
+      "file": "environment/input/16.mp4",
+      "sha256": "e50ae318f0662d086229fbdf8cc445982e8c2297bb9083d16ae866392b73e81e"
+    },
+    {
+      "file": "environment/input/17.mp4",
+      "sha256": "32ea744fd30eb1f2e6a14c580a48df350619bf7876d38326d2c0da7b07f4a700"
+    },
+    {
+      "file": "environment/input/18.mp4",
+      "sha256": "5578cd67270efe0b8b1e27de3ae0a415cff7f3d800812ec98bac4257efe11228"
+    },
+    {
+      "file": "environment/input/19.mp4",
+      "sha256": "4f85c34171a10cea41e8b0523cdd57798cba51d82967da48e009645e7a16eccd"
+    },
+    {
+      "file": "environment/input/20.mp4",
+      "sha256": "048dd1040533044f6f0aa5d1ae6e95751a16dcc8158f144c37ef5b379cacf338"
+    },
+    {
+      "file": "environment/input/21.mp4",
+      "sha256": "0b3f7de9d7241fdf84f329b93d58f188947ced299412687784fbc2254b8b9408"
+    },
+    {
+      "file": "environment/input/22.mp4",
+      "sha256": "8f530bae0fa59ca66507bacc8d0a940c2a349e02b3bde2f681a8a97600d0c3d1"
+    },
+    {
+      "file": "environment/input/23.mp4",
+      "sha256": "bd06742d1cc7101960ba1d172fc0f956860c9acc32833d46c923fbadf9e1b446"
+    },
+    {
+      "file": "environment/input/24.mp4",
+      "sha256": "6ffbb1d7a6bf0972d06efb4edc66b51af0c3e88599619d5915df8bbda95c517e"
+    },
+    {
+      "file": "environment/input/25.mp4",
+      "sha256": "d554a7b97250b140c0b244977c172cf799a8993d8a9dd24cf94e5057e7a5d9ce"
+    },
+    {
+      "file": "environment/input/26.mp4",
+      "sha256": "1ba0fc8421a8b997c303afb25e6d7e39ec794a894cde19bd0a8bd9cfd6e88665"
+    },
+    {
+      "file": "environment/input/27.mp4",
+      "sha256": "d43fbac43b47906ff0388c49a156860f780034e7f5edc799108161cc3d51f770"
+    },
+    {
+      "file": "environment/input/28.mp4",
+      "sha256": "bdbf6c347afb938c1069a5b551d3ba53a691d78f099aa26b0897aae6bb9eb3c0"
+    },
+    {
+      "file": "environment/input/29.mp4",
+      "sha256": "964352df2ee91525f14d88273ddb3639bd9cb1c4707b4804148a39eaa961a4ea"
+    },
+    {
+      "file": "environment/input/30.mp4",
+      "sha256": "00ea5c75db19fc9ba7e70ae7a97eb13b8a3f91fcf2709e0e536d62715312a3a1"
+    },
+    {
+      "file": "environment/input/31.mp4",
+      "sha256": "a4246a1dbacf56cdbe2501933f52a90d905586801e356a4902ed85bf8b2f79c7"
+    },
+    {
+      "file": "environment/input/32.mp4",
+      "sha256": "45d3e7bcb6bf7f8bc38270873c6880c8dcf801627a4e79268d0c5dc3bad87e47"
+    },
+    {
+      "file": "environment/input/33.mp4",
+      "sha256": "e7711c7eb3c27435e0d31d265cfde985ccf1ea34486969bac5267a2d38a07f08"
+    },
+    {
+      "file": "environment/input/34.mp4",
+      "sha256": "8decbbc3b44c5dbcfe17bb173e1551867ad70d8d2129e011e12bacc3d7033cdc"
+    },
+    {
+      "file": "environment/input/35.mp4",
+      "sha256": "c00058c14aefd8fe21b2d07b16d0cecb63387c46e3e7102ec846a9bcd0e09f84"
+    },
+    {
+      "file": "environment/input/36.mp4",
+      "sha256": "3e69927e30cf390610aa58f4089e1b73671cdfb8d57101532bbdce622a837da7"
+    },
+    {
+      "file": "environment/input/37.mp4",
+      "sha256": "a03b86124e9a052a02208e92d5c4440bbe6a3bc0f162eec5a598f044650b0591"
+    },
+    {
+      "file": "environment/input/38.mp4",
+      "sha256": "bcc6ee87111e6bf4e4eea8b739fe9895c8331555e188184e176c68dd606adac9"
+    },
+    {
+      "file": "environment/input/39.mp4",
+      "sha256": "c012ac0a8c79de4f88c0bd67d417363bb752ee2b371228b29215b0853df8f2d1"
+    },
+    {
+      "file": "environment/input/40.mp4",
+      "sha256": "acbbb051cb75e7274a65cf8352d032642eed527da91a3046215d0307e34c8812"
+    }
+  ]
+}

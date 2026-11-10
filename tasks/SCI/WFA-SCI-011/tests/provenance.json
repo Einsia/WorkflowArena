@@ -1,0 +1,28 @@
+{
+  "paper": {
+    "title": "The distribution of cellular turnover in the human body",
+    "journal": "Nature Medicine",
+    "year": 2021,
+    "doi": "10.1038/s41591-020-01182-9"
+  },
+  "code_and_data": {
+    "url": "https://github.com/milo-lab/cellular_turnover",
+    "commit": "709ba9cbbe53563d0110c10e4f559e35cd02e428",
+    "license": "Upstream rights retained; original workbooks and notebook prose fetched directly from the publisher at build time.",
+    "downloaded": "2026-10-23"
+  },
+  "public_inputs": "all *_data.xlsx / RBC_data.xlsx / Cardiomyocytes.xlsx / Mouse_comparison_data.xlsx copied with the limited external-link cleanup documented in release_input_cleanup; method notes = markdown cells of each notebook (author surnames redacted); Summary.xlsx (results) withheld.",
+  "gold": {
+    "source": "author notebooks re-executed (rounding at export disabled), 2026-10-23",
+    "extraction": "the task reference-generation script",
+    "cross_check": "rounded rerun identical to committed Summary.xlsx",
+    "committed_Summary_sha256": "6c2f4b4f9f6f7ade263914d9ba30d2d5bbc7788fb795814253aec3204de406ce"
+  },
+  "release_input_cleanup": {
+    "all_cell_values_preserved": true,
+    "Mouse_comparison_data.xlsx": "lifespan_data!C5 retains the original cached standard deviation as a fixed input; unavailable external source link removed.",
+    "Endothelial_cells_data.xlsx": "Unused external defined name and unavailable external source link removed; worksheet XML unchanged."
+  },
+  "preparation": "environment/fetch/fetch_inputs.py",
+  "source_lock": "environment/fetch/sources.json"
+}

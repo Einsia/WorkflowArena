@@ -1,0 +1,241 @@
+{
+  "task_id": "WFA-CDN-003",
+  "visibility": "reviewer-only",
+  "decisions": [
+    {
+      "id": "B1",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "solution.mp4 可解码，H.264/yuv420p、1280×720、SAR 1:1、恒定 24/1 fps、无音轨。",
+      "criterion_en": "solution.mp4 decodes; H.264/yuv420p, 1280x720, SAR 1:1, constant 24/1 fps, no audio stream.",
+      "verify": "ffprobe 流参数 + 全量解码计数；缺失或无法解码 = 整题验收失败（连续分照常报告）。",
+      "weight": 8
+    },
+    {
+      "id": "B2",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "solution.json 恰 7 段，slot 1–7 依序，source 为合法且互不相同的 ID；output_frames 为从 0 连续、无隙无叠的整数半开区间；秒=帧/24（≤0.001 s）；source_frames=[0,该片段帧数]；末帧=实际解码帧数。",
+      "criterion_en": "solution.json has exactly 7 segments in slot order with valid distinct IDs; integer half-open output_frames contiguous from 0; seconds = frames/24 (<=0.001 s); source_frames = [0, clip frame count]; final end = decoded frame count.",
+      "verify": "脚本逐项比对 provenance.json 中各片段帧数与解码帧数。",
+      "weight": 6
+    },
+    {
+      "id": "B3",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "output/ 恰为 3 个文件；selection-evidence.json 为 7 个对象，slot/source 与 solution.json 一致，所引两帧均在所选片段内。",
+      "criterion_en": "output/ holds exactly 3 files; selection-evidence.json has 7 objects whose slot/source match solution.json and whose two frames lie inside the chosen clip.",
+      "verify": "确定性 schema 检查。",
+      "weight": 4
+    },
+    {
+      "id": "B4",
+      "tier": "base",
+      "group": "honesty",
+      "critical": true,
+      "criterion_zh": "7 段全部诚实完整：每段帧数=所声明片段帧数，且与该片段逐帧 SSIM≥0.95（灰度、最长边 360 px、11×11 高斯窗 σ=1.5），首尾帧均包含；无镜像、裁切、变速、滤镜。",
+      "criterion_en": "All 7 segments honest and complete: each segment length equals the declared clip frame count and every frame matches it with SSIM>=0.95 (gray, max side 360, 11x11 Gaussian sigma 1.5), first and last included; no mirroring, cropping, retiming or filtering.",
+      "verify": "逐段逐帧 SSIM 对所声明 ID 的 input 文件。组级门槛：某段失败则该槽 M/G 判定记 0。",
+      "weight": 7
+    },
+    {
+      "id": "M1",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽1 选中正确的镜头内容：所选 ID ∈ {37, 45}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 1 picks the right excerpt: chosen ID in {37, 45} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M2",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽2 选中正确的镜头内容：所选 ID ∈ {21, 01}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 2 picks the right excerpt: chosen ID in {21, 01} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M3",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽3 选中正确的镜头内容：所选 ID ∈ {44, 29}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 3 picks the right excerpt: chosen ID in {44, 29} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M4",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽4 选中正确的镜头内容：所选 ID ∈ {20, 12}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 4 picks the right excerpt: chosen ID in {20, 12} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M5",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽5 选中正确的镜头内容：所选 ID ∈ {26, 19}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 5 picks the right excerpt: chosen ID in {26, 19} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M6",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽6 选中正确的镜头内容：所选 ID ∈ {25, 05}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 6 picks the right excerpt: chosen ID in {25, 05} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "M7",
+      "tier": "mid",
+      "group": "slot-content",
+      "critical": false,
+      "criterion_zh": "槽7 选中正确的镜头内容：所选 ID ∈ {17, 28}（正确片段或其水平镜像，方向此处不计）。",
+      "criterion_en": "Slot 7 picks the right excerpt: chosen ID in {17, 28} (key or its horizontal mirror; orientation not judged here).",
+      "verify": "ID 比对。区分依据为事件顺序、单一镜头与否、起止画面（真实近似干扰见 answer-key）。",
+      "weight": 5
+    },
+    {
+      "id": "G1",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽1 完全正确：所选 ID = 37（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 1 exactly correct: chosen ID = 37 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M1 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断。槽 1 题面已写明少年在左、老人在右，可直接排除镜像 45。",
+      "weight": 4
+    },
+    {
+      "id": "G2",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽2 完全正确：所选 ID = 21（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 2 exactly correct: chosen ID = 21 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M2 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G3",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽3 完全正确：所选 ID = 44（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 3 exactly correct: chosen ID = 44 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M3 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G4",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽4 完全正确：所选 ID = 20（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 4 exactly correct: chosen ID = 20 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M4 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G5",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽5 完全正确：所选 ID = 26（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 5 exactly correct: chosen ID = 26 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M5 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G6",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽6 完全正确：所选 ID = 25（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 6 exactly correct: chosen ID = 25 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M6 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G7",
+      "tier": "gate",
+      "group": "slot-axis",
+      "critical": false,
+      "criterion_zh": "槽7 完全正确：所选 ID = 17（正确片段且为与槽 1 轴线一致的方向）。",
+      "criterion_en": "Slot 7 exactly correct: chosen ID = 17 (right excerpt in the orientation consistent with the slot-1 axis).",
+      "verify": "ID 比对。与 M7 嵌套（G 通过蕴含 M 通过）：M 考内容辨别，G 额外考轴线/视线方向判断；同段镜像与正确片段内容、时长、事件完全相同，缩略图与描述均无法区分。",
+      "weight": 4
+    },
+    {
+      "id": "G8",
+      "tier": "gate",
+      "group": "sequence-axis",
+      "critical": false,
+      "criterion_zh": "整片无越轴：7 个所选片段在 answer-key 的 orientation_label 中全部为 axis-consistent（与选对与否无关）。",
+      "criterion_en": "No line crossing in the whole cut: all 7 chosen clips are labelled axis-consistent in answer-key orientation_label (regardless of slot correctness).",
+      "verify": "查表；全片 14 个镜像候选任意入选即判否。 有意叠加：某槽选入镜像（无论是答案的镜像还是干扰的镜像）同时使该槽 G_k（及可能的 M_k）与 G8 失分；G8 衡量全片轴线一致性，独立于各槽是否选对。",
+      "weight": 7
+    },
+    {
+      "id": "M8",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "证据：7 条均给出所选片段内的两个合法帧号，且 reason 非空并指出所选片段与一个具名其他候选之间的具体可见差别（事件顺序、起止画面、镜头数、屏幕方向等）；所述差别不与 answer-key 对该候选的干扰说明矛盾。",
+      "criterion_en": "Evidence: all 7 entries have two valid frame numbers inside the chosen clip and a non-empty reason that names a concrete visible difference (event order, start/end image, shot count, screen direction) between the chosen clip and a named other candidate; the stated difference does not contradict the answer key's distractor notes for that candidate.",
+      "verify": "帧号合法性与 reason 非空由 checks.py 确定性检查（不满足直接判否）；其余由评委只对照 answer-key distractors.why 判定，无需查看源帧。",
+      "weight": 5
+    }
+  ],
+  "whole_task_gates": [
+    "B1 交付物缺失/无法解码",
+    "P01 作弊/访问隐藏材料、联网、生成式替代"
+  ],
+  "group_gates": [
+    "B4 某段不诚实 → 该槽 M/G 记 0"
+  ],
+  "access_check": {
+    "P01": "未访问评审专用材料：依据求解过程已打开文件路径日志；无日志时依据工作区清单证明 reviewer-only 不存在。违规 = 整题验收失败。"
+  },
+  "ssim": {
+    "threshold": 0.95,
+    "max_side": 360,
+    "window": "11x11 gaussian sigma 1.5",
+    "scope": "every frame"
+  },
+  "reporting": "连续分 = Σ weight×pass；另报 Perfect（全部 20 条通过）与 槽位正确数/7（按 G1–G7）。",
+  "tier_summary": {
+    "base": {
+      "decisions": 4,
+      "weight": 25
+    },
+    "mid": {
+      "decisions": 8,
+      "weight": 40
+    },
+    "gate": {
+      "decisions": 8,
+      "weight": 35
+    }
+  },
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

@@ -1,0 +1,160 @@
+{
+ "rules": {},
+ "note": "",
+ "counts": {
+  "restorations": 0,
+  "code_person_labels": 0,
+  "person_labels": 93,
+  "distinct_person_labels": 34,
+  "masked_chars_to_box": 2,
+  "number_redactions": 0,
+  "left_ambiguous": 0,
+  "number_boundary_splits": 0
+ },
+ "restorations": {},
+ "code_persons": {},
+ "persons": {
+  "鲁X": {
+   "label": "鲁某甲",
+   "count": 3
+  },
+  "方X": {
+   "label": "方某甲",
+   "count": 3
+  },
+  "刘X": {
+   "label": "刘某甲",
+   "count": 3
+  },
+  "李X": {
+   "label": "李某甲",
+   "count": 1
+  },
+  "徐X2": {
+   "label": "徐某甲",
+   "count": 1
+  },
+  "陈X": {
+   "label": "陈某甲",
+   "count": 6
+  },
+  "胡X": {
+   "label": "胡某甲",
+   "count": 8
+  },
+  "余X": {
+   "label": "余某甲",
+   "count": 19
+  },
+  "倪X": {
+   "label": "倪某甲",
+   "count": 2
+  },
+  "唐X": {
+   "label": "唐某甲",
+   "count": 3
+  },
+  "李X3": {
+   "label": "李某乙",
+   "count": 3
+  },
+  "胡X3": {
+   "label": "胡某乙",
+   "count": 4
+  },
+  "吴X": {
+   "label": "吴某甲",
+   "count": 4
+  },
+  "方X4": {
+   "label": "方某乙",
+   "count": 1
+  },
+  "方X2": {
+   "label": "方某丙",
+   "count": 3
+  },
+  "叶X": {
+   "label": "叶某甲",
+   "count": 2
+  },
+  "叶X2": {
+   "label": "叶某乙",
+   "count": 1
+  },
+  "郑X": {
+   "label": "郑某甲",
+   "count": 3
+  },
+  "卢X": {
+   "label": "卢某甲",
+   "count": 2
+  },
+  "祁X": {
+   "label": "祁某甲",
+   "count": 2
+  },
+  "张X": {
+   "label": "张某甲",
+   "count": 2
+  },
+  "胡X5": {
+   "label": "胡某丙",
+   "count": 1
+  },
+  "王X": {
+   "label": "王某甲",
+   "count": 1
+  },
+  "胡X2": {
+   "label": "胡某丁",
+   "count": 1
+  },
+  "章X": {
+   "label": "章某甲",
+   "count": 4
+  },
+  "段X": {
+   "label": "段某甲",
+   "count": 1
+  },
+  "金X": {
+   "label": "金某甲",
+   "count": 1
+  },
+  "洪X": {
+   "label": "洪某甲",
+   "count": 1
+  },
+  "李X2": {
+   "label": "李某丙",
+   "count": 1
+  },
+  "余X4": {
+   "label": "余某乙",
+   "count": 1
+  },
+  "毕X": {
+   "label": "毕某甲",
+   "count": 2
+  },
+  "余X3": {
+   "label": "余某丙",
+   "count": 1
+  },
+  "徐X": {
+   "label": "徐某乙",
+   "count": 1
+  },
+  "高X": {
+   "label": "高某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "三X→三□": 1,
+  "小X→小□": 1
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {}
+}

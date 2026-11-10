@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "Poncelet.Transfer",
+  "build_targets": [
+    "Poncelet.Transfer"
+  ],
+  "names": [
+    "f_add_smul_g"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "Poncelet"
+    ],
+    "target_file": "Poncelet/Transfer.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

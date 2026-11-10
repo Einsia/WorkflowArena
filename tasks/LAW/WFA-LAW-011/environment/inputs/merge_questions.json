@@ -1,0 +1,87 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `dp_so_fpov_sole` across all 12 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `dp_tail_length` across all 12 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 12 agreements satisfy ALL of the following: `dp_noshop_rep_liability` = «Yes» AND NOT (`oc_efforts_standard` = «Commercially reasonable efforts»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 12 agreements satisfy ALL of the following: `dp_cor_board_only` = «No» AND `dp_tail_length` = «within 12 months»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 12 agreements satisfy ALL of the following: `nc_consent_application` = «Applies to all negative covenants» AND `oc_pandemic_carveout` = «Yes»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `dp_cor_so_standard` = «\"Inconsistent\" with fiduciary duties» AND `oc_past_practice` = «Yes». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `dp_cor_match_additional` = «2 business days or less» AND NOT (`dp_ftr_match_initial` = «4 calendar days»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `dp_ftr_limitations` includes «Material breach of no-shop resulting in a Superior Offer» AND `oc_consent_standard` = «Flat consent». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `dp_cor_match_initial` = «5 business days» AND `dp_so_stock_threshold` = «50%». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "List every agreement that satisfies: NOT (`dp_fidout_standard` gives the same answer as `dp_cor_so_standard`). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "Which agreement(s) have the highest value of the number of options selected for `dp_ftr_limitations` (not counting 'No')? List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `dp_cor_match_additional`, list every agreement whose answer is shared by at most 2 of the 12 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "For `oc_pandemic_carveout`, list every agreement whose answer is shared by at most 2 of the 12 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Consider the deal points `dp_noshop_rep_liability`, `dp_fidout_standard`, `dp_cor_board_only`, `dp_cor_so_standard`, `dp_cor_match_initial`, `dp_cor_match_additional`, `dp_ftr_match_initial`, `dp_ftr_limitations`, `dp_so_stock_threshold`, `dp_so_fpov_sole`, `dp_tail_ap_timing`, `dp_tail_public_yn`, `dp_tail_still_pending`, `dp_tail_length`, `oc_consent_standard`, `oc_past_practice`, `oc_efforts_standard`, `nc_consent_application`, `oc_pandemic_carveout`, `nc_pandemic_carveout`. For each of them, take the most common answer across the 12 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 10 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `dp_so_fpov_sole`, `dp_tail_ap_timing`, `dp_tail_still_pending`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M16",
+  "question": "Considering only `dp_fidout_trigger`, `dp_cor_so_standard`, `dp_cor_match_initial`: how many distinct answer combinations occur among the 12 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M17",
+  "question": "Which other agreement(s) give the same answer as A05 on the largest number of the 22 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

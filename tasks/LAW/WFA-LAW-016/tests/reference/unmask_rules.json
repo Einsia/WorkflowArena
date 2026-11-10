@@ -1,0 +1,69 @@
+{
+ "rules": {},
+ "note": "",
+ "counts": {
+  "restorations": 0,
+  "code_person_labels": 0,
+  "person_labels": 26,
+  "distinct_person_labels": 10,
+  "masked_chars_to_box": 96,
+  "number_redactions": 0,
+  "left_ambiguous": 0,
+  "number_boundary_splits": 0
+ },
+ "restorations": {},
+ "code_persons": {},
+ "persons": {
+  "罗X": {
+   "label": "罗某甲",
+   "count": 1
+  },
+  "陈X2": {
+   "label": "陈某甲",
+   "count": 13
+  },
+  "肖X": {
+   "label": "肖某甲",
+   "count": 2
+  },
+  "老X": {
+   "label": "老某甲",
+   "count": 2
+  },
+  "文X": {
+   "label": "文某甲",
+   "count": 1
+  },
+  "石X": {
+   "label": "石某甲",
+   "count": 1
+  },
+  "肖X2": {
+   "label": "肖某乙",
+   "count": 1
+  },
+  "姚X": {
+   "label": "姚某甲",
+   "count": 2
+  },
+  "王X": {
+   "label": "王某甲",
+   "count": 2
+  },
+  "康X": {
+   "label": "康某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "王X4→王□": 1,
+  "熊X→熊□": 1,
+  "大X→大□": 64,
+  "捷X→捷□": 17,
+  "新X→新□": 5,
+  "华X→华□": 7,
+  "刀X某→刀□某": 1
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {}
+}

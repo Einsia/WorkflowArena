@@ -1,0 +1,6 @@
+experiment,model,metric,value,tol_abs,tol_rel
+allMP,Magpie,Ef_MAE,0.13298875645139285,0,0.05
+allMP,Magpie,Ed_MAE,0.11847861929332366,0,0.05
+allMP,Magpie,Ed_cl_accuracy,0.6329780977250806,0.02,0
+allMP,Magpie,Ed_cl_f1,0.5668915354931846,0.02,0
+allMP,Magpie,Ed_cl_fpr,0.34546024776540696,0.02,0

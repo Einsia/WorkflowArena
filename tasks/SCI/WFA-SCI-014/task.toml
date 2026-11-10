@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/submission"]
+
+[task]
+name = "WFA-SCI-014"
+version = "0.1.0"
+description = "The momentum-mixing Hatsugai–Kohmoto model: approaching Hubbard physics from a solvable model"
+
+[metadata]
+domain = "SCI"
+subcategory = "SCI-REPRO"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 16
+memory_mb = 32768
+storage_mb = 10240
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 1
+memory_mb = 2048
+storage_mb = 2048

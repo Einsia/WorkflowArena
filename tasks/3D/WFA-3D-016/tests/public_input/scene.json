@@ -1,0 +1,59 @@
+{
+  "units": "metre",
+  "world": "one continuous set: the shop interior and the pavement outside its front window are the same space",
+  "shop": {
+    "room": [
+      6.0,
+      4.5,
+      3.0
+    ],
+    "front_window": {
+      "width": 2.4,
+      "sill_height": 0.8,
+      "height": 1.6,
+      "faces": "street"
+    },
+    "door": "glazed door beside the front window",
+    "workbench": [
+      1.8,
+      0.7,
+      0.9
+    ],
+    "repair_stand": "clamp-type workshop stand, clamp height about 1.2",
+    "pegboard": "tools on the back wall",
+    "tray": "small parts tray on the bench"
+  },
+  "street": {
+    "pavement_width": 3.0,
+    "kerb_height": 0.12,
+    "road": "two-lane asphalt, light traffic",
+    "time_of_day": "late afternoon, overcast"
+  },
+  "bike": {
+    "type": "steel-frame city/courier bike, single front chainring, single rear cog",
+    "frame_colour": "dark green",
+    "wheel": "700x28c, tyre outer diameter about 0.68",
+    "wheelbase": 1.02,
+    "chainring_teeth": 44,
+    "rear_cog_teeth": 16,
+    "crank_length": 0.17,
+    "chain": "1/2 x 3/32 in, silver, 106 links joined with one black quick link",
+    "old_chain": "rusty, broken, same size",
+    "rear_hub": "freewheel hub, 36-point ratchet",
+    "rack": "front rack with a cardboard parcel strapped on"
+  },
+  "mechanic": {
+    "clothes": "grey apron over a rust-orange shirt, sleeves rolled",
+    "gloves": "none"
+  },
+  "courier": {
+    "clothes": "yellow high-visibility jacket, black trousers",
+    "helmet": "white, carried in hand until riding",
+    "watch": "analogue wristwatch on the LEFT wrist"
+  },
+  "continuity": {
+    "bike_on_stand": "drive side towards the shop interior cameras, front wheel screen-right",
+    "street_exit": "the courier rides off screen-right"
+  },
+  "task_id": "WFA-3D-016"
+}

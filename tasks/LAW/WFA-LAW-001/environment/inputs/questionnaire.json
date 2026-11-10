@@ -1,0 +1,207 @@
+[
+ {
+  "id": "mae_taken_as_whole",
+  "category": "Material Adverse Effect",
+  "question": "Does the Target MAE definition measure the adverse effect on the Target and its subsidiaries \"taken as a whole\"?",
+  "multi_select": false,
+  "options": [
+   "Applies to Target and subsidiaries \"taken as a whole\"",
+   "No"
+  ]
+ },
+ {
+  "id": "mae_co_political",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: general political and/or social conditions?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_economic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: general economic and/or financial (including capital/credit market) conditions?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_industry",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: changes or conditions generally affecting the Target's industry?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_gaap",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: changes in GAAP or other accounting principles (or their interpretation)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_apc",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: the announcement, pendency and/or consummation of the transaction?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_apc_scope",
+  "category": "Material Adverse Effect",
+  "question": "Which of announcement / pendency / consummation of the transaction does the deal-related carve-out cover? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "No",
+   "announcement",
+   "consummation",
+   "pendency"
+  ],
+  "note": "Select only \"No\" if there is no such carve-out."
+ },
+ {
+  "id": "mae_co_projections",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: failure by the Target to meet projections, forecasts, estimates or budgets (in and of itself)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_market_price",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: changes in the market price or trading volume of the Target's securities, or in its credit rating (in and of themselves)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_wnaf_scope",
+  "category": "Material Adverse Effect",
+  "question": "Which of the following does the MAE carve-out for calamities cover: war or terrorism, natural disasters, \"acts of God\", force majeure? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "\"act of God\"",
+   "Natural disaster",
+   "No",
+   "War or terrorism",
+   "force majeure"
+  ],
+  "note": "Select an item only if the carve-out expressly covers that category (e.g., select \"force majeure\" only if the words force majeure are used). Select only \"No\" if there is no such carve-out."
+ },
+ {
+  "id": "mae_co_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: pandemics, epidemics or other public health events?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_di_political",
+  "category": "Material Adverse Effect",
+  "question": "Is the general political/social conditions carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_economic",
+  "category": "Material Adverse Effect",
+  "question": "Is the general economic/financial conditions carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_industry",
+  "category": "Material Adverse Effect",
+  "question": "Is the industry-changes carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_law",
+  "category": "Material Adverse Effect",
+  "question": "Is the change-in-law carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_gaap",
+  "category": "Material Adverse Effect",
+  "question": "Is the change-in-GAAP/accounting-principles carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "Is the pandemic/public-health carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_wnaf",
+  "category": "Material Adverse Effect",
+  "question": "Which parts of the war/terrorism / natural disaster / act of God / force majeure carve-out are subject to a \"disproportionate impact\" modifier? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "\"act of God\"",
+   "Natural disaster",
+   "No",
+   "War or terrorism",
+   "force majeure"
+  ],
+  "note": "Select only \"No\" if no part of that carve-out is subject to a disproportionate-impact modifier (or there is no such carve-out)."
+ }
+]

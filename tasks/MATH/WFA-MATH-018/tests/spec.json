@@ -1,0 +1,24 @@
+{
+  "kind": "mathlib-family",
+  "import": "Mathlib",
+  "build_targets": [
+    "Mathlib"
+  ],
+  "ref_types_file": "/tests/reference_types.json",
+  "scan_globs": [
+    "Mathlib/**/*.lean",
+    "Mathlib.lean"
+  ],
+  "build_timeout": 10800,
+  "restore": {
+    "pristine_tar": "/opt/wfs/start-src.tar",
+    "dirs": [
+      "Mathlib"
+    ],
+    "keep": [
+      "Mathlib.lean"
+    ],
+    "root_file": "Mathlib.lean"
+  },
+  "ref_values_file": "/tests/reference_values.json"
+}

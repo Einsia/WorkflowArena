@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-019",
+  "src": "valid-47",
+  "case_no": "（2019）晋1029刑初第53号",
+  "year": 2019,
+  "n_defendants": 13,
+  "charges": [
+    "开设赌场罪",
+    "诈骗罪"
+  ],
+  "n_principal": 5,
+  "n_accessory": 8,
+  "n_role_items": 14,
+  "n_leaders": 0,
+  "facts_chars": 13387,
+  "n_probation_graded": 13
+}

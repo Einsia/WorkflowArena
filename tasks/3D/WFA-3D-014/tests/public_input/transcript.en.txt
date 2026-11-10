@@ -1,0 +1,2 @@
+line_dispatch (DISPATCHER, via radio): Aisle C, I heard a crash. Report.
+line_picker (PICKER): Top pallet came down. Nobody's hurt.

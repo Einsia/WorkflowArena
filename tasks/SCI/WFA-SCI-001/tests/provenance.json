@@ -1,0 +1,60 @@
+{
+  "dataset": "CAPRI Score_set v2022 (CAPRI scoreset v2022)",
+  "maintainers": "Marc F. Lensink (CNRS & Univ. Lille), Theo Mauri, Guillaume Brysbaert (CNRS & Univ. Lille), Shoshana J. Wodak (VUB-VIB)",
+  "references": [
+    "Lensink MF, Wodak SJ. Score_set: a CAPRI benchmark for scoring protein complexes. Proteins 2014",
+    "The CAPRI scoreset 2022 update (in preparation, per site)",
+    "CAPRI round reports: CAPRI 6th/7th edition, CASP13/CASP14-CAPRI (Proteins 2017-2021)"
+  ],
+  "license": "Upstream rights retained. Original structural models are fetched directly from the publisher; no blanket redistribution grant is made.",
+  "sources": [
+    {
+      "what": "uploaded decoy sets (public inputs) + per-decoy CAPRI assessment (ground truth)",
+      "url": "https://scoreset.org/archive/Scoreset_v2022_Uploaders.tar.bz2",
+      "bytes": 5216621913,
+      "sha256": "65634cc67cd38aba978ff32d9fcba86ce8260f0e11f9b5877e84e7c870ba5323",
+      "members_used": "database/U-T{097,121,122,131,133,141,142,143,166,176}.1.{pdb,csv}",
+      "downloaded": "2026-10-23"
+    },
+    {
+      "what": "scorer submissions + per-model CAPRI assessment (participant ranking)",
+      "url": "https://scoreset.org/archive/Scoreset_v2022_Scorers.tar.bz2",
+      "bytes": 752702871,
+      "sha256": "82b7d8cc3cca017b9d6e71b175eb2aa4b55187e5029372ee96c6ead646140d64",
+      "members_used": "database/S-T{...}.1.{csv,pdb} for the 10 targets",
+      "downloaded": "2026-10-23"
+    },
+    {
+      "what": "native target structures and target/interface metadata (private; DockQ cross-check only)",
+      "url": "https://scoreset.org/archive/Scoreset_v2022_Targets.tar.bz2",
+      "bytes": 23622998,
+      "sha256": "dcdfb2a54c14fd486241bee928776954d4c9ce531211d597b855b7b671b5bba2",
+      "members_used": "targets/T{...}.1.{json,pdb}",
+      "downloaded": "2026-10-23"
+    },
+    {
+      "what": "target info",
+      "url": "https://scoreset.org/archive/Scoreset_v2022_Info.tar.bz2",
+      "bytes": 15680,
+      "sha256": "dbad41f979fc805178c441d947fcc16e9c7e0161574649b60a23bcaa80be24d5",
+      "downloaded": "2026-10-23"
+    },
+    {
+      "what": "target list (96 targets T024-T180)",
+      "url": "https://scoreset.org/scoreset.json",
+      "bytes": 119938,
+      "sha256": "8181735d759aedd687282015173479a0b7c225090845bc98905239915e58602e",
+      "downloaded": "2026-10-23"
+    }
+  ],
+  "not_used": "Scoreset_v2022_Predictors.tar.bz2 (1.8 GB, docking-experiment predictor models) — not needed",
+  "derived": {
+    "anonymization": "Targets renamed C01..C10; decoys ordered by sha256('b2-capri-scoring|target|identification'); fixed per-target rigid-body transforms seeded by sha256('b2-capri-scoring|frame|target').",
+    "target_mapping": "tests/reference/targets_summary.json",
+    "labels": "tests/reference/decoy_quality.csv",
+    "evaluator": "tests/verify.py",
+    "input_checksums": "environment/inputs/decoys.MANIFEST.sha256",
+    "exact_reconstruction": "environment/fetch/sources.json"
+  },
+  "distribution": "Original models fetched from publisher; exact original task coordinates reconstructed with recorded rigid transforms and decimal-rounding corrections. Derived numerical assessment labels retain source attribution."
+}

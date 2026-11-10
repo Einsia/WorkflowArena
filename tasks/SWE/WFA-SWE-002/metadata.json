@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-002",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Generic masked array class (Masked)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/astropy/astropy/pull/11127",
+    "revision": "merge dc3927e01c9e8e57ac5552dbcd97aa0205dd5a30; start = first parent d3c8efb5fc82d5e9997263829c62ca459647591e",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

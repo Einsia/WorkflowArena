@@ -1,0 +1,17 @@
+unit_id,type,anchor_x,anchor_y,heading_deg,anchor_definition
+B01,breakwater,232.0,-40.0,-145.49,"Centre of breakwater root; axis points along heading; centre of roundhead (40.0,-172.0)"
+C01,treadwheel_crane,12.0,7.0,0.0,Plan centre of base (stands on Q02)
+C02,treadwheel_crane,88.0,6.0,0.0,Plan centre of base (stands on Q03)
+C03,sheer_legs,-188.0,3.0,0.0,Plan centre of base (stands on Q01)
+D01,dry_dock,-232.0,0.0,90.0,Centre of dock entrance (outer face of gate); dock axis points from entrance to dock head along heading
+L01,lighthouse,40.0,-172.0,0.0,Tower axis (plan)
+P01,pier,-20.0,0.0,-90.0,Centre of pier root (on Q02 face line); pier axis points along heading
+P02,pier,125.0,0.0,-90.0,Centre of pier root (on Q03 face line); pier axis points along heading
+P03,pier,-150.0,0.0,-90.0,Centre of pier root (on Q01 face line); pier axis points along heading
+Q01,quay,-205,0.0,0.0,West end of quay face line; face line runs along +X to x=-95; water on -Y side
+Q02,quay,-85,0.0,0.0,West end of quay face line; face line runs along +X to x=45; water on -Y side
+Q03,quay,55,0.0,0.0,West end of quay face line; face line runs along +X to x=200; water on -Y side
+W01,warehouse,-175.0,38.0,-90.0,Plan centre; heading = outward normal of front (loading) facade
+W02,warehouse,-55.0,39.0,-90.0,Plan centre; heading = outward normal of front (loading) facade
+W03,warehouse,70.0,37.5,-90.0,Plan centre; heading = outward normal of front (loading) facade
+W04,warehouse,160.0,38.5,-90.0,Plan centre; heading = outward normal of front (loading) facade

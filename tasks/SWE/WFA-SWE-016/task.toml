@@ -1,0 +1,40 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-016"
+version = "0.1.0"
+description = "Reimplement the synchronisation primitives of an async runtime \u2014 channels, locks, semaphore, notification \u2014 against the runtime's own integration test suite."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out"
+language = "Rust"
+source_repo = "tokio-rs/tokio"
+base_tag = "tokio-1.49.0"
+carved_files = 27
+carved_code_lines = 7363
+contract_symbols = 44
+lines_per_contract_symbol = 167
+required_tests = 324
+regression_tests = 370
+data_driven_cases = 0
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 30720
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

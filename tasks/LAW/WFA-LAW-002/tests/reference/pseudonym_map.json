@@ -1,0 +1,814 @@
+{
+ "A01": {
+  "maud_contract": "contract_75",
+  "entities": [
+   {
+    "original": [
+     "Sanofi"
+    ],
+    "pseudonym": "Quomane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Latour Merger Sub",
+     "Latour"
+    ],
+    "pseudonym": "Peandis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Kadmon Holdings",
+     "Kadmon"
+    ],
+    "pseudonym": "Douvyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Belumosudil",
+     "belumosudil"
+    ],
+    "pseudonym": "Quurell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "ROCKSTAR"
+    ],
+    "pseudonym": "Trastent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Nano Terra"
+    ],
+    "pseudonym": "Fosion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quomane": 4,
+   "Peandis": 3,
+   "Douvyn": 16,
+   "Quurell": 10,
+   "Fosion": 11,
+   "Trastent": 3,
+   "quomane": 1,
+   "douvyn": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_103",
+  "entities": [
+   {
+    "original": [
+     "Avangrid"
+    ],
+    "pseudonym": "Grerrane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Iberdrola"
+    ],
+    "pseudonym": "Craerkara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "NM Green Holdings"
+    ],
+    "pseudonym": "Cruvion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "PNM Resources",
+     "Public Service Company of New Mexico",
+     "Texas-New Mexico Power"
+    ],
+    "pseudonym": "Thorkix",
+    "original_abbr": [
+     "PNMR",
+     "PNM",
+     "TNMP"
+    ],
+    "pseudonym_abbr": "THR"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Grerrane": 4,
+   "Cruvion": 3,
+   "Thorkix": 8,
+   "Craerkara": 1,
+   "THR": 9,
+   "grerrane": 1
+  },
+  "redactions": {
+   "urls": 96,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 2,
+   "attention_fields": 4
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_9",
+  "entities": [
+   {
+    "original": [
+     "Ambience Parent",
+     "Ambience Merger Sub",
+     "Ambience"
+    ],
+    "pseudonym": "Staerkian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "At Home Group",
+     "At Home Stores",
+     "At Home"
+    ],
+    "pseudonym": "Remane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Hellman & Friedman",
+     "HFCP",
+     "H&F"
+    ],
+    "pseudonym": "Tairova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Staerkian": 8,
+   "Remane": 8,
+   "Tairova": 20
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_85",
+  "entities": [
+   {
+    "original": [
+     "Madison Square Garden Entertainment",
+     "Madison Square Garden",
+     "MSG Networks",
+     "MSG Entertainment",
+     "MSG Sports"
+    ],
+    "pseudonym": "Tharkova",
+    "original_abbr": [
+     "MSGE",
+     "MSGN",
+     "MSGS",
+     "MSG"
+    ],
+    "pseudonym_abbr": "THR"
+   },
+   {
+    "original": [
+     "Broadway Sub"
+    ],
+    "pseudonym": "Miostex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Tharkova": 10,
+   "Miostex": 3,
+   "THR": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_93",
+  "entities": [
+   {
+    "original": [
+     "Independent Bank Corp",
+     "Rockland Trust Company",
+     "Rockland Trust",
+     "Rockland"
+    ],
+    "pseudonym": "Daemyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bradford Merger Sub"
+    ],
+    "pseudonym": "Trouron",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Meridian Bancorp",
+     "East Boston Savings Bank",
+     "Meridian"
+    ],
+    "pseudonym": "Quaedova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Daemyn": 11,
+   "Trouron": 3,
+   "Quaedova": 13
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 5,
+   "name_fields": 5,
+   "attention_fields": 4
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_41",
+  "entities": [
+   {
+    "original": [
+     "Atlas CC Acquisition",
+     "Atlas Merger Sub"
+    ],
+    "pseudonym": "Zaenton",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cubic"
+    ],
+    "pseudonym": "Treavon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Veritas Capital Fund",
+     "Veritas Capital",
+     "Veritas"
+    ],
+    "pseudonym": "Praston",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Evergreen Coast Capital",
+     "Evergreen"
+    ],
+    "pseudonym": "Quenara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Elliott"
+    ],
+    "pseudonym": "Groudeth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Zaenton": 13,
+   "Treavon": 11,
+   "Praston": 4,
+   "Groudeth": 4,
+   "treavon": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 9,
+   "signatures": 6,
+   "name_fields": 7,
+   "attention_fields": 5
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_81",
+  "entities": [
+   {
+    "original": [
+     "Penn Virginia"
+    ],
+    "pseudonym": "Zeathara",
+    "original_abbr": [
+     "PVAC"
+    ],
+    "pseudonym_abbr": "ZTH"
+   },
+   {
+    "original": [
+     "Lonestar Resources",
+     "Lonestar"
+    ],
+    "pseudonym": "Prousex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Upsilon Merger Sub"
+    ],
+    "pseudonym": "Boudent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Juniper Capital Advisors",
+     "Juniper"
+    ],
+    "pseudonym": "Zeandell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Zeathara": 14,
+   "Prousex": 25,
+   "Boudent": 4,
+   "Zeandell": 17,
+   "ZTH": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 10,
+   "signatures": 2,
+   "name_fields": 7,
+   "attention_fields": 8
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_112",
+  "entities": [
+   {
+    "original": [
+     "Peoples Bancorp",
+     "Peoples Bank",
+     "Peoples"
+    ],
+    "pseudonym": "Bindova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Premier Financial Bancorp",
+     "Premier Financial",
+     "Premier Bank",
+     "Citizens Deposit Bank and Trust",
+     "Citizens Deposit Bank",
+     "Citizens Bank",
+     "Premier"
+    ],
+    "pseudonym": "Kudara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Bindova": 474,
+   "Kudara": 868
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 0,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_7",
+  "entities": [
+   {
+    "original": [
+     "IRC Superman Midco",
+     "Superman Merger Sub",
+     "Superman",
+     "Innovative Renal Care"
+    ],
+    "pseudonym": "Gundora",
+    "original_abbr": [
+     "IRC"
+    ],
+    "pseudonym_abbr": "GND"
+   },
+   {
+    "original": [
+     "American Renal Associates Holdings",
+     "American Renal Associates",
+     "American Renal"
+    ],
+    "pseudonym": "Kourkis",
+    "original_abbr": [
+     "ARA"
+    ],
+    "pseudonym_abbr": "KRK"
+   },
+   {
+    "original": [
+     "Nautic Partners",
+     "Nautic"
+    ],
+    "pseudonym": "Ferrion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Centerbridge Capital Partners",
+     "Centerbridge"
+    ],
+    "pseudonym": "Drisur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Gundora": 7,
+   "Kourkis": 8,
+   "Ferrion": 6,
+   "Drisur": 7,
+   "ferrion": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_57",
+  "entities": [
+   {
+    "original": [
+     "Pacira BioSciences",
+     "Pacira"
+    ],
+    "pseudonym": "Faistex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Oyster Acquisition Company"
+    ],
+    "pseudonym": "Tailvix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Flexion Therapeutics",
+     "Flexion"
+    ],
+    "pseudonym": "Craesion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "ZILRETTA",
+     "Zilretta"
+    ],
+    "pseudonym": "Ceamix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Craesion": 9,
+   "Faistex": 7,
+   "Tailvix": 4,
+   "faistex": 2,
+   "Ceamix": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 10,
+   "signatures": 3,
+   "name_fields": 6,
+   "attention_fields": 6
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_29",
+  "entities": [
+   {
+    "original": [
+     "Columbia Property Trust",
+     "re:(?<!District of )(?<!British )Columbia"
+    ],
+    "pseudonym": "Brovon",
+    "original_abbr": [
+     "CXP"
+    ],
+    "pseudonym_abbr": "BRV"
+   },
+   {
+    "original": [
+     "Normandy"
+    ],
+    "pseudonym": "Ziovora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Panther Merger Parent",
+     "Panther Merger Sub",
+     "Panther"
+    ],
+    "pseudonym": "Goundix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Pacific Investment Management Company",
+     "PIMCO"
+    ],
+    "pseudonym": "Funix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Brovon": 11,
+   "Goundix": 8,
+   "Ziovora": 14,
+   "funix": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 10,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 0
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_108",
+  "entities": [
+   {
+    "original": [
+     "Pioneer Natural Resources",
+     "Pioneer"
+    ],
+    "pseudonym": "Crearkane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Pearl First Merger Sub",
+     "Pearl Second Merger Sub",
+     "Pearl Opco Merger Sub"
+    ],
+    "pseudonym": "Vavon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Parsley Energy",
+     "Parsley"
+    ],
+    "pseudonym": "Rousane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Crearkane": 8,
+   "Vavon": 12,
+   "Rousane": 13
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 6,
+   "name_fields": 13,
+   "attention_fields": 4
+  }
+ },
+ "A13": {
+  "maud_contract": "contract_146",
+  "entities": [
+   {
+    "original": [
+     "W. R. Grace & Co",
+     "W.R. Grace",
+     "Grace"
+    ],
+    "pseudonym": "Vedian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Gibraltar Acquisition Holdings",
+     "Gibraltar Merger Sub",
+     "Gibraltar"
+    ],
+    "pseudonym": "Droulvex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Standard Industries Holdings",
+     "Standard Industries"
+    ],
+    "pseudonym": "Stairkova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vedian": 19,
+   "Droulvex": 7,
+   "Stairkova": 3,
+   "vedian": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A14": {
+  "maud_contract": "contract_61",
+  "entities": [
+   {
+    "original": [
+     "Learning Technologies Group",
+     "Learning Technologies Acquisition",
+     "Learning Technologies"
+    ],
+    "pseudonym": "Berris",
+    "original_abbr": [
+     "LTG"
+    ],
+    "pseudonym_abbr": "BRR"
+   },
+   {
+    "original": [
+     "Gravity Merger Sub"
+    ],
+    "pseudonym": "Crosix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "GP Strategies"
+    ],
+    "pseudonym": "Zimur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Berris": 7,
+   "Crosix": 3,
+   "Zimur": 6
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A15": {
+  "maud_contract": "contract_22",
+  "entities": [
+   {
+    "original": [
+     "Change Healthcare",
+     "Emdeon"
+    ],
+    "pseudonym": "Breamyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "McKesson"
+    ],
+    "pseudonym": "Raerrara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "H&F Echo Holdings",
+     "Hellman & Friedman",
+     "H&F"
+    ],
+    "pseudonym": "Niosian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "UnitedHealth Group",
+     "UnitedHealth",
+     "Optum"
+    ],
+    "pseudonym": "Seantova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cambridge Merger Sub"
+    ],
+    "pseudonym": "Quounora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Breamyn": 19,
+   "Seantova": 5,
+   "Quounora": 3,
+   "Niosian": 5,
+   "Raerrara": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ }
+}

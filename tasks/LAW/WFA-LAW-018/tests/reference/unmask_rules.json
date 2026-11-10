@@ -1,0 +1,213 @@
+{
+ "rules": {
+  "restore": [
+   [
+    "夜X",
+    "夜宵",
+    "夜宵"
+   ]
+  ],
+  "code_persons": [
+   "[被告A]3",
+   "[被告A]2"
+  ],
+  "words": [
+   "侯X",
+   "武X"
+  ]
+ },
+ "note": "“夜X摊吃夜X”依同文“夜宵摊”“吃夜宵”恢复。",
+ "counts": {
+  "restorations": 2,
+  "code_person_labels": 32,
+  "person_labels": 267,
+  "distinct_person_labels": 37,
+  "masked_chars_to_box": 99,
+  "number_redactions": 0,
+  "left_ambiguous": 1,
+  "number_boundary_splits": 0
+ },
+ "restorations": {
+  "夜X→夜宵": 2
+ },
+ "code_persons": {
+  "[被告A]3": {
+   "label": "案外人甲",
+   "count": 25
+  },
+  "[被告A]2": {
+   "label": "案外人乙",
+   "count": 7
+  }
+ },
+ "persons": {
+  "程X": {
+   "label": "程某甲",
+   "count": 11
+  },
+  "龚X": {
+   "label": "龚某甲",
+   "count": 7
+  },
+  "胡X": {
+   "label": "胡某甲",
+   "count": 10
+  },
+  "周X2": {
+   "label": "周某甲",
+   "count": 33
+  },
+  "罗X": {
+   "label": "罗某甲",
+   "count": 14
+  },
+  "张X": {
+   "label": "张某甲",
+   "count": 36
+  },
+  "黄X": {
+   "label": "黄某甲",
+   "count": 12
+  },
+  "孙X": {
+   "label": "孙某甲",
+   "count": 3
+  },
+  "涂X2": {
+   "label": "涂某甲",
+   "count": 4
+  },
+  "王X": {
+   "label": "王某甲",
+   "count": 4
+  },
+  "袁X2": {
+   "label": "袁某甲",
+   "count": 2
+  },
+  "阿X": {
+   "label": "阿某甲",
+   "count": 3
+  },
+  "陈X2": {
+   "label": "陈某甲",
+   "count": 1
+  },
+  "刘X3": {
+   "label": "刘某甲",
+   "count": 16
+  },
+  "杨X3": {
+   "label": "杨某甲",
+   "count": 21
+  },
+  "刘X6": {
+   "label": "刘某乙",
+   "count": 9
+  },
+  "郑X4": {
+   "label": "郑某甲",
+   "count": 36
+  },
+  "姚X": {
+   "label": "姚某甲",
+   "count": 2
+  },
+  "刘X": {
+   "label": "刘某丙",
+   "count": 4
+  },
+  "蓝X": {
+   "label": "蓝某甲",
+   "count": 4
+  },
+  "左X": {
+   "label": "左某甲",
+   "count": 4
+  },
+  "郑X3": {
+   "label": "郑某乙",
+   "count": 1
+  },
+  "郑X": {
+   "label": "郑某丙",
+   "count": 1
+  },
+  "周X5": {
+   "label": "周某乙",
+   "count": 1
+  },
+  "雷X": {
+   "label": "雷某甲",
+   "count": 1
+  },
+  "周X": {
+   "label": "周某丙",
+   "count": 1
+  },
+  "梅X": {
+   "label": "梅某甲",
+   "count": 1
+  },
+  "杨X2": {
+   "label": "杨某乙",
+   "count": 7
+  },
+  "杨X": {
+   "label": "杨某丙",
+   "count": 3
+  },
+  "何X": {
+   "label": "何某甲",
+   "count": 3
+  },
+  "刘X2": {
+   "label": "刘某丁",
+   "count": 1
+  },
+  "袁X": {
+   "label": "袁某乙",
+   "count": 2
+  },
+  "龚X2": {
+   "label": "龚某乙",
+   "count": 1
+  },
+  "易X": {
+   "label": "易某甲",
+   "count": 1
+  },
+  "武X2": {
+   "label": "武某甲",
+   "count": 4
+  },
+  "涂X": {
+   "label": "涂某乙",
+   "count": 2
+  },
+  "陈X4": {
+   "label": "陈某乙",
+   "count": 1
+  }
+ },
+ "words": {
+  "文X→文□": 4,
+  "大X→大□": 7,
+  "侯X→侯□": 3,
+  "锦X→锦□": 10,
+  "马X→马□": 4,
+  "马X2→马□": 13,
+  "华X→华□": 13,
+  "祥X→祥□": 18,
+  "雅X→雅□": 2,
+  "老XX→老□□": 14,
+  "冬X→冬□": 1,
+  "祥X320→祥□": 1,
+  "武X→武□": 8,
+  "平X→平□": 1
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {
+  "周X252000": 1
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "cwd": "/app",
+ "runner": "gotest",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "gotest",
+   "runner": "gotest",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && go test -count=1 -v -timeout 40m ./promql/ ./promql/promqltest/ 2>&1 | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the evaluator's own acceptance surface: the data-driven suite plus the exported-API Go tests the verifier restored"
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "gotest",
+   "runner": "gotest",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && go test -count=1 -v -timeout 40m ./rules/... ./web/api/v1/... ./storage/remote/... 2>&1 | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "downstream consumers of the evaluator; green on the reference implementation and scored for regressions"
+  }
+ ]
+}

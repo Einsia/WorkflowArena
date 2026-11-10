@@ -1,0 +1,15 @@
+[
+  {
+    "task_id": "WFA-FIN-010",
+    "criterion": "scope/FTV/report_end",
+    "frozen_expected": "2026-07-24",
+    "corrected_expected": "2026-07-03",
+    "reason": "封面流通股统计日误作财政季度终点。",
+    "source_index": "gold-v2/finance-hard-10/FTV-source.json",
+    "source_locator": {
+      "table": 8,
+      "row": 2
+    },
+    "source_quote": "July 3, 2026 June 27, 2025 July 3, 2026 June 27, 2025"
+  }
+]

@@ -1,0 +1,12 @@
+entity,month,error_type,reference
+S3,2026-05,accrual_not_reversed,ACR-S3-2026-04-R
+S3,2026-05,vat_error,SI-S3-00218
+S3,2026-05,vat_error,SI-S3-00219
+S3,2026-05,vat_error,SI-S3-00220
+S4,2026-06,missing_count_adjustment,CNT-S4-2026-06
+S4,2026-06,sales_cutoff,SI-S4-00231
+S6,2026-05,missing_fx_remeasurement,FXR-S6-2026-05
+S6,2026-04,wrong_fx_rate,INT-S4-2026-04
+S6,2026-04,capex_expensed,PI-S6-00022
+S2,2026-06,allowance_error,ALW-S2-2026-06
+S3,2026-06,missing_ic_entry,INT-S3-2026-06

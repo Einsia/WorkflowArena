@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-023",
+  "domain": "MATH",
+  "task_form": "MATH-THEORY",
+  "title": "feat: the index of Fredholm operators is locally constant",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github-pr-family",
+    "url": "https://github.com/leanprover-community/mathlib4/pull/43085",
+    "revision": "start = reference head a835c1cf45531b86d17b382318fd1cb2cfb22eb0 minus family-created modules; reference = a835c1cf45531b86d17b382318fd1cb2cfb22eb0",
+    "license": "Apache-2.0 (mathlib4)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

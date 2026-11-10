@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "RiemannHypothesisCurves.RiemannHypothesisHEC",
+  "build_targets": [
+    "RiemannHypothesisCurves.RiemannHypothesisHEC"
+  ],
+  "names": [
+    "riemann_hypothesis_hec"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "RiemannHypothesisCurves"
+    ],
+    "target_file": "RiemannHypothesisCurves/RiemannHypothesisHEC.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

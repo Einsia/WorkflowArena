@@ -1,0 +1,72 @@
+[
+  {
+    "ticker": "JPM",
+    "company_name": "JPMORGAN CHASE & CO",
+    "filing": "JPM.html"
+  },
+  {
+    "ticker": "BAC",
+    "company_name": "BANK OF AMERICA CORP /DE/",
+    "filing": "BAC.html"
+  },
+  {
+    "ticker": "C",
+    "company_name": "CITIGROUP INC",
+    "filing": "C.html"
+  },
+  {
+    "ticker": "PNC",
+    "company_name": "PNC FINANCIAL SERVICES GROUP, INC.",
+    "filing": "PNC.html"
+  },
+  {
+    "ticker": "USB",
+    "company_name": "US BANCORP \\DE\\",
+    "filing": "USB.html"
+  },
+  {
+    "ticker": "COF",
+    "company_name": "CAPITAL ONE FINANCIAL CORP",
+    "filing": "COF.html"
+  },
+  {
+    "ticker": "FITB",
+    "company_name": "FIFTH THIRD BANCORP",
+    "filing": "FITB.html"
+  },
+  {
+    "ticker": "RF",
+    "company_name": "REGIONS FINANCIAL CORP",
+    "filing": "RF.html"
+  },
+  {
+    "ticker": "HBAN",
+    "company_name": "HUNTINGTON BANCSHARES INC /MD/",
+    "filing": "HBAN.html"
+  },
+  {
+    "ticker": "CFG",
+    "company_name": "CITIZENS FINANCIAL GROUP INC/RI",
+    "filing": "CFG.html"
+  },
+  {
+    "ticker": "ZION",
+    "company_name": "ZIONS BANCORPORATION, NATIONAL ASSOCIATION /UT/",
+    "filing": "ZION.html"
+  },
+  {
+    "ticker": "WAL",
+    "company_name": "WESTERN ALLIANCE BANCORPORATION",
+    "filing": "WAL.html"
+  },
+  {
+    "ticker": "EWBC",
+    "company_name": "EAST WEST BANCORP INC",
+    "filing": "EWBC.html"
+  },
+  {
+    "ticker": "WTFC",
+    "company_name": "WINTRUST FINANCIAL CORP",
+    "filing": "WTFC.html"
+  }
+]

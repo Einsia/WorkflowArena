@@ -1,0 +1,951 @@
+{
+ "A01": {
+  "maud_contract": "contract_59",
+  "entities": [
+   {
+    "original": [
+     "ASP Flag Intermediate Holdings",
+     "ASP Flag Merger Sub",
+     "ASP Flag"
+    ],
+    "pseudonym": "Lulyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Foundation Building Materials"
+    ],
+    "pseudonym": "Bralvane",
+    "original_abbr": [
+     "FBM"
+    ],
+    "pseudonym_abbr": "BRL"
+   },
+   {
+    "original": [
+     "Lone Star Funds",
+     "Lone Star"
+    ],
+    "pseudonym": "Korkon",
+    "original_abbr": [
+     "LSF"
+    ],
+    "pseudonym_abbr": "KRK"
+   },
+   {
+    "original": [
+     "American Securities"
+    ],
+    "pseudonym": "Demion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Lulyn": 6,
+   "Bralvane": 7,
+   "Demion": 2,
+   "BRL": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_54",
+  "entities": [
+   {
+    "original": [
+     "Enterprise Financial Services",
+     "Enterprise Bank & Trust",
+     "Enterprise"
+    ],
+    "pseudonym": "Lurkian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "First Choice Bancorp",
+     "First Choice Bank",
+     "First Choice"
+    ],
+    "pseudonym": "Groument",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Lurkian": 922,
+   "Groument": 1718
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 4,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_4",
+  "entities": [
+   {
+    "original": [
+     "Alaska Communications Systems Group",
+     "Alaska Communications",
+     "Alaska Power & Telephone"
+    ],
+    "pseudonym": "Darell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Project 8 Buyer",
+     "Project 8 MergerSub",
+     "Project 8"
+    ],
+    "pseudonym": "Laerkon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "ATN International",
+     "ATN"
+    ],
+    "pseudonym": "Seson",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Freedom 3 Investments",
+     "Freedom 3"
+    ],
+    "pseudonym": "Thethyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Macquarie"
+    ],
+    "pseudonym": "Foundeth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "GCM Grosvenor",
+     "GCM"
+    ],
+    "pseudonym": "Thentova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Juneau Merger Co",
+     "Juneau Parent"
+    ],
+    "pseudonym": "Zorketh",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Darell": 4,
+   "Laerkon": 6,
+   "Foundeth": 16,
+   "Thentova": 16,
+   "Seson": 7,
+   "Thethyn": 5,
+   "Zorketh": 9
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_131",
+  "entities": [
+   {
+    "original": [
+     "Huntington Bancshares",
+     "Huntington National Bank",
+     "Huntington"
+    ],
+    "pseudonym": "Craintian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "TCF Financial",
+     "TCF National Bank",
+     "Talmer"
+    ],
+    "pseudonym": "Thourkion",
+    "original_abbr": [
+     "TCF"
+    ],
+    "pseudonym_abbr": "THR"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "THR": 953,
+   "Craintian": 786,
+   "Thourkion": 40,
+   "craintian": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 16,
+   "signatures": 2,
+   "name_fields": 4,
+   "attention_fields": 8
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_65",
+  "entities": [
+   {
+    "original": [
+     "Goodrich Petroleum",
+     "Goodrich"
+    ],
+    "pseudonym": "Godeth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Paloma Partners VI Holdings",
+     "Paloma VI Merger Sub",
+     "Paloma"
+    ],
+    "pseudonym": "Zomex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "EnCap Energy Capital Fund",
+     "EnCap"
+    ],
+    "pseudonym": "Tromis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Godeth": 15,
+   "Zomex": 7,
+   "Tromis": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_130",
+  "entities": [
+   {
+    "original": [
+     "Sykes Enterprises",
+     "Sykes"
+    ],
+    "pseudonym": "Lelvian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Sitel Worldwide",
+     "Sitel"
+    ],
+    "pseudonym": "Querex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Florida Mergersub"
+    ],
+    "pseudonym": "Zoulex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Querex": 4,
+   "Zoulex": 3,
+   "Lelvian": 5,
+   "querex": 1,
+   "lelvian": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_42",
+  "entities": [
+   {
+    "original": [
+     "DSP Group"
+    ],
+    "pseudonym": "Quunur",
+    "original_abbr": [
+     "DSPG"
+    ],
+    "pseudonym_abbr": "QNR"
+   },
+   {
+    "original": [
+     "Synaptics"
+    ],
+    "pseudonym": "Douthion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Osprey Merger Sub"
+    ],
+    "pseudonym": "Kaeron",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quunur": 10,
+   "Douthion": 4,
+   "Kaeron": 3,
+   "QNR": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_140",
+  "entities": [
+   {
+    "original": [
+     "Realty Income"
+    ],
+    "pseudonym": "Courara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Rams MD Subsidiary",
+     "RAMS MD SUBSIDIARY",
+     "Rams Acquisition Sub",
+     "RAMS ACQUISITION SUB"
+    ],
+    "pseudonym": "Drionova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "VEREIT"
+    ],
+    "pseudonym": "Caisell",
+    "original_abbr": [
+     "OfficeCo"
+    ],
+    "pseudonym_abbr": "CSL"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Courara": 1114,
+   "Drionova": 10,
+   "Caisell": 1539,
+   "CSL": 138
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 10,
+   "name_fields": 10,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_96",
+  "entities": [
+   {
+    "original": [
+     "Allstate"
+    ],
+    "pseudonym": "Quurkora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bluebird Acquisition"
+    ],
+    "pseudonym": "Stiontova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "National General Holdings",
+     "National General"
+    ],
+    "pseudonym": "Prantix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quurkora": 7,
+   "Stiontova": 3,
+   "Prantix": 11,
+   "quurkora": 2
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_89",
+  "entities": [
+   {
+    "original": [
+     "Madeira Holdings",
+     "Madeira Merger Subsidiary",
+     "Madeira"
+    ],
+    "pseudonym": "Sarex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Marlin Business Services",
+     "Marlin Business Bank",
+     "Marlin"
+    ],
+    "pseudonym": "Madyn",
+    "original_abbr": [
+     "MBB"
+    ],
+    "pseudonym_abbr": "MDY"
+   },
+   {
+    "original": [
+     "HPS Investment Partners",
+     "HPS"
+    ],
+    "pseudonym": "Durrix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Sarex": 6,
+   "Madyn": 13,
+   "MDY": 10,
+   "Durrix": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_109",
+  "entities": [
+   {
+    "original": [
+     "M&T Bank",
+     "Manufacturers and Traders Trust Company",
+     "M&T"
+    ],
+    "pseudonym": "Mearrix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bridge Merger Corp"
+    ],
+    "pseudonym": "Pustex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "People’s United Financial",
+     "People's United Financial",
+     "People’s United Bank",
+     "People's United Bank",
+     "People’s United",
+     "People's United",
+     "Chittenden"
+    ],
+    "pseudonym": "Griseth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Mearrix": 12,
+   "Pustex": 3,
+   "Griseth": 16
+  },
+  "redactions": {
+   "urls": 89,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 7,
+   "attention_fields": 4
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_101",
+  "entities": [
+   {
+    "original": [
+     "GI DI Orion Acquisition",
+     "GI DI Orion Merger Sub",
+     "GI DI Orion",
+     "Orion",
+     "GI Data Infrastructure Executive Fund",
+     "GI Data Infrastructure Fund",
+     "GI Partners"
+    ],
+    "pseudonym": "Gorrora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "ORBCOMM",
+     "Orbcomm"
+    ],
+    "pseudonym": "Cusell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Inmarsat"
+    ],
+    "pseudonym": "Stairris",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Gorrora": 16,
+   "Cusell": 5,
+   "Stairris": 4,
+   "cusell": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A13": {
+  "maud_contract": "contract_115",
+  "entities": [
+   {
+    "original": [
+     "The Progressive Corporation",
+     "Progressive"
+    ],
+    "pseudonym": "Riolvix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Carnation Merger Sub"
+    ],
+    "pseudonym": "Naintora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Protective Insurance",
+     "Baldwin & Lyons",
+     "Protective"
+    ],
+    "pseudonym": "Medell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Riolvix": 5,
+   "Naintora": 3,
+   "Medell": 7,
+   "riolvix": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 0,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A14": {
+  "maud_contract": "contract_122",
+  "entities": [
+   {
+    "original": [
+     "Viasat"
+    ],
+    "pseudonym": "Braevix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Royal Acquisition Sub"
+    ],
+    "pseudonym": "Balvell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "RigNet",
+     "Intelie"
+    ],
+    "pseudonym": "Piris",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Braevix": 4,
+   "Balvell": 3,
+   "Piris": 10
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A15": {
+  "maud_contract": "contract_21",
+  "entities": [
+   {
+    "original": [
+     "Eastern Bankshares",
+     "Eastern Bank"
+    ],
+    "pseudonym": "Geston",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Clarion Acquisition",
+     "Clarion"
+    ],
+    "pseudonym": "Maelell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Century Bancorp",
+     "Century Bank"
+    ],
+    "pseudonym": "Fuson",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Geston": 5,
+   "Maelell": 3,
+   "Fuson": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A16": {
+  "maud_contract": "contract_18",
+  "entities": [
+   {
+    "original": [
+     "BancorpSouth"
+    ],
+    "pseudonym": "Varkell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Cadence Bancorporation",
+     "Cadence Bank",
+     "Cadence"
+    ],
+    "pseudonym": "Prisix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {
+   "CADE": "QNTV"
+  },
+  "replacements_by_pseudonym": {
+   "Varkell": 876,
+   "Prisix": 917,
+   "QNTV": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 8,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 5
+  }
+ },
+ "A17": {
+  "maud_contract": "contract_141",
+  "entities": [
+   {
+    "original": [
+     "Siemens Healthineers",
+     "Siemens Medical Solutions USA",
+     "Siemens"
+    ],
+    "pseudonym": "Quemell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Falcon Sub"
+    ],
+    "pseudonym": "Renur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Varian Medical Systems",
+     "Varian"
+    ],
+    "pseudonym": "Caeneth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Quemell": 67,
+   "Renur": 3,
+   "Caeneth": 6,
+   "caeneth": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 9,
+   "signatures": 7,
+   "name_fields": 7,
+   "attention_fields": 4
+  }
+ },
+ "A18": {
+  "maud_contract": "contract_13",
+  "entities": [
+   {
+    "original": [
+     "White Sands Parent",
+     "White Sands Bidco",
+     "White Sands"
+    ],
+    "pseudonym": "Cevion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Boingo Wireless",
+     "Boingo"
+    ],
+    "pseudonym": "Koumion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Digital Colony Partners",
+     "Digital Colony"
+    ],
+    "pseudonym": "Grouthian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Digital Bridge",
+     "DigitalBridge"
+    ],
+    "pseudonym": "Zorkent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Cevion": 7,
+   "Koumion": 8,
+   "Grouthian": 3
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 0,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A19": {
+  "maud_contract": "contract_37",
+  "entities": [
+   {
+    "original": [
+     "American Tower",
+     "Appleseed"
+    ],
+    "pseudonym": "Grerell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "CoreSite Realty",
+     "CoreSite"
+    ],
+    "pseudonym": "Trisis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Grerell": 17,
+   "Trisis": 8,
+   "trisis": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 7,
+   "name_fields": 7,
+   "attention_fields": 5
+  }
+ },
+ "A20": {
+  "maud_contract": "contract_148",
+  "entities": [
+   {
+    "original": [
+     "Kimco Realty",
+     "Kimco"
+    ],
+    "pseudonym": "Firkova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Weingarten Realty Investors",
+     "Weingarten"
+    ],
+    "pseudonym": "Dairkova",
+    "original_abbr": [
+     "WRI"
+    ],
+    "pseudonym_abbr": "DRK"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Firkova": 4,
+   "Dairkova": 11,
+   "dairkova": 1,
+   "DRK": 3
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 4
+  }
+ }
+}

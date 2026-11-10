@@ -1,0 +1,108 @@
+{
+  "defendants": {
+    "武某B": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "徐某A": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "武某C": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "常某某": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "任某A": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "刘某2": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "史某某": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    },
+    "任某C": {
+      "charges": [],
+      "articles": [],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 0
+      },
+      "probation": false
+    }
+  }
+}

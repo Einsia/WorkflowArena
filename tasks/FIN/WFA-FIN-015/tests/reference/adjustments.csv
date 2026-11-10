@@ -1,0 +1,38 @@
+entry_id,entity,date,account,counterparty,amount,txn_currency,txn_amount,description
+G001,S3,2026-05-01,2200,ACCRUAL,11412.07,,,reverse accrual
+G001,S3,2026-05-01,6700,ACCRUAL,-11412.07,,,reverse accrual
+G002,S3,2026-05-04,1100,C-S3-0014,2117.28,,,VAT correction
+G002,S3,2026-05-04,2350,C-S3-0014,-2117.28,,,VAT correction
+G003,S3,2026-05-04,1100,C-S3-0060,1693.83,,,VAT correction
+G003,S3,2026-05-04,2350,C-S3-0060,-1693.83,,,VAT correction
+G004,S3,2026-05-04,1100,C-S3-0072,1058.64,,,VAT correction
+G004,S3,2026-05-04,2350,C-S3-0072,-1058.64,,,VAT correction
+G005,S4,2026-06-30,1300,,-2444221.04,,,missing_count_adjustment CNT-S4-2026-06
+G005,S4,2026-06-30,5000,,2444221.04,,,missing_count_adjustment CNT-S4-2026-06
+G006,S4,2026-06-30,1100,C-S4-0018,-1155669.90,,,reverse cutoff
+G006,S4,2026-06-30,1300,,448169.05,,,reverse cutoff
+G006,S4,2026-06-30,2350,C-S4-0018,105060.90,,,reverse cutoff
+G006,S4,2026-06-30,4000,C-S4-0018,1050609.00,,,reverse cutoff
+G006,S4,2026-06-30,5000,,-448169.05,,,reverse cutoff
+G007,S6,2026-04-30,1260,S4,25.64,JPY,0.00,rate correction
+G007,S6,2026-04-30,4300,S4,-25.64,,,rate correction
+G008,S6,2026-04-27,1620,V-S6-013,93908.77,,,capitalize
+G008,S6,2026-04-27,6900,V-S6-013,-93908.77,,,capitalize
+G009,S6,2026-05-31,1650,,-1117.96,,,depreciation FA-S6-011
+G009,S6,2026-05-31,6400,,1117.96,,,depreciation FA-S6-011
+G010,S6,2026-06-30,1650,,-1117.96,,,depreciation FA-S6-011
+G010,S6,2026-06-30,6400,,1117.96,,,depreciation FA-S6-011
+G012,S3,2026-06-30,2160,S6,-7500.00,,,IC interest
+G012,S3,2026-06-30,7100,S6,7500.00,,,IC interest
+G013,S6,2026-04-30,1260,S4,-25.64,JPY,0.00,FX remeasurement true-up 2026-04
+G013,S6,2026-04-30,7200,,25.64,,,FX remeasurement true-up 2026-04
+G014,S6,2026-05-31,1250,S3,-7200.00,EUR,0.00,FX remeasurement true-up 2026-05
+G014,S6,2026-05-31,1250,S4,13355.00,JPY,0.00,FX remeasurement true-up 2026-05
+G014,S6,2026-05-31,1260,S3,-36.75,EUR,0.00,FX remeasurement true-up 2026-05
+G014,S6,2026-05-31,1260,S4,57.83,JPY,0.00,FX remeasurement true-up 2026-05
+G014,S6,2026-05-31,7200,,-6176.08,,,FX remeasurement true-up 2026-05
+G015,S6,2026-06-30,1250,S3,7200.00,EUR,0.00,FX remeasurement true-up 2026-06
+G015,S6,2026-06-30,1250,S4,-13355.00,JPY,0.00,FX remeasurement true-up 2026-06
+G015,S6,2026-06-30,1260,S3,36.75,EUR,0.00,FX remeasurement true-up 2026-06
+G015,S6,2026-06-30,1260,S4,-57.83,JPY,0.00,FX remeasurement true-up 2026-06
+G015,S6,2026-06-30,7200,,6176.08,,,FX remeasurement true-up 2026-06

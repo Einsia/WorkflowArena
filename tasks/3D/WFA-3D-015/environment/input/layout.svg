@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#161a22"/>
+<g fill="#ece8dc" font-family="sans-serif">
+<text x="40" y="50" font-size="30">CDC-C-X05  layout reference (plan view, north up)</text>
+<rect x="50" y="100" width="520" height="460" rx="10" fill="#2c3340"/>
+<text x="70" y="140" font-size="24">STUDIO</text>
+<rect x="200" y="300" width="220" height="90" fill="#6b4f36"/>
+<rect x="275" y="315" width="70" height="40" fill="#3a3f44"/>
+<circle cx="225" cy="420" r="22" fill="#8a8f96"/><text x="190" y="470" font-size="20">HOST_A</text>
+<circle cx="395" cy="420" r="22" fill="#4f6b52"/><text x="360" y="470" font-size="20">HOST_B</text>
+<rect x="270" y="110" width="80" height="26" fill="#b3302b"/><text x="276" y="130" font-size="16">ON AIR</text>
+<rect x="640" y="160" width="520" height="340" rx="40" fill="#3b3a2a"/>
+<text x="660" y="140" font-size="24">TAXI (stopped, facing north)</text>
+<rect x="690" y="220" width="420" height="40" fill="#22252a"/>
+<rect x="880" y="225" width="60" height="30" fill="#c78a2c"/><text x="868" y="290" font-size="18">RADIO</text>
+<circle cx="770" cy="360" r="26" fill="#2d3a55"/><text x="735" y="415" font-size="20">DRIVER</text>
+<text x="40" y="620" font-size="22">Positions and identities: see scene.json. SVG is a layout reference only.</text>
+</g></svg>

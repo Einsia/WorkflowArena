@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-010",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Autoregressive distributed lag (ARDL) models",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/statsmodels/statsmodels/pull/7433",
+    "revision": "merge 0626e52e3c9fe9d5e9d34b4dc9b019e883124081; start = first parent 9c2f41a438be32464266eff37306616f2ad09c52",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

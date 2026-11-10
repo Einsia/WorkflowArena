@@ -1,0 +1,382 @@
+{
+  "task_id": "WFA-3D-018",
+  "version": "x08-v1.4 (2026-10-25 rubric cleanup: project/audio measurements in checks.py)",
+  "scoring": "每条判定二元（部分满足即否）。连续分 = Σ weight×pass / Σ weight（排除 na）×100。组级门槛只让相关组记 0。B08、X06、X08、M18 在确定性底线通过后由 LLM 评委依据文本文件与联系表判定，其余判定全部由 checks.py 测量。按求解者 events.csv 声明帧测量，并与工程实测比对。",
+  "group_gates": {
+    "AUD": "B04 失败 → AUD 组（B03 除外）与 SPEECH 组其余判定记 0。",
+    "PRJ": "B06 失败 → 依赖工程测量的判定记 0：M09–M17、X01–X07、X09。",
+    "REV": "B02 失败 → M17 记 0。"
+  },
+  "tier_summary": {
+    "base": {
+      "n": 8,
+      "weight": 25.0
+    },
+    "mid": {
+      "n": 18,
+      "weight": 40.0
+    },
+    "gate": {
+      "n": 9,
+      "weight": 35.0
+    }
+  },
+  "items": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "DEL",
+      "critical": true,
+      "criterion_zh": "基础版成片编码契约：H.264、yuv420p、1280×720 方形像素、恒定 30 fps、解码恰好 900 帧；AAC 立体声 48 kHz，音频覆盖全片。",
+      "criterion_en": "Base film encoding contract: H.264, yuv420p, 1280x720 square pixels, CFR 30 fps, exactly 900 decoded frames; AAC stereo 48 kHz covering the picture.",
+      "verify": "ffprobe codec/pix_fmt/size/SAR/r_frame_rate/avg_frame_rate；ffmpeg -f null 计数解码帧=900；PTS 间隔恒定；音频时长≥29.97 s。",
+      "weight": 4.0
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "DEL",
+      "critical": false,
+      "criterion_zh": "修订版成片编码契约同 B01，解码恰好 930 帧；分轨各 31 s。",
+      "criterion_en": "Revision film contract as B01 with exactly 930 decoded frames; stems 31 s each.",
+      "verify": "同 B01，帧数=930；revision/stems/*.wav 时长 31.000±0.01 s。",
+      "weight": 3.0
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "AUD",
+      "critical": false,
+      "criterion_zh": "母带：两版综合响度 −20±2 LUFS，解码采样峰值 ≤ −1 dBFS，无削波样本。",
+      "criterion_en": "Master: both versions integrated −20±2 LUFS, decoded sample peak ≤ −1 dBFS, no clipped samples.",
+      "verify": "ffmpeg ebur128 读 I；解码为 float 后 max|x|≤0.891；|x|≥0.999 的样本数=0。",
+      "weight": 3.0
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "AUD",
+      "critical": false,
+      "criterion_zh": "分轨格式与加和（AUD/SPEECH 组门槛）：speech/lane/gate 三条 48 kHz PCM、30 s；按 timeline.json 声明母带增益相加后与解码混音一致：1/3 倍频程带能量（100 ms 帧，50 Hz–14 kHz，仅计该帧最强带以下 40 dB 内的带）逐点差绝对值中位数 ≤ 0.75 dB、95 分位 ≤ 3 dB；声明增益与实测最优拟合增益相差 ≤1 dB。失败则 AUD、SPEECH 组其余判定记 0。",
+      "criterion_en": "Stem format and sum (AUD/SPEECH group gate): three 48 kHz PCM stems, 30 s; sum with the declared timeline.json gains matches the decoded mix: 1/3-octave band energies (100 ms frames, 50 Hz–14 kHz, bands within 40 dB of the frame max) differ by median ≤0.75 dB and 95th pct ≤3 dB; declared gains within 1 dB of the best-fit gains. Failing zeroes the rest of AUD and SPEECH.",
+      "verify": "ffmpeg 解码（单声道按原样、立体声取两声道均值）；单声道/立体声均可（下混）；解码 AAC 至 48k，互相关对齐（允许 ≤2048 样本编码延迟）后比带能量；增益在 ≤4 kHz 低通带内最小二乘拟合。不用波形相减：AAC 感知编码使正确混音的宽带波形残差也远达不到 −30 dB。",
+      "weight": 3.0
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "DEL",
+      "critical": false,
+      "criterion_zh": "timeline.json 与 events.csv 结构：两版 timeline 含 6 个镜头帧范围与摄影机、6 个转场（含隐藏剪辑：基础版 810 帧、修订版 840 帧）、分轨起止与提前量、母带增益；events.csv 表头逐字一致，17 个必需 id 全在，帧号为整数且落在题面规定的所属镜头内（tray_push/bag_enter_tunnel∈S1，pass_scan/flaps_open/passenger_through∈S2，stop_press/belt_stop/tray_bump/line_screener_*∈S3，officer_halt/line_officer_*/passenger_stop∈S4，bag_grip/bag_place∈S5，passenger_arrive∈S6 且 ≥810）。",
+      "criterion_en": "timeline.json and events.csv structure: shots, cameras, 6 transitions incl. the hidden cut (810 base / 840 revision), stem in/out and leads, gains; exact header, all 17 ids, integer frames inside the shot the brief assigns.",
+      "verify": "JSON schema 宽松校验（键名不限，信息须可解析）；CSV 逐字表头；按镜头区间检查。 由 checks 判定。",
+      "weight": 3.0
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "PRJ",
+      "critical": false,
+      "criterion_zh": "工程可打开且命名齐全（PRJ 组门槛）：Blender 4.3 后台打开 scene.blend 无报错且可求值；18 个必需人物/骨架/道具对象（骨架为 Armature）与 7 台摄影机存在；场景属性 revision_insert_frames 存在且为 0 或 30，帧范围与之对应（0→0–899，30→0–929）；README.md 含 blender 导出命令。失败则所有依赖工程测量的判定记 0。",
+      "criterion_en": "Project opens and names complete (PRJ group gate): scene.blend opens headless in Blender 4.3 and can be evaluated; all 18 required character/rig/prop objects (rigs are armatures) and 7 cameras exist; scene property revision_insert_frames exists with value 0 or 30 and the frame range matches it (0–899 for 0, 0–929 for 30); README.md contains the blender export command. Failing zeroes all project-measured items.",
+      "verify": "blender -b scene.blend --python tests/x08_probe_bpy.py（单次前向逐帧导出）；保存为 30 时基础帧 f≥600 映射到场景帧 f+30。评分镜像缺 blender 时判分中止（grader error），不交评委。由 checks 判定。",
+      "weight": 3.0
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "EDIT",
+      "critical": false,
+      "criterion_zh": "可见剪辑结构：在 150/300/450/600/720 帧（±1）检测到硬切且切点两侧无混合帧；全片无其他被检测出的剪切（S6 甩镜区间 780–840 帧（26.0–28.0 s）内的检出一律不计，810 帧隐藏剪辑由 X05 判定）；无连续 ≥3 帧完全相同的定格。",
+      "criterion_en": "Visible cut structure: hard cuts detected at 150/300/450/600/720 (±1) with no blend frames; no other detected cuts (detections inside the S6 whip-pan span, frames 780–840 / 26.0–28.0 s, are ignored; the 810 hidden cut is judged in X05); no freeze of ≥3 identical frames.",
+      "verify": "320×180 灰度逐帧：切点分数=相邻帧平均绝对差/255+32 级直方图差，>0.12 且 >±12 帧局部中位数 4 倍判为切点（近似 ContentDetector）；检出帧落在 780–840 帧者从“多余剪切”中剔除；混合帧=切点相邻帧分数 >切点分数一半；PSNR>50 判相同帧。由 checks 判定。",
+      "weight": 3.0
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "DEL",
+      "critical": false,
+      "criterion_zh": "来源与合规：credits.md 列出资产、工具与台词制作方式；output/ 中无凭据样式字符串；scene.blend 中无网络（http/https）媒体引用。",
+      "criterion_en": "Provenance and compliance: credits.md lists assets, tools and how the lines were made; no credential-like strings in output/; no network (http/https) media references in scene.blend.",
+      "verify": "checks：凭据正则、credits.md 存在、.blend 无 http 媒体引用（任一不满足即否）；全部满足后由评委依据 credits.md 文本判断是否列出资产、工具与台词制作方式。",
+      "weight": 3.0
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": true,
+      "criterion_zh": "T12 J-cut：gate 分轨在 4.40±0.05 s 起音，4.35 s 前低于 −60 dBFS，起音无咔嗒（10%→90% 上升 ≤300 ms 且咔嗒检测通过；干脆但无咔嗒的起音也可）；lane 分轨在 4.97–5.10 s 之间结束。",
+      "criterion_en": "T12 J-cut: gate stem onset 4.40±0.05 s, below −60 dBFS before 4.35 s, onset without click (10%→90% rise ≤300 ms and click test passes; a hard but click-free start is accepted); lane stem ends between 4.97 and 5.10 s.",
+      "verify": "10 ms RMS 包络；起音=首次超过本段中位电平 −20 dB 的时刻；上升时间=幅度 10%→90%；咔嗒=起音 ±20 ms 内一阶差分最大值 > ±1 s 内 99.9 分位的 3 倍。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": true,
+      "criterion_zh": "T56 J-cut：gate 分轨在 S5（20–24 s）内 23.50±0.05 s 重新起音，20.10–23.45 s 低于 −60 dBFS；lane 分轨持续到 23.97–24.10 s 后退出，直到甩镜段才再出现。",
+      "criterion_en": "T56 J-cut: gate stem re-enters at 23.50±0.05 s and is below −60 dBFS over 20.10–23.45 s; lane stem leaves between 23.97 and 24.10 s and does not return before the whip.",
+      "verify": "同 M01；lane 退出判定窗口 24.10–26.30 s 低于 −60 dBFS。",
+      "weight": 2.0
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": false,
+      "criterion_zh": "同切的声音剪辑：10/15/20 s 三处，出画地点的分轨在切点 ±0.10 s 内退出、入画地点的分轨在 ±0.10 s 内进入；S1–S5 各镜头内不在画的地点分轨低于 −50 dBFS（T12、T56 的 J-cut 提前段 4.40–5.00 s、23.50–24.00 s 不计；另允许每镜头累计 ≤0.15 s 例外）。",
+      "criterion_en": "Straight sound cuts at 10/15/20 s: outgoing location stem exits and incoming enters within ±0.10 s; absent location stem below −50 dBFS within each of S1–S5 (J-cut lead windows 4.40–5.00 s and 23.50–24.00 s excluded; ≤0.15 s further exception per shot).",
+      "verify": "按 M01 包络（10 ms RMS，−50 dBFS 跨越点）；镜头区间用题面标称时刻 0/5/10/15/20/24 s。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": true,
+      "criterion_zh": "甩镜声音过渡：26.3–27.7 s 内 gate 分轨淡出、lane 分轨淡入，交叉点在 26.5–27.5 s，各自渐变 0.1–1.5 s；两条分轨与混音在隐藏剪辑 27.0 s ±20 ms 内无咔嗒（其他时刻的脚步等动作声允许）；28.0 s 后 gate 分轨低于 −50 dBFS。",
+      "criterion_en": "Whip-pan sound transition: gate fades out and lane fades in, crossover 26.5–27.5 s, each ramp 0.1–1.5 s; no click at the hidden cut (27.0 s ±20 ms) in either stem or the mix (footsteps and other action sounds elsewhere are allowed); gate stem below −50 dBFS after 28.0 s.",
+      "verify": "平滑包络交叉点与 −3→−20 dB 渐变时长；咔嗒=27.0 s ±20 ms 内一阶差分最大值 > ±1 s 内 99.9 分位的 3 倍（cxlib.click_check）。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "SPEECH",
+      "critical": true,
+      "criterion_zh": "台词时位与语音存在：speech 分轨中安检员与警员台词的起止与声明的 line_*_start/end 相差 ≤6 帧；安检员一句完全在 S3、警员一句完全在 S4；两句声明区间（±6 帧）之外无语音活动；每句为语音（≥30% 的 10 ms 帧为浊音）。不测词准确率（评分镜像无 ASR）。",
+      "criterion_en": "Line timing and speech presence: in the speech stem the screener and officer lines start and end within 6 frames of the declared line_*_start/end; the screener line lies inside S3 and the officer line inside S4; no speech activity outside the two declared lines (±6 frames); each line is speech-like (≥30% of its 10 ms frames voiced). Word accuracy is not measured (no ASR in the grader).",
+      "verify": "能量 VAD：100 ms RMS、门限 max(−60 dBFS, 峰值−35 dB)、间隔 <0.35 s 合并、<0.15 s 段丢弃；浊音=YIN（70–400 Hz）。由 checks 判定。",
+      "weight": 3.0
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "SPEECH",
+      "critical": false,
+      "criterion_zh": "语音韵律：每句浊音段基频标准差 ≥1.5 半音，语速 1.8–4.5 词/秒（9 词与 4 词除以实测台词时长）。",
+      "criterion_en": "Speech prosody: per line, voiced f0 SD ≥1.5 semitones and speaking rate 1.8–4.5 words/s (9 and 4 words over the measured line duration).",
+      "verify": "YIN（16 kHz，40 ms 帧，70–400 Hz），偏离中位数 >9 半音的帧视为倍频错误剔除；时长取 M05 的 VAD。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": false,
+      "criterion_zh": "停带的声音语义：lane 分轨 40–500 Hz 带能量在 S1（0.5–4.4 s）与 S3 停带前稳定（标准差 ≤3 dB）且比停带后高 ≥6 dB；停带后 0.6 s 内下降 ≥6 dB，且 S3 余下时间回升不超过 3 dB（0.5 s 滑动中位，短瞬态不计）。",
+      "criterion_en": "Belt-stop sound semantics: in the lane stem the 40–500 Hz band is steady (SD ≤3 dB) and ≥6 dB above the stopped level in S1 (0.5–4.4 s) and in S3 before the stop; it drops ≥6 dB within 0.6 s of the belt stop and does not recover by >3 dB for the rest of S3 (0.5 s running median; short transients ignored).",
+      "verify": "100 ms 带能量、0.5 s 滑动中位；停带时刻取 X04 工程实测（不可测时用声明 belt_stop）；停前 [b−1.0,b−0.1] 与停后 [b+0.6,b+1.0] 中位比较。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "AUD",
+      "critical": false,
+      "criterion_zh": "动作声同步：gate 分轨在声明 pass_scan ±3 帧内有短促提示音或读卡瞬态；lane 分轨在声明 tray_bump 与 bag_place 各自 ±2 帧内有撞击瞬态（瞬态=10 ms 包络较前 100 ms 中位数高 ≥8 dB）。",
+      "criterion_en": "Action-sound sync: gate stem has a beep/reader transient within ±3 frames of pass_scan; lane stem has impact transients within ±2 frames of tray_bump and bag_place.",
+      "verify": "10 ms 包络峰值较前 100 ms 中位数高 ≥8 dB。由 checks 判定（声明帧的工程合理性由 X03/X04 单独判定）。",
+      "weight": 2.0
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "CAM",
+      "critical": false,
+      "criterion_zh": "镜头参数（评分方从工程逐帧导出摄影机，宽松解读术语）：S1 俯角 ≥8°、固定（位移 <1 cm、转角 <0.5°）、景深关闭或 f≥5.6；S2 摄影机位移 <0.3 m 而偏航变化 ≥15° 且与旅客同向、镜头高 1.2–1.9 m、焦距 28–75 mm 不变；S4 镜头高 1.2–1.9 m、去趋势手持抖动 1–60 mm 且净位移 <0.5 m；S5 仰角 ≥4° 或机位 ≤0.9 m、沿视线方向推近 ≥0.08 m、焦距不变；S6B 在 840 帧后角速度 <0.5°/帧（落定）。",
+      "criterion_en": "Camera parameters exported from the project (tolerant readings): S1 high angle ≥8°, locked (<1 cm, <0.5°), DoF off or f≥5.6; S2 follow pan ≥15° yaw in the passenger's direction with <0.3 m travel, height 1.2–1.9 m, fixed 28–75 mm; S4 height 1.2–1.9 m, handheld 1–60 mm detrended jitter, net <0.5 m; S5 low angle (≥4° up or camera ≤0.9 m) with ≥0.08 m dolly-in along the view direction, fixed lens; S6B settles (<0.5°/frame) after frame 840.",
+      "verify": "x08_probe_bpy.py 逐帧导出 matrix_world、lens、dof；推近=600→719 帧机位位移在平均前向向量上的投影。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "CAM",
+      "critical": false,
+      "criterion_zh": "S3 焦点转移：CAM_S3 景深开启、f≤4；S3 前段对焦距离在摄影机到 MONITOR 屏幕距离的 ±25% 内，之后在 S3 内单调过渡到摄影机到 BELT_STOP_BUTTON 距离的 ±25%（两距离差 ≥15%，否则判否）；机位固定。",
+      "criterion_en": "S3 rack focus: DoF on, f≤4; focus starts within ±25% of camera–MONITOR distance and transitions monotonically within S3 to ±25% of camera–BELT_STOP_BUTTON distance (distances must differ ≥15%); locked camera.",
+      "verify": "dof.focus_distance 或 focus_object 位置逐帧导出。",
+      "weight": 2.0
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "PHYS",
+      "critical": false,
+      "criterion_zh": "闸机通行：TURNSTILE_GATE2 及其子对象的闸门在声明 pass_scan 后 3–36 帧内开始打开（>2 cm），并完全打开（几何位移 ≥0.15 m）；旅客骨盆越过闸机线 y=3.0 时闸门处于打开状态；旅客与闸机穿插 ≤2 cm；449 帧前闸门重新关闭（<3 cm）。",
+      "criterion_en": "E-gate passage: the flaps (TURNSTILE_GATE2 and its child objects) start opening (>2 cm) 3–36 frames after pass_scan and open fully (≥0.15 m geometry displacement); the passenger's pelvis crosses the gate line y=3.0 only while open; passenger/gate interpenetration ≤2 cm; the flaps close again (<3 cm) by frame 449.",
+      "verify": "评估后顶点相对 pass_scan−5 帧的最大位移；骨盆=骨架 pelvis/hips 骨（无则网格包围盒中心）；穿插=旅客评估网格顶点落入闸机网格的最大深度（BVH）。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "PHYS",
+      "critical": false,
+      "criterion_zh": "传送带刚体：TRAY_A、TRAY_B 是场景刚体世界中的刚体且缓存已烘焙（或 project/ 内有 .bphys 磁盘缓存），或已烘焙为密集关键帧（各 ≥100 个）并附建立刚体模拟的工程脚本；声明 tray_bump ±3 帧内两托盘间隙 ≤1 cm；托盘间、托盘与 CONVEYOR 穿插 ≤1 cm；停带后两托盘仍在带面上；BAG 从 tray_push 到 bag_grip 一直在 TRAY_A 平面范围内。",
+      "criterion_en": "Belt rigid bodies: TRAY_A and TRAY_B are rigid bodies in the scene rigid-body world with a baked cache (or a .bphys disk cache in project/), or are baked to dense keyframes (≥100 keys each) with a project script that sets up the rigid-body simulation; tray gap ≤1 cm within tray_bump ±3 frames; tray–tray and tray–CONVEYOR interpenetration ≤1 cm; after the belt stop both trays stay over the belt; BAG stays inside the TRAY_A footprint from tray_push until bag_grip.",
+      "verify": "scene.rigidbody_world.point_cache.is_baked / .bphys / 关键帧数；BVH 最近距离、顶点入侵深度与表面相交时的包围盒重叠深度；托盘按每 3 帧（450 帧后每 9 帧）抽样。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M13",
+      "tier": "mid",
+      "group": "WORLD",
+      "critical": false,
+      "criterion_zh": "布局与屏幕方向：CONVEYOR (9.8, 3.0)、XRAY_TUNNEL (9.6, 3.0)、SEARCH_TABLE (11.6, 6.0)、TURNSTILE_GATE2 (3.4, 3.0)、MONITOR（操作台 9.6, 1.9）包围盒中心与 scene.json 相差 ≤0.5 m，PARTITION 中心 x 与 6.0 相差 ≤0.5 m（门洞通行由 X01/X09 判定）；BAG 在带上运动时于 CAM_S1、CAM_S3 中为屏幕左→右（≥90% 运动帧）；S6A 甩镜朝隔墙一侧转动（CAM_S6A 前向与 +x 的夹角从 795 帧到 803 帧减小）。",
+      "criterion_en": "Layout and screen direction: bbox centres of CONVEYOR (9.8, 3.0), XRAY_TUNNEL (9.6, 3.0), SEARCH_TABLE (11.6, 6.0), TURNSTILE_GATE2 (3.4, 3.0) and MONITOR (operator station 9.6, 1.9) within 0.5 m of scene.json and PARTITION centre x within 0.5 m of 6.0 (door passages are checked in X01/X09); while the BAG rides the belt it moves screen-left→right in CAM_S1 and CAM_S3 (≥90% of moving frames); the S6A whip turns toward the partition (angle between CAM_S6A forward and +x decreases from 795 to 803).",
+      "verify": "第 0 帧评估包围盒中心；屏幕方向=BAG 逐帧位移与摄影机右向量点积符号。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M14",
+      "tier": "mid",
+      "group": "WORLD",
+      "critical": true,
+      "criterion_zh": "因果链顺序：声明的 stop_press < belt_stop < line_screener_end < officer_halt < passenger_stop；bag_grip > belt_stop；passenger_arrive > bag_place；且实测停带（TRAY_A 速度，同 X04）与实测旅客停步（骨盆速度，同 X02）各与声明帧相差 ≤4 帧。",
+      "criterion_en": "Causal chain order: declared stop_press < belt_stop < line_screener_end < officer_halt < passenger_stop; bag_grip > belt_stop; passenger_arrive > bag_place; and the measured belt stop (TRAY_A speed, as in X04) and passenger stop (pelvis speed, as in X02) are each within 4 frames of the declared frame.",
+      "verify": "events.csv 顺序 + 工程轨迹实测；任一实测不可得即判否。由 checks 判定。",
+      "weight": 3.0
+    },
+    {
+      "id": "M15",
+      "tier": "mid",
+      "group": "VIS",
+      "critical": false,
+      "criterion_zh": "X 光监视器：S3 中屏幕区域（MONITOR 在 CAM_S3 中的投影映射到成片）为非均匀图像（灰度标准差 ≥5），停带前逐帧变化（平均帧差 ≥0.5 灰度级）、停带后静止（停前 ≥ 停后 ×2）。不判定图像是否为这只行李。",
+      "criterion_en": "X-ray monitor: in S3 the screen region (CAM_S3 projection of MONITOR, mapped onto the film) is non-uniform (grey SD ≥5), changes frame-to-frame before the belt stop (mean difference ≥0.5 grey levels) and holds after it (pre ≥2× post). Whether the image depicts this bag is not graded.",
+      "verify": "bpy_extras.world_to_camera_view 投影 MONITOR 评估网格；640×360 灰度成片 ROI 帧差；停带时刻取 X04 实测。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M16",
+      "tier": "mid",
+      "group": "PRJ",
+      "critical": true,
+      "criterion_zh": "工程即真实来源：评分方从 project/scene.blend 重渲第 75/225/375/525/660/780/860 帧（Cycles CPU、16 采样、降噪、320×180、关闭运动模糊），与成片同帧在 320×180 灰度、σ=1.5 模糊后每帧 SSIM ≥0.75。",
+      "criterion_en": "Project is the source of truth: frames 75/225/375/525/660/780/860 re-rendered from scene.blend (Cycles CPU, 16 samples, denoised, 320×180, motion blur off) match the film: SSIM ≥0.75 per frame on 320×180 grey after a σ=1.5 blur.",
+      "verify": "x08_probe_bpy.py render 模式（保存为 30 时按映射帧），超时 1800 s。由 checks 判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "M17",
+      "tier": "mid",
+      "group": "REV",
+      "critical": true,
+      "criterion_zh": "修订传播：930 帧；0–599 帧与基础版一致（PSNR≥30）；修订 630–929 帧与基础版 600–899 帧一致（SSIM≥0.85）；插入段 600–629 非定格且 629→630 无画面跳变（帧差 ≤ 局部中位×3+1）；20 s 前音频不变、之后整体延后 1.000±0.02 s；修订 gate 分轨 24.50±0.05 s 起音；工程修订状态（revision_insert_frames=30）下被跟踪对象、骨架骨盆与 CAM_S5 在 599→600、629→630 无跳变（超出局部步长 3 cm）——仅当该属性驱动场景时测量（保存为 30，或设为 30 后场景求值改变），否则只判成片部分。（修订 timeline 中 840 帧隐藏剪辑由 B05 判定。）",
+      "criterion_en": "Revision propagation: 930 frames; 0–599 unchanged (PSNR≥30); rev 630–929 matches base 600–899 (SSIM≥0.85); inserted 600–629 not frozen and no picture jump at 629→630 (frame difference ≤3× local median +1); audio before 20 s unchanged, after shifted +1.000±0.02 s; rev gate onset 24.50±0.05 s; in the project's revision state (revision_insert_frames=30) tracked objects, rig pelvises and CAM_S5 do not jump (>3 cm beyond the local step) at 599→600 or 629→630 — measured when the property drives the scene (file saved at 30, or setting it to 30 changes the evaluated scene); otherwise only the film checks apply. (The 840 hidden cut in the revision timeline is checked in B05.)",
+      "verify": "逐帧 PSNR/SSIM；互相关测音频偏移；x08_probe_bpy.py revision pass 导出场景帧 596–633。由 checks 判定。",
+      "weight": 4.0
+    },
+    {
+      "id": "M18",
+      "tier": "mid",
+      "group": "DEL",
+      "critical": false,
+      "criterion_zh": "如实质检：qa.md 记录真实问题与修复（附帧号/采样位置）或如实说明无问题；其中帧号、时刻、电平声明与交付的 events.csv、timeline.json 及 ffprobe/响度证据一致，任一不符即判否。",
+      "criterion_en": "Truthful QA: qa.md records real issues with frame/sample positions or truthfully states none; every frame/time/level claim in it is consistent with the delivered events.csv, timeline.json and the ffprobe/loudness evidence.",
+      "verify": "checks：qa.md 缺失即否；否则评委依据 qa.md 与上述证据判定。",
+      "weight": 2.0
+    },
+    {
+      "id": "X01",
+      "tier": "gate",
+      "group": "WORLD",
+      "critical": true,
+      "criterion_zh": "平行动作的连续世界时间：PASSENGER/SCREENER/OFFICER 骨盆（骨架 pelvis/hips 骨；无则网格包围盒中心并放宽到 0.15 m）与 BAG、TRAY_A、TRAY_B 中心在 0–899 全部相邻帧间位移 ≤0.10 m（含各切点），任一 1 s 内位移 ≤2.5 m；镜头切走期间传送带照常运行：BAG 在 149→300 帧的位移与 S1 内 BAG 每帧速度中位数×151 相差 ≤30%；人物只经由门洞穿过隔墙 x=6.0（y∈[0.6,1.8] 或 [6.2,7.4]）。",
+      "criterion_en": "Continuous world time for parallel action: pelvis positions of PASSENGER/SCREENER/OFFICER (rig pelvis/hips bone; mesh bbox centre with a 0.15 m limit if none) and BAG/TRAY_A/TRAY_B centres move ≤0.10 m between all adjacent frames 0–899 (incl. all cut frames) and ≤2.5 m within any 1 s; the belt keeps running offscreen: BAG displacement 149→300 within 30% of 151× the median S1 BAG speed per frame; characters cross the partition (x=6.0) only through a door (y∈[0.6,1.8] or [6.2,7.4]).",
+      "verify": "x08_probe_bpy.py 逐帧导出骨骼与评估包围盒（刚体缓存求值后）。由 checks 判定。",
+      "weight": 5.0
+    },
+    {
+      "id": "X02",
+      "tier": "gate",
+      "group": "CHAR",
+      "critical": true,
+      "criterion_zh": "拦停反应的多角色协同：警员前臂抬起（前臂仰角 ≥45° 或手腕高于肩）的实测起始在声明 officer_halt ±3 帧内且在 S4 内；抬手前 10 帧旅客骨盆水平速度 ≥0.4 m/s；抬手后 6–45 帧之间旅客速度降至 <0.1 m/s 并保持 ≥15 帧，声明 passenger_stop 与之相差 ≤4 帧；抬手后 60 帧内旅客头部水平前向与指向警员头部的夹角 ≤35° 且连续 ≥10 帧；抬手时警员头部朝向旅客（≤35°）；S4 内两人骨盆距离始终 ≥0.35 m。",
+      "criterion_en": "Halt-reaction coordination: officer forearm-raise onset (forearm elevation ≥45° or wrist above shoulder) within ±3 frames of officer_halt and inside S4; passenger pelvis speed ≥0.4 m/s over the 10 frames before; she stops (<0.1 m/s for ≥15 frames) 6–45 frames after the raise and passenger_stop is within 4 frames of it; within 60 frames her head forward is within 35° (horizontal) of the direction to the officer's head for ≥10 consecutive frames; the officer's head faces her (≤35°) at the raise; pelvis distance ≥0.35 m throughout S4.",
+      "verify": "骨骼按名称/层级识别（手=带 ≥4 条三骨手指链的骨，肘/肩为其祖先，骨盆=pelvis/hips/root，头=head）；头部前向=头骨局部轴中与步行方向最一致者（以该角色步速 ≥0.4 m/s 的帧标定，无步行帧时用骨架对象 −Y）。S2 过闸后至 S4 之间旅客在镜头外可停顿再起步，只要满足 X01。由 checks 判定。",
+      "weight": 4.0
+    },
+    {
+      "id": "X03",
+      "tier": "gate",
+      "group": "CHAR",
+      "critical": true,
+      "criterion_zh": "提包的手-物接触：bag_grip 至 bag_place 每一帧 SCREENER 至少一只手（手掌与手指骨首尾点）距 BAG 评估网格表面 ≤4 cm，且 ≥80% 的帧两只手都 ≤4 cm；BAG 抬起 ≥0.10 m；600–899 帧内抬运区间之外 BAG 每帧位移 <5 mm；bag_place 至 899 帧 BAG 底面与 SEARCH_TABLE 台面相差 ≤1.5 cm 且中心位于台面上方。",
+      "criterion_en": "Bag lift hand contact: on every frame bag_grip..bag_place at least one SCREENER hand (palm and finger bone heads/tails) is within 4 cm of the BAG evaluated mesh surface, both hands on ≥80% of the frames; the BAG is lifted ≥0.10 m; in 600–899 outside the lift the BAG moves <5 mm/frame; from bag_place to 899 the BAG bottom is within ±1.5 cm of the SEARCH_TABLE top and its centre lies over the table.",
+      "verify": "BVH 最近点距离（评估后网格）；评估网格顶点包围盒。由 checks 判定。",
+      "weight": 4.0
+    },
+    {
+      "id": "X04",
+      "tier": "gate",
+      "group": "PHYS",
+      "critical": true,
+      "criterion_zh": "拍停按钮与停带同步：stop_press ±2 帧内 SCREENER 指尖（手指链末端骨尾）距 BELT_STOP_BUTTON 表面 ≤1.5 cm；按钮几何位移 ≥2 mm；带上的 TRAY_A 在触按后 0–10 帧内开始减速（3 帧速度 <稳定值 90%），并在减速起始后 2–20 帧内完全停止（<稳定值 5% 持续 5 帧）；声明 belt_stop 与实测停止相差 ≤3 帧；触按前速度在稳定值 ±15% 内。",
+      "criterion_en": "Stop-button contact and belt stop sync: a SCREENER fingertip (tail of a finger-chain end bone) is within 1.5 cm of the BELT_STOP_BUTTON surface within stop_press ±2; the button geometry travels ≥2 mm; TRAY_A (riding the belt) decelerates (3-frame speed <90% of steady) 0–10 frames after the contact and stops fully (<5% of steady for 5 frames) 2–20 frames after the decel onset; declared belt_stop within 3 frames of the measured stop; speed before the contact within ±15% of steady.",
+      "verify": "BVH 指尖距离；按钮（含子对象）评估顶点相对 stop_press−10 帧的最大位移；TRAY_A 包围盒中心逐帧速度。由 checks 判定。",
+      "weight": 3.5
+    },
+    {
+      "id": "X05",
+      "tier": "gate",
+      "group": "EDIT",
+      "critical": true,
+      "criterion_zh": "甩镜隐藏剪辑：(a) 810 帧未被检出为剪切；(b) CAM_S6A 在 803–809 帧、CAM_S6B 在 810–816 帧偏航角速度均 ≥6°/帧且转向相同，渲染开启运动模糊；(c) 808→809、809→810、810→811 光流水平均值同号。三项全满足才通过。",
+      "criterion_en": "Whip-pan hidden cut: (a) frame 810 not detected as a cut; (b) CAM_S6A 803–809 and CAM_S6B 810–816 yaw ≥6°/frame, same direction, render motion blur on; (c) the mean horizontal optical flow has the same sign for 808→809, 809→810 and 810→811. All three required.",
+      "verify": "切点检测（同 B07）；工程摄影机导出；Farneback 光流（320×180 灰度）。由 checks 判定。",
+      "weight": 4.0
+    },
+    {
+      "id": "X06",
+      "tier": "gate",
+      "group": "VIS",
+      "critical": true,
+      "criterion_zh": "写实渲染：确定性底线——各镜头平涂块指数 ≤0.15，渲染引擎为 Cycles（开启降噪）或 EEVEE，至少一个柔和光源（面光、光源半径 ≥5 cm 或 HDRI/天空世界），≥60% 材质使用 BSDF 着色器且 ≥5 个材质含图像/程序纹理或凹凸节点；底线通过后，联系表中每个镜头都像写实纪录片画面，材质、柔和光照与阴影可信，无平面着色/卡通/白模镜头。",
+      "criterion_en": "Photoreal rendering: deterministic floor — per-shot flat-block index ≤0.15, render engine Cycles (denoising on) or EEVEE, at least one soft light source (area light, light radius ≥5 cm, or HDRI/sky world), ≥60% of materials use a BSDF shader and ≥5 materials have image/procedural texture or bump nodes; then, in the contact sheets, every shot reads as photoreal documentary footage with believable materials, soft lighting and shadows — no flat-shaded, toon or untextured shot.",
+      "verify": "checks：平涂块指数=640×360 灰度 16×16 块中标准差 <0.2 的非黑块比例（每镜头 5 帧平均）；工程材质/灯光导出。底线不满足即否，否则由评委依据联系表判定。",
+      "weight": 4.0
+    },
+    {
+      "id": "X07",
+      "tier": "gate",
+      "group": "CHAR",
+      "critical": true,
+      "criterion_zh": "可动人物与口型：三个骨架通过 Armature 修改器驱动各自角色网格；每个骨架有一只手 ≥4 条手指链、每链 ≥3 骨且 ≥4 根手指骨有关键帧；安检员（S3）与警员（S4）下颌/嘴唇动画（嘴型形态键或下颌骨转角）与 speech 分轨 30 fps 包络在声明台词区间的互相关峰值 r ≥0.5、滞后 ≤2 帧（67 ms）。",
+      "criterion_en": "Rigged characters and lip sync: the three rigs deform their character meshes (Armature modifier); each rig has a hand with ≥4 finger chains of ≥3 bones and ≥4 keyed finger bones; screener (S3) and officer (S4) jaw/lip animation (mouth/viseme shape keys or jaw bone rotation) vs the speech stem envelope (30 fps RMS over the declared line span) peaks at r ≥0.5 within a lag of ≤2 frames (67 ms).",
+      "verify": "Armature 修改器 + 顶点组；形态键名或骨名匹配 mouth|jaw|lip|viseme 等。由 checks 判定。",
+      "weight": 3.5
+    },
+    {
+      "id": "X08",
+      "tier": "gate",
+      "group": "NARR",
+      "critical": true,
+      "criterion_zh": "画面叙事可读：仅凭联系表（不借文字）能认出因果链：行李过 X 光 → 安检员停带并对讲 → 警员拦下旅客 → 行李被取上检查台 → 两线在台前汇合，且交叉剪辑的两地读作同时发生；无字幕或说明字卡。",
+      "criterion_en": "Narrative legibility from picture: from the contact sheets alone (no text), the chain bag in X-ray → screener stops the belt and radios → officer halts the passenger → bag lifted to the search table → both lines meet at the table is recognisable, and the cross-cut places read as simultaneous; no subtitles or title cards.",
+      "verify": "评委依据联系表判断（base 成片缺失时 checks 直接判否）；声学空间区分由 M01–M04（分轨）覆盖，本条不判音频。",
+      "weight": 4.0
+    },
+    {
+      "id": "X09",
+      "tier": "gate",
+      "group": "WORLD",
+      "critical": true,
+      "criterion_zh": "汇合的空间一致：S6 中 PASSENGER 与 OFFICER 骨盆首次越过 x=6.0 进入行李通道时 y∈[6.2,7.4]（北门洞），平均步速 0.4–2.0 m/s（取移动 >0.1 m/s 的帧）；声明 passenger_arrive 时旅客骨盆距 SEARCH_TABLE 边缘水平距离 ≤1.2 m、头部朝向 BAG（≤35°）；此刻三名人物与 BAG 的投影包围盒各有 ≥50% 在 CAM_S6B 画框内；810–899 帧 BAG 位置与第 719 帧相差 ≤2 cm。",
+      "criterion_en": "Convergence spatially consistent: in S6 the PASSENGER and OFFICER pelvises first cross x=6.0 into the lane at y∈[6.2,7.4] (north door), mean walking speed 0.4–2.0 m/s (frames moving >0.1 m/s); at passenger_arrive her pelvis is ≤1.2 m (horizontal) from the SEARCH_TABLE edge and her head faces the BAG (≤35°); at that frame PASSENGER, SCREENER, OFFICER and BAG each have ≥50% of their projected bbox inside the CAM_S6B frame; the BAG over 810–899 stays within 2 cm of its position at frame 719.",
+      "verify": "工程轨迹；头部前向同 X02；world_to_camera_view 投影评估网格。由 checks 判定。",
+      "weight": 3.0
+    }
+  ],
+  "notes": "本流水线没有人工/盲审，也没有 ASR；题面中的作弊/合规规则除 B08 的确定性部分外不自动计分。checks.py 通过 tests/x08_probe_bpy.py 在 blender -b 中单次前向逐帧导出工程数据；工程可保存为 revision_insert_frames=0 或 30。",
+  "judge_weight_share": 13.0,
+  "release_acceptance": {
+    "task_form": "3D-FILM",
+    "all_critical_items_must_pass": true
+  }
+}

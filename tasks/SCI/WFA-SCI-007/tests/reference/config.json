@@ -1,0 +1,60 @@
+{
+  "task_id": "WFA-SCI-007",
+  "tracks": [
+    {
+      "name": "dG",
+      "submission_file": "dG-prediction.txt",
+      "format": "sampl",
+      "value_index": 1,
+      "truth": "reference/truth_dG_scored.csv",
+      "required_ids": "reference/required_ids.csv",
+      "required_sections": [
+        "Name",
+        "Method"
+      ],
+      "field": "reference/field.csv",
+      "field_track": "dG",
+      "field_only_ranked": true,
+      "primary": "RMSE",
+      "lower_is_better": true,
+      "extra_metrics": [
+        "MAE",
+        "ME",
+        "R2",
+        "slope",
+        "kendall_tau"
+      ]
+    }
+  ],
+  "controls": {
+    "positive": [
+      {
+        "track": "dG",
+        "entry_id": "e7w4x + mknyd",
+        "dir": "controls/positive/e7w4x___mknyd",
+        "tolerance": 1e-06
+      },
+      {
+        "track": "dG",
+        "entry_id": "gemch + pbo45",
+        "dir": "controls/positive/gemch___pbo45",
+        "tolerance": 1e-06
+      },
+      {
+        "track": "dG",
+        "entry_id": "e85s6 + kuovg",
+        "dir": "controls/positive/e85s6___kuovg",
+        "tolerance": 1e-06
+      }
+    ],
+    "negative": {
+      "dG": {
+        "constant": -7.0,
+        "random_range": [
+          -14.0,
+          -2.0
+        ]
+      }
+    }
+  }
+}

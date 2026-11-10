@@ -1,0 +1,16 @@
+item,asset_id,fair_value,remaining_life_months
+Inventory (all lots on hand at acquisition),,476627.94,
+Land,FA-S5-001,2470121.00,
+Warehouse,FA-S5-002,1511205.00,240
+Office building,FA-S5-003,1324840.00,240
+Assembly cell,FA-S5-005,15262.00,48
+IT servers,FA-S5-007,3797.00,36
+Racking system,FA-S5-009,54795.00,48
+Assembly cell,FA-S5-011,69041.00,60
+ERP hardware,FA-S5-013,36458.00,60
+ERP hardware,FA-S5-016,5167.00,36
+ERP hardware,FA-S5-017,5971.00,72
+Assembly cell,FA-S5-020,12198.00,36
+Customer relationships,,1907850.00,72
+Trade name 'Corvex',,721590.00,120
+Order backlog,,222500.00,6

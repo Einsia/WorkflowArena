@@ -1,0 +1,41 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-014"
+version = "0.1.0"
+description = "Reimplement the model, field and JSON-schema layer of a data-validation library on top of its retained schema-building internals and its compiled validation core, judged by the library's own test suite."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out"
+language = "Python"
+source_repo = "pydantic/pydantic"
+base_tag = "v2.13.5"
+carved_files = 8
+carved_code_lines = 4816
+carved_raw_lines_removed = 3288
+contract_symbols = 24
+lines_per_contract_symbol = 201
+required_tests = 2362
+regression_tests = 3283
+data_driven_cases = 0
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 20480
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

@@ -1,0 +1,51 @@
+{
+ "entries": {
+  "P": 1999,
+  "S1": 2016,
+  "S2": 2419,
+  "S3": 1988,
+  "S4": 1607,
+  "S5": 1757,
+  "S6": 1170
+ },
+ "lines": {
+  "P": 5606,
+  "S1": 6103,
+  "S2": 7036,
+  "S3": 5889,
+  "S4": 4709,
+  "S5": 5203,
+  "S6": 2376
+ },
+ "eliminations": 74,
+ "elim_categories": {
+  "acquisition": 1,
+  "fx_designated_loan": 2,
+  "ic_balances": 23,
+  "ic_dividends": 5,
+  "ic_pl": 17,
+  "investment": 5,
+  "nci_oci": 1,
+  "nci_opening": 3,
+  "nci_profit": 2,
+  "ppa_subsequent": 3,
+  "up_closing": 7,
+  "up_opening": 5
+ },
+ "consolidated_accounts": 43,
+ "entity_tb_cells": 250,
+ "summary": {
+  "consolidated_revenue": 64336702.83,
+  "consolidated_net_income": 9262672.95,
+  "net_income_attributable_to_nci": 539863.29,
+  "net_income_attributable_to_parent": 8722809.66,
+  "nci_closing_total": 4593529.26,
+  "cta_attributable_to_parent_closing": -2316641.79,
+  "goodwill": 3085969.35,
+  "total_assets": 96687994.44,
+  "total_liabilities": 20061128.55,
+  "total_equity": 76626865.89,
+  "nci_closing_S2": 2312584.95,
+  "nci_closing_S3": 2280944.31
+ }
+}

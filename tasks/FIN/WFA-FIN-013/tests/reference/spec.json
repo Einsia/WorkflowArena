@@ -1,0 +1,56 @@
+{
+ "tables": [
+  {
+   "file": "acquired_net_assets.csv",
+   "keys": [
+    "account"
+   ],
+   "values": [
+    "carrying_amount"
+   ],
+   "role": "branch"
+  },
+  {
+   "file": "ppa.csv",
+   "keys": [
+    "item",
+    "asset_id"
+   ],
+   "values": [
+    "carrying_amount",
+    "fair_value",
+    "step_up"
+   ],
+   "role": "branch"
+  },
+  {
+   "file": "ppa_subsequent.csv",
+   "keys": [
+    "item",
+    "asset_id"
+   ],
+   "values": [
+    "charge_to_date",
+    "unamortized_step_up_closing"
+   ],
+   "role": "branch"
+  }
+ ],
+ "summary_roles": {
+  "s5_post_acquisition_net_income_own_books": "branch",
+  "contingent_consideration_liability_closing": "branch",
+  "change_in_fv_contingent_consideration": "branch",
+  "acquisition_costs_expensed": "branch",
+  "sales_s5_to_p_before_acquisition": "branch"
+ },
+ "hard": [
+  {
+   "name": "deliverables_present",
+   "type": "present",
+   "files": [
+    "ppa.csv",
+    "summary.json"
+   ]
+  }
+ ]
+}

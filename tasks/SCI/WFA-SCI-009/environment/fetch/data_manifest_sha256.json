@@ -1,0 +1,17 @@
+[
+ {
+  "name": "acwf_SSSP_1.3.0_PBE_precision.tar.gz",
+  "url": "https://archive.materialscloud.org/records/rcyfm-68h65/files/SSSP_1.3.0_PBE_precision.tar.gz?download=1",
+  "size": 62963841,
+  "sha256": "d91db6b4b3788501d535a5b84ebabf3859ea3e3ac6ea154c4be3718da50f0c85",
+  "extract": "tar",
+  "dest": "pseudos"
+ },
+ {
+  "name": "acwf_SSSP_1.3.0_PBE_precision.json",
+  "url": "https://archive.materialscloud.org/records/rcyfm-68h65/files/SSSP_1.3.0_PBE_precision.json?download=1",
+  "size": 22485,
+  "sha256": "7b7b648915e54c8397cd8143a7385c17eeed3104ad1236cecd905126d338a4e3",
+  "dest": "pseudos/SSSP_1.3.0_PBE_precision.json"
+ }
+]

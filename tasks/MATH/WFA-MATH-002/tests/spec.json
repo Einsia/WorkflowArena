@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "ErgodicTheory.Livsic.BiShiftMeasurableRigidity",
+  "build_targets": [
+    "ErgodicTheory.Livsic.BiShiftMeasurableRigidity"
+  ],
+  "names": [
+    "ErgodicTheory.hasVanishingPeriodicSums_of_measurable_aeCoboundary_biShift"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "ErgodicTheory"
+    ],
+    "target_file": "ErgodicTheory/Livsic/BiShiftMeasurableRigidity.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

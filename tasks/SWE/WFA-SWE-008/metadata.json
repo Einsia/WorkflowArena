@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-008",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "New infrastructure for continuous probability distributions (ContinuousDistribution)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/scipy/scipy/pull/21050",
+    "revision": "merge 47106acb483358cca9a4c53849698fa10e4aeb53; start = first parent 8bfaef2c3351854de5898127d662e1357f9364ad",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

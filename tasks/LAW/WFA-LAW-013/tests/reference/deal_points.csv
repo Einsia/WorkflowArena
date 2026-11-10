@@ -1,0 +1,301 @@
+agreement,deal_point,answer
+A01,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Takeover Statutes
+A01,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A01,cc_cap_bringdown_standard,Accurate in all respects with below-threshold carveout
+A01,cc_scrape_applies_to,Capitalization R&Ws | General R&Ws
+A01,cc_general_bringdown_timing,At Closing Only
+A01,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A01,cc_covenant_compliance,All Covenants
+A01,kn_definition,Constructive knowledge
+A01,kn_identified_persons,Yes
+A01,mae_co_disclosure_schedules,Yes
+A01,mae_co_buyer_actions,No
+A01,mae_co_stockholder_litigation,Yes
+A01,mae_ability_subject_to_carveouts,No
+A01,ef_antitrust_standard,Reasonable best efforts
+A01,rem_specific_performance,"""entitled to"" specific performance"
+A02,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Other | Subsidiaries | Takeover Statutes
+A02,cc_fund_bringdown_standard,Accurate in all material respects
+A02,cc_cap_bringdown_standard,Accurate in all respects with below-threshold carveout
+A02,cc_scrape_applies_to,General R&Ws | fundamental/Special R&Ws
+A02,cc_general_bringdown_timing,At Closing Only
+A02,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A02,cc_covenant_compliance,All Covenants
+A02,kn_definition,Actual knowledge
+A02,kn_identified_persons,Yes
+A02,mae_co_disclosure_schedules,No
+A02,mae_co_buyer_actions,No
+A02,mae_co_stockholder_litigation,Yes
+A02,mae_ability_subject_to_carveouts,No
+A02,ef_antitrust_standard,Reasonable best efforts
+A02,rem_specific_performance,"""entitled to"" specific performance"
+A03,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Rights Agreement | Takeover Statutes
+A03,cc_fund_bringdown_standard,Accurate in all material respects
+A03,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A03,cc_scrape_applies_to,General R&Ws
+A03,cc_general_bringdown_timing,At Closing Only
+A03,cc_general_bringdown_standard,All/The R&Ws accurate in all respects (repeating R&Ws)
+A03,cc_covenant_compliance,All Covenants
+A03,kn_definition,Constructive knowledge
+A03,kn_identified_persons,Yes
+A03,mae_co_disclosure_schedules,No
+A03,mae_co_buyer_actions,No
+A03,mae_co_stockholder_litigation,Yes
+A03,mae_ability_subject_to_carveouts,No
+A03,ef_antitrust_standard,Reasonable best efforts
+A03,rem_specific_performance,"""entitled to"" specific performance"
+A04,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Rights Agreement
+A04,cc_fund_bringdown_standard,Accurate in all material respects
+A04,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A04,cc_scrape_applies_to,General R&Ws
+A04,cc_general_bringdown_timing,At Closing Only
+A04,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A04,cc_covenant_compliance,All Covenants
+A04,kn_definition,Actual knowledge
+A04,kn_identified_persons,Yes
+A04,mae_co_disclosure_schedules,No
+A04,mae_co_buyer_actions,No
+A04,mae_co_stockholder_litigation,Yes
+A04,mae_ability_subject_to_carveouts,Yes
+A04,ef_antitrust_standard,Reasonable best efforts
+A04,rem_specific_performance,"""entitled to"" specific performance"
+A05,cc_fund_rw_types,Authority | Brokers' Fee | Capitalization-Other | Enforceability
+A05,cc_fund_bringdown_standard,Accurate in all material respects
+A05,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A05,cc_scrape_applies_to,General R&Ws
+A05,cc_general_bringdown_timing,At Signing & At Closing
+A05,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A05,cc_covenant_compliance,Each Covenant
+A05,kn_definition,Actual knowledge
+A05,kn_identified_persons,Yes
+A05,mae_co_disclosure_schedules,No
+A05,mae_co_buyer_actions,No
+A05,mae_co_stockholder_litigation,Yes
+A05,mae_ability_subject_to_carveouts,No
+A05,ef_antitrust_standard,Reasonable best efforts
+A05,rem_specific_performance,"""entitled to"" specific performance"
+A06,cc_fund_rw_types,Approval | Authority | Capitalization-Other | Enforceability | No MAE | Organization
+A06,cc_fund_bringdown_standard,Accurate in all material respects
+A06,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A06,cc_scrape_applies_to,General R&Ws
+A06,cc_general_bringdown_timing,At Signing & At Closing
+A06,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A06,cc_covenant_compliance,Each Covenant
+A06,kn_definition,Constructive knowledge
+A06,kn_identified_persons,Yes
+A06,mae_co_disclosure_schedules,No
+A06,mae_co_buyer_actions,Yes
+A06,mae_co_stockholder_litigation,Yes
+A06,mae_ability_subject_to_carveouts,Yes
+A06,ef_antitrust_standard,Reasonable best efforts
+A06,rem_specific_performance,"""entitled to"" specific performance"
+A07,cc_fund_rw_types,Approval | Authority | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Other | Subsidiaries
+A07,cc_fund_bringdown_standard,Accurate in all material respects
+A07,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A07,cc_scrape_applies_to,General R&Ws | fundamental/Special R&Ws
+A07,cc_general_bringdown_timing,At Signing & At Closing
+A07,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A07,cc_covenant_compliance,All Covenants
+A07,kn_definition,Constructive knowledge
+A07,kn_identified_persons,Yes
+A07,mae_co_disclosure_schedules,Yes
+A07,mae_co_buyer_actions,Yes
+A07,mae_co_stockholder_litigation,No
+A07,mae_ability_subject_to_carveouts,No
+A07,ef_antitrust_standard,Reasonable best efforts
+A07,rem_specific_performance,"""entitled to"" specific performance"
+A08,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Organization | Takeover Statutes
+A08,cc_fund_bringdown_standard,Accurate in all material respects
+A08,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A08,cc_scrape_applies_to,General R&Ws
+A08,cc_general_bringdown_timing,At Closing Only
+A08,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A08,cc_covenant_compliance,All Covenants
+A08,kn_definition,Constructive knowledge
+A08,kn_identified_persons,Yes
+A08,mae_co_disclosure_schedules,No
+A08,mae_co_buyer_actions,No
+A08,mae_co_stockholder_litigation,No
+A08,mae_ability_subject_to_carveouts,Yes
+A08,ef_antitrust_standard,Reasonable best efforts
+A08,rem_specific_performance,"""entitled to"" specific performance"
+A09,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | Opinion of Financial Advisor | Organization | Rights Agreement | Takeover Statutes
+A09,cc_fund_bringdown_standard,Accurate in all material respects
+A09,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A09,cc_scrape_applies_to,Capitalization R&Ws | General R&Ws | fundamental/Special R&Ws
+A09,cc_general_bringdown_timing,At Signing & At Closing
+A09,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A09,cc_covenant_compliance,All Covenants
+A09,kn_definition,Constructive knowledge
+A09,kn_identified_persons,Yes
+A09,mae_co_disclosure_schedules,Yes
+A09,mae_co_buyer_actions,Yes
+A09,mae_co_stockholder_litigation,No
+A09,mae_ability_subject_to_carveouts,Yes
+A09,ef_antitrust_standard,Reasonable best efforts
+A09,rem_specific_performance,"""entitled to"" specific performance"
+A10,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Takeover Statutes
+A10,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A10,cc_cap_bringdown_standard,Accurate in all material respects
+A10,cc_scrape_applies_to,General R&Ws
+A10,cc_general_bringdown_timing,At Signing & At Closing
+A10,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A10,cc_covenant_compliance,All Covenants
+A10,kn_definition,Actual knowledge
+A10,kn_identified_persons,Yes
+A10,mae_co_disclosure_schedules,No
+A10,mae_co_buyer_actions,No
+A10,mae_co_stockholder_litigation,Yes
+A10,mae_ability_subject_to_carveouts,No
+A10,ef_antitrust_standard,Reasonable best efforts
+A10,rem_specific_performance,"""entitled to"" specific performance"
+A11,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | Opinion of Financial Advisor | Organization | Other | Subsidiaries
+A11,cc_fund_bringdown_standard,Accurate in all material respects
+A11,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A11,cc_scrape_applies_to,General R&Ws
+A11,cc_general_bringdown_timing,At Signing & At Closing
+A11,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A11,cc_covenant_compliance,All Covenants
+A11,kn_definition,Actual knowledge
+A11,kn_identified_persons,Yes
+A11,mae_co_disclosure_schedules,No
+A11,mae_co_buyer_actions,No
+A11,mae_co_stockholder_litigation,Yes
+A11,mae_ability_subject_to_carveouts,No
+A11,ef_antitrust_standard,Reasonable best efforts
+A11,rem_specific_performance,"""entitled to"" specific performance"
+A12,cc_fund_rw_types,Authority | Brokers' Fee | Capitalization-Other | No MAE | Organization | Rights Agreement | Takeover Statutes
+A12,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A12,cc_cap_bringdown_standard,Accurate in all respects with below-threshold carveout
+A12,cc_scrape_applies_to,Capitalization R&Ws | General R&Ws | Specified R&Ws only
+A12,cc_general_bringdown_timing,At Signing & At Closing
+A12,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A12,cc_covenant_compliance,Each Covenant
+A12,kn_definition,Actual knowledge
+A12,kn_identified_persons,Yes
+A12,mae_co_disclosure_schedules,No
+A12,mae_co_buyer_actions,No
+A12,mae_co_stockholder_litigation,Yes
+A12,mae_ability_subject_to_carveouts,No
+A12,ef_antitrust_standard,Reasonable best efforts
+A12,rem_specific_performance,"""entitled to"" specific performance"
+A13,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization | Subsidiaries | Takeover Statutes
+A13,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A13,cc_cap_bringdown_standard,Accurate in all respects with below-threshold carveout
+A13,cc_scrape_applies_to,Capitalization R&Ws | General R&Ws
+A13,cc_general_bringdown_timing,At Closing Only
+A13,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A13,cc_covenant_compliance,All Covenants
+A13,kn_definition,Actual knowledge
+A13,kn_identified_persons,Yes
+A13,mae_co_disclosure_schedules,Yes
+A13,mae_co_buyer_actions,No
+A13,mae_co_stockholder_litigation,Yes
+A13,mae_ability_subject_to_carveouts,No
+A13,ef_antitrust_standard,Reasonable best efforts
+A13,rem_specific_performance,"""entitled to"" specific performance"
+A14,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | Opinion of Financial Advisor | Organization | Takeover Statutes
+A14,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A14,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A14,cc_scrape_applies_to,General R&Ws | Specified R&Ws only
+A14,cc_general_bringdown_timing,At Closing Only
+A14,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A14,cc_covenant_compliance,All Covenants
+A14,kn_definition,Actual knowledge
+A14,kn_identified_persons,Yes
+A14,mae_co_disclosure_schedules,No
+A14,mae_co_buyer_actions,Yes
+A14,mae_co_stockholder_litigation,No
+A14,mae_ability_subject_to_carveouts,No
+A14,ef_antitrust_standard,Reasonable best efforts
+A14,rem_specific_performance,"""entitled to"" specific performance"
+A15,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Organization | Subsidiaries
+A15,cc_fund_bringdown_standard,Accurate in all material respects
+A15,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A15,cc_scrape_applies_to,General R&Ws | fundamental/Special R&Ws
+A15,cc_general_bringdown_timing,At Closing Only
+A15,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A15,cc_covenant_compliance,All Covenants
+A15,kn_definition,Constructive knowledge
+A15,kn_identified_persons,No
+A15,mae_co_disclosure_schedules,Yes
+A15,mae_co_buyer_actions,No
+A15,mae_co_stockholder_litigation,No
+A15,mae_ability_subject_to_carveouts,No
+A15,ef_antitrust_standard,Commercially reasonable efforts
+A15,rem_specific_performance,"""entitled to"" specific performance"
+A16,cc_fund_rw_types,Approval | Authority | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Organization
+A16,cc_fund_bringdown_standard,Accurate in all respects
+A16,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A16,cc_scrape_applies_to,General R&Ws
+A16,cc_general_bringdown_timing,At Signing & At Closing
+A16,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A16,cc_covenant_compliance,All Covenants
+A16,kn_definition,Actual knowledge
+A16,kn_identified_persons,Yes
+A16,mae_co_disclosure_schedules,Yes
+A16,mae_co_buyer_actions,Yes
+A16,mae_co_stockholder_litigation,No
+A16,mae_ability_subject_to_carveouts,No
+A16,ef_antitrust_standard,Reasonable best efforts
+A16,rem_specific_performance,"""entitled to"" specific performance"
+A17,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | Organization | Subsidiaries
+A17,cc_fund_bringdown_standard,Accurate in all material respects
+A17,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A17,cc_scrape_applies_to,General R&Ws
+A17,cc_general_bringdown_timing,At Closing Only
+A17,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A17,cc_covenant_compliance,All Covenants
+A17,kn_definition,Constructive knowledge
+A17,kn_identified_persons,Yes
+A17,mae_co_disclosure_schedules,Yes
+A17,mae_co_buyer_actions,No
+A17,mae_co_stockholder_litigation,No
+A17,mae_ability_subject_to_carveouts,No
+A17,ef_antitrust_standard,Flat standard
+A17,rem_specific_performance,"""entitled to"" specific performance"
+A18,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | Opinion of Financial Advisor | Organization
+A18,cc_fund_bringdown_standard,Accurate in all material respects
+A18,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A18,cc_scrape_applies_to,General R&Ws
+A18,cc_general_bringdown_timing,At Closing Only
+A18,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A18,cc_covenant_compliance,All Covenants
+A18,kn_definition,Actual knowledge
+A18,kn_identified_persons,Yes
+A18,mae_co_disclosure_schedules,No
+A18,mae_co_buyer_actions,Yes
+A18,mae_co_stockholder_litigation,No
+A18,mae_ability_subject_to_carveouts,No
+A18,ef_antitrust_standard,Reasonable best efforts
+A18,rem_specific_performance,"""entitled to"" specific performance"
+A19,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Organization
+A19,cc_fund_bringdown_standard,"Accurate at another materiality standard (e.g., hybrid standard)"
+A19,cc_cap_bringdown_standard,Accurate in all respects with below-threshold carveout
+A19,cc_scrape_applies_to,Capitalization R&Ws | General R&Ws
+A19,cc_general_bringdown_timing,At Closing Only
+A19,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A19,cc_covenant_compliance,All Covenants
+A19,kn_definition,Actual knowledge
+A19,kn_identified_persons,Yes
+A19,mae_co_disclosure_schedules,No
+A19,mae_co_buyer_actions,No
+A19,mae_co_stockholder_litigation,Yes
+A19,mae_ability_subject_to_carveouts,No
+A19,ef_antitrust_standard,Reasonable best efforts
+A19,rem_specific_performance,"""entitled to"" specific performance"
+A20,cc_fund_rw_types,Approval | Authority | Brokers' Fee | Capitalization-Other | Enforceability | No MAE | Opinion of Financial Advisor | Other | Subsidiaries
+A20,cc_fund_bringdown_standard,Accurate in all material respects
+A20,cc_cap_bringdown_standard,Accurate in all respects with de minimis exception
+A20,cc_scrape_applies_to,General R&Ws
+A20,cc_general_bringdown_timing,At Signing & At Closing
+A20,cc_general_bringdown_standard,All/The R&Ws accurate at MAE standard
+A20,cc_covenant_compliance,All Covenants
+A20,kn_definition,Constructive knowledge
+A20,kn_identified_persons,Yes
+A20,mae_co_disclosure_schedules,No
+A20,mae_co_buyer_actions,No
+A20,mae_co_stockholder_litigation,Yes
+A20,mae_ability_subject_to_carveouts,No
+A20,ef_antitrust_standard,Reasonable best efforts
+A20,rem_specific_performance,"""entitled to seek"" specific performance"

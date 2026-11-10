@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-010",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "Effects of early-2020 non-pharmaceutical interventions in six countries on COVID-19 case growth rates (paper reproduction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal paper + author replication repository (code MIT, data CC0) with Source Data",
+    "url": "https://github.com/bolliger32/gpl-covid",
+    "revision": "commit 84369c56b76f67c6b91f42872ea124636450c82a (2020-12-16); Zenodo concept DOI 10.5281/zenodo.3885328",
+    "license": "code MIT; data CC0-1.0"
+  }
+}

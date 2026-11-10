@@ -1,0 +1,193 @@
+{
+  "task_id": "WFA-CDN-003",
+  "reviewer_only": true,
+  "fps": 24,
+  "correct_sources": [
+    "37",
+    "21",
+    "44",
+    "20",
+    "26",
+    "25",
+    "17"
+  ],
+  "frame_counts": [
+    216,
+    190,
+    218,
+    196,
+    286,
+    258,
+    193
+  ],
+  "frame_ranges": [
+    [
+      0,
+      216
+    ],
+    [
+      216,
+      406
+    ],
+    [
+      406,
+      624
+    ],
+    [
+      624,
+      820
+    ],
+    [
+      820,
+      1106
+    ],
+    [
+      1106,
+      1364
+    ],
+    [
+      1364,
+      1557
+    ]
+  ],
+  "total_frames": 1557,
+  "total_seconds": 64.875,
+  "axis": "Established in slot 1: boy frame-left, old man frame-right. Consistent: boy singles look frame-right, old man singles look frame-left; old man moves frame-right in slot 7. All original-orientation clips in the pool obey this; every mirrored clip crosses it.",
+  "mirror_pairs_with_key": {
+    "37": "45",
+    "21": "01",
+    "44": "29",
+    "20": "12",
+    "26": "19",
+    "25": "05",
+    "17": "28"
+  },
+  "mirror_pairs_decoy": {
+    "31": "32",
+    "06": "36",
+    "43": "02",
+    "23": "15",
+    "24": "07",
+    "35": "27",
+    "41": "42"
+  },
+  "gate_construction": "For every slot the exact horizontal mirror of the key is in the pool: content, events, timing and shot language are identical, so description-matching and thumbnails cannot separate them; only the axis contract (relation to slot 1) decides. 7 decoy near-misses also have mirror twins so that having a twin does not mark the answer.",
+  "distractors": {
+    "1": {
+      "near_miss": [
+        "45",
+        "31",
+        "11",
+        "30",
+        "32"
+      ],
+      "why": "45: exact horizontal mirror of key (boy frame-right) - fails the explicit slot-1 positions; 31: same wide later (boy sits up) and ends with a cut to the boy CU - not one continuous shot; 11: cable-tangle closes, the wide only dissolves in at the end; 30: different wide of two tiny figures on a hazy ledge, then cut; 32: mirror of 31."
+    },
+    "2": {
+      "near_miss": [
+        "01",
+        "22",
+        "06",
+        "36",
+        "10"
+      ],
+      "why": "01: exact mirror of key - boy looks frame-left, old man frame-right (crosses axis; thumbnail-identical content); 22: boy CU only ~2 s then old man with extended pointing arm; 06: other shot/reverse pair (boy with fireball, old man gesturing/jumping), dark green ground; 36: mirror of 06; 10: boy walking single."
+    },
+    "3": {
+      "near_miss": [
+        "29",
+        "40",
+        "43",
+        "02",
+        "38"
+      ],
+      "why": "29: exact mirror of key (old man turned frame-right); 40: opens on the red-carpet room wide and phone, not on the old man; 43: opens on the boy single and ends on the boy walking to the phone; 02: mirror of 43; 38: dark red frame then boy CU with a hand on his shoulder."
+    },
+    "4": {
+      "near_miss": [
+        "12",
+        "23",
+        "16",
+        "15"
+      ],
+      "why": "12: exact mirror of key (boy back-of-head frame-right, old man left); 23: opens on the grab and ends on a round machine close-up - no boy approach; 16: opens on a top shot and the old man single before the boy reaches; 15: mirror of 23."
+    },
+    "5": {
+      "near_miss": [
+        "19",
+        "08",
+        "14",
+        "24",
+        "07"
+      ],
+      "why": "19: exact mirror of key (boy enters from right, stands frame-right of old man); 08: two-shot already formed, no turn and no entrance, ends dark; 14: two-shot tail, black, hand on red button, two-shot; 24: other two-shot at a bright window (different background), boy behind left; 07: mirror of 24."
+    },
+    "6": {
+      "near_miss": [
+        "05",
+        "03",
+        "35",
+        "27",
+        "34"
+      ],
+      "why": "05: exact mirror of key (boy on old man's frame-right, curtain on right); 03: ornate door-frame wide, the doorway entry only at the end (cut); 35: starts mid-doorway with old man already inside and cuts to the dark wire world; 27: mirror of 35; 34: wire-world walk toward camera."
+    },
+    "7": {
+      "near_miss": [
+        "28",
+        "18",
+        "33",
+        "41",
+        "42"
+      ],
+      "why": "28: exact mirror of key (boy frame-right, old man hops frame-left - reversed screen direction); 18: platform wide with both, kick/arms spread, inserts - not the post hopping; 33: later hops with a cut to the old man airborne on black; 41: old man on a post then flash wide; 42: mirror of 41."
+    }
+  },
+  "orientation_label": {
+    "01": "axis-crossed (horizontal mirror)",
+    "02": "axis-crossed (horizontal mirror)",
+    "03": "axis-consistent (original orientation)",
+    "04": "axis-consistent (original orientation)",
+    "05": "axis-crossed (horizontal mirror)",
+    "06": "axis-consistent (original orientation)",
+    "07": "axis-crossed (horizontal mirror)",
+    "08": "axis-consistent (original orientation)",
+    "09": "axis-consistent (original orientation)",
+    "10": "axis-consistent (original orientation)",
+    "11": "axis-consistent (original orientation)",
+    "12": "axis-crossed (horizontal mirror)",
+    "13": "axis-consistent (original orientation)",
+    "14": "axis-consistent (original orientation)",
+    "15": "axis-crossed (horizontal mirror)",
+    "16": "axis-consistent (original orientation)",
+    "17": "axis-consistent (original orientation)",
+    "18": "axis-consistent (original orientation)",
+    "19": "axis-crossed (horizontal mirror)",
+    "20": "axis-consistent (original orientation)",
+    "21": "axis-consistent (original orientation)",
+    "22": "axis-consistent (original orientation)",
+    "23": "axis-consistent (original orientation)",
+    "24": "axis-consistent (original orientation)",
+    "25": "axis-consistent (original orientation)",
+    "26": "axis-consistent (original orientation)",
+    "27": "axis-crossed (horizontal mirror)",
+    "28": "axis-crossed (horizontal mirror)",
+    "29": "axis-crossed (horizontal mirror)",
+    "30": "axis-consistent (original orientation)",
+    "31": "axis-consistent (original orientation)",
+    "32": "axis-crossed (horizontal mirror)",
+    "33": "axis-consistent (original orientation)",
+    "34": "axis-consistent (original orientation)",
+    "35": "axis-consistent (original orientation)",
+    "36": "axis-crossed (horizontal mirror)",
+    "37": "axis-consistent (original orientation)",
+    "38": "axis-consistent (original orientation)",
+    "39": "axis-consistent (original orientation)",
+    "40": "axis-consistent (original orientation)",
+    "41": "axis-consistent (original orientation)",
+    "42": "axis-crossed (horizontal mirror)",
+    "43": "axis-consistent (original orientation)",
+    "44": "axis-consistent (original orientation)",
+    "45": "axis-crossed (horizontal mirror)"
+  }
+}

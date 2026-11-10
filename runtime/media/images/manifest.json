@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "linux/amd64",
+  "images": [
+    {
+      "tag": "workflowarena-original-cdc-tools:20261022",
+      "image_id": "sha256:cff1fc06162266c603987729d4dddce369c98c173f0806c1b6edb30eab7e95f9",
+      "archive": "workflowarena-original-cdc-tools_20261022.tar.gz",
+      "archive_bytes": 1629801769,
+      "archive_sha256": "cbf5008bd9bcb7cade60a866c830880c7c6f4e917a7701f75a202849986d05ff"
+    },
+    {
+      "tag": "workflowarena-cdc-avb-repurpose:20261005",
+      "image_id": "sha256:315086c4f31ea1c78fb37d7d264654f9d63678ba4134708f8d33a4dbb6b5b929",
+      "archive": "workflowarena-cdc-avb-repurpose_20261005.tar.gz",
+      "archive_bytes": 1247560747,
+      "archive_sha256": "e368caf17db3c7343c36d7c31db740e326b5a447ca0ed1f6d3900997d899aaea"
+    }
+  ]
+}

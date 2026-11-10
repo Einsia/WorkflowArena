@@ -1,0 +1,186 @@
+[
+ {
+  "id": "mae_taken_as_whole",
+  "category": "Material Adverse Effect",
+  "question": "Does the Target MAE definition measure the adverse effect on the Target and its subsidiaries \"taken as a whole\"?",
+  "multi_select": false,
+  "options": [
+   "Applies to Target and subsidiaries \"taken as a whole\"",
+   "No"
+  ]
+ },
+ {
+  "id": "mae_ability_to_consummate",
+  "category": "Material Adverse Effect",
+  "question": "Does the Target MAE definition include (as a separate prong) an adverse effect on the Target's ability to consummate the transaction / perform its obligations?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "mae_ability_subject_to_carveouts",
+  "category": "Material Adverse Effect",
+  "question": "Is the \"ability to consummate\" prong of the MAE definition subject to the MAE carve-outs?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"No\" if the definition has no ability-to-consummate prong, or if the carve-outs apply only to the business/financial-condition prong."
+ },
+ {
+  "id": "mae_fls_yn",
+  "category": "Material Adverse Effect",
+  "question": "Does the MAE definition contain a forward-looking standard (e.g., an effect that \"would reasonably be expected to\" have an MAE)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "mae_fls_standard",
+  "category": "Material Adverse Effect",
+  "question": "Which forward-looking standard does the MAE definition use?",
+  "multi_select": false,
+  "options": [
+   "\"Could\" (reasonably) be expected to",
+   "\"Would\"",
+   "\"Would\" (reasonably) be expected to",
+   "No",
+   "Other forward-looking standard"
+  ],
+  "note": "Answer \"No\" if there is no forward-looking standard."
+ },
+ {
+  "id": "mae_fls_applies_to",
+  "category": "Material Adverse Effect",
+  "question": "To which prong(s) of the MAE definition does the forward-looking standard apply? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "No",
+   "ability to consummate transaction",
+   "business and operation of Target"
+  ],
+  "note": "Select only \"No\" if there is no forward-looking standard."
+ },
+ {
+  "id": "mae_relational_yn",
+  "category": "Material Adverse Effect",
+  "question": "Do the MAE carve-outs use relational language (e.g., matters \"arising from\", \"resulting from\", \"relating to\" or \"attributable to\" the excluded events)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "mae_relational_scope",
+  "category": "Material Adverse Effect",
+  "question": "Does the relational language apply to all MAE carve-outs or only some?",
+  "multi_select": false,
+  "options": [
+   "All MAE carveouts",
+   "No",
+   "Some MAE carveouts"
+  ],
+  "note": "Answer \"No\" if there is no relational language."
+ },
+ {
+  "id": "mae_relational_terms",
+  "category": "Material Adverse Effect",
+  "question": "Which relational phrases are used in the MAE carve-outs? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "\"Arising from/out of\"",
+   "\"Attributable to\"",
+   "\"Relating to\"",
+   "\"Resulting from\"",
+   "No",
+   "Other",
+   "Relational language varies among carveouts"
+  ],
+  "note": "Select \"Relational language varies among carveouts\" in addition to the phrases if different carve-outs use different phrases. Select only \"No\" if there is no relational language."
+ },
+ {
+  "id": "mae_co_apc_scope",
+  "category": "Material Adverse Effect",
+  "question": "Which of announcement / pendency / consummation of the transaction does the deal-related carve-out cover? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "No",
+   "announcement",
+   "consummation",
+   "pendency"
+  ],
+  "note": "Select only \"No\" if there is no such carve-out."
+ },
+ {
+  "id": "mae_co_required_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions required to be taken (or taken in compliance with) the merger agreement?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_buyer_consent",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions taken (or not taken) at the request of, or with the consent or approval of, the Buyer?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_stockholder_litigation",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: stockholder litigation/proceedings relating to the agreement or the transaction?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_disclosure_schedules",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: matters disclosed in the Target's disclosure schedules (or disclosure letter)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_buyer_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions taken by the Buyer or its affiliates (including breaches by the Buyer, or the identity of the Buyer)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_prohibited_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: the Target's failure to take an action that is prohibited by the agreement (e.g., under the interim operating covenants) where the Buyer withheld consent?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ }
+]

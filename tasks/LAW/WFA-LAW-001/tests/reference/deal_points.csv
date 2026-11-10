@@ -1,0 +1,289 @@
+agreement,deal_point,answer
+A01,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A01,mae_co_political,No
+A01,mae_co_economic,No
+A01,mae_co_industry,Yes
+A01,mae_co_gaap,Yes
+A01,mae_co_apc,Yes
+A01,mae_co_apc_scope,announcement
+A01,mae_co_projections,Yes
+A01,mae_co_market_price,No
+A01,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A01,mae_co_pandemic,Yes
+A01,mae_di_political,No
+A01,mae_di_economic,No
+A01,mae_di_industry,Yes
+A01,mae_di_law,Yes
+A01,mae_di_gaap,Yes
+A01,mae_di_pandemic,No
+A01,mae_di_wnaf,No
+A02,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A02,mae_co_political,Yes
+A02,mae_co_economic,Yes
+A02,mae_co_industry,No
+A02,mae_co_gaap,Yes
+A02,mae_co_apc,Yes
+A02,mae_co_apc_scope,announcement
+A02,mae_co_projections,Yes
+A02,mae_co_market_price,Yes
+A02,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A02,mae_co_pandemic,Yes
+A02,mae_di_political,Yes
+A02,mae_di_economic,Yes
+A02,mae_di_industry,No
+A02,mae_di_law,Yes
+A02,mae_di_gaap,Yes
+A02,mae_di_pandemic,Yes
+A02,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A03,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A03,mae_co_political,Yes
+A03,mae_co_economic,Yes
+A03,mae_co_industry,Yes
+A03,mae_co_gaap,Yes
+A03,mae_co_apc,No
+A03,mae_co_apc_scope,No
+A03,mae_co_projections,No
+A03,mae_co_market_price,No
+A03,mae_co_wnaf_scope,War or terrorism
+A03,mae_co_pandemic,Yes
+A03,mae_di_political,Yes
+A03,mae_di_economic,Yes
+A03,mae_di_industry,Yes
+A03,mae_di_law,Yes
+A03,mae_di_gaap,Yes
+A03,mae_di_pandemic,Yes
+A03,mae_di_wnaf,War or terrorism
+A04,mae_taken_as_whole,No
+A04,mae_co_political,Yes
+A04,mae_co_economic,No
+A04,mae_co_industry,No
+A04,mae_co_gaap,Yes
+A04,mae_co_apc,Yes
+A04,mae_co_apc_scope,announcement | consummation
+A04,mae_co_projections,Yes
+A04,mae_co_market_price,Yes
+A04,mae_co_wnaf_scope,War or terrorism
+A04,mae_co_pandemic,Yes
+A04,mae_di_political,Yes
+A04,mae_di_economic,No
+A04,mae_di_industry,No
+A04,mae_di_law,Yes
+A04,mae_di_gaap,Yes
+A04,mae_di_pandemic,Yes
+A04,mae_di_wnaf,War or terrorism
+A05,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A05,mae_co_political,No
+A05,mae_co_economic,No
+A05,mae_co_industry,Yes
+A05,mae_co_gaap,Yes
+A05,mae_co_apc,Yes
+A05,mae_co_apc_scope,announcement | pendency
+A05,mae_co_projections,Yes
+A05,mae_co_market_price,Yes
+A05,mae_co_wnaf_scope,No
+A05,mae_co_pandemic,No
+A05,mae_di_political,No
+A05,mae_di_economic,No
+A05,mae_di_industry,Yes
+A05,mae_di_law,No
+A05,mae_di_gaap,No
+A05,mae_di_pandemic,No
+A05,mae_di_wnaf,No
+A06,mae_taken_as_whole,No
+A06,mae_co_political,Yes
+A06,mae_co_economic,No
+A06,mae_co_industry,Yes
+A06,mae_co_gaap,Yes
+A06,mae_co_apc,Yes
+A06,mae_co_apc_scope,announcement
+A06,mae_co_projections,Yes
+A06,mae_co_market_price,No
+A06,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A06,mae_co_pandemic,Yes
+A06,mae_di_political,Yes
+A06,mae_di_economic,No
+A06,mae_di_industry,Yes
+A06,mae_di_law,Yes
+A06,mae_di_gaap,Yes
+A06,mae_di_pandemic,Yes
+A06,mae_di_wnaf,War or terrorism
+A07,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A07,mae_co_political,Yes
+A07,mae_co_economic,Yes
+A07,mae_co_industry,Yes
+A07,mae_co_gaap,No
+A07,mae_co_apc,Yes
+A07,mae_co_apc_scope,announcement
+A07,mae_co_projections,Yes
+A07,mae_co_market_price,Yes
+A07,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A07,mae_co_pandemic,Yes
+A07,mae_di_political,Yes
+A07,mae_di_economic,Yes
+A07,mae_di_industry,Yes
+A07,mae_di_law,Yes
+A07,mae_di_gaap,No
+A07,mae_di_pandemic,Yes
+A07,mae_di_wnaf,Natural disaster | War or terrorism | force majeure
+A08,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A08,mae_co_political,Yes
+A08,mae_co_economic,Yes
+A08,mae_co_industry,Yes
+A08,mae_co_gaap,Yes
+A08,mae_co_apc,Yes
+A08,mae_co_apc_scope,announcement
+A08,mae_co_projections,Yes
+A08,mae_co_market_price,No
+A08,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A08,mae_co_pandemic,No
+A08,mae_di_political,Yes
+A08,mae_di_economic,Yes
+A08,mae_di_industry,No
+A08,mae_di_law,Yes
+A08,mae_di_gaap,Yes
+A08,mae_di_pandemic,No
+A08,mae_di_wnaf,Natural disaster | War or terrorism
+A09,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A09,mae_co_political,Yes
+A09,mae_co_economic,No
+A09,mae_co_industry,Yes
+A09,mae_co_gaap,Yes
+A09,mae_co_apc,Yes
+A09,mae_co_apc_scope,announcement | consummation
+A09,mae_co_projections,Yes
+A09,mae_co_market_price,Yes
+A09,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A09,mae_co_pandemic,Yes
+A09,mae_di_political,No
+A09,mae_di_economic,No
+A09,mae_di_industry,No
+A09,mae_di_law,Yes
+A09,mae_di_gaap,Yes
+A09,mae_di_pandemic,Yes
+A09,mae_di_wnaf,Natural disaster
+A10,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A10,mae_co_political,Yes
+A10,mae_co_economic,Yes
+A10,mae_co_industry,Yes
+A10,mae_co_gaap,Yes
+A10,mae_co_apc,No
+A10,mae_co_apc_scope,No
+A10,mae_co_projections,No
+A10,mae_co_market_price,No
+A10,mae_co_wnaf_scope,War or terrorism
+A10,mae_co_pandemic,Yes
+A10,mae_di_political,Yes
+A10,mae_di_economic,Yes
+A10,mae_di_industry,Yes
+A10,mae_di_law,Yes
+A10,mae_di_gaap,Yes
+A10,mae_di_pandemic,Yes
+A10,mae_di_wnaf,War or terrorism
+A11,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A11,mae_co_political,Yes
+A11,mae_co_economic,Yes
+A11,mae_co_industry,Yes
+A11,mae_co_gaap,No
+A11,mae_co_apc,Yes
+A11,mae_co_apc_scope,announcement
+A11,mae_co_projections,Yes
+A11,mae_co_market_price,Yes
+A11,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A11,mae_co_pandemic,Yes
+A11,mae_di_political,Yes
+A11,mae_di_economic,Yes
+A11,mae_di_industry,Yes
+A11,mae_di_law,Yes
+A11,mae_di_gaap,No
+A11,mae_di_pandemic,Yes
+A11,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A12,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A12,mae_co_political,Yes
+A12,mae_co_economic,Yes
+A12,mae_co_industry,No
+A12,mae_co_gaap,Yes
+A12,mae_co_apc,Yes
+A12,mae_co_apc_scope,announcement | consummation | pendency
+A12,mae_co_projections,Yes
+A12,mae_co_market_price,Yes
+A12,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A12,mae_co_pandemic,Yes
+A12,mae_di_political,Yes
+A12,mae_di_economic,Yes
+A12,mae_di_industry,No
+A12,mae_di_law,Yes
+A12,mae_di_gaap,Yes
+A12,mae_di_pandemic,Yes
+A12,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A13,mae_taken_as_whole,No
+A13,mae_co_political,Yes
+A13,mae_co_economic,Yes
+A13,mae_co_industry,Yes
+A13,mae_co_gaap,Yes
+A13,mae_co_apc,Yes
+A13,mae_co_apc_scope,announcement | pendency
+A13,mae_co_projections,Yes
+A13,mae_co_market_price,Yes
+A13,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism | force majeure"
+A13,mae_co_pandemic,Yes
+A13,mae_di_political,Yes
+A13,mae_di_economic,Yes
+A13,mae_di_industry,Yes
+A13,mae_di_law,Yes
+A13,mae_di_gaap,Yes
+A13,mae_di_pandemic,No
+A13,mae_di_wnaf,War or terrorism
+A14,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A14,mae_co_political,No
+A14,mae_co_economic,Yes
+A14,mae_co_industry,Yes
+A14,mae_co_gaap,Yes
+A14,mae_co_apc,Yes
+A14,mae_co_apc_scope,announcement | pendency
+A14,mae_co_projections,Yes
+A14,mae_co_market_price,Yes
+A14,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A14,mae_co_pandemic,Yes
+A14,mae_di_political,No
+A14,mae_di_economic,Yes
+A14,mae_di_industry,Yes
+A14,mae_di_law,No
+A14,mae_di_gaap,No
+A14,mae_di_pandemic,Yes
+A14,mae_di_wnaf,Natural disaster | War or terrorism | force majeure
+A15,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A15,mae_co_political,Yes
+A15,mae_co_economic,No
+A15,mae_co_industry,Yes
+A15,mae_co_gaap,Yes
+A15,mae_co_apc,Yes
+A15,mae_co_apc_scope,announcement
+A15,mae_co_projections,Yes
+A15,mae_co_market_price,Yes
+A15,mae_co_wnaf_scope,War or terrorism
+A15,mae_co_pandemic,No
+A15,mae_di_political,No
+A15,mae_di_economic,No
+A15,mae_di_industry,Yes
+A15,mae_di_law,Yes
+A15,mae_di_gaap,Yes
+A15,mae_di_pandemic,No
+A15,mae_di_wnaf,No
+A16,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A16,mae_co_political,No
+A16,mae_co_economic,Yes
+A16,mae_co_industry,Yes
+A16,mae_co_gaap,Yes
+A16,mae_co_apc,Yes
+A16,mae_co_apc_scope,announcement | consummation | pendency
+A16,mae_co_projections,Yes
+A16,mae_co_market_price,Yes
+A16,mae_co_wnaf_scope,War or terrorism
+A16,mae_co_pandemic,Yes
+A16,mae_di_political,No
+A16,mae_di_economic,Yes
+A16,mae_di_industry,Yes
+A16,mae_di_law,No
+A16,mae_di_gaap,No
+A16,mae_di_pandemic,Yes
+A16,mae_di_wnaf,War or terrorism

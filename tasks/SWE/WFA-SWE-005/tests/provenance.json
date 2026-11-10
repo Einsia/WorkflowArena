@@ -1,0 +1,21 @@
+{
+  "task_id": "WFA-SWE-005",
+  "sources": [
+    {
+      "what": "repository",
+      "url": "https://github.com/qutip/qutip",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "what": "pull request",
+      "url": "https://github.com/qutip/qutip/pull/1601",
+      "merged_at": "2021-11-22T21:04:00Z",
+      "merge_commit": "9f065865b061fd6a99e0270d77286d30812bde7a",
+      "base_commit": "6d099443f7a96cda669580bc40d62f7b97e5cf0f"
+    }
+  ],
+  "retrieved": "2026-10-23",
+  "start_tree_sha256": "fe8f472b7c2d644b8e82c7faceeaca4c4f4fbba281d9444058d11c6e5790035b",
+  "reference_patch_sha256": "91b199e8f46ded2ff0f22e905b15c81a180ab10eb7f9a8d4aabb8ea717e105e9",
+  "hidden_tests_patch_sha256": "44312f6c0279dbfa8af382e5ecf189a167799e5e744a4735b47fc11d7f8bc594"
+}

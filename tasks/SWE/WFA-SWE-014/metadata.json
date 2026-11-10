@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-014",
+  "domain": "SWE",
+  "task_form": "SWE-REIMPL",
+  "title": "The Model Layer of a Data-Validation Library",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_release_subsystem_removal",
+    "url": "https://codeload.github.com/pydantic/pydantic/tar.gz/refs/tags/v2.13.5",
+    "revision": "v2.13.5",
+    "license": "MIT"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "criterion": "All required fail-to-pass tests and preserved behaviors pass, with no protected-file integrity violation or incomplete grader execution."
+  }
+}

@@ -1,0 +1,2440 @@
+{
+  "task_id": "WFA-3D-004",
+  "seed": 20261024,
+  "coord": "X east (nave axis, apse at +X), Y north, Z up, metres; crossing centre = origin",
+  "heights": {
+    "arc_cap": 9.0,
+    "arc_crown": 13.0,
+    "tri_lo": 14.0,
+    "tri_hi": 17.0,
+    "clr_sill": 17.5,
+    "clr_head": 25.0,
+    "spring": 18.0,
+    "crown": 26.0,
+    "cornice": 27.5,
+    "ridge": 38.0,
+    "aisle_crown": 13.0,
+    "aisle_wall": 14.0,
+    "aisle_roof_hi": 17.0,
+    "aisle_roof_lo": 14.5,
+    "spring_rom": 19.0
+  },
+  "rib_counts": {
+    "QUAD": 4,
+    "TIER": 16,
+    "STAR": 20,
+    "GROIN": 0
+  },
+  "grid_lines": {
+    "1": -63.0,
+    "2": -56.0,
+    "3": -49.0,
+    "4": -42.0,
+    "5": -35.0,
+    "6": -28.0,
+    "7": -21.0,
+    "8": -14.0,
+    "9": -7.0
+  },
+  "zones": [
+    {
+      "id": "Z1",
+      "name_zh": "西立面",
+      "name_en": "West front",
+      "units": [
+        "T01",
+        "T02",
+        "P01",
+        "R01"
+      ]
+    },
+    {
+      "id": "Z2",
+      "name_zh": "中厅西段",
+      "name_en": "Nave west",
+      "units": [
+        "N01",
+        "N02",
+        "N03",
+        "N04"
+      ]
+    },
+    {
+      "id": "Z3",
+      "name_zh": "中厅东段",
+      "name_en": "Nave east",
+      "units": [
+        "N05",
+        "N06",
+        "N07",
+        "N08"
+      ]
+    },
+    {
+      "id": "Z4",
+      "name_zh": "北翼侧廊与飞扶壁",
+      "name_en": "North flank",
+      "units": [
+        "L01",
+        "L02",
+        "F01",
+        "F02"
+      ]
+    },
+    {
+      "id": "Z5",
+      "name_zh": "南翼侧廊与飞扶壁",
+      "name_en": "South flank",
+      "units": [
+        "L03",
+        "L04",
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "id": "Z6",
+      "name_zh": "交叉部与耳堂",
+      "name_en": "Crossing & transept",
+      "units": [
+        "X01",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "R02",
+        "R03"
+      ]
+    },
+    {
+      "id": "Z7",
+      "name_zh": "唱诗堂与后殿",
+      "name_en": "Choir & chevet",
+      "units": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "A01",
+        "K01",
+        "K02",
+        "K03"
+      ]
+    }
+  ],
+  "change_order": {
+    "id": "CO-01",
+    "units": [
+      "N03",
+      "N04",
+      "F01",
+      "F03",
+      "T01",
+      "T02"
+    ],
+    "items": [
+      "N03/N04 Romanesque: round arches, groin vault (0 ribs), 1 round-headed clerestory light per side, vault springing 19.0, crown stays 26.0",
+      "Flyers on grid line 4 (x=-42.0) removed both sides incl. culee+pinnacle (affects F01, F03; aisle BUTT at line 4 stays)",
+      "Both west spires tip 64.0 -> 72.0, spire base unchanged 44.0"
+    ]
+  },
+  "interfaces": {
+    "I1_pier_grid": "Every nave arcade pier centre on (line_x(k), +/-7.0) k=1..8 owned by N0k (west line); crossing piers (+/-7,+/-7) owned by X01; exactly one PIER per grid point, none duplicated",
+    "I2_vault_continuity": "vault crown (max z of vault surface / RIB) = 26.0 for all N/E/Q/X/A units; transverse arch at each shared line of two adjacent bays coincident (same x within 0.15, same crown)",
+    "I3_flyer_landing": "each CULEE base footprint inside BUTT top face of the aisle at same grid line, base z = BUTT top z; FLY lower end touches CULEE; FLY upper end touches nave clerestory wall outer face |y|=7.6",
+    "I4_west_symmetry": "T01/T02 mirror about y=0 (cy=+/-11.5), spire tips equal (72.0); R01 centre y=0, in P01 west face plane x=-72.0, z=22.0"
+  },
+  "units": {
+    "A01": {
+      "zone": "Z7",
+      "type": "APSE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "A01",
+        "type": "APSE",
+        "center": [
+          28.0,
+          0.0
+        ],
+        "radius": 7.0,
+        "sides": 5,
+        "lights": 2,
+        "ribs": 6,
+        "crown": 26.0
+      },
+      "original_sheet": {
+        "id": "A01",
+        "type": "APSE",
+        "center": [
+          28.0,
+          0.0
+        ],
+        "radius": 7.0,
+        "sides": 5,
+        "lights": 2,
+        "ribs": 6,
+        "crown": 26.0
+      },
+      "expected_counts": {
+        "WIN": 5,
+        "LIGHT": 10,
+        "RIB": 6
+      },
+      "expected_bbox": [
+        28.0,
+        35.6,
+        -7.6,
+        7.6,
+        38.0
+      ],
+      "manifest_params": {
+        "sides": 5,
+        "lights_per_window": 2,
+        "rib_count": 6
+      }
+    },
+    "E01": {
+      "zone": "Z6",
+      "type": "TRANSEPT_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "E01",
+        "type": "TRANSEPT_BAY",
+        "y0": 7.0,
+        "y1": 14.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 3,
+        "tri": 4,
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "E01",
+        "type": "TRANSEPT_BAY",
+        "y0": 7.0,
+        "y1": 14.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 3,
+        "tri": 4,
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "LIGHT": 7,
+        "WIN": 2,
+        "TRI": 8,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -7.6,
+        7.6,
+        7.0,
+        14.0,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_west": 4,
+        "lights_east": 3,
+        "triforium_openings_per_side": 4,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "E02": {
+      "zone": "Z6",
+      "type": "TRANSEPT_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "E02",
+        "type": "TRANSEPT_BAY",
+        "y0": 14.0,
+        "y1": 21.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "tri": 5,
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "E02",
+        "type": "TRANSEPT_BAY",
+        "y0": 14.0,
+        "y1": 21.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "tri": 5,
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 10,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -7.6,
+        7.6,
+        14.0,
+        21.0,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_west": 4,
+        "lights_east": 2,
+        "triforium_openings_per_side": 5,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "E03": {
+      "zone": "Z6",
+      "type": "TRANSEPT_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "E03",
+        "type": "TRANSEPT_BAY",
+        "y0": -14.0,
+        "y1": -7.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "tri": 4,
+        "vault": "TIER"
+      },
+      "original_sheet": {
+        "id": "E03",
+        "type": "TRANSEPT_BAY",
+        "y0": -14.0,
+        "y1": -7.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "tri": 4,
+        "vault": "TIER"
+      },
+      "expected_counts": {
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 8,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        -7.6,
+        7.6,
+        -14.0,
+        -7.0,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_west": 4,
+        "lights_east": 2,
+        "triforium_openings_per_side": 4,
+        "vault": "tierceron",
+        "rib_count": 16
+      }
+    },
+    "E04": {
+      "zone": "Z6",
+      "type": "TRANSEPT_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "E04",
+        "type": "TRANSEPT_BAY",
+        "y0": -21.0,
+        "y1": -14.0,
+        "crown": 26.0,
+        "lights_a": 2,
+        "lights_b": 4,
+        "tri": 3,
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "E04",
+        "type": "TRANSEPT_BAY",
+        "y0": -21.0,
+        "y1": -14.0,
+        "crown": 26.0,
+        "lights_a": 2,
+        "lights_b": 4,
+        "tri": 3,
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 6,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -7.6,
+        7.6,
+        -21.0,
+        -14.0,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_west": 2,
+        "lights_east": 4,
+        "triforium_openings_per_side": 3,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "F01": {
+      "zone": "Z4",
+      "type": "FLYER",
+      "changed_by_co": true,
+      "truth": {
+        "id": "F01",
+        "type": "FLYER",
+        "side": "N",
+        "aisle": "L01",
+        "culee_base": 15.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 2,
+            "x": -56.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 3,
+            "x": -49.0,
+            "tiers": 1,
+            "pinn": 1
+          },
+          {
+            "line": 5,
+            "x": -35.0,
+            "tiers": 1,
+            "pinn": 3
+          }
+        ],
+        "removed_lines": [
+          4
+        ],
+        "co": true
+      },
+      "original_sheet": {
+        "id": "F01",
+        "type": "FLYER",
+        "side": "N",
+        "aisle": "L01",
+        "culee_base": 15.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 2,
+            "x": -56.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 3,
+            "x": -49.0,
+            "tiers": 1,
+            "pinn": 1
+          },
+          {
+            "line": 4,
+            "x": -42.0,
+            "tiers": 1,
+            "pinn": 1
+          },
+          {
+            "line": 5,
+            "x": -35.0,
+            "tiers": 1,
+            "pinn": 3
+          }
+        ]
+      },
+      "expected_counts": {
+        "FLY": 4,
+        "CULEE": 3,
+        "PINN": 5
+      },
+      "expected_bbox": [
+        -56.6,
+        -34.4,
+        7.6,
+        16.6,
+        30.0
+      ],
+      "manifest_params": {
+        "flyers": [
+          {
+            "grid_line": 2,
+            "tiers": 2,
+            "pinnacles": 1
+          },
+          {
+            "grid_line": 3,
+            "tiers": 1,
+            "pinnacles": 1
+          },
+          {
+            "grid_line": 5,
+            "tiers": 1,
+            "pinnacles": 3
+          }
+        ]
+      }
+    },
+    "F02": {
+      "zone": "Z4",
+      "type": "FLYER",
+      "changed_by_co": false,
+      "truth": {
+        "id": "F02",
+        "type": "FLYER",
+        "side": "N",
+        "aisle": "L02",
+        "culee_base": 16.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 6,
+            "x": -28.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 7,
+            "x": -21.0,
+            "tiers": 1,
+            "pinn": 3
+          },
+          {
+            "line": 8,
+            "x": -14.0,
+            "tiers": 1,
+            "pinn": 1
+          }
+        ]
+      },
+      "original_sheet": {
+        "id": "F02",
+        "type": "FLYER",
+        "side": "N",
+        "aisle": "L02",
+        "culee_base": 16.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 6,
+            "x": -28.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 7,
+            "x": -21.0,
+            "tiers": 1,
+            "pinn": 3
+          },
+          {
+            "line": 8,
+            "x": -14.0,
+            "tiers": 1,
+            "pinn": 1
+          }
+        ]
+      },
+      "expected_counts": {
+        "FLY": 4,
+        "CULEE": 3,
+        "PINN": 5
+      },
+      "expected_bbox": [
+        -28.6,
+        -13.4,
+        7.6,
+        16.6,
+        30.0
+      ],
+      "manifest_params": {
+        "flyers": [
+          {
+            "grid_line": 6,
+            "tiers": 2,
+            "pinnacles": 1
+          },
+          {
+            "grid_line": 7,
+            "tiers": 1,
+            "pinnacles": 3
+          },
+          {
+            "grid_line": 8,
+            "tiers": 1,
+            "pinnacles": 1
+          }
+        ]
+      }
+    },
+    "F03": {
+      "zone": "Z5",
+      "type": "FLYER",
+      "changed_by_co": true,
+      "truth": {
+        "id": "F03",
+        "type": "FLYER",
+        "side": "S",
+        "aisle": "L03",
+        "culee_base": 15.5,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 2,
+            "x": -56.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 3,
+            "x": -49.0,
+            "tiers": 2,
+            "pinn": 3
+          },
+          {
+            "line": 5,
+            "x": -35.0,
+            "tiers": 2,
+            "pinn": 1
+          }
+        ],
+        "removed_lines": [
+          4
+        ],
+        "co": true
+      },
+      "original_sheet": {
+        "id": "F03",
+        "type": "FLYER",
+        "side": "S",
+        "aisle": "L03",
+        "culee_base": 15.5,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 2,
+            "x": -56.0,
+            "tiers": 2,
+            "pinn": 1
+          },
+          {
+            "line": 3,
+            "x": -49.0,
+            "tiers": 2,
+            "pinn": 3
+          },
+          {
+            "line": 4,
+            "x": -42.0,
+            "tiers": 1,
+            "pinn": 3
+          },
+          {
+            "line": 5,
+            "x": -35.0,
+            "tiers": 2,
+            "pinn": 1
+          }
+        ]
+      },
+      "expected_counts": {
+        "FLY": 6,
+        "CULEE": 3,
+        "PINN": 5
+      },
+      "expected_bbox": [
+        -56.6,
+        -34.4,
+        -16.6,
+        -7.6,
+        30.0
+      ],
+      "manifest_params": {
+        "flyers": [
+          {
+            "grid_line": 2,
+            "tiers": 2,
+            "pinnacles": 1
+          },
+          {
+            "grid_line": 3,
+            "tiers": 2,
+            "pinnacles": 3
+          },
+          {
+            "grid_line": 5,
+            "tiers": 2,
+            "pinnacles": 1
+          }
+        ]
+      }
+    },
+    "F04": {
+      "zone": "Z5",
+      "type": "FLYER",
+      "changed_by_co": false,
+      "truth": {
+        "id": "F04",
+        "type": "FLYER",
+        "side": "S",
+        "aisle": "L04",
+        "culee_base": 16.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 6,
+            "x": -28.0,
+            "tiers": 1,
+            "pinn": 1
+          },
+          {
+            "line": 7,
+            "x": -21.0,
+            "tiers": 2,
+            "pinn": 3
+          },
+          {
+            "line": 8,
+            "x": -14.0,
+            "tiers": 2,
+            "pinn": 3
+          }
+        ]
+      },
+      "original_sheet": {
+        "id": "F04",
+        "type": "FLYER",
+        "side": "S",
+        "aisle": "L04",
+        "culee_base": 16.0,
+        "culee_top": 25.5,
+        "pinn_top": 30.0,
+        "upper": {
+          "wall_z": 24.0,
+          "culee_z": 21.0
+        },
+        "lower": {
+          "wall_z": 19.5,
+          "culee_z": 17.5
+        },
+        "lines": [
+          {
+            "line": 6,
+            "x": -28.0,
+            "tiers": 1,
+            "pinn": 1
+          },
+          {
+            "line": 7,
+            "x": -21.0,
+            "tiers": 2,
+            "pinn": 3
+          },
+          {
+            "line": 8,
+            "x": -14.0,
+            "tiers": 2,
+            "pinn": 3
+          }
+        ]
+      },
+      "expected_counts": {
+        "FLY": 5,
+        "CULEE": 3,
+        "PINN": 7
+      },
+      "expected_bbox": [
+        -28.6,
+        -13.4,
+        -16.6,
+        -7.6,
+        30.0
+      ],
+      "manifest_params": {
+        "flyers": [
+          {
+            "grid_line": 6,
+            "tiers": 1,
+            "pinnacles": 1
+          },
+          {
+            "grid_line": 7,
+            "tiers": 2,
+            "pinnacles": 3
+          },
+          {
+            "grid_line": 8,
+            "tiers": 2,
+            "pinnacles": 3
+          }
+        ]
+      }
+    },
+    "K01": {
+      "zone": "Z7",
+      "type": "CHAPEL",
+      "changed_by_co": false,
+      "truth": {
+        "id": "K01",
+        "type": "CHAPEL",
+        "angle_deg": 72.0,
+        "center": [
+          30.68,
+          8.23
+        ],
+        "radius": 2.5,
+        "sides": 3,
+        "lights": 2,
+        "wall_top": 10.0,
+        "roof_tip": 16.0
+      },
+      "original_sheet": {
+        "id": "K01",
+        "type": "CHAPEL",
+        "angle_deg": 72.0,
+        "center": [
+          30.68,
+          8.23
+        ],
+        "radius": 2.5,
+        "sides": 3,
+        "lights": 2,
+        "wall_top": 10.0,
+        "roof_tip": 16.0
+      },
+      "expected_counts": {
+        "WIN": 3,
+        "LIGHT": 6
+      },
+      "expected_bbox": [
+        27.88,
+        33.48,
+        5.43,
+        11.03,
+        16.0
+      ],
+      "manifest_params": {
+        "sides": 3,
+        "radius": 2.5,
+        "lights_per_window": 2,
+        "roof_tip_z": 16.0
+      }
+    },
+    "K02": {
+      "zone": "Z7",
+      "type": "CHAPEL",
+      "changed_by_co": false,
+      "truth": {
+        "id": "K02",
+        "type": "CHAPEL",
+        "angle_deg": 0.0,
+        "center": [
+          36.66,
+          0.0
+        ],
+        "radius": 3.0,
+        "sides": 5,
+        "lights": 1,
+        "wall_top": 10.0,
+        "roof_tip": 14.0
+      },
+      "original_sheet": {
+        "id": "K02",
+        "type": "CHAPEL",
+        "angle_deg": 0.0,
+        "center": [
+          36.66,
+          0.0
+        ],
+        "radius": 3.0,
+        "sides": 5,
+        "lights": 1,
+        "wall_top": 10.0,
+        "roof_tip": 14.0
+      },
+      "expected_counts": {
+        "WIN": 5,
+        "LIGHT": 5
+      },
+      "expected_bbox": [
+        33.36,
+        39.96,
+        -3.3,
+        3.3,
+        14.0
+      ],
+      "manifest_params": {
+        "sides": 5,
+        "radius": 3.0,
+        "lights_per_window": 1,
+        "roof_tip_z": 14.0
+      }
+    },
+    "K03": {
+      "zone": "Z7",
+      "type": "CHAPEL",
+      "changed_by_co": false,
+      "truth": {
+        "id": "K03",
+        "type": "CHAPEL",
+        "angle_deg": -72.0,
+        "center": [
+          30.68,
+          -8.23
+        ],
+        "radius": 3.0,
+        "sides": 3,
+        "lights": 2,
+        "wall_top": 10.0,
+        "roof_tip": 15.0
+      },
+      "original_sheet": {
+        "id": "K03",
+        "type": "CHAPEL",
+        "angle_deg": -72.0,
+        "center": [
+          30.68,
+          -8.23
+        ],
+        "radius": 3.0,
+        "sides": 3,
+        "lights": 2,
+        "wall_top": 10.0,
+        "roof_tip": 15.0
+      },
+      "expected_counts": {
+        "WIN": 3,
+        "LIGHT": 6
+      },
+      "expected_bbox": [
+        27.38,
+        33.98,
+        -11.53,
+        -4.93,
+        15.0
+      ],
+      "manifest_params": {
+        "sides": 3,
+        "radius": 3.0,
+        "lights_per_window": 2,
+        "roof_tip_z": 15.0
+      }
+    },
+    "L01": {
+      "zone": "Z4",
+      "type": "AISLE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "L01",
+        "type": "AISLE",
+        "side": "N",
+        "x0": -63.0,
+        "x1": -35.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          2
+        ],
+        "bay_heads": [
+          "PLAIN",
+          "TREFOIL",
+          "QUATREFOIL",
+          "TREFOIL"
+        ],
+        "door_bay": 2,
+        "butt_top": 15.0,
+        "butt_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "butt_x": [
+          -56.0,
+          -49.0,
+          -42.0,
+          -35.0
+        ],
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "L01",
+        "type": "AISLE",
+        "side": "N",
+        "x0": -63.0,
+        "x1": -35.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          2
+        ],
+        "bay_heads": [
+          "PLAIN",
+          "TREFOIL",
+          "QUATREFOIL",
+          "TREFOIL"
+        ],
+        "door_bay": 2,
+        "butt_top": 15.0,
+        "butt_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "butt_x": [
+          -56.0,
+          -49.0,
+          -42.0,
+          -35.0
+        ],
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "LIGHT": 10,
+        "WIN": 4,
+        "DOOR": 1,
+        "BUTT": 4,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        -63.0,
+        -34.3,
+        7.6,
+        17.0,
+        17.0
+      ],
+      "manifest_params": {
+        "bay_lights": [
+          2,
+          3,
+          3,
+          2
+        ],
+        "bay_heads": [
+          "PLAIN",
+          "TREFOIL",
+          "QUATREFOIL",
+          "TREFOIL"
+        ],
+        "door_bay": 2,
+        "buttress_top_z": 15.0
+      }
+    },
+    "L02": {
+      "zone": "Z4",
+      "type": "AISLE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "L02",
+        "type": "AISLE",
+        "side": "N",
+        "x0": -35.0,
+        "x1": -7.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "TREFOIL",
+          "TREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 2,
+        "butt_top": 16.0,
+        "butt_lines": [
+          6,
+          7,
+          8
+        ],
+        "butt_x": [
+          -28.0,
+          -21.0,
+          -14.0
+        ],
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "L02",
+        "type": "AISLE",
+        "side": "N",
+        "x0": -35.0,
+        "x1": -7.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "TREFOIL",
+          "TREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 2,
+        "butt_top": 16.0,
+        "butt_lines": [
+          6,
+          7,
+          8
+        ],
+        "butt_x": [
+          -28.0,
+          -21.0,
+          -14.0
+        ],
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "LIGHT": 11,
+        "WIN": 4,
+        "DOOR": 1,
+        "BUTT": 3,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        -35.0,
+        -7.0,
+        7.6,
+        17.0,
+        17.0
+      ],
+      "manifest_params": {
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "TREFOIL",
+          "TREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 2,
+        "buttress_top_z": 16.0
+      }
+    },
+    "L03": {
+      "zone": "Z5",
+      "type": "AISLE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "L03",
+        "type": "AISLE",
+        "side": "S",
+        "x0": -63.0,
+        "x1": -35.0,
+        "bay_lights": [
+          3,
+          2,
+          2,
+          3
+        ],
+        "bay_heads": [
+          "TREFOIL",
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 4,
+        "butt_top": 15.5,
+        "butt_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "butt_x": [
+          -56.0,
+          -49.0,
+          -42.0,
+          -35.0
+        ],
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "L03",
+        "type": "AISLE",
+        "side": "S",
+        "x0": -63.0,
+        "x1": -35.0,
+        "bay_lights": [
+          3,
+          2,
+          2,
+          3
+        ],
+        "bay_heads": [
+          "TREFOIL",
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 4,
+        "butt_top": 15.5,
+        "butt_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "butt_x": [
+          -56.0,
+          -49.0,
+          -42.0,
+          -35.0
+        ],
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "LIGHT": 10,
+        "WIN": 4,
+        "DOOR": 1,
+        "BUTT": 4,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        -63.0,
+        -34.3,
+        -17.0,
+        -7.6,
+        17.0
+      ],
+      "manifest_params": {
+        "bay_lights": [
+          3,
+          2,
+          2,
+          3
+        ],
+        "bay_heads": [
+          "TREFOIL",
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN"
+        ],
+        "door_bay": 4,
+        "buttress_top_z": 15.5
+      }
+    },
+    "L04": {
+      "zone": "Z5",
+      "type": "AISLE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "L04",
+        "type": "AISLE",
+        "side": "S",
+        "x0": -35.0,
+        "x1": -7.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN",
+          "QUATREFOIL"
+        ],
+        "door_bay": 3,
+        "butt_top": 16.0,
+        "butt_lines": [
+          6,
+          7,
+          8
+        ],
+        "butt_x": [
+          -28.0,
+          -21.0,
+          -14.0
+        ],
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "L04",
+        "type": "AISLE",
+        "side": "S",
+        "x0": -35.0,
+        "x1": -7.0,
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN",
+          "QUATREFOIL"
+        ],
+        "door_bay": 3,
+        "butt_top": 16.0,
+        "butt_lines": [
+          6,
+          7,
+          8
+        ],
+        "butt_x": [
+          -28.0,
+          -21.0,
+          -14.0
+        ],
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "LIGHT": 11,
+        "WIN": 4,
+        "DOOR": 1,
+        "BUTT": 3,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        -35.0,
+        -7.0,
+        -17.0,
+        -7.6,
+        17.0
+      ],
+      "manifest_params": {
+        "bay_lights": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "bay_heads": [
+          "QUATREFOIL",
+          "QUATREFOIL",
+          "PLAIN",
+          "QUATREFOIL"
+        ],
+        "door_bay": 3,
+        "buttress_top_z": 16.0
+      }
+    },
+    "N01": {
+      "zone": "Z2",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N01",
+        "type": "NAVE_BAY",
+        "grid": [
+          1,
+          2
+        ],
+        "x0": -63.0,
+        "x1": -56.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 5,
+        "lights": 4,
+        "head": "TREFOIL",
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "N01",
+        "type": "NAVE_BAY",
+        "grid": [
+          1,
+          2
+        ],
+        "x0": -63.0,
+        "x1": -56.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 5,
+        "lights": 4,
+        "head": "TREFOIL",
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 8,
+        "WIN": 2,
+        "TRI": 10,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -63.8,
+        -56.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "OCT",
+        "triforium_openings_per_side": 5,
+        "clerestory_lights": 4,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "N02": {
+      "zone": "Z2",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N02",
+        "type": "NAVE_BAY",
+        "grid": [
+          2,
+          3
+        ],
+        "x0": -56.0,
+        "x1": -49.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CMP4",
+        "tri": 4,
+        "lights": 3,
+        "head": "TREFOIL",
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "N02",
+        "type": "NAVE_BAY",
+        "grid": [
+          2,
+          3
+        ],
+        "x0": -56.0,
+        "x1": -49.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CMP4",
+        "tri": 4,
+        "lights": 3,
+        "head": "TREFOIL",
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 8,
+        "RIB": 4
+      },
+      "expected_bbox": [
+        -56.8,
+        -49.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "CMP4",
+        "triforium_openings_per_side": 4,
+        "clerestory_lights": 3,
+        "vault": "quadripartite",
+        "rib_count": 4
+      }
+    },
+    "N03": {
+      "zone": "Z2",
+      "type": "NAVE_BAY",
+      "changed_by_co": true,
+      "truth": {
+        "id": "N03",
+        "type": "NAVE_BAY",
+        "grid": [
+          3,
+          4
+        ],
+        "x0": -49.0,
+        "x1": -42.0,
+        "arch": "R",
+        "spring": 19.0,
+        "crown": 26.0,
+        "pier": "CMP8",
+        "tri": 3,
+        "lights": 1,
+        "head": "NONE",
+        "vault": "GROIN",
+        "co": true
+      },
+      "original_sheet": {
+        "id": "N03",
+        "type": "NAVE_BAY",
+        "grid": [
+          3,
+          4
+        ],
+        "x0": -49.0,
+        "x1": -42.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CMP8",
+        "tri": 3,
+        "lights": 2,
+        "head": "QUATREFOIL",
+        "vault": "TIER"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 2,
+        "WIN": 2,
+        "TRI": 6,
+        "RIB": 0
+      },
+      "expected_bbox": [
+        -49.8,
+        -42.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "round",
+        "pier_type": "CMP8",
+        "triforium_openings_per_side": 3,
+        "clerestory_lights": 1,
+        "vault": "groin",
+        "rib_count": 0
+      }
+    },
+    "N04": {
+      "zone": "Z2",
+      "type": "NAVE_BAY",
+      "changed_by_co": true,
+      "truth": {
+        "id": "N04",
+        "type": "NAVE_BAY",
+        "grid": [
+          4,
+          5
+        ],
+        "x0": -42.0,
+        "x1": -35.0,
+        "arch": "R",
+        "spring": 19.0,
+        "crown": 26.0,
+        "pier": "CYL",
+        "tri": 5,
+        "lights": 1,
+        "head": "NONE",
+        "vault": "GROIN",
+        "co": true
+      },
+      "original_sheet": {
+        "id": "N04",
+        "type": "NAVE_BAY",
+        "grid": [
+          4,
+          5
+        ],
+        "x0": -42.0,
+        "x1": -35.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CYL",
+        "tri": 5,
+        "lights": 2,
+        "head": "SEXFOIL",
+        "vault": "TIER"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 2,
+        "WIN": 2,
+        "TRI": 10,
+        "RIB": 0
+      },
+      "expected_bbox": [
+        -42.8,
+        -35.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "round",
+        "pier_type": "CYL",
+        "triforium_openings_per_side": 5,
+        "clerestory_lights": 1,
+        "vault": "groin",
+        "rib_count": 0
+      }
+    },
+    "N05": {
+      "zone": "Z3",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N05",
+        "type": "NAVE_BAY",
+        "grid": [
+          5,
+          6
+        ],
+        "x0": -35.0,
+        "x1": -28.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 4,
+        "lights": 4,
+        "head": "SEXFOIL",
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "N05",
+        "type": "NAVE_BAY",
+        "grid": [
+          5,
+          6
+        ],
+        "x0": -35.0,
+        "x1": -28.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 4,
+        "lights": 4,
+        "head": "SEXFOIL",
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 8,
+        "WIN": 2,
+        "TRI": 8,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -35.8,
+        -28.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "OCT",
+        "triforium_openings_per_side": 4,
+        "clerestory_lights": 4,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "N06": {
+      "zone": "Z3",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N06",
+        "type": "NAVE_BAY",
+        "grid": [
+          6,
+          7
+        ],
+        "x0": -28.0,
+        "x1": -21.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 3,
+        "lights": 2,
+        "head": "SEXFOIL",
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "N06",
+        "type": "NAVE_BAY",
+        "grid": [
+          6,
+          7
+        ],
+        "x0": -28.0,
+        "x1": -21.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 3,
+        "lights": 2,
+        "head": "SEXFOIL",
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 4,
+        "WIN": 2,
+        "TRI": 6,
+        "RIB": 4
+      },
+      "expected_bbox": [
+        -28.8,
+        -21.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "OCT",
+        "triforium_openings_per_side": 3,
+        "clerestory_lights": 2,
+        "vault": "quadripartite",
+        "rib_count": 4
+      }
+    },
+    "N07": {
+      "zone": "Z3",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N07",
+        "type": "NAVE_BAY",
+        "grid": [
+          7,
+          8
+        ],
+        "x0": -21.0,
+        "x1": -14.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CMP8",
+        "tri": 3,
+        "lights": 3,
+        "head": "SEXFOIL",
+        "vault": "QUAD"
+      },
+      "original_sheet": {
+        "id": "N07",
+        "type": "NAVE_BAY",
+        "grid": [
+          7,
+          8
+        ],
+        "x0": -21.0,
+        "x1": -14.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "CMP8",
+        "tri": 3,
+        "lights": 3,
+        "head": "SEXFOIL",
+        "vault": "QUAD"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 6,
+        "RIB": 4
+      },
+      "expected_bbox": [
+        -21.8,
+        -14.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "CMP8",
+        "triforium_openings_per_side": 3,
+        "clerestory_lights": 3,
+        "vault": "quadripartite",
+        "rib_count": 4
+      }
+    },
+    "N08": {
+      "zone": "Z3",
+      "type": "NAVE_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "N08",
+        "type": "NAVE_BAY",
+        "grid": [
+          8,
+          9
+        ],
+        "x0": -14.0,
+        "x1": -7.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 3,
+        "lights": 3,
+        "head": "SEXFOIL",
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "N08",
+        "type": "NAVE_BAY",
+        "grid": [
+          8,
+          9
+        ],
+        "x0": -14.0,
+        "x1": -7.0,
+        "arch": "P",
+        "spring": 18.0,
+        "crown": 26.0,
+        "pier": "OCT",
+        "tri": 3,
+        "lights": 3,
+        "head": "SEXFOIL",
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "PIER": 2,
+        "LIGHT": 6,
+        "WIN": 2,
+        "TRI": 6,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        -14.8,
+        -7.0,
+        -7.8,
+        7.8,
+        38.0
+      ],
+      "manifest_params": {
+        "arch_form": "pointed",
+        "pier_type": "OCT",
+        "triforium_openings_per_side": 3,
+        "clerestory_lights": 3,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "P01": {
+      "zone": "Z1",
+      "type": "WEST_FRONT",
+      "changed_by_co": false,
+      "truth": {
+        "id": "P01",
+        "type": "WEST_FRONT",
+        "x0": -72.0,
+        "x1": -63.0,
+        "y0": -7.0,
+        "y1": 7.0,
+        "gable": 36.0,
+        "orders": 5,
+        "kings": 12,
+        "gable_pinn": 4,
+        "rose_center_z": 22.0,
+        "rose_dia": 10.0
+      },
+      "original_sheet": {
+        "id": "P01",
+        "type": "WEST_FRONT",
+        "x0": -72.0,
+        "x1": -63.0,
+        "y0": -7.0,
+        "y1": 7.0,
+        "gable": 36.0,
+        "orders": 5,
+        "kings": 12,
+        "gable_pinn": 4,
+        "rose_center_z": 22.0,
+        "rose_dia": 10.0
+      },
+      "expected_counts": {
+        "KING": 12,
+        "PORTAL": 1,
+        "PINN": 4
+      },
+      "expected_bbox": [
+        -72.0,
+        -63.0,
+        -7.0,
+        7.0,
+        36.0
+      ],
+      "manifest_params": {
+        "portal_orders": 5,
+        "gallery_niches": 12,
+        "gable_pinnacles": 4
+      }
+    },
+    "Q01": {
+      "zone": "Z7",
+      "type": "CHOIR_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "Q01",
+        "type": "CHOIR_BAY",
+        "x0": 7.0,
+        "x1": 14.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "niches": 4,
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "Q01",
+        "type": "CHOIR_BAY",
+        "x0": 7.0,
+        "x1": 14.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 2,
+        "niches": 4,
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "LIGHT": 6,
+        "WIN": 2,
+        "NICHE": 8,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        7.0,
+        14.0,
+        -7.6,
+        7.6,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_north": 4,
+        "lights_south": 2,
+        "niches_per_side": 4,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "Q02": {
+      "zone": "Z7",
+      "type": "CHOIR_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "Q02",
+        "type": "CHOIR_BAY",
+        "x0": 14.0,
+        "x1": 21.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 4,
+        "niches": 5,
+        "vault": "STAR"
+      },
+      "original_sheet": {
+        "id": "Q02",
+        "type": "CHOIR_BAY",
+        "x0": 14.0,
+        "x1": 21.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 4,
+        "niches": 5,
+        "vault": "STAR"
+      },
+      "expected_counts": {
+        "LIGHT": 8,
+        "WIN": 2,
+        "NICHE": 10,
+        "RIB": 20
+      },
+      "expected_bbox": [
+        14.0,
+        21.0,
+        -7.6,
+        7.6,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_north": 4,
+        "lights_south": 4,
+        "niches_per_side": 5,
+        "vault": "lierne_star",
+        "rib_count": 20
+      }
+    },
+    "Q03": {
+      "zone": "Z7",
+      "type": "CHOIR_BAY",
+      "changed_by_co": false,
+      "truth": {
+        "id": "Q03",
+        "type": "CHOIR_BAY",
+        "x0": 21.0,
+        "x1": 28.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 3,
+        "niches": 5,
+        "vault": "TIER"
+      },
+      "original_sheet": {
+        "id": "Q03",
+        "type": "CHOIR_BAY",
+        "x0": 21.0,
+        "x1": 28.0,
+        "crown": 26.0,
+        "lights_a": 4,
+        "lights_b": 3,
+        "niches": 5,
+        "vault": "TIER"
+      },
+      "expected_counts": {
+        "LIGHT": 7,
+        "WIN": 2,
+        "NICHE": 10,
+        "RIB": 16
+      },
+      "expected_bbox": [
+        21.0,
+        28.0,
+        -7.6,
+        7.6,
+        38.0
+      ],
+      "manifest_params": {
+        "lights_north": 4,
+        "lights_south": 3,
+        "niches_per_side": 5,
+        "vault": "tierceron",
+        "rib_count": 16
+      }
+    },
+    "R01": {
+      "zone": "Z1",
+      "type": "ROSE",
+      "changed_by_co": false,
+      "truth": {
+        "id": "R01",
+        "type": "ROSE",
+        "host": "P01",
+        "center": [
+          -72.0,
+          0.0,
+          22.0
+        ],
+        "normal": "-X",
+        "dia": 10.0,
+        "rings": [
+          8,
+          16,
+          32
+        ],
+        "oculus_foils": 6
+      },
+      "original_sheet": {
+        "id": "R01",
+        "type": "ROSE",
+        "host": "P01",
+        "center": [
+          -72.0,
+          0.0,
+          22.0
+        ],
+        "normal": "-X",
+        "dia": 10.0,
+        "rings": [
+          8,
+          16,
+          32
+        ],
+        "oculus_foils": 6
+      },
+      "expected_counts": {
+        "ROSE": 56
+      },
+      "expected_bbox": [
+        -72.4,
+        -71.6,
+        -5.0,
+        5.0,
+        27.0
+      ],
+      "manifest_params": {
+        "diameter": 10.0,
+        "ring_lights": [
+          8,
+          16,
+          32
+        ],
+        "oculus_foils": 6
+      }
+    },
+    "R02": {
+      "zone": "Z6",
+      "type": "TRANSEPT_FRONT",
+      "changed_by_co": false,
+      "truth": {
+        "id": "R02",
+        "type": "TRANSEPT_FRONT",
+        "side": "N",
+        "wall_y": 22.0,
+        "portals": 1,
+        "orders": 3,
+        "dia": 9.0,
+        "rings": [
+          12,
+          24
+        ],
+        "turret_sides": 6,
+        "turret_top": 42.0,
+        "gable": 38.0,
+        "rose_center_z": 21.0,
+        "oculus_foils": 5
+      },
+      "original_sheet": {
+        "id": "R02",
+        "type": "TRANSEPT_FRONT",
+        "side": "N",
+        "wall_y": 22.0,
+        "portals": 1,
+        "orders": 3,
+        "dia": 9.0,
+        "rings": [
+          12,
+          24
+        ],
+        "turret_sides": 6,
+        "turret_top": 42.0,
+        "gable": 38.0,
+        "rose_center_z": 21.0,
+        "oculus_foils": 5
+      },
+      "expected_counts": {
+        "ROSE": 36,
+        "PORTAL": 1,
+        "TURRET": 2
+      },
+      "expected_bbox": [
+        -9.5,
+        9.5,
+        21.0,
+        23.5,
+        42.0
+      ],
+      "manifest_params": {
+        "portals": 1,
+        "portal_orders": 3,
+        "rose_diameter": 9.0,
+        "ring_lights": [
+          12,
+          24
+        ],
+        "oculus_foils": 5,
+        "turret_sides": 6
+      }
+    },
+    "R03": {
+      "zone": "Z6",
+      "type": "TRANSEPT_FRONT",
+      "changed_by_co": false,
+      "truth": {
+        "id": "R03",
+        "type": "TRANSEPT_FRONT",
+        "side": "S",
+        "wall_y": -22.0,
+        "portals": 1,
+        "orders": 5,
+        "dia": 9.0,
+        "rings": [
+          6,
+          12,
+          24
+        ],
+        "turret_sides": 8,
+        "turret_top": 42.0,
+        "gable": 38.0,
+        "rose_center_z": 21.0,
+        "oculus_foils": 5
+      },
+      "original_sheet": {
+        "id": "R03",
+        "type": "TRANSEPT_FRONT",
+        "side": "S",
+        "wall_y": -22.0,
+        "portals": 1,
+        "orders": 5,
+        "dia": 9.0,
+        "rings": [
+          6,
+          12,
+          24
+        ],
+        "turret_sides": 8,
+        "turret_top": 42.0,
+        "gable": 38.0,
+        "rose_center_z": 21.0,
+        "oculus_foils": 5
+      },
+      "expected_counts": {
+        "ROSE": 42,
+        "PORTAL": 1,
+        "TURRET": 2
+      },
+      "expected_bbox": [
+        -9.5,
+        9.5,
+        -23.5,
+        -21.0,
+        42.0
+      ],
+      "manifest_params": {
+        "portals": 1,
+        "portal_orders": 5,
+        "rose_diameter": 9.0,
+        "ring_lights": [
+          6,
+          12,
+          24
+        ],
+        "oculus_foils": 5,
+        "turret_sides": 8
+      }
+    },
+    "T01": {
+      "zone": "Z1",
+      "type": "TOWER",
+      "changed_by_co": true,
+      "truth": {
+        "id": "T01",
+        "type": "TOWER",
+        "side": "N",
+        "cx": -67.5,
+        "cy": 11.5,
+        "size": 9.0,
+        "body_top": 44.0,
+        "spire_tip": 72.0,
+        "storeys": 4,
+        "lancets": 3,
+        "pinn": 8,
+        "orders": 4,
+        "co": true
+      },
+      "original_sheet": {
+        "id": "T01",
+        "type": "TOWER",
+        "side": "N",
+        "cx": -67.5,
+        "cy": 11.5,
+        "size": 9.0,
+        "body_top": 44.0,
+        "spire_tip": 64.0,
+        "storeys": 4,
+        "lancets": 3,
+        "pinn": 8,
+        "orders": 4
+      },
+      "expected_counts": {
+        "LIGHT": 12,
+        "PINN": 8,
+        "SPIRE": 1,
+        "PORTAL": 1
+      },
+      "expected_bbox": [
+        -72.0,
+        -63.0,
+        7.0,
+        16.0,
+        72.0
+      ],
+      "manifest_params": {
+        "storeys": 4,
+        "belfry_lancets_per_face": 3,
+        "spire_pinnacles": 8,
+        "portal_orders": 4,
+        "spire_tip_z": 72.0
+      }
+    },
+    "T02": {
+      "zone": "Z1",
+      "type": "TOWER",
+      "changed_by_co": true,
+      "truth": {
+        "id": "T02",
+        "type": "TOWER",
+        "side": "S",
+        "cx": -67.5,
+        "cy": -11.5,
+        "size": 9.0,
+        "body_top": 44.0,
+        "spire_tip": 72.0,
+        "storeys": 3,
+        "lancets": 3,
+        "pinn": 8,
+        "orders": 3,
+        "co": true
+      },
+      "original_sheet": {
+        "id": "T02",
+        "type": "TOWER",
+        "side": "S",
+        "cx": -67.5,
+        "cy": -11.5,
+        "size": 9.0,
+        "body_top": 44.0,
+        "spire_tip": 64.0,
+        "storeys": 3,
+        "lancets": 3,
+        "pinn": 8,
+        "orders": 3
+      },
+      "expected_counts": {
+        "LIGHT": 12,
+        "PINN": 8,
+        "SPIRE": 1,
+        "PORTAL": 1
+      },
+      "expected_bbox": [
+        -72.0,
+        -63.0,
+        -16.0,
+        -7.0,
+        72.0
+      ],
+      "manifest_params": {
+        "storeys": 3,
+        "belfry_lancets_per_face": 3,
+        "spire_pinnacles": 8,
+        "portal_orders": 3,
+        "spire_tip_z": 72.0
+      }
+    },
+    "X01": {
+      "zone": "Z6",
+      "type": "CROSSING",
+      "changed_by_co": false,
+      "truth": {
+        "id": "X01",
+        "type": "CROSSING",
+        "vault": "STAR",
+        "openings": 2,
+        "pinn": 8,
+        "tower_top": 48.0,
+        "fleche_tip": 68.0,
+        "crown": 26.0
+      },
+      "original_sheet": {
+        "id": "X01",
+        "type": "CROSSING",
+        "vault": "STAR",
+        "openings": 2,
+        "pinn": 8,
+        "tower_top": 48.0,
+        "fleche_tip": 68.0,
+        "crown": 26.0
+      },
+      "expected_counts": {
+        "PIER": 4,
+        "LIGHT": 8,
+        "PINN": 8,
+        "RIB": 20,
+        "SPIRE": 1
+      },
+      "expected_bbox": [
+        -7.8,
+        7.8,
+        -7.8,
+        7.8,
+        68.0
+      ],
+      "manifest_params": {
+        "vault": "lierne_star",
+        "rib_count": 20,
+        "belfry_openings_per_face": 2,
+        "tower_pinnacles": 8,
+        "fleche_tip_z": 68.0
+      }
+    }
+  }
+}

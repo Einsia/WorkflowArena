@@ -1,0 +1,649 @@
+{
+  "task_id": "WFA-CDN-014",
+  "scoring": "each item binary; group score = weight x passed/items; total = sum (100). Group gates zero only that group; overall gates = deliverable missing/unopenable or cheating.",
+  "groups": [
+    {
+      "id": "G1",
+      "name_zh": "叙事与结构",
+      "name_en": "Narrative & structure",
+      "weight": 10,
+      "items": 7
+    },
+    {
+      "id": "G2",
+      "name_zh": "视觉设计与可读性",
+      "name_en": "Visual design & legibility",
+      "weight": 10,
+      "items": 8
+    },
+    {
+      "id": "G3",
+      "name_zh": "材料覆盖与隐藏考点",
+      "name_en": "Coverage & hidden checkpoints",
+      "weight": 26,
+      "items": 11
+    },
+    {
+      "id": "G4",
+      "name_zh": "逐页忠实度",
+      "name_en": "Per-slide fidelity",
+      "weight": 8,
+      "items": 8
+    },
+    {
+      "id": "G5",
+      "name_zh": "失效机理推理与计算",
+      "name_en": "Failure-mechanism reasoning & arithmetic",
+      "weight": 26,
+      "items": 8
+    },
+    {
+      "id": "G6",
+      "name_zh": "原生对象、动画、媒体与交付",
+      "name_en": "Native objects, animation, media & delivery",
+      "weight": 20,
+      "items": 15
+    }
+  ],
+  "gates": [
+    {
+      "id": "GATE0",
+      "scope": "整题",
+      "zh": "output/ 中 presentation.pptx、slides.pdf、script.md、calculations.xlsx、event-clip.mp4、evidence-index.csv、playback-check.md 七件齐全，且 pptx 能被 python-pptx 读出幻灯片。",
+      "en": "All seven deliverables exist and the PPTX is parseable.",
+      "effect_zh": "全部判定记否，验收失败。"
+    },
+    {
+      "id": "GATE1",
+      "scope": "G6 组级",
+      "zh": "包结构完整性代理（Linux 评测无 PowerPoint）：zip 完整、内容类型齐全、内部关系目标存在、XML 良构、python-pptx 可打开，且无非超链接外部关系。",
+      "en": "Package-integrity proxy for opening in PowerPoint without repair (zip, content types, relationships, well-formed XML, python-pptx opens, no external non-hyperlink relationships).",
+      "effect_zh": "G6 记 0；V07 记否；验收失败（连续分照常报告）。"
+    },
+    {
+      "id": "GATE2",
+      "scope": "整题",
+      "zh": "作弊/违规：访问评测隐藏文件、联网取材、以材料以外来源的数据或影像替换材料内容。",
+      "en": "Cheating / network use / hidden-file access / outside data or imagery.",
+      "effect_zh": "整题 0，验收失败。",
+      "note": "v2026-10-25: not enforced by the automated grader (checks.py / rubric_score.py); human audit only."
+    }
+  ],
+  "items": [
+    {
+      "id": "N01",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "9–11 页、16:9，含标题页与结束页，无空分隔页。",
+      "criterion_en": "9-11 slides, 16:9, title+closing, no empty dividers.",
+      "verify": "python-pptx: slide count, slide size ratio; every slide has >=1 fact-bearing element besides title.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N02",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "每页标题都是完整论断（含谓语的判断句），不是话题标签。",
+      "criterion_en": "Every title is a claim sentence.",
+      "verify": "Reviewer reads titles; any noun-phrase title => NO.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N03",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "叙事顺序为：事件与后果 → 设计阶段错误 → 物理失效机理 → 现场损伤被观察与解读的过程 → 可中断环节评估 → 回答与边界；不缺环节、不跳回、不重复。",
+      "criterion_en": "Narrative order: event and consequences -> design-stage errors -> physical failure mechanism -> how the distress was observed and interpreted on site -> barrier assessment -> answer and limits; no stage missing, no jumping back, no repeated stage.",
+      "verify": "Judge maps each slide to a stage; any stage missing, out of order or repeated => NO.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N04",
+      "tier": "mid",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "结束页用一句话直接回答问题，并列出至少两条证据不支持的结论（须有材料依据，不得新增材料外事实）。",
+      "criterion_en": "Closing slide answers in one sentence and lists >=2 conclusions the evidence does not support.",
+      "verify": "Reviewer; both 'not supported' items must be backed by the report.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N05",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "script.md 按 130–150 词/分钟加声明停顿与短片时长计算的时长区间与 11–13 分钟有交集；逐页声明时长之和落在该区间 ±10% 内；每页备注文字与讲稿该页一致。",
+      "criterion_en": "script.md timed at 130-150 wpm plus declared pauses and the clip gives a range overlapping 11-13 min; the per-slide declared durations sum to within ±10% of that range; each slide's notes match its script section.",
+      "verify": "checks.py n05(): word count of script sections (markup stripped), ffprobe clip duration, 'pause N s' marks; per-slide 'Duration' parse; notes vs script token overlap >=0.9 per slide.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N06",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "为非专家听众解释以下全部术语：节点/界面剪力（冷缝处的水平剪力传递）、需求/容量比（D/C）、后张拉杆的张拉与卸张、冗余（单一传力路径）、probable cause 与 contributing 的区别。",
+      "criterion_en": "Explains interface shear at cold joint, D/C ratio, PT tensioning/detensioning, redundancy, probable cause vs contributing.",
+      "verify": "Reviewer; any one unexplained => NO.",
+      "weight": 1.4286
+    },
+    {
+      "id": "N07",
+      "tier": "gate",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "全篇以一致视觉编码区分“调查机构确立的事实 / 机构分析判断 / 制作者推断”，且无任何一处把制作者推断或当事方说法标为机构结论。",
+      "criterion_en": "Consistent coding of fact vs agency judgement vs own inference; no own inference or party statement labelled as agency finding.",
+      "verify": "Reviewer audits every coded element against report wording.",
+      "weight": 1.4286
+    },
+    {
+      "id": "V01",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "所有正文 ≥20 pt（按继承字号与自动缩放后的实际字号计；图注/出处行除外）。",
+      "criterion_en": "All body text >=20 pt as rendered (inherited sizes and autofit scaling included); captions/source lines excluded.",
+      "verify": "checks.py: run size resolved run -> paragraph -> shape lstStyle -> layout/master placeholder -> master txStyles -> presentation defaultTextStyle, times normAutofit fontScale; body = body/object placeholders + each slide's main text box (>=20 words, not a source/caption line).",
+      "weight": 1.25
+    },
+    {
+      "id": "V02",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "图注、出处行及其他所有文字 ≥12 pt（按继承字号与自动缩放后的实际字号计）。",
+      "criterion_en": "Captions, source lines and all other text >=12 pt as rendered (inherited sizes and autofit included).",
+      "verify": "checks.py: same size resolution as V01, every text run of every text shape.",
+      "weight": 1.25
+    },
+    {
+      "id": "V03",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "任一页要点 ≤6 条。",
+      "criterion_en": "<=6 bullets per slide.",
+      "verify": "checks.py: bullet paragraphs (buChar/buAutoNum or body-placeholder default) summed over all non-title text frames of each slide.",
+      "weight": 1.25
+    },
+    {
+      "id": "V04",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每个原生图表坐标轴有标题与单位（kips、比值等），多系列有图例，数据标签与坐标轴刻度标签字号 ≥12 pt（PowerPoint 渲染为准）。",
+      "criterion_en": "Every chart has axis titles with units, legend if multi-series, data and tick labels >=12 pt as rendered.",
+      "verify": "checks.py v04(): chart XML: every non-deleted axis has title text, value-axis title has a unit token; multi-series charts have a legend; tick and shown data-label sizes from axis/dLbls txPr, else chartSpace txPr, else 10 pt (PowerPoint default) must be >=12 pt.",
+      "weight": 1.25
+    },
+    {
+      "id": "V05",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "报告原图裁切到相关图块并保留图例/图号，原生标注准确指向所述部位（如 11/12 节点、裂缝位置）。",
+      "criterion_en": "Report figures cropped legibly; native callouts point at the right feature.",
+      "verify": "Reviewer compares crop with source page.",
+      "weight": 1.25
+    },
+    {
+      "id": "V06",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "静态渲染中无文字溢出或裁切，无对象超出页面，常显对象之间无重叠；带进入动画或触发效果的形状不参与重叠判定。",
+      "criterion_en": "In the static render no text overflows or is clipped, nothing extends beyond the slide, and no always-visible objects overlap; shapes that carry entrance animations or trigger effects are excluded from the overlap test.",
+      "verify": "checks.py fails shapes beyond the slide and overlapping always-visible text shapes (fail-only); judge checks text overflow/clipping on the rendered pages.",
+      "weight": 1.25
+    },
+    {
+      "id": "V07",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "任何触发说明框、机理形状或标注显示时，不遮挡时间线条目（触发形状）、连接线、图表/表格框、视频或常显文字；不同触发器的说明框可共用同一位置。",
+      "criterion_en": "No trigger panel, mechanism shape or callout, when revealed, covers a timeline entry (trigger shape), a connector, a chart/table frame, the video or always-visible text; panels revealed by different triggers may share one position.",
+      "verify": "checks.py v07(): bbox of every animated target vs trigger shapes, chart/table frames, video, always-visible text shapes (overlap >0.1 in) and connector paths not glued to the target.",
+      "weight": 1.25
+    },
+    {
+      "id": "V08",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "全篇英文语法、拼写、单位与时间写法正确一致（kips、in²、ft、a.m./p.m. 或 24 小时制统一）。",
+      "criterion_en": "English, units and time notation correct and consistent.",
+      "verify": "Reviewer + spell check.",
+      "weight": 1.25
+    },
+    {
+      "id": "A01",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "交代事件基本事实：日期与约时刻、地点（道路）、主跨长度与下落高度、被压车辆数，均与报告一致。",
+      "criterion_en": "Basic facts (date/time, location, span length, fall height, vehicles crushed) match the report.",
+      "verify": "answer-key K-BASIC.",
+      "weight": 2.3636
+    },
+    {
+      "id": "A02",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "伤亡计数按表 1 分人群、分严重程度给出且与摘要一致（死亡 6 = 工人 1 + 车内 5），不把送医人数当作受伤人数。",
+      "criterion_en": "Casualties per Table 1 by group and severity; hospital-transport count not used as injury count.",
+      "verify": "answer-key K-INJ.",
+      "weight": 2.3636
+    },
+    {
+      "id": "A03",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "按报告原文区分 probable cause、contributing 与 contributing to the severity（封路/停工），不改写成追责措辞、不把严重度因素说成坍塌原因。",
+      "criterion_en": "Distinguishes probable cause, contributing and severity factors per verbatim wording.",
+      "verify": "answer-key K-PC.",
+      "weight": 2.3636
+    },
+    {
+      "id": "A04",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "至少引用两条安全建议，写明编号与对象机构，且至少一条与所述可中断环节对应。",
+      "criterion_en": "Cites >=2 recommendations with number and addressee; >=1 tied to a barrier discussed.",
+      "verify": "answer-key K-REC.",
+      "weight": 2.3636
+    },
+    {
+      "id": "A05",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "时间线关键节点日期/时刻全部正确：2/24 开裂声与 11/12 处裂缝、3/10 落位后卸张、3/13“非安全问题”回复与再张拉建议、3/15 上午会议、坍塌。",
+      "criterion_en": "Timeline anchors (Feb 24, Mar 10, Mar 13, Mar 15 meeting, collapse) correct.",
+      "verify": "answer-key K-TIMELINE; any wrong date/time => NO.",
+      "weight": 2.3636
+    },
+    {
+      "id": "A06",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "说明报告排除的因素：混凝土与钢材材料不是因素、千斤顶工作正常（Findings 2、3）。",
+      "criterion_en": "States materials and jack were excluded as factors.",
+      "verify": "answer-key K-MAT.",
+      "weight": 2.3636
+    },
+    {
+      "id": "H01",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏·条件项] 若简报给出节点 1/2 界面剪力需求低估的百分比：要么给出正文的 49% 并注明出自报告正文（p.78/PDF 97），要么给出按表 6 模型 1（2,481）与表 F-1（1,368 kips）算得的约 45%（模型 1–4 为 44.7–46.3%）并注明这些出处；两者并列并指出不一致亦通过。把 49% 说成可由表 6/F-1 复现、或给出百分比而无出处判否。未给出该百分比视为通过。",
+      "criterion_en": "[hidden, conditional] If the deck states a percentage for the node 1/2 interface-shear demand underestimate, it either gives the printed 49% attributed to the report text (p.78/PDF 97), or gives the table-based ~45% (Table 6 Model 1 2,481 vs Table F-1 1,368 kips; 44.7-46.3% over Models 1-4) with those sources; showing both with the discrepancy flagged also passes. Presenting 49% as reproduced from Table 6/F-1, or a percentage without a source, fails. No node 1/2 percentage = pass.",
+      "verify": "answer-key H01-49pct; deck text/notes/calculations.xlsx. The instruction only requires page traceability, not detection of the internal discrepancy.",
+      "weight": 2.3636
+    },
+    {
+      "id": "H02",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 用表 F-3/F-4 或 p.72 的口径量化 11/12 节点容量高估（约 20–22%）；若出现“约 25%”，指明其为 Pc 中 1.25 荷载系数的效应而非容量比；不把两数当同一量。",
+      "criterion_en": "[hidden] Capacity overestimate quantified on the table basis (~20-22%); 25% identified as the 1.25 load-factor effect, never conflated.",
+      "verify": "answer-key H02-20vs25.",
+      "weight": 2.3636
+    },
+    {
+      "id": "H03",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 表述坍塌发生在再张拉进行过程中（并引千斤顶活塞伸出/正在张拉等物证）；若引用 p.38“紧随其后”的说法须指出与他处不一致；任何地方不说再张拉已完成。",
+      "criterion_en": "[hidden] Collapse during restressing with physical evidence; p.38 'immediately after' flagged if used; never 'completed'.",
+      "verify": "answer-key H03-timing.",
+      "weight": 2.3636
+    },
+    {
+      "id": "H04",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 卸张后裂缝变化的两种表述分别归属：设计方内部邮件“略有增长” vs 调查人员“明显发展”；不把“略有增长”当作已确立事实。",
+      "criterion_en": "[hidden] 'grew slightly' (designer emails) vs 'significantly progressed' (investigators) attributed; former not stated as fact.",
+      "verify": "answer-key H04-crack-growth.",
+      "weight": 2.3636
+    },
+    {
+      "id": "H05",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 解释为何 D/C 最高的是节点 1/2（2.15）而失效发生在 11/12（1.62）：至少给出报告所列两条原因（24 vs 42 英寸隔板、四根竖向套管/空洞、杆件 11 比杆件 2 浅）。",
+      "criterion_en": "[hidden] Explains why 11/12 failed although 1/2 had the highest D/C, with >=2 report reasons.",
+      "verify": "answer-key H05-why-11-12.",
+      "weight": 2.3636
+    },
+    {
+      "id": "F01",
+      "tier": "base",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 1 页（标题页，含备注）没有任何与 answer-key 及 evidence-index.csv 所列页码不符或无出处的内容；出现一处即判否。",
+      "criterion_en": "Slide 1 (title slide, incl. notes): nothing unsupported by, or contradicting, the answer key and the cited pages in evidence-index.csv.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F02",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 2 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 2 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F03",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 3 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 3 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F04",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 4 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 4 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F05",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 5 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 5 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F06",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 6 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 6 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F07",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 7 页（文字、图表数据、标注、触发面板与备注）没有任何与 answer-key 相矛盾、或在 evidence-index.csv 中无出处的数字、时刻、日期、计数、单位或论断；出现一处即判否。",
+      "criterion_en": "Slide 7 (text, chart data, callouts, trigger panels, notes): no number, time, date, count, unit or claim that contradicts the answer key or lacks a source in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "F08",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 8 页至最后一页（文字、图表数据、标注与备注）没有任何与 answer-key 及 evidence-index.csv 所列页码不符或无出处的内容；出现一处即判否。",
+      "criterion_en": "Slides 8 to the last (text, chart data, callouts, notes): nothing unsupported by, or contradicting, the answer key and the cited pages in evidence-index.csv; one instance fails.",
+      "verify": "Judge checks slide text, table cells, chart data and notes against the answer key and evidence-index.csv (the judge has no copy of the report).",
+      "weight": 1.0
+    },
+    {
+      "id": "R01",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "失效机理链环节齐全且顺序正确：需求低估 → 容量高估 → 11/12 界面配筋不足与空洞 → 拆模起开裂并持续发展 → 卸张加剧损伤 → 再张拉 → 节点界面剪切失效 → 单一传力路径丧失、整跨坍塌；每环按“机构事实/机构分析/制作者推断”编码，无材料外环节。",
+      "criterion_en": "Mechanism chain complete and in order: demand underestimated -> capacity overestimated -> 11/12 interface under-reinforced with voids -> cracking from formwork removal onward, growing -> detensioning increased damage -> restressing -> interface shear failure at the 11/12 node -> loss of the single load path, span collapse; each link coded as agency fact / agency analysis / own inference; no link not in the report.",
+      "verify": "Judge vs answer-key K-MECH.",
+      "weight": 3.25
+    },
+    {
+      "id": "R02",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "不把再张拉（或千斤顶操作）说成 probable cause 或“没有再张拉就不会坍塌”；按报告将其定位为未经同行评审的设计变更/荷载操作（Finding 21），根因为设计计算错误。",
+      "criterion_en": "Restressing not presented as probable cause or as sufficient counterfactual; positioned per Finding 21.",
+      "verify": "Reviewer vs K-PC/K-MAT/K-MECH.",
+      "weight": 3.25
+    },
+    {
+      "id": "R03",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "calculations.xlsx 正确算出 11/12 节点 D/C：调查方核算约 1.62（1,835/1,130，与图 31 一致）与设计方自身数值约 0.71（978/1,369），注明各自来源，均为实时公式。",
+      "criterion_en": "D/C at 11/12: ~1.62 (agency check) and ~0.71 (design values), sourced, live formulas.",
+      "verify": "openpyxl formulas + answer-key K-DC-calc (±0.02).",
+      "weight": 3.25
+    },
+    {
+      "id": "R04",
+      "tier": "base",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "三帧时间戳间隔计算正确（0.165 s、0.264 s，共 0.429 s），并记入 calculations.xlsx。",
+      "criterion_en": "Still-to-still intervals computed correctly (0.165 s, 0.264 s; 0.429 s).",
+      "verify": "openpyxl + K-DASHCAM.",
+      "weight": 3.25
+    },
+    {
+      "id": "R05",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "可中断环节判定与材料一致：至少一个被材料支持为可能防止坍塌的环节（如独立同行评审核查全部节点力，Finding 18），封路/停工被正确表述为降低后果严重度而非防止结构失效，且至少一个看似防线被正确否定（如冷缝打毛也不足以提供足够容量，Finding 5）。",
+      "criterion_en": "Barrier verdicts match the report: >=1 supported preventive barrier, road closure as severity-only, >=1 tempting barrier rejected.",
+      "verify": "Reviewer vs K-BARRIERS.",
+      "weight": 3.25
+    },
+    {
+      "id": "R06",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "不越界：不指认个人罪责，不把结论推广到材料未支持的“所有混凝土桁架桥”式普遍断言，不对报告未判定的事项（如若未卸张是否仍会坍塌）给出确定结论。",
+      "criterion_en": "No individual blame, no unsupported generalisation, no definite verdict on questions the report leaves open.",
+      "verify": "Reviewer.",
+      "weight": 3.25
+    },
+    {
+      "id": "R07",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "配筋量表述正确：设计提供 8 根 7 号筋（4.8 in²），调查方核算应另加约 13 in²，并保留报告“仅示数量级”的限定。",
+      "criterion_en": "Rebar: 4.8 in^2 provided, ~13 in^2 more needed, with the order-of-magnitude caveat.",
+      "verify": "answer-key K-REBAR.",
+      "weight": 3.25
+    },
+    {
+      "id": "R08",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "关于坍塌历时的表述与报告一致：0.429 s 只表述为三张静图之间的间隔，不说成测得的完整坍塌历时（报告称整个事件录像不足 2 秒）。",
+      "criterion_en": "Collapse duration: 0.429 s presented only as interval between stills, not as measured full duration.",
+      "verify": "Reviewer vs K-DASHCAM.",
+      "weight": 3.25
+    },
+    {
+      "id": "D01",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "slides.pdf 与 pptx 页数相同，内容对应。",
+      "criterion_en": "slides.pdf matches deck.",
+      "verify": "Page count + title text match.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D02",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 列齐全（页号、元素、论断、印刷页、PDF 页、图表/章节号、变换），且每页至少一行。",
+      "criterion_en": "evidence-index.csv has all columns and >=1 row per slide.",
+      "verify": "csv parse.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D03",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "演讲者备注每页非空；标明 AI 协助制作与来源署名，无背书暗示。",
+      "criterion_en": "Notes on every slide; AI disclosure and source credit; no endorsement.",
+      "verify": "python-pptx notes + text search.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D04",
+      "tier": "base",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "≥2 个原生图表（chart part，非图片），各有内嵌（非链接）工作簿，含所绘数值、单位表头或单位单元格及页码。",
+      "criterion_en": ">=2 native charts (chart parts, not pictures), each with an embedded (not linked) workbook that contains the plotted values, a unit header or unit cell, and a page reference.",
+      "verify": "checks.py d04(): c:externalData -> ppt/embeddings/*.xlsx; numbers present; a string cell matching page/p./PDF; a unit header/cell ('Unit', 'kips', '(kips)', 'ratio', 'D/C', 's', '%' ...).",
+      "weight": 1.3333
+    },
+    {
+      "id": "D05",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "图表所绘每个数值均为报告数值（报告正文或图 31 印出的数据标签）或 calculations.xlsx 的计算结果；绘制表 6 需求值的图表须声明所用模型或统计方式；各图表嵌入工作簿包含所绘数值。",
+      "criterion_en": "Every plotted value is a report value (report text, or the printed Fig. 31 data labels) or a calculations.xlsx result; charts plotting Table 6 demands declare the model or statistic used; each chart's embedded workbook contains the plotted values.",
+      "verify": "checks.py d05(): chart caches vs numbers in pdftotext(input/report.pdf) + answer-key K-FIG31 + calculations.xlsx formula results (tolerance: 0.006 below 1.2, else min(1, 0.5%)); cache values must be present in the embedded workbook; Table 6 match requires model/maximum/envelope wording on the slide or chart title.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D06",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "≥2 幅图片为报告真实原图（从 PDF 提取或裁切，非重绘），且每幅上至少放有一个原生可编辑标注。",
+      "criterion_en": ">=2 pictures that are real report figures (extracted or cropped from the PDF, not redrawn), each with >=1 native editable callout placed on it.",
+      "verify": "checks.py d06(): pdfimages of input/report.pdf; OpenCV multi-scale normalised cross-correlation >=0.65 between each deck picture and a report image (either direction); >=1 sp/cxnSp/grpSp overlapping the picture.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D07",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "机理链页：原生形状 + 连到形状的连接线（cxnSp），≥6 个单击进入效果按机理顺序揭示独立形状。",
+      "criterion_en": "Mechanism slide: native shapes + connectors glued to shapes (cxnSp), >=6 on-click entrance effects revealing separate shapes in mechanism order.",
+      "verify": "checks.py d07(): p:timing main-sequence clickEffect/entr on distinct shapes, glued connectors present; each step's text mapped to K-MECH stages (demand, capacity, interface/voids, cracking, detensioning, restressing, failure) by first-mentioned keyword; >=6 mapped steps, >=5 distinct stages, non-decreasing order. Slideshow execution is inferred from the XML (no PowerPoint on the grader).",
+      "weight": 1.3333
+    },
+    {
+      "id": "D08",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "时间线页：≥5 个带日期条目各自是交互触发器（InteractiveSequences，TriggerType=OnShapeClick，TriggerShape 为该条目），揭示独立可编辑说明框；放映中逐个点击确实触发，非超链接/跳页/主序列。",
+      "criterion_en": ">=5 dated entries each with on-shape-click InteractiveSequence revealing a separate panel; works in slideshow.",
+      "verify": "checks.py d08(): p:timing interactiveSeq with onClick trigger spid on >=5 shapes whose text has a date, each revealing (entr) a separate panel shape. Slideshow behaviour is inferred from the XML.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D09",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "至少一个原生图表在放映中按系列或按类别逐步构建（图表动画的 ChartUnit/BuildLevel 为按系列/类别，非整体出现、非叠放图片）。",
+      "criterion_en": ">=1 native chart builds by series/category in slideshow.",
+      "verify": "checks.py d09(): p:bldGraphic/a:bldChart bld=series|category AND a timing effect whose spTgt targets that chart with p:graphicEl/a:chart (series/category steps).",
+      "weight": 1.3333
+    },
+    {
+      "id": "D10",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "event-clip.mp4 为 H.264、4–12 s、1280×720 或 1920×1080；同一媒体嵌入 pptx（ppt/media 内，非链接），并由单击启动（单击触发器、主序列单击或默认的单击播放媒体节点；不得自动播放）。",
+      "criterion_en": "Clip H.264, 4-12 s, 1280x720 or 1920x1080; the same media embedded in the pptx (ppt/media, not linked) and started by a click (on-click trigger, main-sequence click, or the default click-to-play media node; never auto-start).",
+      "verify": "checks.py d10(): ffprobe; zip listing + byte/duration identity; play/playFrom/togglePause command targeting the video inside an onClick interactiveSeq or a main-sequence click group without onBegin, or a p:video media node with no auto-start command.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D11",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "短片内容：只用报告坍塌过程静图（图 9–11），按时间顺序，画面时刻标签与报告时间戳一致，画面注明为静图序列，节奏为 1:1 或注明放慢倍数且相对误差 ≤10%。",
+      "criterion_en": "Clip uses only Figs 9-11 in order, labels match stamps, 'stills' disclosed, pacing 1:1 or stated factor within 10%.",
+      "verify": "checks.py d11() (fail-only): ffmpeg frame differences split the clip into held stills; each matched (OpenCV NCC >=0.55) against the report's embedded Fig 9/10/11 images; order must be exactly Fig 9 -> 10 -> 11; holds must keep 0.165 : 0.264 s within 10% and equal 1:1 or a slow-down factor stated in slide text/notes/script (+-10%). When it reaches the judge these parts have passed; the judge checks the on-frame time labels and the 'sequence of stills' disclosure on the contact sheet.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D12",
+      "tier": "gate",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "包内无任何外部关系（媒体、图片、图表数据、字体），且所有被引用部件均存在。",
+      "criterion_en": "No external relationship of any kind (media, images, chart data, fonts) and every referenced part is present in the package.",
+      "verify": "checks.py d12(): dlib.pptx_integrity() + external non-hyperlink relationship scan.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D13",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "核心数值与结论在页面、备注、图表工作簿、calculations.xlsx、讲稿、PDF 与证据索引间一致（以 answer-key 关键量为准，全部一致才通过）。",
+      "criterion_en": "Key numbers consistent across all artefacts.",
+      "verify": "Judge checks the answer-key key quantities in slide text, notes, chart_data, embedded workbook cell values, calculations.xlsx CSV, script, PDF text and evidence-index.csv.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D14",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "playback-check.md 写明实际使用的软件与版本、步骤与结果、未能验证的内容；其声明不与评测脚本的实测结果矛盾。",
+      "criterion_en": "playback-check.md states the software and version actually used, the steps and results, and what could not be verified; it claims nothing that the grader's measurements contradict.",
+      "verify": "checks.py postprocess fails D14 when a line claims a trigger/chart-build/video/mechanism/offline/workbook property as verified and the corresponding check (D08/D09/D10/D07/D12/D04) failed; otherwise judge reads playback-check.md.",
+      "weight": 1.3333
+    },
+    {
+      "id": "D15",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "calculations.xlsx 中每个派生量都是实时公式并引用源值单元格，列有单位与页码。",
+      "criterion_en": "Every derived quantity in calculations.xlsx is a live formula with units and pages.",
+      "verify": "openpyxl data_only=False formula check.",
+      "weight": 1.3333
+    }
+  ],
+  "version": "v2-2026-10-25",
+  "release_acceptance": {
+    "task_form": "CDN-DOC",
+    "all_critical_items_must_pass": true
+  }
+}

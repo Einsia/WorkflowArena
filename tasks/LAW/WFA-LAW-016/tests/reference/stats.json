@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-016",
+  "src": "test-1506",
+  "case_no": "（2018）川1802刑初170号",
+  "year": 2018,
+  "n_defendants": 12,
+  "charges": [
+    "寻衅滋事罪",
+    "聚众斗殴罪"
+  ],
+  "n_principal": 5,
+  "n_accessory": 7,
+  "n_role_items": 12,
+  "n_leaders": 0,
+  "facts_chars": 14651,
+  "n_probation_graded": 8
+}

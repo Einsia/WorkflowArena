@@ -1,0 +1,22 @@
+{
+  "task_id": "WFA-LAW-020",
+  "sources": [
+    {
+      "name": "MultiLJP (Lyu et al., Findings of EMNLP 2023, arXiv 2312.05762)",
+      "url": "https://github.com/CURRENTF/HRN",
+      "commit": "9c6e0786ce89279b6aa42557d65d1430dd2e52e6",
+      "file": "dataset/dataset-v5/data_v5.03.zip",
+      "record": "train-4547",
+      "license": "No repository license declared in the pinned source snapshot. No license grant over the upstream dataset as a whole is asserted.",
+      "derived_from": "China Judgements Online (中国裁判文书网) public judgment, anonymised by MultiLJP authors",
+      "included_material": "Anonymized excerpt of official judicial facts; see task metadata for the scope of the supplied official text and authored evaluation contract."
+    },
+    {
+      "name": "legal corpus",
+      "path": "environment/inputs/law/",
+      "provenance": "environment/inputs/law/PROVENANCE.json"
+    }
+  ],
+  "built_at": "2026-10-24T07:57:40.179154+00:00",
+  "facts_sha256": "d88eb47082282f65d6162b8bcfd6c2aeb91be566eea82d720fc4a45be7bc7b54"
+}

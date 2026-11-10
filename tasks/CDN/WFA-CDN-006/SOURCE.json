@@ -1,0 +1,168 @@
+{
+  "task_id": "WFA-CDN-006",
+  "title": "Big Buck Bunny (2008)",
+  "creator": "Blender Foundation / www.bigbuckbunny.org",
+  "source_url": "https://peach.blender.org",
+  "license": "CC-BY-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "license_evidence": "https://peach.blender.org/about/",
+  "modifications": "silent, 640x359 padded 1 px at bottom to 640x360, SAR 1:1, 24 fps CFR, x264 veryfast CRF17, -frames:v exact, all container metadata and SEI (x264 info) NAL units stripped",
+  "files": [
+    {
+      "file": "environment/input/01.mp4",
+      "sha256": "dc438f34ee22a71180b4475d2f92e5cd4e9a847b52087d26b7ee05d4a61dd36f"
+    },
+    {
+      "file": "environment/input/02.mp4",
+      "sha256": "6dbb9f0220eb71c42784d3d7180033b343312e512e46ad347b4e7967e6ba6a15"
+    },
+    {
+      "file": "environment/input/03.mp4",
+      "sha256": "e5cc3e18368fee9aa96ac67911bfda4fa8a20d0419a4251181be59a6e79b37a4"
+    },
+    {
+      "file": "environment/input/04.mp4",
+      "sha256": "8ba3142df84c53da52f352edc9a8444ae3024f39248061afd4bc9555aff0cf4b"
+    },
+    {
+      "file": "environment/input/05.mp4",
+      "sha256": "eedf1c48b5e14b2d5663590af73470d55dbba6b913b9938f12a5abee8485ab01"
+    },
+    {
+      "file": "environment/input/06.mp4",
+      "sha256": "8364c14d6063685a58ebbd0697c12577cb4a93a1b5af5205e51070e8687eab00"
+    },
+    {
+      "file": "environment/input/07.mp4",
+      "sha256": "388b85a479282fff18bf4e1c88070447a7a70d93515dd024af6be532717b23f9"
+    },
+    {
+      "file": "environment/input/08.mp4",
+      "sha256": "8804a0049cc9a58069be80abe31723eb037c2fa37aea8ad8dbf66daad3de9832"
+    },
+    {
+      "file": "environment/input/09.mp4",
+      "sha256": "438bf258f878d85e84848fbcbe4956e08b616a2210cbb8670bd69c00a67af6a7"
+    },
+    {
+      "file": "environment/input/10.mp4",
+      "sha256": "5130c47de9a9c80f0a16fe2cb173aa3e8937d2f4aeb5b4f2127bed1ea79d0a3d"
+    },
+    {
+      "file": "environment/input/11.mp4",
+      "sha256": "cf3d46d5c4ed5ac13eeaa1794d9bd3d0181ed9798722d91a4bb69593a1a9fc1c"
+    },
+    {
+      "file": "environment/input/12.mp4",
+      "sha256": "c254dac1baf02c7bceb54aa45be4bf72acb35f7fd8d42a4775cd75037adae6d1"
+    },
+    {
+      "file": "environment/input/13.mp4",
+      "sha256": "12a0841b7912552e1597a1d0ddc99ba60561a42dc0c48110f0c81cc590653bb0"
+    },
+    {
+      "file": "environment/input/14.mp4",
+      "sha256": "54fd9fe38f7e74958dddde41c79f900385788c3db64c38b3abce33d1ea702c10"
+    },
+    {
+      "file": "environment/input/15.mp4",
+      "sha256": "37774b857c09d8c6795ccc88307c4995166571b52f1d9de54e6ccdc9aa22fc11"
+    },
+    {
+      "file": "environment/input/16.mp4",
+      "sha256": "0478b6cf20c1c3e1bb05ee8d3a94984e80b7fb09874f1df27069d300d345bc0a"
+    },
+    {
+      "file": "environment/input/17.mp4",
+      "sha256": "e2809f48bb9681c4a5d879aee1bd00e7322a315ec9697575552fd625f37d2e8c"
+    },
+    {
+      "file": "environment/input/18.mp4",
+      "sha256": "724891c9fe9c795372adbc34a15895d82fe04938a845b88864b14f92a3ce9aea"
+    },
+    {
+      "file": "environment/input/19.mp4",
+      "sha256": "7e7b93ed11ea88ff6fc2d4135af55d3f70c6c677911e2332796be6a00853b852"
+    },
+    {
+      "file": "environment/input/20.mp4",
+      "sha256": "2af779f88e7fc7f2c8f8609d89ffd1edcfc8c115b012c98d372b94a8398bcd91"
+    },
+    {
+      "file": "environment/input/21.mp4",
+      "sha256": "391d1385e9beef5f28c7e5c1c24eac93ca4b2320b61f318612bab84e40a16e25"
+    },
+    {
+      "file": "environment/input/22.mp4",
+      "sha256": "bda87f400d91ce3ae159010fb4f6a9cc1da502265f3f5151bf8dc3dde6e9f6a3"
+    },
+    {
+      "file": "environment/input/23.mp4",
+      "sha256": "4cdfdefc9b98a0396349361691374295b74a34632f1d84cb50b9a7b594d52319"
+    },
+    {
+      "file": "environment/input/24.mp4",
+      "sha256": "12abc51b000eeb802cb96b41ee03c7eb9d5ae4baaa28c302649ddf48a9ceb2e7"
+    },
+    {
+      "file": "environment/input/25.mp4",
+      "sha256": "964f3174d9386df420034a4d280a78bb28f527fe62867e64343cae1ca45c865f"
+    },
+    {
+      "file": "environment/input/26.mp4",
+      "sha256": "197ea14d2fcca2af1146a505d2168699b8a899a220c388cf0c648cc5003503cd"
+    },
+    {
+      "file": "environment/input/27.mp4",
+      "sha256": "6449d5752a9c104f67dd8db6350fd06a01a881c3345e7d30cc2fcae9150ad152"
+    },
+    {
+      "file": "environment/input/28.mp4",
+      "sha256": "3c826cddf6a663de0872c5d7d715ea0869689489d2cb17f50604dae7e2ff64d8"
+    },
+    {
+      "file": "environment/input/29.mp4",
+      "sha256": "7514f4134d903c666fb4e915983cefb84361632906cc8ea4c8e004afbdeeb1f4"
+    },
+    {
+      "file": "environment/input/30.mp4",
+      "sha256": "107c6d388a89861888317fb6036626a6dbc7b049faa98e02373c0ecfc0f617e0"
+    },
+    {
+      "file": "environment/input/31.mp4",
+      "sha256": "aad83bd563ee5a8ba5f29bdf0bb959320ce723828f3577f2461bb4e0cf321003"
+    },
+    {
+      "file": "environment/input/32.mp4",
+      "sha256": "8fce9256c11fd141e7d4265b3d07ae1ed6ed1edbd17aef34ef07f712bd479b85"
+    },
+    {
+      "file": "environment/input/33.mp4",
+      "sha256": "472833b82ade97b5549408cecff844394372953bac71316b9712aeb43f8b05c2"
+    },
+    {
+      "file": "environment/input/34.mp4",
+      "sha256": "f622b94adbf470f28c95be8b9f04bc2775bf0dea27297a36d64e2a3bb91421a6"
+    },
+    {
+      "file": "environment/input/35.mp4",
+      "sha256": "b756935d6f50792c1b7ec7774b999532bc15fcea57c98725ff6d3f2b1b4a87ef"
+    },
+    {
+      "file": "environment/input/36.mp4",
+      "sha256": "39e856c3ee7804b67ce96fdf7e45e99f1daaf5bf57a4315954402c7ec84ba92f"
+    },
+    {
+      "file": "environment/input/37.mp4",
+      "sha256": "605f1950707f910e79be27d3202e5b909a6a174bc1958b02ab348eb951196aa0"
+    },
+    {
+      "file": "environment/input/38.mp4",
+      "sha256": "cd95da894953be5967a338c75182b2a49df92852d72e88339916879dec330206"
+    },
+    {
+      "file": "environment/input/39.mp4",
+      "sha256": "2e763272520e2d3808df736a401d532705d4408d7d0a908cde2d3836532ee12d"
+    }
+  ]
+}

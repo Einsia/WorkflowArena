@@ -1,0 +1,25 @@
+entry_id,entity,date,account,counterparty,amount,txn_currency,txn_amount,description
+G001,P,2026-11-30,1000,BANK,-245.40,,,unrecorded_bank_fee BKF-P-2026-11
+G001,P,2026-11-30,6900,BANK,245.40,,,unrecorded_bank_fee BKF-P-2026-11
+G002,P,2026-10-15,2000,V-P-012,5842.77,,,reverse duplicate
+G002,P,2026-10-15,6300,V-P-012,-5842.77,,,reverse duplicate
+G003,S1,2026-10-12,1000,C-S1-0044,54.00,,,fix transposition
+G003,S1,2026-10-12,1100,C-S1-0044,-54.00,,,fix transposition
+G004,S1,2026-11-02,6300,V-S1-035,11599.59,,,reclass
+G004,S1,2026-11-02,6700,V-S1-035,-11599.59,,,reclass
+G005,S1,2026-12-31,1000,BANK,4274.80,,,unrecorded_bank_interest BKR-S1-2026-12
+G005,S1,2026-12-31,4310,BANK,-4274.80,,,unrecorded_bank_interest BKR-S1-2026-12
+G006,S2,2026-10-31,2200,ACCRUAL,-4375.54,,,accrual ACR-S2-2026-10
+G006,S2,2026-10-31,6700,ACCRUAL,4375.54,,,accrual ACR-S2-2026-10
+G007,S2,2026-11-01,2200,ACCRUAL,4375.54,,,accrual ACR-S2-2026-10
+G007,S2,2026-11-01,6700,ACCRUAL,-4375.54,,,accrual ACR-S2-2026-10
+G008,S2,2026-12-31,2100,P,-41000.00,,,IC fee
+G008,S2,2026-12-31,6600,P,41000.00,,,IC fee
+G009,S5,2026-10-31,1650,,-902.77,,,depreciation FA-S5-022
+G009,S5,2026-10-31,6400,,902.77,,,depreciation FA-S5-022
+G010,S5,2026-11-30,1650,,-902.77,,,depreciation FA-S5-022
+G010,S5,2026-11-30,6400,,902.77,,,depreciation FA-S5-022
+G011,S5,2026-12-31,1650,,-902.77,,,depreciation FA-S5-022
+G011,S5,2026-12-31,6400,,902.77,,,depreciation FA-S5-022
+G012,S5,2026-12-31,1400,,-3280.89,,,missing_prepaid_amortization PPD-S5-2026-12
+G012,S5,2026-12-31,6750,,3280.89,,,missing_prepaid_amortization PPD-S5-2026-12

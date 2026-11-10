@@ -1,0 +1,361 @@
+{
+  "task_id": "WFA-3D-014",
+  "version": "x04-v2 (2026-10-25 cleanup: measurements moved into checks.py)",
+  "scoring": "每条判定二元（部分满足即否）。reward = Σ(weight×pass)/Σ(weight，排除 na)，×100 即百分制。组级门槛（checks.postprocess 实现）：B04 因工程结构失败（scene.blend 缺失/无法打开、缺必需对象或缺 roll_T23_frames）→ world3d 与 edit 组全部记 0；README 命令缺失或 Blender 检查超时只判 B04 本身失败，不触发门槛。G08 实测平涂块指数失败（≥3 个镜头 >0.35）→ craft 组其余各条记 0。判定来源：除 M13、G08 的画面观感部分与 G10 外全部由 checks.py 实测（ffprobe/ffmpeg、numpy 音频分析、headless Blender 逐帧导出、480×270 低采样重渲）；M13、G08 先测可测部分，失败即判否，通过后才由评审模型看联系表判观感；G10 只看联系表。按声明帧测量：events.csv 帧号是测量锚点。成片帧↔工程帧：成片第 n 帧 = 场景第 frame_start+n 帧（读 .blend 的 frame_start，不假定为 0）；镜头摄影机按题面命名（S1/S5 用 CAM_S1，S2–S4 用 CAM_S2–CAM_S4），重渲时清除时间线标记的摄影机绑定并直接使用该摄影机。",
+  "tier_counts": {
+    "base": 8,
+    "mid": 15,
+    "gate": 10
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "基础版成片编码契约：恰好900帧；H.264、yuv420p、1280×720、方形像素、恒定30fps；AAC立体声48kHz，音频无缝覆盖全部画面。",
+      "criterion_en": "Base encode contract: exactly 900 frames; H.264 yuv420p 1280x720 square pixels CFR 30; AAC stereo 48 kHz covering the picture.",
+      "verify": "ffprobe -count_frames 解码计帧；codec/pix_fmt/sar/r_frame_rate/avg_frame_rate；音频流 codec/channels/sample_rate；音频时长≥视频时长-1帧。",
+      "weight": 3.125
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "母带：两版综合响度均在 −20±2 LUFS，真峰值 ≤ −1 dBTP，无连续≥3个满幅采样。",
+      "criterion_en": "Mastering: both versions −20±2 LUFS integrated, true peak ≤ −1 dBTP, no clipping runs.",
+      "verify": "ffmpeg -af ebur128=peak=true 取 I 与 TPK；解码 PCM 检查 |x|≥0.999 连续样本。",
+      "weight": 3.125
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "分轨：stems/speech、fx、amb 均为48kHz PCM、30.0 s ±1 帧；按 timeline.json 声明的母带增益相加后与解码混音（下混单声道比较）一致：1/3 倍频程带能量（100 ms 帧，50 Hz–14 kHz，仅计该帧最强带以下 40 dB 内的带）逐点差绝对值中位数 ≤ 0.75 dB、95 分位 ≤ 3 dB。",
+      "criterion_en": "Stems speech/fx/amb are 48 kHz PCM 30 s ±1 frame; gain-weighted sum matches the decoded mix: 1/3-octave band energies (100 ms frames, 50 Hz–14 kHz, bands within 40 dB of frame max) differ by median ≤0.75 dB, 95th pct ≤3 dB.",
+      "verify": "ffmpeg 解码 PCM；从 timeline.json 递归找每条分轨的母带增益（dB 与线性两种解释都试，取最优）；单声道下混，与 mp4 解码混音做互相关对齐（±2048 样本，补偿 AAC 前置延迟）后比较 1/3 倍频程带能量。不用波形相减：AAC 对噪声类素材的感知编码使正确混音的波形残差也只有约 −5 dB。",
+      "weight": 3.125
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "工程可读：project/scene.blend 能在 Blender 4.3 headless 打开；题面列出的全部对象名（DRIVER、PICKER、DRIVER_RIG、PICKER_RIG、FORKLIFT、RACK_C、UPRIGHT_C1–C5、PALLET_TOP、BOX_01–12、CART、RADIO、SAFETY_LINE、CAM_S1–S4）存在；场景自定义属性 roll_T23_frames 存在；project/README.md 中有一行同时含 `blender` 与 `-b`/`--background`（顺序不限，如 `blender scene.blend -b -P export.py`）。",
+      "criterion_en": "Project readable: project/scene.blend opens headless in Blender 4.3; every required object name exists (DRIVER, PICKER, DRIVER_RIG, PICKER_RIG, FORKLIFT, RACK_C, UPRIGHT_C1–C5, PALLET_TOP, BOX_01–12, CART, RADIO, SAFETY_LINE, CAM_S1–S4); scene custom property roll_T23_frames exists; project/README.md has a line containing `blender` and `-b`/`--background` in any order (e.g. `blender scene.blend -b -P export.py`).",
+      "verify": "blender -b -y scene.blend --python（静态导出，超时 300 s）列出对象名与场景属性；README 逐行匹配。组级门槛：仅当 scene.blend 缺失/无法打开、缺必需对象或缺 roll_T23_frames 时，world3d 与 edit 组记 0；README 缺命令或 Blender 检查超时只判本条失败。",
+      "weight": 3.125
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "events.csv：表头恰为 event_id,frame,description；12个必需 id 全部存在且各出现一次；frame 为 0–899 整数。",
+      "criterion_en": "events.csv header exact; all 12 required ids present once; integer frames 0–899.",
+      "verify": "csv 解析；集合比较；类型检查。",
+      "weight": 3.125
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "timeline.json（两版）：声明五个镜头边界（基础版 180/330/540/720、修订版 180/320/540/720；帧或秒，含尾帧的区间亦可）与片尾；解码成片中检测到的每个硬切都有声明（±1 帧），每个声明的边界都检测到硬切；写明 CAM_S1–CAM_S4 且 CAM_S1 出现两次（S1、S5）；四个转场；每条分轨有数值化的音频起止；有每条分轨的母带增益。",
+      "criterion_en": "timeline.json (both versions): declares the five shot boundaries (base 180/330/540/720, revision 180/320/540/720; frames or seconds, end-inclusive ranges accepted) and the film end; every hard cut detected in the decoded film is declared (±1 frame) and every declared boundary has a detected cut; names CAM_S1–CAM_S4 with CAM_S1 used twice (S1, S5); four transitions; numeric audio in/out for each stem; per-stem master gains.",
+      "verify": "JSON 递归取数（路径含 shot/clip/range/start/end/frame 等的数值）；硬切检测＝320 px 灰度相邻帧差的孤立尖峰（>max(12, 6×中位数) 且 ≥3× 相邻帧差，或直方图距离 >0.5 且帧差 ≥2× 相邻）；与声明比较。",
+      "weight": 3.125
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "修订版存在且可解码：revision/output.mp4 满足与基础版相同的编码契约（900帧）；帧 0–318 与 331–899 与基础版逐帧 PSNR ≥ 35 dB。",
+      "criterion_en": "Revision decodes with the same encode contract (900 frames); frames 0–318 and 331–899 match base at PSNR ≥ 35 dB.",
+      "verify": "同 B01 编码契约；逐帧 PSNR（320 px 宽灰度）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "credits.md 与 qa.md 存在：credits 写明 Blender 并说明台词制作方式，qa.md 非空；产物文本中无凭据、API key、联网/付费 TTS 名称或以 URL 引用的媒体。",
+      "criterion_en": "credits.md and qa.md present: credits names Blender and states how the lines were produced, qa.md is non-empty; no credentials, API keys, online/paid TTS service names or URL-referenced media in the text deliverables.",
+      "verify": "文件存在与关键词检查；对 output/ 下文本文件做正则扫描（key/token/私钥、elevenlabs/polly/azure speech/google TTS/openai audio、http(s) 媒体链接）。",
+      "weight": 3.125
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "镜头结构：基础版恰好五个镜头，在第 180、330、540、720 帧（±1）硬切，切点两侧无混合帧（相邻帧差 <切点帧差的 35%），无其他剪切（孤立帧差尖峰）；无定格：成片中不存在连续 ≥8 帧除编码舍入外完全相同（全分辨率亮度无像素变化超过 2 级）、而工程同段内有对象、骨骼或摄影机运动的片段（固定机位下内容本身静止不算定格）。",
+      "criterion_en": "Exactly five shots: hard cuts at 180/330/540/720 (±1) with no blended frames around them (neighbouring frame differences <35% of the cut difference) and no other cut (isolated frame-difference spike); no freeze: no run of ≥8 decoded frames identical up to codec rounding (no full-resolution luma pixel changes by more than 2 levels) while any tracked object, rig bone or camera moves in the project during that run (a genuinely static locked-off picture is not a freeze).",
+      "verify": "切点检测同 B06；定格＝全分辨率灰度逐帧流式比较、像素差不超过 2 级的帧段，再对照工程逐帧导出的对象矩阵与骨骼位置（>0.1 mm 变化即有运动）；工程无法检查时 ≥8 帧相同即判否。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "edit",
+      "critical": false,
+      "criterion_zh": "镜头参数（从 .blend 逐帧导出摄影机）：S1、S5 的 CAM_S1 俯视（俯仰 ≤−15°）、机位高度 ≥3 m、水平视场 ≥55°、固定（漂移 <1 cm、<0.2°）；S2 的 CAM_S2 低于 FORKLIFT 顶（护顶架，读不到时按 2.15 m）、仰角 ≥0°、水平横移 ≥0.3 m、焦距不变；S3 的 CAM_S3 仰角 ≥20°、固定、水平视场 ≤30°；S4 的 CAM_S4 高度 1.2–1.9 m、水平摇动（偏航范围）≥8°、位移 <0.3 m。",
+      "criterion_en": "Camera grammar (per-frame camera data from the .blend): CAM_S1 in S1 and S5 looks down (pitch ≤ −15°), height ≥ 3 m, HFOV ≥ 55°, locked (drift < 1 cm, < 0.2°); CAM_S2 in S2 stays below the FORKLIFT top (overhead guard; 2.15 m if unreadable), pitch ≥ 0°, horizontal travel ≥ 0.3 m, constant focal length; CAM_S3 in S3 pitch ≥ +20°, locked, HFOV ≤ 30°; CAM_S4 in S4 height 1.2–1.9 m, pan (yaw range) ≥ 8°, travel < 0.3 m.",
+      "verify": "逐帧 matrix_world、lens、sensor（含 sensor_fit 与画幅比）；俯仰＝视轴仰角，视场按传感器适配计算；任一镜头不符即否。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "edit",
+      "critical": false,
+      "criterion_zh": "无跳切：每个切点（179→180 CAM_S1→CAM_S2、329→330 CAM_S2→CAM_S3、539→540 CAM_S3→CAM_S4、719→720 CAM_S4→CAM_S1）两侧摄影机视轴夹角 ≥20°，或主体投影包围盒高度比 ≥1.4（S4→S5 主体为 PICKER，其余为两侧都可见的 FORKLIFT 或 PALLET_TOP）。",
+      "criterion_en": "No jump cuts: at each cut (179→180 CAM_S1→CAM_S2, 329→330 CAM_S2→CAM_S3, 539→540 CAM_S3→CAM_S4, 719→720 CAM_S4→CAM_S1) the viewing axes differ by ≥ 20° or the subject's projected bbox height changes ≥ 1.4× (subject PICKER for S4→S5, otherwise FORKLIFT or PALLET_TOP, whichever is visible in both).",
+      "verify": "视轴＝摄影机 −Z；主体用评估后世界包围盒 8 角点经摄影机投影（含 shift/sensor fit）。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "sound",
+      "critical": true,
+      "criterion_zh": "声桥：语音分轨中调度员台词实测起音在 S4 内且 ≤23.5 s、收尾 ≥24.4 s；24.0 s 不落在 >0.5 s 的静音间隙内（句间自然停顿允许）；events.csv 声明的 line_dispatch_start/end 与实测相差 ≤6帧。",
+      "criterion_en": "Sound bridge: dispatcher line measured onset in S4 (≤ 23.5 s) and end ≥ 24.4 s, 24.0 s not inside a silence gap > 0.5 s (natural inter-sentence pause allowed); declared start/end within 6 frames.",
+      "verify": "speech.wav 20 ms RMS 能量分段（门限＝最大值 −35 dB，下限 −60 dBFS；≤0.5 s 间隙合并）；与声明区间重叠最多的段为调度员句；若两句被合并成一段，在两句声明之间最长的静音处切开。不使用 VAD/ASR 模型。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "sound",
+      "critical": true,
+      "criterion_zh": "拣货员台词位置：speech 分轨实测拣货员台词位于 S5 内（24.0–30.0 s）、在调度员台词结束之后开始，且起止与 line_picker_start/line_picker_end 相差 ≤6 帧。",
+      "criterion_en": "Picker line placement: the measured picker line in the speech stem lies inside S5 (24.0–30.0 s), starts after the dispatcher line ends, and its on/off is within 6 frames of line_picker_start/line_picker_end.",
+      "verify": "与 M04 同一能量分段。台词可懂度（ASR 词错率）不评：评分镜像中没有离线 ASR 模型。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "对讲机音色：调度员台词 4–8 kHz 频带能量比 300–3400 Hz 低 ≥15 dB，且低于 200 Hz 的能量比 300–3400 Hz 低 ≥10 dB；拣货员台词的同一高频比值至少比调度员高 8 dB（未做同样的窄带处理）。",
+      "criterion_en": "Radio voice: dispatcher line is band-limited (4–8 kHz ≥ 15 dB and <200 Hz ≥ 10 dB below 300–3400 Hz); picker line's HF ratio ≥ 8 dB higher than the dispatcher's.",
+      "verify": "按 M04/M05 的实测说话段在 speech.wav 上取 2048 点帧平均功率谱，频带积分比较。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "倒车蜂鸣：fx 分轨中有周期性窄带蜂鸣（3.0–6.0 s 平均谱在 500–3000 Hz 的最强峰比该频段中位数高 ≥10 dB，带通包络开/关反差 ≥10 dB）；4.0–8.0 s 内 ≥4 次起音，相邻起音间隔变异系数 ≤15%，跨越 6.0 s 的那一间隔与中位间隔相差 ≤15%（切点处无相位重置）。",
+      "criterion_en": "Reverse alarm: the fx stem has a periodic tonal beeper (strongest 500–3000 Hz peak of the 3.0–6.0 s mean spectrum ≥ 10 dB above the band median, band-passed on/off envelope contrast ≥ 10 dB); ≥ 4 beep onsets in 4.0–8.0 s with onset-interval CV ≤ 15%, and the interval spanning 6.0 s within 15% of the median interval (no phase reset at the cut).",
+      "verify": "fx.wav 以谱峰 ±15% 余弦带通；10 ms RMS 包络；起音＝上穿（P10 与 P95 的中点）且 50 ms 内高出 6 dB、带滞回（先回落 3 dB 才再触发）、不应期 80 ms、起音后 50 ms 内带内能量占 300–8000 Hz 的 ≥20%（剔除宽带撞击），再细化到 1 ms（首个距峰值 12 dB 以内的毫秒）。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "撞击同步：fx 分轨在声明 upright_contact 与 first_floor_hit 各自 ±2帧（±67 ms）内存在显著瞬态（谱通量峰高于前0.5 s 中位数 ≥12 dB）。",
+      "criterion_en": "Impact sync: fx transients within ±2 frames of declared upright_contact and first_floor_hit (spectral-flux peak ≥ 12 dB above preceding median).",
+      "verify": "fx.wav 对数幅度谱通量（n=1024、hop 256）；在声明帧时刻 ±67 ms 内取峰，与之前 0.5 s 的中位数比较，dB＝20·log10(比值) ≥12。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "world3d",
+      "critical": false,
+      "criterion_zh": "拣货员退到安全线后：声明 picker_behind_line 在 S4 内；该帧 PICKER_RIG 骨盆（pelvis/hips 骨，否则最低的 spine 骨）世界 x ≥ SAFETY_LINE 中心 x + 0.2 m（安全侧为 +x），声明帧前 1 s 时 x < 线 x，此后直到第 899 帧不回到线 x 以下；S4–S5 中支撑脚无 ≥5 cm 滑动（脚骨处于其最低高度 1 cm 以内连续 ≥3 帧期间的水平漂移）。",
+      "criterion_en": "Picker behind the line: declared picker_behind_line in S4; at that frame the PICKER_RIG pelvis (pelvis/hips bone, else the lowest spine bone) is at world x ≥ SAFETY_LINE centre x + 0.2 m (safe side +x), 1 s earlier at x < line x, and never back below line x through frame 899; no planted-foot slide ≥ 5 cm in S4–S5 (horizontal drift while a foot bone stays within 1 cm of its lowest height for ≥ 3 frames).",
+      "verify": "逐帧骨骼世界坐标（头/尾）；SAFETY_LINE 评估后世界包围盒中心 x；脚骨按名称 foot/ankle 与左右侧选取。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "world3d",
+      "critical": false,
+      "criterion_zh": "无穿插：第 330–895 帧每 5 帧采样，任何 BOX 与地面（z=0）、RACK_C/立柱、FORKLIFT 或其他 BOX 的穿透深度 ≤2 cm（双向：箱体采样点在对方网格内，以及对方边/顶点在箱体内）。",
+      "criterion_en": "No interpenetration: sampled every 5 frames over 330–895, no BOX penetrates the floor (z = 0), RACK_C/uprights, the FORKLIFT or another BOX by > 2 cm (both directions: box samples inside the other mesh and the other mesh's edges/vertices inside the box).",
+      "verify": "评估后网格 BVH 最近点 + 法向符号 + 上下两向射线奇偶判断内外；箱-箱用评估包围盒长方体解析计算。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "craft",
+      "critical": false,
+      "criterion_zh": "人物绑定与握持：DRIVER、PICKER 分别由 DRIVER_RIG、PICKER_RIG 驱动（Armature 修改器或骨架父级）；两骨架每只手 ≥4 条手指骨链、每链 ≥3 根有关键帧的骨，且每只手 ≥2 种不同的手指曲线（手指独立）；radio_raise 在 S5 内；其 ±2 帧内 PICKER 手/指骨与 RADIO 表面最近距离 ≤5 cm；此后 RADIO 随手移动（骨骼/约束父级，或每帧距手 ≤5 cm）并进入 PICKER 头骨 30 cm 内。",
+      "criterion_en": "Rigs and grip: DRIVER and PICKER are deformed by DRIVER_RIG / PICKER_RIG (armature modifier or armature parent); every hand of both rigs has ≥ 4 finger chains of ≥ 3 keyed bones and ≥ 2 distinct finger curves (independent fingers); radio_raise is in S5; within ±2 frames of it a PICKER hand/finger bone is ≤ 5 cm from the RADIO surface; RADIO then follows the hand (bone/constraint parent, or ≤ 5 cm in every frame) and comes within 30 cm of the PICKER head bone.",
+      "verify": "armature 修改器/父级；骨骼层级与 fcurve（手指链按名称或拓扑统计）；逐帧骨段到 RADIO 表面采样点的距离。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "修订（滚动剪辑）：修订版在第 180、320、540、720 帧（±1）硬切且无其他切点；修订版混音与基础版 null 残差 ≤−50 dB（独立编码时改用 1/3 倍频程带能量中位差 ≤0.25 dB）；roll_T23_frames=−10 时 BOX/PALLET_TOP/FORKLIFT 世界位置与 0 时相同（≤1 mm，抽样帧）；修订版第 325 帧与评分方在 roll −10 下用 CAM_S3 渲染世界第 325 帧的结果 SSIM ≥0.75（480×270），即 S3 向前延伸、动作时间不变。",
+      "criterion_en": "Roll edit: revision hard cuts at 180, 320, 540, 720 (±1) and no other cut; revision mix nulls against base at ≤ −50 dB (or 1/3-octave band median difference ≤ 0.25 dB for independent encodes); with roll_T23_frames = −10 the BOX/PALLET_TOP/FORKLIFT world positions equal those at 0 (≤ 1 mm, sampled frames); revision frame 325 matches a grader re-render of CAM_S3 at world frame 325 with roll −10 (SSIM ≥ 0.75 at 480×270), i.e. S3 extends earlier with action time unchanged.",
+      "verify": "切点检测同 B06；音频 null；同一 Blender 会话内把属性改为 −10 后重新求值抽样帧；单帧重渲（Cycles 8 spp 降噪，清除标记摄影机绑定）。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M13",
+      "tier": "mid",
+      "group": "craft",
+      "critical": false,
+      "criterion_zh": "画面完整性：无全画面亮度闪烁（某帧平均亮度与前后两帧均值相差 >3%，且 4×4 网格中 ≥12 格同向变化、画面结构不变 r≥0.9；切点 ±2 帧除外，实测）；联系表中不可见破面、孔洞或幽灵物体。",
+      "criterion_en": "Picture integrity: no frame-wide luminance flicker (a frame whose mean luma differs > 3% from the mean of its two neighbours with ≥ 12 of 16 grid cells moving the same way and unchanged picture structure r ≥ 0.9; cuts ±2 excluded — measured), and the contact sheets show no broken geometry, holes or ghost objects.",
+      "verify": "亮度部分由 checks 实测，失败即判否；通过后由评审模型看联系表判破面/孔洞/幽灵物体。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M14",
+      "tier": "mid",
+      "group": "world3d",
+      "critical": false,
+      "criterion_zh": "米制尺度（第 0 帧评估后网格）：每个 BOX 0.4×0.4×0.6 m、PALLET_TOP 0.144×0.8×1.2 m（排序后 ±5%）；RACK_C 顶层梁顶（4.0–5.0 m 间最高的朝上面）z=4.5±0.1 m；UPRIGHT_C1–C5 中心 x 与 0/2.8/5.6/8.4/11.2 相差 ≤0.1 m；FORKLIFT 顶（护顶架）2.15 m ±5%；PICKER 1.65 m、DRIVER 1.78 m ±5%（静止姿态网格高度或静止骨架高度任一符合）。",
+      "criterion_en": "Metric scale (evaluated meshes at film frame 0): every BOX 0.4×0.4×0.6 m and PALLET_TOP 0.144×0.8×1.2 m (sorted dimensions ±5%); RACK_C top beam top (highest up-facing face between 4.0 and 5.0 m) at z = 4.5 ± 0.1 m; UPRIGHT_C1–C5 centre x within 0.1 m of 0 / 2.8 / 5.6 / 8.4 / 11.2; FORKLIFT top (overhead guard) 2.15 m ±5%; PICKER 1.65 m and DRIVER 1.78 m ±5% (rest-pose mesh height or rest-pose rig extent).",
+      "verify": "Blender 内评估网格世界坐标；人物把骨架切到 REST 姿态后量网格 z 范围与骨骼头尾 z 范围。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M15",
+      "tier": "mid",
+      "group": "craft",
+      "critical": true,
+      "criterion_zh": "工程即真实来源：评分方从 scene.blend 用 CAM_S1/S2/S3/S4/S1 重渲成片第 90、255、435、630、810 帧（480×270、8 spp、降噪），与基础版成片对应帧 SSIM 均 ≥0.75。",
+      "criterion_en": "Project is the source of truth: the grader re-renders film frames 90 / 255 / 435 / 630 / 810 from scene.blend through CAM_S1 / S2 / S3 / S4 / S1 (480×270, 8 spp, denoised) and each matches the base film at SSIM ≥ 0.75.",
+      "verify": "blender -b -y 单帧渲染（求解者引擎，未出图则改用 Cycles 重试；清除标记摄影机绑定）；灰度 SSIM（11×11 高斯窗）。渲染失败或超出评分时间预算判否。",
+      "weight": 2.6667
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "world3d",
+      "critical": true,
+      "criterion_zh": "单一连续世界：BOX_01–12、PALLET_TOP 在 179/180、329/330、539/540、719/720 各切点，FORKLIFT 在后三个切点（T12 由 G03 评）两侧的世界位移 ≤ max(1 cm, 2× 前后 10 帧平均每帧位移)；这些对象没有可见性动画；没有带变换/可见性动画的纸箱尺寸替身网格。",
+      "criterion_en": "One continuous world: across cuts 179/180, 329/330, 539/540 and 719/720 the BOX_01–12 and PALLET_TOP world positions (and the FORKLIFT at the last three cuts; T12 is scored by G03) jump ≤ max(1 cm, 2× their mean per-frame motion over the 10 neighbouring frames); no visibility animation on these objects; no carton-sized stand-in meshes with transform or visibility animation.",
+      "verify": "逐帧世界矩阵；fcurve 路径 hide_render/hide_viewport；所有网格的尺寸与动画。",
+      "weight": 3.5
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "world3d",
+      "critical": true,
+      "criterion_zh": "重力与尺度一致：场景重力 9.81±5% m/s²（启用）、刚体世界时间比例 1.0±0.05；声明 first_box_release 与 first_floor_hit 均在 S3 内，且 first_floor_hit 与工程中首个 BOX 触地（最低点 z<2 cm）相差 ≤3 帧；首个触地箱从最后一次支撑接触（与 PALLET_TOP/RACK_C/立柱或静止纸箱的距离 ≤5 cm，含 Bullet 默认 4 cm 碰撞边距）到触地的时长在 [0.75, 1.35]×√(2h/9.81) 内（h＝接触时最低点高度）；h<0.5 m 时顺延下一个触地箱，均不足则时长项免检。",
+      "criterion_en": "Gravity and scale: scene gravity 9.81 ± 5% m/s² (enabled) and rigid-body time scale 1.0 ± 0.05; declared first_box_release and first_floor_hit in S3, and first_floor_hit within 3 frames of the first BOX touching the floor (min z < 2 cm); the first carton to reach the floor falls from its last support contact (≤ 5 cm to PALLET_TOP/RACK_C/uprights or to a carton at rest, which covers Bullet's default 4 cm collision margin) to touchdown in [0.75, 1.35]×√(2h/9.81) (h = its lowest point at that contact); if h < 0.5 m the next carton is used; if none qualifies the timing clause is waived.",
+      "verify": "scene.gravity/use_gravity、rigidbody_world.time_scale；逐帧箱体评估包围盒；支撑距离＝箱体采样点到支撑网格 BVH 与支撑网格边点到箱体 BVH 的最小值，箱-箱用长方体解析距离；找不到接触时以最后一段连续下降的起点起算。",
+      "weight": 3.5
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "动作匹配剪辑成立：FORKLIFT 世界位移 179→180 帧在 175–185 帧平均每帧位移的 [0.5, 2.0] 倍内；175–178 与 180–183 的平均速度变化 <25%；FORKLIFT 世界速度经 CAM_S1（179 帧）与 CAM_S2（180 帧）各自的旋转（不含摄影机平移）变换后屏幕水平分量同号（不越轴）；175–179 帧（CAM_S1）与 180–184 帧（CAM_S2）FORKLIFT 投影包围盒在画内面积占其总面积 ≥30%。",
+      "criterion_en": "Match on action holds: FORKLIFT displacement 179→180 within [0.5, 2.0]× its mean per-frame motion over 175–185; mean speed 175–178 vs 180–183 changes < 25%; the FORKLIFT world velocity rotated into CAM_S1 (frame 179) and CAM_S2 (frame 180) camera axes (rotation only, so a tracking camera is not penalised) has the same screen-horizontal sign (no line crossing); in frames 175–179 (CAM_S1) and 180–184 (CAM_S2) ≥ 30% of the FORKLIFT's projected bbox area lies inside the frame.",
+      "verify": "逐帧 FORKLIFT 世界矩阵与评估包围盒；摄影机旋转矩阵；完整投影（含 shift/sensor fit）。",
+      "weight": 3.5
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "world3d",
+      "critical": true,
+      "criterion_zh": "S1/S5 同一机位与同一世界：工程按时间线标记切换摄影机时，S1 与 S5 的活动摄影机均为 CAM_S1（工程不切换摄影机时以 timeline.json 中起点 720 的镜头声明 CAM_S1 为准）；CAM_S1 在 0–179 与 720–899 的变换与焦距一致（<1 cm、<0.2°、焦距相等）；解码第 90 与 810 帧（640×360、Y）16×16 块 PSNR 的中位数 ≥26 dB；第 810 帧至少 2 个 BOX 落在地面（最低点 z<5 cm）且其投影包围盒 ≥40% 在 CAM_S1 画内（不计遮挡）。",
+      "criterion_en": "S1/S5 same set-up and world: when the file switches cameras via timeline markers, the active camera in S1 and S5 is CAM_S1 (if the file never switches, timeline.json must declare CAM_S1 for the shot starting at 720); CAM_S1 transform and lens are identical across 0–179 and 720–899 (< 1 cm, < 0.2°, equal lens); decoded frames 90 vs 810 (640×360 Y) have a median 16×16-block PSNR ≥ 26 dB; at frame 810 ≥ 2 BOXes lie on the floor (min z < 5 cm) with ≥ 40% of their projected bbox inside the CAM_S1 frame (occlusion not modelled).",
+      "verify": "逐帧 scene.camera（标记切换后）；CAM_S1 逐帧矩阵与焦距；块 PSNR 用 numpy；投影同 G03。块 PSNR 取中位数可容纳动态物体，无需对象索引渲染。",
+      "weight": 3.5
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "world3d",
+      "critical": false,
+      "criterion_zh": "坠落结果物理可信：声明 last_box_rest 在 S3 或 S4 内；此后至第 899 帧所有 BOX 速度 ≤2 mm/帧；第 899 帧 ≥2 个 BOX 落在地面（最低点 z<5 cm）。",
+      "criterion_en": "Collapse settles plausibly: declared last_box_rest in S3 or S4; every BOX moves ≤ 2 mm/frame from then to frame 899; ≥ 2 BOXes on the floor (min z < 5 cm) at frame 899.",
+      "verify": "逐帧世界矩阵差分；评估包围盒最低点。",
+      "weight": 3.5
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "world3d",
+      "critical": true,
+      "criterion_zh": "接触与因果：声明 upright_contact 在 S2 内；该帧距 FORKLIFT 网格最近的 UPRIGHT_C* 距离 ≤2 cm，且 15 帧前 ≥10 cm；该立柱（或 RACK_C）在接触后 0.5 s 内顶点位移 ≥5 mm，第 899 帧相对接触前位移 ≤3 cm（无永久漂移）；接触前任何 BOX/PALLET_TOP 位移 <5 mm；pallet_tip 晚于 upright_contact，forklift_stop 在接触后 1.0 s 内。",
+      "criterion_en": "Contact and causality: declared upright_contact in S2; at that frame the UPRIGHT_C* nearest to the FORKLIFT mesh is ≤ 2 cm from it and was ≥ 10 cm away 15 frames earlier; that upright (or RACK_C) moves ≥ 5 mm (vertex displacement) within 0.5 s after contact and is ≤ 3 cm from its pre-contact position at frame 899; no BOX/PALLET_TOP moves ≥ 5 mm before contact; pallet_tip after upright_contact; forklift_stop within 1.0 s after contact.",
+      "verify": "评估网格 BVH 双向最近距离（FORKLIFT 顶点→立柱、立柱顶点→FORKLIFT）；立柱/RACK_C 顶点子集逐帧位移；箱体位移序列。",
+      "weight": 3.5
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "声音透视：若 S2 期间 CAM_S2 到 FORKLIFT 尾部的平均距离 ≤ S1 期间 CAM_S1 的 0.5 倍，则 S2 蜂鸣每拍峰值电平中位数（M07 带通信号、起音后 50 ms 内最大 5 ms RMS）须比 S1 高 ≥3 dB，且 S1 的早/晚能量比（起音后 0–30 ms 对 100–300 ms）比 S2 低 ≥2 dB；距离条件不成立时只要求 S2 电平不比 S1 低 1 dB 以上。S2 取起音在 6.2–8.0 s 的拍，不足 2 拍改取 6.0–11.0 s 全部拍；S1 取 3.0–5.8 s 的拍；任一段无拍判否。",
+      "criterion_en": "Sound perspective: when the mean CAM_S2-to-FORKLIFT-rear distance over S2 is ≤ 0.5× the CAM_S1 distance over S1, the median per-beep peak level (M07 band-passed signal, max 5 ms RMS within 50 ms after each onset) of S2 beeps is ≥ 3 dB above S1 and S1's early/late ratio (energy 0–30 ms vs 100–300 ms after onset) is ≥ 2 dB lower than S2's; otherwise the S2 level must not be more than 1 dB below S1. S2 beeps = onsets 6.2–8.0 s (if fewer than 2, all onsets 6.0–11.0 s); S1 beeps = onsets 3.0–5.8 s; none in either → fail.",
+      "verify": "FORKLIFT 尾部＝评估包围盒沿 S1 运动方向一端的中心；距离取镜头内逐帧平均；起音与带通同 M07。",
+      "weight": 3.5
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "craft",
+      "critical": true,
+      "criterion_zh": "写实渲染：实测部分——FORKLIFT、RACK_C、PALLET_TOP、DRIVER、PICKER、CART、BOX_01 使用节点 BSDF 材质，其中 ≥3 个有纹理或连接到 BSDF 输入的节点（表面变化）；有面光/有尺寸光源或环境/天空贴图世界；Cycles 渲染开启降噪；平涂块指数（8×8 亮度块方差 <1 且均值与上下左右相差 <0.5、块均值 24–235 的比例，每镜头 3 帧取中位数）>0.35 的镜头不超过 2 个。观感部分——联系表中无任何镜头呈平面着色、卡通、无光照或白模。【组级门槛：平涂块指数实测失败时 craft 组其余各条记 0】",
+      "criterion_en": "Photoreal render: measured — FORKLIFT, RACK_C, PALLET_TOP, DRIVER, PICKER, CART and BOX_01 use node-based BSDF materials, ≥ 3 of them with a texture or a linked BSDF input (surface variation); an area/sized light or an environment/sky world; Cycles renders are denoised; flat-block index (share of 8×8 luma blocks with variance < 1 and mean within 0.5 of all four neighbours, block mean 24–235; median of 3 frames per shot) > 0.35 in at most 2 of 5 shots. Visual — no shot in the contact sheets looks flat-shaded, cartoon-like, unlit or untextured. [Group gate: a measured flat-block failure fails the rest of the craft group.]",
+      "verify": "材质/灯光/降噪来自 .blend 静态导出，平涂块指数在全分辨率解码帧上计算；任一实测部分失败即判否，通过后由评审模型看联系表判观感。",
+      "weight": 3.5
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "craft",
+      "critical": true,
+      "criterion_zh": "刚体模拟真实：BOX_01–12 是刚体世界集合中启用的主动刚体；upright_contact 之后无箱体在 kinematic（动画）状态下移动，也无位置/旋转/缩放关键帧（接触前的“动画→模拟”交接允许）；刚体缓存已烘焙并随 .blend 保存或 project/ 内有 .bphys，缓存帧范围覆盖 upright_contact 至 last_box_rest；坠落中任一箱角速度峰值 ≥90°/s；至少一个箱触地后弹起 ≥1 cm 或贴地滑移 ≥5 cm。",
+      "criterion_en": "Rigid-body simulation is real: BOX_01–12 are enabled active rigid bodies in the rigid-body world collection; after upright_contact no box moves while kinematic (animated) and none has location/rotation/scale keyframes (an animated-to-simulated hand-over before contact is allowed); the rigid-body cache is baked and saved in the .blend or shipped as .bphys files in project/, and its frame range covers upright_contact to last_box_rest; some carton reaches a peak angular speed ≥ 90°/s; at least one carton bounces ≥ 1 cm or slides ≥ 5 cm after touching the floor.",
+      "verify": "rigid_body 类型/启用、刚体世界集合；逐帧 rigid_body.kinematic 与世界矩阵；fcurve 关键帧帧号（场景帧）；point_cache 的 is_baked 与帧范围、project/*.bphys；逐帧旋转差 ×30。",
+      "weight": 3.5
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "craft",
+      "critical": true,
+      "criterion_zh": "无字卡叙事可读：联系表按顺序可见叉车在通道倒车、护顶架碰到立柱、纸箱从顶层托盘坠落、拣货员退到黄线后，最后的大全景中纸箱落在叉车附近地面、拣货员把对讲机举到头边。",
+      "criterion_en": "Narrative readable without cards: the contact sheets show, in order, the forklift reversing in the aisle, the guard at the upright, cartons falling from the top pallet, the picker behind the yellow line, and in the final wide shot cartons on the floor near the forklift with the picker holding the radio near her head.",
+      "verify": "评审模型只看成片联系表（12 帧）判定；音频与空间一致性由 M04–M07、G01、G04 实测。",
+      "weight": 3.5
+    }
+  ],
+  "judge_items": {
+    "judge_only": [
+      "G10"
+    ],
+    "judge_after_measured_pass": [
+      "M13",
+      "G08"
+    ],
+    "note": "all other items are decided by checks.py; weight reaching the judge for a complete submission ≤ 9.7/100"
+  },
+  "release_acceptance": {
+    "task_form": "3D-FILM",
+    "all_critical_items_must_pass": true
+  }
+}

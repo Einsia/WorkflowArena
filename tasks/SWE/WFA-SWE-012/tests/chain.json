@@ -1,0 +1,6 @@
+{
+ "step_id": "single",
+ "current_group": "F1",
+ "prior_groups": ["P2P"],
+ "note": "not a chain: one delivery, scored as recall over F1 and precision against the P2P set"
+}

@@ -1,0 +1,495 @@
+{
+  "task_id": "WFA-3D-005",
+  "version": "w05-v1 (2026-10-24)",
+  "scoring": "每条判定二元（部分满足即否），连续分 = Σ weight×pass（0–100）。组级门槛：B01 失败 → 除 B04、B06 外全部记 0；B02 失败 → M01–M12、G01–G16 记 0。output/scene.blend 缺失或无法打开时 B01 失败，按上述组级门槛处理。评分以 .blend 实测为准，manifest 仅作声明（M14 检查一致性）。逐区判定以答案键（已应用变更单）为真值，变更单相关错误会同时影响 C/E/F 区判定与 G13/G14（有意的相关性）。G17 由评审模型查看三张渲染图判定，其余各条由 checks.py 实测判定。尺寸容差 = max(3%, 0.10 m)；位置容差见各条；计数与字符串必须精确",
+  "tier_counts": {
+    "base": 7,
+    "mid": 16,
+    "gate": 17
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "码头街西段",
+      "name_en": "Quay Street - west",
+      "units": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "码头街东段",
+      "name_en": "Quay Street - east",
+      "units": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "绳索巷西段",
+      "name_en": "Ropewalk Lane - west",
+      "units": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "绳索巷东段",
+      "name_en": "Ropewalk Lane - east",
+      "units": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "市场街西侧",
+      "name_en": "Market Street - west side",
+      "units": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ]
+    },
+    {
+      "id": "F",
+      "name_zh": "市场街东侧",
+      "name_en": "Market Street - east side",
+      "units": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "scene",
+      "critical": true,
+      "criterion_zh": "output/scene.blend 可由 Blender 4.3 无头打开；场景单位为米制且 scale_length = 1.0。",
+      "criterion_en": "scene.blend opens headless in Blender 4.3; metric units with scale_length 1.0.",
+      "verify": "blender -b output/scene.blend --python-expr：无异常；scene.unit_settings.system=='METRIC' 且 abs(scale_length−1)<1e-6。失败→组级门槛：除 B04、B06 外全部判否。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "scene",
+      "critical": true,
+      "criterion_zh": "集合合同：恰好存在名为 A01…F05 的 30 个地块集合与 SITE 集合（名称无后缀），均链接在场景集合树内。",
+      "criterion_en": "Collection contract: the 30 lot collections A01…F05 and SITE exist with exact names, linked in the scene tree.",
+      "verify": "遍历 scene.collection.children_recursive 名称集合 ⊇ {A01..F05, SITE}；不接受 \"A01.001\" 等变体。失败→所有逐区判定（M01–M12、G01–G16）判否。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "scene",
+      "critical": false,
+      "criterion_zh": "每个建成地块集合内有网格对象 <ID>_BODY、<ID>_ROOF 与文本对象 <ID>_SIGN（共 29 个建成地块）。",
+      "criterion_en": "Each built lot collection holds mesh <ID>_BODY, mesh <ID>_ROOF and text object <ID>_SIGN (29 built lots).",
+      "verify": "对 answer-key 中 built=true 的 29 个地块：bpy.data.collections[ID].all_objects 中存在该名对象，BODY/ROOF type==MESH，SIGN type==FONT。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "output/renders/ 下 overview.png、quay.png、market.png 三张均为 1920×1080 PNG 且非空白。",
+      "criterion_en": "overview.png, quay.png, market.png exist as 1920×1080 PNG and are not blank.",
+      "verify": "PIL 打开；size==(1920,1080)；灰度标准差 > 8。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "scene.blend 中存在摄影机对象 CAM_OVERVIEW、CAM_QUAY、CAM_MARKET；渲染分辨率 1920×1080、比例 100%。",
+      "criterion_en": "Camera objects CAM_OVERVIEW, CAM_QUAY, CAM_MARKET exist; render resolution 1920×1080 at 100%.",
+      "verify": "对象存在且 type=='CAMERA'；scene.render.resolution_x/y==1920/1080，resolution_percentage==100。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "output/manifest.json 为合法 JSON 数组，恰含 30 个地块项，每项含 id/collection/built/params 字段。",
+      "criterion_en": "manifest.json is a valid JSON array with exactly 30 lot entries, each with id/collection/built/params.",
+      "verify": "json.load；len==30；id 集合 == {A01..F05}；字段齐全；built 为布尔。",
+      "weight": 3.5714
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "SITE 集合含水面（z = −1.20 ±0.10，覆盖沿码头的港池）与街道/码头地面（可由一个或多个网格组成，覆盖码头街）；SITE_LAMP_xx、SITE_BOLLARD_xx、SITE_BOAT_k 的名称集合与 furniture.csv 完全一致。",
+      "criterion_en": "SITE holds the water surface (z −1.20 ±0.10, covering the basin along the quay) and the street/quay ground (one or several meshes covering Quay Street); SITE_LAMP/BOLLARD/BOAT name sets equal furniture.csv.",
+      "verify": "SITE 内 z_max∈[−1.3,−1.1] 且 y_max ≤ 0.5 的网格（可多个）其 xy 包围盒并集覆盖 y=−1.0 处 x∈[0, 91.9]（水面）；z_max∈[−0.1,0.1] 的 SITE 网格（可多个）其 xy 包围盒并集覆盖码头街区域 x∈[0,91.9]、y∈[0,12]（0.5 m 采样点）；名称集合与 furniture.csv id 列相等（17 灯、14 桩、3 船）。",
+      "weight": 3.5714
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "A 区（码头街西段）5 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone A (Quay Street - west): all 5 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 A01, A02, A03, A04, A05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "B 区（码头街东段）5 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone B (Quay Street - east): all 5 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 B01, B02, B03, B04, B05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "C 区（绳索巷西段）4 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone C (Ropewalk Lane - west): all 4 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 C01, C02, C04, C05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "D 区（绳索巷东段）5 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone D (Ropewalk Lane - east): all 5 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 D01, D02, D03, D04, D05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "E 区（市场街西侧）5 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone E (Market Street - west side): all 5 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 E01, E02, E03, E04, E05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "zone-massing",
+      "critical": false,
+      "criterion_zh": "F 区（市场街东侧）5 栋体量全部正确：每栋 BODY 的沿街起止、进深与檐口高度符合图纸（含变更单）。",
+      "criterion_en": "Zone F (Market Street - east side): all 5 buildings have correct BODY frontage span, depth and eave height (incl. change order).",
+      "verify": "对 F01, F02, F03, F04, F05：取 <ID>_BODY 世界 bbox 转为排局部 (u,v,z)。u 区间两端与答案键 seg 换算到排局部后的区间端点之差 ≤ 0.10（答案键 seg 为世界沿街坐标，F 排为降序；先按下述 u 公式换算为排局部区间 [min(u(seg₀),u(seg₁)), max(…)]）；v_min = 0 ±0.05，v_max = depth ±max(3%,0.10)；z_min ∈ [−0.10, 0.10]；z_max = eave ±max(3%,0.10)。排局部坐标：u = 沿排序方向距该排 start 的距离（A–D 排 u=x−start；E 排 u=y−start；F 排 u=start−y），v = 自建筑线向街道反方向的距离（A–D 排 v=y−BL；E 排 v=BL−x；F 排 v=x−BL）。所有几何取 evaluated（depsgraph）网格的世界坐标。",
+      "weight": 2.5
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "A 区 5 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone A: all 5 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：A01=\"STOOMVAART MIJ.\"/HC-03；A02=\"KRUIDENIER VOS\"/HC-01；A03=\"DE GOUDEN ANKER\"/HC-06；A04=\"NAUTISCHE BOEKEN\"/HC-15；A05=\"ROGGE BAKKERIJ\"/HC-13",
+      "weight": 2.5
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "B 区 5 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone B: all 5 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：B01=\"BLOKMAKER & ZN\"/HC-02；B02=\"HOEDENMAKER BRINK\"/HC-08；B03=\"LOODS 7 KOOPVAART\"/HC-10；B04=\"VISHANDEL BRAKKE\"/HC-11；B05=\"HARINGPAKKERIJ\"/HC-12",
+      "weight": 2.5
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "C 区 4 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone C: all 4 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：C01=\"VEERDIENST 3 - 5\"/HC-13；C02=\"REDERIJ HOLM & ZONEN\"/HC-07；C04=\"APOTHEEK DE PELIKAAN\"/HC-08；C05=\"ROEIERS SOCIETEIT\"/HC-12",
+      "weight": 2.5
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "D 区 5 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone D: all 5 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：D01=\"TABAK - J. STAAL\"/HC-08；D02=\"TOUWSLAGERIJ HOLM\"/HC-07；D03=\"KOFFIE & THEE 12\"/HC-14；D04=\"PAKHUIS NOORDSTER\"/HC-16；D05=\"WIJNKOPER LIND\"/HC-14",
+      "weight": 2.5
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "E 区 5 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone E: all 5 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：E01=\"PAKHUIS ZUIDWAL\"/HC-02；E02=\"HERBERG DE MEEUW\"/HC-16；E03=\"KUIPERIJ 1902\"/HC-04；E04=\"HAVENKANTOOR\"/HC-14；E05=\"SCHIPPERSBEURS\"/HC-10",
+      "weight": 2.5
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "signage",
+      "critical": false,
+      "criterion_zh": "F 区 5 栋招牌文字逐字正确、朝街正向可读、位于本栋立面，且外墙主材质色号与颜色正确。",
+      "criterion_en": "Zone F: all 5 signs match the sheet text exactly, read correctly from the street, sit on their own facade; facade material code and colour correct.",
+      "verify": "<ID>_SIGN.data.body 去首尾空白、连续空白折叠为单空格后与真值逐字相等（区分大小写）；SIGN 世界 bbox 中心转为排局部 (u,v,z)：u ∈ 本栋 seg 换算到排局部后的 u 区间（seg 为世界沿街坐标，换算同 M01）、v ∈ [−1.5, 0.3]、z ∈ [1.8, h1+0.6]；文本对象局部 +Z 轴（世界）与该排立面朝向单位向量点积 ≥ 0.9（不背向），局部 +X 轴与街上观者右手方向（−朝向 × Z）点积 ≥ 0.9 且局部 +Y 轴世界 z 分量 > 0（不镜像、不倒置）；<ID>_BODY 第一个材质槽名称 == 色号，其 Principled BSDF Base Color（线性；若连接 RGB 节点则取该节点颜色，连接贴图等其他节点判否）换算 sRGB 后各通道与色卡值差 ≤ 0.03。真值：F01=\"SCHEEPSBEHOEFTEN 1874\"/HC-13；F02=\"LOGEMENT HET KOMPAS\"/HC-01；F03=\"SMEDERIJ ARENDS\"/HC-02；F04=\"ZEILMAKERIJ OOST\"/HC-16；F05=\"KOLEN & TURF\"/HC-06",
+      "weight": 2.5
+    },
+    {
+      "id": "M13",
+      "tier": "mid",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "路灯与系缆桩位置、高度全部符合 furniture.csv。",
+      "criterion_en": "All lamps and bollards match furniture.csv positions and heights.",
+      "verify": "每个 SITE_LAMP_xx / SITE_BOLLARD_xx：对象及其子对象、实例的 evaluated 几何中距最低点 0.5 m 以内部分（灯杆/桩身底部）的 xy 包围盒中心与 csv 差 ≤ 0.30（csv 坐标为灯杆/桩身位置）；高度取对象及子对象、实例的世界 bbox；路灯 bbox z_max ∈ [height−0.2, height+0.6]；系缆桩 z_max = height ±0.10，z_min ∈ [−0.10, 0.10]。",
+      "weight": 2.5
+    },
+    {
+      "id": "M14",
+      "tier": "mid",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest 与 .blend 实测一致：29 个建成地块的 storeys/roof/windows/sign_text/colour 与实测相符，C03 声明 built:false 且 merged_into 为 C02。",
+      "criterion_en": "manifest agrees with the .blend for storeys/roof/windows/sign_text/colour of all 29 built lots; C03 declared built:false merged_into C02.",
+      "verify": "windows 集合 == 实际 <ID>_WIN_* 名称后缀集合；storeys == 实际窗/吊货门出现的最大楼层号且与 BODY 檐口按图纸层高推算一致；roof == G07–G12 分类器结果（分类器无法归类时不比较 roof，由 G07–G12 扣分）；sign_text == SIGN.body；colour == BODY 材质名。任一地块不符即否。",
+      "weight": 2.5
+    },
+    {
+      "id": "M15",
+      "tier": "mid",
+      "group": "motion",
+      "critical": false,
+      "criterion_zh": "动画：帧范围 1–240、24 fps；三条船按 furniture.csv 原位横摇（幅值、周期、初相正确），不平移。",
+      "criterion_en": "Animation: frames 1–240 at 24 fps; three boats roll in place with the specified amplitude, period and phase; no translation.",
+      "verify": "scene.frame_start==1, frame_end==240, fps/fps_base==24。对每个 SITE_BOAT_k 在帧 1..240 每 4 帧取 matrix_world：平移漂移 ≤ 0.05 m；绕船体长轴（bbox 最长水平轴）的转角序列拟合 A·sin(2π(f−1)/(24T)+φ)：|A−3°| ≤ 0.5°，|T−4.0 s| ≤ 0.15 s，相位与 roll_phase_deg 差 ≤ 15°（正向约定按题面）；船中心 xy 与 csv 差 ≤ 0.5，长度 ±10%。",
+      "weight": 2.5
+    },
+    {
+      "id": "M16",
+      "tier": "mid",
+      "group": "camera",
+      "critical": false,
+      "criterion_zh": "三台摄影机机位符合描述：CAM_QUAY 视锥完整包含 A、B 全部 BODY；CAM_MARKET 位于市场街南口人眼高向北；CAM_OVERVIEW 位于东南高空且视锥包含全部建成 BODY。",
+      "criterion_en": "Cameras placed as specified (quay frustum contains rows A/B; market cam at the south mouth, eye height, looking north; overview from SE above, containing all built bodies).",
+      "verify": "bpy_extras.object_utils.world_to_camera_view：CAM_QUAY 下 A、B 全部 BODY bbox 8 角点 x,y∈[0,1] 且 z>0，摄影机 y<0；CAM_MARKET 位置 x∈[43.20, 51.20]、y∈[12, 32]、z∈[1.4, 1.8]，视线方向与 +Y 夹角 ≤ 20°；CAM_OVERVIEW 位置 x 大于、y 小于街区中心，z > 30，全部建成 BODY 角点在视锥内。",
+      "weight": 2.5
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "A 区 5 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone A: all 5 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：A01:2_1,2_3,3_1,3_2,3_3；A02:2_2,2_4,3_1,3_2,3_4,4_1,4_2,4_4,5_1,5_2,5_4 LOAD:2,3,4,5 DOOR@3；A03:2_1,2_2,2_3,3_1,3_2,3_3,4_2 DOOR@2；A04:2_1,2_2,2_4,3_2,3_3,3_4,4_1,4_2,4_3,4_4 DOOR@3；A05:2_1,2_2,2_3,3_1,3_3,3_4 DOOR@1",
+      "weight": 2.0588
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "B 区 5 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone B: all 5 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：B01:2_1,2_2,2_3,3_2,3_3,3_4 DOOR@1；B02:2_2,2_3,2_4,3_1,3_2,3_3,3_4,3_5 DOOR@3；B03:2_2,2_3,3_2,3_3,4_1,4_2,4_3 DOOR@2；B04:2_1,2_2,2_3,2_4,3_2,3_3,3_4 DOOR@4；B05:2_2,3_1,3_2,4_1,5_1,5_2 DOOR@2",
+      "weight": 2.0588
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "C 区 4 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone C: all 4 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：C01:2_1,2_2,2_3,3_2,3_3,4_1,4_2,4_3 DOOR@2；C02:2_1,2_2,2_3,2_4,2_5,2_6,3_1,3_2,3_3,3_4,3_5,3_6,4_2,4_3,4_4,4_5 DOOR@4；C04:2_1,2_3,3_1,4_1 LOAD:2,3,4 DOOR@2；C05:2_1,2_2,2_3,3_2,3_3 DOOR@3",
+      "weight": 2.0588
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "D 区 5 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone D: all 5 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：D01:2_1,2_3,3_2,3_3,4_1,4_2；D02:2_1,2_2,2_4,2_5,3_1,3_2,3_4,3_5,4_1,4_2,4_5 LOAD:2,3,4 DOOR@3；D03:2_1,2_3,2_4,3_1,3_3,3_4 DOOR@2；D04:2_1,3_1,3_2,4_1,4_2；D05:2_1,2_2,2_3,3_2,3_3,4_1,4_2,4_3 DOOR@2",
+      "weight": 2.0588
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "E 区 5 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone E: all 5 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：E01:2_1,2_2,2_4,3_1,3_2,3_3,3_4,4_1,4_2,4_3,4_4 DOOR@1；E02:2_1,2_4,3_1,3_2,3_4,4_1,4_2,4_4,5_1,5_2,5_4 LOAD:2,3,4,5 DOOR@3；E03:2_1,2_4,3_1,3_4 LOAD:2,3 DOOR@3；E04:2_2,3_1,3_2,4_1,4_2,5_1,5_2 DOOR@1；E05:2_2,2_3",
+      "weight": 2.0588
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "facade",
+      "critical": false,
+      "criterion_zh": "F 区 5 栋立面离散特征全对：层数、窗矩阵（含空缺格）、窗位与窗洞尺寸、入口门与吊货门位置。",
+      "criterion_en": "Zone F: all 5 facades have the exact storey count, window matrix (incl. blank cells), window positions/sizes, door and loading-door positions.",
+      "verify": "每栋 <ID>_WIN_<f>_<a> 名称集合与真值完全相等（不多不少）；每扇窗 bbox 中心 u 与对应轴线世界位置差 ≤ 0.15，中心 z = 该层楼面 + 0.90 + 窗高/2 ±0.20，bbox 沿街宽 = 窗宽 ±max(3%,0.10)、高 = 窗高 ±0.10，|v| ≤ 0.6；<ID>_DOOR 中心 u 与门轴差 ≤ 0.20、z_min ≤ 0.10；货栈 <ID>_LOAD_<f> 楼层集合相等且中心 u 与吊货轴差 ≤ 0.20。轴线、楼面标高取答案键 window_centers_along / window_floor_z / door_center_along / load_center_along。真值：F01:2_1,2_2,2_3,3_2,3_3,4_1,4_2,4_3,5_1,5_2,5_3 DOOR@1；F02:2_2,2_3,2_4,3_1,3_2,3_3,3_4,4_1,4_2,4_3,4_4；F03:2_2,3_2,4_1,5_1 DOOR@1；F04:2_1,2_2,2_3,3_1,3_3 DOOR@1；F05:2_1,2_2,2_3,2_4 DOOR@2",
+      "weight": 2.0588
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "A 区 5 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone A: all 5 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：A01:R5 top=11.2 COL=4；A02:R1/G-a top=22.32 HOIST；A03:R2 top=17.85 DORM=2；A04:R4 top=18.91 DORM=4 BALC F2 轴3-4；A05:R2 top=19.84",
+      "weight": 2.0588
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "B 区 5 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone B: all 5 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：B01:R4 top=15.02 DORM=4 BALC F2 轴1-3；B02:R4 top=15.23 DORM=3 BALC F2 轴1-4；B03:R1/G-c top=17.63；B04:R3 top=12.41；B05:R1/G-b×5 top=20.12",
+      "weight": 2.0588
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "C 区 4 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone C: all 4 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：C01:R2 top=18.85；C02:R2 top=19.15 DORM=3；C04:R3 top=16.5 HOIST；C05:R1/G-c top=15.8",
+      "weight": 2.0588
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "D 区 5 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone D: all 5 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：D01:R5 top=14.2 COL=5；D02:R1/G-a top=20.32 HOIST；D03:R2 top=18.94 DORM=1；D04:R5 top=15.1 COL=4；D05:R2 top=19.06 DORM=1",
+      "weight": 2.0588
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "E 区 5 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone E: all 5 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：E01:R4 top=17.12 DORM=4 BALC F2 轴1-2；E02:R1/G-a top=22.95 HOIST；E03:R3 top=14.38 HOIST；E04:R1/G-c top=19.56；E05:R5 top=7.7 COL=6",
+      "weight": 2.0588
+    },
+    {
+      "id": "G12",
+      "tier": "gate",
+      "group": "roof",
+      "critical": false,
+      "criterion_zh": "F 区 5 栋屋顶形制与特征构件全对：屋顶类型、最高点标高、山墙式样与级数、老虎窗数、骑楼柱数、吊货梁、阳台。",
+      "criterion_en": "Zone F: all 5 roofs and feature components correct: roof form, top level, gable style/steps, dormer count, arcade columns, hoist beam, balcony.",
+      "verify": "屋顶分类器（ROOF evaluated 网格转排局部坐标，仅计面积>0.02 m² 的面）：坡面 = 法线与 +Z 夹角 5°–85° 的面，按水平法线方向归入 ±u/±v。R5：顶部 z_max − 檐口 ≤ 1.5 且无坡面面积 > 1 m²；屋脊 = 各坡面上沿（每个坡面中距其最高点 0.02 m 内的顶点）按 0.05 m 高度分箱（相邻箱合并）后的最长水平线，山墙压顶、阶梯顶、钟形顶高出屋脊不影响判定；R1：坡面仅朝 ±u，且屋脊 v 跨度 ≥ 0.6·depth；R2：坡面仅朝 ±v，且屋脊 u 跨度 ≥ 0.6·width；R3：四个方向均有坡面且全部坡面坡角极差 ≤ 8°；R4：四个方向均有坡面，坡角 ≥ 60° 与 ≤ 35° 的坡面面积各占坡面总面积 ≥ 15%。山墙式样（仅 R1）：取 ROOF 中 |v| ≤ 0.3 条带内顶点与边采样点的上包络（0.05 m 分箱，仅取高于檐口 0.05 以上部分，以最高点处为中心分左右两段）；G-a 轮廓偏离直线坡 ≤ 0.10；G-b 平台（长 ≥ 0.15 m、高差 ≤ 0.05 m 的水平段）按 0.05 m 聚类的层数（不含檐口层）== 级数；G-c 轮廓不同高度 ≥ 8 且直线拟合残差 > 0.15 m。 ROOF bbox z_max = top ±max(3%,0.10)。<ID>_DORM_* 个数相等，每个中心 v ∈ (0, depth/2)、z ∈ (eave, top)；<ID>_COL_* 个数 = 开间+1，每个中心 |v| ≤ 0.30、z_min ≤ 0.10；<ID>_HOIST 存在，中心 u 与吊货轴差 ≤ 0.30，z ≥ eave−1.2，v_min ∈ [−1.5, −0.3]；<ID>_BALC 台面 z（面积 ≥ 最大水平面组 50% 的最高水平面组）= 第 2 层楼面 ±0.25，u 覆盖 [起轴−0.6, 止轴+0.6] 且不超 [起轴−1.2, 止轴+1.2]，v_min ∈ [−1.2, −0.8]。不应有的构件（如非货栈出现 HOIST）亦判否。真值：F01:R1/G-c top=22.68；F02:R5 top=13.8 COL=5；F03:R5 top=18.1；F04:R2 top=18.3 DORM=1；F05:R5 top=8.6",
+      "weight": 2.0588
+    },
+    {
+      "id": "G13",
+      "tier": "gate",
+      "group": "change-order",
+      "critical": false,
+      "criterion_zh": "变更单第 1 项落实：C03 集合存在且为空；C02 为跨原 C02+C03 两地块的一栋合并建筑，层数、窗矩阵、屋顶、老虎窗、招牌、色号均按变更单。",
+      "criterion_en": "CO item 1: collection C03 exists and is empty; C02 is one merged building spanning both lots with storeys, windows, roof, dormers, sign and colour per the change order.",
+      "verify": "bpy.data.collections[\"C03\"].all_objects 为空，且无任何对象 BODY/ROOF 的 bbox 与原 C03 地块 u∈[13.6, 22.3] 相交，除 C02 自身对象外；C02_BODY u 区间 = [7.4, 22.3] ±0.10，进深 13.00 ±0.10，檐口 13.7 ±0.10；C02 窗集合 == ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '3_1', '3_2', '3_3', '3_4', '3_5', '3_6', '4_2', '4_3', '4_4', '4_5']；ROOF 分类 R2，top 19.15 ±max(3%,0.10)；DORM 3 个；SIGN == \"REDERIJ HOLM & ZONEN\"；材质 HC-07。",
+      "weight": 2.0588
+    },
+    {
+      "id": "G14",
+      "tier": "gate",
+      "group": "change-order",
+      "critical": false,
+      "criterion_zh": "变更单第 2–4 项落实并传导到接口：C04、E02、F03 各加建一层，新顶层窗位同原顶层；C04 檐口与合并后 C02 齐平；F03 改为平顶女儿墙。",
+      "criterion_en": "CO items 2–4 applied and propagated: C04, E02, F03 each gain one storey with top-floor windows repeated; C04 eave flush with merged C02; F03 becomes a parapet flat roof.",
+      "verify": "C04_BODY z_max = 13.7 ±0.10 且 |C04 檐口 − C02 檐口| ≤ 0.05，C04 窗集合 == ['2_1', '2_3', '3_1', '4_1']，LOAD 楼层 ['2', '3', '4']；E02 z_max = 18.0 ±0.10，窗集合 == ['2_1', '2_4', '3_1', '3_2', '3_4', '4_1', '4_2', '4_4', '5_1', '5_2', '5_4']，ROOF top 22.95 ±max(3%,0.10)；F03 z_max = 17.2 ±0.10，窗集合 == ['2_2', '3_2', '4_1', '5_1']，ROOF 分类 R5 且 top = 18.1 ±0.10。",
+      "weight": 2.0588
+    },
+    {
+      "id": "G15",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "集成：沿街立面共线、退线一致——全部建成地块的 BODY 临街面落在本排建筑线上，各类构件越线不超限。",
+      "criterion_en": "Integration: continuous frontage — every built BODY street face lies on its building line; projections within limits.",
+      "verify": "每栋 BODY v_min = 0 ±0.05（骑楼铺取上层体量，同样以 bbox v_min 计）；同一建筑线上 A+B、C+D 各栋 v_min 两两差 ≤ 0.05；越线量（−v_min）上限：BODY 0.05、ROOF 0.6、WIN/DOOR/LOAD 0.3、COL 0.3、SIGN/BALC/HOIST/DORM 1.5、其他 <ID>_ 装饰件 0.6；任何地块对象不得越过本地块 u 界线 0.05 以上（HOIST/SIGN 除外；排首/排尾地块的外端（无相邻地块）ROOF 与其他装饰件允许挑出 ≤ 0.6，BODY/WIN/DOOR/LOAD/COL/BALC/DORM 仍为 0.05）。构件包围盒含其实例几何。",
+      "weight": 2.0588
+    },
+    {
+      "id": "G16",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "集成：共用山墙不重叠不留缝、每排首尾闭合——23 处地块界线两侧 BODY 精确相接，无体积互穿，且 BODY 为闭合网格。",
+      "criterion_en": "Integration: 23 party-wall joints meet exactly with no overlap or gap, rows close at both ends, bodies are closed meshes.",
+      "verify": "对答案键 joints 每一对 (left,right)：left BODY 的 u_max 与 right BODY 的 u_min 均 = 界线 ±0.03；在两者 bbox 交集内以 0.2 m 体素栅格做射线奇偶内点测试，两网格共同内点体积 ≤ 0.05 m³；每排首栋 u_min = 0 ±0.05、末栋 u_max = 排长 ±0.05；每个 BODY 经 bmesh 检查非流形边数 = 0。ROOF 与相邻 BODY/ROOF 同样做互穿体积测试 ≤ 0.05 m³。",
+      "weight": 2.0588
+    },
+    {
+      "id": "G17",
+      "tier": "gate",
+      "group": "visual",
+      "critical": false,
+      "criterion_zh": "渲染目检：market.png 中 E01、F05 招牌清晰可读且与图纸文字一致；三张渲染中无建筑明显缺墙、缺屋顶或悬空。",
+      "criterion_en": "Visual check of the three renders: in market.png the E01 and F05 signs are legible and read as on their sheets; no building in any render visibly lacks walls or a roof or floats above the ground.",
+      "verify": "评审模型查看 output/renders/ 三张 PNG（overview/quay/market）；E01 或 F05 招牌在 market.png 中不可读或文字与真值（answer-key lots.E01/F05.sign_text）不符，或任何一栋明显缺墙/缺顶/悬空即判否。",
+      "weight": 2.0588
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-SCENE",
+    "all_critical_items_must_pass": true
+  }
+}

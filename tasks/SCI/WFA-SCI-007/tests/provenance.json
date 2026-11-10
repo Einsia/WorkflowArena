@@ -1,0 +1,20 @@
+{
+  "task_id": "WFA-SCI-007",
+  "sources": [
+    {
+      "type": "github",
+      "url": "https://github.com/samplchallenges/SAMPL6",
+      "version": "commit c661d3985af7fa0ba8c64a1774cfb2363cd31bda",
+      "archive_sha256": "79699260d4dc93c837085ee4e39b4a608d1d2d073ad84a499e8efb979c385296",
+      "license": "MIT (repo LICENSE)",
+      "date": "2018-01-19 host-guest deadline",
+      "paths": [
+        "host_guest/OctaAcidsAndGuests/",
+        "host_guest/Analysis/ExperimentalMeasurements/experimental_measurements.csv",
+        "host_guest/Analysis/Accuracy/OA-TEMOA/StatisticsTables/statistics.csv",
+        "host_guest/Analysis/Submissions/OA-TEMOA/"
+      ]
+    }
+  ],
+  "release_checksums": "../../../../provenance/files.jsonl (paths relative to the dataset root)"
+}

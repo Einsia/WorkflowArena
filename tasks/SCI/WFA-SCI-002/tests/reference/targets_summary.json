@@ -1,0 +1,74 @@
+{
+ "H1106": {
+  "n_models_public": 308,
+  "n_models_tar": 308,
+  "n_models_table": 308,
+  "n_groups": 21
+ },
+ "H1129": {
+  "n_models_public": 298,
+  "n_models_tar": 299,
+  "n_models_table": 298,
+  "n_groups": 25
+ },
+ "H1134": {
+  "n_models_public": 319,
+  "n_models_tar": 319,
+  "n_models_table": 319,
+  "n_groups": 24
+ },
+ "H1140": {
+  "n_models_public": 319,
+  "n_models_tar": 319,
+  "n_models_table": 319,
+  "n_groups": 25
+ },
+ "H1144": {
+  "n_models_public": 313,
+  "n_models_tar": 313,
+  "n_models_table": 313,
+  "n_groups": 25
+ },
+ "H1151": {
+  "n_models_public": 316,
+  "n_models_tar": 316,
+  "n_models_table": 316,
+  "n_groups": 24
+ },
+ "H1157": {
+  "n_models_public": 304,
+  "n_models_tar": 304,
+  "n_models_table": 304,
+  "n_groups": 23
+ },
+ "T1109o": {
+  "n_models_public": 243,
+  "n_models_tar": 243,
+  "n_models_table": 243,
+  "n_groups": 24
+ },
+ "T1123o": {
+  "n_models_public": 242,
+  "n_models_tar": 242,
+  "n_models_table": 242,
+  "n_groups": 25
+ },
+ "T1132o": {
+  "n_models_public": 224,
+  "n_models_tar": 224,
+  "n_models_table": 224,
+  "n_groups": 24
+ },
+ "T1153o": {
+  "n_models_public": 229,
+  "n_models_tar": 229,
+  "n_models_table": 229,
+  "n_groups": 24
+ },
+ "T1187o": {
+  "n_models_public": 295,
+  "n_models_tar": 295,
+  "n_models_table": 295,
+  "n_groups": 21
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "WFA-LAW-017",
+  "src": "train-13436",
+  "case_no": "（2012）杭淳刑初字第372号",
+  "year": 2012,
+  "n_defendants": 15,
+  "charges": [
+    "寻衅滋事罪",
+    "敲诈勒索罪",
+    "诈骗罪"
+  ],
+  "n_principal": 6,
+  "n_accessory": 9,
+  "n_role_items": 15,
+  "n_leaders": 0,
+  "facts_chars": 5253,
+  "n_probation_graded": 6
+}

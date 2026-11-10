@@ -1,0 +1,247 @@
+[
+ {
+  "id": "mae_taken_as_whole",
+  "category": "Material Adverse Effect",
+  "question": "Does the Target MAE definition measure the adverse effect on the Target and its subsidiaries \"taken as a whole\"?",
+  "multi_select": false,
+  "options": [
+   "Applies to Target and subsidiaries \"taken as a whole\"",
+   "No"
+  ]
+ },
+ {
+  "id": "mae_ability_to_consummate",
+  "category": "Material Adverse Effect",
+  "question": "Does the Target MAE definition include (as a separate prong) an adverse effect on the Target's ability to consummate the transaction / perform its obligations?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "mae_fls_standard",
+  "category": "Material Adverse Effect",
+  "question": "Which forward-looking standard does the MAE definition use?",
+  "multi_select": false,
+  "options": [
+   "\"Could\" (reasonably) be expected to",
+   "\"Would\"",
+   "\"Would\" (reasonably) be expected to",
+   "No",
+   "Other forward-looking standard"
+  ],
+  "note": "Answer \"No\" if there is no forward-looking standard."
+ },
+ {
+  "id": "mae_co_political",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: general political and/or social conditions?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_economic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: general economic and/or financial (including capital/credit market) conditions?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_industry",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: changes or conditions generally affecting the Target's industry?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_market_price",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: changes in the market price or trading volume of the Target's securities, or in its credit rating (in and of themselves)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: pandemics, epidemics or other public health events?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_di_economic",
+  "category": "Material Adverse Effect",
+  "question": "Is the general economic/financial conditions carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_industry",
+  "category": "Material Adverse Effect",
+  "question": "Is the industry-changes carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_di_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "Is the pandemic/public-health carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_co_stockholder_litigation",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: stockholder litigation/proceedings relating to the agreement or the transaction?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_disclosure_schedules",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: matters disclosed in the Target's disclosure schedules (or disclosure letter)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "cc_general_bringdown_timing",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on accuracy of the Target's general representations and warranties: as of which time(s) must they be accurate?",
+  "multi_select": false,
+  "options": [
+   "At Closing Only",
+   "At Signing & At Closing"
+  ]
+ },
+ {
+  "id": "cc_cap_bringdown_standard",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on accuracy of the Target's capitalization representation (outstanding shares): what accuracy standard applies?",
+  "multi_select": false,
+  "options": [
+   "Accurate in all material respects",
+   "Accurate in all respects",
+   "Accurate in all respects with below-threshold carveout",
+   "Accurate in all respects with de minimis exception"
+  ]
+ },
+ {
+  "id": "cc_fund_bringdown_standard",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on accuracy of the Target's fundamental representations (other than capitalization): what accuracy standard applies?",
+  "multi_select": false,
+  "options": [
+   "Accurate at another materiality standard (e.g., hybrid standard)",
+   "Accurate in all material respects",
+   "Accurate in all respects"
+  ],
+  "note": "If different fundamental representations are held to different standards (e.g., some in all respects, others in all material respects), answer \"Accurate at another materiality standard (e.g., hybrid standard)\"."
+ },
+ {
+  "id": "cc_scrape_applies_to",
+  "category": "Conditions to Closing",
+  "question": "To which representations does the materiality/MAE \"scrape\" in the bring-down closing condition apply (i.e., materiality qualifiers in the representations are disregarded when testing accuracy)? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "Capitalization R&Ws",
+   "General R&Ws",
+   "Specified R&Ws only",
+   "fundamental/Special R&Ws"
+  ]
+ },
+ {
+  "id": "cc_covenant_compliance",
+  "category": "Conditions to Closing",
+  "question": "Closing condition on the Target's performance of covenants: is the materiality standard applied to the covenants collectively or to each covenant individually?",
+  "multi_select": false,
+  "options": [
+   "All Covenants",
+   "Each Covenant",
+   "Hybrid/Other Standard"
+  ],
+  "note": "\"All Covenants\" = the Target shall have performed in all material respects all covenants/obligations (collective); \"Each Covenant\" = each covenant/obligation shall have been performed in all material respects."
+ },
+ {
+  "id": "ef_antitrust_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "What general efforts standard applies to obtaining antitrust/regulatory approvals?",
+  "multi_select": false,
+  "options": [
+   "Commercially reasonable efforts",
+   "Flat standard",
+   "Reasonable best efforts"
+  ],
+  "note": "\"Flat standard\" = the covenant on obtaining antitrust/regulatory approvals is not qualified by \"reasonable best efforts\" or \"commercially reasonable efforts\" (e.g. the parties \"shall take all actions necessary\" to obtain the approvals, or use plain \"best efforts\"). If that covenant is qualified by reasonable best efforts or commercially reasonable efforts, choose that option, even if a separate clause (e.g. a divestiture / hell-or-high-water undertaking) is unqualified."
+ },
+ {
+  "id": "oc_efforts_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: what efforts standard qualifies the Target's obligation to operate in the ordinary course?",
+  "multi_select": false,
+  "options": [
+   "Commercially reasonable efforts",
+   "Flat covenant (no efforts standard)",
+   "Reasonable best efforts"
+  ]
+ },
+ {
+  "id": "rem_specific_performance",
+  "category": "Remedies",
+  "question": "Specific performance: are the parties \"entitled to\" specific performance, or only \"entitled to seek\" it?",
+  "multi_select": false,
+  "options": [
+   "\"entitled to seek\" specific performance",
+   "\"entitled to\" specific performance"
+  ]
+ },
+ {
+  "id": "kn_definition",
+  "category": "Knowledge",
+  "question": "Target knowledge definition: actual knowledge only, or constructive knowledge (e.g., knowledge after reasonable inquiry, or that would reasonably be expected to be known)?",
+  "multi_select": false,
+  "options": [
+   "Actual knowledge",
+   "Constructive knowledge"
+  ]
+ }
+]

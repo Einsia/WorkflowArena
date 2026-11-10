@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-016",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Irrationality of ζ(3)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/ahhwuhu/zeta_3_irrational",
+    "revision": "commit e8785315a01c8fbcddaa0fc03b3c8b29a61bc1f1 (2026-03-20)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

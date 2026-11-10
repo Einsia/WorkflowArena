@@ -1,0 +1,330 @@
+{
+  "scope": "Frozen local corpus. Period ends are not filing/publication dates. This is not a historical point-in-time backtest.",
+  "analysis_endpoints": {
+    "AMD": "2026-06-27",
+    "DIOD": "2026-06-30",
+    "MCHP": "2026-06-30",
+    "MPWR": "2026-06-30",
+    "INTC": "2026-06-27",
+    "TXN": "2026-06-30",
+    "ON": "2026-07-03",
+    "NXPI": "2026-06-28"
+  },
+  "files": [
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-K_2025-12-27.html",
+      "period_end": "2025-12-27",
+      "bytes": 940951,
+      "sha256": "07f5c46b6b96b333365361479860ba3deac057e2277fe61397293f1e27a3d403"
+    },
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-Q_2025-03-29.html",
+      "period_end": "2025-03-29",
+      "bytes": 469018,
+      "sha256": "e202e72b15e8c4f8aa3ab058dee014a13d5104acb8649ab8fc93436c394a3294"
+    },
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-Q_2025-06-28.html",
+      "period_end": "2025-06-28",
+      "bytes": 579168,
+      "sha256": "244e9f60541fc11f75627ef840723c24d4c394aef4cb6fb7ed5783d9174fe883"
+    },
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-Q_2025-09-27.html",
+      "period_end": "2025-09-27",
+      "bytes": 583690,
+      "sha256": "aeb08775a2a14245049a04c9685c57f5d3fb94fadb9aaf4fa29ab73ed926c4c3"
+    },
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-Q_2026-03-28.html",
+      "period_end": "2026-03-28",
+      "bytes": 503612,
+      "sha256": "77d07f3f78b700ff606e69fa31bd25a9058f51ec2dd9202f7e0e6ba1ea6a9792"
+    },
+    {
+      "ticker": "AMD",
+      "file": "inputs/AMD/AMD_10-Q_2026-06-27.html",
+      "period_end": "2026-06-27",
+      "bytes": 576715,
+      "sha256": "51f63003028c1269e82bec7770c57a744669f807b39d58b3260d8bba9566f961"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-K_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 1910712,
+      "sha256": "bda58a92436f6702c76fd908004f3d6e4e41c937a621d5a92a4680d1273b4687"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-Q_2025-03-31.html",
+      "period_end": "2025-03-31",
+      "bytes": 660237,
+      "sha256": "23a73bab940682138311fa3efd4784cbaf9caa2efc8a4f9c8f30dbec74a7aa2e"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-Q_2025-06-30.html",
+      "period_end": "2025-06-30",
+      "bytes": 977124,
+      "sha256": "682a6e3241bd945a09464aa85972e17d64ec52acb6a9c6f3c7f0188b71a14020"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-Q_2025-09-30.html",
+      "period_end": "2025-09-30",
+      "bytes": 964775,
+      "sha256": "e18bd1dcba72a8d971ea8d61ff03308ec16435e8834eef877cd31b2e1991fda2"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-Q_2026-03-31.html",
+      "period_end": "2026-03-31",
+      "bytes": 645674,
+      "sha256": "8834b5487bee7f75c87d469bdfd80c412f4b02cb8fdacd111f2e7795386f5e82"
+    },
+    {
+      "ticker": "DIOD",
+      "file": "inputs/DIOD/DIOD_10-Q_2026-06-30.html",
+      "period_end": "2026-06-30",
+      "bytes": 1030722,
+      "sha256": "8e854885666d9565bf3f22b7b98589b784ad55319a5300ae7e3fbda04011f0b4"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-K_2025-03-31.html",
+      "period_end": "2025-03-31",
+      "bytes": 1160977,
+      "sha256": "7306fd006bf675ee0472895bf0aca4fe855fda8df6c8d47de0c3dc180f812c1e"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-K_2026-03-31.html",
+      "period_end": "2026-03-31",
+      "bytes": 1160084,
+      "sha256": "8c0db6b0f9c21df54a48266a51d4610d95ff606a2381a31832c57265566368d3"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-Q_2025-06-30.html",
+      "period_end": "2025-06-30",
+      "bytes": 640517,
+      "sha256": "3b0a9fa3fc88ee9c1410bc2a75916e0e3f5521dd6b5d965e4f29991551a59643"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-Q_2025-09-30.html",
+      "period_end": "2025-09-30",
+      "bytes": 743515,
+      "sha256": "50f6fbc6ed8334c6b54e84922220f95c5d622a5a57ffa4adfa987b35bf3d3ea4"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-Q_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 779380,
+      "sha256": "70586d08a413e2655cbd088e5456a018f658a82d677ae67aa9dc4ab93eb19a58"
+    },
+    {
+      "ticker": "MCHP",
+      "file": "inputs/MCHP/MCHP_10-Q_2026-06-30.html",
+      "period_end": "2026-06-30",
+      "bytes": 638912,
+      "sha256": "2cfb56575f01460132928b8a4a539225c2693a31088e467c4b426e490c4930b0"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-K_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 742795,
+      "sha256": "7e3640b70e323af4c398ec7f4ace46630083e31b50ad6cb18a6ebf7aef6e6fc7"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-Q_2025-03-31.html",
+      "period_end": "2025-03-31",
+      "bytes": 279597,
+      "sha256": "45b42c9328322d6d5cae481411ed03ba2fbae6c726f3df9b0a124ea9563bca98"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-Q_2025-06-30.html",
+      "period_end": "2025-06-30",
+      "bytes": 353351,
+      "sha256": "a6cbecafd2fd0f925dbda206961e3a68424b7888a1a7d09e6c13e9ac6533a4c8"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-Q_2025-09-30.html",
+      "period_end": "2025-09-30",
+      "bytes": 365633,
+      "sha256": "329100c430092cfd9f90bfd4ec585f3d2c9a8c5b9309b796f65208e2d148780b"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-Q_2026-03-31.html",
+      "period_end": "2026-03-31",
+      "bytes": 234315,
+      "sha256": "79ea4cc96e09bd6bca2bdaaa9804a30d2dfa1d486910602d8019106a666f07da"
+    },
+    {
+      "ticker": "MPWR",
+      "file": "inputs/MPWR/MPWR_10-Q_2026-06-30.html",
+      "period_end": "2026-06-30",
+      "bytes": 375100,
+      "sha256": "cc831cd937f9318a8d20975faa49cd4921dd4bc577dbab7163de3b1589a58b05"
+    },
+    {
+      "ticker": "INTC",
+      "file": "inputs/INTC/INTC_10-K_2025-12-27.html",
+      "period_end": "2025-12-27",
+      "bytes": 1444007,
+      "sha256": "ef437742b7804efe228d506686e055c3beaff38855b5120bc7d512f9ebd57b3a"
+    },
+    {
+      "ticker": "INTC",
+      "file": "inputs/INTC/INTC_10-Q_2025-06-28.html",
+      "period_end": "2025-06-28",
+      "bytes": 702316,
+      "sha256": "bfc761f52840b96559e1a2a2c8f9ebe81e19123b7114858bcd5d00ea18c410d8"
+    },
+    {
+      "ticker": "INTC",
+      "file": "inputs/INTC/INTC_10-Q_2025-09-27.html",
+      "period_end": "2025-09-27",
+      "bytes": 748490,
+      "sha256": "cd855383ff261a862bf5b11b2ade72b9750c2e9c7c77fc539388ab851cf3e0a7"
+    },
+    {
+      "ticker": "INTC",
+      "file": "inputs/INTC/INTC_10-Q_2026-03-28.html",
+      "period_end": "2026-03-28",
+      "bytes": 577249,
+      "sha256": "eea1f2d90e4e7ecebb9fe6977f6a86dab2bc95c3a29e804bbfe75c1400f13a91"
+    },
+    {
+      "ticker": "INTC",
+      "file": "inputs/INTC/INTC_10-Q_2026-06-27.html",
+      "period_end": "2026-06-27",
+      "bytes": 667298,
+      "sha256": "7700040b114827b848894b16c17895ca0474493172389a43a589e740d5c6f4e0"
+    },
+    {
+      "ticker": "TXN",
+      "file": "inputs/TXN/TXN_10-K_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 762466,
+      "sha256": "ad9aeedc8a3367c245f1765387423ba70f71269ec2a2d069804b58409ac20781"
+    },
+    {
+      "ticker": "TXN",
+      "file": "inputs/TXN/TXN_10-Q_2025-06-30.html",
+      "period_end": "2025-06-30",
+      "bytes": 406018,
+      "sha256": "d8e45713e20b48836acd3b425ab60985f1508d534e6e7463e0862a762f27c666"
+    },
+    {
+      "ticker": "TXN",
+      "file": "inputs/TXN/TXN_10-Q_2025-09-30.html",
+      "period_end": "2025-09-30",
+      "bytes": 439429,
+      "sha256": "16973355a97d29c891243d8ab17636059f460304f9efff9a8ceec8f03f86262d"
+    },
+    {
+      "ticker": "TXN",
+      "file": "inputs/TXN/TXN_10-Q_2026-03-31.html",
+      "period_end": "2026-03-31",
+      "bytes": 308352,
+      "sha256": "6484c535945acda3a94c23897c9b26190b256abb84008e96ceb0346f3d386b67"
+    },
+    {
+      "ticker": "TXN",
+      "file": "inputs/TXN/TXN_10-Q_2026-06-30.html",
+      "period_end": "2026-06-30",
+      "bytes": 413129,
+      "sha256": "d92d732ba51b3bb7eaa7cc0b4d64beae05b74913ef2193e532735c4fb42ae018"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-K_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 1161340,
+      "sha256": "f50fda5d78c773d5ef10c410d22aa9e36a75eeff297afdab6accebf86623ae97"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-Q_2025-04-04.html",
+      "period_end": "2025-04-04",
+      "bytes": 452786,
+      "sha256": "76389f2d3ce73adda866719227e172655cc2e3301af0800ddd135b1e40b23c88"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-Q_2025-07-04.html",
+      "period_end": "2025-07-04",
+      "bytes": 625120,
+      "sha256": "a548d322c6a4d32b7577dfa28e261a64cd835c14d6782dd66988f7ff50149e65"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-Q_2025-10-03.html",
+      "period_end": "2025-10-03",
+      "bytes": 626007,
+      "sha256": "af516bd3955cf4e1e36bff646a551fb5b34c2474aaf1d8dac4352165705c8f51"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-Q_2026-04-03.html",
+      "period_end": "2026-04-03",
+      "bytes": 420750,
+      "sha256": "16df430b7d124922d3843831412c85f4a7d99598234ffa12cd1ae7cd086b4495"
+    },
+    {
+      "ticker": "ON",
+      "file": "inputs/ON/ON_10-Q_2026-07-03.html",
+      "period_end": "2026-07-03",
+      "bytes": 647791,
+      "sha256": "e68817431fc65719ee7a81517d7f9ed9fe42e6f6af25400d901334ab391ddc0a"
+    },
+    {
+      "ticker": "NXPI",
+      "file": "inputs/NXPI/NXPI_10-K_2025-12-31.html",
+      "period_end": "2025-12-31",
+      "bytes": 1078950,
+      "sha256": "74e65e1f8ede0b92f14180ed02530717dbbad7967f361565c60c049159b20892"
+    },
+    {
+      "ticker": "NXPI",
+      "file": "inputs/NXPI/NXPI_10-Q_2025-06-29.html",
+      "period_end": "2025-06-29",
+      "bytes": 502196,
+      "sha256": "830f5d1297335cedf416deb5542610b89eb332cd082a055515b3f2e4aa6ab550"
+    },
+    {
+      "ticker": "NXPI",
+      "file": "inputs/NXPI/NXPI_10-Q_2025-09-28.html",
+      "period_end": "2025-09-28",
+      "bytes": 534267,
+      "sha256": "d416e2f3dfb94a22e4787546aa22d5eced9ddbc9623fa7b1a01b96b4d8a5ef9f"
+    },
+    {
+      "ticker": "NXPI",
+      "file": "inputs/NXPI/NXPI_10-Q_2026-03-29.html",
+      "period_end": "2026-03-29",
+      "bytes": 426360,
+      "sha256": "87f4b9bd41c066c0953eb6a1f85676e983653e3fdfc34acb8b4c6bf29c887fa5"
+    },
+    {
+      "ticker": "NXPI",
+      "file": "inputs/NXPI/NXPI_10-Q_2026-06-28.html",
+      "period_end": "2026-06-28",
+      "bytes": 516437,
+      "sha256": "edf3f5b1e33dfc7d85775be5b7b5c83dbba002d1584abeb11ab6cb17e8ad4c08"
+    }
+  ]
+}

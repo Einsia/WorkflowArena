@@ -1,0 +1,241 @@
+agreement,deal_point,answer
+A01,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A01,mae_ability_to_consummate,Yes
+A01,mae_ability_subject_to_carveouts,Yes
+A01,mae_fls_yn,Yes
+A01,mae_fls_standard,Other forward-looking standard
+A01,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A01,mae_relational_yn,No
+A01,mae_relational_scope,No
+A01,mae_relational_terms,No
+A01,mae_co_apc_scope,announcement | consummation | pendency
+A01,mae_co_required_actions,Yes
+A01,mae_co_buyer_consent,Yes
+A01,mae_co_stockholder_litigation,No
+A01,mae_co_disclosure_schedules,Yes
+A01,mae_co_buyer_actions,Yes
+A01,mae_co_prohibited_actions,No
+A02,mae_taken_as_whole,No
+A02,mae_ability_to_consummate,Yes
+A02,mae_ability_subject_to_carveouts,No
+A02,mae_fls_yn,Yes
+A02,mae_fls_standard,"""Would"""
+A02,mae_fls_applies_to,ability to consummate transaction
+A02,mae_relational_yn,Yes
+A02,mae_relational_scope,All MAE carveouts
+A02,mae_relational_terms,"""Arising from/out of"" | ""Relating to"" | ""Resulting from"" | Other"
+A02,mae_co_apc_scope,announcement
+A02,mae_co_required_actions,No
+A02,mae_co_buyer_consent,Yes
+A02,mae_co_stockholder_litigation,Yes
+A02,mae_co_disclosure_schedules,No
+A02,mae_co_buyer_actions,No
+A02,mae_co_prohibited_actions,No
+A03,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A03,mae_ability_to_consummate,Yes
+A03,mae_ability_subject_to_carveouts,No
+A03,mae_fls_yn,Yes
+A03,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A03,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A03,mae_relational_yn,Yes
+A03,mae_relational_scope,All MAE carveouts
+A03,mae_relational_terms,"""Arising from/out of"" | ""Attributable to"" | ""Resulting from"""
+A03,mae_co_apc_scope,announcement | consummation
+A03,mae_co_required_actions,Yes
+A03,mae_co_buyer_consent,Yes
+A03,mae_co_stockholder_litigation,Yes
+A03,mae_co_disclosure_schedules,Yes
+A03,mae_co_buyer_actions,No
+A03,mae_co_prohibited_actions,Yes
+A04,mae_taken_as_whole,No
+A04,mae_ability_to_consummate,Yes
+A04,mae_ability_subject_to_carveouts,No
+A04,mae_fls_yn,No
+A04,mae_fls_standard,No
+A04,mae_fls_applies_to,No
+A04,mae_relational_yn,Yes
+A04,mae_relational_scope,All MAE carveouts
+A04,mae_relational_terms,"""Arising from/out of"" | ""Relating to"""
+A04,mae_co_apc_scope,announcement | pendency
+A04,mae_co_required_actions,No
+A04,mae_co_buyer_consent,Yes
+A04,mae_co_stockholder_litigation,Yes
+A04,mae_co_disclosure_schedules,No
+A04,mae_co_buyer_actions,Yes
+A04,mae_co_prohibited_actions,No
+A05,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A05,mae_ability_to_consummate,Yes
+A05,mae_ability_subject_to_carveouts,No
+A05,mae_fls_yn,Yes
+A05,mae_fls_standard,"""Would"""
+A05,mae_fls_applies_to,ability to consummate transaction
+A05,mae_relational_yn,No
+A05,mae_relational_scope,No
+A05,mae_relational_terms,No
+A05,mae_co_apc_scope,announcement
+A05,mae_co_required_actions,No
+A05,mae_co_buyer_consent,No
+A05,mae_co_stockholder_litigation,No
+A05,mae_co_disclosure_schedules,No
+A05,mae_co_buyer_actions,No
+A05,mae_co_prohibited_actions,No
+A06,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A06,mae_ability_to_consummate,Yes
+A06,mae_ability_subject_to_carveouts,No
+A06,mae_fls_yn,Yes
+A06,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A06,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A06,mae_relational_yn,Yes
+A06,mae_relational_scope,All MAE carveouts
+A06,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A06,mae_co_apc_scope,announcement | consummation | pendency
+A06,mae_co_required_actions,Yes
+A06,mae_co_buyer_consent,Yes
+A06,mae_co_stockholder_litigation,Yes
+A06,mae_co_disclosure_schedules,No
+A06,mae_co_buyer_actions,No
+A06,mae_co_prohibited_actions,Yes
+A07,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A07,mae_ability_to_consummate,Yes
+A07,mae_ability_subject_to_carveouts,Yes
+A07,mae_fls_yn,No
+A07,mae_fls_standard,No
+A07,mae_fls_applies_to,No
+A07,mae_relational_yn,No
+A07,mae_relational_scope,No
+A07,mae_relational_terms,No
+A07,mae_co_apc_scope,announcement | pendency
+A07,mae_co_required_actions,Yes
+A07,mae_co_buyer_consent,Yes
+A07,mae_co_stockholder_litigation,Yes
+A07,mae_co_disclosure_schedules,No
+A07,mae_co_buyer_actions,Yes
+A07,mae_co_prohibited_actions,No
+A08,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A08,mae_ability_to_consummate,Yes
+A08,mae_ability_subject_to_carveouts,Yes
+A08,mae_fls_yn,Yes
+A08,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A08,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A08,mae_relational_yn,Yes
+A08,mae_relational_scope,Some MAE carveouts
+A08,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"" | Relational language varies among carveouts"
+A08,mae_co_apc_scope,announcement | consummation
+A08,mae_co_required_actions,Yes
+A08,mae_co_buyer_consent,No
+A08,mae_co_stockholder_litigation,No
+A08,mae_co_disclosure_schedules,No
+A08,mae_co_buyer_actions,No
+A08,mae_co_prohibited_actions,No
+A09,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A09,mae_ability_to_consummate,Yes
+A09,mae_ability_subject_to_carveouts,No
+A09,mae_fls_yn,Yes
+A09,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A09,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A09,mae_relational_yn,Yes
+A09,mae_relational_scope,All MAE carveouts
+A09,mae_relational_terms,"""Arising from/out of"" | ""Relating to"" | ""Resulting from"""
+A09,mae_co_apc_scope,announcement | pendency
+A09,mae_co_required_actions,Yes
+A09,mae_co_buyer_consent,Yes
+A09,mae_co_stockholder_litigation,No
+A09,mae_co_disclosure_schedules,Yes
+A09,mae_co_buyer_actions,No
+A09,mae_co_prohibited_actions,Yes
+A10,mae_taken_as_whole,No
+A10,mae_ability_to_consummate,No
+A10,mae_ability_subject_to_carveouts,No
+A10,mae_fls_yn,Yes
+A10,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A10,mae_fls_applies_to,business and operation of Target
+A10,mae_relational_yn,Yes
+A10,mae_relational_scope,Some MAE carveouts
+A10,mae_relational_terms,"""Arising from/out of"" | ""Relating to"" | ""Resulting from"" | Relational language varies among carveouts"
+A10,mae_co_apc_scope,announcement | pendency
+A10,mae_co_required_actions,Yes
+A10,mae_co_buyer_consent,Yes
+A10,mae_co_stockholder_litigation,Yes
+A10,mae_co_disclosure_schedules,No
+A10,mae_co_buyer_actions,Yes
+A10,mae_co_prohibited_actions,Yes
+A11,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A11,mae_ability_to_consummate,No
+A11,mae_ability_subject_to_carveouts,No
+A11,mae_fls_yn,No
+A11,mae_fls_standard,No
+A11,mae_fls_applies_to,No
+A11,mae_relational_yn,Yes
+A11,mae_relational_scope,Some MAE carveouts
+A11,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A11,mae_co_apc_scope,announcement
+A11,mae_co_required_actions,Yes
+A11,mae_co_buyer_consent,Yes
+A11,mae_co_stockholder_litigation,Yes
+A11,mae_co_disclosure_schedules,Yes
+A11,mae_co_buyer_actions,No
+A11,mae_co_prohibited_actions,Yes
+A12,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A12,mae_ability_to_consummate,Yes
+A12,mae_ability_subject_to_carveouts,No
+A12,mae_fls_yn,Yes
+A12,mae_fls_standard,Other forward-looking standard
+A12,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A12,mae_relational_yn,Yes
+A12,mae_relational_scope,All MAE carveouts
+A12,mae_relational_terms,"""Arising from/out of"" | ""Attributable to"" | ""Relating to"" | ""Resulting from"""
+A12,mae_co_apc_scope,announcement
+A12,mae_co_required_actions,Yes
+A12,mae_co_buyer_consent,Yes
+A12,mae_co_stockholder_litigation,No
+A12,mae_co_disclosure_schedules,No
+A12,mae_co_buyer_actions,No
+A12,mae_co_prohibited_actions,No
+A13,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A13,mae_ability_to_consummate,No
+A13,mae_ability_subject_to_carveouts,No
+A13,mae_fls_yn,Yes
+A13,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A13,mae_fls_applies_to,business and operation of Target
+A13,mae_relational_yn,Yes
+A13,mae_relational_scope,All MAE carveouts
+A13,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A13,mae_co_apc_scope,announcement
+A13,mae_co_required_actions,No
+A13,mae_co_buyer_consent,No
+A13,mae_co_stockholder_litigation,Yes
+A13,mae_co_disclosure_schedules,No
+A13,mae_co_buyer_actions,Yes
+A13,mae_co_prohibited_actions,Yes
+A14,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A14,mae_ability_to_consummate,Yes
+A14,mae_ability_subject_to_carveouts,Yes
+A14,mae_fls_yn,Yes
+A14,mae_fls_standard,"""Would"""
+A14,mae_fls_applies_to,ability to consummate transaction
+A14,mae_relational_yn,Yes
+A14,mae_relational_scope,All MAE carveouts
+A14,mae_relational_terms,"""Arising from/out of"" | ""Attributable to"" | ""Resulting from"""
+A14,mae_co_apc_scope,announcement | consummation | pendency
+A14,mae_co_required_actions,Yes
+A14,mae_co_buyer_consent,Yes
+A14,mae_co_stockholder_litigation,No
+A14,mae_co_disclosure_schedules,No
+A14,mae_co_buyer_actions,No
+A14,mae_co_prohibited_actions,Yes
+A15,mae_taken_as_whole,"Applies to Target and subsidiaries ""taken as a whole"""
+A15,mae_ability_to_consummate,Yes
+A15,mae_ability_subject_to_carveouts,No
+A15,mae_fls_yn,Yes
+A15,mae_fls_standard,"""Would"" (reasonably) be expected to"
+A15,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A15,mae_relational_yn,Yes
+A15,mae_relational_scope,Some MAE carveouts
+A15,mae_relational_terms,"""Resulting from"""
+A15,mae_co_apc_scope,announcement | pendency
+A15,mae_co_required_actions,Yes
+A15,mae_co_buyer_consent,Yes
+A15,mae_co_stockholder_litigation,No
+A15,mae_co_disclosure_schedules,No
+A15,mae_co_buyer_actions,No
+A15,mae_co_prohibited_actions,Yes

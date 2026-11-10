@@ -1,0 +1,445 @@
+country,dropped_unit,term,beta
+USA,Alabama,comb. policy,-0.364
+USA,Alaska,comb. policy,-0.369
+USA,Arizona,comb. policy,-0.403
+USA,Arkansas,comb. policy,-0.38
+USA,California,comb. policy,-0.379
+USA,Colorado,comb. policy,-0.371
+USA,Connecticut,comb. policy,-0.388
+USA,Delaware,comb. policy,-0.381
+USA,District of Columb,comb. policy,-0.388
+USA,Florida,comb. policy,-0.36
+USA,Georgia,comb. policy,-0.362
+USA,Hawaii,comb. policy,-0.373
+USA,Idaho,comb. policy,-0.392
+USA,Illinois,comb. policy,-0.378
+USA,Indiana,comb. policy,-0.394
+USA,Iowa,comb. policy,-0.381
+USA,Kansas,comb. policy,-0.386
+USA,Kentucky,comb. policy,-0.379
+USA,Louisiana,comb. policy,-0.414
+USA,Maine,comb. policy,-0.38
+USA,Maryland,comb. policy,-0.388
+USA,Massachusetts,comb. policy,-0.348
+USA,Michigan,comb. policy,-0.341
+USA,Minnesota,comb. policy,-0.342
+USA,Mississippi,comb. policy,-0.39
+USA,Missouri,comb. policy,-0.38
+USA,Montana,comb. policy,-0.378
+USA,Nebraska,comb. policy,-0.41
+USA,Nevada,comb. policy,-0.376
+USA,New Hampshire,comb. policy,-0.378
+USA,New Jersey,comb. policy,-0.384
+USA,New Mexico,comb. policy,-0.376
+USA,New York,comb. policy,-0.358
+USA,North Carolina,comb. policy,-0.389
+USA,North Dakota,comb. policy,-0.385
+USA,Ohio,comb. policy,-0.38
+USA,Oklahoma,comb. policy,-0.38
+USA,Oregon,comb. policy,-0.394
+USA,Pennsylvania,comb. policy,-0.401
+USA,Rhode Island,comb. policy,-0.401
+USA,South Carolina,comb. policy,-0.389
+USA,South Dakota,comb. policy,-0.39
+USA,Tennessee,comb. policy,-0.383
+USA,Texas,comb. policy,-0.383
+USA,Utah,comb. policy,-0.383
+USA,Vermont,comb. policy,-0.387
+USA,Virginia,comb. policy,-0.372
+USA,Washington,comb. policy,-0.351
+USA,West Virginia,comb. policy,-0.37
+USA,Wisconsin,comb. policy,-0.385
+USA,Wyoming,comb. policy,-0.382
+USA,full_sample,comb. policy,-0.38
+USA,Alabama,no_policy rate,0.288
+USA,Alaska,no_policy rate,0.289
+USA,Arizona,no_policy rate,0.3
+USA,Arkansas,no_policy rate,0.291
+USA,California,no_policy rate,0.289
+USA,Colorado,no_policy rate,0.285
+USA,Connecticut,no_policy rate,0.289
+USA,Delaware,no_policy rate,0.291
+USA,District of Columb,no_policy rate,0.297
+USA,Florida,no_policy rate,0.282
+USA,Georgia,no_policy rate,0.285
+USA,Hawaii,no_policy rate,0.291
+USA,Idaho,no_policy rate,0.291
+USA,Illinois,no_policy rate,0.292
+USA,Indiana,no_policy rate,0.298
+USA,Iowa,no_policy rate,0.297
+USA,Kansas,no_policy rate,0.293
+USA,Kentucky,no_policy rate,0.291
+USA,Louisiana,no_policy rate,0.291
+USA,Maine,no_policy rate,0.292
+USA,Maryland,no_policy rate,0.295
+USA,Massachusetts,no_policy rate,0.281
+USA,Michigan,no_policy rate,0.282
+USA,Minnesota,no_policy rate,0.277
+USA,Mississippi,no_policy rate,0.296
+USA,Missouri,no_policy rate,0.29
+USA,Montana,no_policy rate,0.291
+USA,Nebraska,no_policy rate,0.298
+USA,Nevada,no_policy rate,0.291
+USA,New Hampshire,no_policy rate,0.292
+USA,New Jersey,no_policy rate,0.295
+USA,New Mexico,no_policy rate,0.291
+USA,New York,no_policy rate,0.287
+USA,North Carolina,no_policy rate,0.292
+USA,North Dakota,no_policy rate,0.293
+USA,Ohio,no_policy rate,0.288
+USA,Oklahoma,no_policy rate,0.291
+USA,Oregon,no_policy rate,0.299
+USA,Pennsylvania,no_policy rate,0.298
+USA,Rhode Island,no_policy rate,0.293
+USA,South Carolina,no_policy rate,0.297
+USA,South Dakota,no_policy rate,0.294
+USA,Tennessee,no_policy rate,0.291
+USA,Texas,no_policy rate,0.296
+USA,Utah,no_policy rate,0.292
+USA,Vermont,no_policy rate,0.293
+USA,Virginia,no_policy rate,0.292
+USA,Washington,no_policy rate,0.276
+USA,West Virginia,no_policy rate,0.29
+USA,Wisconsin,no_policy rate,0.292
+USA,Wyoming,no_policy rate,0.293
+USA,full_sample,no_policy rate,0.291
+FRA,AuvergneRhÃ´neAlpe,comb. policy,-0.181
+FRA,BourgogneFrancheCo,comb. policy,-0.158
+FRA,Bretagne,comb. policy,-0.166
+FRA,Centre,comb. policy,-0.185
+FRA,Corse,comb. policy,-0.16
+FRA,GrandEst,comb. policy,-0.147
+FRA,HautsdeFrance,comb. policy,-0.171
+FRA,IledeFrance,comb. policy,-0.176
+FRA,Normandie,comb. policy,-0.168
+FRA,NouvelleAquitaine,comb. policy,-0.167
+FRA,Occitanie,comb. policy,-0.164
+FRA,Paca,comb. policy,-0.173
+FRA,PaysdelaLoire,comb. policy,-0.179
+FRA,full_sample,comb. policy,-0.169
+FRA,AuvergneRhÃ´neAlpe,no_policy rate,0.346
+FRA,BourgogneFrancheCo,no_policy rate,0.31
+FRA,Bretagne,no_policy rate,0.329
+FRA,Centre,no_policy rate,0.337
+FRA,Corse,no_policy rate,0.332
+FRA,GrandEst,no_policy rate,0.3
+FRA,HautsdeFrance,no_policy rate,0.33
+FRA,IledeFrance,no_policy rate,0.341
+FRA,Normandie,no_policy rate,0.331
+FRA,NouvelleAquitaine,no_policy rate,0.324
+FRA,Occitanie,no_policy rate,0.323
+FRA,Paca,no_policy rate,0.332
+FRA,PaysdelaLoire,no_policy rate,0.342
+FRA,full_sample,no_policy rate,0.329
+IRN,Alborz,comb. policy,-0.454
+IRN,Ardebil,comb. policy,-0.487
+IRN,Bushehr,comb. policy,-0.487
+IRN,Chahar Mahall and ,comb. policy,-0.487
+IRN,East Azarbaijan,comb. policy,-0.536
+IRN,Esfahan,comb. policy,-0.541
+IRN,Fars,comb. policy,-0.474
+IRN,Gilan,comb. policy,-0.496
+IRN,Golestan,comb. policy,-0.507
+IRN,Hamadan,comb. policy,-0.491
+IRN,Hormozgan,comb. policy,-0.487
+IRN,Ilam,comb. policy,-0.485
+IRN,Kerman,comb. policy,-0.487
+IRN,Kermanshah,comb. policy,-0.486
+IRN,Khuzestan,comb. policy,-0.462
+IRN,Kohgiluyeh and Buy,comb. policy,-0.483
+IRN,Kordestan,comb. policy,-0.491
+IRN,Lorestan,comb. policy,-0.492
+IRN,Markazi,comb. policy,-0.453
+IRN,Mazandaran,comb. policy,-0.495
+IRN,North Khorasan,comb. policy,-0.487
+IRN,Qazvin,comb. policy,-0.487
+IRN,Qom,comb. policy,-0.5
+IRN,Razavi Khorasan,comb. policy,-0.484
+IRN,Semnan,comb. policy,-0.493
+IRN,Sistan and Baluche,comb. policy,-0.486
+IRN,South Khorasan,comb. policy,-0.486
+IRN,Tehran,comb. policy,-0.461
+IRN,West Azarbaijan,comb. policy,-0.486
+IRN,Yazd,comb. policy,-0.487
+IRN,Zanjan,comb. policy,-0.491
+IRN,full_sample,comb. policy,-0.487
+IRN,Alborz,no_policy rate,0.494
+IRN,Ardebil,no_policy rate,0.521
+IRN,Bushehr,no_policy rate,0.518
+IRN,Chahar Mahall and ,no_policy rate,0.519
+IRN,East Azarbaijan,no_policy rate,0.556
+IRN,Esfahan,no_policy rate,0.56
+IRN,Fars,no_policy rate,0.507
+IRN,Gilan,no_policy rate,0.53
+IRN,Golestan,no_policy rate,0.539
+IRN,Hamadan,no_policy rate,0.526
+IRN,Hormozgan,no_policy rate,0.519
+IRN,Ilam,no_policy rate,0.516
+IRN,Kerman,no_policy rate,0.518
+IRN,Kermanshah,no_policy rate,0.521
+IRN,Khuzestan,no_policy rate,0.497
+IRN,Kohgiluyeh and Buy,no_policy rate,0.515
+IRN,Kordestan,no_policy rate,0.525
+IRN,Lorestan,no_policy rate,0.521
+IRN,Markazi,no_policy rate,0.494
+IRN,Mazandaran,no_policy rate,0.528
+IRN,North Khorasan,no_policy rate,0.517
+IRN,Qazvin,no_policy rate,0.522
+IRN,Qom,no_policy rate,0.54
+IRN,Razavi Khorasan,no_policy rate,0.514
+IRN,Semnan,no_policy rate,0.527
+IRN,Sistan and Baluche,no_policy rate,0.517
+IRN,South Khorasan,no_policy rate,0.518
+IRN,Tehran,no_policy rate,0.501
+IRN,West Azarbaijan,no_policy rate,0.516
+IRN,Yazd,no_policy rate,0.517
+IRN,Zanjan,no_policy rate,0.524
+IRN,full_sample,no_policy rate,0.52
+ITA,Abruzzo,comb. policy,-0.453
+ITA,Basilicata,comb. policy,-0.452
+ITA,Calabria,comb. policy,-0.451
+ITA,Campania,comb. policy,-0.427
+ITA,Emilia Romagna,comb. policy,-0.421
+ITA,Friuli Venezia Giu,comb. policy,-0.469
+ITA,Lazio,comb. policy,-0.443
+ITA,Liguria,comb. policy,-0.44
+ITA,Lombardia,comb. policy,-0.45
+ITA,Marche,comb. policy,-0.456
+ITA,Molise,comb. policy,-0.461
+ITA,P.A. Bolzano,comb. policy,-0.452
+ITA,P.A. Trento,comb. policy,-0.451
+ITA,Piemonte,comb. policy,-0.457
+ITA,Puglia,comb. policy,-0.448
+ITA,Sardegna,comb. policy,-0.457
+ITA,Sicilia,comb. policy,-0.47
+ITA,Toscana,comb. policy,-0.46
+ITA,Umbria,comb. policy,-0.445
+ITA,Valle d'Aosta,comb. policy,-0.45
+ITA,Veneto,comb. policy,-0.495
+ITA,full_sample,comb. policy,-0.453
+ITA,Abruzzo,no_policy rate,0.371
+ITA,Basilicata,no_policy rate,0.371
+ITA,Calabria,no_policy rate,0.372
+ITA,Campania,no_policy rate,0.372
+ITA,Emilia Romagna,no_policy rate,0.341
+ITA,Friuli Venezia Giu,no_policy rate,0.371
+ITA,Lazio,no_policy rate,0.359
+ITA,Liguria,no_policy rate,0.372
+ITA,Lombardia,no_policy rate,0.371
+ITA,Marche,no_policy rate,0.37
+ITA,Molise,no_policy rate,0.372
+ITA,P.A. Bolzano,no_policy rate,0.371
+ITA,P.A. Trento,no_policy rate,0.371
+ITA,Piemonte,no_policy rate,0.387
+ITA,Puglia,no_policy rate,0.371
+ITA,Sardegna,no_policy rate,0.373
+ITA,Sicilia,no_policy rate,0.37
+ITA,Toscana,no_policy rate,0.373
+ITA,Umbria,no_policy rate,0.371
+ITA,Valle d'Aosta,no_policy rate,0.371
+ITA,Veneto,no_policy rate,0.405
+ITA,full_sample,no_policy rate,0.372
+KOR,Busan,comb. policy,-0.455
+KOR,Chungcheongbuk-do,comb. policy,-0.493
+KOR,Chungcheongnam-do,comb. policy,-0.503
+KOR,Daegu,comb. policy,-0.431
+KOR,Daejeon,comb. policy,-0.495
+KOR,Gangwon-do,comb. policy,-0.497
+KOR,Gwangju,comb. policy,-0.495
+KOR,Gyeonggi-do,comb. policy,-0.496
+KOR,Gyeongsangbuk-do,comb. policy,-0.507
+KOR,Gyeongsangnam-do,comb. policy,-0.487
+KOR,Incheon,comb. policy,-0.494
+KOR,Jeju,comb. policy,-0.494
+KOR,Jeollabuk-do,comb. policy,-0.496
+KOR,Jeollanam-do,comb. policy,-0.494
+KOR,Sejong,comb. policy,-0.494
+KOR,Seoul,comb. policy,-0.626
+KOR,Ulsan,comb. policy,-0.495
+KOR,full_sample,comb. policy,-0.494
+KOR,Busan,no_policy rate,0.292
+KOR,Chungcheongbuk-do,no_policy rate,0.315
+KOR,Chungcheongnam-do,no_policy rate,0.316
+KOR,Daegu,no_policy rate,0.294
+KOR,Daejeon,no_policy rate,0.317
+KOR,Gangwon-do,no_policy rate,0.323
+KOR,Gwangju,no_policy rate,0.316
+KOR,Gyeonggi-do,no_policy rate,0.323
+KOR,Gyeongsangbuk-do,no_policy rate,0.283
+KOR,Gyeongsangnam-do,no_policy rate,0.311
+KOR,Incheon,no_policy rate,0.308
+KOR,Jeju,no_policy rate,0.314
+KOR,Jeollabuk-do,no_policy rate,0.314
+KOR,Jeollanam-do,no_policy rate,0.314
+KOR,Sejong,no_policy rate,0.32
+KOR,Seoul,no_policy rate,0.394
+KOR,Ulsan,no_policy rate,0.317
+KOR,full_sample,no_policy rate,0.314
+CHN,Anhui,fifth week and after,-0.284
+CHN,Beijing,fifth week and after,-0.261
+CHN,Chongqing,fifth week and after,-0.292
+CHN,Fujian,fifth week and after,-0.293
+CHN,Gansu,fifth week and after,-0.292
+CHN,Guangdong,fifth week and after,-0.292
+CHN,Guangxi,fifth week and after,-0.294
+CHN,Guizhou,fifth week and after,-0.292
+CHN,Hainan,fifth week and after,-0.293
+CHN,Hebei,fifth week and after,-0.293
+CHN,Heilongjiang,fifth week and after,-0.292
+CHN,Henan,fifth week and after,-0.294
+CHN,Hubei,fifth week and after,-0.364
+CHN,Hunan,fifth week and after,-0.292
+CHN,Jiangsu,fifth week and after,-0.29
+CHN,Jiangxi,fifth week and after,-0.29
+CHN,Jilin,fifth week and after,-0.292
+CHN,Liaoning,fifth week and after,-0.292
+CHN,Neimenggu,fifth week and after,-0.292
+CHN,Ningxia,fifth week and after,-0.305
+CHN,Shaanxi,fifth week and after,-0.292
+CHN,Shandong,fifth week and after,-0.294
+CHN,Shanghai,fifth week and after,-0.292
+CHN,Sichuan,fifth week and after,-0.292
+CHN,Tianjin,fifth week and after,-0.293
+CHN,Yunnan,fifth week and after,-0.292
+CHN,Zhejiang,fifth week and after,-0.289
+CHN,full_sample,fifth week and after,-0.292
+CHN,Anhui,first week,-0.023
+CHN,Beijing,first week,-0.001
+CHN,Chongqing,first week,-0.027
+CHN,Fujian,first week,-0.024
+CHN,Gansu,first week,-0.026
+CHN,Guangdong,first week,-0.024
+CHN,Guangxi,first week,-0.023
+CHN,Guizhou,first week,-0.026
+CHN,Hainan,first week,-0.027
+CHN,Hebei,first week,-0.024
+CHN,Heilongjiang,first week,-0.024
+CHN,Henan,first week,-0.022
+CHN,Hubei,first week,-0.11
+CHN,Hunan,first week,-0.028
+CHN,Jiangsu,first week,-0.025
+CHN,Jiangxi,first week,-0.026
+CHN,Jilin,first week,-0.024
+CHN,Liaoning,first week,-0.024
+CHN,Neimenggu,first week,-0.027
+CHN,Ningxia,first week,-0.025
+CHN,Shaanxi,first week,-0.024
+CHN,Shandong,first week,-0.024
+CHN,Shanghai,first week,-0.026
+CHN,Sichuan,first week,-0.027
+CHN,Tianjin,first week,-0.025
+CHN,Yunnan,first week,-0.025
+CHN,Zhejiang,first week,-0.03
+CHN,full_sample,first week,-0.026
+CHN,Anhui,fourth week,-0.296
+CHN,Beijing,fourth week,-0.271
+CHN,Chongqing,fourth week,-0.301
+CHN,Fujian,fourth week,-0.303
+CHN,Gansu,fourth week,-0.302
+CHN,Guangdong,fourth week,-0.303
+CHN,Guangxi,fourth week,-0.304
+CHN,Guizhou,fourth week,-0.302
+CHN,Hainan,fourth week,-0.302
+CHN,Hebei,fourth week,-0.302
+CHN,Heilongjiang,fourth week,-0.302
+CHN,Henan,fourth week,-0.305
+CHN,Hubei,fourth week,-0.373
+CHN,Hunan,fourth week,-0.303
+CHN,Jiangsu,fourth week,-0.302
+CHN,Jiangxi,fourth week,-0.3
+CHN,Jilin,fourth week,-0.301
+CHN,Liaoning,fourth week,-0.302
+CHN,Neimenggu,fourth week,-0.301
+CHN,Ningxia,fourth week,-0.3
+CHN,Shaanxi,fourth week,-0.303
+CHN,Shandong,fourth week,-0.304
+CHN,Shanghai,fourth week,-0.301
+CHN,Sichuan,fourth week,-0.303
+CHN,Tianjin,fourth week,-0.302
+CHN,Yunnan,fourth week,-0.302
+CHN,Zhejiang,fourth week,-0.298
+CHN,full_sample,fourth week,-0.302
+CHN,Anhui,no_policy rate,0.303
+CHN,Beijing,no_policy rate,0.278
+CHN,Chongqing,no_policy rate,0.309
+CHN,Fujian,no_policy rate,0.309
+CHN,Gansu,no_policy rate,0.309
+CHN,Guangdong,no_policy rate,0.309
+CHN,Guangxi,no_policy rate,0.311
+CHN,Guizhou,no_policy rate,0.309
+CHN,Hainan,no_policy rate,0.309
+CHN,Hebei,no_policy rate,0.309
+CHN,Heilongjiang,no_policy rate,0.309
+CHN,Henan,no_policy rate,0.311
+CHN,Hubei,no_policy rate,0.374
+CHN,Hunan,no_policy rate,0.309
+CHN,Jiangsu,no_policy rate,0.31
+CHN,Jiangxi,no_policy rate,0.308
+CHN,Jilin,no_policy rate,0.309
+CHN,Liaoning,no_policy rate,0.31
+CHN,Neimenggu,no_policy rate,0.309
+CHN,Ningxia,no_policy rate,0.309
+CHN,Shaanxi,no_policy rate,0.31
+CHN,Shandong,no_policy rate,0.31
+CHN,Shanghai,no_policy rate,0.309
+CHN,Sichuan,no_policy rate,0.31
+CHN,Tianjin,no_policy rate,0.31
+CHN,Yunnan,no_policy rate,0.309
+CHN,Zhejiang,no_policy rate,0.307
+CHN,full_sample,no_policy rate,0.309
+CHN,Anhui,second week,-0.2
+CHN,Beijing,second week,-0.174
+CHN,Chongqing,second week,-0.204
+CHN,Fujian,second week,-0.204
+CHN,Gansu,second week,-0.204
+CHN,Guangdong,second week,-0.205
+CHN,Guangxi,second week,-0.202
+CHN,Guizhou,second week,-0.204
+CHN,Hainan,second week,-0.205
+CHN,Hebei,second week,-0.202
+CHN,Heilongjiang,second week,-0.204
+CHN,Henan,second week,-0.207
+CHN,Hubei,second week,-0.279
+CHN,Hunan,second week,-0.207
+CHN,Jiangsu,second week,-0.204
+CHN,Jiangxi,second week,-0.202
+CHN,Jilin,second week,-0.203
+CHN,Liaoning,second week,-0.202
+CHN,Neimenggu,second week,-0.205
+CHN,Ningxia,second week,-0.207
+CHN,Shaanxi,second week,-0.203
+CHN,Shandong,second week,-0.204
+CHN,Shanghai,second week,-0.204
+CHN,Sichuan,second week,-0.204
+CHN,Tianjin,second week,-0.204
+CHN,Yunnan,second week,-0.203
+CHN,Zhejiang,second week,-0.198
+CHN,full_sample,second week,-0.204
+CHN,Anhui,third week,-0.273
+CHN,Beijing,third week,-0.25
+CHN,Chongqing,third week,-0.279
+CHN,Fujian,third week,-0.28
+CHN,Gansu,third week,-0.279
+CHN,Guangdong,third week,-0.281
+CHN,Guangxi,third week,-0.281
+CHN,Guizhou,third week,-0.28
+CHN,Hainan,third week,-0.28
+CHN,Hebei,third week,-0.279
+CHN,Heilongjiang,third week,-0.28
+CHN,Henan,third week,-0.282
+CHN,Hubei,third week,-0.349
+CHN,Hunan,third week,-0.281
+CHN,Jiangsu,third week,-0.28
+CHN,Jiangxi,third week,-0.278
+CHN,Jilin,third week,-0.279
+CHN,Liaoning,third week,-0.279
+CHN,Neimenggu,third week,-0.279
+CHN,Ningxia,third week,-0.282
+CHN,Shaanxi,third week,-0.279
+CHN,Shandong,third week,-0.284
+CHN,Shanghai,third week,-0.279
+CHN,Sichuan,third week,-0.279
+CHN,Tianjin,third week,-0.28
+CHN,Yunnan,third week,-0.279
+CHN,Zhejiang,third week,-0.274
+CHN,full_sample,third week,-0.279

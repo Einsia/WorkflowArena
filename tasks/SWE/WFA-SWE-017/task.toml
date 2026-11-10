@@ -1,0 +1,47 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-017"
+version = "0.1.0"
+description = "Implement the storage engine of a time-series database whose on-disk formats, index, chunk encodings and write-ahead log codecs are already in place, judged end to end."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out-signature-complete"
+language = "Go"
+source_repo = "prometheus/prometheus"
+base_tag = "v3.13.5"
+tier = 2
+carved_files = 17
+carved_code_lines = 12027
+carved_function_bodies = 564
+contract_symbols = 51
+lines_per_contract_symbol = 236
+contract_symbols_table = 51
+declarations_retained = 564
+lines_per_declaration = 21
+gate_deviation = "Fails the batch's contract/implementation gate of >=100 lines per contract symbol. 12027 carved code lines over the candidate table's 51 contract symbols is 236, which passes; but the judging suite is necessarily in-package (there is no `package tsdb_test` file anywhere under tsdb/), so for it to compile the carve must retain all 564 function declarations, and against the declaration set the ratio is 21. The solver is therefore filling in given signatures rather than designing internals behind a small public contract, which is why this ships as recipe=carve-out-signature-complete, tier=2 rather than as a carve-out."
+required_tests = 2263
+regression_tests = 5072
+data_driven_cases = 0
+judging_suite_scope = "in-package"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 51200
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

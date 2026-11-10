@@ -1,0 +1,559 @@
+{
+  "task_id": "WFA-CDN-008",
+  "reviewer_only": true,
+  "output_order": [
+    "A1",
+    "B1",
+    "A2",
+    "B2",
+    "A3",
+    "B3",
+    "A4"
+  ],
+  "correct_sources": [
+    "13",
+    "01",
+    "19",
+    "39",
+    "46",
+    "42",
+    "33"
+  ],
+  "beats": {
+    "A1": {
+      "source": "13",
+      "frames": 210,
+      "reference_output_frames": [
+        0,
+        210
+      ],
+      "source_start_s": 365.0,
+      "camera_movement_class": "forward swim-in (real)",
+      "content_family": [
+        "13",
+        "25",
+        "37"
+      ],
+      "near_miss": [
+        "25",
+        "37",
+        "34"
+      ],
+      "why": "25: SAME excerpt time-reversed (camera retreats, mound shrinks); 37: same shot later — slides past the mound flank, mound leaves frame right, sand revealed; 34: deeper darker mound, no surface visible, drifting"
+    },
+    "B1": {
+      "source": "01",
+      "frames": 210,
+      "reference_output_frames": [
+        210,
+        420
+      ],
+      "source_start_s": 394.5,
+      "camera_movement_class": "handheld hover",
+      "content_family": [
+        "01",
+        "06",
+        "26"
+      ],
+      "near_miss": [
+        "06",
+        "26",
+        "14",
+        "15"
+      ],
+      "why": "06: SAME excerpt + synthetic progressive digital push-in 1.00→1.30 (fails handheld hover); 26: same shot earlier — ~3 s sustained lateral sweep at the start, no dark fish; 14: tang school arriving over a dark mound while camera pushes forward; 15: reef flat with scattered fish, sideways drift, no dense school"
+    },
+    "A2": {
+      "source": "19",
+      "frames": 225,
+      "reference_output_frames": [
+        420,
+        645
+      ],
+      "source_start_s": 582.5,
+      "camera_movement_class": "forward + rise over top (crane-like, ends high angle)",
+      "content_family": [
+        "16",
+        "19",
+        "24",
+        "43"
+      ],
+      "near_miss": [
+        "24",
+        "43",
+        "16"
+      ],
+      "why": "24: SAME excerpt time-reversed (descends back behind the table edge, ends close on branches); 43: same shot earlier — approaches table-coral tree from below, never clears the top; 16: same shot later — starts over sand, lateral drift to another table coral"
+    },
+    "B2": {
+      "source": "39",
+      "frames": 258,
+      "reference_output_frames": [
+        645,
+        903
+      ],
+      "source_start_s": 597.0,
+      "camera_movement_class": "low slow push, settles",
+      "content_family": [
+        "02",
+        "27",
+        "39",
+        "44"
+      ],
+      "near_miss": [
+        "02",
+        "27",
+        "44"
+      ],
+      "why": "02: SAME excerpt time-reversed (pulls away from the overhang, fish recede into shadow); 27/44: next shot — already under the overhang, lit, hovering, fish visible from frame 0"
+    },
+    "A3": {
+      "source": "46",
+      "frames": 264,
+      "reference_output_frames": [
+        903,
+        1167
+      ],
+      "source_start_s": 656.0,
+      "camera_movement_class": "dolly-in with parallax (vs digital zoom)",
+      "content_family": [
+        "07",
+        "36",
+        "41",
+        "46"
+      ],
+      "near_miss": [
+        "07",
+        "36",
+        "41"
+      ],
+      "why": "07: earlier window + synthetic digital zoom 1.0→1.6 toward the urchin (urchin grows but no parallax: near seabed and reef lip scale together, softer pixels); 36: SAME excerpt time-reversed (retreats, urchin shrinks); 41: same shot earlier — hollow/ledge dominant, urchin stays small, lateral component"
+    },
+    "B3": {
+      "source": "42",
+      "frames": 300,
+      "reference_output_frames": [
+        1167,
+        1467
+      ],
+      "source_start_s": 683.5,
+      "camera_movement_class": "lateral tracking, background L→R",
+      "content_family": [
+        "20",
+        "42",
+        "45"
+      ],
+      "near_miss": [
+        "45",
+        "09",
+        "20"
+      ],
+      "why": "45: SAME excerpt mirrored (background streams right→left, camera follows to frame-right); 09: reef slope, camera drifts while a shark crosses briefly, no follow; 20: same shot later — sharks leave frame, camera continues over rubble"
+    },
+    "A4": {
+      "source": "33",
+      "frames": 180,
+      "reference_output_frames": [
+        1467,
+        1647
+      ],
+      "source_start_s": 625.9,
+      "camera_movement_class": "locked-off hover",
+      "content_family": [
+        "04",
+        "22",
+        "33",
+        "40"
+      ],
+      "near_miss": [
+        "22",
+        "04",
+        "40",
+        "32"
+      ],
+      "why": "22: SAME excerpt + synthetic slow digital push-in 1.00→1.25; 04: SAME excerpt + synthetic lateral crop pan (82% window); 40: same shot later — slow real forward push, butterflyfish pass early; 32: other table reef in lighter cyan water with damselfish school, swaying hover, no butterflyfish entry"
+    }
+  },
+  "clip_shot_map": {
+    "01": {
+      "key": "B1",
+      "shot": "S03",
+      "kind": "plain",
+      "source_start_s": 394.5,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "02": {
+      "key": "d4a",
+      "shot": "S17",
+      "kind": "rev",
+      "source_start_s": 597.0,
+      "duration_s": 8.6,
+      "frames": 258
+    },
+    "03": {
+      "key": "f06",
+      "shot": "S10",
+      "kind": "plain",
+      "source_start_s": 474.0,
+      "duration_s": 8.4,
+      "frames": 252
+    },
+    "04": {
+      "key": "d7b",
+      "shot": "S20",
+      "kind": "pan",
+      "source_start_s": 625.9,
+      "duration_s": 6.0,
+      "frames": 180
+    },
+    "05": {
+      "key": "f07",
+      "shot": "S11",
+      "kind": "plain",
+      "source_start_s": 484.0,
+      "duration_s": 10.4,
+      "frames": 312
+    },
+    "06": {
+      "key": "d2b",
+      "shot": "S03",
+      "kind": "zoom:1.30:0.5:0.5",
+      "source_start_s": 394.5,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "07": {
+      "key": "d5c",
+      "shot": "S21",
+      "kind": "zoom:1.60:0.60:0.48",
+      "source_start_s": 650.0,
+      "duration_s": 8.8,
+      "frames": 264
+    },
+    "08": {
+      "key": "f09",
+      "shot": "S12",
+      "kind": "plain",
+      "source_start_s": 513.5,
+      "duration_s": 9.0,
+      "frames": 270
+    },
+    "09": {
+      "key": "d6b",
+      "shot": "S22",
+      "kind": "plain",
+      "source_start_s": 666.0,
+      "duration_s": 10.0,
+      "frames": 300
+    },
+    "10": {
+      "key": "f02",
+      "shot": "S06",
+      "kind": "plain",
+      "source_start_s": 423.4,
+      "duration_s": 7.1,
+      "frames": 213
+    },
+    "11": {
+      "key": "f13",
+      "shot": "S19",
+      "kind": "plain",
+      "source_start_s": 617.0,
+      "duration_s": 8.4,
+      "frames": 252
+    },
+    "12": {
+      "key": "f08",
+      "shot": "S12",
+      "kind": "plain",
+      "source_start_s": 495.0,
+      "duration_s": 10.0,
+      "frames": 300
+    },
+    "13": {
+      "key": "A1",
+      "shot": "S01",
+      "kind": "plain",
+      "source_start_s": 365.0,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "14": {
+      "key": "d2d",
+      "shot": "S02",
+      "kind": "plain",
+      "source_start_s": 380.6,
+      "duration_s": 8.6,
+      "frames": 258
+    },
+    "15": {
+      "key": "d2c",
+      "shot": "S05",
+      "kind": "plain",
+      "source_start_s": 415.6,
+      "duration_s": 7.3,
+      "frames": 219
+    },
+    "16": {
+      "key": "d3c",
+      "shot": "S16",
+      "kind": "plain",
+      "source_start_s": 589.5,
+      "duration_s": 6.8,
+      "frames": 204
+    },
+    "17": {
+      "key": "f03",
+      "shot": "S08",
+      "kind": "plain",
+      "source_start_s": 437.0,
+      "duration_s": 8.0,
+      "frames": 240
+    },
+    "18": {
+      "key": "f15",
+      "shot": "S24",
+      "kind": "plain",
+      "source_start_s": 709.0,
+      "duration_s": 11.5,
+      "frames": 345
+    },
+    "19": {
+      "key": "A2",
+      "shot": "S16",
+      "kind": "plain",
+      "source_start_s": 582.5,
+      "duration_s": 7.5,
+      "frames": 225
+    },
+    "20": {
+      "key": "d6c",
+      "shot": "S23",
+      "kind": "plain",
+      "source_start_s": 690.0,
+      "duration_s": 8.4,
+      "frames": 252
+    },
+    "21": {
+      "key": "f11",
+      "shot": "S15",
+      "kind": "plain",
+      "source_start_s": 558.5,
+      "duration_s": 7.5,
+      "frames": 225
+    },
+    "22": {
+      "key": "d7a",
+      "shot": "S20",
+      "kind": "zoom:1.25:0.5:0.5",
+      "source_start_s": 625.9,
+      "duration_s": 6.0,
+      "frames": 180
+    },
+    "23": {
+      "key": "f14",
+      "shot": "S24",
+      "kind": "plain",
+      "source_start_s": 699.0,
+      "duration_s": 8.0,
+      "frames": 240
+    },
+    "24": {
+      "key": "d3a",
+      "shot": "S16",
+      "kind": "rev",
+      "source_start_s": 582.5,
+      "duration_s": 7.5,
+      "frames": 225
+    },
+    "25": {
+      "key": "d1a",
+      "shot": "S01",
+      "kind": "rev",
+      "source_start_s": 365.0,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "26": {
+      "key": "d2a",
+      "shot": "S03",
+      "kind": "plain",
+      "source_start_s": 389.9,
+      "duration_s": 6.5,
+      "frames": 195
+    },
+    "27": {
+      "key": "d4b",
+      "shot": "S18",
+      "kind": "plain",
+      "source_start_s": 606.6,
+      "duration_s": 8.0,
+      "frames": 240
+    },
+    "28": {
+      "key": "f01",
+      "shot": "S04",
+      "kind": "plain",
+      "source_start_s": 404.3,
+      "duration_s": 9.0,
+      "frames": 270
+    },
+    "29": {
+      "key": "f16",
+      "shot": "S25",
+      "kind": "plain",
+      "source_start_s": 721.5,
+      "duration_s": 8.4,
+      "frames": 252
+    },
+    "30": {
+      "key": "f12",
+      "shot": "S15",
+      "kind": "plain",
+      "source_start_s": 566.0,
+      "duration_s": 6.8,
+      "frames": 204
+    },
+    "31": {
+      "key": "f05",
+      "shot": "S09",
+      "kind": "plain",
+      "source_start_s": 463.0,
+      "duration_s": 8.5,
+      "frames": 255
+    },
+    "32": {
+      "key": "d7d",
+      "shot": "S14",
+      "kind": "plain",
+      "source_start_s": 546.0,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "33": {
+      "key": "A4",
+      "shot": "S20",
+      "kind": "plain",
+      "source_start_s": 625.9,
+      "duration_s": 6.0,
+      "frames": 180
+    },
+    "34": {
+      "key": "d1c",
+      "shot": "S02",
+      "kind": "plain",
+      "source_start_s": 380.0,
+      "duration_s": 8.0,
+      "frames": 240
+    },
+    "35": {
+      "key": "f04",
+      "shot": "S08",
+      "kind": "plain",
+      "source_start_s": 451.0,
+      "duration_s": 9.0,
+      "frames": 270
+    },
+    "36": {
+      "key": "d5b",
+      "shot": "S21",
+      "kind": "rev",
+      "source_start_s": 656.0,
+      "duration_s": 8.8,
+      "frames": 264
+    },
+    "37": {
+      "key": "d1b",
+      "shot": "S01",
+      "kind": "plain",
+      "source_start_s": 372.3,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "38": {
+      "key": "f10",
+      "shot": "S12",
+      "kind": "plain",
+      "source_start_s": 524.0,
+      "duration_s": 12.0,
+      "frames": 360
+    },
+    "39": {
+      "key": "B2",
+      "shot": "S17",
+      "kind": "plain",
+      "source_start_s": 597.0,
+      "duration_s": 8.6,
+      "frames": 258
+    },
+    "40": {
+      "key": "d7c",
+      "shot": "S20",
+      "kind": "plain",
+      "source_start_s": 636.0,
+      "duration_s": 7.0,
+      "frames": 210
+    },
+    "41": {
+      "key": "d5a",
+      "shot": "S21",
+      "kind": "plain",
+      "source_start_s": 647.4,
+      "duration_s": 8.0,
+      "frames": 240
+    },
+    "42": {
+      "key": "B3",
+      "shot": "S23",
+      "kind": "plain",
+      "source_start_s": 683.5,
+      "duration_s": 10.0,
+      "frames": 300
+    },
+    "43": {
+      "key": "d3b",
+      "shot": "S16",
+      "kind": "plain",
+      "source_start_s": 574.0,
+      "duration_s": 7.5,
+      "frames": 225
+    },
+    "44": {
+      "key": "d4c",
+      "shot": "S18",
+      "kind": "plain",
+      "source_start_s": 609.5,
+      "duration_s": 6.9,
+      "frames": 207
+    },
+    "45": {
+      "key": "d6a",
+      "shot": "S23",
+      "kind": "mirror",
+      "source_start_s": 683.5,
+      "duration_s": 10.0,
+      "frames": 300
+    },
+    "46": {
+      "key": "A3",
+      "shot": "S21",
+      "kind": "plain",
+      "source_start_s": 656.0,
+      "duration_s": 8.8,
+      "frames": 264
+    }
+  },
+  "total_frames": 1647,
+  "total_seconds": 54.9,
+  "motion_only_beats": [
+    "A1",
+    "B1",
+    "A2",
+    "B2",
+    "A3",
+    "B3",
+    "A4"
+  ],
+  "note": "Every beat has at least one same-excerpt variant (reverse / digital zoom / crop pan / mirror) whose thumbnails match the key; distinguishing requires temporal camera-motion analysis."
+}

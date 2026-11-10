@@ -1,0 +1,189 @@
+[
+ {
+  "id": "mae_co_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: pandemics, epidemics or other public health events?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_pandemic_covid",
+  "category": "Material Adverse Effect",
+  "question": "Does the MAE definition specifically refer to COVID-19 (by name) in its carve-outs?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"No\" if there is no pandemic carve-out."
+ },
+ {
+  "id": "mae_co_pandemic_measures",
+  "category": "Material Adverse Effect",
+  "question": "Does the pandemic carve-out specifically refer to governmental (or industry) responses/measures related to the pandemic (e.g., shutdowns, \"COVID-19 Measures\", quarantine or stay-at-home orders)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"No\" if there is no pandemic carve-out."
+ },
+ {
+  "id": "mae_di_pandemic",
+  "category": "Material Adverse Effect",
+  "question": "Is the pandemic/public-health carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_co_economic",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: general economic and/or financial (including capital/credit market) conditions?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_di_economic",
+  "category": "Material Adverse Effect",
+  "question": "Is the general economic/financial conditions carve-out subject to a \"disproportionate impact\" modifier?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" only if this carve-out exists AND it is expressly subject to a \"disproportionate effect\" exception (i.e., the carve-out does not apply to the extent the matter disproportionately affects the Target relative to other participants in its industry). If the carve-out does not exist, answer \"No\"."
+ },
+ {
+  "id": "mae_co_wnaf_scope",
+  "category": "Material Adverse Effect",
+  "question": "Which of the following does the MAE carve-out for calamities cover: war or terrorism, natural disasters, \"acts of God\", force majeure? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "\"act of God\"",
+   "Natural disaster",
+   "No",
+   "War or terrorism",
+   "force majeure"
+  ],
+  "note": "Select an item only if the carve-out expressly covers that category (e.g., select \"force majeure\" only if the words force majeure are used). Select only \"No\" if there is no such carve-out."
+ },
+ {
+  "id": "mae_di_wnaf",
+  "category": "Material Adverse Effect",
+  "question": "Which parts of the war/terrorism / natural disaster / act of God / force majeure carve-out are subject to a \"disproportionate impact\" modifier? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "\"act of God\"",
+   "Natural disaster",
+   "No",
+   "War or terrorism",
+   "force majeure"
+  ],
+  "note": "Select only \"No\" if no part of that carve-out is subject to a disproportionate-impact modifier (or there is no such carve-out)."
+ },
+ {
+  "id": "mae_co_required_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: actions required to be taken (or taken in compliance with) the merger agreement?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "mae_co_prohibited_actions",
+  "category": "Material Adverse Effect",
+  "question": "MAE carve-out: the Target's failure to take an action that is prohibited by the agreement (e.g., under the interim operating covenants) where the Buyer withheld consent?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ],
+  "note": "Answer \"Yes\" if the MAE definition (Target/Company MAE) excludes this category of events from what can constitute or be taken into account in determining an MAE."
+ },
+ {
+  "id": "oc_pandemic_carveout",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: does it include an exception for actions taken in response to the pandemic (e.g., COVID-19 measures)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "nc_pandemic_carveout",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants: do they include an exception for actions taken in response to the pandemic (e.g., COVID-19 measures)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "oc_past_practice",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: does it require operation in the ordinary course \"consistent with past practice\"?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "oc_efforts_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: what efforts standard qualifies the Target's obligation to operate in the ordinary course?",
+  "multi_select": false,
+  "options": [
+   "Commercially reasonable efforts",
+   "Flat covenant (no efforts standard)",
+   "Reasonable best efforts"
+  ]
+ },
+ {
+  "id": "oc_consent_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Ordinary-course covenant: is the Buyer's consent to deviate from the ordinary course a flat consent or one that may not be unreasonably withheld, conditioned or delayed?",
+  "multi_select": false,
+  "options": [
+   "Consent may not be unreasonably withheld, conditioned or delayed",
+   "Flat consent"
+  ]
+ },
+ {
+  "id": "nc_consent_standard",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants (list of prohibited actions): is the Buyer's consent a flat consent or one that may not be unreasonably withheld, conditioned or delayed?",
+  "multi_select": false,
+  "options": [
+   "Consent may not be unreasonably withheld, conditioned or delayed",
+   "Flat consent"
+  ]
+ },
+ {
+  "id": "nc_consent_application",
+  "category": "Operating and Efforts Covenant",
+  "question": "Negative interim operating covenants: does the \"not unreasonably withheld\" consent standard apply to all of the negative covenants or only to specified ones?",
+  "multi_select": false,
+  "options": [
+   "Applies only to specified negative covenants",
+   "Applies to all negative covenants"
+  ]
+ }
+]

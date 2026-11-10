@@ -1,0 +1,40 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-013"
+version = "0.1.0"
+description = "Implement the evaluation semantics of a time-series query language whose parser and storage layer are already in place, judged end to end."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out"
+language = "Go"
+source_repo = "prometheus/prometheus"
+base_tag = "v3.13.5"
+carved_files = 8
+carved_code_lines = 7460
+contract_symbols = 31
+lines_per_contract_symbol = 241
+required_tests = 2700
+regression_tests = 1128
+data_driven_cases = 2183
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 30720
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

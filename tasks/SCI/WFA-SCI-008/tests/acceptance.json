@@ -1,0 +1,9 @@
+{
+  "metric": "tracks.logP.metrics.RMSE",
+  "operator": "le",
+  "threshold": 1.2840029736584089,
+  "reference_count": 91,
+  "baseline_type": "reference_median",
+  "task_id": "WFA-SCI-008",
+  "equality_passes": true
+}

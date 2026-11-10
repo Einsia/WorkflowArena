@@ -1,0 +1,20 @@
+{
+  "metric": [
+    "aggregate.n_acc_models10",
+    "aggregate.n_med_models10"
+  ],
+  "operator": "lex_ge",
+  "threshold": [
+    23,
+    14
+  ],
+  "reference_count": 13,
+  "baseline_type": "same_targets_recomputed_reference_median",
+  "task_id": "WFA-SCI-001",
+  "equality_passes": true,
+  "coverage": {
+    "metric": "aggregate.n_targets_submitted",
+    "required": 10,
+    "invalid_ids": "invalid_ids_in_top10"
+  }
+}

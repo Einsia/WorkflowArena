@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-LAW-014",
+  "domain": "LAW",
+  "task_form": "LAW-ADJ",
+  "title": "Multi-defendant criminal case adjudication (dense-md-08)",
+  "budget_seconds": 14400,
+  "source": {
+    "dataset": "CMDL",
+    "file": "valid_big.jsonl",
+    "index": 2670,
+    "fact_sha256": "a850eda9fd7bb16054d53be0c1c27a5ffb256dfc5bbaa684fe7260043a412309",
+    "type": "Anonymized excerpts of official judicial facts and official legal texts; authored task and scoring contract",
+    "license": "Official judicial and legal texts: PRC Copyright Law, Article 5(1); no license grant over the upstream dataset as a whole is asserted.",
+    "license_evidence": "https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html",
+    "url": "https://github.com/littlebowlnju/CMDL"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

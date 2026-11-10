@@ -1,0 +1,10 @@
+{
+  "source_url": "https://github.com/statsmodels/statsmodels/pull/7973",
+  "repo": "https://github.com/statsmodels/statsmodels",
+  "merge_commit": "b0b0e5f4bf6818ac908ec46a8de139f8a8cc95c8",
+  "start_commit": "34255b7e4ad17d763f0d0b3eeaea20ab66750471",
+  "reference_patch_sha256": "3b3277654a86d996c38c4ed06847de089f3c65bfac881ce7484bdebb0dc1a678",
+  "license": "BSD-3-Clause",
+  "retrieved": "2026-10-23",
+  "bench_overlap_check": "PR 编号不在 SWE-bench(test)、FEA-Bench、AInsteinBench(msb) 清单中；SWE-bench Science 只含 issue 级修复题（按标题人工比对无重叠）"
+}

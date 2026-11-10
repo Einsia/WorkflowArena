@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "ConNF.Counting.Conclusions",
+  "build_targets": [
+    "ConNF.Counting.Conclusions"
+  ],
+  "names": [
+    "ConNF.card_tangle_le"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "ConNF"
+    ],
+    "target_file": "ConNF/Counting/Conclusions.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

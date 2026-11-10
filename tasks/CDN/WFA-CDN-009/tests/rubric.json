@@ -1,0 +1,679 @@
+{
+  "task_id": "WFA-CDN-009",
+  "scoring": "each item binary; group score = weight x passed/applicable items (conditional items marked N/A are removed from both numerator and denominator; weight shown is the nominal per-item weight when all items apply); total = sum (100). Group gates zero only that group; overall gates = deliverable missing/unopenable or cheating.",
+  "groups": [
+    {
+      "id": "G1",
+      "name_zh": "叙事与结构",
+      "name_en": "Narrative & structure",
+      "weight": 13,
+      "items": 7
+    },
+    {
+      "id": "G2",
+      "name_zh": "视觉设计与可读性",
+      "name_en": "Visual design & legibility",
+      "weight": 13,
+      "items": 8
+    },
+    {
+      "id": "G3",
+      "name_zh": "材料覆盖与隐藏考点",
+      "name_en": "Coverage & hidden checkpoints",
+      "weight": 20,
+      "items": 16
+    },
+    {
+      "id": "G4",
+      "name_zh": "逐页忠实度",
+      "name_en": "Per-slide fidelity",
+      "weight": 14,
+      "items": 8
+    },
+    {
+      "id": "G5",
+      "name_zh": "因果推理、反事实与计算",
+      "name_en": "Causal reasoning, counterfactuals & arithmetic",
+      "weight": 20,
+      "items": 10
+    },
+    {
+      "id": "G6",
+      "name_zh": "原生对象、动画与交付",
+      "name_en": "Native objects, animation & delivery",
+      "weight": 20,
+      "items": 11
+    }
+  ],
+  "gates": [
+    {
+      "id": "GATE0",
+      "scope": "整题",
+      "zh": "output/ 中 presentation.pptx、slides.pdf、script.md、evidence-index.csv、playback-check.md 五件齐全，且 pptx 能被 python-pptx 读出幻灯片。",
+      "en": "All five deliverables exist and the PPTX is parseable.",
+      "effect_zh": "全部判定记否，验收失败。"
+    },
+    {
+      "id": "GATE1",
+      "scope": "G6 组级",
+      "zh": "Windows 桌面版 PowerPoint 16.x 通过 COM Presentations.Open（ReadOnly 与 ReadWrite 各一次）打开，无错误、无修复提示（不得使用 OpenAndRepair）；将 pptx 单独复制到新文件夹、断网后再次打开同样无修复。",
+      "en": "Opens in Windows PowerPoint 16.x via COM (RO and RW) with no repair, also after copying alone to a new offline folder.",
+      "effect_zh": "G6 记 0；V07 记否；验收失败（连续分照常报告）。"
+    },
+    {
+      "id": "GATE2",
+      "scope": "整题",
+      "zh": "作弊/违规：访问评测隐藏文件、联网取材、以材料包以外来源的数据替换材料数据。",
+      "en": "Cheating / network use / hidden-file access.",
+      "effect_zh": "整题 0，验收失败。"
+    }
+  ],
+  "items": [
+    {
+      "id": "N01",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "8–10 页、16:9，含标题页与结束页，无空分隔页。",
+      "criterion_en": "8-10 slides, 16:9, title+closing, no empty dividers.",
+      "verify": "python-pptx: slide count 8–10, slide size ratio 16:9 (±1%); first slide = title slide (exempt from content check), last slide = closing; every other slide has ≥1 content element besides its title (no empty divider).",
+      "weight": 1.8571
+    },
+    {
+      "id": "N02",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "每页标题都是完整论断（含谓语的判断句），不是话题标签。",
+      "criterion_en": "Every title is a claim sentence.",
+      "verify": "Reviewer reads titles; any noun-phrase title ⇒ NO.",
+      "weight": 1.8571
+    },
+    {
+      "id": "N03",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "叙事顺序为：飞行中事件 → 向源头重建因果链（物理原因、制造环节、组织/监管因素可合并呈现）→ 防线评估 → 回答与边界；不得缺少阶段或顺序颠倒。",
+      "criterion_en": "Order: in-flight event → causal chain back to its origin (physical cause, manufacturing, organisational/oversight factors may be combined) → barrier evaluation → answer & limits; no stage missing or out of order.",
+      "verify": "Reviewer maps each slide to the four stages of instruction §2; any stage missing or out of order ⇒ NO.",
+      "weight": 1.8571
+    },
+    {
+      "id": "N04",
+      "tier": "mid",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "结束页用一句话直接回答问题并说明证据边界（“证据不支持的结论”清单的内容由 R10 判定）；不得新增材料外事实。",
+      "criterion_en": "Closing slide answers the question in one sentence and states the limits of the evidence (the content of the 'not supported' list is scored in R10); no facts from outside the material.",
+      "verify": "Reviewer reads the closing slide.",
+      "weight": 1.8571
+    },
+    {
+      "id": "N05",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "script.md 在 130–150 词/分钟内某一语速下（加讲稿声明的停顿）总时长落在 11–13 分钟，即讲稿词数 + 停顿折算须在 130×11 至 150×13 词当量（1430–1950）之间；逐页声明时长之和与 11–13 分钟总时长相符（±10%）；每页备注文字与讲稿该页一致。",
+      "criterion_en": "Script fits 11–13 min at some rate within 130–150 wpm plus declared pauses (word-equivalent 1430–1950); per-slide times sum within ±10%; notes = script.",
+      "verify": "Deterministic word count + python-pptx notes diff (normalised whitespace, ≥90% token overlap per slide).",
+      "weight": 1.8571
+    },
+    {
+      "id": "N06",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "为非结构工程听众解释以下全部术语：门塞（plug 与可用出口门的区别）、快速失压、事故调查机构的 probable cause / contributing to 用语。",
+      "criterion_en": "Explains door plug vs usable exit, rapid decompression, probable cause vs contributing.",
+      "verify": "Reviewer; any of the three unexplained ⇒ NO.",
+      "weight": 1.8571
+    },
+    {
+      "id": "N07",
+      "tier": "gate",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "全篇区分“调查机构已确立的事实 / 机构的分析判断 / 制作者自己的推断”，用一致的视觉编码，且没有任何一处把制作者推断标为机构结论。",
+      "criterion_en": "Consistent coding of established fact vs agency judgement vs own inference; no own inference labelled as agency finding.",
+      "verify": "Reviewer audits every coded element against the report wording.",
+      "weight": 1.8571
+    },
+    {
+      "id": "V01",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "正文（除图注/出处行外的占位符与文本框文字）有效字号 ≥20 pt（显式或继承字号 × 自动缩放比例）。",
+      "criterion_en": "Body text (placeholders and text boxes other than captions/source lines) is ≥20 pt at its effective size (explicit or inherited size × autofit scale).",
+      "verify": "checks.py cdc_layout.font_violations: run size = rPr@sz, else inherited (shape lstStyle → layout/master placeholder → master txStyles / presentation defaultTextStyle → 18 pt), × bodyPr/normAutofit@fontScale (estimated shrink when autofit stores no scale). Caption/source line = text starting with Source/Fig./Credit/… or a small box (<0.6 in) carrying a source/page reference. Tables, titles and chart text are not body. Any body run <20 pt ⇒ fail.",
+      "weight": 1.625
+    },
+    {
+      "id": "V02",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "图注、出处行、标题与表格文字有效字号 ≥12 pt。",
+      "criterion_en": "Captions, source lines, titles and table text are ≥12 pt at their effective size.",
+      "verify": "checks.py cdc_layout.font_violations (same size resolution as V01): any caption/source/title/table run <12 pt ⇒ fail.",
+      "weight": 1.625
+    },
+    {
+      "id": "V03",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "任一页要点 ≤6 条。",
+      "criterion_en": "≤6 bullets per slide.",
+      "verify": "checks.py cdc_layout.bullets_per_slide: per slide, non-empty paragraphs of body/object placeholders (unless buNone) plus paragraphs with explicit bullets (buChar/buAutoNum) in other text shapes; captions/source lines and connector-linked diagram nodes excluded; >6 on any slide ⇒ fail.",
+      "weight": 1.625
+    },
+    {
+      "id": "V04",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每个原生图表：每条可见坐标轴都有标题，数值轴标题注明单位；≥2 个系列的图表有图例。",
+      "criterion_en": "Every native chart: each visible axis has a title, the value-axis title states the unit, and charts with ≥2 series have a legend.",
+      "verify": "checks.py cdc_layout.chart_axis_issues: c:valAx/c:catAx/c:dateAx need c:title text unless c:delete=1; value-axis title must contain a unit token; c:legend required when ≥2 c:ser. Label legibility is not scored.",
+      "weight": 1.625
+    },
+    {
+      "id": "V05",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "报告原图裁切到相关图块并保留图例/比例尺/图号，原生标注准确指向所述部位。",
+      "criterion_en": "Report figures cropped legibly with legend/scale; native callouts point at the right feature.",
+      "verify": "Reviewer compares crop with source page.",
+      "weight": 1.625
+    },
+    {
+      "id": "V06",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "静态版面：任一页均无文字溢出文本框、无形状超出页面边界、无文字相互重叠（不含带动画的形状，后者由 V07 判定）。",
+      "criterion_en": "Static layout: on no slide does text overflow its box, a shape extend beyond the slide edge, or text overlap other text (shapes without animation; animated shapes are V07).",
+      "verify": "checks.py cdc_layout.layout_issues: estimated text height (characters × 0.5 em per line, 1.2 line height, effective sizes, insets) > 1.25 × box height + 6 pt without autofit ⇒ overflow; box beyond the slide by >1 % ⇒ fail; estimated text areas of two text shapes/tables intersecting by >5 % of the smaller ⇒ overlap. pass/fail.",
+      "weight": 1.625
+    },
+    {
+      "id": "V07",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "所有动画状态下均无遮挡：带动画的文字形状（逐次点击、任意顺序触发的触发器）不与同时可见的其他文字形状重叠，也不遮挡任一图片或图表面积的 30% 以上。",
+      "criterion_en": "No occlusion in any animation state: an animated text shape (click build; triggers fired in any order) never overlaps another text shape visible at the same time and never covers >30 % of a picture or chart.",
+      "verify": "checks.py cdc_layout.animation_occlusion: visibility states from p:timing (mainSeq click groups in order, interactiveSeq triggers in any order, exit effects hide), estimated text areas; pass/fail.",
+      "weight": 1.625
+    },
+    {
+      "id": "V08",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "全篇英文语法、拼写、单位与时间写法正确一致（ft、psi、PST/UTC、24 小时制）。",
+      "criterion_en": "English grammar, spelling, units and time notation correct and consistent throughout (ft, psi, PST/UTC, 24-hour clock).",
+      "verify": "Reviewer + spell check.",
+      "weight": 1.625
+    },
+    {
+      "id": "A01",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "交代事件基本事实：2024-01-05、该航班、737-9 及注册号、自 PDX 起飞前往 ONT、返航 PDX 落地，均与材料一致。",
+      "criterion_en": "Basic facts (date, flight, type/registration, PDX→ONT, return to PDX) correct.",
+      "verify": "answer-key K-BASIC (F10, P1).",
+      "weight": 1.25
+    },
+    {
+      "id": "A02",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "飞行时间线与 FDR 一致：1712:33 客舱压力骤降（约 14,830 ft）、1713:41 最高 16,320 ft 后下降、1726:46 落地（约 14 分钟后）。",
+      "criterion_en": "Timeline per FDR: 1712:33 at ~14,830 ft; max 16,320 ft at 1713:41; landed 1726:46 (~14 min).",
+      "verify": "answer-key K-TL (F16, F17, F20).",
+      "weight": 1.25
+    },
+    {
+      "id": "A03",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "伤情：1 名乘务员与 7 名乘客轻伤，无人送医；机长、副驾驶、3 名乘务员、164 名乘客未受伤（共 177 人）。不把另 2 名自行就医者计入伤者。",
+      "criterion_en": "Injuries: 1 FA + 7 pax minor, none hospitalised; 177 occupants; the 2 who sought observation are not counted as injured.",
+      "verify": "answer-key K-INJ (F10, F20 fn14).",
+      "weight": 1.25
+    },
+    {
+      "id": "A04",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "物证链：四颗螺栓孔无接触损伤/变形→螺栓在门塞上移前已缺失；垫圈淡痕→硬件曾经装过；密封区多条平行污线→前几次飞行中逐步上移。",
+      "criterion_en": "Physical evidence chain: no bolt-hole contact damage; washer outlines (hardware once installed); parallel dirt lines (incremental movement over prior flights).",
+      "verify": "answer-key K-PHYS (F99–F100).",
+      "weight": 1.25
+    },
+    {
+      "id": "A05",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "制造源头：五颗受损铆钉返工需打开门塞；门塞至迟 2023-09-18 10:53 已打开、至少到 09-19 17:09 仍开；09-19 第二班关闭，当时无门组人员在岗；无拆卸记录，故无质检；约 18:39 的照片显示可见三处无螺栓。全部要素齐全才通过。",
+      "criterion_en": "Manufacturing origin: five damaged rivets required opening the plug; the plug was open by 10:53 on 2023-09-18 and still open at least until 17:09 on 09-19; it was closed on the second shift of 09-19 with no door-team member on duty; there was no removal record, hence no QA inspection; the ~18:39 photo shows three bolts visibly missing. All elements required.",
+      "verify": "answer-key K-ORIGIN (F62–F65, F105–F106).",
+      "weight": 1.25
+    },
+    {
+      "id": "A06",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "按终报原文区分 probable cause（波音未提供足够培训、指导与监督以确保拆卸流程被遵守）与 contributing（FAA 合规执法监督与审计计划无效），不改写为追责/罚责措辞。",
+      "criterion_en": "Probable cause vs contributing per verbatim wording; no blame/liability rewording.",
+      "verify": "answer-key K-PC (F136).",
+      "weight": 1.25
+    },
+    {
+      "id": "A07",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "交代至少两项系统性因素并与终报结论对应：拆卸 BPI 缺乏清晰易用且有至少 10 年合规问题史；在岗培训无结构无记录；劳动力经验下降未做变更管理评估。",
+      "criterion_en": "≥2 systemic factors mapped to findings (BPI ≥10-yr history; unstructured OJT; workforce change mgmt).",
+      "verify": "answer-key K-SYS (F133–F134 findings 15,16,20,21).",
+      "weight": 1.25
+    },
+    {
+      "id": "A08",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "建议数量正确（新建议：FAA 11 条、波音 8 条；重申：FAA 4 条、A4A/NACA/RAA 1 条），并具体引用至少一条与门塞直接相关的建议。",
+      "criterion_en": "Recommendation counts correct (11 FAA, 8 Boeing; reiterated 4 + 1) plus ≥1 specific plug-related one.",
+      "verify": "answer-key K-REC (F1, F106).",
+      "weight": 1.25
+    },
+    {
+      "id": "H01",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 分离高度：以 FDR 约 14,830 ft（1712:33）为准；若出现初报中的“约 16,000 ft”（机组回忆）或“约 14,850 ft”（1 秒后主警告时刻），须标明其来源与含义，不得把 16,000 ft 当作分离高度，也不得把三者悄悄统一。",
+      "criterion_en": "[hidden] Separation altitude: FDR ~14,830 ft; 16,000 ft (crew recollection) / 14,850 ft (1 s later) labelled if used.",
+      "verify": "answer-key K-ALT (P3, P4, F16).",
+      "weight": 1.25
+    },
+    {
+      "id": "H02",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 发现初报自相矛盾：首页与末页伤情栏印“177 None / Total Injuries: 177 None”，而同一份初报正文写 7 名乘客与 1 名乘务员轻伤；简报保留原文并标出不一致，以终报为准，不悄悄改正。",
+      "criterion_en": "[hidden] Preliminary report's injury block (177 None) contradicts its own narrative (8 minor injuries); flagged, not silently fixed.",
+      "verify": "answer-key K-INJ177 (P1, P19 vs P1 narrative, F10).",
+      "weight": 1.25
+    },
+    {
+      "id": "H03",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 增压 AUTO FAIL 历史：初报/维修日志为 3 次（12-07、01-03、01-04），终报 CPC 记忆为 4 次飞行（另含 2023-11-10，投入运营前一天）；故障特征指向 CPC 的 UART 芯片间歇故障，且终报认定与门塞上移无关。计数须注明来源，结论不得写成“相关/预警”。",
+      "criterion_en": "[hidden] AUTO FAIL: 3 (logbook/preliminary) vs 4 (CPC memory incl. 2023-11-10); UART fault; not associated with plug.",
+      "verify": "answer-key K-AUTOFAIL (P8, F25, F48 fn43, F49, F132 #5).",
+      "weight": 1.25
+    },
+    {
+      "id": "H04",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 指出门塞旁 26A、26B 当时空座（已值机的两人迟到改签），并据此说明伤情轻微带有偶然性，不能据“仅轻伤”推断风险低。",
+      "criterion_en": "[hidden] 26A/26B vacant (late passengers rebooked); outcome severity contingent.",
+      "verify": "answer-key K-SEATS (F18 fn12, F39 fn35).",
+      "weight": 1.25
+    },
+    {
+      "id": "H05",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 说明调查未能确定是谁打开、谁最终关闭门塞；不把“move crew”或 Spirit 人员写成关闭/打开者（波音高管曾在媒体会上称 move crew 关闭，后同意访谈并未确认；NTSB 因此限制波音获取调查信息）。",
+      "criterion_en": "[hidden] Who opened/closed undetermined; no attribution to 'move crew' or Spirit.",
+      "verify": "answer-key K-WHO (F60, F66 fn60, F133 #13, F105).",
+      "weight": 1.25
+    },
+    {
+      "id": "H06",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏·条件项] 仅当简报（页面、备注或讲稿）引用“最有经验的门组成员在门塞开启当天休假”这一事实时计分：须写日期 2023-09-18/19，并注明终报原文脚注（印刷 p55）误印为 2024 的不一致；照抄 2024 或悄悄改为 2023 不加说明均判否。未引用该事实时本项记 N/A，不计入 G3 分母。",
+      "criterion_en": "[hidden, conditional] Only if the deck cites the experienced door member's leave: dates must be 2023-09-18/19 with the printed '2024' typo flagged. Not cited ⇒ N/A, excluded from the G3 denominator.",
+      "verify": "answer-key K-TYPO (F69 vs F62–F63). Reviewer first decides applicable (fact cited anywhere in slides/notes/script) or N/A.",
+      "weight": 1.25,
+      "conditional": true,
+      "applicable_prob": 0.3
+    },
+    {
+      "id": "H07",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 说明终报未能评估波音安全文化及生产线是否存在不良（生产）压力（样本小、罢工阻碍问卷）；简报不得把“赶产压力导致”作为已确立原因。",
+      "criterion_en": "[hidden] Safety culture / adverse production pressure could not be assessed; not asserted as cause.",
+      "verify": "answer-key K-CULTURE (F135 #27).",
+      "weight": 1.25
+    },
+    {
+      "id": "H08",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 若简报提及门塞设计改进（二次止动装置、螺栓挂绳）：按报告时状态描述——截至 2025 年 5 月仍在取证，新机预计 2026 年起安装，在役机靠服务通告/AD 改装；不得说已装机或已强制。未提及则本项通过。",
+      "criterion_en": "[hidden] If the deck refers to the door-plug design enhancement (secondary retention device, bolt lanyards): described at its report-time status — still in certification as of May 2025, production installation expected from 2026, in-service fleet via service bulletin/AD; never as already installed or mandated. If the deck does not refer to it, this item passes.",
+      "verify": "answer-key K-DESIGN (F106).",
+      "weight": 1.25
+    },
+    {
+      "id": "F01",
+      "tier": "base",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 1 页（标题页）（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 1 (title slide) (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F02",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 2 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 2 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F03",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 3 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 3 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F04",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 4 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 4 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F05",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 5 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 5 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F06",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 6 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 6 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F07",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 7 页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slide 7 (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "F08",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 8 页至最后一页（文字、图表数据、标注与备注）：每个数字/时刻/日期/计数都可追溯（在输入材料中印有、在 answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导值），且没有任何一处与 answer-key 矛盾；出现一处无法追溯或矛盾即判否。",
+      "criterion_en": "Slides 8 to the last slide (text, chart data, callouts, notes): every number/time/date/count is traceable (printed in the input material, in the answer key, or declared as a derived value in an evidence-index.csv row for this slide) and none contradicts the answer key; one untraceable or contradicting fact fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 1.75
+    },
+    {
+      "id": "R01",
+      "tier": "mid",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "因果链各环节顺序正确且无材料外环节，每个箭头标出支持它的证据类型（FDR、物证、制造记录/照片/短信、访谈）。",
+      "criterion_en": "Causal chain correctly ordered, no invented link, each link labelled with evidence type.",
+      "verify": "Reviewer vs answer-key chain.",
+      "weight": 2.0
+    },
+    {
+      "id": "R02",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "日期/时长算术至少两项正确并注明口径：开启(09-18)→事故 109 天；交付(10-31)→事故 66 天；投运(11-11)→事故 55 天；分离→落地约 14 分 13 秒；510 小时/154 循环为原文值。",
+      "criterion_en": "≥2 correct date/duration computations with basis (109 / 66 / 55 days; 14 min 13 s).",
+      "verify": "answer-key K-ARITH.",
+      "weight": 2.0
+    },
+    {
+      "id": "R03",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "反事实：说明按波音工程评估，只要一颗下部垂直止动螺栓、或两颗上导轨螺栓在位，门塞就不会上移脱出——事故需要四颗全部缺失；据此论证“复装任何一部分硬件”都是有效防线。",
+      "criterion_en": "Counterfactual: one arrestor bolt alone, or both upper guide bolts, would have prevented separation; all four had to be absent.",
+      "verify": "answer-key K-REDUND (F47, F98).",
+      "weight": 2.0
+    },
+    {
+      "id": "R04",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "反事实措辞分寸：短戳流程若正确使用“可能提供发现机会”（may），不得写成“必然阻止”；拆卸记录被写为规定的主防线（触发复装步骤与质检）。",
+      "criterion_en": "Short-stamp barrier hedged as 'may have provided an opportunity'; removal record framed as the required barrier.",
+      "verify": "answer-key K-SHORTSTAMP (F134 #22, F133 #14, F134 #18).",
+      "weight": 2.0
+    },
+    {
+      "id": "R05",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "把两条“看似防线”判为不能阻止：例行航前绕机检查无法察觉此前的上移（终报结论 4）；因 AUTO FAIL 停飞/排故与门塞无关（结论 5）。两条都须出现且判定正确。",
+      "criterion_en": "Both tempting barriers rejected: routine preflight walkaround (finding 4) and AUTO FAIL grounding (finding 5).",
+      "verify": "answer-key K-PREFLIGHT, K-AUTOFAIL.",
+      "weight": 2.0
+    },
+    {
+      "id": "R06",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "监管防线：用 2022-10 至 2023-09 FAA 在 Renton 的审计记录 68 项“被指控不合规”无一涉及拆卸 BPI、而 2018–2023 有 16 项与该 BPI 相关的合规问题（波音自报 9、FAA 发现 7），论证 FAA 为何是“促成因素”；保留 alleged 的限定。",
+      "criterion_en": "FAA barrier argued from 68 alleged noncompliances (none on BPI) vs 16 BPI issues 2018–2023 (9/7); 'alleged' kept.",
+      "verify": "answer-key K-FAA (F81–F82).",
+      "weight": 2.0
+    },
+    {
+      "id": "R07",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "若简报呈现门塞开启历史：次数与架数不混用（2018 年以来 62 次/28 架；Renton 24 次/15 架；外场 38 次/13 架；Renton 2021/2022/2023 的 1/2/4 为每年受影响飞机架数而非次数），图表/文字不得把次数与架数混画或互换。未呈现则本项通过。",
+      "criterion_en": "If the deck shows the plug-opening history: instances vs airplanes are not mixed (since 2018 62 instances on 28 airplanes; Renton 24/15; field 38/13; Renton 2021/2022/2023 values 1/2/4 are airplanes per year, not instances); charts/text never plot or swap instances and airplanes. If the deck does not show it, this item passes.",
+      "verify": "answer-key K-PLUGHIST (F69 fn62).",
+      "weight": 2.0
+    },
+    {
+      "id": "R08",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "解释“为何飞了 154 个循环才脱落”：静态需 >150 lb 才能推动（右侧门塞样件），但动态载荷可使有效重量降到约 25 lb（0.40–0.45 g，估计误差约 ±0.15 g，标称 63 lb），导致逐步上移；不夸大为精确测量。",
+      "criterion_en": "Explains delayed separation: static >150 lb vs dynamic effective weight ~25 lb (0.40–0.45 g, ±0.15 g; nominal 63 lb).",
+      "verify": "answer-key K-LOADS (F45–F47, F99).",
+      "weight": 2.0
+    },
+    {
+      "id": "R09",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "回答区分系统性原因（培训、指导、监督、监管）与个人差错，不指认个人，也不把结论推广为材料未支持的“机队/全行业普遍缺陷”。",
+      "criterion_en": "Systemic vs individual separated; no individual named; no unsupported generalisation.",
+      "verify": "Reviewer.",
+      "weight": 2.0
+    },
+    {
+      "id": "R10",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "结束页“证据不支持的结论”中至少一条对应 H03、H05 或 H07 且表述忠实。",
+      "criterion_en": "Closing 'not supported' list includes ≥1 of H03/H05/H07 faithfully.",
+      "verify": "Reviewer.",
+      "weight": 2.0
+    },
+    {
+      "id": "D01",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "slides.pdf 与 pptx 页数相同，内容对应。",
+      "criterion_en": "slides.pdf matches deck.",
+      "verify": "Page count + title text match.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D02",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 列齐全（页号、元素、论断、源文件、印刷页、PDF 页、图表/章节号、变换），且每页至少一行。",
+      "criterion_en": "evidence-index.csv has all columns and ≥1 row per slide.",
+      "verify": "csv parse.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D03",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "演讲者备注非空且每页都有；标明 AI 协助制作与源文件署名，无背书暗示。",
+      "criterion_en": "Notes on every slide; AI disclosure and source credit; no endorsement.",
+      "verify": "python-pptx notes + text search.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D04",
+      "tier": "base",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "≥2 个原生图表（GraphicFrame/chart part，非图片），COM ChartData.Activate() 均成功，嵌入工作簿首表含所绘数值、单位与出处页。",
+      "criterion_en": "≥2 native charts; ChartData.Activate succeeds; workbook lists plotted values, units, source pages.",
+      "verify": "COM ChartData.Activate + openpyxl on embedded xlsx.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D05",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "每个绘制数值与嵌入工作簿对应单元格一致，且为材料（或 answer-key）中印有的数值或工作簿实时公式结果；无编造的中间点；数值所属阶段/口径正确。",
+      "criterion_en": "Every plotted value equals its embedded-workbook cell and is a value printed in the material (or the answer key) or a live workbook formula; no invented points; values are plotted with their correct stage/basis.",
+      "verify": "checks.py (fail-only): c:numCache vs workbook cell; each value found in pdftotext of the input PDFs / the answer key, or its cell is a formula; any miss ⇒ fail. Otherwise judge decides stage/basis from the chart_data (series names, categories, values) and workbook cell_values evidence.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D06",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "≥2 幅报告真实原图（从 PDF 提取/裁切，非重绘）并配原生可编辑标注。",
+      "criterion_en": "≥2 real report figures with native editable callouts.",
+      "verify": "Image hash/visual match to PDF page render; callouts are autoshapes/text boxes.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D07",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "因果链页：链条由原生形状与连接线（cxnSp 连接到形状）组成，≥5 个单击进入效果按顺序揭示独立形状，在 PowerPoint 放映中逐次执行。",
+      "criterion_en": "Causal-chain slide: native shapes+connectors, ≥5 on-click entrance effects revealing separate shapes, executes in slideshow.",
+      "verify": "COM: TimeLine.MainSequence count/trigger type msoAnimTriggerOnPageClick; slideshow stepping screenshots.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D08",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "反事实页：≥3 个防线形状各自是交互触发器（COM TimeLine.InteractiveSequences，TriggerType = msoAnimTriggerOnShapeClick，TriggerShape 为该防线形状），单击后揭示独立可编辑说明；放映中逐个点击确实触发，且不是超链接/跳页/主序列点击。",
+      "criterion_en": "≥3 barrier shapes each with an on-shape-click InteractiveSequence revealing a separate editable explanation; works in slideshow.",
+      "verify": "COM InteractiveSequences enumeration + slideshow click via SlideShowWindow coordinates; screenshot before/after each.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D09",
+      "tier": "gate",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "单独复制 pptx 到新文件夹断网放映，图表、图片、动画与触发器均正常（无外链、无缺失图片红叉）。",
+      "criterion_en": "Copied alone offline: charts, images, animations, triggers all work; no external links.",
+      "verify": "COM LinkFormat scan + slideshow run in copy folder.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D10",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "核心数值与结论在页面、备注、图表工作簿、讲稿、PDF 与证据索引间一致（以 answer-key.json 各 checkpoint 的 answer 字段关键量为准，全部一致才通过）。",
+      "criterion_en": "Key numbers consistent across all artefacts.",
+      "verify": "Scripted string match of key values across artefacts + reviewer.",
+      "weight": 1.8182
+    },
+    {
+      "id": "D11",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "playback-check.md 写明软件与版本、具体步骤与结果、未能验证的内容，且没有与 PPTX 结构摘要相矛盾的声称（如声称有触发器/图表/嵌入工作簿而实际没有）。",
+      "criterion_en": "playback-check.md names software and version, lists concrete steps and results, lists what could not be verified, and makes no claim contradicted by the deck's structure summary (e.g. claims triggers/charts/embedded workbooks that are absent).",
+      "verify": "Judge: playback-check.md vs the pptx structure summary in the evidence (charts, embedded workbooks, animation/trigger counts).",
+      "weight": 1.8182
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-DOC",
+    "all_critical_items_must_pass": true
+  }
+}

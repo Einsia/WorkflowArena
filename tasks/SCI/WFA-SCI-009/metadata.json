@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-009",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "Equation-of-state precision verification with plane-wave pseudopotential DFT: 10 crystals",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal article + Materials Cloud Archive data and scripts",
+    "url": "https://doi.org/10.1038/s42254-023-00655-3",
+    "revision": "materialscloud:s4-3h (ACWF-verification-data-and-scripts.zip md5 6bd97a883b439507d0be4638c1bc7514; scripts commit 83837daf4532b3bfdc03bceaa28a649d698f62d2)",
+    "license": "CC-BY-4.0 (archive); scripts MIT",
+    "distribution": "upstream-fetch",
+    "preparation": "environment/fetch/sources.json"
+  }
+}

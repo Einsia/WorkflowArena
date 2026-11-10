@@ -1,0 +1,268 @@
+{
+  "task_id": "WFA-CDN-004",
+  "reviewer_only": true,
+  "beats": {
+    "fps": 30,
+    "total_frames": 858,
+    "slots": [
+      {
+        "slot": 1,
+        "start_frame": 0,
+        "end_frame": 150,
+        "accent_frame": 72
+      },
+      {
+        "slot": 2,
+        "start_frame": 150,
+        "end_frame": 276,
+        "accent_frame": 204
+      },
+      {
+        "slot": 3,
+        "start_frame": 276,
+        "end_frame": 420,
+        "accent_frame": 360
+      },
+      {
+        "slot": 4,
+        "start_frame": 420,
+        "end_frame": 534,
+        "accent_frame": 480
+      },
+      {
+        "slot": 5,
+        "start_frame": 534,
+        "end_frame": 690,
+        "accent_frame": 630
+      },
+      {
+        "slot": 6,
+        "start_frame": 690,
+        "end_frame": 858,
+        "accent_frame": 780
+      }
+    ]
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "correct_source": "09",
+      "segment_frames": 150,
+      "output_range": [
+        0,
+        150
+      ],
+      "accent_frame": 72,
+      "change_window_source_frames": [
+        97,
+        102
+      ],
+      "nominal_change_source_frame": 97,
+      "feasible_source_start_range": [
+        25,
+        30
+      ],
+      "near_miss": [
+        {
+          "id": "18",
+          "why": "same platform/void, ends before flash (pre-state only)"
+        },
+        {
+          "id": "11",
+          "why": "starts already bright after flash (post-state only), machine ball, other white flash"
+        },
+        {
+          "id": "13",
+          "why": "old man close-up, strobing background -> white-out (same change type, different content)"
+        },
+        {
+          "id": "21",
+          "why": "platform in void wide (earlier), no flash; boy close-up; two-shot"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "correct_source": "16",
+      "segment_frames": 126,
+      "output_range": [
+        150,
+        276
+      ],
+      "accent_frame": 204,
+      "change_window_source_frames": [
+        141,
+        148
+      ],
+      "nominal_change_source_frame": 143,
+      "feasible_source_start_range": [
+        87,
+        94
+      ],
+      "near_miss": [
+        {
+          "id": "26",
+          "why": "close-ups in green room -> hatch lamp lit, ends before black (pre-state only)"
+        },
+        {
+          "id": "43",
+          "why": "starts in black, engine room fades up (post-state only)"
+        },
+        {
+          "id": "23",
+          "why": "engine room already lit throughout"
+        }
+      ]
+    },
+    {
+      "slot": 3,
+      "correct_source": "06",
+      "segment_frames": 144,
+      "output_range": [
+        276,
+        420
+      ],
+      "accent_frame": 360,
+      "change_window_source_frames": [
+        120,
+        171
+      ],
+      "nominal_change_source_frame": 129,
+      "feasible_source_start_range": [
+        36,
+        87
+      ],
+      "near_miss": [
+        {
+          "id": "31",
+          "why": "boy profile / same bare room, ends before cables appear (pre-state only)"
+        },
+        {
+          "id": "04",
+          "why": "left wall already covered (post-state), close-up, old man, tiled wall intact (also D4 pre-only)"
+        },
+        {
+          "id": "37",
+          "why": "boy inside cable jungle (cables throughout), old man close-up"
+        }
+      ]
+    },
+    {
+      "slot": 4,
+      "correct_source": "44",
+      "segment_frames": 114,
+      "output_range": [
+        420,
+        534
+      ],
+      "accent_frame": 480,
+      "change_window_source_frames": [
+        108,
+        123
+      ],
+      "nominal_change_source_frame": 116,
+      "feasible_source_start_range": [
+        48,
+        63
+      ],
+      "near_miss": [
+        {
+          "id": "12",
+          "why": "starts in orange cable world, tile fragments fly (post-state only)"
+        },
+        {
+          "id": "39",
+          "why": "boy against green tiled wall, room wide; no breach"
+        },
+        {
+          "id": "04",
+          "why": "left wall already covered (post-state), close-up, old man, tiled wall intact (also D4 pre-only)"
+        },
+        {
+          "id": "37",
+          "why": "boy inside cable jungle (cables throughout), old man close-up"
+        }
+      ]
+    },
+    {
+      "slot": 5,
+      "correct_source": "05",
+      "segment_frames": 156,
+      "output_range": [
+        534,
+        690
+      ],
+      "accent_frame": 630,
+      "change_window_source_frames": [
+        183,
+        213
+      ],
+      "nominal_change_source_frame": 195,
+      "feasible_source_start_range": [
+        87,
+        117
+      ],
+      "near_miss": [
+        {
+          "id": "15",
+          "why": "boy close-up -> old man before golden curtain, ends before machines (pre-state only)"
+        },
+        {
+          "id": "28",
+          "why": "machines already present (post-state only) -> wide -> crawl"
+        },
+        {
+          "id": "33",
+          "why": "old man warm close-ups, cable floor, boy close-up; no machines appearing"
+        },
+        {
+          "id": "29",
+          "why": "old man already in cold green streaks (post-state only) -> face -> over boy (also D5 look-alike)"
+        }
+      ]
+    },
+    {
+      "slot": 6,
+      "correct_source": "34",
+      "segment_frames": 168,
+      "output_range": [
+        690,
+        858
+      ],
+      "accent_frame": 780,
+      "change_window_source_frames": [
+        165,
+        213
+      ],
+      "nominal_change_source_frame": 174,
+      "feasible_source_start_range": [
+        75,
+        123
+      ],
+      "near_miss": [
+        {
+          "id": "29",
+          "why": "old man already in cold green streaks (post-state only) -> face -> over boy (also D5 look-alike)"
+        },
+        {
+          "id": "02",
+          "why": "warm only: floor, boy, automatons, old man in orange, ends before colour drains (pre-state only)"
+        },
+        {
+          "id": "24",
+          "why": "old man over fallen boy in cold dark, static"
+        },
+        {
+          "id": "25",
+          "why": "cables slowly fade to black (different dimming change)"
+        }
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "at": "2026-10-24 threshold review",
+      "note": "T1/T2/T3/T4/T6 change windows tightened to measured onset of the later state (luma/chroma per-frame); see review-fixes.md"
+    }
+  ]
+}

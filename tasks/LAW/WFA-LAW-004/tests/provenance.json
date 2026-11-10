@@ -1,0 +1,30 @@
+{
+  "source": "MAUD: Merger Agreement Understanding Dataset (The Atticus Project et al., arXiv:2301.00876)",
+  "url": "https://github.com/TheAtticusProject/maud",
+  "sha256": "75af5a33d038e9254864f043da38072490ffe11e8488d58d0a2dd39c8f554519",
+  "files_used": [
+    "data/MAUD_{train,dev,test}.csv (data_type=='main' rows)",
+    "data/contracts/*.txt",
+    "data/raw/main.csv (filenames only)"
+  ],
+  "license": "CC-BY-4.0 (MAUD dataset)",
+  "agreements": {
+    "A01": "contract_77",
+    "A02": "contract_132",
+    "A03": "contract_17",
+    "A04": "contract_50",
+    "A05": "contract_15",
+    "A06": "contract_112",
+    "A07": "contract_136",
+    "A08": "contract_78",
+    "A09": "contract_0",
+    "A10": "contract_62",
+    "A11": "contract_124",
+    "A12": "contract_64",
+    "A13": "contract_151",
+    "A14": "contract_27",
+    "A15": "contract_133"
+  },
+  "text_processing": "BOM removed, CRLF->LF, trailing spaces stripped, 3+ blank lines collapsed; party names / tickers / selected product names pseudonymized and e-mails, URLs, signatory and notice-recipient names redacted; legal wording, numbers, dates and section references unchanged",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+}

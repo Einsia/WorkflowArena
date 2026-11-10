@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/PrimeNumberTheoremAnd"]
+
+[task]
+name = "WFA-MATH-011"
+version = "0.1.0"
+description = "Complete the proof of StrongPNT in a cut-down start state of AlexKontorovich/PrimeNumberTheoremAnd (Prime number theorem with classical error term)"
+
+[metadata]
+domain = "MATH"
+subcategory = "MATH-PROOF"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 14400
+cpus = 32
+memory_mb = 65536
+storage_mb = 61440
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 32
+memory_mb = 65536
+storage_mb = 61440

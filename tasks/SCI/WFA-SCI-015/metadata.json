@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-015",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "Practical issues in real-time estimation of the effective reproduction number R_t: method comparison, generation-interval misspecification, smoothing windows and reporting delays (paper reproduction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal paper + author code repository",
+    "url": "https://github.com/cobeylab/Rt_estimation",
+    "revision": "commit d9d8977ba8492ac1a3b8287d2f470b313bfb9f1d (2020-11-30)",
+    "license": "Synthetic simulation outputs; cited paper CC-BY-4.0. Upstream R implementation is not redistributed.",
+    "license_evidence": "https://doi.org/10.1371/journal.pcbi.1008409"
+  }
+}

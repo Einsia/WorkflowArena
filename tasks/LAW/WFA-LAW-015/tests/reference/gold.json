@@ -1,0 +1,669 @@
+{
+  "task_id": "WFA-LAW-015",
+  "source": {
+    "dataset": "MultiLJP (CURRENTF/HRN dataset-v5, data_v5.03)",
+    "record": "train-17534"
+  },
+  "ungraded_circumstances": [],
+  "corrections": [
+    "布X、黄X2 为匿名化遗漏的同案被告人，MultiLJP 未标注，题目不要求作答"
+  ],
+  "defendants": {
+    "[被告A]": {
+      "original_code": "[被告J]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 42,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑三年六个月"
+      }
+    },
+    "[被告B]": {
+      "original_code": "[被告E]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 17,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑一年五个月"
+      }
+    },
+    "[被告C]": {
+      "original_code": "[被告Q]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 17,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年五个月"
+      }
+    },
+    "[被告D]": {
+      "original_code": "[被告F]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 45,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑三年九个月"
+      }
+    },
+    "[被告E]": {
+      "original_code": "[被告D]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 28,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑二年四个月"
+      }
+    },
+    "[被告F]": {
+      "original_code": "[被告L]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 19,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑一年七个月"
+      }
+    },
+    "[被告G]": {
+      "original_code": "[被告C]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 48,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯"
+        ],
+        "term": "有期徒刑四年"
+      }
+    },
+    "[被告H]": {
+      "original_code": "[被告G]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 19,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年七个月"
+      }
+    },
+    "[被告I]": {
+      "original_code": "[被告M]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 20,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑一年八个月"
+      }
+    },
+    "[被告J]": {
+      "original_code": "[被告A]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 20,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年八个月"
+      }
+    },
+    "[被告K]": {
+      "original_code": "[被告K]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 17,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑一年五个月"
+      }
+    },
+    "[被告L]": {
+      "original_code": "[被告H]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 13,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年一个月"
+      }
+    },
+    "[被告M]": {
+      "original_code": "[被告P]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 16,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年四个月"
+      }
+    },
+    "[被告N]": {
+      "original_code": "[被告R]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 13,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年一个月"
+      }
+    },
+    "[被告O]": {
+      "original_code": "[被告I]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 72,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑六年"
+      }
+    },
+    "[被告P]": {
+      "original_code": "[被告O]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 18,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑一年六个月"
+      }
+    },
+    "[被告Q]": {
+      "original_code": "[被告B]",
+      "charges": [
+        "诈骗罪",
+        "故意伤害罪"
+      ],
+      "articles": [
+        234,
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯",
+        "故意伤害罪": "不区分"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 77,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪",
+          "故意伤害罪"
+        ],
+        "laws": [
+          266,
+          234
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑六年五个月"
+      }
+    },
+    "[被告R]": {
+      "original_code": "[被告N]",
+      "charges": [
+        "诈骗罪"
+      ],
+      "articles": [
+        266
+      ],
+      "roles": {
+        "诈骗罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 31,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "诈骗罪"
+        ],
+        "laws": [
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑二年七个月"
+      }
+    }
+  }
+}

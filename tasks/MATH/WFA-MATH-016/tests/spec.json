@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "Zeta3Irrational.Basic",
+  "build_targets": [
+    "Zeta3Irrational.Basic"
+  ],
+  "names": [
+    "zeta_3_irratoinal"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "Zeta3Irrational"
+    ],
+    "target_file": "Zeta3Irrational/Basic.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

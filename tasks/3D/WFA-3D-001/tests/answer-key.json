@@ -1,0 +1,2958 @@
+{
+  "task_id": "WFA-3D-001",
+  "seed": 20261024,
+  "coords": "X east, Y north, Z up, metres; origin = MN01 centre at ground",
+  "units_final": {
+    "MN01": {
+      "id": "MN01",
+      "name_zh": "正门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 0,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.2,
+      "cijian_m": 5.6,
+      "bays_depth": 3,
+      "depth_bay_m": 6.0,
+      "col_span_front_m": 52.0,
+      "col_span_depth_m": 18.0,
+      "col_height_m": 8.0,
+      "roof": "wudian",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 6.0,
+          "height_m": 4.5,
+          "W_m": 64.0,
+          "D_m": 30.0
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 4.5,
+      "footprint_front_m": 64.0,
+      "footprint_depth_m": 30.0,
+      "roof_rise_m": 10.0,
+      "ridge_top_m": 22.5
+    },
+    "MN02": {
+      "id": "MN02",
+      "name_zh": "二门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 60,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.6,
+      "cijian_m": 5.1,
+      "bays_depth": 2,
+      "depth_bay_m": 6.4,
+      "col_span_front_m": 48.4,
+      "col_span_depth_m": 12.8,
+      "col_height_m": 7.2,
+      "roof": "xieshan",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 4.0,
+          "height_m": 1.2,
+          "W_m": 56.4,
+          "D_m": 20.8
+        },
+        {
+          "overhang_m": 2.2,
+          "height_m": 1.2,
+          "W_m": 52.8,
+          "D_m": 17.2
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 2.4,
+      "footprint_front_m": 56.4,
+      "footprint_depth_m": 20.8,
+      "roof_rise_m": 7.8,
+      "ridge_top_m": 17.4
+    },
+    "MN03": {
+      "id": "MN03",
+      "name_zh": "内门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 270,
+      "facing": "S",
+      "bays_front": 5,
+      "mingjian_m": 6.0,
+      "cijian_m": 4.6,
+      "bays_depth": 2,
+      "depth_bay_m": 5.2,
+      "col_span_front_m": 24.4,
+      "col_span_depth_m": 10.4,
+      "col_height_m": 5.6,
+      "roof": "xieshan",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 1,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 2.0,
+          "height_m": 1.5,
+          "W_m": 28.4,
+          "D_m": 14.4
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.5,
+      "footprint_front_m": 28.4,
+      "footprint_depth_m": 14.4,
+      "roof_rise_m": 4.4,
+      "ridge_top_m": 11.5
+    },
+    "DN01": {
+      "id": "DN01",
+      "name_zh": "正殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 130,
+      "facing": "S",
+      "bays_front": 11,
+      "mingjian_m": 8.4,
+      "cijian_m": 5.8,
+      "bays_depth": 5,
+      "depth_bay_m": 6.6,
+      "col_span_front_m": 66.4,
+      "col_span_depth_m": 33.0,
+      "col_height_m": 12.6,
+      "roof": "wudian",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 5,
+      "grade": 1,
+      "tiers": [
+        {
+          "overhang_m": 9.0,
+          "height_m": 2.4,
+          "W_m": 84.4,
+          "D_m": 51.0
+        },
+        {
+          "overhang_m": 6.0,
+          "height_m": 2.4,
+          "W_m": 78.4,
+          "D_m": 45.0
+        },
+        {
+          "overhang_m": 3.0,
+          "height_m": 2.4,
+          "W_m": 72.4,
+          "D_m": 39.0
+        }
+      ],
+      "platform_tiers": 3,
+      "platform_top_m": 7.2,
+      "footprint_front_m": 84.4,
+      "footprint_depth_m": 51.0,
+      "roof_rise_m": 16.3,
+      "ridge_top_m": 36.1
+    },
+    "DN02": {
+      "id": "DN02",
+      "name_zh": "中殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 185,
+      "facing": "S",
+      "bays_front": 5,
+      "mingjian_m": 5.6,
+      "cijian_m": 4.6,
+      "bays_depth": 5,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 24.0,
+      "col_span_depth_m": 24.0,
+      "col_height_m": 7.6,
+      "roof": "cuanjian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 4.5,
+          "height_m": 2.1,
+          "W_m": 33.0,
+          "D_m": 33.0
+        },
+        {
+          "overhang_m": 2.0,
+          "height_m": 2.1,
+          "W_m": 28.0,
+          "D_m": 28.0
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 4.2,
+      "footprint_front_m": 33.0,
+      "footprint_depth_m": 33.0,
+      "roof_rise_m": 13.2,
+      "ridge_top_m": 25.0
+    },
+    "DN03": {
+      "id": "DN03",
+      "name_zh": "后殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 225,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.2,
+      "cijian_m": 5.1,
+      "bays_depth": 5,
+      "depth_bay_m": 5.6,
+      "col_span_front_m": 48.0,
+      "col_span_depth_m": 28.0,
+      "col_height_m": 10.4,
+      "roof": "xieshan",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 6.0,
+          "height_m": 2.4,
+          "W_m": 60.0,
+          "D_m": 40.0
+        },
+        {
+          "overhang_m": 3.0,
+          "height_m": 2.4,
+          "W_m": 54.0,
+          "D_m": 34.0
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 4.8,
+      "footprint_front_m": 60.0,
+      "footprint_depth_m": 40.0,
+      "roof_rise_m": 14.2,
+      "ridge_top_m": 29.4
+    },
+    "DN04": {
+      "id": "DN04",
+      "name_zh": "寝殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 310,
+      "facing": "S",
+      "bays_front": 7,
+      "mingjian_m": 6.6,
+      "cijian_m": 5.2,
+      "bays_depth": 3,
+      "depth_bay_m": 6.0,
+      "col_span_front_m": 37.8,
+      "col_span_depth_m": 18.0,
+      "col_height_m": 7.4,
+      "roof": "xieshan",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 2.4,
+          "height_m": 2.1,
+          "W_m": 42.6,
+          "D_m": 22.8
+        },
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.8,
+          "W_m": 40.2,
+          "D_m": 20.4
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 3.9,
+      "footprint_front_m": 42.6,
+      "footprint_depth_m": 22.8,
+      "roof_rise_m": 10.0,
+      "ridge_top_m": 21.3
+    },
+    "DN05": {
+      "id": "DN05",
+      "name_zh": "后寝殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 355,
+      "facing": "S",
+      "bays_front": 7,
+      "mingjian_m": 6.4,
+      "cijian_m": 4.6,
+      "bays_depth": 3,
+      "depth_bay_m": 5.4,
+      "col_span_front_m": 34.0,
+      "col_span_depth_m": 16.2,
+      "col_height_m": 6.8,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 5,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 2.6,
+          "height_m": 1.35,
+          "W_m": 39.2,
+          "D_m": 21.4
+        },
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.35,
+          "W_m": 36.4,
+          "D_m": 18.6
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 2.7,
+      "footprint_front_m": 39.2,
+      "footprint_depth_m": 21.4,
+      "roof_rise_m": 6.8,
+      "ridge_top_m": 16.3
+    },
+    "PD01": {
+      "id": "PD01",
+      "name_zh": "东配殿",
+      "type": "PD",
+      "cx": 75,
+      "cy": 130,
+      "facing": "W",
+      "bays_front": 9,
+      "mingjian_m": 5.4,
+      "cijian_m": 5.0,
+      "bays_depth": 3,
+      "depth_bay_m": 5.0,
+      "col_span_front_m": 45.4,
+      "col_span_depth_m": 15.0,
+      "col_height_m": 6.0,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 1.6,
+          "height_m": 1.8,
+          "W_m": 48.6,
+          "D_m": 18.2
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.8,
+      "footprint_front_m": 48.6,
+      "footprint_depth_m": 18.2,
+      "roof_rise_m": 6.3,
+      "ridge_top_m": 14.1,
+      "mirror_of": "PD02"
+    },
+    "PD02": {
+      "id": "PD02",
+      "name_zh": "西配殿",
+      "type": "PD",
+      "cx": -75,
+      "cy": 130,
+      "facing": "E",
+      "bays_front": 9,
+      "mingjian_m": 5.4,
+      "cijian_m": 5.0,
+      "bays_depth": 3,
+      "depth_bay_m": 5.0,
+      "col_span_front_m": 45.4,
+      "col_span_depth_m": 15.0,
+      "col_height_m": 6.0,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 1.6,
+          "height_m": 1.8,
+          "W_m": 48.6,
+          "D_m": 18.2
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.8,
+      "footprint_front_m": 48.6,
+      "footprint_depth_m": 18.2,
+      "roof_rise_m": 6.3,
+      "ridge_top_m": 14.1,
+      "mirror_of": "PD01"
+    },
+    "PD03": {
+      "id": "PD03",
+      "name_zh": "东庑殿",
+      "type": "PD",
+      "cx": 75,
+      "cy": 200,
+      "facing": "W",
+      "bays_front": 7,
+      "mingjian_m": 4.8,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 28.8,
+      "col_span_depth_m": 9.6,
+      "col_height_m": 4.8,
+      "roof": "xieshan",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 1,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.5,
+          "height_m": 1.2,
+          "W_m": 31.8,
+          "D_m": 12.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.2,
+      "footprint_front_m": 31.8,
+      "footprint_depth_m": 12.6,
+      "roof_rise_m": 4.0,
+      "ridge_top_m": 10.0,
+      "mirror_of": "PD04"
+    },
+    "PD04": {
+      "id": "PD04",
+      "name_zh": "西庑殿",
+      "type": "PD",
+      "cx": -75,
+      "cy": 200,
+      "facing": "E",
+      "bays_front": 7,
+      "mingjian_m": 4.8,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 28.8,
+      "col_span_depth_m": 9.6,
+      "col_height_m": 4.8,
+      "roof": "xieshan",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 1,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.5,
+          "height_m": 1.2,
+          "W_m": 31.8,
+          "D_m": 12.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.2,
+      "footprint_front_m": 31.8,
+      "footprint_depth_m": 12.6,
+      "roof_rise_m": 4.0,
+      "ridge_top_m": 10.0,
+      "mirror_of": "PD03"
+    },
+    "PD05": {
+      "id": "PD05",
+      "name_zh": "东暖殿",
+      "type": "PD",
+      "cx": 50,
+      "cy": 332,
+      "facing": "W",
+      "bays_front": 5,
+      "mingjian_m": 4.6,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.6,
+      "col_span_front_m": 20.6,
+      "col_span_depth_m": 9.2,
+      "col_height_m": 4.4,
+      "roof": "xuanshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 3,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.05,
+          "W_m": 23.0,
+          "D_m": 11.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.05,
+      "footprint_front_m": 23.0,
+      "footprint_depth_m": 11.6,
+      "roof_rise_m": 3.5,
+      "ridge_top_m": 8.95,
+      "mirror_of": "PD06"
+    },
+    "PD06": {
+      "id": "PD06",
+      "name_zh": "西暖殿",
+      "type": "PD",
+      "cx": -50,
+      "cy": 332,
+      "facing": "E",
+      "bays_front": 5,
+      "mingjian_m": 4.6,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.6,
+      "col_span_front_m": 20.6,
+      "col_span_depth_m": 9.2,
+      "col_height_m": 4.4,
+      "roof": "xuanshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 3,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.05,
+          "W_m": 23.0,
+          "D_m": 11.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.05,
+      "footprint_front_m": 23.0,
+      "footprint_depth_m": 11.6,
+      "roof_rise_m": 3.5,
+      "ridge_top_m": 8.95,
+      "mirror_of": "PD05"
+    },
+    "TT01": {
+      "id": "TT01",
+      "name_zh": "东碑亭",
+      "type": "TT",
+      "cx": 45,
+      "cy": 75,
+      "facing": "S",
+      "plan": "square",
+      "columns": 12,
+      "side_bays": 3,
+      "bay_m": 3.0,
+      "col_span_m": 9.0,
+      "tiers": [
+        {
+          "height_m": 0.9,
+          "W_m": 12.0,
+          "D_m": 12.0
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 0.9,
+      "col_height_m": 4.6,
+      "roof": "cuanjian",
+      "eaves": 2,
+      "stele": true,
+      "grade": 4,
+      "ridge_top_m": 12.85,
+      "footprint_front_m": 12.0,
+      "footprint_depth_m": 12.0
+    },
+    "TT02": {
+      "id": "TT02",
+      "name_zh": "西碑亭",
+      "type": "TT",
+      "cx": -45,
+      "cy": 75,
+      "facing": "S",
+      "plan": "octagon",
+      "columns": 8,
+      "circumradius_m": 4.2,
+      "tiers": [
+        {
+          "height_m": 0.75,
+          "circumradius_m": 5.5
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 0.75,
+      "col_height_m": 4.2,
+      "roof": "cuanjian",
+      "eaves": 1,
+      "stele": true,
+      "grade": 4,
+      "ridge_top_m": 9.55,
+      "footprint_front_m": 10.15,
+      "footprint_depth_m": 10.15
+    },
+    "QL01": {
+      "id": "QL01",
+      "name_zh": "中金水桥",
+      "type": "QL",
+      "cx": 0,
+      "cy": 30,
+      "facing": "S",
+      "arches": 3,
+      "posts_per_side": 11,
+      "deck_length_m": 20.0,
+      "deck_width_m": 7.2,
+      "crown_height_m": 2.4
+    },
+    "QL02": {
+      "id": "QL02",
+      "name_zh": "东金水桥",
+      "type": "QL",
+      "cx": 14,
+      "cy": 30,
+      "facing": "S",
+      "arches": 1,
+      "posts_per_side": 7,
+      "deck_length_m": 16.0,
+      "deck_width_m": 4.8,
+      "crown_height_m": 2.0,
+      "mirror_of": "QL03"
+    },
+    "QL03": {
+      "id": "QL03",
+      "name_zh": "西金水桥",
+      "type": "QL",
+      "cx": -14,
+      "cy": 30,
+      "facing": "S",
+      "arches": 1,
+      "posts_per_side": 7,
+      "deck_length_m": 16.0,
+      "deck_width_m": 4.8,
+      "crown_height_m": 2.0,
+      "mirror_of": "QL02"
+    },
+    "SS01": {
+      "id": "SS01",
+      "name_zh": "东石狮",
+      "type": "SS",
+      "cx": 12,
+      "cy": 46,
+      "facing": "S",
+      "sex": "male",
+      "base_tiers": 2,
+      "base_W_m": 1.6,
+      "base_D_m": 2.6,
+      "base_height_m": 1.4,
+      "height_m": 3.2,
+      "mirror_of": "SS02"
+    },
+    "SS02": {
+      "id": "SS02",
+      "name_zh": "西石狮",
+      "type": "SS",
+      "cx": -12,
+      "cy": 46,
+      "facing": "S",
+      "sex": "female",
+      "base_tiers": 2,
+      "base_W_m": 1.6,
+      "base_D_m": 2.6,
+      "base_height_m": 1.4,
+      "height_m": 3.2,
+      "mirror_of": "SS01"
+    },
+    "RG01": {
+      "id": "RG01",
+      "name_zh": "日晷",
+      "type": "RG",
+      "cx": 25,
+      "cy": 95,
+      "facing": "S",
+      "kind": "sundial",
+      "base_tiers": 2,
+      "base_W_m": 2.0,
+      "base_D_m": 2.0,
+      "base_height_m": 1.5,
+      "dial_diameter_m": 1.6,
+      "dial_tilt_deg": 50.1,
+      "gnomon_length_m": 1.2,
+      "height_m": 2.15
+    },
+    "RG02": {
+      "id": "RG02",
+      "name_zh": "嘉量",
+      "type": "RG",
+      "cx": -25,
+      "cy": 95,
+      "facing": "S",
+      "kind": "jialiang",
+      "base_tiers": 3,
+      "base_W_m": 2.2,
+      "base_D_m": 2.2,
+      "base_height_m": 1.8,
+      "vessel_shape": "square",
+      "vessel_side_m": 0.9,
+      "vessel_height_m": 0.7,
+      "ears": 2,
+      "height_m": 2.5
+    },
+    "DL01": {
+      "id": "DL01",
+      "name_zh": "三足鼎",
+      "type": "DL",
+      "cx": 42,
+      "cy": 170,
+      "facing": "S",
+      "body": "round",
+      "legs": 3,
+      "ears": 2,
+      "rings": 0,
+      "body_diameter_m": 1.4,
+      "base_tiers": 1,
+      "base_height_m": 0.6,
+      "height_m": 2.6
+    },
+    "DL02": {
+      "id": "DL02",
+      "name_zh": "方鼎",
+      "type": "DL",
+      "cx": -42,
+      "cy": 170,
+      "facing": "S",
+      "body": "square",
+      "legs": 4,
+      "ears": 2,
+      "rings": 0,
+      "body_diameter_m": 1.3,
+      "base_tiers": 1,
+      "base_height_m": 0.5,
+      "height_m": 2.4
+    },
+    "DL03": {
+      "id": "DL03",
+      "name_zh": "铜缸",
+      "type": "DL",
+      "cx": 30,
+      "cy": 288,
+      "facing": "S",
+      "body": "round",
+      "legs": 0,
+      "ears": 0,
+      "rings": 4,
+      "body_diameter_m": 2.2,
+      "base_tiers": 1,
+      "base_height_m": 0.4,
+      "height_m": 1.7
+    },
+    "YD01": {
+      "id": "YD01",
+      "name_zh": "前朝御道",
+      "type": "YD",
+      "cx": 0,
+      "cy": 87.45,
+      "facing": "S",
+      "from_unit": "MN02",
+      "to_unit": "DN01",
+      "length_m": 34.1,
+      "width_m": 8.0,
+      "slab_width_m": 2.4,
+      "slabs": 9,
+      "curb": true,
+      "height_m": 0.15,
+      "y_start": 70.4,
+      "y_end": 104.5
+    },
+    "YD02": {
+      "id": "YD02",
+      "name_zh": "后寝御道",
+      "type": "YD",
+      "cx": 0,
+      "cy": 287.9,
+      "facing": "S",
+      "from_unit": "MN03",
+      "to_unit": "DN04",
+      "length_m": 21.4,
+      "width_m": 6.0,
+      "slab_width_m": 1.8,
+      "slabs": 5,
+      "curb": false,
+      "height_m": 0.15,
+      "y_start": 277.2,
+      "y_end": 298.6
+    },
+    "LW01": {
+      "id": "LW01",
+      "name_zh": "东南廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "MN02",
+        "side": "E",
+        "point": [
+          28.2,
+          60
+        ]
+      },
+      "end_B": {
+        "unit": "PD01",
+        "side": "S",
+        "point": [
+          75,
+          105.7
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            28.2,
+            60
+          ],
+          "end": [
+            75,
+            60
+          ],
+          "direction": "E",
+          "length_m": 46.8,
+          "bays": 10,
+          "bay_m": 4.68
+        },
+        {
+          "start": [
+            75,
+            60
+          ],
+          "end": [
+            75,
+            105.7
+          ],
+          "direction": "N",
+          "length_m": 45.7,
+          "bays": 10,
+          "bay_m": 4.57
+        }
+      ],
+      "width_m": 5.4,
+      "col_height_m": 3.6,
+      "platform_top_m": 0.6,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "S",
+        "E"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.2,
+      "mirror_of": "LW02",
+      "cx": null,
+      "cy": null
+    },
+    "LW03": {
+      "id": "LW03",
+      "name_zh": "东中廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD01",
+        "side": "N",
+        "point": [
+          75,
+          154.3
+        ]
+      },
+      "end_B": {
+        "unit": "PD03",
+        "side": "S",
+        "point": [
+          75,
+          184.1
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            75,
+            154.3
+          ],
+          "end": [
+            75,
+            184.1
+          ],
+          "direction": "N",
+          "length_m": 29.8,
+          "bays": 6,
+          "bay_m": 4.97
+        }
+      ],
+      "width_m": 4.8,
+      "col_height_m": 3.3,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.15,
+      "mirror_of": "LW04",
+      "cx": null,
+      "cy": null
+    },
+    "LW05": {
+      "id": "LW05",
+      "name_zh": "东北廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD03",
+        "side": "N",
+        "point": [
+          75,
+          215.9
+        ]
+      },
+      "end_B": {
+        "unit": "MN03",
+        "side": "E",
+        "point": [
+          14.2,
+          270
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            75,
+            215.9
+          ],
+          "end": [
+            75,
+            270
+          ],
+          "direction": "N",
+          "length_m": 54.1,
+          "bays": 13,
+          "bay_m": 4.16
+        },
+        {
+          "start": [
+            75,
+            270
+          ],
+          "end": [
+            14.2,
+            270
+          ],
+          "direction": "W",
+          "length_m": 60.8,
+          "bays": 14,
+          "bay_m": 4.34
+        }
+      ],
+      "width_m": 5.0,
+      "col_height_m": 3.4,
+      "platform_top_m": 0.5,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "E",
+        "N"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.8,
+      "mirror_of": null,
+      "cx": null,
+      "cy": null
+    },
+    "LW07": {
+      "id": "LW07",
+      "name_zh": "东寝廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "DN04",
+        "side": "E",
+        "point": [
+          21.3,
+          310
+        ]
+      },
+      "end_B": {
+        "unit": "PD05",
+        "side": "S",
+        "point": [
+          50,
+          320.5
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            21.3,
+            310
+          ],
+          "end": [
+            50,
+            310
+          ],
+          "direction": "E",
+          "length_m": 28.7,
+          "bays": 7,
+          "bay_m": 4.1
+        },
+        {
+          "start": [
+            50,
+            310
+          ],
+          "end": [
+            50,
+            320.5
+          ],
+          "direction": "N",
+          "length_m": 10.5,
+          "bays": 2,
+          "bay_m": 5.25
+        }
+      ],
+      "width_m": 4.4,
+      "col_height_m": 3.2,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.9,
+      "mirror_of": "LW08",
+      "cx": null,
+      "cy": null
+    },
+    "LW02": {
+      "id": "LW02",
+      "name_zh": "西南廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "MN02",
+        "side": "W",
+        "point": [
+          -28.2,
+          60
+        ]
+      },
+      "end_B": {
+        "unit": "PD02",
+        "side": "S",
+        "point": [
+          -75,
+          105.7
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -28.2,
+            60
+          ],
+          "end": [
+            -75,
+            60
+          ],
+          "direction": "W",
+          "length_m": 46.8,
+          "bays": 10,
+          "bay_m": 4.68
+        },
+        {
+          "start": [
+            -75,
+            60
+          ],
+          "end": [
+            -75,
+            105.7
+          ],
+          "direction": "N",
+          "length_m": 45.7,
+          "bays": 10,
+          "bay_m": 4.57
+        }
+      ],
+      "width_m": 5.4,
+      "col_height_m": 3.6,
+      "platform_top_m": 0.6,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "S",
+        "W"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.2,
+      "mirror_of": "LW01",
+      "cx": null,
+      "cy": null
+    },
+    "LW04": {
+      "id": "LW04",
+      "name_zh": "西中廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD02",
+        "side": "N",
+        "point": [
+          -75,
+          154.3
+        ]
+      },
+      "end_B": {
+        "unit": "PD04",
+        "side": "S",
+        "point": [
+          -75,
+          184.1
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -75,
+            154.3
+          ],
+          "end": [
+            -75,
+            184.1
+          ],
+          "direction": "N",
+          "length_m": 29.8,
+          "bays": 6,
+          "bay_m": 4.97
+        }
+      ],
+      "width_m": 4.8,
+      "col_height_m": 3.3,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.15,
+      "mirror_of": "LW03",
+      "cx": null,
+      "cy": null
+    },
+    "LW06": {
+      "id": "LW06",
+      "name_zh": "西北廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD04",
+        "side": "N",
+        "point": [
+          -75,
+          215.9
+        ]
+      },
+      "end_B": {
+        "unit": "DN03",
+        "side": "W",
+        "point": [
+          -30.0,
+          225
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -75,
+            215.9
+          ],
+          "end": [
+            -75,
+            225
+          ],
+          "direction": "N",
+          "length_m": 9.1,
+          "bays": 2,
+          "bay_m": 4.55
+        },
+        {
+          "start": [
+            -75,
+            225
+          ],
+          "end": [
+            -30.0,
+            225
+          ],
+          "direction": "E",
+          "length_m": 45.0,
+          "bays": 11,
+          "bay_m": 4.09
+        }
+      ],
+      "width_m": 5.0,
+      "col_height_m": 3.4,
+      "platform_top_m": 0.5,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "W",
+        "N"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.8,
+      "mirror_of": null,
+      "cx": null,
+      "cy": null
+    },
+    "LW08": {
+      "id": "LW08",
+      "name_zh": "西寝廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "DN04",
+        "side": "W",
+        "point": [
+          -21.3,
+          310
+        ]
+      },
+      "end_B": {
+        "unit": "PD06",
+        "side": "S",
+        "point": [
+          -50,
+          320.5
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -21.3,
+            310
+          ],
+          "end": [
+            -50,
+            310
+          ],
+          "direction": "W",
+          "length_m": 28.7,
+          "bays": 7,
+          "bay_m": 4.1
+        },
+        {
+          "start": [
+            -50,
+            310
+          ],
+          "end": [
+            -50,
+            320.5
+          ],
+          "direction": "N",
+          "length_m": 10.5,
+          "bays": 2,
+          "bay_m": 5.25
+        }
+      ],
+      "width_m": 4.4,
+      "col_height_m": 3.2,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.9,
+      "mirror_of": "LW07",
+      "cx": null,
+      "cy": null
+    }
+  },
+  "units_as_drawn": {
+    "MN01": {
+      "id": "MN01",
+      "name_zh": "正门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 0,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.2,
+      "cijian_m": 5.6,
+      "bays_depth": 3,
+      "depth_bay_m": 6.0,
+      "col_span_front_m": 52.0,
+      "col_span_depth_m": 18.0,
+      "col_height_m": 8.0,
+      "roof": "wudian",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 6.0,
+          "height_m": 4.5,
+          "W_m": 64.0,
+          "D_m": 30.0
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 4.5,
+      "footprint_front_m": 64.0,
+      "footprint_depth_m": 30.0,
+      "roof_rise_m": 10.0,
+      "ridge_top_m": 22.5
+    },
+    "MN02": {
+      "id": "MN02",
+      "name_zh": "二门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 60,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.6,
+      "cijian_m": 5.1,
+      "bays_depth": 2,
+      "depth_bay_m": 6.4,
+      "col_span_front_m": 48.4,
+      "col_span_depth_m": 12.8,
+      "col_height_m": 7.2,
+      "roof": "xieshan",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 4.0,
+          "height_m": 1.2,
+          "W_m": 56.4,
+          "D_m": 20.8
+        },
+        {
+          "overhang_m": 2.2,
+          "height_m": 1.2,
+          "W_m": 52.8,
+          "D_m": 17.2
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 2.4,
+      "footprint_front_m": 56.4,
+      "footprint_depth_m": 20.8,
+      "roof_rise_m": 7.8,
+      "ridge_top_m": 17.4
+    },
+    "MN03": {
+      "id": "MN03",
+      "name_zh": "内门",
+      "type": "MN",
+      "cx": 0,
+      "cy": 270,
+      "facing": "S",
+      "bays_front": 5,
+      "mingjian_m": 6.0,
+      "cijian_m": 4.6,
+      "bays_depth": 2,
+      "depth_bay_m": 5.2,
+      "col_span_front_m": 24.4,
+      "col_span_depth_m": 10.4,
+      "col_height_m": 5.6,
+      "roof": "xieshan",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 1,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 2.0,
+          "height_m": 1.5,
+          "W_m": 28.4,
+          "D_m": 14.4
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.5,
+      "footprint_front_m": 28.4,
+      "footprint_depth_m": 14.4,
+      "roof_rise_m": 4.4,
+      "ridge_top_m": 11.5
+    },
+    "DN01": {
+      "id": "DN01",
+      "name_zh": "正殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 130,
+      "facing": "S",
+      "bays_front": 11,
+      "mingjian_m": 8.4,
+      "cijian_m": 5.8,
+      "bays_depth": 5,
+      "depth_bay_m": 6.6,
+      "col_span_front_m": 66.4,
+      "col_span_depth_m": 33.0,
+      "col_height_m": 12.6,
+      "roof": "wudian",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 5,
+      "grade": 1,
+      "tiers": [
+        {
+          "overhang_m": 9.0,
+          "height_m": 2.4,
+          "W_m": 84.4,
+          "D_m": 51.0
+        },
+        {
+          "overhang_m": 6.0,
+          "height_m": 2.4,
+          "W_m": 78.4,
+          "D_m": 45.0
+        },
+        {
+          "overhang_m": 3.0,
+          "height_m": 2.4,
+          "W_m": 72.4,
+          "D_m": 39.0
+        }
+      ],
+      "platform_tiers": 3,
+      "platform_top_m": 7.2,
+      "footprint_front_m": 84.4,
+      "footprint_depth_m": 51.0,
+      "roof_rise_m": 16.3,
+      "ridge_top_m": 36.1
+    },
+    "DN02": {
+      "id": "DN02",
+      "name_zh": "中殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 185,
+      "facing": "S",
+      "bays_front": 5,
+      "mingjian_m": 5.6,
+      "cijian_m": 4.6,
+      "bays_depth": 5,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 24.0,
+      "col_span_depth_m": 24.0,
+      "col_height_m": 7.6,
+      "roof": "cuanjian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 4.5,
+          "height_m": 2.1,
+          "W_m": 33.0,
+          "D_m": 33.0
+        },
+        {
+          "overhang_m": 2.0,
+          "height_m": 2.1,
+          "W_m": 28.0,
+          "D_m": 28.0
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 4.2,
+      "footprint_front_m": 33.0,
+      "footprint_depth_m": 33.0,
+      "roof_rise_m": 13.2,
+      "ridge_top_m": 25.0
+    },
+    "DN03": {
+      "id": "DN03",
+      "name_zh": "后殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 225,
+      "facing": "S",
+      "bays_front": 9,
+      "mingjian_m": 7.2,
+      "cijian_m": 5.1,
+      "bays_depth": 5,
+      "depth_bay_m": 5.6,
+      "col_span_front_m": 48.0,
+      "col_span_depth_m": 28.0,
+      "col_height_m": 10.4,
+      "roof": "xieshan",
+      "eaves": 2,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 2,
+      "tiers": [
+        {
+          "overhang_m": 6.0,
+          "height_m": 2.4,
+          "W_m": 60.0,
+          "D_m": 40.0
+        },
+        {
+          "overhang_m": 3.0,
+          "height_m": 2.4,
+          "W_m": 54.0,
+          "D_m": 34.0
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 4.8,
+      "footprint_front_m": 60.0,
+      "footprint_depth_m": 40.0,
+      "roof_rise_m": 14.2,
+      "ridge_top_m": 29.4
+    },
+    "DN04": {
+      "id": "DN04",
+      "name_zh": "寝殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 310,
+      "facing": "S",
+      "bays_front": 7,
+      "mingjian_m": 6.6,
+      "cijian_m": 5.2,
+      "bays_depth": 3,
+      "depth_bay_m": 6.0,
+      "col_span_front_m": 37.8,
+      "col_span_depth_m": 18.0,
+      "col_height_m": 7.4,
+      "roof": "xieshan",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 2.4,
+          "height_m": 2.1,
+          "W_m": 42.6,
+          "D_m": 22.8
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 2.1,
+      "footprint_front_m": 42.6,
+      "footprint_depth_m": 22.8,
+      "roof_rise_m": 7.6,
+      "ridge_top_m": 17.1
+    },
+    "DN05": {
+      "id": "DN05",
+      "name_zh": "后寝殿",
+      "type": "DN",
+      "cx": 0,
+      "cy": 355,
+      "facing": "S",
+      "bays_front": 7,
+      "mingjian_m": 6.4,
+      "cijian_m": 4.6,
+      "bays_depth": 3,
+      "depth_bay_m": 5.4,
+      "col_span_front_m": 34.0,
+      "col_span_depth_m": 16.2,
+      "col_height_m": 6.8,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 5,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 2.6,
+          "height_m": 1.35,
+          "W_m": 39.2,
+          "D_m": 21.4
+        },
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.35,
+          "W_m": 36.4,
+          "D_m": 18.6
+        }
+      ],
+      "platform_tiers": 2,
+      "platform_top_m": 2.7,
+      "footprint_front_m": 39.2,
+      "footprint_depth_m": 21.4,
+      "roof_rise_m": 6.8,
+      "ridge_top_m": 16.3
+    },
+    "PD01": {
+      "id": "PD01",
+      "name_zh": "东配殿",
+      "type": "PD",
+      "cx": 75,
+      "cy": 130,
+      "facing": "W",
+      "bays_front": 9,
+      "mingjian_m": 5.4,
+      "cijian_m": 5.0,
+      "bays_depth": 3,
+      "depth_bay_m": 5.0,
+      "col_span_front_m": 45.4,
+      "col_span_depth_m": 15.0,
+      "col_height_m": 6.0,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 1.6,
+          "height_m": 1.8,
+          "W_m": 48.6,
+          "D_m": 18.2
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.8,
+      "footprint_front_m": 48.6,
+      "footprint_depth_m": 18.2,
+      "roof_rise_m": 6.3,
+      "ridge_top_m": 14.1,
+      "mirror_of": "PD02"
+    },
+    "PD02": {
+      "id": "PD02",
+      "name_zh": "西配殿",
+      "type": "PD",
+      "cx": -75,
+      "cy": 130,
+      "facing": "E",
+      "bays_front": 9,
+      "mingjian_m": 5.4,
+      "cijian_m": 5.0,
+      "bays_depth": 3,
+      "depth_bay_m": 5.0,
+      "col_span_front_m": 45.4,
+      "col_span_depth_m": 15.0,
+      "col_height_m": 6.0,
+      "roof": "wudian",
+      "eaves": 1,
+      "dougong": true,
+      "door_bays": 3,
+      "grade": 3,
+      "tiers": [
+        {
+          "overhang_m": 1.6,
+          "height_m": 1.8,
+          "W_m": 48.6,
+          "D_m": 18.2
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.8,
+      "footprint_front_m": 48.6,
+      "footprint_depth_m": 18.2,
+      "roof_rise_m": 6.3,
+      "ridge_top_m": 14.1,
+      "mirror_of": "PD01"
+    },
+    "PD03": {
+      "id": "PD03",
+      "name_zh": "东庑殿",
+      "type": "PD",
+      "cx": 75,
+      "cy": 200,
+      "facing": "W",
+      "bays_front": 7,
+      "mingjian_m": 4.8,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 28.8,
+      "col_span_depth_m": 9.6,
+      "col_height_m": 4.8,
+      "roof": "yingshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 1,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.5,
+          "height_m": 1.2,
+          "W_m": 31.8,
+          "D_m": 12.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.2,
+      "footprint_front_m": 31.8,
+      "footprint_depth_m": 12.6,
+      "roof_rise_m": 3.6,
+      "ridge_top_m": 9.6,
+      "mirror_of": "PD04"
+    },
+    "PD04": {
+      "id": "PD04",
+      "name_zh": "西庑殿",
+      "type": "PD",
+      "cx": -75,
+      "cy": 200,
+      "facing": "E",
+      "bays_front": 7,
+      "mingjian_m": 4.8,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.8,
+      "col_span_front_m": 28.8,
+      "col_span_depth_m": 9.6,
+      "col_height_m": 4.8,
+      "roof": "yingshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 1,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.5,
+          "height_m": 1.2,
+          "W_m": 31.8,
+          "D_m": 12.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.2,
+      "footprint_front_m": 31.8,
+      "footprint_depth_m": 12.6,
+      "roof_rise_m": 3.6,
+      "ridge_top_m": 9.6,
+      "mirror_of": "PD03"
+    },
+    "PD05": {
+      "id": "PD05",
+      "name_zh": "东暖殿",
+      "type": "PD",
+      "cx": 50,
+      "cy": 332,
+      "facing": "W",
+      "bays_front": 5,
+      "mingjian_m": 4.6,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.6,
+      "col_span_front_m": 20.6,
+      "col_span_depth_m": 9.2,
+      "col_height_m": 4.4,
+      "roof": "xuanshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 3,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.05,
+          "W_m": 23.0,
+          "D_m": 11.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.05,
+      "footprint_front_m": 23.0,
+      "footprint_depth_m": 11.6,
+      "roof_rise_m": 3.5,
+      "ridge_top_m": 8.95,
+      "mirror_of": "PD06"
+    },
+    "PD06": {
+      "id": "PD06",
+      "name_zh": "西暖殿",
+      "type": "PD",
+      "cx": -50,
+      "cy": 332,
+      "facing": "E",
+      "bays_front": 5,
+      "mingjian_m": 4.6,
+      "cijian_m": 4.0,
+      "bays_depth": 2,
+      "depth_bay_m": 4.6,
+      "col_span_front_m": 20.6,
+      "col_span_depth_m": 9.2,
+      "col_height_m": 4.4,
+      "roof": "xuanshan",
+      "eaves": 1,
+      "dougong": false,
+      "door_bays": 3,
+      "grade": 4,
+      "tiers": [
+        {
+          "overhang_m": 1.2,
+          "height_m": 1.05,
+          "W_m": 23.0,
+          "D_m": 11.6
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 1.05,
+      "footprint_front_m": 23.0,
+      "footprint_depth_m": 11.6,
+      "roof_rise_m": 3.5,
+      "ridge_top_m": 8.95,
+      "mirror_of": "PD05"
+    },
+    "TT01": {
+      "id": "TT01",
+      "name_zh": "东碑亭",
+      "type": "TT",
+      "cx": 45,
+      "cy": 75,
+      "facing": "S",
+      "plan": "square",
+      "columns": 12,
+      "side_bays": 3,
+      "bay_m": 3.0,
+      "col_span_m": 9.0,
+      "tiers": [
+        {
+          "height_m": 0.9,
+          "W_m": 12.0,
+          "D_m": 12.0
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 0.9,
+      "col_height_m": 4.6,
+      "roof": "cuanjian",
+      "eaves": 2,
+      "stele": true,
+      "grade": 4,
+      "ridge_top_m": 12.85,
+      "footprint_front_m": 12.0,
+      "footprint_depth_m": 12.0
+    },
+    "TT02": {
+      "id": "TT02",
+      "name_zh": "西碑亭",
+      "type": "TT",
+      "cx": -45,
+      "cy": 75,
+      "facing": "S",
+      "plan": "octagon",
+      "columns": 8,
+      "circumradius_m": 4.2,
+      "tiers": [
+        {
+          "height_m": 0.75,
+          "circumradius_m": 5.5
+        }
+      ],
+      "platform_tiers": 1,
+      "platform_top_m": 0.75,
+      "col_height_m": 4.2,
+      "roof": "cuanjian",
+      "eaves": 1,
+      "stele": true,
+      "grade": 4,
+      "ridge_top_m": 9.55,
+      "footprint_front_m": 10.15,
+      "footprint_depth_m": 10.15
+    },
+    "QL01": {
+      "id": "QL01",
+      "name_zh": "中金水桥",
+      "type": "QL",
+      "cx": 0,
+      "cy": 30,
+      "facing": "S",
+      "arches": 3,
+      "posts_per_side": 11,
+      "deck_length_m": 20.0,
+      "deck_width_m": 7.2,
+      "crown_height_m": 2.4
+    },
+    "QL02": {
+      "id": "QL02",
+      "name_zh": "东金水桥",
+      "type": "QL",
+      "cx": 14,
+      "cy": 30,
+      "facing": "S",
+      "arches": 1,
+      "posts_per_side": 7,
+      "deck_length_m": 16.0,
+      "deck_width_m": 4.8,
+      "crown_height_m": 2.0,
+      "mirror_of": "QL03"
+    },
+    "QL03": {
+      "id": "QL03",
+      "name_zh": "西金水桥",
+      "type": "QL",
+      "cx": -14,
+      "cy": 30,
+      "facing": "S",
+      "arches": 1,
+      "posts_per_side": 7,
+      "deck_length_m": 16.0,
+      "deck_width_m": 4.8,
+      "crown_height_m": 2.0,
+      "mirror_of": "QL02"
+    },
+    "SS01": {
+      "id": "SS01",
+      "name_zh": "东石狮",
+      "type": "SS",
+      "cx": 12,
+      "cy": 46,
+      "facing": "S",
+      "sex": "male",
+      "base_tiers": 2,
+      "base_W_m": 1.6,
+      "base_D_m": 2.6,
+      "base_height_m": 1.4,
+      "height_m": 3.2,
+      "mirror_of": "SS02"
+    },
+    "SS02": {
+      "id": "SS02",
+      "name_zh": "西石狮",
+      "type": "SS",
+      "cx": -12,
+      "cy": 46,
+      "facing": "S",
+      "sex": "female",
+      "base_tiers": 2,
+      "base_W_m": 1.6,
+      "base_D_m": 2.6,
+      "base_height_m": 1.4,
+      "height_m": 3.2,
+      "mirror_of": "SS01"
+    },
+    "RG01": {
+      "id": "RG01",
+      "name_zh": "日晷",
+      "type": "RG",
+      "cx": 25,
+      "cy": 95,
+      "facing": "S",
+      "kind": "sundial",
+      "base_tiers": 2,
+      "base_W_m": 2.0,
+      "base_D_m": 2.0,
+      "base_height_m": 1.5,
+      "dial_diameter_m": 1.6,
+      "dial_tilt_deg": 50.1,
+      "gnomon_length_m": 1.2,
+      "height_m": 2.15
+    },
+    "RG02": {
+      "id": "RG02",
+      "name_zh": "嘉量",
+      "type": "RG",
+      "cx": -25,
+      "cy": 95,
+      "facing": "S",
+      "kind": "jialiang",
+      "base_tiers": 3,
+      "base_W_m": 2.2,
+      "base_D_m": 2.2,
+      "base_height_m": 1.8,
+      "vessel_shape": "square",
+      "vessel_side_m": 0.9,
+      "vessel_height_m": 0.7,
+      "ears": 2,
+      "height_m": 2.5
+    },
+    "DL01": {
+      "id": "DL01",
+      "name_zh": "三足鼎",
+      "type": "DL",
+      "cx": 42,
+      "cy": 170,
+      "facing": "S",
+      "body": "round",
+      "legs": 3,
+      "ears": 2,
+      "rings": 0,
+      "body_diameter_m": 1.4,
+      "base_tiers": 1,
+      "base_height_m": 0.6,
+      "height_m": 2.6
+    },
+    "DL02": {
+      "id": "DL02",
+      "name_zh": "方鼎",
+      "type": "DL",
+      "cx": -42,
+      "cy": 170,
+      "facing": "S",
+      "body": "square",
+      "legs": 4,
+      "ears": 2,
+      "rings": 0,
+      "body_diameter_m": 1.3,
+      "base_tiers": 1,
+      "base_height_m": 0.5,
+      "height_m": 2.4
+    },
+    "DL03": {
+      "id": "DL03",
+      "name_zh": "铜缸",
+      "type": "DL",
+      "cx": 30,
+      "cy": 288,
+      "facing": "S",
+      "body": "round",
+      "legs": 0,
+      "ears": 0,
+      "rings": 4,
+      "body_diameter_m": 2.2,
+      "base_tiers": 1,
+      "base_height_m": 0.4,
+      "height_m": 1.7
+    },
+    "YD01": {
+      "id": "YD01",
+      "name_zh": "前朝御道",
+      "type": "YD",
+      "cx": 0,
+      "cy": 87.45,
+      "facing": "S",
+      "from_unit": "MN02",
+      "to_unit": "DN01",
+      "length_m": 34.1,
+      "width_m": 8.0,
+      "slab_width_m": 2.4,
+      "slabs": 9,
+      "curb": true,
+      "height_m": 0.15,
+      "y_start": 70.4,
+      "y_end": 104.5
+    },
+    "YD02": {
+      "id": "YD02",
+      "name_zh": "后寝御道",
+      "type": "YD",
+      "cx": 0,
+      "cy": 287.9,
+      "facing": "S",
+      "from_unit": "MN03",
+      "to_unit": "DN04",
+      "length_m": 21.4,
+      "width_m": 6.0,
+      "slab_width_m": 1.8,
+      "slabs": 5,
+      "curb": false,
+      "height_m": 0.15,
+      "y_start": 277.2,
+      "y_end": 298.6
+    },
+    "LW01": {
+      "id": "LW01",
+      "name_zh": "东南廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "MN02",
+        "side": "E",
+        "point": [
+          28.2,
+          60
+        ]
+      },
+      "end_B": {
+        "unit": "PD01",
+        "side": "S",
+        "point": [
+          75,
+          105.7
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            28.2,
+            60
+          ],
+          "end": [
+            75,
+            60
+          ],
+          "direction": "E",
+          "length_m": 46.8,
+          "bays": 10,
+          "bay_m": 4.68
+        },
+        {
+          "start": [
+            75,
+            60
+          ],
+          "end": [
+            75,
+            105.7
+          ],
+          "direction": "N",
+          "length_m": 45.7,
+          "bays": 10,
+          "bay_m": 4.57
+        }
+      ],
+      "width_m": 5.4,
+      "col_height_m": 3.6,
+      "platform_top_m": 0.6,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "S",
+        "E"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.2,
+      "mirror_of": "LW02",
+      "cx": null,
+      "cy": null
+    },
+    "LW03": {
+      "id": "LW03",
+      "name_zh": "东中廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD01",
+        "side": "N",
+        "point": [
+          75,
+          154.3
+        ]
+      },
+      "end_B": {
+        "unit": "PD03",
+        "side": "S",
+        "point": [
+          75,
+          184.1
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            75,
+            154.3
+          ],
+          "end": [
+            75,
+            184.1
+          ],
+          "direction": "N",
+          "length_m": 29.8,
+          "bays": 6,
+          "bay_m": 4.97
+        }
+      ],
+      "width_m": 4.8,
+      "col_height_m": 3.3,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.15,
+      "mirror_of": "LW04",
+      "cx": null,
+      "cy": null
+    },
+    "LW05": {
+      "id": "LW05",
+      "name_zh": "东北廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD03",
+        "side": "N",
+        "point": [
+          75,
+          215.9
+        ]
+      },
+      "end_B": {
+        "unit": "DN03",
+        "side": "E",
+        "point": [
+          30.0,
+          225
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            75,
+            215.9
+          ],
+          "end": [
+            75,
+            225
+          ],
+          "direction": "N",
+          "length_m": 9.1,
+          "bays": 2,
+          "bay_m": 4.55
+        },
+        {
+          "start": [
+            75,
+            225
+          ],
+          "end": [
+            30.0,
+            225
+          ],
+          "direction": "W",
+          "length_m": 45.0,
+          "bays": 11,
+          "bay_m": 4.09
+        }
+      ],
+      "width_m": 5.0,
+      "col_height_m": 3.4,
+      "platform_top_m": 0.5,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "E",
+        "N"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.8,
+      "mirror_of": "LW06",
+      "cx": null,
+      "cy": null
+    },
+    "LW07": {
+      "id": "LW07",
+      "name_zh": "东寝廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "DN04",
+        "side": "E",
+        "point": [
+          21.3,
+          310
+        ]
+      },
+      "end_B": {
+        "unit": "PD05",
+        "side": "S",
+        "point": [
+          50,
+          320.5
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            21.3,
+            310
+          ],
+          "end": [
+            50,
+            310
+          ],
+          "direction": "E",
+          "length_m": 28.7,
+          "bays": 7,
+          "bay_m": 4.1
+        },
+        {
+          "start": [
+            50,
+            310
+          ],
+          "end": [
+            50,
+            320.5
+          ],
+          "direction": "N",
+          "length_m": 10.5,
+          "bays": 2,
+          "bay_m": 5.25
+        }
+      ],
+      "width_m": 4.4,
+      "col_height_m": 3.2,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.9,
+      "mirror_of": "LW08",
+      "cx": null,
+      "cy": null
+    },
+    "LW02": {
+      "id": "LW02",
+      "name_zh": "西南廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "MN02",
+        "side": "W",
+        "point": [
+          -28.2,
+          60
+        ]
+      },
+      "end_B": {
+        "unit": "PD02",
+        "side": "S",
+        "point": [
+          -75,
+          105.7
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -28.2,
+            60
+          ],
+          "end": [
+            -75,
+            60
+          ],
+          "direction": "W",
+          "length_m": 46.8,
+          "bays": 10,
+          "bay_m": 4.68
+        },
+        {
+          "start": [
+            -75,
+            60
+          ],
+          "end": [
+            -75,
+            105.7
+          ],
+          "direction": "N",
+          "length_m": 45.7,
+          "bays": 10,
+          "bay_m": 4.57
+        }
+      ],
+      "width_m": 5.4,
+      "col_height_m": 3.6,
+      "platform_top_m": 0.6,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "S",
+        "W"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.2,
+      "mirror_of": "LW01",
+      "cx": null,
+      "cy": null
+    },
+    "LW04": {
+      "id": "LW04",
+      "name_zh": "西中廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD02",
+        "side": "N",
+        "point": [
+          -75,
+          154.3
+        ]
+      },
+      "end_B": {
+        "unit": "PD04",
+        "side": "S",
+        "point": [
+          -75,
+          184.1
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -75,
+            154.3
+          ],
+          "end": [
+            -75,
+            184.1
+          ],
+          "direction": "N",
+          "length_m": 29.8,
+          "bays": 6,
+          "bay_m": 4.97
+        }
+      ],
+      "width_m": 4.8,
+      "col_height_m": 3.3,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 6.15,
+      "mirror_of": "LW03",
+      "cx": null,
+      "cy": null
+    },
+    "LW06": {
+      "id": "LW06",
+      "name_zh": "西北廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "PD04",
+        "side": "N",
+        "point": [
+          -75,
+          215.9
+        ]
+      },
+      "end_B": {
+        "unit": "DN03",
+        "side": "W",
+        "point": [
+          -30.0,
+          225
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -75,
+            215.9
+          ],
+          "end": [
+            -75,
+            225
+          ],
+          "direction": "N",
+          "length_m": 9.1,
+          "bays": 2,
+          "bay_m": 4.55
+        },
+        {
+          "start": [
+            -75,
+            225
+          ],
+          "end": [
+            -30.0,
+            225
+          ],
+          "direction": "E",
+          "length_m": 45.0,
+          "bays": 11,
+          "bay_m": 4.09
+        }
+      ],
+      "width_m": 5.0,
+      "col_height_m": 3.4,
+      "platform_top_m": 0.5,
+      "platform_tiers": 1,
+      "gallery": "single",
+      "wall_sides": [
+        "W",
+        "N"
+      ],
+      "roof": "juanpeng",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.8,
+      "mirror_of": "LW05",
+      "cx": null,
+      "cy": null
+    },
+    "LW08": {
+      "id": "LW08",
+      "name_zh": "西寝廊",
+      "type": "LW",
+      "end_A": {
+        "unit": "DN04",
+        "side": "W",
+        "point": [
+          -21.3,
+          310
+        ]
+      },
+      "end_B": {
+        "unit": "PD06",
+        "side": "S",
+        "point": [
+          -50,
+          320.5
+        ]
+      },
+      "segments": [
+        {
+          "start": [
+            -21.3,
+            310
+          ],
+          "end": [
+            -50,
+            310
+          ],
+          "direction": "W",
+          "length_m": 28.7,
+          "bays": 7,
+          "bay_m": 4.1
+        },
+        {
+          "start": [
+            -50,
+            310
+          ],
+          "end": [
+            -50,
+            320.5
+          ],
+          "direction": "N",
+          "length_m": 10.5,
+          "bays": 2,
+          "bay_m": 5.25
+        }
+      ],
+      "width_m": 4.4,
+      "col_height_m": 3.2,
+      "platform_top_m": 0.45,
+      "platform_tiers": 1,
+      "gallery": "double",
+      "wall_sides": [],
+      "roof": "jianshan",
+      "eaves": 1,
+      "grade": 4,
+      "ridge_top_m": 5.9,
+      "mirror_of": "LW07",
+      "cx": null,
+      "cy": null
+    }
+  },
+  "change_order": [
+    {
+      "item": 1,
+      "unit": "DN04",
+      "change": "屋顶 单檐歇山→重檐歇山；台基 1层→2层（原台基为下层不变，其上加上层：每边出柱列外 1.20 m、高 1.80 m）；等级 三等→二等"
+    },
+    {
+      "item": 2,
+      "unit": "PD03,PD04",
+      "change": "屋顶 硬山→单檐歇山；增设斗拱；其余不变"
+    },
+    {
+      "item": 3,
+      "unit": "LW05",
+      "change": "改走向：B端由 DN03 东山墙改接 MN03 东山墙；自 PD03 北山墙北行至 MN03 中线后西折；廊式、断面、屋面不变；LW05 与 LW06 不再成对"
+    }
+  ],
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "南门庭",
+      "name_en": "South gate court",
+      "units": [
+        "MN01",
+        "QL01",
+        "QL02",
+        "QL03",
+        "SS01",
+        "SS02",
+        "MN02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "前朝中轴",
+      "name_en": "Outer-court axis",
+      "units": [
+        "YD01",
+        "DN01",
+        "DN02",
+        "DN03",
+        "RG01",
+        "RG02"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东庑",
+      "name_en": "East wing",
+      "units": [
+        "PD01",
+        "PD03",
+        "LW01",
+        "LW03",
+        "LW05",
+        "TT01"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西庑",
+      "name_en": "West wing",
+      "units": [
+        "PD02",
+        "PD04",
+        "LW02",
+        "LW04",
+        "LW06",
+        "TT02"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "后寝中轴",
+      "name_en": "Inner-court axis",
+      "units": [
+        "MN03",
+        "YD02",
+        "DN04",
+        "DN05",
+        "DL03"
+      ]
+    },
+    {
+      "id": "F",
+      "name_zh": "后寝两庑与陈设",
+      "name_en": "Inner wings & furnishings",
+      "units": [
+        "PD05",
+        "PD06",
+        "LW07",
+        "LW08",
+        "DL01",
+        "DL02"
+      ]
+    }
+  ],
+  "zone_of": {
+    "MN01": "A",
+    "QL01": "A",
+    "QL02": "A",
+    "QL03": "A",
+    "SS01": "A",
+    "SS02": "A",
+    "MN02": "A",
+    "YD01": "B",
+    "DN01": "B",
+    "DN02": "B",
+    "DN03": "B",
+    "RG01": "B",
+    "RG02": "B",
+    "PD01": "C",
+    "PD03": "C",
+    "LW01": "C",
+    "LW03": "C",
+    "LW05": "C",
+    "TT01": "C",
+    "PD02": "D",
+    "PD04": "D",
+    "LW02": "D",
+    "LW04": "D",
+    "LW06": "D",
+    "TT02": "D",
+    "MN03": "E",
+    "YD02": "E",
+    "DN04": "E",
+    "DN05": "E",
+    "DL03": "E",
+    "PD05": "F",
+    "PD06": "F",
+    "LW07": "F",
+    "LW08": "F",
+    "DL01": "F",
+    "DL02": "F"
+  },
+  "river": {
+    "axis": "E-W",
+    "y_center": 30.0,
+    "width_m": 10.0,
+    "x_from": -60.0,
+    "x_to": 60.0,
+    "depth_m": 1.5
+  },
+  "site_extent": {
+    "x_min": -100,
+    "x_max": 100,
+    "y_min": -30,
+    "y_max": 380
+  },
+  "symmetry_pairs": [
+    [
+      "LW01",
+      "LW02"
+    ],
+    [
+      "LW03",
+      "LW04"
+    ],
+    [
+      "LW07",
+      "LW08"
+    ],
+    [
+      "PD01",
+      "PD02"
+    ],
+    [
+      "PD03",
+      "PD04"
+    ],
+    [
+      "PD05",
+      "PD06"
+    ],
+    [
+      "QL02",
+      "QL03"
+    ],
+    [
+      "SS01",
+      "SS02"
+    ]
+  ],
+  "axis_units": [
+    "MN01",
+    "MN02",
+    "MN03",
+    "DN01",
+    "DN02",
+    "DN03",
+    "DN04",
+    "DN05",
+    "QL01",
+    "YD01",
+    "YD02"
+  ],
+  "grade_tops": {
+    "1": [
+      7.2
+    ],
+    "2": [
+      3.9,
+      4.2,
+      4.5,
+      4.8
+    ],
+    "3": [
+      1.5,
+      1.8,
+      1.8,
+      2.4,
+      2.7
+    ],
+    "4": [
+      0.45,
+      0.45,
+      0.45,
+      0.45,
+      0.5,
+      0.5,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      1.05,
+      1.05,
+      1.2,
+      1.2
+    ]
+  },
+  "junctions": [
+    {
+      "lw": "LW01",
+      "end": "end_A",
+      "unit": "MN02",
+      "side": "E",
+      "point": [
+        28.2,
+        60
+      ]
+    },
+    {
+      "lw": "LW01",
+      "end": "end_B",
+      "unit": "PD01",
+      "side": "S",
+      "point": [
+        75,
+        105.7
+      ]
+    },
+    {
+      "lw": "LW02",
+      "end": "end_A",
+      "unit": "MN02",
+      "side": "W",
+      "point": [
+        -28.2,
+        60
+      ]
+    },
+    {
+      "lw": "LW02",
+      "end": "end_B",
+      "unit": "PD02",
+      "side": "S",
+      "point": [
+        -75,
+        105.7
+      ]
+    },
+    {
+      "lw": "LW03",
+      "end": "end_A",
+      "unit": "PD01",
+      "side": "N",
+      "point": [
+        75,
+        154.3
+      ]
+    },
+    {
+      "lw": "LW03",
+      "end": "end_B",
+      "unit": "PD03",
+      "side": "S",
+      "point": [
+        75,
+        184.1
+      ]
+    },
+    {
+      "lw": "LW04",
+      "end": "end_A",
+      "unit": "PD02",
+      "side": "N",
+      "point": [
+        -75,
+        154.3
+      ]
+    },
+    {
+      "lw": "LW04",
+      "end": "end_B",
+      "unit": "PD04",
+      "side": "S",
+      "point": [
+        -75,
+        184.1
+      ]
+    },
+    {
+      "lw": "LW05",
+      "end": "end_A",
+      "unit": "PD03",
+      "side": "N",
+      "point": [
+        75,
+        215.9
+      ]
+    },
+    {
+      "lw": "LW05",
+      "end": "end_B",
+      "unit": "MN03",
+      "side": "E",
+      "point": [
+        14.2,
+        270
+      ]
+    },
+    {
+      "lw": "LW06",
+      "end": "end_A",
+      "unit": "PD04",
+      "side": "N",
+      "point": [
+        -75,
+        215.9
+      ]
+    },
+    {
+      "lw": "LW06",
+      "end": "end_B",
+      "unit": "DN03",
+      "side": "W",
+      "point": [
+        -30.0,
+        225
+      ]
+    },
+    {
+      "lw": "LW07",
+      "end": "end_A",
+      "unit": "DN04",
+      "side": "E",
+      "point": [
+        21.3,
+        310
+      ]
+    },
+    {
+      "lw": "LW07",
+      "end": "end_B",
+      "unit": "PD05",
+      "side": "S",
+      "point": [
+        50,
+        320.5
+      ]
+    },
+    {
+      "lw": "LW08",
+      "end": "end_A",
+      "unit": "DN04",
+      "side": "W",
+      "point": [
+        -21.3,
+        310
+      ]
+    },
+    {
+      "lw": "LW08",
+      "end": "end_B",
+      "unit": "PD06",
+      "side": "S",
+      "point": [
+        -50,
+        320.5
+      ]
+    }
+  ],
+  "self_check_errors": []
+}

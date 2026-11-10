@@ -1,0 +1,4228 @@
+{
+  "manifest_expected": [
+    {
+      "id": "A01",
+      "collection": "A01",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 0.9,
+        "passages": 3,
+        "columns_per_face": 4,
+        "width": 24.0,
+        "height": 18.25
+      }
+    },
+    {
+      "id": "A02",
+      "collection": "A02",
+      "built": true,
+      "params": {
+        "order": "ionic",
+        "D": 0.8,
+        "passages": 3,
+        "columns_per_face": 4,
+        "width": 18.6,
+        "height": 14.0
+      }
+    },
+    {
+      "id": "B01",
+      "collection": "B01",
+      "built": true,
+      "params": {
+        "order": "ionic",
+        "D": 0.9,
+        "colonnade_rows": 4,
+        "columns_per_row": 14,
+        "apses": 2,
+        "windows_per_side": 12,
+        "doors": 5
+      }
+    },
+    {
+      "id": "B02",
+      "collection": "B02",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 0.8,
+        "colonnade_rows": 2,
+        "columns_per_row": 11,
+        "apses": 1,
+        "windows_per_side": 9,
+        "doors": 3
+      }
+    },
+    {
+      "id": "C01",
+      "collection": "C01",
+      "built": true,
+      "params": {
+        "order": "doric",
+        "D": 1.6,
+        "base_steps": 3,
+        "crown": "statue"
+      }
+    },
+    {
+      "id": "C02",
+      "collection": "C02",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 1.3,
+        "base_steps": 2,
+        "crown": "none"
+      }
+    },
+    {
+      "id": "C03",
+      "collection": "C03",
+      "built": true,
+      "params": {
+        "order": "ionic",
+        "D": 1.4,
+        "base_steps": 4,
+        "crown": "statue"
+      }
+    },
+    {
+      "id": "P01",
+      "collection": "P01",
+      "built": true,
+      "params": {
+        "follows": "T02",
+        "order": "doric",
+        "D": 1.05,
+        "a": 2.89,
+        "rows": 1,
+        "columns_per_row": 15,
+        "depth": 8.0,
+        "roof": "shed"
+      }
+    },
+    {
+      "id": "P02",
+      "collection": "P02",
+      "built": true,
+      "params": {
+        "follows": "T02",
+        "order": "doric",
+        "D": 1.05,
+        "a": 2.89,
+        "rows": 1,
+        "columns_per_row": 9,
+        "depth": 5.5,
+        "roof": "shed"
+      }
+    },
+    {
+      "id": "P03",
+      "collection": "P03",
+      "built": true,
+      "params": {
+        "follows": "T03",
+        "order": "ionic",
+        "D": 1.25,
+        "a": 4.06,
+        "rows": 2,
+        "columns_per_row": 4,
+        "depth": 6.5,
+        "roof": "gable"
+      }
+    },
+    {
+      "id": "P04",
+      "collection": "P04",
+      "built": true,
+      "params": {
+        "follows": "T04",
+        "order": "corinthian",
+        "D": 1.15,
+        "a": 2.88,
+        "rows": 2,
+        "columns_per_row": 10,
+        "depth": 6.0,
+        "roof": "shed"
+      }
+    },
+    {
+      "id": "P05",
+      "collection": "P05",
+      "built": true,
+      "params": {
+        "follows": "T04",
+        "order": "corinthian",
+        "D": 1.15,
+        "a": 2.88,
+        "rows": 1,
+        "columns_per_row": 10,
+        "depth": 7.5,
+        "roof": "shed"
+      }
+    },
+    {
+      "id": "P06",
+      "collection": "P06",
+      "built": true,
+      "params": {
+        "follows": "T05",
+        "order": "doric",
+        "D": 1.3,
+        "a": 3.9,
+        "rows": 1,
+        "columns_per_row": 8,
+        "depth": 5.5,
+        "roof": "shed"
+      }
+    },
+    {
+      "id": "P07",
+      "collection": "P07",
+      "built": true,
+      "params": {
+        "follows": "T01",
+        "order": "corinthian",
+        "D": 1.4,
+        "a": 3.85,
+        "rows": 1,
+        "columns_per_row": 3,
+        "depth": 6.0,
+        "roof": "gable"
+      }
+    },
+    {
+      "id": "P08",
+      "collection": "P08",
+      "built": true,
+      "params": {
+        "follows": "T01",
+        "order": "corinthian",
+        "D": 1.4,
+        "a": 3.85,
+        "rows": 2,
+        "columns_per_row": 4,
+        "depth": 7.0,
+        "roof": "gable"
+      }
+    },
+    {
+      "id": "R01",
+      "collection": "R01",
+      "built": true,
+      "params": {
+        "prows": 8,
+        "front": "curved",
+        "rear_steps": 11
+      }
+    },
+    {
+      "id": "S01",
+      "collection": "S01",
+      "built": true,
+      "params": {
+        "shape": "oblong",
+        "tiers": 1,
+        "figure": "equestrian"
+      }
+    },
+    {
+      "id": "S02",
+      "collection": "S02",
+      "built": true,
+      "params": {
+        "shape": "square",
+        "tiers": 1,
+        "figure": "standing"
+      }
+    },
+    {
+      "id": "S03",
+      "collection": "S03",
+      "built": true,
+      "params": {
+        "shape": "round",
+        "tiers": 3,
+        "figure": "standing"
+      }
+    },
+    {
+      "id": "S04",
+      "collection": "S04",
+      "built": true,
+      "params": {
+        "shape": "oblong",
+        "tiers": 2,
+        "figure": "equestrian"
+      }
+    },
+    {
+      "id": "S05",
+      "collection": "S05",
+      "built": true,
+      "params": {
+        "shape": "square",
+        "tiers": 1,
+        "figure": "standing"
+      }
+    },
+    {
+      "id": "S06",
+      "collection": "S06",
+      "built": true,
+      "params": {
+        "shape": "round",
+        "tiers": 3,
+        "figure": "standing"
+      }
+    },
+    {
+      "id": "T01",
+      "collection": "T01",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 1.4,
+        "a": 3.85,
+        "front_columns": 6,
+        "flank_columns": 3,
+        "plan": "prostyle",
+        "podium_h": 4.5,
+        "steps": 15
+      }
+    },
+    {
+      "id": "T02",
+      "collection": "T02",
+      "built": true,
+      "params": {
+        "order": "doric",
+        "D": 1.05,
+        "a": 2.89,
+        "front_columns": 4,
+        "flank_columns": 3,
+        "plan": "prostyle",
+        "podium_h": 2.34,
+        "steps": 9
+      }
+    },
+    {
+      "id": "T03",
+      "collection": "T03",
+      "built": true,
+      "params": {
+        "order": "ionic",
+        "D": 1.25,
+        "a": 4.06,
+        "front_columns": 6,
+        "flank_columns": 11,
+        "plan": "peripteral",
+        "podium_h": 1.44,
+        "steps": 6
+      }
+    },
+    {
+      "id": "T04",
+      "collection": "T04",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 1.15,
+        "a": 2.88,
+        "front_columns": 4,
+        "flank_columns": 9,
+        "plan": "peripteral",
+        "podium_h": 2.2,
+        "steps": 10
+      }
+    },
+    {
+      "id": "T05",
+      "collection": "T05",
+      "built": true,
+      "params": {
+        "order": "doric",
+        "D": 1.3,
+        "a": 3.9,
+        "front_columns": 6,
+        "flank_columns": 2,
+        "plan": "prostyle",
+        "podium_h": 2.4,
+        "steps": 8
+      }
+    },
+    {
+      "id": "T06",
+      "collection": "T06",
+      "built": true,
+      "params": {
+        "order": "corinthian",
+        "D": 0.85,
+        "columns": 18,
+        "radius": 5.6,
+        "roof": "cone",
+        "steps": 6
+      }
+    }
+  ],
+  "task_id": "WFA-3D-009",
+  "seed": 909,
+  "k_by_order": {
+    "doric": 7,
+    "ionic": 9,
+    "corinthian": 10
+  },
+  "tread": 0.35,
+  "plaza": [
+    -32.0,
+    32.0,
+    -80.0,
+    72.0
+  ],
+  "change_order": {
+    "T04": {
+      "order": "corinthian"
+    },
+    "A02": {
+      "passages": 3,
+      "cols_per_face": 4,
+      "W": 18.6,
+      "span_c": 5.0,
+      "h_c": 8.6,
+      "span_s": 2.4,
+      "h_s": 5.4
+    },
+    "R01": {
+      "prows": 8
+    },
+    "B02": {
+      "apse": 1,
+      "apse_end": "S",
+      "apse_r": 6.5
+    }
+  },
+  "co_cascade": {
+    "P04": "follows T04 -> corinthian, col_H=10D",
+    "P05": "follows T04 -> corinthian, col_H=10D"
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "北端主殿区",
+      "name_en": "North temple front",
+      "units": [
+        "T01",
+        "P07",
+        "P08",
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "西廊",
+      "name_en": "West colonnade",
+      "units": [
+        "T02",
+        "T03",
+        "P01",
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东廊",
+      "name_en": "East colonnade",
+      "units": [
+        "T04",
+        "T05",
+        "P04",
+        "P05",
+        "P06"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "会堂与圆庙",
+      "name_en": "Basilicas & tholos",
+      "units": [
+        "B01",
+        "B02",
+        "T06"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "南门区",
+      "name_en": "South gates",
+      "units": [
+        "A01",
+        "A02",
+        "C03"
+      ]
+    },
+    {
+      "id": "F",
+      "name_zh": "广场中心",
+      "name_en": "Plaza centre",
+      "units": [
+        "R01",
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ]
+    }
+  ],
+  "units": {
+    "T01": {
+      "id": "T01",
+      "type": "temple",
+      "order": "corinthian",
+      "D": 1.4,
+      "s": 3.85,
+      "n_f": 6,
+      "plan": "prostyle",
+      "podium_h": 4.5,
+      "steps": 15,
+      "pitch_deg": 16,
+      "W_p": 22.05,
+      "anchor": [
+        0.0,
+        72.0
+      ],
+      "facing": "S",
+      "porch_depth_cols": 3,
+      "flank_cols": 3,
+      "n_cols": 10,
+      "L_p": 39.69,
+      "stair": "full",
+      "stair_w": 22.05,
+      "col_H": 14.0,
+      "k": 10,
+      "col_top_z": 18.5,
+      "entab_top_z": 22.0,
+      "ridge_z": 24.96,
+      "columns_xy": [
+        [
+          9.63,
+          72.0
+        ],
+        [
+          5.78,
+          72.0
+        ],
+        [
+          1.93,
+          72.0
+        ],
+        [
+          -1.92,
+          72.0
+        ],
+        [
+          -5.77,
+          72.0
+        ],
+        [
+          -9.62,
+          72.0
+        ],
+        [
+          9.63,
+          75.85
+        ],
+        [
+          -9.62,
+          75.85
+        ],
+        [
+          9.63,
+          79.7
+        ],
+        [
+          -9.62,
+          79.7
+        ]
+      ],
+      "stair_proj": 5.25,
+      "bbox_xy": [
+        -11.02,
+        65.35,
+        11.03,
+        110.29
+      ]
+    },
+    "T02": {
+      "id": "T02",
+      "type": "temple",
+      "order": "doric",
+      "D": 1.05,
+      "s": 2.89,
+      "n_f": 4,
+      "plan": "prostyle",
+      "podium_h": 2.34,
+      "steps": 9,
+      "pitch_deg": 18,
+      "W_p": 10.77,
+      "anchor": [
+        -32.0,
+        -18.0
+      ],
+      "facing": "E",
+      "porch_depth_cols": 3,
+      "flank_cols": 3,
+      "n_cols": 8,
+      "L_p": 16.16,
+      "stair": "full",
+      "stair_w": 10.77,
+      "col_H": 7.35,
+      "k": 7,
+      "col_top_z": 9.69,
+      "entab_top_z": 11.53,
+      "ridge_z": 13.11,
+      "columns_xy": [
+        [
+          -32.0,
+          -13.66
+        ],
+        [
+          -32.0,
+          -16.55
+        ],
+        [
+          -32.0,
+          -19.44
+        ],
+        [
+          -32.0,
+          -22.33
+        ],
+        [
+          -34.89,
+          -13.66
+        ],
+        [
+          -34.89,
+          -22.33
+        ],
+        [
+          -37.78,
+          -13.66
+        ],
+        [
+          -37.78,
+          -22.33
+        ]
+      ],
+      "stair_proj": 3.15,
+      "bbox_xy": [
+        -47.11,
+        -23.38,
+        -27.8,
+        -12.61
+      ]
+    },
+    "T03": {
+      "id": "T03",
+      "type": "temple",
+      "order": "ionic",
+      "D": 1.25,
+      "s": 4.06,
+      "n_f": 6,
+      "plan": "peripteral",
+      "podium_h": 1.44,
+      "steps": 6,
+      "pitch_deg": 14,
+      "W_p": 22.8,
+      "anchor": [
+        -32.0,
+        34.0
+      ],
+      "facing": "E",
+      "flank_cols": 11,
+      "n_cols": 30,
+      "L_p": 43.1,
+      "stair": "central",
+      "stair_w": 6.87,
+      "col_H": 11.25,
+      "k": 9,
+      "col_top_z": 12.69,
+      "entab_top_z": 15.5,
+      "ridge_z": 18.19,
+      "columns_xy": [
+        [
+          -32.0,
+          44.15
+        ],
+        [
+          -32.0,
+          40.09
+        ],
+        [
+          -32.0,
+          36.03
+        ],
+        [
+          -32.0,
+          31.97
+        ],
+        [
+          -32.0,
+          27.91
+        ],
+        [
+          -32.0,
+          23.85
+        ],
+        [
+          -36.06,
+          44.15
+        ],
+        [
+          -36.06,
+          23.85
+        ],
+        [
+          -40.12,
+          44.15
+        ],
+        [
+          -40.12,
+          23.85
+        ],
+        [
+          -44.18,
+          44.15
+        ],
+        [
+          -44.18,
+          23.85
+        ],
+        [
+          -48.24,
+          44.15
+        ],
+        [
+          -48.24,
+          23.85
+        ],
+        [
+          -52.3,
+          44.15
+        ],
+        [
+          -52.3,
+          23.85
+        ],
+        [
+          -56.36,
+          44.15
+        ],
+        [
+          -56.36,
+          23.85
+        ],
+        [
+          -60.42,
+          44.15
+        ],
+        [
+          -60.42,
+          23.85
+        ],
+        [
+          -64.48,
+          44.15
+        ],
+        [
+          -64.48,
+          23.85
+        ],
+        [
+          -68.54,
+          44.15
+        ],
+        [
+          -68.54,
+          23.85
+        ],
+        [
+          -72.6,
+          44.15
+        ],
+        [
+          -72.6,
+          40.09
+        ],
+        [
+          -72.6,
+          36.03
+        ],
+        [
+          -72.6,
+          31.97
+        ],
+        [
+          -72.6,
+          27.91
+        ],
+        [
+          -72.6,
+          23.85
+        ]
+      ],
+      "stair_proj": 2.1,
+      "bbox_xy": [
+        -73.85,
+        22.6,
+        -28.65,
+        45.4
+      ]
+    },
+    "T04": {
+      "id": "T04",
+      "type": "temple",
+      "order": "corinthian",
+      "D": 1.15,
+      "s": 2.88,
+      "n_f": 4,
+      "plan": "peripteral",
+      "podium_h": 2.2,
+      "steps": 10,
+      "pitch_deg": 12,
+      "W_p": 10.94,
+      "anchor": [
+        32.0,
+        30.0
+      ],
+      "facing": "W",
+      "flank_cols": 9,
+      "n_cols": 22,
+      "L_p": 25.34,
+      "stair": "full",
+      "stair_w": 10.94,
+      "col_H": 11.5,
+      "k": 10,
+      "col_top_z": 13.7,
+      "entab_top_z": 16.58,
+      "ridge_z": 17.62,
+      "columns_xy": [
+        [
+          32.0,
+          25.68
+        ],
+        [
+          32.0,
+          28.56
+        ],
+        [
+          32.0,
+          31.44
+        ],
+        [
+          32.0,
+          34.32
+        ],
+        [
+          34.88,
+          25.68
+        ],
+        [
+          34.88,
+          34.32
+        ],
+        [
+          37.76,
+          25.68
+        ],
+        [
+          37.76,
+          34.32
+        ],
+        [
+          40.64,
+          25.68
+        ],
+        [
+          40.64,
+          34.32
+        ],
+        [
+          43.52,
+          25.68
+        ],
+        [
+          43.52,
+          34.32
+        ],
+        [
+          46.4,
+          25.68
+        ],
+        [
+          46.4,
+          34.32
+        ],
+        [
+          49.28,
+          25.68
+        ],
+        [
+          49.28,
+          34.32
+        ],
+        [
+          52.16,
+          25.68
+        ],
+        [
+          52.16,
+          34.32
+        ],
+        [
+          55.04,
+          25.68
+        ],
+        [
+          55.04,
+          28.56
+        ],
+        [
+          55.04,
+          31.44
+        ],
+        [
+          55.04,
+          34.32
+        ]
+      ],
+      "stair_proj": 3.5,
+      "bbox_xy": [
+        27.35,
+        24.53,
+        56.19,
+        35.47
+      ]
+    },
+    "T05": {
+      "id": "T05",
+      "type": "temple",
+      "order": "doric",
+      "D": 1.3,
+      "s": 3.9,
+      "n_f": 6,
+      "plan": "prostyle",
+      "podium_h": 2.4,
+      "steps": 8,
+      "pitch_deg": 14,
+      "W_p": 22.1,
+      "anchor": [
+        32.0,
+        -24.0
+      ],
+      "facing": "W",
+      "porch_depth_cols": 2,
+      "flank_cols": 2,
+      "n_cols": 8,
+      "L_p": 37.57,
+      "stair": "central",
+      "stair_w": 6.5,
+      "col_H": 9.1,
+      "k": 7,
+      "col_top_z": 11.5,
+      "entab_top_z": 13.78,
+      "ridge_z": 16.37,
+      "columns_xy": [
+        [
+          32.0,
+          -33.75
+        ],
+        [
+          32.0,
+          -29.85
+        ],
+        [
+          32.0,
+          -25.95
+        ],
+        [
+          32.0,
+          -22.05
+        ],
+        [
+          32.0,
+          -18.15
+        ],
+        [
+          32.0,
+          -14.25
+        ],
+        [
+          35.9,
+          -33.75
+        ],
+        [
+          35.9,
+          -14.25
+        ]
+      ],
+      "stair_proj": 2.8,
+      "bbox_xy": [
+        27.9,
+        -35.05,
+        68.27,
+        -12.95
+      ]
+    },
+    "T06": {
+      "id": "T06",
+      "type": "tholos",
+      "order": "corinthian",
+      "D": 0.85,
+      "n_cols": 18,
+      "radius": 5.6,
+      "podium_h": 1.5,
+      "steps": 6,
+      "roof": "cone",
+      "anchor": [
+        -18.0,
+        -62.0
+      ],
+      "facing": "-",
+      "col_H": 8.5,
+      "k": 10,
+      "col_top_z": 10.0,
+      "podium_r": 6.45,
+      "bbox_xy": [
+        -26.55,
+        -70.55,
+        -9.45,
+        -53.45
+      ]
+    },
+    "P01": {
+      "id": "P01",
+      "type": "porticus",
+      "follows": "T02",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 8.0,
+      "n_per_row": 15,
+      "s": 2.89,
+      "D": 1.05,
+      "order": "doric",
+      "first_col": [
+        -32.0,
+        -25.22
+      ],
+      "corner_ref": [
+        -32.0,
+        -22.33
+      ],
+      "line_facing": "E",
+      "n_max_fit": 16,
+      "col_H": 7.35,
+      "k": 7,
+      "n_cols": 15,
+      "columns_xy": [
+        [
+          -32.0,
+          -25.22
+        ],
+        [
+          -32.0,
+          -28.11
+        ],
+        [
+          -32.0,
+          -31.0
+        ],
+        [
+          -32.0,
+          -33.89
+        ],
+        [
+          -32.0,
+          -36.78
+        ],
+        [
+          -32.0,
+          -39.67
+        ],
+        [
+          -32.0,
+          -42.56
+        ],
+        [
+          -32.0,
+          -45.45
+        ],
+        [
+          -32.0,
+          -48.34
+        ],
+        [
+          -32.0,
+          -51.23
+        ],
+        [
+          -32.0,
+          -54.12
+        ],
+        [
+          -32.0,
+          -57.01
+        ],
+        [
+          -32.0,
+          -59.9
+        ],
+        [
+          -32.0,
+          -62.79
+        ],
+        [
+          -32.0,
+          -65.68
+        ]
+      ],
+      "col_top_z": 7.35,
+      "eave_z": 9.19,
+      "bbox_xy": [
+        -40.0,
+        -67.12,
+        -30.95,
+        -23.77
+      ]
+    },
+    "P02": {
+      "id": "P02",
+      "type": "porticus",
+      "follows": "T02",
+      "extend": "N",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 5.5,
+      "n_per_row": 9,
+      "s": 2.89,
+      "D": 1.05,
+      "order": "doric",
+      "first_col": [
+        -32.0,
+        -10.77
+      ],
+      "corner_ref": [
+        -32.0,
+        -13.66
+      ],
+      "line_facing": "E",
+      "n_max_fit": 11,
+      "col_H": 7.35,
+      "k": 7,
+      "n_cols": 9,
+      "columns_xy": [
+        [
+          -32.0,
+          -10.77
+        ],
+        [
+          -32.0,
+          -7.88
+        ],
+        [
+          -32.0,
+          -4.99
+        ],
+        [
+          -32.0,
+          -2.1
+        ],
+        [
+          -32.0,
+          0.79
+        ],
+        [
+          -32.0,
+          3.68
+        ],
+        [
+          -32.0,
+          6.57
+        ],
+        [
+          -32.0,
+          9.46
+        ],
+        [
+          -32.0,
+          12.35
+        ]
+      ],
+      "col_top_z": 7.35,
+      "eave_z": 9.19,
+      "bbox_xy": [
+        -37.5,
+        -12.21,
+        -30.95,
+        13.8
+      ]
+    },
+    "P03": {
+      "id": "P03",
+      "type": "porticus",
+      "follows": "T03",
+      "extend": "N",
+      "rows": 2,
+      "roof": "gable",
+      "depth": 6.5,
+      "n_per_row": 4,
+      "s": 4.06,
+      "D": 1.25,
+      "order": "ionic",
+      "first_col": [
+        -32.0,
+        48.21
+      ],
+      "corner_ref": [
+        -32.0,
+        44.15
+      ],
+      "line_facing": "E",
+      "n_max_fit": 4,
+      "col_H": 11.25,
+      "k": 9,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          -32.0,
+          48.21
+        ],
+        [
+          -32.0,
+          52.27
+        ],
+        [
+          -32.0,
+          56.33
+        ],
+        [
+          -32.0,
+          60.39
+        ],
+        [
+          -36.06,
+          48.21
+        ],
+        [
+          -36.06,
+          52.27
+        ],
+        [
+          -36.06,
+          56.33
+        ],
+        [
+          -36.06,
+          60.39
+        ]
+      ],
+      "col_top_z": 11.25,
+      "eave_z": 14.06,
+      "bbox_xy": [
+        -38.5,
+        46.18,
+        -30.75,
+        62.42
+      ]
+    },
+    "P04": {
+      "id": "P04",
+      "type": "porticus",
+      "follows": "T04",
+      "extend": "N",
+      "rows": 2,
+      "roof": "shed",
+      "depth": 6.0,
+      "n_per_row": 10,
+      "s": 2.88,
+      "D": 1.15,
+      "order": "corinthian",
+      "first_col": [
+        32.0,
+        37.2
+      ],
+      "corner_ref": [
+        32.0,
+        34.32
+      ],
+      "line_facing": "W",
+      "n_max_fit": 10,
+      "col_H": 11.5,
+      "k": 10,
+      "n_cols": 20,
+      "columns_xy": [
+        [
+          32.0,
+          37.2
+        ],
+        [
+          32.0,
+          40.08
+        ],
+        [
+          32.0,
+          42.96
+        ],
+        [
+          32.0,
+          45.84
+        ],
+        [
+          32.0,
+          48.72
+        ],
+        [
+          32.0,
+          51.6
+        ],
+        [
+          32.0,
+          54.48
+        ],
+        [
+          32.0,
+          57.36
+        ],
+        [
+          32.0,
+          60.24
+        ],
+        [
+          32.0,
+          63.12
+        ],
+        [
+          34.88,
+          37.2
+        ],
+        [
+          34.88,
+          40.08
+        ],
+        [
+          34.88,
+          42.96
+        ],
+        [
+          34.88,
+          45.84
+        ],
+        [
+          34.88,
+          48.72
+        ],
+        [
+          34.88,
+          51.6
+        ],
+        [
+          34.88,
+          54.48
+        ],
+        [
+          34.88,
+          57.36
+        ],
+        [
+          34.88,
+          60.24
+        ],
+        [
+          34.88,
+          63.12
+        ]
+      ],
+      "col_top_z": 11.5,
+      "eave_z": 14.38,
+      "bbox_xy": [
+        30.85,
+        35.76,
+        38.0,
+        64.56
+      ]
+    },
+    "P05": {
+      "id": "P05",
+      "type": "porticus",
+      "follows": "T04",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 7.5,
+      "n_per_row": 10,
+      "s": 2.88,
+      "D": 1.15,
+      "order": "corinthian",
+      "first_col": [
+        32.0,
+        22.8
+      ],
+      "corner_ref": [
+        32.0,
+        25.68
+      ],
+      "line_facing": "W",
+      "n_max_fit": 12,
+      "col_H": 11.5,
+      "k": 10,
+      "n_cols": 10,
+      "columns_xy": [
+        [
+          32.0,
+          22.8
+        ],
+        [
+          32.0,
+          19.92
+        ],
+        [
+          32.0,
+          17.04
+        ],
+        [
+          32.0,
+          14.16
+        ],
+        [
+          32.0,
+          11.28
+        ],
+        [
+          32.0,
+          8.4
+        ],
+        [
+          32.0,
+          5.52
+        ],
+        [
+          32.0,
+          2.64
+        ],
+        [
+          32.0,
+          -0.24
+        ],
+        [
+          32.0,
+          -3.12
+        ]
+      ],
+      "col_top_z": 11.5,
+      "eave_z": 14.38,
+      "bbox_xy": [
+        30.85,
+        -4.56,
+        39.5,
+        24.24
+      ]
+    },
+    "P06": {
+      "id": "P06",
+      "type": "porticus",
+      "follows": "T05",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 5.5,
+      "n_per_row": 8,
+      "s": 3.9,
+      "D": 1.3,
+      "order": "doric",
+      "first_col": [
+        32.0,
+        -37.65
+      ],
+      "corner_ref": [
+        32.0,
+        -33.75
+      ],
+      "line_facing": "W",
+      "n_max_fit": 9,
+      "col_H": 9.1,
+      "k": 7,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          32.0,
+          -37.65
+        ],
+        [
+          32.0,
+          -41.55
+        ],
+        [
+          32.0,
+          -45.45
+        ],
+        [
+          32.0,
+          -49.35
+        ],
+        [
+          32.0,
+          -53.25
+        ],
+        [
+          32.0,
+          -57.15
+        ],
+        [
+          32.0,
+          -61.05
+        ],
+        [
+          32.0,
+          -64.95
+        ]
+      ],
+      "col_top_z": 9.1,
+      "eave_z": 11.38,
+      "bbox_xy": [
+        30.7,
+        -66.9,
+        37.5,
+        -35.7
+      ]
+    },
+    "P07": {
+      "id": "P07",
+      "type": "porticus",
+      "follows": "T01",
+      "extend": "W",
+      "rows": 1,
+      "roof": "gable",
+      "depth": 6.0,
+      "n_per_row": 3,
+      "s": 3.85,
+      "D": 1.4,
+      "order": "corinthian",
+      "first_col": [
+        -13.47,
+        72.0
+      ],
+      "corner_ref": [
+        -9.62,
+        72.0
+      ],
+      "line_facing": "S",
+      "n_max_fit": 4,
+      "col_H": 14.0,
+      "k": 10,
+      "n_cols": 3,
+      "columns_xy": [
+        [
+          -13.47,
+          72.0
+        ],
+        [
+          -17.32,
+          72.0
+        ],
+        [
+          -21.17,
+          72.0
+        ]
+      ],
+      "col_top_z": 14.0,
+      "eave_z": 17.5,
+      "bbox_xy": [
+        -23.09,
+        70.6,
+        -11.54,
+        78.0
+      ]
+    },
+    "P08": {
+      "id": "P08",
+      "type": "porticus",
+      "follows": "T01",
+      "extend": "E",
+      "rows": 2,
+      "roof": "gable",
+      "depth": 7.0,
+      "n_per_row": 4,
+      "s": 3.85,
+      "D": 1.4,
+      "order": "corinthian",
+      "first_col": [
+        13.48,
+        72.0
+      ],
+      "corner_ref": [
+        9.63,
+        72.0
+      ],
+      "line_facing": "S",
+      "n_max_fit": 4,
+      "col_H": 14.0,
+      "k": 10,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          13.48,
+          72.0
+        ],
+        [
+          17.33,
+          72.0
+        ],
+        [
+          21.18,
+          72.0
+        ],
+        [
+          25.03,
+          72.0
+        ],
+        [
+          13.48,
+          75.85
+        ],
+        [
+          17.33,
+          75.85
+        ],
+        [
+          21.18,
+          75.85
+        ],
+        [
+          25.03,
+          75.85
+        ]
+      ],
+      "col_top_z": 14.0,
+      "eave_z": 17.5,
+      "bbox_xy": [
+        11.56,
+        70.6,
+        26.96,
+        79.0
+      ]
+    },
+    "B01": {
+      "id": "B01",
+      "type": "basilica",
+      "anchor": [
+        -100.0,
+        8.0
+      ],
+      "facing": "E",
+      "L": 84.0,
+      "W": 30.0,
+      "ridge_h": 22.0,
+      "aisles_per_side": 2,
+      "cols_per_row": 14,
+      "order": "ionic",
+      "D": 0.9,
+      "apse": 2,
+      "apse_r": 7.5,
+      "windows_per_side": 12,
+      "doors": 5,
+      "col_H": 8.1,
+      "k": 9,
+      "n_cols": 56,
+      "windows_total": 24,
+      "bbox_xy": [
+        -115.0,
+        -41.5,
+        -85.0,
+        57.5
+      ]
+    },
+    "B02": {
+      "id": "B02",
+      "type": "basilica",
+      "anchor": [
+        98.0,
+        0.0
+      ],
+      "facing": "W",
+      "L": 72.0,
+      "W": 26.0,
+      "ridge_h": 19.0,
+      "aisles_per_side": 1,
+      "cols_per_row": 11,
+      "order": "corinthian",
+      "D": 0.8,
+      "apse": 1,
+      "apse_r": 6.5,
+      "windows_per_side": 9,
+      "doors": 3,
+      "apse_end": "S",
+      "col_H": 8.0,
+      "k": 10,
+      "n_cols": 22,
+      "windows_total": 18,
+      "bbox_xy": [
+        85.0,
+        -42.5,
+        111.0,
+        42.5
+      ]
+    },
+    "A01": {
+      "id": "A01",
+      "type": "arch",
+      "anchor": [
+        0.0,
+        -84.0
+      ],
+      "facing": "N",
+      "passages": 3,
+      "cols_per_face": 4,
+      "order": "corinthian",
+      "D": 0.9,
+      "span_c": 6.6,
+      "h_c": 11.4,
+      "span_s": 2.9,
+      "h_s": 7.2,
+      "depth": 7.4,
+      "pedestal_h": 2.4,
+      "attic_h": 4.6,
+      "W": 24.0,
+      "H": 18.25,
+      "col_H": 9.0,
+      "k": 10,
+      "n_cols": 8,
+      "bbox_xy": [
+        -12.0,
+        -89.2,
+        12.0,
+        -78.8
+      ]
+    },
+    "A02": {
+      "id": "A02",
+      "type": "arch",
+      "anchor": [
+        26.0,
+        -90.0
+      ],
+      "facing": "N",
+      "passages": 3,
+      "cols_per_face": 4,
+      "order": "ionic",
+      "D": 0.8,
+      "span_c": 5.0,
+      "h_c": 8.6,
+      "span_s": 2.4,
+      "h_s": 5.4,
+      "depth": 5.0,
+      "pedestal_h": 1.6,
+      "attic_h": 3.4,
+      "W": 18.6,
+      "H": 14.0,
+      "col_H": 7.2,
+      "k": 9,
+      "n_cols": 8,
+      "bbox_xy": [
+        16.7,
+        -94.0,
+        35.3,
+        -86.0
+      ]
+    },
+    "R01": {
+      "id": "R01",
+      "type": "rostra",
+      "anchor": [
+        0.0,
+        38.0
+      ],
+      "facing": "S",
+      "L": 22.0,
+      "depth": 9.0,
+      "h": 3.2,
+      "prows": 8,
+      "front": "curved",
+      "front_rise": 2.5,
+      "rear_steps": 11,
+      "rear_stair_w": 4.0,
+      "bbox_xy": [
+        -11.0,
+        37.0,
+        11.0,
+        50.3
+      ]
+    },
+    "S01": {
+      "id": "S01",
+      "type": "statue_base",
+      "anchor": [
+        -14.0,
+        18.0
+      ],
+      "facing": "S",
+      "shape": "oblong",
+      "tiers": 1,
+      "base_h": 2.2,
+      "plan_a": 4.4,
+      "plan_b": 2.0,
+      "figure": "equestrian",
+      "figure_h": 3.2,
+      "bbox_xy": [
+        -16.5,
+        15.5,
+        -11.5,
+        20.5
+      ]
+    },
+    "S02": {
+      "id": "S02",
+      "type": "statue_base",
+      "anchor": [
+        14.0,
+        18.0
+      ],
+      "facing": "S",
+      "shape": "square",
+      "tiers": 1,
+      "base_h": 2.2,
+      "plan_a": 2.0,
+      "plan_b": 2.0,
+      "figure": "standing",
+      "figure_h": 2.4,
+      "bbox_xy": [
+        12.7,
+        16.7,
+        15.3,
+        19.3
+      ]
+    },
+    "S03": {
+      "id": "S03",
+      "type": "statue_base",
+      "anchor": [
+        -14.0,
+        -14.0
+      ],
+      "facing": "N",
+      "shape": "round",
+      "tiers": 3,
+      "base_h": 2.2,
+      "plan_a": 2.4,
+      "plan_b": 2.4,
+      "figure": "standing",
+      "figure_h": 2.2,
+      "bbox_xy": [
+        -15.5,
+        -15.5,
+        -12.5,
+        -12.5
+      ]
+    },
+    "S04": {
+      "id": "S04",
+      "type": "statue_base",
+      "anchor": [
+        14.0,
+        -14.0
+      ],
+      "facing": "N",
+      "shape": "oblong",
+      "tiers": 2,
+      "base_h": 2.6,
+      "plan_a": 4.0,
+      "plan_b": 2.0,
+      "figure": "equestrian",
+      "figure_h": 3.0,
+      "bbox_xy": [
+        11.7,
+        -16.3,
+        16.3,
+        -11.7
+      ]
+    },
+    "S05": {
+      "id": "S05",
+      "type": "statue_base",
+      "anchor": [
+        0.0,
+        8.0
+      ],
+      "facing": "S",
+      "shape": "square",
+      "tiers": 1,
+      "base_h": 2.8,
+      "plan_a": 1.8,
+      "plan_b": 1.8,
+      "figure": "standing",
+      "figure_h": 2.6,
+      "bbox_xy": [
+        -1.2,
+        6.8,
+        1.2,
+        9.2
+      ]
+    },
+    "S06": {
+      "id": "S06",
+      "type": "statue_base",
+      "anchor": [
+        0.0,
+        -58.0
+      ],
+      "facing": "N",
+      "shape": "round",
+      "tiers": 3,
+      "base_h": 1.8,
+      "plan_a": 1.6,
+      "plan_b": 1.6,
+      "figure": "standing",
+      "figure_h": 2.2,
+      "bbox_xy": [
+        -1.1,
+        -59.1,
+        1.1,
+        -56.9
+      ]
+    },
+    "C01": {
+      "id": "C01",
+      "type": "honorific_column",
+      "anchor": [
+        -13.0,
+        58.0
+      ],
+      "facing": "-",
+      "order": "doric",
+      "D": 1.6,
+      "base_steps": 3,
+      "pedestal_w": 3.52,
+      "pedestal_h": 3.2,
+      "crown": "statue",
+      "crown_h": 3.0,
+      "col_H": 11.2,
+      "k": 7,
+      "total_h": 18.3,
+      "bbox_xy": [
+        -15.96,
+        55.04,
+        -10.04,
+        60.96
+      ]
+    },
+    "C02": {
+      "id": "C02",
+      "type": "honorific_column",
+      "anchor": [
+        13.0,
+        58.0
+      ],
+      "facing": "-",
+      "order": "corinthian",
+      "D": 1.3,
+      "base_steps": 2,
+      "pedestal_w": 2.86,
+      "pedestal_h": 2.8,
+      "crown": "none",
+      "crown_h": 0.0,
+      "col_H": 13.0,
+      "k": 10,
+      "total_h": 16.4,
+      "bbox_xy": [
+        10.77,
+        55.77,
+        15.23,
+        60.23
+      ]
+    },
+    "C03": {
+      "id": "C03",
+      "type": "honorific_column",
+      "anchor": [
+        16.0,
+        -60.0
+      ],
+      "facing": "-",
+      "order": "ionic",
+      "D": 1.4,
+      "base_steps": 4,
+      "pedestal_w": 3.08,
+      "pedestal_h": 2.8,
+      "crown": "statue",
+      "crown_h": 3.0,
+      "col_H": 12.6,
+      "k": 9,
+      "total_h": 19.6,
+      "bbox_xy": [
+        12.86,
+        -63.14,
+        19.14,
+        -56.86
+      ]
+    }
+  },
+  "units_original_sheets": {
+    "T01": {
+      "id": "T01",
+      "type": "temple",
+      "order": "corinthian",
+      "D": 1.4,
+      "s": 3.85,
+      "n_f": 6,
+      "plan": "prostyle",
+      "podium_h": 4.5,
+      "steps": 15,
+      "pitch_deg": 16,
+      "W_p": 22.05,
+      "anchor": [
+        0.0,
+        72.0
+      ],
+      "facing": "S",
+      "porch_depth_cols": 3,
+      "flank_cols": 3,
+      "n_cols": 10,
+      "L_p": 39.69,
+      "stair": "full",
+      "stair_w": 22.05,
+      "col_H": 14.0,
+      "k": 10,
+      "col_top_z": 18.5,
+      "entab_top_z": 22.0,
+      "ridge_z": 24.96,
+      "columns_xy": [
+        [
+          9.63,
+          72.0
+        ],
+        [
+          5.78,
+          72.0
+        ],
+        [
+          1.93,
+          72.0
+        ],
+        [
+          -1.92,
+          72.0
+        ],
+        [
+          -5.77,
+          72.0
+        ],
+        [
+          -9.62,
+          72.0
+        ],
+        [
+          9.63,
+          75.85
+        ],
+        [
+          -9.62,
+          75.85
+        ],
+        [
+          9.63,
+          79.7
+        ],
+        [
+          -9.62,
+          79.7
+        ]
+      ],
+      "stair_proj": 5.25,
+      "bbox_xy": [
+        -11.02,
+        65.35,
+        11.03,
+        110.29
+      ]
+    },
+    "T02": {
+      "id": "T02",
+      "type": "temple",
+      "order": "doric",
+      "D": 1.05,
+      "s": 2.89,
+      "n_f": 4,
+      "plan": "prostyle",
+      "podium_h": 2.34,
+      "steps": 9,
+      "pitch_deg": 18,
+      "W_p": 10.77,
+      "anchor": [
+        -32.0,
+        -18.0
+      ],
+      "facing": "E",
+      "porch_depth_cols": 3,
+      "flank_cols": 3,
+      "n_cols": 8,
+      "L_p": 16.16,
+      "stair": "full",
+      "stair_w": 10.77,
+      "col_H": 7.35,
+      "k": 7,
+      "col_top_z": 9.69,
+      "entab_top_z": 11.53,
+      "ridge_z": 13.11,
+      "columns_xy": [
+        [
+          -32.0,
+          -13.66
+        ],
+        [
+          -32.0,
+          -16.55
+        ],
+        [
+          -32.0,
+          -19.44
+        ],
+        [
+          -32.0,
+          -22.33
+        ],
+        [
+          -34.89,
+          -13.66
+        ],
+        [
+          -34.89,
+          -22.33
+        ],
+        [
+          -37.78,
+          -13.66
+        ],
+        [
+          -37.78,
+          -22.33
+        ]
+      ],
+      "stair_proj": 3.15,
+      "bbox_xy": [
+        -47.11,
+        -23.38,
+        -27.8,
+        -12.61
+      ]
+    },
+    "T03": {
+      "id": "T03",
+      "type": "temple",
+      "order": "ionic",
+      "D": 1.25,
+      "s": 4.06,
+      "n_f": 6,
+      "plan": "peripteral",
+      "podium_h": 1.44,
+      "steps": 6,
+      "pitch_deg": 14,
+      "W_p": 22.8,
+      "anchor": [
+        -32.0,
+        34.0
+      ],
+      "facing": "E",
+      "flank_cols": 11,
+      "n_cols": 30,
+      "L_p": 43.1,
+      "stair": "central",
+      "stair_w": 6.87,
+      "col_H": 11.25,
+      "k": 9,
+      "col_top_z": 12.69,
+      "entab_top_z": 15.5,
+      "ridge_z": 18.19,
+      "columns_xy": [
+        [
+          -32.0,
+          44.15
+        ],
+        [
+          -32.0,
+          40.09
+        ],
+        [
+          -32.0,
+          36.03
+        ],
+        [
+          -32.0,
+          31.97
+        ],
+        [
+          -32.0,
+          27.91
+        ],
+        [
+          -32.0,
+          23.85
+        ],
+        [
+          -36.06,
+          44.15
+        ],
+        [
+          -36.06,
+          23.85
+        ],
+        [
+          -40.12,
+          44.15
+        ],
+        [
+          -40.12,
+          23.85
+        ],
+        [
+          -44.18,
+          44.15
+        ],
+        [
+          -44.18,
+          23.85
+        ],
+        [
+          -48.24,
+          44.15
+        ],
+        [
+          -48.24,
+          23.85
+        ],
+        [
+          -52.3,
+          44.15
+        ],
+        [
+          -52.3,
+          23.85
+        ],
+        [
+          -56.36,
+          44.15
+        ],
+        [
+          -56.36,
+          23.85
+        ],
+        [
+          -60.42,
+          44.15
+        ],
+        [
+          -60.42,
+          23.85
+        ],
+        [
+          -64.48,
+          44.15
+        ],
+        [
+          -64.48,
+          23.85
+        ],
+        [
+          -68.54,
+          44.15
+        ],
+        [
+          -68.54,
+          23.85
+        ],
+        [
+          -72.6,
+          44.15
+        ],
+        [
+          -72.6,
+          40.09
+        ],
+        [
+          -72.6,
+          36.03
+        ],
+        [
+          -72.6,
+          31.97
+        ],
+        [
+          -72.6,
+          27.91
+        ],
+        [
+          -72.6,
+          23.85
+        ]
+      ],
+      "stair_proj": 2.1,
+      "bbox_xy": [
+        -73.85,
+        22.6,
+        -28.65,
+        45.4
+      ]
+    },
+    "T04": {
+      "id": "T04",
+      "type": "temple",
+      "order": "ionic",
+      "D": 1.15,
+      "s": 2.88,
+      "n_f": 4,
+      "plan": "peripteral",
+      "podium_h": 2.2,
+      "steps": 10,
+      "pitch_deg": 12,
+      "W_p": 10.94,
+      "anchor": [
+        32.0,
+        30.0
+      ],
+      "facing": "W",
+      "flank_cols": 9,
+      "n_cols": 22,
+      "L_p": 25.34,
+      "stair": "full",
+      "stair_w": 10.94,
+      "col_H": 10.35,
+      "k": 9,
+      "col_top_z": 12.55,
+      "entab_top_z": 15.14,
+      "ridge_z": 16.18,
+      "columns_xy": [
+        [
+          32.0,
+          25.68
+        ],
+        [
+          32.0,
+          28.56
+        ],
+        [
+          32.0,
+          31.44
+        ],
+        [
+          32.0,
+          34.32
+        ],
+        [
+          34.88,
+          25.68
+        ],
+        [
+          34.88,
+          34.32
+        ],
+        [
+          37.76,
+          25.68
+        ],
+        [
+          37.76,
+          34.32
+        ],
+        [
+          40.64,
+          25.68
+        ],
+        [
+          40.64,
+          34.32
+        ],
+        [
+          43.52,
+          25.68
+        ],
+        [
+          43.52,
+          34.32
+        ],
+        [
+          46.4,
+          25.68
+        ],
+        [
+          46.4,
+          34.32
+        ],
+        [
+          49.28,
+          25.68
+        ],
+        [
+          49.28,
+          34.32
+        ],
+        [
+          52.16,
+          25.68
+        ],
+        [
+          52.16,
+          34.32
+        ],
+        [
+          55.04,
+          25.68
+        ],
+        [
+          55.04,
+          28.56
+        ],
+        [
+          55.04,
+          31.44
+        ],
+        [
+          55.04,
+          34.32
+        ]
+      ],
+      "stair_proj": 3.5,
+      "bbox_xy": [
+        27.35,
+        24.53,
+        56.19,
+        35.47
+      ]
+    },
+    "T05": {
+      "id": "T05",
+      "type": "temple",
+      "order": "doric",
+      "D": 1.3,
+      "s": 3.9,
+      "n_f": 6,
+      "plan": "prostyle",
+      "podium_h": 2.4,
+      "steps": 8,
+      "pitch_deg": 14,
+      "W_p": 22.1,
+      "anchor": [
+        32.0,
+        -24.0
+      ],
+      "facing": "W",
+      "porch_depth_cols": 2,
+      "flank_cols": 2,
+      "n_cols": 8,
+      "L_p": 37.57,
+      "stair": "central",
+      "stair_w": 6.5,
+      "col_H": 9.1,
+      "k": 7,
+      "col_top_z": 11.5,
+      "entab_top_z": 13.78,
+      "ridge_z": 16.37,
+      "columns_xy": [
+        [
+          32.0,
+          -33.75
+        ],
+        [
+          32.0,
+          -29.85
+        ],
+        [
+          32.0,
+          -25.95
+        ],
+        [
+          32.0,
+          -22.05
+        ],
+        [
+          32.0,
+          -18.15
+        ],
+        [
+          32.0,
+          -14.25
+        ],
+        [
+          35.9,
+          -33.75
+        ],
+        [
+          35.9,
+          -14.25
+        ]
+      ],
+      "stair_proj": 2.8,
+      "bbox_xy": [
+        27.9,
+        -35.05,
+        68.27,
+        -12.95
+      ]
+    },
+    "T06": {
+      "id": "T06",
+      "type": "tholos",
+      "order": "corinthian",
+      "D": 0.85,
+      "n_cols": 18,
+      "radius": 5.6,
+      "podium_h": 1.5,
+      "steps": 6,
+      "roof": "cone",
+      "anchor": [
+        -18.0,
+        -62.0
+      ],
+      "facing": "-",
+      "col_H": 8.5,
+      "k": 10,
+      "col_top_z": 10.0,
+      "podium_r": 6.45,
+      "bbox_xy": [
+        -26.55,
+        -70.55,
+        -9.45,
+        -53.45
+      ]
+    },
+    "P01": {
+      "id": "P01",
+      "type": "porticus",
+      "follows": "T02",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 8.0,
+      "n_per_row": 15,
+      "s": 2.89,
+      "D": 1.05,
+      "order": "doric",
+      "first_col": [
+        -32.0,
+        -25.22
+      ],
+      "corner_ref": [
+        -32.0,
+        -22.33
+      ],
+      "line_facing": "E",
+      "n_max_fit": 16,
+      "col_H": 7.35,
+      "k": 7,
+      "n_cols": 15,
+      "columns_xy": [
+        [
+          -32.0,
+          -25.22
+        ],
+        [
+          -32.0,
+          -28.11
+        ],
+        [
+          -32.0,
+          -31.0
+        ],
+        [
+          -32.0,
+          -33.89
+        ],
+        [
+          -32.0,
+          -36.78
+        ],
+        [
+          -32.0,
+          -39.67
+        ],
+        [
+          -32.0,
+          -42.56
+        ],
+        [
+          -32.0,
+          -45.45
+        ],
+        [
+          -32.0,
+          -48.34
+        ],
+        [
+          -32.0,
+          -51.23
+        ],
+        [
+          -32.0,
+          -54.12
+        ],
+        [
+          -32.0,
+          -57.01
+        ],
+        [
+          -32.0,
+          -59.9
+        ],
+        [
+          -32.0,
+          -62.79
+        ],
+        [
+          -32.0,
+          -65.68
+        ]
+      ],
+      "col_top_z": 7.35,
+      "eave_z": 9.19,
+      "bbox_xy": [
+        -40.0,
+        -67.12,
+        -30.95,
+        -23.77
+      ]
+    },
+    "P02": {
+      "id": "P02",
+      "type": "porticus",
+      "follows": "T02",
+      "extend": "N",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 5.5,
+      "n_per_row": 9,
+      "s": 2.89,
+      "D": 1.05,
+      "order": "doric",
+      "first_col": [
+        -32.0,
+        -10.77
+      ],
+      "corner_ref": [
+        -32.0,
+        -13.66
+      ],
+      "line_facing": "E",
+      "n_max_fit": 11,
+      "col_H": 7.35,
+      "k": 7,
+      "n_cols": 9,
+      "columns_xy": [
+        [
+          -32.0,
+          -10.77
+        ],
+        [
+          -32.0,
+          -7.88
+        ],
+        [
+          -32.0,
+          -4.99
+        ],
+        [
+          -32.0,
+          -2.1
+        ],
+        [
+          -32.0,
+          0.79
+        ],
+        [
+          -32.0,
+          3.68
+        ],
+        [
+          -32.0,
+          6.57
+        ],
+        [
+          -32.0,
+          9.46
+        ],
+        [
+          -32.0,
+          12.35
+        ]
+      ],
+      "col_top_z": 7.35,
+      "eave_z": 9.19,
+      "bbox_xy": [
+        -37.5,
+        -12.21,
+        -30.95,
+        13.8
+      ]
+    },
+    "P03": {
+      "id": "P03",
+      "type": "porticus",
+      "follows": "T03",
+      "extend": "N",
+      "rows": 2,
+      "roof": "gable",
+      "depth": 6.5,
+      "n_per_row": 4,
+      "s": 4.06,
+      "D": 1.25,
+      "order": "ionic",
+      "first_col": [
+        -32.0,
+        48.21
+      ],
+      "corner_ref": [
+        -32.0,
+        44.15
+      ],
+      "line_facing": "E",
+      "n_max_fit": 4,
+      "col_H": 11.25,
+      "k": 9,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          -32.0,
+          48.21
+        ],
+        [
+          -32.0,
+          52.27
+        ],
+        [
+          -32.0,
+          56.33
+        ],
+        [
+          -32.0,
+          60.39
+        ],
+        [
+          -36.06,
+          48.21
+        ],
+        [
+          -36.06,
+          52.27
+        ],
+        [
+          -36.06,
+          56.33
+        ],
+        [
+          -36.06,
+          60.39
+        ]
+      ],
+      "col_top_z": 11.25,
+      "eave_z": 14.06,
+      "bbox_xy": [
+        -38.5,
+        46.18,
+        -30.75,
+        62.42
+      ]
+    },
+    "P04": {
+      "id": "P04",
+      "type": "porticus",
+      "follows": "T04",
+      "extend": "N",
+      "rows": 2,
+      "roof": "shed",
+      "depth": 6.0,
+      "n_per_row": 10,
+      "s": 2.88,
+      "D": 1.15,
+      "order": "ionic",
+      "first_col": [
+        32.0,
+        37.2
+      ],
+      "corner_ref": [
+        32.0,
+        34.32
+      ],
+      "line_facing": "W",
+      "n_max_fit": 10,
+      "col_H": 10.35,
+      "k": 9,
+      "n_cols": 20,
+      "columns_xy": [
+        [
+          32.0,
+          37.2
+        ],
+        [
+          32.0,
+          40.08
+        ],
+        [
+          32.0,
+          42.96
+        ],
+        [
+          32.0,
+          45.84
+        ],
+        [
+          32.0,
+          48.72
+        ],
+        [
+          32.0,
+          51.6
+        ],
+        [
+          32.0,
+          54.48
+        ],
+        [
+          32.0,
+          57.36
+        ],
+        [
+          32.0,
+          60.24
+        ],
+        [
+          32.0,
+          63.12
+        ],
+        [
+          34.88,
+          37.2
+        ],
+        [
+          34.88,
+          40.08
+        ],
+        [
+          34.88,
+          42.96
+        ],
+        [
+          34.88,
+          45.84
+        ],
+        [
+          34.88,
+          48.72
+        ],
+        [
+          34.88,
+          51.6
+        ],
+        [
+          34.88,
+          54.48
+        ],
+        [
+          34.88,
+          57.36
+        ],
+        [
+          34.88,
+          60.24
+        ],
+        [
+          34.88,
+          63.12
+        ]
+      ],
+      "col_top_z": 10.35,
+      "eave_z": 12.94,
+      "bbox_xy": [
+        30.85,
+        35.76,
+        38.0,
+        64.56
+      ]
+    },
+    "P05": {
+      "id": "P05",
+      "type": "porticus",
+      "follows": "T04",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 7.5,
+      "n_per_row": 10,
+      "s": 2.88,
+      "D": 1.15,
+      "order": "ionic",
+      "first_col": [
+        32.0,
+        22.8
+      ],
+      "corner_ref": [
+        32.0,
+        25.68
+      ],
+      "line_facing": "W",
+      "n_max_fit": 12,
+      "col_H": 10.35,
+      "k": 9,
+      "n_cols": 10,
+      "columns_xy": [
+        [
+          32.0,
+          22.8
+        ],
+        [
+          32.0,
+          19.92
+        ],
+        [
+          32.0,
+          17.04
+        ],
+        [
+          32.0,
+          14.16
+        ],
+        [
+          32.0,
+          11.28
+        ],
+        [
+          32.0,
+          8.4
+        ],
+        [
+          32.0,
+          5.52
+        ],
+        [
+          32.0,
+          2.64
+        ],
+        [
+          32.0,
+          -0.24
+        ],
+        [
+          32.0,
+          -3.12
+        ]
+      ],
+      "col_top_z": 10.35,
+      "eave_z": 12.94,
+      "bbox_xy": [
+        30.85,
+        -4.56,
+        39.5,
+        24.24
+      ]
+    },
+    "P06": {
+      "id": "P06",
+      "type": "porticus",
+      "follows": "T05",
+      "extend": "S",
+      "rows": 1,
+      "roof": "shed",
+      "depth": 5.5,
+      "n_per_row": 8,
+      "s": 3.9,
+      "D": 1.3,
+      "order": "doric",
+      "first_col": [
+        32.0,
+        -37.65
+      ],
+      "corner_ref": [
+        32.0,
+        -33.75
+      ],
+      "line_facing": "W",
+      "n_max_fit": 9,
+      "col_H": 9.1,
+      "k": 7,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          32.0,
+          -37.65
+        ],
+        [
+          32.0,
+          -41.55
+        ],
+        [
+          32.0,
+          -45.45
+        ],
+        [
+          32.0,
+          -49.35
+        ],
+        [
+          32.0,
+          -53.25
+        ],
+        [
+          32.0,
+          -57.15
+        ],
+        [
+          32.0,
+          -61.05
+        ],
+        [
+          32.0,
+          -64.95
+        ]
+      ],
+      "col_top_z": 9.1,
+      "eave_z": 11.38,
+      "bbox_xy": [
+        30.7,
+        -66.9,
+        37.5,
+        -35.7
+      ]
+    },
+    "P07": {
+      "id": "P07",
+      "type": "porticus",
+      "follows": "T01",
+      "extend": "W",
+      "rows": 1,
+      "roof": "gable",
+      "depth": 6.0,
+      "n_per_row": 3,
+      "s": 3.85,
+      "D": 1.4,
+      "order": "corinthian",
+      "first_col": [
+        -13.47,
+        72.0
+      ],
+      "corner_ref": [
+        -9.62,
+        72.0
+      ],
+      "line_facing": "S",
+      "n_max_fit": 4,
+      "col_H": 14.0,
+      "k": 10,
+      "n_cols": 3,
+      "columns_xy": [
+        [
+          -13.47,
+          72.0
+        ],
+        [
+          -17.32,
+          72.0
+        ],
+        [
+          -21.17,
+          72.0
+        ]
+      ],
+      "col_top_z": 14.0,
+      "eave_z": 17.5,
+      "bbox_xy": [
+        -23.09,
+        70.6,
+        -11.54,
+        78.0
+      ]
+    },
+    "P08": {
+      "id": "P08",
+      "type": "porticus",
+      "follows": "T01",
+      "extend": "E",
+      "rows": 2,
+      "roof": "gable",
+      "depth": 7.0,
+      "n_per_row": 4,
+      "s": 3.85,
+      "D": 1.4,
+      "order": "corinthian",
+      "first_col": [
+        13.48,
+        72.0
+      ],
+      "corner_ref": [
+        9.63,
+        72.0
+      ],
+      "line_facing": "S",
+      "n_max_fit": 4,
+      "col_H": 14.0,
+      "k": 10,
+      "n_cols": 8,
+      "columns_xy": [
+        [
+          13.48,
+          72.0
+        ],
+        [
+          17.33,
+          72.0
+        ],
+        [
+          21.18,
+          72.0
+        ],
+        [
+          25.03,
+          72.0
+        ],
+        [
+          13.48,
+          75.85
+        ],
+        [
+          17.33,
+          75.85
+        ],
+        [
+          21.18,
+          75.85
+        ],
+        [
+          25.03,
+          75.85
+        ]
+      ],
+      "col_top_z": 14.0,
+      "eave_z": 17.5,
+      "bbox_xy": [
+        11.56,
+        70.6,
+        26.96,
+        79.0
+      ]
+    },
+    "B01": {
+      "id": "B01",
+      "type": "basilica",
+      "anchor": [
+        -100.0,
+        8.0
+      ],
+      "facing": "E",
+      "L": 84.0,
+      "W": 30.0,
+      "ridge_h": 22.0,
+      "aisles_per_side": 2,
+      "cols_per_row": 14,
+      "order": "ionic",
+      "D": 0.9,
+      "apse": 2,
+      "apse_r": 7.5,
+      "windows_per_side": 12,
+      "doors": 5,
+      "col_H": 8.1,
+      "k": 9,
+      "n_cols": 56,
+      "windows_total": 24,
+      "bbox_xy": [
+        -115.0,
+        -41.5,
+        -85.0,
+        57.5
+      ]
+    },
+    "B02": {
+      "id": "B02",
+      "type": "basilica",
+      "anchor": [
+        98.0,
+        0.0
+      ],
+      "facing": "W",
+      "L": 72.0,
+      "W": 26.0,
+      "ridge_h": 19.0,
+      "aisles_per_side": 1,
+      "cols_per_row": 11,
+      "order": "corinthian",
+      "D": 0.8,
+      "apse": 0,
+      "apse_r": 0.0,
+      "windows_per_side": 9,
+      "doors": 3,
+      "col_H": 8.0,
+      "k": 10,
+      "n_cols": 22,
+      "windows_total": 18,
+      "bbox_xy": [
+        85.0,
+        -36.0,
+        111.0,
+        36.0
+      ]
+    },
+    "A01": {
+      "id": "A01",
+      "type": "arch",
+      "anchor": [
+        0.0,
+        -84.0
+      ],
+      "facing": "N",
+      "passages": 3,
+      "cols_per_face": 4,
+      "order": "corinthian",
+      "D": 0.9,
+      "span_c": 6.6,
+      "h_c": 11.4,
+      "span_s": 2.9,
+      "h_s": 7.2,
+      "depth": 7.4,
+      "pedestal_h": 2.4,
+      "attic_h": 4.6,
+      "W": 24.0,
+      "H": 18.25,
+      "col_H": 9.0,
+      "k": 10,
+      "n_cols": 8,
+      "bbox_xy": [
+        -12.0,
+        -89.2,
+        12.0,
+        -78.8
+      ]
+    },
+    "A02": {
+      "id": "A02",
+      "type": "arch",
+      "anchor": [
+        26.0,
+        -90.0
+      ],
+      "facing": "N",
+      "passages": 1,
+      "cols_per_face": 2,
+      "order": "ionic",
+      "D": 0.8,
+      "span_c": 5.2,
+      "h_c": 8.6,
+      "span_s": null,
+      "h_s": null,
+      "depth": 5.0,
+      "pedestal_h": 1.6,
+      "attic_h": 3.4,
+      "W": 12.8,
+      "H": 14.0,
+      "col_H": 7.2,
+      "k": 9,
+      "n_cols": 4,
+      "bbox_xy": [
+        19.6,
+        -94.0,
+        32.4,
+        -86.0
+      ]
+    },
+    "R01": {
+      "id": "R01",
+      "type": "rostra",
+      "anchor": [
+        0.0,
+        38.0
+      ],
+      "facing": "S",
+      "L": 22.0,
+      "depth": 9.0,
+      "h": 3.2,
+      "prows": 6,
+      "front": "curved",
+      "front_rise": 2.5,
+      "rear_steps": 11,
+      "rear_stair_w": 4.0,
+      "bbox_xy": [
+        -11.0,
+        37.0,
+        11.0,
+        50.3
+      ]
+    },
+    "S01": {
+      "id": "S01",
+      "type": "statue_base",
+      "anchor": [
+        -14.0,
+        18.0
+      ],
+      "facing": "S",
+      "shape": "oblong",
+      "tiers": 1,
+      "base_h": 2.2,
+      "plan_a": 4.4,
+      "plan_b": 2.0,
+      "figure": "equestrian",
+      "figure_h": 3.2,
+      "bbox_xy": [
+        -16.5,
+        15.5,
+        -11.5,
+        20.5
+      ]
+    },
+    "S02": {
+      "id": "S02",
+      "type": "statue_base",
+      "anchor": [
+        14.0,
+        18.0
+      ],
+      "facing": "S",
+      "shape": "square",
+      "tiers": 1,
+      "base_h": 2.2,
+      "plan_a": 2.0,
+      "plan_b": 2.0,
+      "figure": "standing",
+      "figure_h": 2.4,
+      "bbox_xy": [
+        12.7,
+        16.7,
+        15.3,
+        19.3
+      ]
+    },
+    "S03": {
+      "id": "S03",
+      "type": "statue_base",
+      "anchor": [
+        -14.0,
+        -14.0
+      ],
+      "facing": "N",
+      "shape": "round",
+      "tiers": 3,
+      "base_h": 2.2,
+      "plan_a": 2.4,
+      "plan_b": 2.4,
+      "figure": "standing",
+      "figure_h": 2.2,
+      "bbox_xy": [
+        -15.5,
+        -15.5,
+        -12.5,
+        -12.5
+      ]
+    },
+    "S04": {
+      "id": "S04",
+      "type": "statue_base",
+      "anchor": [
+        14.0,
+        -14.0
+      ],
+      "facing": "N",
+      "shape": "oblong",
+      "tiers": 2,
+      "base_h": 2.6,
+      "plan_a": 4.0,
+      "plan_b": 2.0,
+      "figure": "equestrian",
+      "figure_h": 3.0,
+      "bbox_xy": [
+        11.7,
+        -16.3,
+        16.3,
+        -11.7
+      ]
+    },
+    "S05": {
+      "id": "S05",
+      "type": "statue_base",
+      "anchor": [
+        0.0,
+        8.0
+      ],
+      "facing": "S",
+      "shape": "square",
+      "tiers": 1,
+      "base_h": 2.8,
+      "plan_a": 1.8,
+      "plan_b": 1.8,
+      "figure": "standing",
+      "figure_h": 2.6,
+      "bbox_xy": [
+        -1.2,
+        6.8,
+        1.2,
+        9.2
+      ]
+    },
+    "S06": {
+      "id": "S06",
+      "type": "statue_base",
+      "anchor": [
+        0.0,
+        -58.0
+      ],
+      "facing": "N",
+      "shape": "round",
+      "tiers": 3,
+      "base_h": 1.8,
+      "plan_a": 1.6,
+      "plan_b": 1.6,
+      "figure": "standing",
+      "figure_h": 2.2,
+      "bbox_xy": [
+        -1.1,
+        -59.1,
+        1.1,
+        -56.9
+      ]
+    },
+    "C01": {
+      "id": "C01",
+      "type": "honorific_column",
+      "anchor": [
+        -13.0,
+        58.0
+      ],
+      "facing": "-",
+      "order": "doric",
+      "D": 1.6,
+      "base_steps": 3,
+      "pedestal_w": 3.52,
+      "pedestal_h": 3.2,
+      "crown": "statue",
+      "crown_h": 3.0,
+      "col_H": 11.2,
+      "k": 7,
+      "total_h": 18.3,
+      "bbox_xy": [
+        -15.96,
+        55.04,
+        -10.04,
+        60.96
+      ]
+    },
+    "C02": {
+      "id": "C02",
+      "type": "honorific_column",
+      "anchor": [
+        13.0,
+        58.0
+      ],
+      "facing": "-",
+      "order": "corinthian",
+      "D": 1.3,
+      "base_steps": 2,
+      "pedestal_w": 2.86,
+      "pedestal_h": 2.8,
+      "crown": "none",
+      "crown_h": 0.0,
+      "col_H": 13.0,
+      "k": 10,
+      "total_h": 16.4,
+      "bbox_xy": [
+        10.77,
+        55.77,
+        15.23,
+        60.23
+      ]
+    },
+    "C03": {
+      "id": "C03",
+      "type": "honorific_column",
+      "anchor": [
+        16.0,
+        -60.0
+      ],
+      "facing": "-",
+      "order": "ionic",
+      "D": 1.4,
+      "base_steps": 4,
+      "pedestal_w": 3.08,
+      "pedestal_h": 2.8,
+      "crown": "statue",
+      "crown_h": 3.0,
+      "col_H": 12.6,
+      "k": 9,
+      "total_h": 19.6,
+      "bbox_xy": [
+        12.86,
+        -63.14,
+        19.14,
+        -56.86
+      ]
+    }
+  },
+  "integration_lines": {
+    "west": {
+      "axis": "x",
+      "value": -32.0,
+      "front_row_columns": [
+        {
+          "unit": "T02",
+          "xy": [
+            -32.0,
+            -13.66
+          ]
+        },
+        {
+          "unit": "T02",
+          "xy": [
+            -32.0,
+            -16.55
+          ]
+        },
+        {
+          "unit": "T02",
+          "xy": [
+            -32.0,
+            -19.44
+          ]
+        },
+        {
+          "unit": "T02",
+          "xy": [
+            -32.0,
+            -22.33
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -25.22
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -28.11
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -31.0
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -33.89
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -36.78
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -39.67
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -42.56
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -45.45
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -48.34
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -51.23
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -54.12
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -57.01
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -59.9
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -62.79
+          ]
+        },
+        {
+          "unit": "P01",
+          "xy": [
+            -32.0,
+            -65.68
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            -10.77
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            -7.88
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            -4.99
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            -2.1
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            0.79
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            3.68
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            6.57
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            9.46
+          ]
+        },
+        {
+          "unit": "P02",
+          "xy": [
+            -32.0,
+            12.35
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            44.15
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            40.09
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            36.03
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            31.97
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            27.91
+          ]
+        },
+        {
+          "unit": "T03",
+          "xy": [
+            -32.0,
+            23.85
+          ]
+        },
+        {
+          "unit": "P03",
+          "xy": [
+            -32.0,
+            48.21
+          ]
+        },
+        {
+          "unit": "P03",
+          "xy": [
+            -32.0,
+            52.27
+          ]
+        },
+        {
+          "unit": "P03",
+          "xy": [
+            -32.0,
+            56.33
+          ]
+        },
+        {
+          "unit": "P03",
+          "xy": [
+            -32.0,
+            60.39
+          ]
+        }
+      ],
+      "junctions": [
+        {
+          "porticus": "P01",
+          "temple": "T02",
+          "temple_corner": [
+            -32.0,
+            -22.33
+          ],
+          "first_col": [
+            -32.0,
+            -25.22
+          ],
+          "gap": 2.89
+        },
+        {
+          "porticus": "P02",
+          "temple": "T02",
+          "temple_corner": [
+            -32.0,
+            -13.66
+          ],
+          "first_col": [
+            -32.0,
+            -10.77
+          ],
+          "gap": 2.89
+        },
+        {
+          "porticus": "P03",
+          "temple": "T03",
+          "temple_corner": [
+            -32.0,
+            44.15
+          ],
+          "first_col": [
+            -32.0,
+            48.21
+          ],
+          "gap": 4.06
+        }
+      ]
+    },
+    "east": {
+      "axis": "x",
+      "value": 32.0,
+      "front_row_columns": [
+        {
+          "unit": "T04",
+          "xy": [
+            32.0,
+            25.68
+          ]
+        },
+        {
+          "unit": "T04",
+          "xy": [
+            32.0,
+            28.56
+          ]
+        },
+        {
+          "unit": "T04",
+          "xy": [
+            32.0,
+            31.44
+          ]
+        },
+        {
+          "unit": "T04",
+          "xy": [
+            32.0,
+            34.32
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            37.2
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            40.08
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            42.96
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            45.84
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            48.72
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            51.6
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            54.48
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            57.36
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            60.24
+          ]
+        },
+        {
+          "unit": "P04",
+          "xy": [
+            32.0,
+            63.12
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            22.8
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            19.92
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            17.04
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            14.16
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            11.28
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            8.4
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            5.52
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            2.64
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            -0.24
+          ]
+        },
+        {
+          "unit": "P05",
+          "xy": [
+            32.0,
+            -3.12
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -33.75
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -29.85
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -25.95
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -22.05
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -18.15
+          ]
+        },
+        {
+          "unit": "T05",
+          "xy": [
+            32.0,
+            -14.25
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -37.65
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -41.55
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -45.45
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -49.35
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -53.25
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -57.15
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -61.05
+          ]
+        },
+        {
+          "unit": "P06",
+          "xy": [
+            32.0,
+            -64.95
+          ]
+        }
+      ],
+      "junctions": [
+        {
+          "porticus": "P04",
+          "temple": "T04",
+          "temple_corner": [
+            32.0,
+            34.32
+          ],
+          "first_col": [
+            32.0,
+            37.2
+          ],
+          "gap": 2.88
+        },
+        {
+          "porticus": "P05",
+          "temple": "T04",
+          "temple_corner": [
+            32.0,
+            25.68
+          ],
+          "first_col": [
+            32.0,
+            22.8
+          ],
+          "gap": 2.88
+        },
+        {
+          "porticus": "P06",
+          "temple": "T05",
+          "temple_corner": [
+            32.0,
+            -33.75
+          ],
+          "first_col": [
+            32.0,
+            -37.65
+          ],
+          "gap": 3.9
+        }
+      ]
+    },
+    "north": {
+      "axis": "y",
+      "value": 72.0,
+      "front_row_columns": [
+        {
+          "unit": "T01",
+          "xy": [
+            9.63,
+            72.0
+          ]
+        },
+        {
+          "unit": "T01",
+          "xy": [
+            5.78,
+            72.0
+          ]
+        },
+        {
+          "unit": "T01",
+          "xy": [
+            1.93,
+            72.0
+          ]
+        },
+        {
+          "unit": "T01",
+          "xy": [
+            -1.92,
+            72.0
+          ]
+        },
+        {
+          "unit": "T01",
+          "xy": [
+            -5.77,
+            72.0
+          ]
+        },
+        {
+          "unit": "T01",
+          "xy": [
+            -9.62,
+            72.0
+          ]
+        },
+        {
+          "unit": "P07",
+          "xy": [
+            -13.47,
+            72.0
+          ]
+        },
+        {
+          "unit": "P07",
+          "xy": [
+            -17.32,
+            72.0
+          ]
+        },
+        {
+          "unit": "P07",
+          "xy": [
+            -21.17,
+            72.0
+          ]
+        },
+        {
+          "unit": "P08",
+          "xy": [
+            13.48,
+            72.0
+          ]
+        },
+        {
+          "unit": "P08",
+          "xy": [
+            17.33,
+            72.0
+          ]
+        },
+        {
+          "unit": "P08",
+          "xy": [
+            21.18,
+            72.0
+          ]
+        },
+        {
+          "unit": "P08",
+          "xy": [
+            25.03,
+            72.0
+          ]
+        }
+      ],
+      "junctions": [
+        {
+          "porticus": "P07",
+          "temple": "T01",
+          "temple_corner": [
+            -9.62,
+            72.0
+          ],
+          "first_col": [
+            -13.47,
+            72.0
+          ],
+          "gap": 3.85
+        },
+        {
+          "porticus": "P08",
+          "temple": "T01",
+          "temple_corner": [
+            9.63,
+            72.0
+          ],
+          "first_col": [
+            13.48,
+            72.0
+          ],
+          "gap": 3.85
+        }
+      ]
+    }
+  },
+  "main_axis": {
+    "x": 0.0,
+    "units": [
+      "T01",
+      "R01",
+      "A01"
+    ]
+  },
+  "self_check_errors": []
+}

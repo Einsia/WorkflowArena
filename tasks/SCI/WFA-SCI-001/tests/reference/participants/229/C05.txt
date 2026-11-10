@@ -1,0 +1,10 @@
+# rank 1 unmapped (T133_S02.M01 src=T133_U25.M13)
+# rank 2 unmapped (T133_S02.M02 src=T133_U02.M03)
+# rank 3 unmapped (T133_S02.M03 src=T133_U29.M55)
+# rank 4 unmapped (T133_S02.M04 src=T133_U09.M20)
+# rank 5 unmapped (T133_S02.M05 src=T133_U13.M35)
+# rank 6 unmapped (T133_S02.M06 src=T133_U01.M17)
+# rank 7 unmapped (T133_S02.M07 src=T133_U12.M11)
+# rank 8 unmapped (T133_S02.M08 src=T133_U13.M21)
+9 C05_D2178
+# rank 10 unmapped (T133_S02.M10 src=T133_U08.M70)

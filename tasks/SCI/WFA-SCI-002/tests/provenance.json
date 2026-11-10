@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "what": "QA predictions (participants)",
+      "url": "https://predictioncenter.org/download_area/CASP15/predictions/QA/<T>.QA.tar.gz",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "oligo predictions (model files)",
+      "url": "https://predictioncenter.org/download_area/CASP15/predictions/oligo/<T>.tar.gz",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "per-model evaluation tables",
+      "url": "https://predictioncenter.org/download_area/CASP15/results/tables/oligo.tar.gz",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena.",
+      "sha256": "c472efaa6d555f08c36f5920dcd7a7da048e8e76ecbb07e31e59e125f50c693c"
+    },
+    {
+      "what": "official EMA result tables",
+      "url": "https://predictioncenter.org/download_area/CASP15/results/tables/QA/QA_predictioncenter_oligo-global_{fold,iface}.csv",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena.",
+      "sha256": {
+        "fold": "eeaa7113ed4de60aa35324a92e1af68b7d329b858cb376e54dc6900d290095a7",
+        "iface": "0f11ef4f32da5f1335684cfbf4be44766debabf637935fbab538caf49ca04c14"
+      }
+    },
+    {
+      "what": "target sequences",
+      "url": "https://predictioncenter.org/casp15/target.cgi?target=<T>&view=sequence ; https://predictioncenter.org/download_area/CASP15/sequences/casp15.seq.txt",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    }
+  ],
+  "derived": {
+    "anonymization": "Models ordered by sha256(target|model|b2-casp15-ema), with original prediction-method identities withheld from the solver.",
+    "targets": "tests/reference/targets_summary.json",
+    "labels": "tests/reference/model_scores.csv",
+    "evaluator": "tests/verify.py"
+  },
+  "distribution": "Original model/input files are fetched from the publisher using environment/fetch/sources.json; locally prepared files are excluded from Git. Evaluator reference values are derived numerical assessments with source attribution."
+}

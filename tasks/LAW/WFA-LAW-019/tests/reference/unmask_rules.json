@@ -1,0 +1,89 @@
+{
+ "rules": {
+  "restore": [
+   [
+    "木X",
+    "木棍",
+    "用木棍将原某头部打伤"
+   ],
+   [
+    "部分X",
+    "部分\n",
+    null
+   ],
+   [
+    "意见X<LOC>",
+    "意见\n<LOC>",
+    null
+   ]
+  ],
+  "code_persons": [
+   "[被告I]2",
+   "[被告J]4",
+   "[被告M]2",
+   "[被告K]6"
+  ]
+ },
+ "note": "“木X”依同一打斗事实的“用木棍将原某头部打伤”恢复；原文以 X 作分段符的两处改为换行；“[被告M]3”“[被告K]2”“[被告K]4”可能指被告本人，保留原样。",
+ "counts": {
+  "restorations": 6,
+  "code_person_labels": 0,
+  "person_labels": 5,
+  "distinct_person_labels": 4,
+  "masked_chars_to_box": 27,
+  "number_redactions": 0,
+  "left_ambiguous": 0,
+  "number_boundary_splits": 0
+ },
+ "restorations": {
+  "木X→木棍": 4,
+  "部分X→部分\n": 1,
+  "意见X<LOC>→意见\n<LOC>": 1
+ },
+ "code_persons": {
+  "[被告I]2": {
+   "label": "案外人甲",
+   "count": 0
+  },
+  "[被告J]4": {
+   "label": "案外人乙",
+   "count": 0
+  },
+  "[被告M]2": {
+   "label": "案外人丙",
+   "count": 0
+  },
+  "[被告K]6": {
+   "label": "案外人丁",
+   "count": 0
+  }
+ },
+ "persons": {
+  "郭X": {
+   "label": "郭某甲",
+   "count": 1
+  },
+  "薛X": {
+   "label": "薛某甲",
+   "count": 2
+  },
+  "王X4": {
+   "label": "王某甲",
+   "count": 1
+  },
+  "郑X": {
+   "label": "郑某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "弹X→弹□": 15,
+  "瑞X→瑞□": 2,
+  "钱X→钱□": 1,
+  "河X→河□": 4,
+  "伟X→伟□": 4,
+  "乡X→乡□": 1
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {}
+}

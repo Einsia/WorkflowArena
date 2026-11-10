@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-009",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Exponential smoothing (ETS) models in innovations state-space form",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/statsmodels/statsmodels/pull/6699",
+    "revision": "merge 29b94b98f86f9a494c88b93dc267a70a954a0d3c; start = first parent dd8ffcde87093ba21edb803e49d911d7122cda14",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

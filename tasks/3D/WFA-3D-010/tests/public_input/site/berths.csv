@@ -1,0 +1,13 @@
+berth,host_unit,fender_x1,fender_y1,fender_x2,fender_y2,water_side_nx,water_side_ny,mark_x,mark_y,bow_heading_deg,note
+BT01,Q01,-205,0.0,-95,0.0,0.0,-1.0,-186.0,0.0,180.0,Fender line = quay face line
+BT02,P03,,,,,-1.0,0.0,,-21.0,-90.0,Fender line = west deck edge of pier P03 (N-S; see sheet P03); berth mark on this line at y=mark_y
+BT03,P03,,,,,1.0,0.0,,-16.0,-90.0,Fender line = east deck edge of pier P03 (N-S; see sheet P03); berth mark on this line at y=mark_y
+BT04,P03,,,,,0.0,-1.0,-150.0,,180.0,Fender line = outer edge of pier head of P03 (E-W; see sheet P03); berth mark on this line at x=mark_x
+BT05,Q02,-85,0.0,45,0.0,0.0,-1.0,-58.0,0.0,180.0,Fender line = quay face line
+BT06,P01,,,,,-1.0,0.0,,-24.0,-90.0,Fender line = west deck edge of pier P01 (N-S; see sheet P01); berth mark on this line at y=mark_y
+BT07,P01,,,,,1.0,0.0,,-22.0,-90.0,Fender line = east deck edge of pier P01 (N-S; see sheet P01); berth mark on this line at y=mark_y
+BT08,Q02,-85,0.0,45,0.0,0.0,-1.0,22.0,0.0,0.0,Fender line = quay face line
+BT09,P02,,,,,-1.0,0.0,,-30.0,-90.0,Fender line = west deck edge of pier P02 (N-S; see sheet P02); berth mark on this line at y=mark_y
+BT10,P02,,,,,1.0,0.0,,-31.0,-90.0,Fender line = east deck edge of pier P02 (N-S; see sheet P02); berth mark on this line at y=mark_y
+BT11,Q03,55,0.0,200,0.0,0.0,-1.0,172.0,0.0,0.0,Fender line = quay face line
+BT12,Q03,55,0.0,200,0.0,0.0,-1.0,72.0,0.0,180.0,Fender line = quay face line

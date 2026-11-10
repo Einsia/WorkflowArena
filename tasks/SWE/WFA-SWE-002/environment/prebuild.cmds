@@ -1,0 +1,2 @@
+BUILD_CMD='export SETUPTOOLS_SCM_PRETEND_VERSION=4.3.dev0 ; cd /work && pip install --no-build-isolation --no-deps -e . -q'
+IMPORT_CHECK='export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/faketime/libfaketime.so.1 FAKETIME_DONT_FAKE_MONOTONIC=1 FAKETIME="@2021-04-14 12:00:00" && cd /work && python -c "import astropy, astropy.units, astropy.coordinates, astropy.timeseries; print(\"import ok\", astropy.__version__)"'

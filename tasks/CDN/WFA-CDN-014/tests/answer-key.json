@@ -1,0 +1,110 @@
+{
+  "task_id": "WFA-CDN-014",
+  "source": "public/input/report.pdf = NTSB/HAR-19/02 (152 PDF pages). Page refs: 'PDF n / p. m' (printed page = PDF page - 19 in the main body).",
+  "contradiction_type_vs_X01": "X01 = preliminary vs final report (two documents). X08 = one final report only; discrepancies are between sections of the same report (analysis text vs data tables/appendix; factual narrative section vs another factual section; party statement vs investigator characterisation).",
+  "keys": {
+    "K-BASIC": {
+      "facts": "Thursday 2018-03-15, about 1:46 p.m.; partially constructed pedestrian bridge over SW 8th Street, Miami, FL; failure in nodal connection between truss members 11 and 12 and the deck; 174-ft main span fell about 18.5 ft; 8 vehicles fully/partially crushed (7 occupied, 1 parked unoccupied); main span 950 tons, moved by SPMT on March 10.",
+      "pages": "PDF 3 (abstract), PDF 17 / p. xiv, PDF 47 (950 tons)"
+    },
+    "K-INJ": {
+      "facts": "Table 1: workers 1 fatal/4 serious/1 minor (6); vehicle occupants 5 fatal/2 serious/3 minor (10); total 6 fatal, 6 serious, 4 minor. Abstract: 1 worker + 5 occupants died; 5 workers + 5 others injured. EMS: 10 transported + 1 self-transported (do not present 11 as injury count).",
+      "pages": "PDF 24-25 / p. 5-6; PDF 3"
+    },
+    "K-PC": {
+      "verbatim": "probable cause ... was the load and capacity calculation errors made by FIGG ... in its design of the main span truss member 11/12 nodal region and connection to the bridge deck. Contributing ... inadequate peer review performed by Louis Berger ... Further contributing ... failure of the FIGG engineer of record to identify the significance of the structural cracking ... and to obtain an independent peer review of the remedial plan ... Contributing to the severity of the collapse outcome was the failure of MCM; FIGG; Bolton, Perez ...; FIU; and FDOT to cease bridge work ... and to take appropriate action to close SW 8th Street",
+      "pages": "PDF 122 / p. 103"
+    },
+    "K-REC": {
+      "facts": "H-19-24 to FHWA (interface shear demand/capacity/clamping requirement via AASHTO); H-19-25..29 to FDOT (peer review to check all nodal forces; prequalification letter; LAP agreements: close bridge and road when structural cracks detected; monitor uncommon LAP bridges; redundancy discussion); further recs to AASHTO and FIGG on following page.",
+      "pages": "PDF 123-124 / p. 104-105"
+    },
+    "K-TIMELINE": {
+      "facts": "Feb 13 first CEI crack report; Feb 24 loud cracking sound during formwork removal, crack found at 11/12 node (and 1/2); Feb 28 second report (mislabelled locations); Mar 10 SPMT move ended ~12:30 p.m., members 2 and 11 detensioned immediately after; Mar 12 4:51 p.m. MCM emails FIGG 16 photos, 'rather large and of concern'; Mar 13 9:45 a.m. FIGG 'not a safety issue', 10:59 a.m. third CEI report, 5:00 p.m. call / 5:18 p.m. email recommending restressing member 11; Mar 14 rushed change order approved; Mar 15 ~8:00 a.m. EOR views cracks, 9:00 a.m. meeting ('no safety concern'), restressing under way, collapse ~1:46 p.m. CEI not informed of restressing until 9:00 a.m. Mar 15; its PT inspector not onsite.",
+      "pages": "PDF 52-59 / p. 33-40 (sec. 1.7, Table 2 PDF 55-56)"
+    },
+    "K-MAT": {
+      "facts": "Finding 2: concrete and steel materials not a factor. Finding 3: hydraulic jack operating as expected.",
+      "pages": "PDF 119 / p. 100"
+    },
+    "K-DEMAND": {
+      "facts": "Table 6 FHWA Strength I demand (Model 1..4) node 1/2: 2,481/2,476/2,549/2,544; 2/3: 2,575/2,570/2,589/2,660; 10/11: 1,491/1,504/1,421/1,254; 11/12: 1,835/1,846/1,806/1,816 kips. FIGG design Vui (Table F-1): 1/2 1,368; 2/3 1,474; 10/11 133; 11/12 978 kips. Figure 30 plots FIGG design vs FHWA (matches Model 1).",
+      "pages": "Table 6 PDF 96 / p. 77; Fig 30 PDF 97 / p. 78; Table F-1 PDF 137 / p. 118; Table F-2 PDF 138-139"
+    },
+    "H01-49pct": {
+      "printed": "Nodal region 1/2: Underestimated by 1,100 kips (or 49 percent)",
+      "page": "PDF 97 / p. 78",
+      "recomputed": "Model 1: 2,481 - 1,368 = 1,113 kips; 1,113/2,481 = 44.9%. Range over Models 1-4: 1,108-1,181 kips, 44.7-46.3%. Other three bullets reproduce from the same tables (2/3: 1,101 kips, 42.8% ~ 43%; 10/11: 1,358 kips, 91.1%; 11/12: 857 kips, 46.7% ~ 46%). 49% is only reproducible against the LARSA longitudinal value 2,683 (Table F-2), i.e. a different basis. Pass requires flagging that 49% does not reproduce from Table 6/F-1/Fig 30 and showing both with pages."
+    },
+    "H02-20vs25": {
+      "text_a": "FIGG calculated the capacity for nodal regions 1/2 and 11/12 at values approximately 20 percent larger than the FHWA postcollapse check (PDF 91 / p. 72)",
+      "text_b": "By improperly using a load-multiplying factor of 1.25 in the Pc calculation, FIGG effectively increased, and thereby overestimated, the bridge's interface shear capacity by approximately 25 percent (PDF 92 / p. 73)",
+      "tables": "Table F-3 (FIGG) vs F-4 (FHWA) Vri: 1-2: 1,407 vs 1,156 (+21.7%); 11-12: 1,369 vs 1,130 (+21.2%); Pc 11-12: 1,233 vs 967 kips. 25% = the 1.25 factor applied to dead load in Pc, not the capacity ratio.",
+      "pass": "capacity overestimate at 11/12 quantified from tables or p.72 (~20-22%); 25% if used is identified as load-factor effect; never both presented as the same capacity gap."
+    },
+    "H03-timing": {
+      "text_a": "FIGG provided a specific sequence for restressing the member 11 PT rods, and the collapse occurred immediately after this activity (PDF 57 / p. 38)",
+      "text_b": "restressing operation - which was ongoing when the bridge collapsed at 1:46 p.m. (PDF 59 / p. 40); 'Just prior to the bridge collapse ... workers were applying tension' and jack 'recovered with the piston advanced ... performing tensioning operations at the time of the bridge collapse' (PDF 72-73 / p. 53-54); abstract: crew 'was working on retensioning' (PDF 3).",
+      "pass": "Deck states collapse occurred during restressing (with physical evidence) and, if p.38 wording is quoted, notes it conflicts; never says restressing had been completed."
+    },
+    "H04-crack-growth": {
+      "text": "Internal FIGG emails (11:58 a.m., 1:44 p.m. Mar 13) 'confirmed that the cracks were observed prior to the detensioning ... and grew slightly afterward'; NTSB investigators 'documented that the cracks appeared to have significantly progressed after the detensioning of member 11' (PDF 54 / p. 35). Finding 22: detensioning 'significantly increased the damage' (PDF 120 / p. 101).",
+      "pass": "Both characterisations attributed to their authors; 'grew slightly' never presented as established fact."
+    },
+    "H05-why-11-12": {
+      "text": "Figure 31 D/C (FHWA): 1/2 = 2.15 (highest), 2/3 1.68, 4/5 1.61, 11/12 1.62, 10/11 0.92; four nodes > 1.0. Failure at 11/12 because 11/12 framed into 24-in-wide diaphragm penetrated by four vertical pipe sleeves vs 42-in diaphragm at 1/2; member 11 24 in deep vs member 2 36 in (PDF 99 / p. 80). Finding 14: voids (four pipe sleeves + drain pipe) contributed.",
+      "pass": "Deck addresses why 11/12 failed although 1/2 had higher D/C, with >=2 of the report's reasons."
+    },
+    "K-DC-calc": {
+      "calc": "FHWA: 11/12 demand 1,835 (Model 1) / capacity 1,130 = 1.62 (matches Fig 31); FIGG design: 978 / 1,369 = 0.71. 1/2: 2,481/1,156 = 2.15; FIGG 1,368/1,407 = 0.97.",
+      "pages": "PDF 96, 99, 137, 139, 140"
+    },
+    "K-REBAR": {
+      "facts": "FIGG design: eight size-7 bars = 4.8 in^2 across 11/12 interface; FHWA check: an additional 13 in^2 should have been provided; footnote 95: simplified example, order of magnitude only.",
+      "pages": "PDF 98 / p. 79"
+    },
+    "K-MECH": {
+      "chain": [
+        "design demand underestimated (selected simple-support/fixed-pylon results; construction stages not considered)",
+        "capacity overestimated (Pc with 1.25 factor; roughening not specified; redundancy factor 1.00 for a nonredundant single-load-path truss)",
+        "11/12 interface under-reinforced (4.8 in^2) with voids (pipe sleeves, drain) in a 24-in diaphragm",
+        "distress from formwork removal (Feb 24) onward, active and growing (Findings 15, 22, 24)",
+        "Mar 10 detensioning of member 11 significantly increased damage (F22)",
+        "Mar 15 restressing of member 11 = load manipulation/design change not peer reviewed (F21)",
+        "interface shear failure at 11/12 node -> loss of single load path -> span collapse"
+      ],
+      "pages": "PDF 90-101, 119-121"
+    },
+    "K-BARRIERS": {
+      "supported": "qualified independent peer review checking all nodal forces 'might have prevented' (Finding 18, PDF 120); EOR recognising significance + peer review of remedial plan (PC contributing).",
+      "severity_only": "closing SW 8th Street / ceasing work = reduces severity, not prevention of the structural failure (PC; Finding 26).",
+      "rejected": "roughening the cold joint to 0.25-in amplitude would not have given sufficient capacity (Finding 5, PDF 119); materials and jack not factors (F2, F3)."
+    },
+    "K-DASHCAM": {
+      "facts": "Figures 9, 10, 11 (in-vehicle camera stills) time stamps 13:46:43:881, 13:46:44:046, 13:46:44:310 -> intervals 0.165 s and 0.264 s, total 0.429 s; report: 'The video recording of the entire event progressed in less than 2 seconds'.",
+      "pages": "Fig 9 PDF 30 / p. 11; Figs 10-11 PDF 31 / p. 12",
+      "pass_clip": "stills from Figs 9-11 only (Fig 4 garage stills are pre/post-collapse, not 'as it happened', and carry no time stamps -> not allowed in the clip; consistent with rubric D11), chronological order, labels match stamps, pacing 1:1 or stated slow-down within +/-10%, 'sequence of stills' disclosure on screen."
+    },
+    "K-FIG31": {
+      "values": {
+        "1/2": 2.15,
+        "2/3": 1.68,
+        "3/4": 0.8,
+        "4/5": 1.61,
+        "5/6": 0.87,
+        "6/7": 0.65,
+        "7/8": 0.34,
+        "8/9": 0.02,
+        "9/10": 0.06,
+        "10/11": 0.92,
+        "11/12": 1.62
+      },
+      "note": "Figure 31 (PDF 99 / p. 80) D/C ratios Vui/Vri for all main-span nodal regions, read from the figure's printed data labels (image only, not in the PDF text layer). Added 2026-10-25 for chart-value checks (D05).",
+      "pages": "PDF 99 / p. 80"
+    },
+    "K-STILLS": {
+      "note": "Figures 9-11 are the only embedded raster images on PDF 30-31 (pdfimages: p30 #0 = Fig 9, p31 #1 = Fig 10, p31 #2 = Fig 11); checks.py D11 matches clip frames against them.",
+      "pages": "PDF 30-31 / p. 11-12"
+    }
+  }
+}

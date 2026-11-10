@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-LAW-011",
+  "domain": "LAW",
+  "task_form": "LAW-TXN",
+  "title": "Merger agreement deal-points survey: Target-side flexibility (deal protection, termination fees, interim covenants)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "expert-annotated dataset (MAUD; labels from the 2021 ABA Public Target Deal Points Study annotation) + EDGAR merger agreements",
+    "url": "https://github.com/TheAtticusProject/maud",
+    "revision": "data.zip sha256 75af5a33d038e9254864f043da38072490ffe11e8488d58d0a2dd39c8f554519",
+    "license": "CC-BY-4.0 (MAUD dataset)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence": "https://www.atticusprojectai.org/legal/"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

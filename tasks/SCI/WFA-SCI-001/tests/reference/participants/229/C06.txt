@@ -1,0 +1,10 @@
+# rank 1 unmapped (T131_S20.M01 src=T131_U20.M02)
+2 C06_D0895
+3 C06_D0343
+# rank 4 unmapped (T131_S20.M04 src=T131_U20.M05)
+# rank 5 unmapped (T131_S20.M05 src=T131_U20.M04)
+# rank 6 unmapped (T131_S20.M06 src=T131_U20.M14)
+7 C06_D1722
+8 C06_D0706
+# rank 9 unmapped (T131_S20.M09 src=T131_U20.M09)
+# rank 10 unmapped (T131_S20.M10 src=T131_U20.M08)

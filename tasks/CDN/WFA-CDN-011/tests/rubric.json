@@ -1,0 +1,798 @@
+{
+  "task_id": "WFA-CDN-011",
+  "scoring": {
+    "zh": "每项只判是/否，部分满足即否。组得分 = 组权重 ×（通过项/组内项数），总分 = 各组之和（满分 100）。评委须与求解模型不同家族，求解者自述（playback-check.md）不作证据。组级门槛只让对应组/项记 0；整题门槛仅 GATE0 与 GATE-CHEAT。由 tests/checks.py 判定的项不再交给评委。"
+  },
+  "gates": [
+    {
+      "id": "GATE0",
+      "scope": "整题",
+      "zh": "output/ 中 presentation.pptx、slides.pdf、script.md、evidence-index.csv、playback-check.md 齐全且 PPTX 可被 python-pptx 读取。",
+      "verify": "文件存在 + python-pptx 打开",
+      "fail_effect": "整题验收失败，所有项记否"
+    },
+    {
+      "id": "GATE-CHEAT",
+      "scope": "整题",
+      "zh": "未联网、未访问隐藏文件、未使用 input/ 以外的数据源。",
+      "verify": "运行日志审查",
+      "fail_effect": "整题验收失败（连续分照常报告）"
+    },
+    {
+      "id": "GATE-PPT",
+      "scope": "组级(G6)",
+      "zh": "presentation.pptx 在 Windows 桌面版 PowerPoint 16.x 中以 Presentations.Open(ReadOnly) 与 Open(ReadWrite) 均无错误、无修复提示打开（不使用 OpenAndRepair）。",
+      "verify": "Windows PowerPoint COM 动态检查（同 R3 windows_dynamic 协议，去掉媒体部分）",
+      "fail_effect": "G6 记 0；V03/V05/V06 记否"
+    },
+    {
+      "id": "GATE-CHART",
+      "scope": "组级(G6 图表项)",
+      "zh": "所有原生图表 ChartData.Activate() 成功。",
+      "verify": "PowerPoint COM",
+      "fail_effect": "D02–D07 记否"
+    }
+  ],
+  "groups": {
+    "G1": {
+      "zh": "叙事与论证结构",
+      "en": "Narrative and argument",
+      "weight": 12
+    },
+    "G2": {
+      "zh": "视觉设计与可读性",
+      "en": "Visual design and legibility",
+      "weight": 12
+    },
+    "G3": {
+      "zh": "材料覆盖与口径（含隐藏考点）",
+      "en": "Coverage and definitions (incl. hidden checks)",
+      "weight": 22
+    },
+    "G4": {
+      "zh": "逐页忠实度",
+      "en": "Per-slide fidelity",
+      "weight": 12
+    },
+    "G5": {
+      "zh": "独立推理与计算",
+      "en": "Own reasoning and calculation",
+      "weight": 20
+    },
+    "G6": {
+      "zh": "原生图表、动画与交付",
+      "en": "Native charts, animation and delivery",
+      "weight": 22
+    }
+  },
+  "items": [
+    {
+      "id": "N01",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "开场页提出题面问题（规模/转折时点/重症与死亡风险/证据强度与对州可用结论），最后一页对每一部分给出直接回答。",
+      "criterion_en": "Opening states the multi-part question; last slide answers each part directly.",
+      "verify": "读第1页与末页文本",
+      "weight": 1.5
+    },
+    {
+      "id": "N02",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "叙事围绕问题推进（规模→曲线与转折→严重程度→证据强度→对州的规划含义），不出现与主问题无关的措施/机构罗列页（≥2 页纯罗列即否）。",
+      "criterion_en": "Narrative follows the question (size→curve/turn→severity→strength of evidence→state planning); no ≥2 slides of off-question listing of measures/agencies.",
+      "verify": "逐页标题列表人工核",
+      "weight": 1.5
+    },
+    {
+      "id": "N03",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "每页标题是可由该页证据支持的论断句（非“Background”“Results”类名词标题），全部页面满足。",
+      "criterion_en": "Every slide title is a claim supported by that slide (no topic-label titles).",
+      "verify": "逐页标题",
+      "weight": 1.5
+    },
+    {
+      "id": "N04",
+      "tier": "gate",
+      "group": "G1",
+      "critical": true,
+      "criterion_zh": "转折归因区分“与措施时间上同步/多源数据支持下降真实”与“由某措施导致”；把“避免数十万例”表述为基于省际粗罹患率比较的估计；全篇（含末页）不把转折全部归功于单一措施。",
+      "criterion_en": "Attribution separates timing/multi-source evidence that the decline is real from causation by a specific measure; 'hundreds of thousands averted' framed as an estimate from cross-province crude attack rates; never credits the turn wholly to one measure.",
+      "verify": "全文检索 caused/because of/thanks to 等；对照 answer-key T10–T12",
+      "weight": 1.5
+    },
+    {
+      "id": "N05",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "为听众解释至少三个必要术语（实验室确诊/临床诊断病例、粗病死率 CFR、按发病日期/报告日期的流行曲线），且解释与材料一致。",
+      "criterion_en": "Explains ≥3 necessary terms (lab-confirmed vs clinically diagnosed, crude CFR, onset- vs report-date epi curve) consistently with the materials.",
+      "verify": "页面+备注检索",
+      "weight": 1.5
+    },
+    {
+      "id": "N06",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "讲稿逐页时长相加在 12–15 分钟内；讲稿总词数 W 与声明总时长 T（分钟）满足 0.75×W/160 ≤ T ≤ 1.25×W/130（即隐含语速约 104–213 词/分钟）。",
+      "criterion_en": "Script per-slide durations sum to 12–15 min; total word count W and declared total T (min) satisfy 0.75×W/160 ≤ T ≤ 1.25×W/130 (implied rate ≈104–213 wpm).",
+      "verify": "脚本统计字数",
+      "weight": 1.5
+    },
+    {
+      "id": "N07",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "对州的规划含义至少 3 条，每条绑定材料中的具体证据（含文件与页码，如家庭聚集、密接追踪产出、医护感染、发病至确诊时间），不是泛泛口号。",
+      "criterion_en": "≥3 state-planning implications, each tied to specific evidence with file+page (e.g. household clusters, contact-tracing yield, HCW infections, onset-to-confirmation time).",
+      "verify": "读页面与 evidence-index",
+      "weight": 1.5
+    },
+    {
+      "id": "N08",
+      "tier": "gate",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "结论页把证据分为“已由数据支持 / 有条件成立 / 材料不能回答”三类并各给至少一例。",
+      "criterion_en": "Conclusion sorts claims into supported / conditional / not answerable by the materials, ≥1 example each.",
+      "verify": "读末页",
+      "weight": 1.5
+    },
+    {
+      "id": "V01",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "页数 14–18，16:9。",
+      "criterion_en": "14–18 slides, 16:9.",
+      "verify": "python-pptx slide_width/height 与张数",
+      "weight": 1.5
+    },
+    {
+      "id": "V02",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "没有任何一页超过 6 条要点。",
+      "criterion_en": "No slide has more than 6 bullets.",
+      "verify": "checks.py cdc_layout.bullets_per_slide: per slide, non-empty paragraphs of body/object placeholders (unless buNone) plus paragraphs with explicit bullets in other text shapes; captions/source lines and connector-linked diagram nodes excluded; >6 on any slide ⇒ fail.",
+      "weight": 1.5
+    },
+    {
+      "id": "V03",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "正文 ≥20 pt；图注、出处行、标题与表格文字 ≥12 pt——均按有效字号计（显式或继承字号 × 自动缩放比例）。",
+      "criterion_en": "Body text ≥20 pt; captions, source lines, titles and table text ≥12 pt — at effective size (explicit or inherited size × autofit scale).",
+      "verify": "checks.py cdc_layout.font_violations: run size = rPr@sz, else inherited (shape lstStyle → layout/master placeholder → master txStyles / presentation defaultTextStyle → 18 pt), × bodyPr/normAutofit@fontScale (estimated shrink when autofit stores no scale); caption/source line = text starting with Source/Fig./Credit/… or a small box (<0.6 in) carrying a source/page reference. pass/fail.",
+      "weight": 1.5
+    },
+    {
+      "id": "V04",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每个原生图表：每条可见坐标轴都有标题，数值轴标题注明单位，≥2 个系列有图例；日期类别轴的标题标明日期口径（发病日期/报告日期/确诊日期/周等）。",
+      "criterion_en": "Every native chart: each visible axis has a title, the value-axis title states the unit, charts with ≥2 series have a legend, and a date category axis states its basis (onset / report / confirmation date, week …) in its title.",
+      "verify": "checks.py cdc_layout.chart_axis_issues: c:valAx/c:catAx/c:dateAx c:title text unless deleted; unit token in the value-axis title; c:legend when ≥2 c:ser; date axes (dateAx or date-like category labels) need onset/report/confirm/notification/week… in the title. pass/fail.",
+      "weight": 1.5
+    },
+    {
+      "id": "V05",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "静态版面：任一页均无文字溢出文本框、无形状超出页面边界、无文字相互重叠（不含带动画的形状，点击构建由 V06 判定）。",
+      "criterion_en": "Static layout: on no slide does text overflow its box, a shape extend beyond the slide edge, or text overlap other text (shapes without animation; the click build is V06).",
+      "verify": "checks.py cdc_layout.layout_issues: estimated text height (characters × 0.5 em per line, 1.2 line height, effective sizes, insets) > 1.25 × box height + 6 pt without autofit ⇒ overflow; box beyond the slide by >1 % ⇒ fail; estimated text areas of two text shapes/tables intersecting by >5 % of the smaller ⇒ overlap. pass/fail.",
+      "weight": 1.5
+    },
+    {
+      "id": "V06",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "曲线转折（点击构建）页：任一点击状态下，已显示的注释都不与同时可见的其他文字重叠，也不遮挡图表或图片面积的 30% 以上。",
+      "criterion_en": "Curve-turn (click-build) slide: in no click state does a revealed annotation overlap another text shape visible at the same time or cover more than 30 % of a chart or picture.",
+      "verify": "checks.py cdc_layout.animation_occlusion on the slide with most on-click entrance effects: visibility per click group (exit effects hide), estimated text areas vs other text and chart/picture frames; no click-build slide ⇒ fail. pass/fail.",
+      "weight": 1.5
+    },
+    {
+      "id": "V07",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "全篇以一致的视觉编码区分“报告数（reported）/估计或模型值/推导值”。",
+      "criterion_en": "Consistent visual encoding distinguishes reported counts, model/estimated values and derived values.",
+      "verify": "人工看全篇",
+      "weight": 1.5
+    },
+    {
+      "id": "V08",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "英文语法、拼写、数字与单位格式正确（千分位、百分号、日期格式一致）。",
+      "criterion_en": "English grammar, spelling, number/unit formatting correct and consistent.",
+      "verify": "LLM 评委仅扣分 + 人工抽查",
+      "weight": 1.5
+    },
+    {
+      "id": "A01",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "给出疫情规模时写明日期与口径，区分报告第 5 页 75,465 例（全国报告系统累计）与第 8/12 页 55,924 例（实验室确诊）；不把 75,465 称为实验室确诊。",
+      "criterion_en": "Size stated with date and basis, distinguishing 75,465 (national reporting system cumulative, p5) from 55,924 laboratory-confirmed (p8/p12); 75,465 never called lab-confirmed.",
+      "verify": "页面/备注检索两数及其标签；answer-key T01",
+      "weight": 1.375
+    },
+    {
+      "id": "A02",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 发现 WHO 通报序列口径变化：sitrep-24（2/13）只计实验室确诊、未计入湖北 13,332 例临床诊断，sitrep-31/35 的中国数含临床诊断；凡并列或连线这些数字，均标注口径断点或分序列，不把 46,550→74,675 读作增长。",
+      "criterion_en": "[hidden] Notices the definitional break in the WHO sitrep series (sitrep-24 lab-confirmed only, excluding 13,332 clinically diagnosed; sitrep-31/35 include them); any juxtaposition marks the break or splits series; 46,550→74,675 not read as growth.",
+      "verify": "answer-key T02/T03/K07；检查图表工作簿序列",
+      "weight": 1.375
+    },
+    {
+      "id": "A03",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "解释“临床诊断病例”（仅湖北使用）及其在 2/20 前后被取消，依据 sitrep-24/31 原文。",
+      "criterion_en": "Explains 'clinically diagnosed' cases (Hubei only) and their removal around 20 Feb, per sitrep-24/31.",
+      "verify": "answer-key T02/T03",
+      "weight": 1.375
+    },
+    {
+      "id": "A04",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "按报告第 7 页给出转折时段：1/10–22 快速增长、1/23–27 达峰并平台、此后下降、2/1 报告尖峰；并与 1/23 武汉交通管制（第 15 页）在时间上对照。",
+      "criterion_en": "Gives the turn per p7 (growth 10–22 Jan, peak/plateau 23–27 Jan, decline after, 1 Feb spike) and places it against the 23 Jan Wuhan traffic restrictions (p15).",
+      "verify": "answer-key T10",
+      "weight": 1.375
+    },
+    {
+      "id": "A05",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 区分按发病日期与按报告日期的曲线，并指出最近发病日因发病→确诊延迟而不完整（依据图 3 三个快照的回填或第 13 页 12→3 天）；不把发病曲线末端的下降直接当作当前传播水平。",
+      "criterion_en": "[hidden] Distinguishes onset-date vs report-date curves and states recent onset days are incomplete due to onset→confirmation delay (Fig 3 back-fill across snapshots or p13 12→3 days); does not read the tail of the onset curve as current transmission.",
+      "verify": "answer-key T09；人工",
+      "weight": 1.375
+    },
+    {
+      "id": "A06",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "[隐藏] 3.8% 标为以 55,924 例实验室确诊为分母的粗病死率，并带出报告脚注对早期粗 CFR 偏倚的保留；不与通报中“死亡/中国总数”（含临床诊断）当作同一指标并列。",
+      "criterion_en": "[hidden] 3.8% labelled as crude CFR over 55,924 lab-confirmed, with the report's footnote caveat on early crude CFR bias; not juxtaposed as the same metric with sitrep deaths/total (incl. clinically diagnosed).",
+      "verify": "answer-key T04/K01/K02",
+      "weight": 1.375
+    },
+    {
+      "id": "A07",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 呈现按发病时段的 CFR（17.3%→0.7%）时，说明近期发病队列随访不足（发病至死亡 2–8 周，第 14 页）和/或报告所述诊疗标准演进；不把 0.7% 当作当前真实病死风险。若简报未呈现该数值或比较，则本项通过。",
+      "criterion_en": "[hidden] When showing CFR by onset period (17.3%→0.7%), notes incomplete follow-up of recent cohorts (onset-to-death 2–8 weeks, p14) and/or evolving standard of care; 0.7% not presented as the current true fatality risk. If the deck does not show this quantity or comparison, this item passes.",
+      "verify": "answer-key T05/K09",
+      "weight": 1.375
+    },
+    {
+      "id": "A08",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 儿童 2.4% 表述为占报告病例的比例（若引用原文“attack rate”措辞，须指出该数实为病例构成比而非罹患率）；保留第 11 页“无法确定儿童感染程度”的限定。",
+      "criterion_en": "[hidden] Children's 2.4% presented as a share of reported cases (if the source phrase 'attack rate' is quoted, the deck flags that 2.4% is a share of cases, not an attack rate); keeps the caveat that the extent of infection in children cannot be determined (p11).",
+      "verify": "answer-key T06",
+      "weight": 1.375
+    },
+    {
+      "id": "A09",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "[隐藏] 78%–85% 表述为“聚集性疫情中发生在家庭的比例”（单位是聚集），不是“病例/传播的 78–85% 在家庭”；家庭续发率 3–10% 标为初步。若简报未呈现该数值或比较，则本项通过。",
+      "criterion_en": "[hidden] 78–85% presented as share of clusters occurring in families, not of cases/transmission; household SAR 3–10% marked preliminary. If the deck does not show this quantity or comparison, this item passes.",
+      "verify": "answer-key T07",
+      "weight": 1.375
+    },
+    {
+      "id": "A10",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "严重程度构成（约 80% 轻/中、13.8% 重症、6.1% 危重）注明分母为实验室确诊，并说明“轻/中”包含肺炎。",
+      "criterion_en": "Severity split (≈80% mild/moderate, 13.8% severe, 6.1% critical) states lab-confirmed denominator and that mild/moderate includes pneumonia.",
+      "verify": "answer-key T16",
+      "weight": 1.375
+    },
+    {
+      "id": "A11",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "医护人员感染：2,055 例实验室确诊、476 家医院、88% 来自湖北，并保留“许多可能在家庭内感染”的限定。",
+      "criterion_en": "HCW infections: 2,055 lab-confirmed, 476 hospitals, 88% Hubei, with the household-exposure caveat.",
+      "verify": "answer-key T15",
+      "weight": 1.375
+    },
+    {
+      "id": "A12",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "潜伏期按第 12 页：平均 5–6 天，范围 1–14 天。",
+      "criterion_en": "Incubation per p12: mean 5–6 days, range 1–14 days.",
+      "verify": "页面检索",
+      "weight": 1.375
+    },
+    {
+      "id": "A13",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "R0 2–2.5 标为无干预情况下的值。",
+      "criterion_en": "R0 2–2.5 labelled as in the absence of interventions.",
+      "verify": "answer-key T17",
+      "weight": 1.375
+    },
+    {
+      "id": "A14",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "引用每日新增确诊 2478→409（第 17 页）时注明两个日期（考察首末日）且为报告日计数，并引用至少一项独立佐证（发热门诊阳性率或就诊量下降）。",
+      "criterion_en": "Cites 2478→409 daily new confirmed (p17) with both dates and as report-date counts, plus ≥1 independent corroboration (fever-clinic positivity/visits).",
+      "verify": "answer-key T11",
+      "weight": 1.375
+    },
+    {
+      "id": "A15",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "关键日期正确：1/20 纳入乙类法定报告、1/23 武汉交通管制、考察 2/16–24（或先遣 2/10 起）。",
+      "criterion_en": "Key dates correct: 20 Jan notifiable Class B, 23 Jan Wuhan traffic restrictions, mission 16–24 Feb (advance team from 10 Feb).",
+      "verify": "页面检索",
+      "weight": 1.375
+    },
+    {
+      "id": "A16",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "遵守知识截止：全篇（含备注、讲稿）不出现 2020 年 2 月底以后才知道的事实（如此后的全球宣布、疫苗、后续波次或最终统计）。",
+      "criterion_en": "Knowledge cutoff respected: no facts known only after late Feb 2020 anywhere (incl. notes/script).",
+      "verify": "LLM 评委扣分 + 人工抽查",
+      "weight": 1.375
+    },
+    {
+      "id": "F01",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 1 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 1 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F02",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 2 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 2 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F03",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 3 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 3 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F04",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 4 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 4 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F05",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 5 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 5 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F06",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 6 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 6 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F07",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 7 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 7 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F08",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 8 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 8 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F09",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 9 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 9 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F10",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 10 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 10 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F11",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 11 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 11 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F12",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 12 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 12 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F13",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 13 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 13 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "F14",
+      "tier": "gate",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "第 14 页（页面文字、图表及其工作簿、注释与备注）：每个数字/日期/比例都可追溯（材料中印有、answer-key 中出现，或在 evidence-index.csv 本页行中声明为推导/读图值），且在数值、口径或定义上都不与 answer-key 矛盾（含读图值未标注、口径混用）；出现一处即此页不通过。",
+      "criterion_en": "Slide 14 (text, charts + workbooks, annotations, notes): every number, date or proportion is traceable (printed in the input material, in the answer key, or declared as derived / read-from-figure in an evidence-index.csv row of this slide) and none contradicts the answer key in value, basis or definition (incl. unmarked figure read-offs, mixed bases); one problem fails.",
+      "verify": "checks.py (fail-only): every significant number on the slide, in its notes and in its chart values must be printed in the input PDFs (pdftotext), appear in the answer key, or be declared as derived in an evidence-index.csv row of that slide; otherwise fail. Else judge: compares slide text, notes and chart_data with the answer key and the slide's evidence-index rows (the machine trace is appended to this verify text at grading time).",
+      "weight": 0.8571
+    },
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "计算粗 CFR = 2114/55,924 = 3.78% 并给出算式——嵌入工作簿活公式（值为 3.78% / 0.0378，或对 2114 与 55,924 取 ROUND 得 3.8），或在备注/证据索引中写出算式；页面显示 3.78% 或 3.8% 均可，并与报告 3.8% 对应。",
+      "criterion_en": "Computes crude CFR 2114/55,924 = 3.78% with the formula shown — as a live embedded-workbook formula (value 3.78 % / 0.0378, or 3.8 when rounded with ROUND on 2114 and 55,924) or written out in the notes / evidence index; the slide may show 3.78% or 3.8%, matched to the reported 3.8%.",
+      "verify": "checks.py: workbook formula value 0.0378/3.78 (±0.011 pp), or a formula evaluating to 3.8/0.038 whose inputs are 2114 and 55924, or the text '2114/55924' with 3.78% in notes/evidence-index/slides; else fail.",
+      "weight": 1.8182
+    },
+    {
+      "id": "B02",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "[隐藏] 发现第 8 页深圳数据百分比与分母不符（2240/2842≈78.8% 而非 72%；88/2842≈3.1% 而非 2.8%），保留原印值并标为疑似印刷/计算错误，不悄悄改正、也不直接使用印错的百分比。",
+      "criterion_en": "[hidden] Finds p8 Shenzhen percentages inconsistent with counts (2240/2842≈78.8% not 72%; 88/2842≈3.1% not 2.8%); keeps printed values and flags them, neither silently correcting nor using the wrong percentages.",
+      "verify": "answer-key T08/K03",
+      "weight": 1.8182
+    },
+    {
+      "id": "B03",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "[隐藏] 若呈现康复比例：指出 18,264（24%）的分母是 75,465 全部报告病例（不是 55,924 确诊）；未呈现康复比例则本项以“无相关错误”判通过。",
+      "criterion_en": "[hidden] If recovery share shown: identifies 24% = 18,264/75,465 all reported (not lab-confirmed); if not shown, passes only if no related error.",
+      "verify": "answer-key T13/K04",
+      "weight": 1.8182
+    },
+    {
+      "id": "B04",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "若呈现按人口的率，须正确处理通报表“人口（万人）”单位（如 2/20 湖北 104.8、广东 1.17/10 万，容差 ±0.1/±0.01），公式可复算。简报未呈现按人口的率则本项通过。",
+      "criterion_en": "If population rates are shown, the sitrep 'population (10,000s)' unit is handled correctly (e.g. 20 Feb Hubei 104.8, Guangdong 1.17 per 100,000; tolerance ±0.1 / ±0.01) with a reproducible formula. If the deck shows no population rate, this item passes.",
+      "verify": "checks.py: no 'per 100,000 / per 10,000' text on slides, notes or charts ⇒ pass; workbook formula 104.8 or 1.17 shown on a slide ⇒ pass; otherwise judge vs answer-key K05.",
+      "weight": 1.8182
+    },
+    {
+      "id": "B05",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "[隐藏] 比较湖北与其他省的率时，指出湖北分子含临床诊断病例而其他省不含（sitrep-31 脚注），因此并非同口径比较。若简报未呈现该数值或比较，则本项通过。",
+      "criterion_en": "[hidden] When comparing Hubei with other provinces, notes Hubei's numerator includes clinically diagnosed cases (sitrep-31 footnote) so the comparison is not like-for-like. If the deck does not show this quantity or comparison, this item passes.",
+      "verify": "answer-key T03/T14",
+      "weight": 1.8182
+    },
+    {
+      "id": "B06",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "计算每日新增确诊降幅 (2478−409)/2478 = 83.5%（工作簿公式值容差 ±0.1 个百分点；页面显示 83.5%、83% 或 84% 均可）。日期与“报告日计数”标注由 A14 判定。",
+      "criterion_en": "Computes (2478−409)/2478 = 83.5% decline (workbook formula value ±0.1 pp; slide may show 83.5%, 83% or 84%). Dates and report-date labelling are scored in A14.",
+      "verify": "answer-key K06",
+      "weight": 1.8182
+    },
+    {
+      "id": "B07",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "比较各地密接感染比例时使用同一口径（感染数/识别密接数），并注明四川只有百分比、无计数。若简报未呈现该数值或比较，则本项通过。",
+      "criterion_en": "Compares contact-tracing yield across locations on one basis (infected/identified contacts), noting Sichuan gives only a percentage. If the deck does not show this quantity or comparison, this item passes.",
+      "verify": "answer-key T08；第 8–9 页",
+      "weight": 1.8182
+    },
+    {
+      "id": "B08",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "[隐藏] 发热门诊证据：0.14% 的分母是约 32 万“次筛查”而非人数；阳性率 0.47%→0.02% 作为与病例报告独立的下降佐证。",
+      "criterion_en": "[hidden] Fever-clinic evidence: 0.14% is of ~320,000 screenings (not persons); positivity 0.47%→0.02% used as evidence independent of case reports.",
+      "verify": "answer-key T18/T11",
+      "weight": 1.8182
+    },
+    {
+      "id": "B09",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "所有推导量在工作簿/备注中给出源值、单位、出处页码与算式；抽查 5 个全部可复算。",
+      "criterion_en": "All derived quantities give source values, units, page and formula; 5-item spot check reproducible.",
+      "verify": "Judge recomputes 5 derived quantities from the embedded-workbook formulas and cell_values (evidence) and the notes.",
+      "weight": 1.8182
+    },
+    {
+      "id": "B10",
+      "tier": "base",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "没有算术错误（复算误差 ≤ 材料四舍五入精度）。",
+      "criterion_en": "No arithmetic errors.",
+      "verify": "复算",
+      "weight": 1.8182
+    },
+    {
+      "id": "B11",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "[隐藏] 对州的规划结论区分可直接使用的证据（如潜伏期、家庭聚集、发病→确诊延迟、医护防护）与依赖中国情境、不能直接外推的结论（如封城规模效应、“避免数十万例”估计），各有出处。",
+      "criterion_en": "[hidden] State planning conclusions separate directly usable evidence (incubation, household clustering, onset→confirmation delay, HCW protection) from context-bound claims not directly transferable (cordon effect, 'hundreds of thousands averted'), each sourced.",
+      "verify": "人工",
+      "weight": 1.8182
+    },
+    {
+      "id": "D01",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "≥4 个原生图表（GraphicFrame 含 c:chart），至少 1 个折线、1 个柱形。",
+      "criterion_en": "≥4 native charts incl. ≥1 line and ≥1 column.",
+      "verify": "python-pptx chart_type 枚举",
+      "weight": 1.5714
+    },
+    {
+      "id": "D02",
+      "tier": "base",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "PowerPoint 中每个图表 ChartData.Activate() 成功且工作簿首表 UsedRange 非空并包含所绘数值。",
+      "criterion_en": "ChartData.Activate() succeeds for every chart; first sheet used range non-empty and contains plotted values.",
+      "verify": "Windows PowerPoint COM",
+      "weight": 1.5714
+    },
+    {
+      "id": "D03",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "每个嵌入工作簿列出源值、单位与出处（文件+页码）。",
+      "criterion_en": "Each embedded workbook lists source values, units and source file+page.",
+      "verify": "checks.py: every embedded chart workbook's strings name a source file (report/sitrep), a page and a unit word; any workbook missing one ⇒ fail, all present ⇒ pass.",
+      "weight": 1.5714
+    },
+    {
+      "id": "D04",
+      "tier": "mid",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "所有推导值在嵌入工作簿中为实时公式（cell.data_type=='f'）；任一推导值为粘贴数值即否。",
+      "criterion_en": "All derived values in embedded workbooks are live formulas; any pasted derived value fails.",
+      "verify": "openpyxl 读取公式；对照页面推导值",
+      "weight": 1.5714
+    },
+    {
+      "id": "D05",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "图表所绘数值与工作簿及材料原值一致（逐点核对，允许材料自身的四舍五入）。",
+      "criterion_en": "Plotted values match workbook and source values point by point.",
+      "verify": "c:numCache vs 工作簿 vs answer-key",
+      "weight": 1.5714
+    },
+    {
+      "id": "D06",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "没有编造数据点：不插值、不补周、不把读图估计值当作报告数而不标注“读图估计”。",
+      "criterion_en": "No fabricated points: no interpolation, no filled weeks, no unlabeled read-off-figure values presented as reported counts.",
+      "verify": "对照 answer-key 中材料实有数值清单",
+      "weight": 1.5714
+    },
+    {
+      "id": "D07",
+      "tier": "gate",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "同一图表的一条序列内不混用不同病例类别、不同日期基准或不同快照日期；若并列则分序列并标注。",
+      "criterion_en": "No single series mixes case classes, date bases or snapshot dates; if compared, they are separate labelled series.",
+      "verify": "Judge from the chart_data (series names, categories) and embedded-workbook cell_values evidence (basis/class/snapshot columns).",
+      "weight": 1.5714
+    },
+    {
+      "id": "D08",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "曲线转折页有 ≥3 个 onPageClick 入场效果（MainSequence），各自作用于不同的可编辑形状，按逻辑顺序揭示。",
+      "criterion_en": "Curve-turn slide has ≥3 on-click entrance effects on distinct editable shapes, revealed in logical order.",
+      "verify": "PowerPoint COM TimeLine.MainSequence Effect.Timing.TriggerType=1 与 EffectType 入场类",
+      "weight": 1.5714
+    },
+    {
+      "id": "D09",
+      "tier": "gate",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "点击构建页上，每次点击依次显示新的注释形状（至少 3 个点击步），没有任何注释在进入页面时自动出现，也没有在构建结束前被移除。",
+      "criterion_en": "On the click-build slide each successive click reveals new annotation shape(s) — at least 3 click steps — none is revealed automatically on slide entry, and none is removed again before the build ends.",
+      "verify": "checks.py static timing analysis of p:timing mainSeq (click groups = top-level pars with delay='indefinite'; first entrance of each target; exit effects); pass/fail. A live slideshow is not run.",
+      "weight": 1.5714
+    },
+    {
+      "id": "D10",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "至少一幅报告原图裁切清晰、保留图例与坐标轴，配原生可编辑标注指出与论断对应之处；整页截图不算。",
+      "criterion_en": "≥1 real report figure cleanly cropped with legend/axes and native annotations tied to the claim.",
+      "verify": "解包 media + 人工",
+      "weight": 1.5714
+    },
+    {
+      "id": "D11",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "slides.pdf 页数与 PPTX 一致；script.md 与备注逐页一致（归一空白后相似度 ≥0.9）。",
+      "criterion_en": "slides.pdf page count matches; notes match script per slide (similarity ≥0.9).",
+      "verify": "pdfinfo；difflib",
+      "weight": 1.5714
+    },
+    {
+      "id": "D12",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 覆盖每个承载数字的页面元素，所引页码确实包含该论断（抽查 10 行全对）。",
+      "criterion_en": "evidence-index.csv covers every number-bearing slide element; the cited page actually contains the claim (10-row spot check all correct).",
+      "verify": "抽查对照 report.pdf",
+      "weight": 1.5714
+    },
+    {
+      "id": "D13",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "仅复制 .pptx 到新文件夹后重新打开无修复提示，图表 Edit Data 仍可打开（无外部链接）。",
+      "criterion_en": "Copied alone to a new folder, reopens without repair and Edit Data still works (no external links).",
+      "verify": "PowerPoint COM；检查 externalLink 关系",
+      "weight": 1.5714
+    },
+    {
+      "id": "D14",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "标明 AI 制作，且无暗示 WHO/政府机构审阅或背书的措辞或徽标。",
+      "criterion_en": "AI-produced disclosure present; no implied WHO/government endorsement or logo.",
+      "verify": "文本检索 + 看图",
+      "weight": 1.5714
+    }
+  ],
+  "tier_summary": {
+    "base": {
+      "items": 15,
+      "weight": 23.1
+    },
+    "mid": {
+      "items": 29,
+      "weight": 41.8
+    },
+    "gate": {
+      "items": 27,
+      "weight": 35.1
+    }
+  },
+  "release_acceptance": {
+    "task_form": "CDN-DOC",
+    "all_critical_items_must_pass": true
+  }
+}

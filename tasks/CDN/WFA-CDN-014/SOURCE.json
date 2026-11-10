@@ -1,0 +1,14 @@
+{
+  "task_id": "WFA-CDN-014",
+  "files": [
+    {
+      "file": "environment/input/report.pdf",
+      "sha256": "002c0db15579627b746d15657bf8ef95d855b17df267a50946333666e527aba1",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1902.pdf",
+      "title": "NTSB Highway Accident Report NTSB/HAR-19/02, Pedestrian Bridge Collapse Over SW 8th Street, Miami, Florida, March 15, 2018 (adopted 2019)",
+      "publisher": "National Transportation Safety Board"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "U.S. federal government works; public domain in the United States"
+}

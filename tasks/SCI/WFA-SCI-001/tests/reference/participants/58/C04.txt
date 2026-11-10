@@ -1,0 +1,10 @@
+# rank 1 unmapped (T97_S21.M01 src=T97_U15.M02)
+# rank 2 unmapped (T97_S21.M02 src=T97_U21.M92)
+# rank 3 unmapped (T97_S21.M03 src=T97_U15.M30)
+# rank 4 unmapped (T97_S21.M04 src=T97_U15.M13)
+# rank 5 unmapped (T97_S21.M05 src=T97_U15.M58)
+6 C04_D0156
+7 C04_D0852
+# rank 8 unmapped (T97_S21.M08 src=T97_U04.M45)
+# rank 9 unmapped (T97_S21.M09 src=T97_U15.M45)
+# rank 10 unmapped (T97_S21.M10 src=T97_U15.M26)

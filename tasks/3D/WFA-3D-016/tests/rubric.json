@@ -1,0 +1,387 @@
+{
+  "task_id": "WFA-3D-016",
+  "version": "x06-v2 (2026-10-25 rubric/checks cleanup)",
+  "scoring": "每条判定二元（部分满足即否），连续分 = Σ(通过判定 weight)/Σweight(=28，每条 1.0)×100；组级门槛只让该组相关判定记 0；整题门槛只作验收标记（aux._task_gate），连续分照报。checks.py 返回的判定为确定性测量结果；未被 checks.py 返回的判定（M11、G09、G10，以及工程条款通过后的 G08 视觉条款）由 LLM 评委依据证据（缩略图、文本、探测数据）判 pass/fail，含 critical 项；无人工盲审环节。逐帧容差类条款（“相差 ≤x%”）指采样帧中至少 90% 满足。Perfect=全部通过。测量口径：链节 = CHAIN（或 CHAIN.*）依赖图求值后的实例，或 CHAIN 的全部后代网格对象，或名为 CHAIN 的集合内网格对象（三者取数量最多者；QUICK_LINK* 另计 1 节）；S6 若用链接副本，CHAINRING/CRANK/车轮/BIKE 取同名前缀（如 CHAINRING.001）中在 S6 内位移最大者；头/手腕/指骨按骨名关键词自动识别（head、hand/wrist、finger/thumb/index/middle/ring/pinky 或 Rigify f_* 名，优先变形骨，不区分大小写，.L/.R/Left/Right 定侧，无法定侧时按骨架局部 +X 为左），指尖 = 指骨链末端骨的 tail；腕骨 = 指链根骨的第一个非手掌/非手指祖先骨；髋骨 = hips/pelvis/torso/root 名骨，否则无父骨的根骨。",
+  "frame_map_base": {
+    "S1": [
+      0,
+      149
+    ],
+    "S2": [
+      150,
+      269
+    ],
+    "S3": [
+      270,
+      449
+    ],
+    "S4": [
+      450,
+      539
+    ],
+    "S5": [
+      540,
+      659
+    ],
+    "S6": [
+      660,
+      899
+    ]
+  },
+  "frame_map_revision": {
+    "S3": [
+      270,
+      458
+    ],
+    "S4": [
+      459,
+      539
+    ]
+  },
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": true,
+      "criterion_zh": "基础版 output.mp4：H.264、yuv420p、1280×720 方形像素、恒定 30 fps、解码恰好 900 帧；AAC 立体声 48 kHz，音频覆盖全片。",
+      "criterion_en": "Base output.mp4: H.264, yuv420p, 1280x720 square pixels, CFR 30 fps, exactly 900 decoded frames; AAC stereo 48 kHz covering the picture.",
+      "verify": "ffprobe 流参数 + ffmpeg 计数解码帧；音频时长 ≥ 画面时长 − 1 帧（29.967 s）。",
+      "weight": 1.0
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": false,
+      "criterion_zh": "修订版 output.mp4 满足与 B01 相同的编码契约，且为 900 帧。",
+      "criterion_en": "Revision output.mp4 meets the B01 contract with 900 frames.",
+      "verify": "同 B01。",
+      "weight": 1.0
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": false,
+      "criterion_zh": "两版混音综合响度 −18±2 LUFS，采样峰值 ≤ −1 dBFS，无连续 ≥3 个满幅采样。",
+      "criterion_en": "Both mixes: integrated −18±2 LUFS, sample peak ≤ −1 dBFS, no run of ≥3 full-scale samples.",
+      "verify": "ffmpeg ebur128 / numpy 解码 PCM。",
+      "weight": 1.0
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": false,
+      "criterion_zh": "基础版 stems/foley,shop,street.wav 均为 48 kHz PCM、30.0±0.05 s；按 timeline.json 声明增益相加后与解码混音一致：对齐（允许 ≤2048 样本编码延迟）后 1/3 倍频程带能量（100 ms 帧，50 Hz–14 kHz，仅计该帧最强带以下 40 dB 内的带）逐点差绝对值中位数 ≤ 0.75 dB、95 分位 ≤ 3 dB；声明增益与实测最优拟合增益相差 ≤1 dB。",
+      "criterion_en": "Base stems exist, 48 kHz PCM, 30.0±0.05 s; declared-gain sum matches the decoded mix: after alignment (≤2048-sample codec delay), 1/3-octave band energies (100 ms frames, 50 Hz–14 kHz, bands within 40 dB of the frame max) differ by median ≤0.75 dB and 95th pct ≤3 dB; declared gains within 1 dB of fitted.",
+      "verify": "解码 AAC 至 48k 单声道；互相关对齐后比带能量；≤4 kHz 低通最小二乘拟合各分轨增益并与声明值比较。不用波形相减：AAC 感知编码下正确混音的波形残差也达不到 −30 dB。",
+      "weight": 1.0
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": false,
+      "criterion_zh": "events.csv 表头逐字为 event_id,frame,description；11 个必需事件 id 全部存在、帧为 0–899 整数且各在其所属镜头内（old_chain_off∈S1，watch_check∈S2，chain_hand_contact/link_join_start/link_click∈S3，courier_turn∈S4，crank_grab/crank_turn_start/chain_engage/crank_release∈S5，pedal_start∈S6），并满足顺序 chain_hand_contact<link_join_start<link_click、crank_grab≤crank_turn_start≤chain_engage<crank_release。",
+      "criterion_en": "events.csv exact header; all 11 ids present, integer frames inside their shot and in causal order.",
+      "verify": "解析 CSV；镜头归属按名义帧表。",
+      "weight": 1.0
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": true,
+      "criterion_zh": "project/scene.blend 可在 Blender 4.3 后台打开且以 Blender 4.3 保存（文件版本 4.3.x）；题面列出的全部对象名（2 人物、2 骨架、14 道具、CAM_S1–S6）存在，MECHANIC_RIG、COURIER_RIG 为骨架对象；场景自定义属性 roll_T34_frames 存在；README 含 blender -b 导出命令。",
+      "criterion_en": "scene.blend opens headless in Blender 4.3 and was saved by 4.3 (file version 4.3.x); all required object names exist, MECHANIC_RIG/COURIER_RIG are armatures; scene property roll_T34_frames exists; README contains a blender -b export command.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定；读 bpy.data.version 与对象类型。评分镜像无 Blender 时本项与全部 .blend 判定记 error（不出分）。",
+      "weight": 1.0
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "DELIV",
+      "critical": false,
+      "criterion_zh": "两版 timeline.json 均可解析；M01/M09 实测检出的每个剪辑帧都在 timeline.json 的数值中以“剪辑帧”或“上一镜末帧”形式声明（±1 帧）；修订版声明 T34 为 459（或 S3 末帧 458）。",
+      "criterion_en": "Both timeline.json parse; every cut detected by M01/M09 is declared in timeline.json (as cut frame or previous shot end, ±1 frame); the revision declares T34 at 459 (or S3 ending at 458).",
+      "verify": "checks.py：递归收集 timeline.json 中全部整数值，与 M01（基础版）/M09（修订版）检出的剪辑帧比对；检测未运行时按名义剪辑帧比对。",
+      "weight": 1.0
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "EDIT",
+      "critical": true,
+      "criterion_zh": "基础版恰为六个镜头：在第 150/270/450/540/660 帧（各 ±1）检出硬切，每处无混合帧（剪辑两侧相邻帧不存在线性混合解释）；其余位置无剪辑、无定格（连续 ≥6 帧逐像素相同即判定格，S1/S3/S5 固定机位处允许静止背景但须有前景运动）。",
+      "criterion_en": "Base has exactly six shots, hard cuts at 150/270/450/540/660 ±1, no blend frames, no other cuts or freezes.",
+      "verify": "320×180 灰度帧差 + 直方图检测剪辑并做混合帧检查；定格 = 原生 1280×720 灰度下连续 ≥5 对相邻帧（≥6 帧）中变化 >3 灰阶的像素占比 ≤0.01%（前景有运动则不判定格）。",
+      "weight": 1.0
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "EDIT",
+      "critical": false,
+      "criterion_zh": "摄影机数据（评分方从 .blend 逐帧导出）：S1 机高 1.2–1.9 m、俯仰 |θ|≤8°、固定（位置变化 <1 cm、焦距不变、朝向变化 ≤0.5°）；S2 仰拍（俯仰均值 ≥+3°）、手持抖动 2–60 mm、无变焦；S3 固定、焦距 ≥50 mm 或对焦距离 ≤0.6 m、景深开启且 f≤4；S4 朝 COURIER 推轨 ≥0.08 m、焦距不变、景深开启；S5 固定、CHAINRING 中心投影在画面中部 40% 区域内（x、y ∈ [0.3, 0.7]）；S6 摄影机平移 ≥3 m 且与 COURIER 距离增大 ≥1.5 倍（或焦距缩短 ≥1.5 倍）。",
+      "criterion_en": "Camera data exported per frame from the .blend: S1 height 1.2–1.9 m, |pitch| ≤8°, locked (position <1 cm, lens constant, rotation ≤0.5°); S2 pitch ≥+3° (low angle), handheld shake 2–60 mm, no zoom; S3 locked, lens ≥50 mm or focus distance ≤0.6 m, DOF on with f ≤4; S4 dolly-in ≥0.08 m towards COURIER, lens constant, DOF on; S5 locked, CHAINRING centre inside the central 40% of the frame; S6 camera travels ≥3 m and its distance to COURIER grows ≥1.5× (or focal length shrinks ≥1.5×).",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：CAM_S1–S6 每帧 matrix_world、lens、DOF；手持抖动 = 位置相对 ±7 帧滑动平均的最大偏离；S4 推轨 = 首末帧到 COURIER 原点距离之差；任一镜头不符即否。",
+      "weight": 1.0
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "SOUND",
+      "critical": true,
+      "criterion_zh": "交叉剪辑声音：shop 分轨只在店内镜头（S1/S3/S5）有声、street 分轨只在街景镜头（S2/S4/S6）有声；每个剪辑点 ±2 帧内完成切换，非所属段电平 ≤ −50 dBFS；每段内无断续（不存在 ≥100 ms、电平比该段中位电平低 ≥20 dB 的空洞；车辆经过等自然起伏不判否）；两种环境声长时谱质心相差 ≥30% 或 1/3 倍频程谱距离 ≥6 dB。",
+      "criterion_en": "Cross-cut ambience: shop stem only in S1/S3/S5, street stem only in S2/S4/S6, switching within ±2 frames of each cut, ≤ −50 dBFS elsewhere, steady within shots, spectrally distinct.",
+      "verify": "分轨 50 ms RMS 包络 + 谱质心/1/3 oct 谱。",
+      "weight": 1.0
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "PROJ",
+      "critical": true,
+      "criterion_zh": "工程即真实来源：评分方以 roll_T34_frames=0、各帧所属镜头的 CAM_Sk 从 scene.blend 重渲第 75/210/360/495/600/780 帧，与成片对应帧在 640×360 灰度下 SSIM 均 ≥0.70；重渲失败即否。",
+      "criterion_en": "The project is the true source: the grader re-renders frames 75/210/360/495/600/780 from scene.blend (roll_T34_frames=0, camera CAM_Sk of the shot) and each matches the film with SSIM ≥0.70 at 640×360 grey.",
+      "verify": "checks.py：blender -b x06_blend_dump.py render 模式，Cycles CPU、采样 ≤16、降噪、640×360（场景非 Cycles 时先试场景引擎）；SSIM 用 7×7 均值窗、灰度；总时限 1500 s。",
+      "weight": 1.0
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "CHAR",
+      "critical": true,
+      "criterion_zh": "MECHANIC_RIG、COURIER_RIG 各自通过 Armature 修改器驱动对应网格；技师每只手 ≥4 条手指骨链、每链 ≥2 骨，且在 S1/S3/S5 内各链至少有一处不同于其他手指的关键帧旋转；无图片平面手或脸。",
+      "criterion_en": "Both rigs deform their meshes; mechanic has ≥4 finger chains per hand (≥2 bones each) with independent keyed rotation in S1/S3/S5; no image-plane hands/faces.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：网格对象 Armature 修改器目标；技师指骨链按骨名识别（链 = 指骨根骨沿子骨的最长链）；每链曲线 = 链内各骨相对静止姿态的旋转角之和（S1+S3+S5 采样帧）；每链转幅 ≥5° 且与同手至少一条其他链的相关 |r|<0.95；手指网格 = 主权重 ≥0.5 属指骨的顶点数 ≥ 4×指骨数（否则视为图片平面手）。",
+      "weight": 1.0
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "MECH",
+      "critical": false,
+      "criterion_zh": "CHAIN 由离散链节构成（≥100 个独立对象或实例，非单一连续网格/纹理条），链节数与 scene.json 106 节相符（±2，快扣计 1 节），相邻链节销中心距 12.7 mm ±5%（按场景单位），S5 内链节全程闭合成环无断开。",
+      "criterion_en": "CHAIN made of discrete links (≥100 objects/instances), count 106±2, pitch 12.7 mm ±5%, closed loop throughout S5.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：链节取依赖图实例/后代/集合（见计分口径）；节距 = 最近邻距离中位数（含 QUICK_LINK 原点）；闭环 = S5 每个采样帧中以 ≤1.5×节距为边的邻接图连通且每节度数 ≥2。",
+      "weight": 1.0
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "CHAR",
+      "critical": false,
+      "criterion_zh": "快递员动作按声明发生：watch_check 与 courier_turn 距其镜头边界均 ≥6 帧；watch_check ±6 帧内左手腕骨最高点比 S2 中此前最低点高 ≥0.15 m，且 WATCH 在左手腕（距左腕骨 ≤12 cm 且比右腕近）、其原点投影在 CAM_S2 画框内；courier_turn ±6 帧内头部骨偏航变化 ≥30°；若有眼骨，转后视线方向与指向 WINDOW 的夹角须减小（朝向店面）。",
+      "criterion_en": "Courier actions happen at the declared frames: watch_check and courier_turn are ≥6 frames from their shot boundaries; within watch_check±6 the left wrist rises ≥0.15 m above its lowest earlier S2 position, WATCH sits on the left wrist (≤12 cm from the left wrist bone and nearer than the right) and projects inside CAM_S2; within courier_turn±6 the head bone yaws ≥30°; if eye bones exist, the gaze turns towards WINDOW (the shop).",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：COURIER_RIG 腕/头/眼骨世界坐标与轴向；WATCH 原点；CAM_S2 投影。",
+      "weight": 1.0
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "WORLD",
+      "critical": false,
+      "criterion_zh": "同一连续世界：S1 采样帧（每 3 帧）中至少 60% 帧，从 CAM_S1 向 COURIER 网格包围盒内采样点的射线（穿过 WINDOW* 对象）首先命中 COURIER/HELMET/WATCH，且该点投影在 WINDOW 投影包围框内；COURIER 髋/根骨在 S1 末帧与 S2 首帧的世界位置差 ≤0.6 m；COURIER、MECHANIC、两骨架、WINDOW、BIKE、CAM_S1、CAM_S2 同在一个场景（同一世界坐标系）。",
+      "criterion_en": "One continuous world: in ≥60% of sampled S1 frames a ray from CAM_S1 to points of the COURIER mesh (passing through WINDOW*) hits the courier first and the point projects inside the WINDOW outline; the courier hip/root bone moves ≤0.6 m between the last S1 and first S2 frame; courier, mechanic, rigs, WINDOW, BIKE, CAM_S1/S2 are in one scene.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：scene.ray_cast 可见性 + world_to_camera_view 投影；髋/根骨世界坐标。",
+      "weight": 1.0
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "REV",
+      "critical": true,
+      "criterion_zh": "修订画面：修订版第 0–449 帧与第 459–899 帧逐帧与基础版一致（320×180 灰度 PSNR ≥32 dB）；第 450–458 帧为 S3 的延续（每帧与基础版第 449 帧的平均绝对差小于与第 450 帧，且其中至少 4 对相邻帧有变化，非定格）；T34 硬切在第 459 帧 ±1 且第 450 帧附近无剪辑；由同一 .blend 以 roll_T34_frames=9、CAM_S3 重渲第 454 帧与修订版第 454 帧 SSIM ≥0.70。",
+      "criterion_en": "Revision picture: frames 0–449 and 459–899 equal the base (PSNR ≥32 dB, 320×180 grey); 450–458 continue S3 (each closer to base frame 449 than to 450 by mean abs difference, with motion in ≥4 frame pairs); hard cut at 459±1 and none at 450; re-rendering frame 454 from the .blend with roll_T34_frames=9 through CAM_S3 matches revision frame 454 with SSIM ≥0.70.",
+      "verify": "checks.py：逐帧 PSNR/帧差 + 剪辑检测；重渲同 M04（roll_T34_frames=9）。",
+      "weight": 1.0
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "REV",
+      "critical": false,
+      "criterion_zh": "修订声音：修订版 shop 分轨在 15.00–15.30 s 有声并于 15.30 s ±2 帧切出，street 分轨于 15.30 s ±2 帧切入；其余时段三条分轨（无损 wav）与基础版波形差异 ≤ −40 dB；AAC 混音在非修订时段（0–14.9 s、15.4 s–结尾）与基础版混音对齐（允许 ≤2048 样本）后 1/3 倍频程带能量（100 ms 帧，50 Hz–14 kHz，仅计该帧最强带以下 40 dB 内的带）逐点差绝对值中位数 ≤ 0.75 dB、95 分位 ≤ 3 dB。",
+      "criterion_en": "Revision audio: shop ambience extends to 15.30 s and street starts at 15.30 s (±2 frames); elsewhere lossless stems match base ≤ −40 dB; the AAC mix outside the revised span (0–14.9 s, 15.4 s–end) matches the base mix in 1/3-octave band energies (100 ms frames, 50 Hz–14 kHz, bands within 40 dB of frame max, ≤2048-sample alignment): median ≤0.75 dB, 95th pct ≤3 dB.",
+      "verify": "分轨差分能量 + 包络切换点；AAC 混音用与 B04 相同的频带能量比较，不用波形相减（两次独立 AAC 编码的波形残差达不到 −30 dB）。",
+      "weight": 1.0
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "DOC",
+      "critical": false,
+      "criterion_zh": "credits.md 列出全部资产、工具与声音制作方式且无联网/付费服务痕迹；qa.md 存在，所列帧号/采样位置与 events.csv、timeline.json 及探测数据一致；产物中无凭据或外部 URL 媒体引用。",
+      "criterion_en": "credits.md lists all assets, tools and how the sound was made, with no network/paid services; qa.md exists and its frame numbers/sample positions are consistent with events.csv, timeline.json and the probe data; no credentials or external-URL media.",
+      "verify": "LLM 评委读 credits.md、qa.md、events.csv、timeline.json 与探测数据判定。",
+      "weight": 1.0
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "CONTACT",
+      "critical": true,
+      "criterion_zh": "合扣接触：link_click − link_join_start ∈ [3, 90] 帧；在 link_click 帧，技师两只手各至少一个指尖（指链末端骨 tail）距 QUICK_LINK 或其相邻两节链节表面 ≤2.5 cm；QUICK_LINK 各部件（QUICK_LINK*、其子对象）与相邻两节链节之间的距离在 link_join_start 时与最终值相差 >2 mm（分离），自就位帧起至 S3 末恒定（≤0.5 mm），就位帧与 link_click 相差 ≤3 帧；foley 分轨在 link_click ±2 帧内有一个瞬态：5 ms RMS 包络峰值比此前 150 ms 的 20 分位电平高 ≥12 dB、峰值 −10 dB 以上持续 <60 ms；S3 内距其 >0.2 s 的其他同类起音峰值须至少低 1 dB。",
+      "criterion_en": "Quick-link contact: link_click − link_join_start ∈ [3, 90]; at link_click each hand has a fingertip within 2.5 cm of QUICK_LINK or its two adjacent links; the distances between the QUICK_LINK parts and the adjacent links differ >2 mm from their final values at link_join_start and stay constant (≤0.5 mm) from the seating frame, which is within 3 frames of link_click; the foley stem has a ≥12 dB transient (<60 ms) within link_click±2 frames, and every other S3 onset more than 0.2 s away is ≥1 dB weaker.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：指尖 tail 到 QUICK_LINK 网格（BVH）与相邻链节网格的最近距离；QUICK_LINK 部件—链节距离；foley 分轨 numpy 包络。",
+      "weight": 1.0
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "CONTACT",
+      "critical": true,
+      "criterion_zh": "穿链接触：在 chain_hand_contact 帧至少一个指尖距 CHAIN 链节表面 ≤2 cm；距该指尖最近的 5 节链节在此前 10 帧内位移 ≤2 mm（静止），此后 15 帧内随手移动（链节平均位移与指尖位移夹角余弦 ≥0.5、长度比 0.5–2、各 ≥5 mm）；S3 每 3 帧抽样，链节/REAR_COG/CHAINRING 顶点侵入手指（以指骨为轴、半径取该骨主权重顶点到骨轴距离中位数的胶囊体）的深度 ≤6 mm；S3 首帧 CHAIN 未同时挂在两齿盘上、S3 末帧在 REAR_COG 与 CHAINRING 节圆上各有 ≥4 节（径向 ±6 mm、轴向 ±8 mm）。",
+      "criterion_en": "Threading contact: at chain_hand_contact a fingertip is within 2 cm of a chain link; the 5 links nearest to it are still (≤2 mm) during the 10 frames before and then follow the hand over the next 15 frames (cosine ≥0.5, length ratio 0.5–2, both ≥5 mm); sampled every 3 frames in S3, link/cog/chainring vertices penetrate the finger capsules by ≤6 mm; the chain is off the sprockets at the start of S3 and has ≥4 links on both the REAR_COG and CHAINRING pitch circles at its end.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：链节网格 BVH 最近距离、链节位移场、指骨胶囊体侵入深度、节圆啮合计数。",
+      "weight": 1.0
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "MECH",
+      "critical": true,
+      "criterion_zh": "链条啮合无打滑：驱动段（chain_engage+2 至 crank_release−2）中至少 90% 的帧，链节（BIKE 坐标系内）速度中位数与 CHAINRING 节圆线速度 ω·r（r = 12.7 mm/(2·sin(π/44)) = 88.99 mm）相差 ≤12%；驱动段中间帧在链盘节圆 ±6 mm、盘面 ±8 mm 内的链节 ≥8 节，其中 ≥80% 的销中心距节圆 ≤4 mm（落在齿间而非浮空或穿齿）。",
+      "criterion_en": "Chain meshes without slip: in ≥90% of drive frames (chain_engage+2 to crank_release−2) the median link speed in the BIKE frame is within 12% of the chainring pitch-line speed ω·r (r = 12.7 mm/(2·sin(π/44)) = 88.99 mm); at the mid drive frame ≥8 links lie within ±6 mm of the pitch circle (±8 mm of its plane) and ≥80% of them within 4 mm of it.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：链节逐帧位置、CHAINRING 相对 BIKE 的旋转；节圆中心/轴取 CHAINRING 求值网格包围盒中心与最薄轴。",
+      "weight": 1.0
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "MECH",
+      "critical": true,
+      "criterion_zh": "传动比与啮合时刻：chain_engage − crank_turn_start ≤15 帧；驱动段至少 90% 的帧 REAR_COG 角速度 / CHAINRING 角速度（相对 BIKE、同一轴向取号）= 44/16（2.75）±10%（含同旋向），REAR_WHEEL / REAR_COG = 1 ±5%；后轮首次 |ω| ≥0.3 rad/s 的帧在 chain_engage ±2 内，chain_engage−3 之前 |ω| <0.3 rad/s。",
+      "criterion_en": "Gear ratio and engagement: chain_engage − crank_turn_start ≤15 frames; in ≥90% of drive frames cog/chainring angular velocity (relative to BIKE, signed along the same axle) is 2.75±10% and wheel/cog 1±5%; the rear wheel first reaches |ω| ≥0.3 rad/s within chain_engage±2 and stays below that before chain_engage−3.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：相对 BIKE 的逐帧旋转增量求角速度。",
+      "weight": 1.0
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "MECH",
+      "critical": true,
+      "criterion_zh": "飞轮空转语义：crank_release 之后 S5 至少剩 15 帧；后轮 |ω|>0.3 rad/s 持续 ≥15 帧且逐帧单调衰减（后一帧 ≤ 前一帧×1.03+0.05 rad/s，单帧降幅 ≤ 松手时的 25%）；空转末帧曲柄归一化转速低于后轮归一化转速且后轮/曲柄转速比 >2.75×1.1（曲柄未被带转），松手时曲柄 |ω| ≥0.5 rad/s；空转期间（crank_release+3 帧起）每个 0.25 s 窗内 foley 分轨（>1 kHz 包络自相关峰 ≥0.3）有周期咔哒，“咔哒重复率 ÷ 后轮转速（转/秒）”各窗均在 18–72 内且变异系数 ≤25%；驱动段内（foley 高于 −60 dBFS 的窗）无自相关峰 ≥0.5 且比值在 18–72 内的同类周期咔哒。",
+      "criterion_en": "Freewheel after crank_release: ≥15 S5 frames remain; the rear wheel keeps |ω|>0.3 rad/s for ≥15 frames with monotonic decay (no single-frame drop >25% of the release speed); at the end of the coast the crank has slowed more than the wheel (normalised) and wheel/crank speed >2.75×1.1, with crank |ω| ≥0.5 rad/s at release; every 0.25 s coast window (from crank_release+3) has periodic foley ticks (>1 kHz envelope autocorrelation peak ≥0.3) whose rate ÷ wheel rev/s is within 18–72 with CV ≤25%; no such periodic ticks (peak ≥0.5, ratio 18–72) while driving.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：后轮/曲柄相对 BIKE 角速度；foley 分轨 numpy 包络自相关逐 0.25 s 窗求重复率。",
+      "weight": 1.0
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "MATCH",
+      "critical": true,
+      "criterion_zh": "图形与运动匹配剪辑：第 659 帧（CAM_S5，CHAINRING）与第 660 帧（CAM_S6，S6 链盘）中链盘中心投影位置相差 ≤8% 画宽，投影直径比 0.67–1.5；658→659 与 660→661 的屏幕旋转同向（每帧 ≥0.3°），屏幕角速度比 0.5–2.0；第 660 帧链盘投影直径 ≥30% 画高。",
+      "criterion_en": "Match cut: chainring centre at 659 (CAM_S5) and 660 (CAM_S6) within 8% of frame width, projected diameter ratio 0.67–1.5; same on-screen rotation sense over 658→659 and 660→661 (≥0.3°/frame each) with angular-speed ratio 0.5–2; chainring diameter ≥30% of frame height at 660.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：链盘包围盒中心与 16 个轮缘点经 world_to_camera_view 投影。",
+      "weight": 1.0
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "MATCH",
+      "critical": true,
+      "criterion_zh": "同车与骑行运动学：S6 中骑行的是 BIKE（或网格数据相同的链接副本），链盘位于后轮平面的骑行右侧 >1 cm（驱动侧）；pedal_start+3 帧后车速 >0.3 m/s 的采样帧中至少 90%：CRANK 转速（转/秒）× 2.75 × 0.68π 与 BIKE 地速相差 ≤20%，前后轮滚动（ω×0.34 m，方向为前滚）与地速相差 ≤15%；S6 末采样帧 COURIER 包围盒中心投影在 CAM_S6 画右之外（x>1）且此前在画内。",
+      "criterion_en": "Same bike and riding kinematics: S6 bike is BIKE (or a linked copy with the same mesh data); the chainring is >1 cm on the rider's right of the rear-wheel plane; in ≥90% of moving frames after pedal_start+3, crank rev/s × 2.75 × 0.68π matches ground speed ±20% and both wheels roll forward at ω×0.34 m within ±15%; at the end of S6 the COURIER bbox centre projects beyond the right frame edge after having been in frame.",
+      "verify": "checks.py 调用 blender -b scene.blend --python x06_blend_dump.py 逐帧导出（胶片帧 i = 场景帧 frame_start+i；镜头 Sk 一律经 CAM_Sk 测量；roll_T34_frames 置 0），x06_blend_checks.py 用 numpy 判定：BIKE 地速、CRANK/车轮相对 BIKE 与世界角速度、链盘横向偏置；CAM_S6 投影。",
+      "weight": 1.0
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "QUAL",
+      "critical": true,
+      "criterion_zh": "写实渲染（组门槛：本项不过则 G09、G10 记 0）。工程条款（checks.py 测量，任一不符即否）：场景网格所用材质 ≥90% 含 BSDF（非纯自发光/平涂），≥4 个材质的颜色/粗糙度/法线/置换由纹理或程序节点驱动；有面光、软阴影灯（日光角 >0.5°、点/聚光半径 ≥5 cm）或天空/HDRI 世界；Cycles 时开启降噪。视觉条款（评委看缩略图）：无任何镜头呈平面着色、卡通、白模或无阴影。",
+      "criterion_en": "Photoreal render (group gate for G09/G10). Engineering clauses (measured): ≥90% of materials on scene geometry use a BSDF, ≥4 materials have textured/procedural colour/roughness/normal/displacement, there is an area/soft light or a sky/HDRI world, and Cycles renders are denoised. Visual clause (judge, contact sheets): no shot looks flat-shaded, cartoon, grey-box or shadowless.",
+      "verify": "checks.py 读 x06_blend_dump.py 导出的材质节点、灯光、世界与渲染设置；工程条款不符直接记否，否则由 LLM 评委按缩略图判视觉条款。",
+      "weight": 1.0
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "QUAL",
+      "critical": true,
+      "criterion_zh": "接触可读性：缩略图中 S3 可见技师手指在链条/快扣上操作，S5 可见手握曲柄且链盘/后轮在动作中，无可见的手指破损、消失或穿模。",
+      "criterion_en": "Contact readability: in the contact sheets S3 shows the mechanic's fingers working on the chain/quick link and S5 shows a hand on the crank with the drive in action, with no visibly broken, missing or intersecting fingers.",
+      "verify": "LLM 评委依缩略图判定。",
+      "weight": 1.0
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "QUAL",
+      "critical": true,
+      "criterion_zh": "叙事与剪辑意图：仅凭缩略图（不依赖文字说明）可读出“修车与等待交叉并行 → 链条修好 → 同一辆车骑走”，店内与街景交替出现，S5 末与 S6 首的链盘构成可辨认的匹配剪辑；画面无字幕、标题卡或叠加图形。",
+      "criterion_en": "Story and editing intent: from the contact sheets alone one can read \"repair and waiting cross-cut → chain fixed → the same bike rides away\", shop and street alternate, and the chainring at the end of S5/start of S6 reads as a match cut; no subtitles, title cards or overlay graphics.",
+      "verify": "LLM 评委依缩略图判定（声音可信度由 M03 测量覆盖）。",
+      "weight": 1.0
+    }
+  ],
+  "group_names": {
+    "DELIV": "交付契约",
+    "EDIT": "剪辑结构与镜头",
+    "SOUND": "交叉剪辑声音",
+    "PROJ": "工程可复现",
+    "CHAR": "人物与绑定",
+    "MECH": "链条机械",
+    "WORLD": "连续世界",
+    "REV": "滚动剪辑修订",
+    "DOC": "来源与质检",
+    "CONTACT": "手-物接触",
+    "MATCH": "匹配剪辑与骑行",
+    "QUAL": "写实与盲审"
+  },
+  "group_gates": [
+    {
+      "group": "PROJ/CHAR/MECH/WORLD/CONTACT/MATCH",
+      "gate_zh": "B06 不通过（scene.blend 无法打开或缺必需对象）→ 这些组中依赖 .blend 的判定全部记 0",
+      "gate_en": "B06 fails -> all .blend-derived items in these groups score 0"
+    },
+    {
+      "group": "QUAL",
+      "gate_zh": "G08 写实门槛不通过 → G09、G10 记 0",
+      "gate_en": "G08 fails -> G09, G10 score 0"
+    },
+    {
+      "group": "REV",
+      "gate_zh": "修订版缺失或 B02 不通过 → M09、M10 记 0",
+      "gate_en": "revision missing or B02 fails -> M09, M10 score 0"
+    },
+    {
+      "group": "CONTACT/MECH/MATCH",
+      "gate_zh": "events.csv 缺失或 B05 不通过 → 依赖声明帧的判定（M07、G01、G02、G03、G04、G05、G07）记 0",
+      "gate_en": "events.csv missing or B05 fails -> declared-frame items score 0"
+    }
+  ],
+  "task_gates": [
+    "base/output.mp4 缺失、无法解码或不满足 B01 → aux._task_gate=fail（验收标记，不改连续分）"
+  ],
+  "declared_event_plausibility": [
+    "声明事件须落在所属镜头内且满足 B05 中的顺序；同一 id 多行取第一行。",
+    "chain_engage − crank_turn_start ≤ 15 帧（写入 G04，仅影响 G04）。",
+    "crank_release 之后至 S5 结束至少剩 15 帧（写入 G05，仅影响 G05）。",
+    "link_click − link_join_start ∈ [3, 90] 帧（写入 G01）；watch_check 与 courier_turn 至少距镜头边界 6 帧（写入 M07）。",
+    "声明帧被评分方实测反驳（如声明 link_click 但该帧快扣未就位）时，相关判定记否，不做就近搜索。"
+  ],
+  "tier_summary": {
+    "base": {
+      "n": 7,
+      "weight_share": 0.25
+    },
+    "mid": {
+      "n": 11,
+      "weight_share": 0.393
+    },
+    "gate": {
+      "n": 10,
+      "weight_share": 0.357
+    }
+  },
+  "release_acceptance": {
+    "task_form": "3D-FILM",
+    "all_critical_items_must_pass": true
+  }
+}

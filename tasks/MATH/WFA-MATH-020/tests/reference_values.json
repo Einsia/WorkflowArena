@@ -1,0 +1,130 @@
+{
+  "Bundle.ContMDiffRiemannianMetric": {
+    "role": "req",
+    "fp": "ind 4147589693 20 0 11786217538422486416"
+  },
+  "Bundle.ContMDiffRiemannianMetric.inner": {
+    "role": "dep",
+    "fp": "def 221030400 2994317506"
+  },
+  "Bundle.ContMDiffRiemannianMetric.mk": {
+    "role": "dep",
+    "fp": "ctor 893777497"
+  },
+  "Bundle.ContMDiffRiemannianMetric.toContinuousRiemannianMetric": {
+    "role": "dep",
+    "fp": "def 2817500370 401774772"
+  },
+  "Bundle.ContMDiffRiemannianMetric.toRiemannianMetric": {
+    "role": "dep",
+    "fp": "def 3085074054 3366827392"
+  },
+  "Bundle.ContinuousRiemannianMetric": {
+    "role": "dep",
+    "fp": "ind 3524079547 12 0 16420522557289029269"
+  },
+  "Bundle.ContinuousRiemannianMetric.inner": {
+    "role": "dep",
+    "fp": "def 3521544522 3063243782"
+  },
+  "Bundle.ContinuousRiemannianMetric.mk": {
+    "role": "dep",
+    "fp": "ctor 2218196507"
+  },
+  "Bundle.ContinuousRiemannianMetric.toRiemannianMetric": {
+    "role": "dep",
+    "fp": "def 542943207 1780529581"
+  },
+  "Bundle.RiemannianBundle": {
+    "role": "req",
+    "fp": "ind 1762209104 5 0 11176837230794483886"
+  },
+  "Bundle.RiemannianBundle.g": {
+    "role": "dep",
+    "fp": "def 2992945106 2171722948"
+  },
+  "Bundle.RiemannianBundle.mk": {
+    "role": "dep",
+    "fp": "ctor 77740662"
+  },
+  "Bundle.RiemannianMetric": {
+    "role": "dep",
+    "fp": "ind 1762209104 5 0 12661706164137778396"
+  },
+  "Bundle.RiemannianMetric.inner": {
+    "role": "dep",
+    "fp": "def 961694628 620504239"
+  },
+  "Bundle.RiemannianMetric.mk": {
+    "role": "dep",
+    "fp": "ctor 2210907478"
+  },
+  "Bundle.RiemannianMetric.toCore": {
+    "role": "dep",
+    "fp": "def 623500528 1497695482"
+  },
+  "Bundle.instInnerProductSpaceReal": {
+    "role": "req",
+    "fp": "def 1301550555 3807861844"
+  },
+  "Bundle.instNormedAddCommGroupOfRiemannianBundle": {
+    "role": "req",
+    "fp": "def 306323749 1192572912"
+  },
+  "EmetricSpace.ofRiemannianMetric": {
+    "role": "req",
+    "fp": "def 1681435398 4063425301"
+  },
+  "IsContinuousRiemannianBundle": {
+    "role": "req",
+    "fp": "ind 3053417282 11 0 16232529084609798545"
+  },
+  "IsContinuousRiemannianBundle.mk": {
+    "role": "dep",
+    "fp": "ctor 3121956392"
+  },
+  "IsRiemannianManifold": {
+    "role": "req",
+    "fp": "ind 2930656773 11 0 8426688719082433693"
+  },
+  "IsRiemannianManifold.mk": {
+    "role": "dep",
+    "fp": "ctor 756394475"
+  },
+  "Manifold.riemannianEDist": {
+    "role": "req",
+    "fp": "def 3089854386 3195528476"
+  },
+  "PseudoEmetricSpace.ofRiemannianMetric": {
+    "role": "req",
+    "fp": "def 1207644353 1122414330"
+  },
+  "instOneTangentSpaceRealEuclideanSpaceFinOfNatNatEuclideanHalfSpaceModelWithCornersEuclideanHalfSpaceElemIcc": {
+    "role": "dep",
+    "fp": "def 3108780601 1087213258"
+  },
+  "instOneTangentSpaceRealModelWithCornersSelf": {
+    "role": "dep",
+    "fp": "def 1425051408 2471611058"
+  },
+  "instRiemannianBundleTangentSpaceRealModelWithCornersSelf": {
+    "role": "req",
+    "fp": "def 4266366824 416185921"
+  },
+  "normedAddCommGroupTangentSpaceVectorSpace": {
+    "role": "req",
+    "fp": "def 338564155 3403067051"
+  },
+  "normedSpaceTangentSpaceVectorSpace": {
+    "role": "req",
+    "fp": "def 917440709 3083654089"
+  },
+  "oneTangentSpaceIcc": {
+    "role": "dep",
+    "fp": "def 27439870 551446630"
+  },
+  "riemannianMetricVectorSpace": {
+    "role": "req",
+    "fp": "def 474414023 4156675503"
+  }
+}

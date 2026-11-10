@@ -1,0 +1,10 @@
+arbor,x_m,z_m,role
+M,0.000,12.800,minute arbor; main dial centre (DL1/AS1)
+H,0.000,12.800,"hour tube, coaxial with M"
+R,0.000,12.800,"rete tube, coaxial with M"
+SB,0.000,16.900,strike barrel arbor
+D24,-2.852,12.726,24-hour disc centre (DL2)
+C,2.473,12.741,calendar ring centre (CR1)
+MO,0.046,14.800,moon-phase disc centre (MP1)
+P1,-1.464,16.772,parade wheel centre (AU1)
+P2,1.046,16.808,parade wheel centre (AU2)

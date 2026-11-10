@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-007",
+  "domain": "FIN",
+  "task_form": "FIN-ANA",
+  "title": "油气：弃置义务、套保与投资现金",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "SEC EDGAR financial filings with an authored machine contract",
+    "external_authenticity_asserted": true,
+    "companies": [
+      "EOG",
+      "DVN",
+      "FANG",
+      "MTDR",
+      "PR",
+      "RRC",
+      "CRK",
+      "KOS",
+      "TALO",
+      "GPOR"
+    ],
+    "url": "https://www.sec.gov/edgar/search/",
+    "provenance": "environment/public/SOURCE.json",
+    "verification": "All delivered HTML hashes match original per-filing acquisition records, including source URLs and raw-document hashes."
+  }
+}

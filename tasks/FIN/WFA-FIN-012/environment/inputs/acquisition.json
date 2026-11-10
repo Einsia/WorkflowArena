@@ -1,0 +1,10 @@
+{
+ "acquiree": "S5",
+ "acquirer": "P",
+ "acquisition_date": "2026-07-01",
+ "interest_acquired": 1.0,
+ "cash_consideration": "12400000.00",
+ "contingent_consideration_fair_value_at_acquisition": "800000.00",
+ "nci_fair_value_at_acquisition": null,
+ "notes": "Fair values of identifiable assets in fair_value_schedule.csv; all other assets and liabilities at carrying amount. Fixed assets not listed are carried at book value."
+}

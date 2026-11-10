@@ -1,0 +1,164 @@
+{
+  "task_id": "WFA-CDN-007",
+  "visibility": "reviewer-only",
+  "pass_rule": {
+    "zh": "Perfect = 全部 12 条通过。整题验收失败仅限：交付物缺失/无法解码（B1 失败），或作弊（读隐藏文件、联网、生成画面）。M1 失败不连带其他条目：槽位条目按 SSIM 检索的实际来源判定。",
+    "en": "Perfect = all 12 pass. Whole-task fail only for missing/undecodable deliverables (B1) or cheating. Slot items use SSIM-traced actual sources, independent of M1."
+  },
+  "window_frames": [
+    [
+      0,
+      210
+    ],
+    [
+      210,
+      390
+    ],
+    [
+      390,
+      630
+    ],
+    [
+      630,
+      870
+    ],
+    [
+      870,
+      1080
+    ],
+    [
+      1080,
+      1290
+    ]
+  ],
+  "cue": {
+    "line_time_s": 24.5,
+    "output_frame": 735
+  },
+  "decisions": [
+    {
+      "id": "B1",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "weight": 6,
+      "criterion_zh": "output/ 恰有 solution.mp4、edl.json、events.csv 三个文件；solution.mp4 可完整解码，H.264/yuv420p、1280×720、SAR 1:1、30/1 CFR、无音轨。",
+      "criterion_en": "output/ holds exactly solution.mp4, edl.json, events.csv; solution.mp4 fully decodes and is H.264/yuv420p, 1280x720, SAR 1:1, 30/1 CFR, no audio stream.",
+      "verify": "ffprobe 流参数 + ffmpeg -f null 全解码无错；ls 计数。缺失或无法解码 = 整题验收失败（唯一整题门槛之一）。"
+    },
+    {
+      "id": "B2",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "weight": 7,
+      "criterion_zh": "解码帧数恰为 1290；edl 恰 6 段，window=1..6，output_frames 依次为 [0,210] [210,390] [390,630] [630,870] [870,1080] [1080,1290]。",
+      "criterion_en": "Decoded frame count is exactly 1290; edl has exactly 6 segments, window 1..6, with output_frames [0,210] [210,390] [390,630] [630,870] [870,1080] [1080,1290].",
+      "verify": "ffprobe -count_frames；读 edl.json 逐项比较整数。"
+    },
+    {
+      "id": "B3",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "weight": 6,
+      "criterion_zh": "edl 合法：6 个 source 为合法且互不相同的候选编号；每段 source_frames 在该候选帧数范围内且 b−a=d−c。",
+      "criterion_en": "edl valid: 6 distinct legal candidate IDs; every source_frames lies inside the candidate's frame range and b−a = d−c.",
+      "verify": "与 provenance.json 的 frames 字段比对。"
+    },
+    {
+      "id": "B4",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "weight": 6,
+      "criterion_zh": "events.csv 表头为 line_time_s,output_frame，且恰有一行 line_time_s=24.5，output_frame 为 [0,1290) 内整数。",
+      "criterion_en": "events.csv has header line_time_s,output_frame and exactly one row with line_time_s=24.5 and an integer output_frame in [0,1290).",
+      "verify": "csv 解析。"
+    },
+    {
+      "id": "M1",
+      "tier": "mid",
+      "group": "honesty",
+      "critical": true,
+      "weight": 8,
+      "criterion_zh": "诚实与无变速：每个窗的全部输出帧逐帧对应 edl 所述候选的连续源帧（第 c+i 帧 ↔ 源第 a+i 帧，SSIM≥0.95），无裁切/缩放/调色，且无求解者自行插入的重复帧。",
+      "criterion_en": "Honesty, no retime: every output frame of every window matches the claimed candidate's consecutive source frame (output c+i <-> source a+i, SSIM>=0.95); no crop/scale/grade and no solver-inserted duplicate frames.",
+      "verify": "确定性逐帧 SSIM（灰度、最长边 360 px、11×11 高斯窗 σ=1.5）。差一帧即判否。重复帧只判求解者自行插入的，以源候选对应帧是否本身重复为基准：候选源片经 29.97→30 fps 转换自带个别复制帧（源第 k 与 k+1 帧 SSIM≥0.995 视为源自带重复），这些位置在输出中原样出现不扣分；对源第 a+i 与 a+i+1 帧本身不重复的位置，若输出第 c+i+1 帧与源第 a+i 帧的 SSIM 高于与源第 a+i+1 帧的 SSIM（即该帧是前一帧的复制而非对应源帧），记为求解者插入的重复帧，判否。"
+    },
+    {
+      "id": "M2",
+      "tier": "mid",
+      "group": "slots",
+      "critical": false,
+      "weight": 8,
+      "criterion_zh": "窗1 实际所用候选为 28（贴礁密集鱼群从镜头前涌过），任一 210 帧区间均可。",
+      "criterion_en": "Window 1 actually uses candidate 28 (dense school streaming past the lens over the reef); any 210-frame range is acceptable.",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。"
+    },
+    {
+      "id": "M3",
+      "tier": "mid",
+      "group": "slots",
+      "critical": false,
+      "weight": 8,
+      "criterion_zh": "窗2 实际所用候选为 07（白天满画面整齐圆杯、水螅体缩回），任一 180 帧区间均可。",
+      "criterion_en": "Window 2 actually uses candidate 07 (daytime, full frame of regular round cups, polyps retracted); any 180-frame range.",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。"
+    },
+    {
+      "id": "M4",
+      "tier": "mid",
+      "group": "slots",
+      "critical": false,
+      "weight": 8,
+      "criterion_zh": "窗6 实际所用候选为 17（白天枝状珊瑚丛、小鱼群在枝杈间），任一 210 帧区间均可。",
+      "criterion_en": "Window 6 actually uses candidate 17 (daytime branching-coral thicket with small fish among branches); any 210-frame range.",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。"
+    },
+    {
+      "id": "M5",
+      "tier": "mid",
+      "group": "slots",
+      "critical": false,
+      "weight": 8,
+      "criterion_zh": "窗4 实际所用候选为 16（近景粉色配子束掠过镜头、随后镜头后退露出整块珊瑚及邻株）；本条不看对齐。",
+      "criterion_en": "Window 4 actually uses candidate 16 (close-up pink bundles past the lens, then camera pulls back to the whole colony and neighbour); alignment not judged here.",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。"
+    },
+    {
+      "id": "G1",
+      "tier": "gate",
+      "group": "slots",
+      "critical": true,
+      "weight": 12,
+      "criterion_zh": "窗3 实际所用候选为 10：整窗 240 帧都是整块脑珊瑚、表面密布白色配子束（状态判别：排除表面基本光滑的着床前状态 08、后段离开珊瑚的 15、只见纹理不见整块的 36、另一物种 14）。",
+      "criterion_en": "Window 3 actually uses candidate 10: all 240 frames show the whole brain colony densely dotted with white bundles (state discrimination vs pre-set 08, 15 that leaves the colony, texture-only 36, other species 14).",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。 候选 10 共 282 帧，任一 240 帧区间均合格。"
+    },
+    {
+      "id": "G2",
+      "tier": "gate",
+      "group": "slots",
+      "critical": true,
+      "weight": 11,
+      "criterion_zh": "窗5 实际所用候选为 37：整窗 210 帧只有黑暗水体与漂散配子、珊瑚始终不在画内（35 前 141 帧画面下缘仍有礁石，后段干净部分仅 159 帧；26/30 始终或开头可见珊瑚）。",
+      "criterion_en": "Window 5 actually uses candidate 37: all 210 frames show only dark water and drifting gametes, no coral in frame (35 has reef at the bottom edge for its first 141 frames, clean tail only 159 frames; 26/30 show coral).",
+      "verify": "对输出每一帧在 37 段候选全部帧中做检索（灰度、最长边 360 px、SSIM，取最大者，≥0.95 视为命中），得到该窗实际所用候选与源帧区间；不采信 edl 自述。 同源重叠消歧：部分候选取自同一源镜头的重叠时段（如 10/15、15/30、16/19/06/31、35/37、01/07、32/28、34/23），重叠帧会同时命中多个候选（实测 SSIM≈0.99）；此时不按最大值取，而在全部 ≥0.95 的命中候选中，取能以单一连续源区间覆盖该窗全部帧的那一个（优先 edl 所述候选）；仅当无任一候选能连续覆盖整窗时才判为非该候选。 判定完全确定性：追溯来源 == 37 即通过；37 全片无礁体，任一 210 帧区间均合格，无需人工复看。"
+    },
+    {
+      "id": "G3",
+      "tier": "gate",
+      "group": "sync",
+      "critical": true,
+      "weight": 12,
+      "criterion_zh": "窗4 窗内对齐：窗4 用候选 16，且 (a) 镜头后退起点（隐藏参考：候选 16 源第 132 帧，合理带 120–150）落在输出第 720–750 帧（24.5 s ±0.5 s），即源起点 a∈[12,42]；(b) events.csv 声明帧在 720–750 内，且换算回源帧落在 120–150 合理带内。",
+      "criterion_en": "Window 4 in-window sync: window 4 uses clip 16 and (a) the pull-back onset (hidden reference: clip-16 source frame 132, plausible band 120-150) lands on output frames 720-750 (24.5 s ±0.5 s), i.e. source start a in [12,42]; (b) the events.csv declared frame is within 720-750 and maps back to a source frame inside 120-150.",
+      "verify": "由 TR 得到实际 a；确定性比较。声明帧换算：src = E − 630 + a。参考起点 132 为单名审核人按 3 帧步长接触表标注（未做第二人复核）；±15 帧合理带（120–150）远大于 3 帧标注粒度。"
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

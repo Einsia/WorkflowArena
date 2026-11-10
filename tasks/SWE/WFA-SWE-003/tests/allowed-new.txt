@@ -1,0 +1,14 @@
+pennylane/labs/trotter_error/__init__.py
+pennylane/labs/trotter_error/abstract.py
+pennylane/labs/trotter_error/fragments/__init__.py
+pennylane/labs/trotter_error/fragments/generic_fragments.py
+pennylane/labs/trotter_error/fragments/vibrational_fragments.py
+pennylane/labs/trotter_error/fragments/vibronic_fragments.py
+pennylane/labs/trotter_error/product_formulas/__init__.py
+pennylane/labs/trotter_error/product_formulas/error.py
+pennylane/labs/trotter_error/realspace/__init__.py
+pennylane/labs/trotter_error/realspace/ho_state.py
+pennylane/labs/trotter_error/realspace/matrix.py
+pennylane/labs/trotter_error/realspace/realspace_coefficients.py
+pennylane/labs/trotter_error/realspace/realspace_matrix.py
+pennylane/labs/trotter_error/realspace/realspace_operator.py

@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "BA",
+    "company_name": "BOEING CO",
+    "filing": "BA.html"
+  },
+  {
+    "ticker": "LMT",
+    "company_name": "LOCKHEED MARTIN CORP",
+    "filing": "LMT.html"
+  },
+  {
+    "ticker": "NOC",
+    "company_name": "NORTHROP GRUMMAN CORP /DE/",
+    "filing": "NOC.html"
+  },
+  {
+    "ticker": "HII",
+    "company_name": "HUNTINGTON INGALLS INDUSTRIES, INC.",
+    "filing": "HII.html"
+  },
+  {
+    "ticker": "LHX",
+    "company_name": "L3HARRIS TECHNOLOGIES, INC. /DE/",
+    "filing": "LHX.html"
+  },
+  {
+    "ticker": "LDOS",
+    "company_name": "Leidos Holdings, Inc.",
+    "filing": "LDOS.html"
+  },
+  {
+    "ticker": "AXON",
+    "company_name": "AXON ENTERPRISE, INC.",
+    "filing": "AXON.html"
+  },
+  {
+    "ticker": "TDY",
+    "company_name": "TELEDYNE TECHNOLOGIES INC",
+    "filing": "TDY.html"
+  },
+  {
+    "ticker": "ATRO",
+    "company_name": "ASTRONICS CORP",
+    "filing": "ATRO.html"
+  },
+  {
+    "ticker": "PSN",
+    "company_name": "PARSONS CORP",
+    "filing": "PSN.html"
+  },
+  {
+    "ticker": "DRS",
+    "company_name": "Leonardo DRS, Inc.",
+    "filing": "DRS.html"
+  },
+  {
+    "ticker": "VSEC",
+    "company_name": "VSE CORP",
+    "filing": "VSEC.html"
+  }
+]

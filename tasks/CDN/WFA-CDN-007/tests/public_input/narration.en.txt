@@ -1,0 +1,20 @@
+Narration script (programme timeline, seconds; each line is read starting at the time shown)
+
+[00.0-07.0]
+00.0  A coral reef is one of the most crowded places in the sea: a huge school of fish streams densely past the lens, hugging the reef and almost hiding the rock behind it.
+
+[07.0-13.0]
+07.0  Up close by day, the whole frame is tiny round cups packed side by side in neat rows. Each cup holds one polyp, and right now every polyp is pulled in.
+
+[13.0-21.0]
+13.0  Night. In frame is an entire brain-coral colony, its surface speckled all over with white grains: the bundles have already been pushed up to the mouths.
+
+[21.0-29.0]
+21.0  The moment arrives: the bundles leave the coral in clusters, and pink spheres drift past the lens one after another.
+24.5  The camera pulls back with them, and the whole releasing colony comes into frame together with its neighbour.
+
+[29.0-36.0]
+29.0  The spheres keep rising and the reef is left below; all that remains in frame is dark water and gametes drifting everywhere.
+
+[36.0-43.0]
+36.0  Next morning, on a shallow reef flat: a thicket of interlaced coral branches, with schools of small fish weaving between them. This is the home they are carrying forward.

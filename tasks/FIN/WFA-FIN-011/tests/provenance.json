@@ -1,0 +1,39 @@
+{
+  "source": "synthetic (SIMCO world generator, WorkflowArena finlegal-v0/simco)",
+  "generator": "Authored SIMCO simulator: ledger simulation, consolidation, audit-error injection and cash-flow generation; scenario parameters are recorded below.",
+  "design_references": [
+    {
+      "name": "FinMaster (FinSim simulator + seeded audit errors)",
+      "license": "No license file recorded in the source snapshot; this reference contributes design ideas only. No upstream code is redistributed."
+    },
+    {
+      "name": "finbalance (clean/as-booked twin, replay verifier)",
+      "license": "No license file recorded in the source snapshot; this reference contributes design ideas only. No upstream code is redistributed."
+    }
+  ],
+  "license": "generated data; no third-party content",
+  "scenario": {
+    "key": "simco-01",
+    "seed": 1101,
+    "acq_date": "2026-07-01",
+    "acq_pct": 1.0,
+    "nci_fv_at_acq": 0.0,
+    "acq_cash": 12600000,
+    "cc_fv": 900000,
+    "cc_fv_q": {
+      "2026-09": 960000,
+      "2026-12": 1040000
+    },
+    "deal_costs": 240000,
+    "volume": 1.0,
+    "writedowns": false,
+    "eur_drift": 0.0,
+    "jpy_drift": 0.0,
+    "skip_remeasure": [],
+    "s5_pre_acq_lots": false,
+    "disposal": true,
+    "ye_settlements": [],
+    "ic_returns": [],
+    "count_adjust": []
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "ticker": "NEE",
+    "company_name": "NEXTERA ENERGY INC",
+    "filing": "NEE.html"
+  },
+  {
+    "ticker": "SO",
+    "company_name": "SOUTHERN CO",
+    "filing": "SO.html"
+  },
+  {
+    "ticker": "ETR",
+    "company_name": "ENTERGY CORP /DE/",
+    "filing": "ETR.html"
+  },
+  {
+    "ticker": "D",
+    "company_name": "DOMINION ENERGY, INC",
+    "filing": "D.html"
+  },
+  {
+    "ticker": "SRE",
+    "company_name": "SEMPRA",
+    "filing": "SRE.html"
+  },
+  {
+    "ticker": "PEG",
+    "company_name": "PUBLIC SERVICE ENTERPRISE GROUP INC",
+    "filing": "PEG.html"
+  },
+  {
+    "ticker": "WEC",
+    "company_name": "WEC ENERGY GROUP, INC.",
+    "filing": "WEC.html"
+  },
+  {
+    "ticker": "PPL",
+    "company_name": "PPL Corp",
+    "filing": "PPL.html"
+  },
+  {
+    "ticker": "CMS",
+    "company_name": "CMS ENERGY CORP",
+    "filing": "CMS.html"
+  },
+  {
+    "ticker": "CNP",
+    "company_name": "CENTERPOINT ENERGY INC",
+    "filing": "CNP.html"
+  },
+  {
+    "ticker": "ES",
+    "company_name": "EVERSOURCE ENERGY",
+    "filing": "ES.html"
+  },
+  {
+    "ticker": "LNT",
+    "company_name": "ALLIANT ENERGY CORP",
+    "filing": "LNT.html"
+  },
+  {
+    "ticker": "IDA",
+    "company_name": "IDACORP INC",
+    "filing": "IDA.html"
+  }
+]

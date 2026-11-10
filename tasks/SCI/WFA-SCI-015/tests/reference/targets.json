@@ -1,0 +1,94 @@
+{
+  "task_id": "WFA-SCI-015",
+  "full_success": {
+    "min_targets_passed": 6
+  },
+  "targets": [
+    {
+      "id": "T1",
+      "file": "T1_cori_ode.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "value": "rt_mean",
+      "corr_min": 0.98,
+      "rmse_max": 0.06
+    },
+    {
+      "id": "T2",
+      "file": "T2_wt_ode.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "group": "method",
+      "value": "rt_mean",
+      "corr_min": 0.98,
+      "rmse_max": 0.08,
+      "pass_frac": 1.0
+    },
+    {
+      "id": "T3",
+      "file": "T3_gi_misspecification.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "group": "setting",
+      "value": "rt_mean",
+      "corr_min": 0.98,
+      "rmse_max": 0.06,
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T4",
+      "file": "T4_smoothing_window.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "group": "setting",
+      "value": "rt_mean",
+      "corr_min": 0.97,
+      "rmse_max": 0.06,
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T5",
+      "file": "T5_backcalculated_infections.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "group": "series",
+      "value": "infections",
+      "corr_min": 0.98,
+      "pass_frac": 0.75
+    },
+    {
+      "id": "T6",
+      "file": "T6_rt_from_delayed_data.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "group": "input",
+      "value": "rt_mean",
+      "corr_min": 0.95,
+      "rmse_max": 0.1,
+      "pass_frac": 0.75
+    },
+    {
+      "id": "T7",
+      "file": "T7_case_reproduction_number.csv",
+      "mode": "series",
+      "keys": [
+        "time"
+      ],
+      "value": "R_case",
+      "corr_min": 0.995,
+      "rmse_max": 0.02
+    }
+  ]
+}

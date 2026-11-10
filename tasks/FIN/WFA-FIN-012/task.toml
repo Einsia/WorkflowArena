@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/submission"]
+
+[task]
+name = "WFA-FIN-012"
+version = "0.1.0"
+description = "Halvard Group (simulated) - FX remeasurement (4 USD entities x 12 months), translation of EUR/JPY subs, CTA roll-forward, designated-loan reclass"
+
+[metadata]
+domain = "FIN"
+subcategory = "FIN-ACCT"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 4
+memory_mb = 8192
+storage_mb = 4096
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 1
+memory_mb = 2048
+storage_mb = 2048

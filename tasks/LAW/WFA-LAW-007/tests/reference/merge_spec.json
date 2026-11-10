@@ -1,0 +1,213 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "kn_definition",
+   "id": "M01",
+   "text": "Give the distribution of answers to `kn_definition` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "gen_consideration",
+   "id": "M02",
+   "text": "Give the distribution of answers to `gen_consideration` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_general_bringdown_standard",
+      "eq": "All/The R&Ws accurate at MAE standard"
+     },
+     {
+      "not": {
+       "dp": "cc_fund_bringdown_standard",
+       "eq": "Accurate in all respects"
+      }
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `cc_general_bringdown_standard` = «All/The R&Ws accurate at MAE standard» AND NOT (`cc_fund_bringdown_standard` = «Accurate in all respects»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_cap_bringdown_standard",
+      "eq": "Accurate in all respects with de minimis exception"
+     },
+     {
+      "not": {
+       "dp": "cc_scrape_applies_to",
+       "has": "fundamental/Special R&Ws"
+      }
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `cc_cap_bringdown_standard` = «Accurate in all respects with de minimis exception» AND NOT (`cc_scrape_applies_to` includes «fundamental/Special R&Ws»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_fls_yn",
+      "eq": "Yes"
+     },
+     {
+      "not": {
+       "dp": "mae_fls_standard",
+       "eq": "\"Would\""
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `mae_fls_yn` = «Yes» AND NOT (`mae_fls_standard` = «\"Would\"»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_taken_as_whole",
+      "eq": "Applies to Target and subsidiaries \"taken as a whole\""
+     },
+     {
+      "not": {
+       "dp": "mae_fls_standard",
+       "eq": "\"Would\" (reasonably) be expected to"
+      }
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND NOT (`mae_fls_standard` = «\"Would\" (reasonably) be expected to»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_general_bringdown_timing",
+      "eq": "At Signing & At Closing"
+     },
+     {
+      "not": {
+       "dp": "cc_fund_rw_types",
+       "has": "Takeover Statutes"
+      }
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `cc_general_bringdown_timing` = «At Signing & At Closing» AND NOT (`cc_fund_rw_types` includes «Takeover Statutes»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_fund_rw_types",
+      "has": "No MAE"
+     },
+     {
+      "dp": "cc_covenant_compliance",
+      "eq": "Each Covenant"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `cc_fund_rw_types` includes «No MAE» AND `cc_covenant_compliance` = «Each Covenant». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "extremum",
+   "mode": "max",
+   "score": {
+    "type": "set_size",
+    "dp": "cc_scrape_applies_to",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M09",
+   "text": "Which agreement(s) have the highest value of the number of options selected for `cc_scrape_applies_to` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "kn_identified_persons",
+   "max_holders": 3,
+   "id": "M10",
+   "text": "For `kn_identified_persons`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "rem_specific_performance",
+   "max_holders": 3,
+   "id": "M11",
+   "text": "For `rem_specific_performance`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_fls_standard"
+   ],
+   "id": "M12",
+   "text": "Considering only `mae_taken_as_whole`, `mae_ability_to_consummate`, `mae_fls_standard`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "cc_general_bringdown_timing",
+    "cc_general_bringdown_standard",
+    "cc_fund_bringdown_standard"
+   ],
+   "id": "M13",
+   "text": "Considering only `cc_general_bringdown_timing`, `cc_general_bringdown_standard`, `cc_fund_bringdown_standard`: how many distinct answer combinations occur among the 15 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A07",
+   "dps": [
+    "cc_general_bringdown_timing",
+    "cc_general_bringdown_standard",
+    "cc_cap_bringdown_standard",
+    "cc_fund_bringdown_standard",
+    "cc_fund_rw_types",
+    "cc_scrape_applies_to",
+    "cc_covenant_compliance",
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_fls_yn",
+    "mae_fls_standard",
+    "kn_definition",
+    "kn_identified_persons",
+    "rem_specific_performance",
+    "ef_antitrust_standard",
+    "gen_consideration"
+   ],
+   "id": "M14",
+   "text": "Which other agreement(s) give the same answer as A07 on the largest number of the 16 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "WFA-SCI-014",
+  "sources": [
+    {
+      "what": "paper",
+      "url": "https://doi.org/10.1038/s41567-025-03095-1",
+      "arxiv": "https://arxiv.org/abs/2401.08746v5",
+      "retrieved": "2026-10-23"
+    },
+    {
+      "what": "source data",
+      "url": "https://zenodo.org/api/records/17096693/files/Mai_etal_twist_Hubbard_HK.zip/content",
+      "md5": "65691e0f6bd06b0e41f5665b69513bc2",
+      "sha256": "4372493461c95a57a1a9d41bb9166ffadf54945588db51f6f1f85c0216da3509",
+      "license": "CC-BY-4.0",
+      "retrieved": "2026-10-23"
+    },
+    {
+      "what": "gold extraction",
+      "note": "txt files (Fig4, EXData7) read directly; Mathematica notebooks parsed with the task reference-generation script (lists En{n}orb, Uarray, spinsusqpipiU*, gapvstp)"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "ticker": "BMY",
+    "company_name": "BRISTOL MYERS SQUIBB CO",
+    "filing": "BMY.html"
+  },
+  {
+    "ticker": "LLY",
+    "company_name": "ELI LILLY & Co",
+    "filing": "LLY.html"
+  },
+  {
+    "ticker": "PFE",
+    "company_name": "PFIZER INC",
+    "filing": "PFE.html"
+  },
+  {
+    "ticker": "AMGN",
+    "company_name": "AMGEN INC",
+    "filing": "AMGN.html"
+  },
+  {
+    "ticker": "JNJ",
+    "company_name": "JOHNSON & JOHNSON",
+    "filing": "JNJ.html"
+  },
+  {
+    "ticker": "REGN",
+    "company_name": "REGENERON PHARMACEUTICALS, INC.",
+    "filing": "REGN.html"
+  },
+  {
+    "ticker": "VRTX",
+    "company_name": "VERTEX PHARMACEUTICALS INC / MA",
+    "filing": "VRTX.html"
+  },
+  {
+    "ticker": "INCY",
+    "company_name": "INCYTE CORP",
+    "filing": "INCY.html"
+  },
+  {
+    "ticker": "ZTS",
+    "company_name": "Zoetis Inc.",
+    "filing": "ZTS.html"
+  },
+  {
+    "ticker": "UTHR",
+    "company_name": "UNITED THERAPEUTICS Corp",
+    "filing": "UTHR.html"
+  },
+  {
+    "ticker": "ALKS",
+    "company_name": "Alkermes plc.",
+    "filing": "ALKS.html"
+  },
+  {
+    "ticker": "EXEL",
+    "company_name": "EXELIXIS, INC.",
+    "filing": "EXEL.html"
+  },
+  {
+    "ticker": "HALO",
+    "company_name": "HALOZYME THERAPEUTICS, INC.",
+    "filing": "HALO.html"
+  },
+  {
+    "ticker": "ACAD",
+    "company_name": "ACADIA PHARMACEUTICALS INC",
+    "filing": "ACAD.html"
+  }
+]

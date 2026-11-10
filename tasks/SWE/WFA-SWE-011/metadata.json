@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-011",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Truncated count models and hurdle models",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/statsmodels/statsmodels/pull/7973",
+    "revision": "merge b0b0e5f4bf6818ac908ec46a8de139f8a8cc95c8; start = first parent 34255b7e4ad17d763f0d0b3eeaea20ab66750471",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

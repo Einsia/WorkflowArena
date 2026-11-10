@@ -1,0 +1,83 @@
+{
+  "task_id": "WFA-SCI-006",
+  "tracks": [
+    {
+      "name": "dG",
+      "submission_file": "hydration-prediction.csv",
+      "format": "sampl",
+      "value_index": 1,
+      "truth": "reference/truth_dG_hyd.csv",
+      "required_ids": "all_truth",
+      "required_sections": [
+        "Name",
+        "Method"
+      ],
+      "field": "reference/field.csv",
+      "field_track": "dG",
+      "primary": "RMSE",
+      "lower_is_better": true,
+      "rank_round": 2,
+      "extra_metrics": [
+        "MAE",
+        "ME",
+        "R2",
+        "slope",
+        "kendall_tau"
+      ],
+      "success_thresholds": {
+        "RMSE": {
+          "le": 1.25
+        },
+        "MAE": {
+          "le": 1.0
+        },
+        "kendall_tau": {
+          "ge": 0.75
+        }
+      },
+      "rank_is_approximate": true,
+      "rank_note": "approximate rank: truth reconstructed from FreeSolv v0.52; recomputed official RMSE within 0.04 of Table 1, near-tied entries can swap ranks",
+      "rank_metrics": {
+        "MAE": {
+          "field_col": "MAE",
+          "lower_is_better": true
+        },
+        "kendall_tau": {
+          "field_col": "kendall_tau",
+          "lower_is_better": false
+        }
+      }
+    }
+  ],
+  "controls": {
+    "positive": [
+      {
+        "track": "dG",
+        "entry_id": "145",
+        "dir": "controls/positive/145",
+        "tolerance": 0.05
+      },
+      {
+        "track": "dG",
+        "entry_id": "572",
+        "dir": "controls/positive/572",
+        "tolerance": 0.05
+      },
+      {
+        "track": "dG",
+        "entry_id": "197",
+        "dir": "controls/positive/197",
+        "tolerance": 0.05
+      }
+    ],
+    "negative": {
+      "dG": {
+        "constant": -5.0,
+        "random_range": [
+          -12.0,
+          1.0
+        ]
+      }
+    }
+  }
+}

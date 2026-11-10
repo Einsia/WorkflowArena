@@ -1,0 +1,37 @@
+{
+ "cwd": "/app",
+ "runner": "gotest",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 5400,
+   "framework": "gotest",
+   "runner": "gotest",
+   "command": [
+    "bash",
+    "-c",
+    "bash /tests/run_f1.sh 2>&1 | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the storage engine's own acceptance suite, restored by the verifier; run so that a panic costs one test instead of the tail of the suite"
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "gotest",
+   "runner": "gotest",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && go test -count=1 -v -timeout 32m ./promql/... ./rules/... ./web/... ./scrape/... ./storage/remote/... ./tsdb/agent/... ./cmd/promtool/... 2>&1 | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "black-box consumers: they reach the engine only through its exported API, mostly via util/teststorage. Green on the reference implementation and scored for regressions"
+  }
+ ]
+}

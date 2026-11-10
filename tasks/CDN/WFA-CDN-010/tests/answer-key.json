@@ -1,0 +1,393 @@
+{
+  "task_id": "WFA-CDN-010",
+  "page_convention": "report.pdf printed = PDF-1; appendix-e exec summary printed vii/viii = PDF 9/10, Findings printed 97 = PDF 107; appendix-g printed 1 = PDF 4, printed 7 = PDF 10",
+  "verification": "each quote auto-matched against pdftotext -layout per-page text on 2026-10-24 (K16 ligature loss, H05 table layout verified visually)",
+  "facts": [
+    {
+      "id": "K01",
+      "file": "report.pdf",
+      "pdf_page": 12,
+      "printed": 11,
+      "value": "May 31, 2017, approx. 11:00 p.m.; 5 fatally injured, 14 injured; 124 employed at site, 19 onsite",
+      "quote": "multiple combustible dust explosions occurred ... fatally injuring five employees and injuring another 14 employees. Didion employed 124 people at the Cambria site, of which 19 employees were onsite"
+    },
+    {
+      "id": "K02",
+      "file": "report.pdf",
+      "pdf_page": 12,
+      "printed": 11,
+      "value": "Complete collapse: Multipurpose Building, F Mill, Boiler House; D Mill significant structural damage; property damage $15,375,959 (Didion's estimate); no off-site damage",
+      "quote": "The Multipurpose Building, F Mill, and the Boiler House suffered complete collapses ... Didion’s estimated property damage from the incident is $15,375,959. No off-site damage"
+    },
+    {
+      "id": "K03",
+      "file": "news-release.html",
+      "pdf_page": null,
+      "printed": null,
+      "value": "release rounds damage to 'over $15 million' and says 'more than a dozen recommendations'",
+      "quote": "resulting in over $15 million in property damage ... issuing more than a dozen recommendations"
+    },
+    {
+      "id": "K04",
+      "file": "report.pdf",
+      "pdf_page": 12,
+      "printed": 11,
+      "value": "Same day: discharge of two rotary gap mills connected to increase production (temporary change)",
+      "quote": "During the day of the incident, Didion connected the discharge of two rotary gap mills in an attempt to increase production."
+    },
+    {
+      "id": "K05",
+      "file": "report.pdf",
+      "pdf_page": 42,
+      "printed": 41,
+      "value": "smoke noticed around 10:30 p.m.; times are Central",
+      "quote": "On May 31, 2017, around 10:30 p.m., a multiple employees throughout the mill facility noticed an unusual smell or saw smoke"
+    },
+    {
+      "id": "K06",
+      "file": "report.pdf",
+      "pdf_page": 46,
+      "printed": 45,
+      "value": "Explosion 2 estimated at 11:00 p.m.; radio traffic prevented evacuation call",
+      "quote": "Explosion 2 is estimated to have occurred at 11:00 p.m."
+    },
+    {
+      "id": "K07",
+      "file": "report.pdf",
+      "pdf_page": 58,
+      "printed": 57,
+      "value": "nest location not determined; 'likely' developed downstream of gap mills; trend data 'not definitive'",
+      "quote": "While not definitive, the process trend data are at least supportive ... although the precise location could not be determined, a smoldering nest likely developed in equipment downstream of the Bauermeister gap mills in 1B"
+    },
+    {
+      "id": "K08",
+      "file": "report.pdf",
+      "pdf_page": 53,
+      "printed": 52,
+      "value": "likely progression steps 1-5b (nest, primary explosion, propagation, Explosion 2, Dry Grit Filter fireball, secondary explosions, back-propagation)",
+      "quote": "The likely incident progression involved a series of events"
+    },
+    {
+      "id": "K09",
+      "file": "report.pdf",
+      "pdf_page": 83,
+      "printed": 82,
+      "value": "Dry Grit Filter connected at least 46 pieces of equipment across at least four processes and three buildings; no isolation; OSHA alerted >3 years before",
+      "quote": "the Dry Grit Filter connected at least 46 pieces of equipment across at least four different processes and three buildings"
+    },
+    {
+      "id": "K10",
+      "file": "report.pdf",
+      "pdf_page": 85,
+      "printed": 84,
+      "value": "Didion calc: max dust concentration 12% of MEC; excluded particles >425 µm",
+      "quote": "the maximum dust concentration calculated was 12% of MEC"
+    },
+    {
+      "id": "K11",
+      "file": "report.pdf",
+      "pdf_page": 83,
+      "printed": 82,
+      "value": "Table 3: CSB Bran KSt 137 / Torit 158 bar·m/s; Didion SDS KSt 180, MEC 120-140 also 55; NFPA corn KSt 75",
+      "quote": "Table 3: Comparison of select combustible dust properties"
+    },
+    {
+      "id": "K12",
+      "file": "report.pdf",
+      "pdf_page": 76,
+      "printed": 75,
+      "value": "collapse took only 3-5 s; three-stage collapse (Appendix D)",
+      "quote": "it took only three to five seconds for connections and structural members to break apart"
+    },
+    {
+      "id": "K13",
+      "file": "report.pdf",
+      "pdf_page": 116,
+      "printed": 115,
+      "value": "1B heavy dust in all but two of 16 monthly inspections (Jan 2016-Apr 2017)",
+      "quote": "Of the 16 months of data provided, all but two monthly inspection reports indicated heavy dust accumulation in 1B"
+    },
+    {
+      "id": "K14",
+      "file": "report.pdf",
+      "pdf_page": 117,
+      "printed": 116,
+      "value": "air make-up shaft accumulation 12 times in 16 months; B Mill air shaft each of last five inspections; Table 5 note a: April 2017 inspection performed May 3, 2017, May inspection not yet done",
+      "quote": "listed in the Monthly Sanitation Inspection forms 12 times in 16 months"
+    },
+    {
+      "id": "K15",
+      "file": "report.pdf",
+      "pdf_page": 138,
+      "printed": 137,
+      "value": "Text (PDF 138): similar incidents at least six times in previous five years; Table 6 (PDF 141, printed 140) lists 8 incidents 2012-10-18 ... 2017-05-31",
+      "quote": "at least six times in the previous five years"
+    },
+    {
+      "id": "K16",
+      "file": "report.pdf",
+      "pdf_page": 147,
+      "printed": 146,
+      "value": "Table 8: OSHA 2010 General Duty Clause citation; insurer 2012 (no suppression/venting, electrical class); OSHA 2013 Hazard Alert Letter incl. inadequate dust collector calculations; findings not addressed",
+      "quote": "Hazard Alert Le[t]ter (HAL) issued with voluntary recommendations (PDF text has ligature loss)"
+    },
+    {
+      "id": "K17",
+      "file": "report.pdf",
+      "pdf_page": 148,
+      "printed": 147,
+      "value": "2012 insurer: largest loss scenario = dust explosion and subsequent fire in B Mill area",
+      "quote": "the insurance company also determined the largest loss scenario to be the potential from a dust explosion and subsequent fire in the B Mill area"
+    },
+    {
+      "id": "K18",
+      "file": "report.pdf",
+      "pdf_page": 16,
+      "printed": 15,
+      "value": "Cause statement incl. FR PPE contributed to at least one fatality and three serious injuries; failure to abate externally identified hazards contributed to all five fatalities and 14 serious injuries",
+      "quote": "Also contributing to at least one fatality and three serious injuries was Didion’s lack of flame-resistant personal protective equipment"
+    },
+    {
+      "id": "K19",
+      "file": "report.pdf",
+      "pdf_page": 17,
+      "printed": 16,
+      "value": "13 new recommendations: R1-R9 Didion, R10-R12 OSHA, R13 NFPA; superseded earlier OSHA recs",
+      "quote": "2017-07-I-WI-R1 ... 2017-07-I-WI-R13"
+    },
+    {
+      "id": "K20",
+      "file": "report.pdf",
+      "pdf_page": 112,
+      "printed": 111,
+      "value": "Wisconsin had not adopted IFC combustible-dust design requirements before incident; adopted portions of 2015 IBC/IFC May 2018",
+      "quote": "In May 2018, following the incident at Didion, Wisconsin adopted portions of the 2015 editions of the IBC and IFC"
+    },
+    {
+      "id": "K21",
+      "file": "report.pdf",
+      "pdf_page": 15,
+      "printed": 14,
+      "value": "Grain Handling Facilities Standard lacks safety management systems (incident investigation, MOC, DHA); no comprehensive OSHA combustible dust rule",
+      "quote": "this standard does not incorporate safety management systems, such as incident investigations, management of change, and dust hazard analysis"
+    },
+    {
+      "id": "K22",
+      "file": "report.pdf",
+      "pdf_page": 134,
+      "printed": 133,
+      "value": "2012 South BM fire: similarities (fire in South BM discharge line, air intake filter blew off, fire moved through piping); corrective actions limited to plugging detection",
+      "quote": "There are several similarities between this incident and the May 31, 2017 incident"
+    },
+    {
+      "id": "K23",
+      "file": "report.pdf",
+      "pdf_page": 149,
+      "printed": 148,
+      "value": "OSHA 2013 letter: Didion MEC calculation approach 'does not appear to be a valid, industry recognized approach'; pulsing suspends dust near/above MEC",
+      "quote": "This approach does not appear to be a valid, industry recognized approach"
+    }
+  ],
+  "hidden_points": [
+    {
+      "id": "H01",
+      "where": "appendix-e.pdf PDF 10 (printed viii, Executive Summary) and PDF 107 (printed 97, Findings)",
+      "value": "South gap mill could eject at most ~5.8 kg (12.8 lb) of flammable dust; well below mass needed for observed Level-1 damage; therefore combination of ejected dust AND fugitive dust in Level 1 of Mill B was necessary for the initial damaging explosion",
+      "quote": "the maximum flammable mass of ejected dust when the flame front reaches the exit of the South Gap Mill was approximately 5.8 kg (12.8 lb.). This mass is well below the mass calculated to cause the observed damage ... Therefore, a combination of dust ejected from the South Gap Mill and fugitive dust within level 1 of Mill B was necessary",
+      "in_main_report": false
+    },
+    {
+      "id": "H02",
+      "where": "appendix-e.pdf PDF 10 (printed viii) and PDF 107-108 (printed 97-98)",
+      "value": "Modelled venting: 11 m2 vent area in Level 1 Mill B keeps walls/doors below failure ('may have mitigated') BUT air shaft remains a path; Multipurpose Building would need ~20% of wall area / 250 m2 vents plus structural continuity. Note: exec summary places the 11 m2 on partition wall + eastern exterior wall, Findings says one vent on southern wall",
+      "quote": "engineered venting may have mitigated the propagation of the explosion; however, the air shaft would remain a potential path for fire and overpressure ... approximately 20% of the wall surface area, or 250 m2 of total vent area",
+      "in_main_report": false
+    },
+    {
+      "id": "H03",
+      "where": "appendix-e.pdf PDF 9 (printed vii) and PDF 107 (printed 97)",
+      "value": "Two methods, two estimates: NFPA 68 -> min cloud 20-30 m3 (2-3% of room) for onset of door damage; CFD -> 40-100 m3 (45-110 lb, 4-10%) most consistent with L1-L2 damage; full-volume cloud -> 82 psi peak (relief via air shaft only). Must keep method attribution; not merge into one number",
+      "quote": "a minimum cloud volume of approximately 20 to 30 m3 ... between 40 m3 (45 lbs.) and 100 m3 (110 lbs.) of dust ... peak pressure of 82 psi",
+      "in_main_report": false
+    },
+    {
+      "id": "H04",
+      "where": "appendix-g.pdf PDF 4 (printed 1, Table of Test Results) and PDF 10 (printed 7, Conclusions)",
+      "value": "MIE 30-100 mJ for Bran and Flour (product) vs 10-30 mJ for Torit, D4 Flex Kleen filter and Coarse Grinder samples; all St-1; highest KSt = Flex Kleen 159 (Pmax 8.8 bar), lowest Coarse Grinder 123. Main report gives no MIE values and only Bran/Torit in Table 3",
+      "quote": "The measured MIE value was between 30 and 100 mJ for the Bran and Flour samples and between 10 and 30 mJ for the Torit, Flex Kleen Filter, and Coarse Grinder samples",
+      "in_main_report": false
+    },
+    {
+      "id": "H05",
+      "where": "appendix-g.pdf PDF 4 (Table of Test Results rows 'as received' vs 'as tested'); report.pdf PDF 82 (printed 81)",
+      "value": "Lab values are for conditioned samples: dried to ~3-5 wt% moisture and >95% <75 µm (as received moisture 7 to >15 wt%, 48-86% <75 µm). They characterise worst-case explosibility, not as-found conditions; must not be presented as the measured state of the dust on the night",
+      "quote": "Moisture Content (wt%), as received 7 / 11 / 12.3 / >15 / >15 ... as tested 3.08 – 4.02 ...",
+      "in_main_report": "partly (p81 states standardisation to <5% and 75 µm, but not as-received values)"
+    },
+    {
+      "id": "H06",
+      "where": "report.pdf PDF 85 (printed 84) footnote a",
+      "value": "NFPA 61 manifolding of hammer/roller/gap mills with other machinery was violated 'While not directly causal to this incident' -> may be cited as a code gap but not as a cause",
+      "quote": "While not directly causal to this incident, Didion did violate this standard in several locations",
+      "in_main_report": "footnote only"
+    },
+    {
+      "id": "H07",
+      "where": "report.pdf PDF 137-138 (printed 136-137) incl. footnote a on PDF 138",
+      "value": "May 29, 2017 dryer/dust-collector fire: 'no evidence that the two incidents were directly related', 'not likely related'; facility restarted ~6 h later before investigation complete. May 31 morning near miss was in a hammer mill 'inside an unrelated process' (footnote). Both are missed warnings, not triggers",
+      "quote": "While the CSB found no evidence that the two incidents were directly related ... This hammer mill incident was near the North BM and South BM on 1B but occurred inside an unrelated process.",
+      "in_main_report": "body + footnote"
+    }
+  ],
+  "calculations": [
+    {
+      "id": "X01",
+      "expr": "70 m3 x 500 g/m3 = 35,000 g = 35 kg ≈ 77 lb ('roughly 80 lbs')",
+      "source": "appendix-e PDF 10/107"
+    },
+    {
+      "id": "X02",
+      "expr": "5.8 kg vs CFD 40-100 m3 ≈ 45-110 lb ≈ 20-50 kg => ejected dust is ~12-29% of the mass needed (≈ 1/8 to 1/3.5)",
+      "source": "appendix-e PDF 10/107"
+    },
+    {
+      "id": "X03",
+      "expr": "20-30 m3 vs 40-100 m3: NFPA 68 minimum is for onset of door damage, CFD for L1-L2 damage; not same quantity",
+      "source": "appendix-e PDF 9/107"
+    },
+    {
+      "id": "X04",
+      "expr": "Didion 12% of MEC with MEC 60-80 g/m3 implies ≤ ~7-10 g/m3 average in supply duct -> steady-state average, ignores pulse-jet transients (OSHA 2013 critique) and excluded >425 µm",
+      "source": "report PDF 85, 149; appendix-g PDF 10"
+    }
+  ],
+  "chart_value_reference": {
+    "appendix_g_table_of_results_PDF4": {
+      "samples": [
+        "8480 PR Bran",
+        "4300 Flour",
+        "Torit Sample #1",
+        "D4 Flex Kleen Filter",
+        "Coarse Grinder B"
+      ],
+      "Pmax_bar": [
+        8.2,
+        8.1,
+        8.1,
+        8.8,
+        8.3
+      ],
+      "dPdt_max_bar_s": [
+        506,
+        546,
+        583,
+        587,
+        453
+      ],
+      "KSt_bar_m_s": [
+        137,
+        148,
+        158,
+        159,
+        123
+      ],
+      "MEC_g_m3": [
+        "60-75",
+        "70-80",
+        "70-80",
+        "70-80",
+        "70-80"
+      ],
+      "MIE_mJ": [
+        "30-100",
+        "30-100",
+        "10-30",
+        "10-30",
+        "10-30"
+      ]
+    },
+    "report_table5_PDF117": {
+      "areas": [
+        "Bulk Loadout",
+        "3F",
+        "4B",
+        "Pack",
+        "1B",
+        "1A"
+      ],
+      "avg_2016": [
+        4.7,
+        3.2,
+        2.9,
+        2.5,
+        2.4,
+        2.4
+      ],
+      "Jan17": [
+        4,
+        4,
+        3,
+        3,
+        4,
+        4
+      ],
+      "Feb17": [
+        5,
+        4,
+        4,
+        3,
+        3,
+        3
+      ],
+      "Mar17": [
+        7,
+        3,
+        3,
+        3,
+        2,
+        3
+      ],
+      "Apr17": [
+        6,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "total": [
+        74,
+        49,
+        39,
+        39,
+        38,
+        36
+      ],
+      "note": "header says '2016-May 2017' but footnote b says Jan 2016 through April 2017; April inspection performed May 3, 2017"
+    },
+    "report_table3_PDF83": "CSB Bran 29 µm/8.2/137/60-75; CSB Torit 18/8.1/158/70-80; Didion SDS NR/7.9/180/120-140 also 55; NFPA68 corn 28/9.4/75/60"
+  },
+  "leak_terms": [
+    "5.8 kg",
+    "12.8 lb",
+    "250 m",
+    "11 m2",
+    "82 psi",
+    "20 to 30",
+    "not directly causal",
+    "unrelated process",
+    "12% of MEC",
+    "46 pieces",
+    "15,375,959",
+    "Flex Kleen",
+    "10 and 30 mJ",
+    "St-1",
+    "smoldering nest",
+    "Didion",
+    "Cambria",
+    "Bauermeister",
+    "Dry Grit",
+    "ABS Group",
+    "ioKinetic"
+  ]
+}

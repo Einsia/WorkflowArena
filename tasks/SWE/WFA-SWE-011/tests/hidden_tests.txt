@@ -1,0 +1,5 @@
+statsmodels/discrete/tests/results/results_discrete.py
+statsmodels/discrete/tests/results/results_truncated.py
+statsmodels/discrete/tests/results/results_truncated_st.py
+statsmodels/discrete/tests/test_truncated_model.py
+statsmodels/distributions/tests/test_discrete.py

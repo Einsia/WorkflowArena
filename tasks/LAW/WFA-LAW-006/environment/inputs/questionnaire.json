@@ -1,0 +1,187 @@
+[
+ {
+  "id": "dp_tail_ap_timing",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Termination-fee tail provision: what must happen during the tail period with respect to the same or a different acquisition proposal for the tail fee to be payable? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "Different Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period (no closing requirement)",
+   "Different Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period and transaction must close after Tail Period",
+   "Different Acquisition Proposal - Must sign during Tail Period (no closing requirement)",
+   "Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period",
+   "Different Acquisition Proposal must close during Tail Period",
+   "Same Acquisition Proposal - Must be approved or not opposed (or another similar action) during Tail Period and transaction must close after Tail Period",
+   "Same Acquisition Proposal - Must be approved or not opposed to (or another similar action) during Tail Period (no closing requirement)",
+   "Same Acquisition Proposal - Must close during Tail Period",
+   "Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)",
+   "Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period"
+  ],
+  "note": "Typically one \"Same\" and one \"Different\" option apply."
+ },
+ {
+  "id": "dp_tail_public_yn",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Termination-fee tail provision: must the acquisition proposal have been publicly disclosed/announced (for at least one of the termination triggers)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_tail_public_triggers",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Termination-fee tail provision: for which termination triggers must the acquisition proposal have been publicly disclosed? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "No",
+   "“Publicly disclosed” requirement applies to Acquisition Proposal + Breach Trigger",
+   "“Publicly disclosed” requirement applies to Acquisition Proposal + No-Vote / MTC Failure Trigger",
+   "“Publicly disclosed” requirement applies to Acquisition Proposal + Outside Date Trigger"
+  ],
+  "note": "Breach Trigger = termination for Target breach; No-Vote / MTC Failure Trigger = termination for failure to obtain stockholder approval; Outside Date Trigger = termination at the outside/end date. Select only \"No\" if no public-disclosure requirement applies."
+ },
+ {
+  "id": "dp_tail_still_pending",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Termination-fee tail provision: must the acquisition proposal not have been withdrawn (still pending) at the time of termination or of the stockholder meeting (for at least one trigger)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_tail_length",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Termination-fee tail provision: length of the tail period?",
+  "multi_select": false,
+  "options": [
+   "12 months or longer",
+   "Other",
+   "within 12 months",
+   "within 6 months",
+   "within 9 months"
+  ],
+  "note": "\"within 12 months\" = a period of 12 months (one year) after termination."
+ },
+ {
+  "id": "dp_ftr_limitations",
+  "category": "Deal Protection and Related Provisions",
+  "question": "What breaches by the Target preclude it from exercising its fiduciary termination right? (select all that apply)",
+  "multi_select": true,
+  "options": [
+   "(Material) breach of other provisions of agreement",
+   "Any breach of no-shop",
+   "Breach of no-shop resulting in a Superior Offer",
+   "Material breach of no-shop",
+   "Material breach of no-shop resulting in a Superior Offer",
+   "Other"
+  ]
+ },
+ {
+  "id": "dp_ftr_match_initial",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Buyer's matching right before the Target terminates to accept a Superior Offer (fiduciary termination right): length of the initial matching period?",
+  "multi_select": false,
+  "options": [
+   "2 business days or less",
+   "3 business days",
+   "3 calendar days",
+   "4 business days",
+   "4 calendar days",
+   "5 business days",
+   "5 calendar days",
+   "Greater than 5 business days"
+  ]
+ },
+ {
+  "id": "dp_cor_board_only",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Is a change of recommendation permitted on the basis of a board fiduciary determination alone (i.e., not tied to a Superior Offer or an Intervening Event)?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_cor_ie_yn",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Is a change of recommendation permitted in response to an Intervening Event?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_noshop_rep_liability",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Does the agreement make the Target liable (e.g., deem it a breach by the Target) for no-shop violations by its Representatives?",
+  "multi_select": false,
+  "options": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "id": "dp_noshop_rep_standard",
+  "category": "Deal Protection and Related Provisions",
+  "question": "What liability standard applies to the Target for no-shop violations by Representatives other than directors and officers?",
+  "multi_select": false,
+  "options": [
+   "Reasonable standard",
+   "Strict liability"
+  ],
+  "note": "\"Strict liability\" = any violation by such Representatives is deemed a breach by the Target; \"Reasonable standard\" = the Target is liable only if, e.g., it failed to use reasonable efforts to cause them to comply, or the Representative acted at the Target's direction."
+ },
+ {
+  "id": "dp_so_stock_threshold",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Superior Offer definition: what percentage of the Target's stock must the proposal cover?",
+  "multi_select": false,
+  "options": [
+   "\"All or substantially all\"",
+   "50%",
+   "Greater than 50% but not \"all or substantially all\"",
+   "Less than 50%"
+  ],
+  "note": "\"50%\" = the definition refers to 50% (e.g., \"more than 50%\" or \"a majority\"); \"Greater than 50% but not all or substantially all\" = e.g., 75% or 80%."
+ },
+ {
+  "id": "dp_so_asset_threshold",
+  "category": "Deal Protection and Related Provisions",
+  "question": "Superior Offer definition: what percentage of the Target's assets must the proposal cover?",
+  "multi_select": false,
+  "options": [
+   "\"All or substantially all\"",
+   "50%",
+   "Greater than 50% but not \"all or substantially all\"",
+   "Less than 50%"
+  ],
+  "note": "Same scale as the stock-threshold question."
+ },
+ {
+  "id": "gen_consideration",
+  "category": "General Information",
+  "question": "Type of merger consideration paid to Target stockholders?",
+  "multi_select": false,
+  "options": [
+   "All Cash",
+   "All Stock",
+   "Mixed Cash/Stock",
+   "Mixed Cash/Stock: Election"
+  ]
+ },
+ {
+  "id": "rem_specific_performance",
+  "category": "Remedies",
+  "question": "Specific performance: are the parties \"entitled to\" specific performance, or only \"entitled to seek\" it?",
+  "multi_select": false,
+  "options": [
+   "\"entitled to seek\" specific performance",
+   "\"entitled to\" specific performance"
+  ]
+ }
+]

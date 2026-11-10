@@ -1,0 +1,16 @@
+[
+  {
+    "start": 67087,
+    "end": 67161,
+    "text": "本院调取的证据有：1、法庭询问被害人孙某1的笔录证明：案发后，被告人任某A、刘某2、史某某三人一共给了我14000元，被告人武某B给了我7000元。",
+    "persons": [
+      "武某B",
+      "任某A",
+      "刘某2",
+      "史某某"
+    ],
+    "type": "witness_victim",
+    "label": "X001 法庭询问被害人孙某1的笔录（真实询问内容；不是法院归纳）",
+    "reason": "The generic 本院 marker filter wrongly removed actual victim testimony; restore verbatim source with provenance, without demographic credit."
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "task_id": "WFA-SCI-011",
+  "full_success": {
+    "min_targets_passed": 6
+  },
+  "targets": [
+    {
+      "id": "T1",
+      "file": "T1_cell_number.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type"
+      ],
+      "values": {
+        "number_cells": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T2",
+      "file": "T2_lifespan.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type",
+        "source"
+      ],
+      "values": {
+        "lifespan_days": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T3",
+      "file": "T3_turnover_cells.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type"
+      ],
+      "values": {
+        "cells_per_day": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T4",
+      "file": "T4_cell_mass.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type"
+      ],
+      "values": {
+        "cell_mass_pg": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T5",
+      "file": "T5_turnover_mass.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type"
+      ],
+      "values": {
+        "grams_per_day": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T6",
+      "file": "T6_total_mass.csv",
+      "mode": "cells",
+      "keys": [
+        "cell_type"
+      ],
+      "values": {
+        "total_mass_g": {
+          "log10_atol": 0.02
+        }
+      },
+      "pass_frac": 0.8
+    },
+    {
+      "id": "T7",
+      "file": "T7_aggregates.csv",
+      "mode": "cells",
+      "keys": [
+        "quantity"
+      ],
+      "values": {
+        "value": {
+          "rtol": 0.03
+        }
+      },
+      "pass_frac": 0.8
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "WFA-FIN-009",
+  "files": {
+    "inputs/BA.html": "1eb905181afe4569330046e15cf1c116bdede2f3b0f7f33327a5310ebce813ba",
+    "inputs/LMT.html": "9171023839403a6bcb856fa6085b9c06a19e19ae40e3d08cef22c5c1c5ba5e58",
+    "inputs/NOC.html": "c11f7f7faf3d08938ea75db877cfcb2ff7657cb1d699680a79db6a17d9c4ea13",
+    "inputs/HII.html": "4e86ac949d698052ec2d16b3f989aed381d4d45cd0fad2c6218a0c433c605d17",
+    "inputs/LHX.html": "5fb4e66debfb257934d31cfca36ef6e4426b2cb2cede148e46cc8f6d9aa9343a",
+    "inputs/LDOS.html": "d36edf7e657ffea61c2393e293db934df8cdbf3e6dd3408997581fc0960b4541",
+    "inputs/AXON.html": "1f2df03cc8a4cad0c26f2033d05cfb3382c496d1c88a00459e4fa942387ab7bc",
+    "inputs/TDY.html": "945cfb6b97409b5259a5ad156e9ccf318686c6a495721e30052a4d69cab9b0f2",
+    "inputs/ATRO.html": "9781035587335fa2cd0c544bea188f56af6dd4d711d76ef8281b959941be1b12",
+    "inputs/PSN.html": "8f25e703ee4c1028419c2442acb679073703fb3040c36b1dc9a67b80ddac4aa6",
+    "inputs/DRS.html": "80fd9b8bddab045964a3b1d8046a3272a8d6df4f4f8cde344208f7f3b1b3234a",
+    "inputs/VSEC.html": "f0da52e4e8dec9128820fb44f779763178c179e9db14405f3d2c49df25b7de23"
+  },
+  "boundary": "This manifest records frozen local files, not an assertion of outside authenticity."
+}

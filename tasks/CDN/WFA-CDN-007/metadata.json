@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-007",
+  "domain": "CDN",
+  "task_form": "CDN-VIDEO",
+  "title": "Cutting picture to a narration script for a science short",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "adapted video excerpts",
+    "url": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish",
+    "revision": "2026-10-24",
+    "license": "U.S. federal government work; public domain in the United States",
+    "credits": "environment/CREDITS.md",
+    "license_url": "https://www.fisheries.noaa.gov/about/website-policies",
+    "license_evidence": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish"
+  }
+}

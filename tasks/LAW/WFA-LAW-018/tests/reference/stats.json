@@ -1,0 +1,19 @@
+{
+  "task_id": "WFA-LAW-018",
+  "src": "train-8801",
+  "case_no": "（2017）赣0983刑初27号",
+  "year": 2017,
+  "n_defendants": 9,
+  "charges": [
+    "寻衅滋事罪",
+    "开设赌场罪",
+    "故意伤害罪",
+    "聚众斗殴罪"
+  ],
+  "n_principal": 2,
+  "n_accessory": 8,
+  "n_role_items": 18,
+  "n_leaders": 0,
+  "facts_chars": 18304,
+  "n_probation_graded": 8
+}

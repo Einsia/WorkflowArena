@@ -1,0 +1,436 @@
+{
+  "task_id": "WFA-3D-004",
+  "version": "w04-v1.1 (2026-10-25 rubric cleanup)",
+  "scoring": "每条判定二元（部分满足即否）；连续分=Σweight×pass（0–100）。无整题门槛：output/scene.blend 缺失或无法打开时，所有依赖场景的判定记否，只剩文件类判定（B05/B06 图片部分、B07）可得分。组级门槛：B02 集合合同失败→除 G14 外所有 mid/gate 判定记 0。G14 由评审模型看三张渲染图判定，占 2.5 分。评分一律以 .blend 实测为准，manifest 只用于 B07/M08。容差：平面坐标 ±0.8 m（包围盒）/ ±0.15 m（接口）；高度 ±3% 或 ±0.3 m 取大；角度 ±3°；计数必须精确。几何均取求值后网格（含修改器/几何节点），并计入单元集合内对象发出的实例化几何（集合实例、几何节点实例）。",
+  "tier_counts": {
+    "base": 8,
+    "mid": 11,
+    "gate": 14
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "zones": [
+    {
+      "id": "Z1",
+      "name_zh": "西立面",
+      "name_en": "West front",
+      "units": [
+        "T01",
+        "T02",
+        "P01",
+        "R01"
+      ]
+    },
+    {
+      "id": "Z2",
+      "name_zh": "中厅西段",
+      "name_en": "Nave west",
+      "units": [
+        "N01",
+        "N02",
+        "N03",
+        "N04"
+      ]
+    },
+    {
+      "id": "Z3",
+      "name_zh": "中厅东段",
+      "name_en": "Nave east",
+      "units": [
+        "N05",
+        "N06",
+        "N07",
+        "N08"
+      ]
+    },
+    {
+      "id": "Z4",
+      "name_zh": "北翼侧廊与飞扶壁",
+      "name_en": "North flank",
+      "units": [
+        "L01",
+        "L02",
+        "F01",
+        "F02"
+      ]
+    },
+    {
+      "id": "Z5",
+      "name_zh": "南翼侧廊与飞扶壁",
+      "name_en": "South flank",
+      "units": [
+        "L03",
+        "L04",
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "id": "Z6",
+      "name_zh": "交叉部与耳堂",
+      "name_en": "Crossing & transept",
+      "units": [
+        "X01",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "R02",
+        "R03"
+      ]
+    },
+    {
+      "id": "Z7",
+      "name_zh": "唱诗堂与后殿",
+      "name_en": "Choir & chevet",
+      "units": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "A01",
+        "K01",
+        "K02",
+        "K03"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "output/scene.blend 存在，可用 Blender 4.3 后台打开且无报错；场景单位制为公制、scale_length=1.0。",
+      "criterion_en": "scene.blend exists, opens headless in Blender 4.3 without error; metric units, scale_length 1.0.",
+      "verify": "blender -b output/scene.blend 打开后读取 scene.unit_settings：system=='METRIC' 且 scale_length==1.0。文件缺失或打不开→本条及全部场景判定记否。",
+      "weight": 3.125
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "contract",
+      "critical": true,
+      "criterion_zh": "集合合同：存在恰好 34 个单元集合（名称与 units.csv 的 unit_id 逐一精确相等）和 1 个 SITE 集合。",
+      "criterion_en": "Collection contract: exactly the 34 unit collections (exact ids) plus SITE.",
+      "verify": "bpy.data.collections 名称集合 ⊇ {34 个 id, 'SITE'}，且场景中无其他含 MESH 对象的集合。失败→组级门槛：mid/gate 中所有按集合测量的判定记 0。",
+      "weight": 3.125
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "34 个单元集合均非空：每个集合至少含 1 个求值后面数>0 的网格对象（或发出实例化几何的对象）；场景中不存在游离于 35 个集合之外的网格对象。",
+      "criterion_en": "Every unit collection holds at least one non-empty evaluated mesh (or an object emitting instanced geometry); no stray meshes outside the 35 collections.",
+      "verify": "遍历 collection.all_objects：MESH 的求值面数>0，或曲线类对象有包围盒，或该对象在 depsgraph 中发出实例；不在 34 个单元集合与 SITE 内的 MESH 数为 0。",
+      "weight": 3.125
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "构件命名合同：单元集合内 ≥95% 的对象名以“<单元编号>_”开头；不存在“形似可计数构件但格式不合”的名称（如 N01_LIGHT3、N01_LIGHT_03.001、N01_LIGHT，或放在 N01 集合里的 N02_LIGHT_01）。名称中只把代码当作普通词使用的自由命名（如 R02_ROSE_FRAME、P01_PORTAL_ARCH）允许。",
+      "criterion_en": "Naming contract: >=95% of objects in unit collections start with '<ID>_'; no malformed countable names (e.g. N01_LIGHT3, N01_LIGHT_03.001, N01_LIGHT, or N02_LIGHT_01 inside N01). Free names that merely contain a code word (R02_ROSE_FRAME, P01_PORTAL_ARCH) are allowed.",
+      "verify": "前缀：name.startswith(集合名+'_')，统计比例 ≥0.95。格式不合：匹配 ^[A-Z]\\d\\d_<CODE>(_?\\d*)(\\.\\d+)?$ 但不匹配 ^<集合名>_<CODE>_\\d+$ 的名称数为 0。",
+      "weight": 3.125
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "output/renders/overview.png 为 1920×1080 PNG，非空白，且 SITE 中存在相机 CAM_OVERVIEW。",
+      "criterion_en": "overview.png 1920x1080, non-blank; CAM_OVERVIEW exists in SITE.",
+      "verify": "PIL 读尺寸；灰度标准差>8；bpy.data.objects['CAM_OVERVIEW'].type=='CAMERA' 且在 SITE。",
+      "weight": 3.125
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "nave_push.png 与 chevet.png 均为 1920×1080 非空白 PNG，相机 CAM_NAVE、CAM_CHEVET 存在于 SITE。",
+      "criterion_en": "nave_push.png and chevet.png 1920x1080 non-blank; CAM_NAVE and CAM_CHEVET exist in SITE.",
+      "verify": "同 B05。",
+      "weight": 3.125
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "output/manifest.json 可解析，units 恰含 34 项、id 与集合一一对应，且每项 params 含题面为该类型规定的全部字段。",
+      "criterion_en": "manifest.json parses; 34 entries matching collections; all type-specific params fields present.",
+      "verify": "json.load；按 answer-key.units[*].manifest_params 的键集合比对字段存在性（不比对取值）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "site",
+      "critical": false,
+      "criterion_zh": "全堂总尺度：所有单元集合求值网格的并集包围盒 x∈[−72.4, 39.96]、y∈[−23.5, 23.5]（各边 ±1.5 m），最高点 z∈[60, 76]。",
+      "criterion_en": "Overall extents of all unit meshes match the site within ±1.5 m; top z in [60,76].",
+      "verify": "合并全部单元集合对象（求值网格，含实例化几何）的世界 AABB。",
+      "weight": 3.125
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z1区（西立面）4 个单元全部建成且定位、外廓正确：T01、T02、P01、R01 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z1 (West front): all 4 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：T01 [-72.0, -63.0, 7.0, 16.0, 72.0]；T02 [-72.0, -63.0, -16.0, -7.0, 72.0]；P01 [-72.0, -63.0, -7.0, 7.0, 36.0]；R01 [-72.4, -71.6, -5.0, 5.0, 27.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z2区（中厅西段）4 个单元全部建成且定位、外廓正确：N01、N02、N03、N04 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z2 (Nave west): all 4 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：N01 [-63.8, -56.0, -7.8, 7.8, 38.0]；N02 [-56.8, -49.0, -7.8, 7.8, 38.0]；N03 [-49.8, -42.0, -7.8, 7.8, 38.0]；N04 [-42.8, -35.0, -7.8, 7.8, 38.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z3区（中厅东段）4 个单元全部建成且定位、外廓正确：N05、N06、N07、N08 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z3 (Nave east): all 4 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：N05 [-35.8, -28.0, -7.8, 7.8, 38.0]；N06 [-28.8, -21.0, -7.8, 7.8, 38.0]；N07 [-21.8, -14.0, -7.8, 7.8, 38.0]；N08 [-14.8, -7.0, -7.8, 7.8, 38.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z4区（北翼侧廊与飞扶壁）4 个单元全部建成且定位、外廓正确：L01、L02、F01、F02 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z4 (North flank): all 4 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：L01 [-63.0, -34.3, 7.6, 17.0, 17.0]；L02 [-35.0, -7.0, 7.6, 17.0, 17.0]；F01 [-56.6, -34.4, 7.6, 16.6, 30.0]；F02 [-28.6, -13.4, 7.6, 16.6, 30.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z5区（南翼侧廊与飞扶壁）4 个单元全部建成且定位、外廓正确：L03、L04、F03、F04 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z5 (South flank): all 4 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：L03 [-63.0, -34.3, -17.0, -7.6, 17.0]；L04 [-35.0, -7.0, -17.0, -7.6, 17.0]；F03 [-56.6, -34.4, -16.6, -7.6, 30.0]；F04 [-28.6, -13.4, -16.6, -7.6, 30.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z6区（交叉部与耳堂）7 个单元全部建成且定位、外廓正确：X01、E01、E02、E03、E04、R02、R03 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z6 (Crossing & transept): all 7 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：X01 [-7.8, 7.8, -7.8, 7.8, 68.0]；E01 [-7.6, 7.6, 7.0, 14.0, 38.0]；E02 [-7.6, 7.6, 14.0, 21.0, 38.0]；E03 [-7.6, 7.6, -14.0, -7.0, 38.0]；E04 [-7.6, 7.6, -21.0, -14.0, 38.0]；R02 [-9.5, 9.5, 21.0, 23.5, 42.0]；R03 [-9.5, 9.5, -23.5, -21.0, 42.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "placement",
+      "critical": false,
+      "criterion_zh": "Z7区（唱诗堂与后殿）7 个单元全部建成且定位、外廓正确：Q01、Q02、Q03、A01、K01、K02、K03 各集合的世界包围盒与答案键一致。",
+      "criterion_en": "Zone Z7 (Choir & chevet): all 7 units built with correct placement and envelope.",
+      "verify": "对每个单元集合求值网格（含实例化几何）世界 AABB，与 answer-key expected_bbox=[xmin,xmax,ymin,ymax,zmax] 比较：平面四边各 ±0.8 m；zmax ±3% 或 ±0.3 m 取大（T01/T02 的 zmax 接受 64.0 或 72.0，变更单另判）。全部单元通过才判是。期望值：Q01 [7.0, 14.0, -7.6, 7.6, 38.0]；Q02 [14.0, 21.0, -7.6, 7.6, 38.0]；Q03 [21.0, 28.0, -7.6, 7.6, 38.0]；A01 [28.0, 35.6, -7.6, 7.6, 38.0]；K01 [27.88, 33.48, 5.43, 11.03, 16.0]；K02 [33.36, 39.96, -3.3, 3.3, 14.0]；K03 [27.38, 33.98, -11.53, -4.93, 15.0]",
+      "weight": 3.6364
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest 与实测一致：built:true 的单元均有几何，built:false 的单元集合为空；可实测字段（各类计数、扶壁垛顶高、塔尖/尖顶高、玫瑰窗直径与各环窗格数）与 .blend 实测相符的单元占 ≥90%。",
+      "criterion_en": "Manifest matches measurement for ≥90% of units (counts, heights, rose rings).",
+      "verify": "按命名合同计数（LIGHT/RIB/TRI/NICHE/KING/FLY/PINN/ROSE…；X01 钟楼开口与塔楼尖窗按 LIGHT 或 WIN 计数）及 z 实测，与 manifest params 比较；玫瑰窗直径口径同 G01/G06（R01 取集合包围盒 ±3%，R02/R03 取 ROSE 并集包围盒，须在 [D−0.8, D+3%] 内）；一个单元所有可测字段均一致才计为一致。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "三台相机机位合规：CAM_NAVE 位于 x∈[−63,−49]、|y|≤1.0、z∈[1.2,2.5]，视线水平朝 +X；CAM_CHEVET 位于 x>40、|y|≤6，视线朝 −X；CAM_OVERVIEW 位于 x<−20、y>20、z>40，且 T01、F01、E02、A01 的包围盒中心均落在其画框内。",
+      "criterion_en": "Camera placement: CAM_NAVE on axis at west end looking east; CAM_CHEVET east looking west; CAM_OVERVIEW from NW framing T01/F01/E02/A01.",
+      "verify": "matrix_world 平移；视线=局部 −Z 经旋转后与 +X/−X 夹角 ≤10°/15°（俯仰 ≤10°）；bpy_extras.object_utils.world_to_camera_view 投影坐标 ∈[0,1]²。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "material",
+      "critical": false,
+      "criterion_zh": "玻璃材质：所有 LIGHT 与 ROSE 对象都有材质，与同单元墙体材质不同，且为透光或发光（Principled 的 Transmission ≥0.5，或 Alpha ≤0.9，或 Emission Strength >0，或使用 Glass/Emission/Translucent 节点）。",
+      "criterion_en": "All LIGHT/ROSE objects carry a transmissive or emissive glass material distinct from the wall material.",
+      "verify": "遍历 material_slots 与节点树读取输入值。",
+      "weight": 3.6364
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "geometry",
+      "critical": false,
+      "criterion_zh": "窗为真实洞口：按固定种子从 ≥6 个单元中轮转抽 12 个 LIGHT 对象；在其中心两侧沿墙法线各 1.0 m 处相向发射射线（射程 2.5 m），只与本单元的墙体等几何求交（忽略 LIGHT/ROSE/WIN/TRI 对象以及不参与渲染或以线框/包围盒显示的辅助对象，如布尔切割体）；任一方向无遮挡即算通；≥10/12 通过。",
+      "criterion_en": "Windows are real openings: 12 LIGHT objects sampled round-robin over >=6 units (fixed seed); a ray along the wall normal through the light centre (from 1.0 m on either side, 2.5 m long) is not blocked by the unit's own geometry, ignoring LIGHT/ROSE/WIN/TRI objects and non-rendered or wire/bounds-display helper objects such as boolean cutters; >=10/12 pass.",
+      "verify": "extra_py：mathutils BVHTree 由本单元求值网格（含实例化几何）建立，排除上述对象；法线取 LIGHT 顶点 PCA 最小主轴；种子 20261025。",
+      "weight": 3.6364
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z1区（西立面）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z1: every sheet-only discrete feature of every unit is correct.",
+      "verify": "T01/T02：4×每面钟楼尖窗数 = WIN 或 LIGHT 计数；PINN 数；楼层数 = 束带数 + 1。束带测法：每个立面在中线及 ±1/3 面宽处各一条扫描线，z∈[0.5, 塔身顶−0.5] 每 0.05 m 向塔心发水平射线（只投射到本塔非 LIGHT/WIN/PINN/SPIRE/PORTAL/ROSE 对象），比该线中位面外凸 ≥0.05 m、高 0.05–1.5 m、且不贴扫描起止端的段落；同一高度（±0.3 m）在一个立面的 ≥2 条扫描线上出现即算该立面有束带，在 ≥2 个立面出现才算一条束带（被 P01/侧廊挡住的立面可不做束带；只在中央尖窗下的窗台不计）。P01：KING 数与山墙 PINN 数。R01：ROSE 对象中心按径向间隙 >0.3 m 聚环，各环计数由内向外等于 ring_lights；直径 = R01 集合包围盒 y/z 尺寸较大者，±3%（不少于 0.15 m）。计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z2区（中厅西段）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z2: every sheet-only discrete feature of every unit is correct.",
+      "verify": "N01–N04：PIER 在 z=1.0 的水平截面（按多边形面求交并沿截线每 0.03 m 加密，顶点环恰在 z=1.0 时也有效；含实例化几何）：凸包转角 ≥12° 的角点为 8 且凹点比例 <10% → OCT；径向偏差 <5% → CYL；角向半径剖面 4 或 8 个显著峰（>12%）且凹点比例 ≥10% → CMPn；其余为 UNK。TRI 计数=2×每侧开口数。N01/N02 另验 LIGHT=2×窗格数（北侧占一半）、RIB=图纸肋段数。（N03/N04 的 LIGHT/RIB 由变更单判定 G08 负责）计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z3区（中厅东段）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z3: every sheet-only discrete feature of every unit is correct.",
+      "verify": "N05–N08：PIER 在 z=1.0 的水平截面（按多边形面求交并沿截线每 0.03 m 加密，顶点环恰在 z=1.0 时也有效；含实例化几何）：凸包转角 ≥12° 的角点为 8 且凹点比例 <10% → OCT；径向偏差 <5% → CYL；角向半径剖面 4 或 8 个显著峰（>12%）且凹点比例 ≥10% → CMPn；其余为 UNK。另查 TRI 计数、LIGHT 计数（南北两侧各占一半）、RIB 计数。计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z4区（北翼侧廊与飞扶壁）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z4: every sheet-only discrete feature of every unit is correct.",
+      "verify": "L01/L02：按 x 中心把 LIGHT 归入 4 个开间，序列等于 bay_lights；DOOR 中心 x 落在 door_bay 开间内；BUTT 数量与 x（±0.15）正确、顶面 z=buttress_top_z ±0.1。F01/F02：除第 4 轴线外，每条轴线上 FLY 数=飞券层数、PINN 数=尖塔数。 计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z5区（南翼侧廊与飞扶壁）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z5: every sheet-only discrete feature of every unit is correct.",
+      "verify": "L03/L04 与 F03/F04，口径同 Z4。 计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z6区（交叉部与耳堂）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z6: every sheet-only discrete feature of every unit is correct.",
+      "verify": "X01：4×每面钟楼开口数 = LIGHT 或 WIN 计数，PINN 数、RIB 数、SPIRE 最高点 z ±0.3；E01–E04：LIGHT 按 x 符号分西/东，计数分别相等，TRI、RIB 计数；R02/R03：PORTAL 数、ROSE 各环计数（由内向外）；直径取 ROSE 窗格并集包围盒 x/z 尺寸较大者，须在 [D−0.8, D+3%（不少于 0.15 m）] 内（窗格嵌在花格/窗框内侧）；2 个 TURRET 在 z=10（无截面则 z=15）水平截面的凸包角点数（转角 ≥12°）等于边数。计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "discrete",
+      "critical": false,
+      "criterion_zh": "Z7区（唱诗堂与后殿）全部单元的图纸离散特征逐项正确（逐开间/逐单元各不相同，见答案键 expected_counts 与 truth）。",
+      "criterion_en": "Zone Z7: every sheet-only discrete feature of every unit is correct.",
+      "verify": "Q01–Q03：LIGHT 按 y 符号分北/南计数相等，NICHE、RIB 计数；A01：WIN=边数，LIGHT=边数×窗格数，RIB=图纸数（6）；墙体（非 LIGHT/WIN/RIB/ROSE/NICHE/PIER、参与渲染的对象，含实例化几何）在 z=5 m 的水平截面（按面求交并加密）取 x>28 一侧，以 (28,0) 为心的外包络 r(θ) 的局部极小个数 = 边数；K01–K03：WIN=边数，LIGHT=边数×窗格数，集合（含实例化几何）最高点 z = 屋顶尖 ±0.3。计数必须精确；区内任一单元任一项不符即判否。",
+      "weight": 2.5
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "change_order",
+      "critical": false,
+      "criterion_zh": "变更单第 1 项：N03、N04 为罗曼式——RIB 对象为 0；每侧高侧窗仅 1 个 LIGHT（共 2 个）；连拱券与窗头为半圆（拱高/半跨 ∈[0.9,1.1]）；拱冠 z=26.0 ±0.15，起拱 z=19.0 ±0.25；柱形制与楼廊开口数保持原图。",
+      "criterion_en": "CO item 1: N03/N04 Romanesque — no ribs, single round-headed light per side, round arches, springing 19.0 (±0.25), crown 26.0 (±0.15), piers/triforium unchanged.",
+      "verify": "名称计数；拱冠 = 开间中心向上首个交点；起拱 = 在两条横拱线内侧 0.03 m 处对 y=0、±4、±5.5 的拱面高度做圆拟合，取圆心高度（中位数）；连拱券沿 y=±7 每 0.05 m 向上射线取拱腹剖面、窗头取 LIGHT 顶点的上凸包，以“拱冠与四分点高差/(半跨×0.134)”估算拱高/半跨。",
+      "weight": 2.5
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "change_order",
+      "critical": false,
+      "criterion_zh": "变更单第 2、3 项及牵连：第 4 轴线（x=−42.0）南北两侧均无 FLY/CULEE/PINN，而 L01/L03 在该轴线的 BUTT 仍在；F01/F03 其余轴线飞券按原图保留；T01、T02 的 SPIRE 最高点 z=72.0 ±0.3，塔身顶 z=44.0 ±0.3 不变。",
+      "criterion_en": "CO items 2–3 incl. knock-on: no flyer on grid line 4 (both flanks), aisle buttress kept, other flyers kept; both spires 72.0, base 44.0.",
+      "verify": "全场景检索 |x+42|<1.0 且 |y|∈[7.6,17] 的 FLY/CULEE/PINN 对象数=0；BUTT 存在；SPIRE 对象顶点 max z；塔身 = T0x 非 SPIRE/PINN 对象 max z。",
+      "weight": 2.5
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "接口 I1 柱网连续：(x_k, ±7.0)（k=1..8）各恰有 1 根 PIER 且属于 N0k，(±7.0, ±7.0) 各恰有 1 根 PIER 且属于 X01；N/X 集合中无多余 PIER。",
+      "criterion_en": "I1 pier grid: exactly one pier per grid point, owned by the right unit; no duplicates.",
+      "verify": "PIER 对象 z∈[0,2] 顶点 XY 质心，与 20 个网格点 0.3 m 内配对；一一对应且归属正确。",
+      "weight": 2.5
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "接口 I2 拱顶接续：N01–N08、X01、E01–E04、Q01–Q03、A01 的高拱顶拱冠均为 z=26.0 ±0.15；共用轴线（N0k|N0k+1、N08|X01、X01|Q01、Q01|Q02、Q02|Q03、Q03|A01、X01|E01、E01|E02、X01|E03、E03|E04）两侧单元的拱顶内表面在该线 |s|≤4 m 的 5 个等距采样点高度一致（差 ≤0.15 m）；N02|N03、N04|N05 两条线因变更单 CO-01 使两侧拱形不同，只比拱冠（s=0）。",
+      "criterion_en": "I2 vault continuity: all 17 high-vault crowns at 26.0 ±0.15; on every shared grid line the two units' vault surfaces agree within 0.15 m at 5 equally spaced points with |s|<=4 m, except N02|N03 and N04|N05 (CO-01 makes the two profiles differ) where only the crown (s=0) is compared.",
+      "verify": "extra_py 用 BVHTree 向上投射并记录 z<27.0 内穿过的全部表面（每个单元只投射到本单元的非 LIGHT/ROSE 求值几何，含实例化几何，不参与渲染的辅助对象除外）：拱冠在开间中心 (x,y,1.0) 处，任一表面落在 26±0.15 即通过（悬在拱冠下方的凸饰/肋不影响）；共用轴线两侧各偏 0.05 m 采样，另排除 RIB 对象，两侧任一对表面高度差 ≤0.15 即该点一致（只由一侧建造的横拱不影响）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G12",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "接口 I3 飞扶壁落点：每个 CULEE 底面 XY 落在同轴线 BUTT 顶面内（外扩 0.1 m），底面 z 与 BUTT 顶 z 差 ≤0.1；每个 FLY 下端距该 CULEE 表面 ≤0.15 m，上端距中厅高侧窗墙外皮 |y|=7.6 ≤0.15 m 且 z∈[18,26]。",
+      "criterion_en": "I3 flyer landing: culees sit on aisle buttresses; flyers touch culee and clerestory wall.",
+      "verify": "CULEE 最低顶点集 AABB vs BUTT 最高顶点集 AABB；FLY 顶点按 |y| 取两端 5% 顶点，BVHTree.find_nearest 求距离。",
+      "weight": 2.5
+    },
+    {
+      "id": "G13",
+      "tier": "gate",
+      "group": "interface",
+      "critical": false,
+      "criterion_zh": "接口 I4 西立面对称：T01 与 T02 包围盒关于 y=0 镜像（中心 x 差、|y| 差、塔尖 z 差均 ≤0.1）；R01 的 ROSE 顶点云中心 |y|≤0.1、z=22.0 ±0.15、x∈[−72.4,−71.6]，窗面法向（PCA 最小主轴）与 X 轴夹角 ≤3°。",
+      "criterion_en": "I4 west symmetry: towers mirrored with equal tips; west rose centred on axis in P01 west face.",
+      "verify": "AABB 与 numpy PCA。",
+      "weight": 2.5
+    },
+    {
+      "id": "G14",
+      "tier": "gate",
+      "group": "visual",
+      "critical": false,
+      "criterion_zh": "视觉评审：评审模型看三张渲染图，判断可识别为哥特式拉丁十字大教堂、无明显悬空/缺块/穿插错误、玻璃可辨、中厅拱顶连续。",
+      "criterion_en": "Visual review of the three renders: recognisable Gothic Latin-cross cathedral, no obvious floating/missing/intersecting parts, visible glazing, continuous nave vault.",
+      "verify": "评审模型只看 renders/ 三张图，四项（可识别、无明显错误、玻璃可辨、中厅拱顶连续）全部为是才通过。",
+      "weight": 2.5
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-SCENE",
+    "all_critical_items_must_pass": true
+  }
+}

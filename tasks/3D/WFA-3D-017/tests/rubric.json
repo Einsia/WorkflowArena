@@ -1,0 +1,470 @@
+{
+  "task_id": "WFA-3D-017",
+  "version": "x07-hidden-v1.3 (2026-10-25 rubric/checks cleanup)",
+  "scoring": "二元判定，部分满足即否；连续分 = Σ(weight×pass)/Σ(weight)×100（权重和为 100）；组级门槛触发时该组判定全部记 0。除 X07-B07、X07-M18、X07-G07、X07-G08 外，所有判定由 checks.py 确定性给出 pass/fail；这四条先做确定性底线检查（不达标即否），达标后由 LLM 评委依据交付的文本文件与成片联系表判定。事件时刻一律按求解者 events.csv 声明帧测量；工程测量在修订属性置 0/0（base）状态下进行，成片帧 f 对应场景帧 f + frame_start。评分镜像缺少 blender 时相关判定记 error，不写分。",
+  "frames": {
+    "base": {
+      "total": 720,
+      "S1": [
+        0,
+        143
+      ],
+      "S2": [
+        144,
+        287
+      ],
+      "T23_dissolve": [
+        276,
+        299
+      ],
+      "S3": [
+        288,
+        455
+      ],
+      "S4": [
+        456,
+        599
+      ],
+      "S5": [
+        600,
+        719
+      ],
+      "bridge_onset_s": 18.0,
+      "T45_s": 25.0,
+      "tail_end_s": 26.5
+    },
+    "revision1": {
+      "total": 732,
+      "S1": [
+        0,
+        143
+      ],
+      "S2": [
+        144,
+        299
+      ],
+      "T23_dissolve": [
+        288,
+        311
+      ],
+      "S3": [
+        300,
+        467
+      ],
+      "S4": [
+        468,
+        611
+      ],
+      "S5": [
+        612,
+        731
+      ],
+      "bridge_onset_s": 18.5,
+      "T45_s": 25.5,
+      "tail_end_s": 27.0
+    },
+    "revision2": {
+      "total": 726,
+      "S1": [
+        0,
+        143
+      ],
+      "S2": [
+        144,
+        299
+      ],
+      "T23_dissolve": [
+        288,
+        311
+      ],
+      "S3": [
+        300,
+        467
+      ],
+      "S4": [
+        468,
+        605
+      ],
+      "S5": [
+        606,
+        725
+      ],
+      "bridge_onset_s": 18.5,
+      "T45_s": 25.25,
+      "tail_end_s": 26.75
+    }
+  },
+  "group_gates": [
+    {
+      "group": "edit",
+      "gate_zh": "base/output.mp4 解码帧数 ≠720 → edit 组全部记 0",
+      "gate_en": "base frame count != 720 -> edit group 0"
+    },
+    {
+      "group": "sound",
+      "gate_zh": "base 三条分轨任一缺失，或 base 分轨按声明增益求和与解码混音的 1/3 倍频程频带能量差中位数 > 1.5 dB 或 95 分位 > 6 dB → sound 组全部记 0",
+      "gate_en": "any base stem missing or stem-sum vs decoded mix 1/3-octave band diff median > 1.5 dB or p95 > 6 dB -> sound group 0"
+    },
+    {
+      "group": "revision",
+      "gate_zh": "project/scene.blend 缺失，或其中缺少场景属性 rev_s2_hold_frames / rev_s4_trim_frames → revision 组全部记 0",
+      "gate_en": "project/scene.blend missing or either revision scene property missing -> revision group 0"
+    },
+    {
+      "group": "character",
+      "gate_zh": "project/scene.blend 缺失，或 COMMUTER 网格不受 COMMUTER_RIG 驱动 → character 组全部记 0",
+      "gate_en": "project/scene.blend missing or COMMUTER mesh not driven by COMMUTER_RIG -> character group 0"
+    },
+    {
+      "group": "pbr",
+      "gate_zh": "X07-G07 的确定性平涂块底线不通过（任一镜头平涂块指数 >0.15）→ pbr 组全部记 0（LLM 评委对 G07 的判定不触发门槛）",
+      "gate_en": "X07-G07 deterministic flat-block floor fails (any shot index > 0.15) -> whole pbr group 0 (a judge verdict on G07 does not fire the gate)"
+    }
+  ],
+  "items": [
+    {
+      "id": "X07-B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "base 成片编码契约：H.264、yuv420p、1280×720 方形像素、恒定 24 fps、解码恰好 720 帧；AAC 立体声 48 kHz，音频覆盖全部画面。",
+      "criterion_en": "Base film contract: H.264, yuv420p, 1280x720 square pixels, CFR 24 fps, exactly 720 decoded frames; AAC stereo 48 kHz covering the picture.",
+      "verify": "ffprobe -count_frames；r_frame_rate=avg_frame_rate=24/1；pts 间隔恒定；音频时长 ≥ 29.98 s。任何一项不符即否。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B02",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "两版修订的编码契约：revision1 恰好 732 帧、revision2 恰好 726 帧，其余规格同 base。",
+      "criterion_en": "Revision contracts: revision1 exactly 732 frames, revision2 exactly 726 frames, otherwise same spec as base.",
+      "verify": "同 B01 的 ffprobe 流程，分别对 revision1/output.mp4、revision2/output.mp4。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B03",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "三版母带：综合响度 −20 ±2 LUFS，解码采样峰值 ≤ −1 dBFS，无削波。",
+      "criterion_en": "Mastering in all three versions: integrated −20 ±2 LUFS, decoded sample peak <= −1 dBFS, no clipping.",
+      "verify": "ffmpeg ebur128 测综合响度；解码为 float 后 max|x| ≤ 0.891；连续 ≥3 个样本 |x|≥0.999 视为削波。三版全部满足才判是。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B04",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "交付齐全可用：三版目录各含 output.mp4、timeline.json、events.csv、stems/{speech,rain,fx}.wav（48 kHz PCM、与成片等长 ±1 帧）；project/scene.blend 能被 Blender 4.3 打开且无缺失外部文件；工程中的模拟缓存全部随工程交付（已烘焙）；README.md 含 blender 导出命令。",
+      "criterion_en": "Complete, usable delivery: each version folder has output.mp4, timeline.json, events.csv and the three 48 kHz PCM stems (length = film ±1 frame); scene.blend opens in Blender 4.3 without missing external files; every simulation cache in the project is shipped (baked); README has the blender export commands.",
+      "verify": "文件存在性 + ffprobe 读头（pcm_*、48 kHz、时长差 ≤1 帧）；timeline.json 可解析；README.md 含 “blender”；blender -b 打开 scene.blend 退出码 0、缺失外部文件（图像/声音/影片/库/字体）计数 = 0；模拟缓存：每个非毛发粒子系统、布料/软体、动态绘制画布（顶点格式看点缓存，图像序列格式看输出目录非空）、流体域缓存目录、刚体世界须已烘焙（磁盘缓存目录非空）；含模拟区域的几何节点修改器：DISK 目标须烘焙目录非空，PACKED 目标视为已交付。任一不符即否。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B05",
+      "tier": "base",
+      "group": "delivery",
+      "critical": false,
+      "criterion_zh": "工程命名与修订属性：题面列出的 18 个对象名全部存在且类型合理（COMMUTER_RIG 为骨架、CAM_S1–S5 为摄影机）；场景自定义属性 rev_s2_hold_frames 与 rev_s4_trim_frames 存在。",
+      "criterion_en": "Naming and revision properties: all 18 listed object names exist with sensible types (armature, cameras); both scene custom properties exist.",
+      "verify": "inspect_blend：bpy.data.objects 名字精确匹配；type 检查；scene.keys() 含两属性。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B06",
+      "tier": "base",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "events.csv 结构：三版均为精确表头 event_id,frame,description，8 个必需事件齐全、帧号为整数，且各落在题面所述镜头内（lamp_flicker_start∈S1，lamp_off∈S2，umbrella_open 与 foot_contact∈S3，headlights_on_face、line_start、line_end∈S4，lamp_on∈S5）；顺序为 flicker<off<umbrella<foot<headlights_on_face 与 line_start（二者先后不限，题面梗概与 S4 行表述相反）<line_end<lamp_on。",
+      "criterion_en": "events.csv structure in all versions: exact header, all 8 ids, integer frames, each inside its shot (lamp_flicker_start in S1, lamp_off in S2, umbrella_open and foot_contact in S3, headlights_on_face/line_start/line_end in S4, lamp_on in S5); order flicker < off < umbrella < foot < headlights_on_face and line_start (these two in either order) < line_end < lamp_on.",
+      "verify": "按 rubric.frames 中各版镜头帧范围核对（叠化区内的事件按叠化中点归属）；顺序：flicker<off<umbrella<foot<min(headlights_on_face, line_start)，line_start<line_end<lamp_on，headlights_on_face<lamp_on。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-B07",
+      "tier": "base",
+      "group": "provenance",
+      "critical": false,
+      "criterion_zh": "来源与合规：credits.md 列出资产、工具与台词制作方式；qa.md 存在；产物中无凭据、无外网 URL 媒体引用、无联网 TTS 痕迹。",
+      "criterion_en": "Provenance: credits.md lists assets/tools/how the line was made; qa.md present; no credentials, no network media references, no online-TTS traces.",
+      "verify": "checks：credits.md 与 qa.md 存在、交付文本无凭据样式字符串（key/token/secret 正则）、.blend 内无 http(s) 媒体路径，任一不符即否；全部满足后由 LLM 评委阅读 credits.md / qa.md 判断资产、工具与台词制作方式是否列明、有无联网 TTS 痕迹。",
+      "weight": 3.5714
+    },
+    {
+      "id": "X07-M01",
+      "tier": "mid",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "base 镜头结构与剪辑光学：五个镜头 S1→S5；T12、T34、T45 分别在第 144、456、600 帧（±1）为无混合帧的硬切；T23 为以 288 帧为中心的叠化，276–299 帧附近至少 16 帧为两镜头混合；其余位置无剪切、无定格（无连续重复帧）。",
+      "criterion_en": "Base shot structure: five shots; hard cuts at 144/456/600 (±1) with no blend frames; dissolve around 288 with ≥16 blended frames in ~276–299; no other cuts or freezes.",
+      "verify": "320×180 灰度逐帧内容分（帧差 + 直方图差）局部 4× 中位数跳变检测硬切：144/456/600 ±1；切点两侧邻帧内容分 ≤ 切点的 0.5 倍（邻帧落在声明的闪烁区 lamp_flicker_start–lamp_off+2、复亮 lamp_on±2、车灯 headlights_on_face±12 窗口内时不做此项）；上述窗口与叠化区内的伪切点不计；叠化区（270–305）每帧对 S2 末帧与 S3 首帧做线性混合拟合，0.05<α<0.95 的混合帧 ≥16；全片相邻两帧所有像素差 ≤2 级视为重复帧（定格），出现即否。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M02",
+      "tier": "mid",
+      "group": "sound",
+      "critical": true,
+      "criterion_zh": "声桥：公交进站声作为画外声在 18.00 s（±0.08 s）进入，之前不存在；剪辑后在 S4 中延续。",
+      "criterion_en": "Sound bridge: the bus arrival enters off-screen at 18.00 s (±0.08), absent before, continuing into S4.",
+      "verify": "fx 分轨 STFT，沿频率方向 31 点中值滤波去除窄带谐波（路灯电声等）后取 30–400 Hz 宽带包络（100 ms 窗、50 ms 步进）。以下 B = 该版 bridge_onset_s（base 18.00），时间窗随版本平移。前置窗 W0 = [B−1.1, B−0.1]，剔除 foot_contact−0.1 s 至 +0.75 s 及其他声明的 S3 动作事件 ±0.25 s 的包络帧（S3 脚步/踩水/伞与公交同在 fx 分轨），剔除后不足 0.5 s 则向前扩到 [B−1.6, B−0.1] 再剔除；底噪 N0 = W0 剩余帧包络的中位数，下限取 −70 dBFS。持续能量起点 = B−0.5 s 之后首次连续 300 ms 高于 N0+6 dB 的时刻，应在 B±0.08 s；中位数(包络[B+0.1, B+1.0]) − N0 ≥ 10 dB；[B+1.0, B+2.0] 中位数不低于 [B+0.1, B+1.0] 中位数 −6 dB。一律用中位数而非均值，单次脚步等 <300 ms 瞬态不影响判定。可与 timeline.json 声明的声桥入点交叉核对（相差 ≤2 帧）。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M03",
+      "tier": "mid",
+      "group": "sound",
+      "critical": true,
+      "criterion_zh": "L-cut 尾巴：公交声越过 25.0 s 硬切延续到 S5，于 26.50 s（±0.08 s）结束，之后不再出现。",
+      "criterion_en": "L-cut tail: the bus sound carries past the 25.0 s cut and ends at 26.50 s (±0.08), absent afterwards.",
+      "verify": "同 M02 的去谐波宽带包络；记 C = 该版 T45_s、E = tail_end_s（base 25.00/26.50）。先剔除声明的 lamp_on −0.1 s 至 +0.5 s 的包络帧（路灯复亮的电气瞬态与公交同在 fx 分轨）。[C, E−0.2] 持续存在（每 300 ms 段中位数不低于 [C, C+1.0] 中位数 −10 dB）；结束点 = 最后一个高于 max([C, C+1.0] 中位数 −20 dB, −70 dBFS) 且连续 ≥200 ms 的时刻，应在 E±0.08 s；[E+0.12, 片尾] 剩余帧中位数比 [C, C+1.0] 中位数低 ≥20 dB 或绝对 < −60 dBFS。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M04",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "雨声底连续：雨声贯穿 0–30 s，跨 6.0、19.0、25.0 s 硬切与 12 s 叠化无断档、无点击；视角或伞造成的质感变化允许。",
+      "criterion_en": "Continuous rain bed through all cuts with no dropouts or clicks; perspective/umbrella-driven timbre changes are allowed.",
+      "verify": "rain 分轨 50 ms 窗 RMS 全片 ≥ −50 dBFS；各剪辑点 ±5 ms 内相邻样本差不超过该处 1 s 内 99.9 百分位的 3 倍（无点击）；成片混音同样检查。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M05",
+      "tier": "mid",
+      "group": "sound",
+      "critical": true,
+      "criterion_zh": "台词时位：三版 speech 分轨中台词为一段语音，能量 VAD 起止与 events.csv 声明的 line_start/line_end 相差 ≤6 帧、整句落在 S4 内、时长 1.8–4.5 s（11 个词）。可懂度/WER 不评（评分方无 ASR）。",
+      "criterion_en": "Line timing: in every version the speech stem carries the line as one phrase whose energy-VAD onset/offset lie within 6 frames of the declared line_start/line_end, entirely inside S4, lasting 1.8–4.5 s (the 11-word line). Intelligibility/WER is not graded (the grader has no ASR).",
+      "verify": "speech 分轨 100 ms 窗、10 ms 步进 RMS，首末超过 −40 dBFS 的窗中心 ∓0.05 s 为起止；三版各按 rubric.frames 中的 S4 区间与各自 events.csv 核对。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M06",
+      "tier": "mid",
+      "group": "edit",
+      "critical": true,
+      "criterion_zh": "镜头参数（从工程读取，宽松解读）：S1 高角度大全景、固定、深焦；S2 极低机位、固定、浅景深；S3 平视、侧向横移跟拍；S4 轻微仰角、朝人物推轨、浅景深；各镜头焦距不变。",
+      "criterion_en": "Camera packages read from the project (tolerant thresholds): S1 high-angle locked deep focus; S2 very low locked shallow DoF; S3 eye-level lateral tracking; S4 slight low-angle dolly-in shallow DoF; no focal change.",
+      "verify": "inspect_blend（修订属性置 0/0）逐帧导出 CAM_S1–S4 世界矩阵、焦距、DoF：S1 俯角 ≥10°、机高 ≥3 m、位移 <1 cm、旋转 <0.2°、DoF 关闭或 f≥5.6；S2 光心距 PUDDLE 表面 ≤0.5 m、−45°≤俯仰≤+10°、固定、DoF 开且 f≤4；S3 机高 1.2–1.9 m、横移 ≥0.4 m 且 ≥70% 位移垂直于视轴、移动方向与 COMMUTER 水平位移同向；S4 仰角 2–25°、到 COMMUTER 的距离缩短 ≥0.08 m、DoF 开且 f≤4；四镜头焦距变化 <1%。COMMUTER 位置以其评估网格包围盒中心代替根骨/头骨。全部满足才判是。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M07",
+      "tier": "mid",
+      "group": "edit",
+      "critical": false,
+      "criterion_zh": "回到原机位：S5 与 S1 为同一机位同景别，场景中路灯、积水、站牌在两镜头中同位。",
+      "criterion_en": "Return set-up: S5 matches S1 camera and framing; lamp, puddle and stop at the same place in both.",
+      "verify": "CAM_S5 与 CAM_S1 平均位姿相差 ≤2 cm、≤1°，焦距差 ≤1 mm；STREETLAMP/PUDDLE/BUS_STOP 在第 72 与 660 帧位置差 <1 cm；成片比较两帧同为灯亮状态的画面：S1 取 a = min(lamp_flicker_start−6, S1 末帧)，S5 取 b = min(lamp_on+12, S5 末帧−4)；各以 9 帧时间中值去雨（窗口截断在同一镜头与灯亮区间内，不少于 5 帧），按工程中 COMMUTER 评估顶点经 CAM_S1/CAM_S5 投影的外接矩形（膨胀 8 px@1280）在两帧中同时挖去人物，640×360 亮度 SSIM（7×7 高斯窗）在保留区域的均值 ≥0.70（挖去区域不参与均值计算）。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M08",
+      "tier": "mid",
+      "group": "revision",
+      "critical": true,
+      "criterion_zh": "修订一传播：732 帧；S2 延长段之前（0–275 帧）画面与 base 相同；新增的 12 帧是继续发生的 S2 画面（非定格）；叠化随边界后移到约 288–311 帧；S3 起画面、动作、声音整体 +12 帧；声桥 18.50 s、L-cut 尾巴止于 27.00 s；11.5 s 前音频不变。",
+      "criterion_en": "Revision 1 propagation: 732 frames; frames 0–275 unchanged; 12 new continuing S2 frames (no freeze); dissolve moved to ~288–311; S3 onward +12 frames in picture, action and sound; bridge 18.50 s, tail end 27.00 s; audio before 11.5 s unchanged.",
+      "verify": "PSNR(rev1[f], base[f]) ≥ 28 dB 对 f≤275；rev1 276–287 与 S2 同机位（rev1 第 281 帧与 base 第 275 帧 SSIM≥0.6）且无重复帧（相邻帧所有像素差 ≤2 级）；切点 144/468/612；PSNR(rev1[f+12], base[f]) ≥ 28 对 f∈[300,719]；音频 [0,11.5] s 波形相关 ≥0.99，[12.5,30] s 与 base 延迟 0.5 s 相关 ≥0.95；M02/M03 方法测得声桥 18.42–18.58 s、尾巴 26.92–27.08 s；events.csv 中 S3 及以后事件 = base +12（±1）。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M09",
+      "tier": "mid",
+      "group": "revision",
+      "critical": true,
+      "criterion_zh": "修订二传播（依赖修订一）：726 帧；T34（第 468 帧）之前与修订一相同，含修订一的 S2 延长；S4 从其第 7 帧开始，S4 余下部分与 S5 相对修订一前移 6 帧，T45 在第 606 帧；台词相对修订一提前 0.25 s；声桥仍为 18.50 s，L-cut 尾巴止于 26.75 s；19.5 s 前音频与修订一相同；T34 处无爆音。",
+      "criterion_en": "Revision 2 propagation (built on Revision 1): 726 frames; identical to Revision 1 before frame 468 (including the S2 extension); S4 starts at its 7th frame; S4 rest and S5 move 6 frames earlier; T45 at 606; line 0.25 s earlier than R1; bridge 18.50 s; tail ends 26.75 s; audio before 19.5 s identical to R1; no click at T34.",
+      "verify": "PSNR(rev2[f], rev1[f]) ≥ 28 对 f≤467；PSNR(rev2[f], rev1[f+6]) ≥ 28 对 f∈[468,725]；切点检测 468、606；speech 分轨起点 = rev1 −0.250±0.02 s；fx/rain 在 19.5 s ±5 ms 无点击（同 M04）；尾巴 26.67–26.83 s；声桥 18.42–18.58 s；events.csv S4/S5 事件 = rev1 −6（±1，被裁掉的事件除外）。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M10",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "路灯电声随灯态：路灯亮时有可辨的持续电气声；在声明的 lamp_off 后迅速消失，在 lamp_on 时随灯恢复；工程中灯的发光同时变化。",
+      "criterion_en": "Lamp electrical sound follows lamp state: present while lit, gone right after declared lamp_off, back with lamp_on; project emission changes in step.",
+      "verify": "fx 分轨 STFT（4096 点）：求 50–4000 Hz 内高出频向中值滤波底 ≥6 dB 的窄带峰；[lamp_flicker_start 前 2 s] 存在；lamp_off+3 帧至 lamp_on−1 帧该峰降低 ≥10 dB；lamp_on+3 帧后 0.3 s 恢复到 S1 电平 −6 dB 以内。工程（修订属性 0/0）：LAMP_HEAD 及其子级（无灯光时含 STREETLAMP 的灯光）的灯光 energy×颜色亮度与发光材质强度，各以闪烁前 2 s 中位值归一并取最大者：lamp_off+1 至 lamp_on−1 全部 ≤5%，最终熄灭帧（此后持续 ≤5%）与 lamp_off 相差 ≤1，lamp_on−2 帧 ≤5% 且 lamp_on+1 帧 ≥80%。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M11",
+      "tier": "mid",
+      "group": "sound",
+      "critical": false,
+      "criterion_zh": "伞面雨声：声明的 umbrella_open 之后，雨打伞面的声音清楚出现。",
+      "criterion_en": "Rain on the canopy becomes audible after the declared umbrella_open.",
+      "verify": "rain+fx 求和，1–6 kHz 带：[umbrella_open+0.3 s, +1.5 s] 相对 [umbrella_open−1.2 s, −0.1 s] 满足 电平 ≥+3 dB 或 瞬态（谱通量峰）密度 ≥1.5 倍；且该变化在 umbrella_open ±0.5 s 内发生。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M12",
+      "tier": "mid",
+      "group": "character",
+      "critical": true,
+      "criterion_zh": "口型同步：修订属性置为 0/0 时，COMMUTER 的下颌/嘴唇动画在 S4 与语音包络同步（±2 帧滞后内互相关峰值 r ≥0.4）。",
+      "criterion_en": "Lip-sync: with the revision properties set to 0/0, the COMMUTER jaw/lip animation in S4 tracks the speech envelope (peak correlation r >= 0.4 within ±2 frames lag).",
+      "verify": "inspect_blend 先把 rev_s2_hold_frames/rev_s4_trim_frames 置 0，逐帧读嘴部形态键（名称含 mouth/jaw/lip/viseme 等，否则全部形态键）值之和加下颌骨旋转角，与 speech 分轨每帧 RMS（24 fps）在 line_start–line_end 做 ±2 帧互相关：峰值 r ≥0.4。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M13",
+      "tier": "mid",
+      "group": "character",
+      "critical": true,
+      "criterion_zh": "可动人物：COMMUTER_RIG 驱动 COMMUTER 网格（顶点组覆盖 ≥90% 顶点）；至少一只手有 ≥4 条手指链、每链 ≥3 骨，且其中 ≥4 根手指骨在 S3–S4 期间实际运动；COMMUTER 是真正的三维网格（≥500 个顶点、各维 ≥0.1 m），不是图片平面。",
+      "criterion_en": "Rigged character: COMMUTER_RIG drives the COMMUTER mesh (vertex groups cover >= 90% of vertices); one hand has >= 4 finger chains of >= 3 bones and >= 4 of its finger bones actually move during S3–S4; COMMUTER is a real 3D mesh (>= 500 vertices, >= 0.1 m in every dimension), not an image card.",
+      "verify": "Armature 修改器指向 COMMUTER_RIG，权重 >0 的骨骼顶点组覆盖率 ≥90%；骨骼层级中某骨有 ≥4 个子链（单子链 ≥3 骨到末端）；S3–S4 每 3 帧采样该手指骨的 pose matrix_basis（含 NLA/驱动），变化 >1e-3 的骨 ≥4；COMMUTER 层级评估顶点数 ≥500、外接盒各维 ≥0.1 m。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M14",
+      "tier": "mid",
+      "group": "character",
+      "critical": false,
+      "criterion_zh": "伞与手机的握持：UMBRELLA 在声明的 umbrella_open（±6 帧）由收拢变为撑开且之后保持撑开、由手握持；PHONE 在 line_start–line_end 期间在手中并靠近头部。",
+      "criterion_en": "Prop handling: the umbrella opens at the declared frame (±6), stays open and hand-held; the phone is in hand near the head during the line.",
+      "verify": "修订属性 0/0。伞面尺寸 = UMBRELLA 层级评估几何在其局部坐标中外接盒的中间维：umbrella_open−6 及之前（S3 内）最大值 < umbrella_open+6 及之后中位值的 50%，之后最小值 ≥ 该中位值的 80%；握持：UMBRELLA 以骨骼父级/Child Of 等约束挂在手或手指骨上，或 S3–S4 每 3 帧 UMBRELLA 评估顶点到手/手指骨（名称含 hand/wrist/palm 及其子骨，头/尾/中点）的最近距离 ≤6 cm；line_start–line_end 每 2 帧：PHONE 评估顶点到手骨最近距离 ≤5 cm、PHONE 中心到头骨中点 ≤25 cm；UMBRELLA/PHONE 逐帧位移 <15 cm（S3→S4 切点除外）。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M15",
+      "tier": "mid",
+      "group": "pbr",
+      "critical": false,
+      "criterion_zh": "雨势转小：S5 的雨明显比 S1 小，但仍在下。",
+      "criterion_en": "Lighter rain in S5 than S1, but still raining.",
+      "verify": "修订属性 0/0。RAIN 在相机视锥内的雨滴数（粒子按存活计、几何节点实例按实例计、实体网格按松散部件估算）：第 660 帧 CAM_S5 视锥内 / 第 72 帧 CAM_S1 视锥内 ∈ [0.10, 0.70] 且 >0；成片 S5 每 10 帧取样，5 帧时间中值残差中 >6 级像素占比中位数 ≥0.02%（仍在下雨）。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M16",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "分轨与混音一致：三版的三条分轨按 timeline.json 声明的主增益相加后与解码混音一致。",
+      "criterion_en": "Stem/mix consistency: in all three versions the three stems summed with the master gains declared in timeline.json match the decoded mix.",
+      "verify": "混音为 AAC 编码产物，不做波形残差：解码各版成片音轨，与分轨按声明增益（宽松解析 gain/dB 字段，另试单位增益）之和做互相关对齐后，逐 100 ms 帧比较 1/3 倍频程频带能量（只计帧内最大值 40 dB 以内的频带），|差| 中位数 ≤0.75 dB 且 95 分位 ≤3 dB。由 checks 判定（timeline 其余字段的一致性见 M18）。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M17",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": true,
+      "criterion_zh": "工程即真实来源：评分方从 project/scene.blend 重渲 base 第 72、216、372、528、660 帧（属性 0/0）与 revision2 第 500 帧（属性 12/6），与对应成片帧的灰度 320×180 SSIM 均 ≥0.70。",
+      "criterion_en": "Project is the source of truth: the grader re-renders base frames 72/216/372/528/660 (props 0/0) and revision2 frame 500 (props 12/6) from project/scene.blend; each matches the delivered frame with SSIM >= 0.70 (grey, 320x180).",
+      "verify": "blender -b scene.blend --python x07_render.py：设属性、关闭序列编辑器、320×180、先用工程所设引擎（Cycles CPU 16 spp + OIDN 降噪 / EEVEE 16 采样），失败或不达标再用 Cycles 重渲；成片帧 f = 场景帧 f + frame_start；渲染图与解码帧各做 σ=1 高斯模糊后算 SSIM，任一帧 <0.70 即否（总渲染时限 900 s，超时即否）。由 checks 判定。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-M18",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "如实质检与时间线：qa.md 记录真实问题及修复前后帧号/采样位置，或如实说明无问题；其中数值声明以及 timeline.json 的镜头帧范围、转场、音频起止与交付的 events.csv、ffprobe/响度证据和题面要求的剪辑一致（base 硬切 144/456/600、叠化约 276–299、声桥 18.0 s、尾巴止于 26.5 s；两版修订按题面平移）。",
+      "criterion_en": "Honest QA and timeline: qa.md documents real issues with before/after frame numbers or sample positions, or states none; its numeric claims and the timeline.json shot ranges, transitions and audio in/out points agree with the delivered events.csv, the ffprobe/loudness evidence and the required edit (base cuts 144/456/600, dissolve ~276–299, bridge 18.0 s, tail end 26.5 s; revisions shifted as instructed).",
+      "verify": "LLM 评委阅读 qa.md、各版 timeline.json 与 events.csv，并对照 ffprobe/响度证据与本条列出的剪辑数值判断；明显编造或与证据矛盾即否。",
+      "weight": 2.2222
+    },
+    {
+      "id": "X07-G01",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "湿路面镜面反射：S1 与 S5（灯亮时）路面上的路灯高光位于 LAMP_HEAD 相对 ROAD 平面的镜面反射几何位置，并朝灯像方向拉长（湿沥青效果）；S5 在 lamp_on 之前无此高光；ROAD 材质粗糙度由纹理/遮罩驱动（非常数）。",
+      "criterion_en": "Wet-road specular: in S1 and lit S5 the lamp highlight sits at the geometric mirror-reflection point of LAMP_HEAD across the ROAD plane and is elongated towards the lamp, as on wet asphalt; it is absent in S5 before lamp_on; ROAD roughness is driven by a texture/mask (not a constant).",
+      "verify": "工程（修订属性 0/0）：LAMP_HEAD 评估包围盒中心关于 ROAD 顶面（包围盒最高 z）的镜像点经 CAM_S1/CAM_S5 投影得 P（须在画面内）。成片 640×360：S1 第 min(24, lamp_flicker_start−2) 帧、S5 第 min(lamp_on+12, S5 末帧) 帧，以 P 为中心高 30 px、宽 15 px 的 ROI 平均亮度 ≥1.5×（P 周围 40–100 px 环带中位亮度）；ROI 内最亮连通域（阈值 = 环带中位 + 0.5×(局部最大 − 环带中位)）主轴/次轴 ≥1.5 且主轴与 P→灯像连线夹角 ≤30°；S5 第 max(S5 首帧, lamp_on−3) 帧 ROI 相对环带中位的亮度超出量 ≤ 灯亮帧超出量的 50%。材质：ROAD 某个 Principled/Glossy 节点的 Roughness 输入有连接。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G02",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "积水倒影是真实反射并跟随灯态：S2 中路灯倒影位于 LAMP_HEAD 相对 PUDDLE 水面的镜像投影处，在声明的 lamp_off 时熄灭（≤2 帧），且与工程灯能量的熄灭同步（≤1 帧）；之后水面呈霓虹青色反光。",
+      "criterion_en": "Puddle reflection is a real reflection that follows lamp state: in S2 the lamp reflection sits at the mirror projection of LAMP_HEAD across the PUDDLE surface, goes dark at the declared lamp_off (<=2 frames) in step with the project lamp energy (<=1 frame), and afterwards the puddle shows a cyan neon sheen.",
+      "verify": "工程（修订属性 0/0）：PUDDLE 评估顶点 z 的 90 分位为水面，LAMP_HEAD 包围盒中心镜像后经 CAM_S2 投影得 Q，ROI 半径 = max(20 px, 灯具投影半径×3)@1280。成片 640×360 S2（至叠化开始前）：灯亮帧（≤lamp_off 且工程灯态 ≥50%）ROI 亮度中位 ≥2× 积水区（PUDDLE 顶点投影外接矩形）中位亮度；lamp_off+3 至 +12 帧 ROI 相对积水区中位的亮度超出量 ≤ 灯亮时超出量的 50%；最终变暗帧（此后至 lamp_off+6 超出量均 <50%）与工程最终熄灭帧（此后均 ≤5%）相差 ≤1、与声明 lamp_off 相差 ≤2；lamp_off+6 至 +12 帧积水区平均 B/R ≥1.2。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G03",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "三维模拟雨：RAIN 为场景内三维雨滴（粒子、几何节点实例或网格雨滴），第 72 帧 CAM_S1 视锥内 ≥2000 滴、下落速度 4–12 m/s；无二维雨卡片或合成图像叠加；S1 成片中可见运动的雨丝，方向与投影重力方向夹角 ≤25°。",
+      "criterion_en": "3D simulated rain: RAIN is in-scene 3D drops (particles, GN instances or mesh drops) with >= 2000 drops inside the CAM_S1 frustum at frame 72 falling at 4–12 m/s; no 2D rain card or compositor image overlay; the S1 picture shows moving rain streaks aligned (<= 25°) with projected gravity.",
+      "verify": "工程（修订属性 0/0）：视锥内雨滴数同 M15 的计数方法；速度：粒子取 −velocity.z 中位数，实例/网格取 72→73 帧水平最近邻（<5 cm）匹配的下落量×fps；合成节点树无未静音的 Image/MovieClip 节点，且 ≤8 顶点的平面上无名称含 rain/drop/streak 的图像纹理。成片 S1（灯亮、lamp_flicker_start 之前）320×180 灰度：帧减 5 帧时间中值的正残差中 >6 级像素占比中位数 ≥0.05%，残差结构张量相干度 ≥0.2 且雨丝方向与 CAM_S1 中投影重力方向夹角 ≤25°。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G04",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "雨点涟漪：S2 期间（第 150–280 帧）PUDDLE 表面几何持续变化（位移 ≥0.5 mm），且无短周期循环（0.5–2 s 滞后相关 <0.9）；成片 S2 积水区 ≥80% 的相邻帧对有局部变化。仅靠着色器的涟漪无法测量，不予通过。",
+      "criterion_en": "Rain ripples: the PUDDLE surface geometry moves throughout S2 (frames 150–280: displacement >= 0.5 mm) without short-period looping (0.5–2 s lag correlation < 0.9), and the S2 puddle region of the film changes locally in >= 80% of frame pairs. Shader-only ripples are not measurable and do not pass.",
+      "verify": "工程（修订属性 0/0）：第 150–280 帧每 2 帧采样 PUDDLE 评估网格（随机固定 ≤3000 个顶点）z，去时间均值后最大偏差 ≥0.5 mm；12–48 帧滞后的相关系数最大值 <0.9；拓扑不得变化。成片 320×180 灰度 S2（第 146 帧至叠化开始前），积水区（PUDDLE 投影外接矩形）内增益补偿后的相邻帧差 >4 级像素占比 ≥0.2% 的帧对比例 ≥80%。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G05",
+      "tier": "gate",
+      "group": "character",
+      "critical": true,
+      "criterion_zh": "踩水接触：声明的 foot_contact（±2 帧）时脚/鞋顶点触到水面（≤4 cm）且落在 PUDDLE 水平范围内，6 帧前同一只脚高 ≥3 cm；4 帧内落脚点 0.3 m 内出现新的、高出水面 ≥2 cm 的水花元素；该处积水位移方差上升 ≥3 倍；fx 分轨踩水瞬态同步。",
+      "criterion_en": "Puddle step contact: at the declared foot_contact (±2 frames) a foot/shoe vertex meets the water surface (<= 4 cm) inside the PUDDLE extent, having been >= 3 cm higher 6 frames earlier; new splash elements appear within 0.3 m and >= 2 cm above the water within 4 frames; the puddle displacement variance there rises >= 3x; the fx stem has the splash transient in sync.",
+      "verify": "工程（修订属性 0/0）：脚/鞋顶点 = COMMUTER 及受 COMMUTER_RIG 驱动网格中权重 ≥0.3 属于名称含 foot/toe/shoe/boot/heel/ball 的顶点组的顶点，或名称含这些词/挂在这些骨上的网格；水面 = PUDDLE 顶点 z 的 90 分位（foot_contact−8 帧）；foot_contact±2 帧内最低接触顶点与水面差 ∈[−10, +4] cm；该顶点 8 cm 内同一组顶点在 foot_contact−6 帧最低处高于水面 ≥3 cm；水花 = RAIN/人物/道具/地面以外对象的存活粒子、实例与名称含 splash/spray/droplet/fluid/water 的网格顶点，落脚点 0.3 m 内、水面上 2–100 cm 的数量在 foot_contact..+4 帧最大值 > foot_contact−2 帧；落脚点 0.3 m 内 PUDDLE 顶点 z 方差 foot_contact+1..+4 最大值 ≥3× foot_contact−2 帧值；fx 分轨在 foot_contact±2 帧有峰值高出前 200 ms 中位 ≥10 dB 的瞬态。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G06",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "光照叙事一致：LAMP_HEAD 能量在 lamp_flicker_start 与 lamp_off 之间真实闪烁，lamp_off 至 lamp_on 期间保持熄灭；路灯为暖色；S1 人物受暖色照明，S3 人物由霓虹青光主导；S4 在 headlights_on_face 后脸部亮度上升 ≥1.5 倍，由画左的 BUS_LIGHTS 照亮。",
+      "criterion_en": "Lighting continuity: LAMP_HEAD energy really flickers between flicker start and lamp_off and stays off until lamp_on; the lamp is warm; the character is warm-lit in S1 and cyan-lit in S3; in S4 the face brightens >= 1.5x after headlights_on_face, lit by BUS_LIGHTS from frame left.",
+      "verify": "工程（修订属性 0/0，灯态同 M10 归一）：[lamp_flicker_start, lamp_off] 内 ≤0.2 → ≥0.8 的跳变 ≥2 次；M10 的熄灭/复亮条件；闪烁前路灯灯光（无灯光时取发光材质）颜色 R/B ≥1.3；headlights_on_face 时 BUS_LIGHTS（及其子级灯光）在 CAM_S4 相机坐标中 x<0（画左或左侧画外），且 headlights_on_face..+12 帧有非零灯光/发光。成片 640×360：人物区 = COMMUTER 评估顶点投影外接矩形；S1 第 min(72, lamp_flicker_start−2) 帧人物区平均 R/B ≥1.05；S3 第 380 帧人物区 B/R ≥1.1 且 G/R ≥1.0；S4 脸部区（COMMUTER 顶部 13% 顶点投影矩形）headlights_on_face+1..+12 帧平均亮度 ≥ −12..−1 帧（均限 S4 内，各 ≥3 帧）的 1.5 倍。环境光/天光不参与比较。由 checks 判定。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G07",
+      "tier": "gate",
+      "group": "pbr",
+      "critical": true,
+      "criterion_zh": "写实观感：成片联系表中五个镜头均为可信的写实渲染夜景（湿表面带反射、可见雨、人物有材质），无任何镜头呈平面着色/卡通/白模。确定性底线：每镜头平涂块指数 ≤0.15。",
+      "criterion_en": "Photoreal look: in the contact sheets every one of the five shots reads as a believable photoreal rendered night exterior (wet surfaces with reflections, visible rain, textured character); no shot looks flat-shaded, toon or untextured. Deterministic floor: flat-block index <= 0.15 in every shot.",
+      "verify": "平涂块指数 = 640×360 亮度下 16×16 块内标准差 <0.2/255 的块占比（排除均值 <8/255 的暗块），每镜头取 5 帧平均，由 checks 计算，任一镜头 >0.15 即否（并触发 pbr 组门槛）；底线通过后由 LLM 评委依据联系表判断写实观感。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G08",
+      "tier": "gate",
+      "group": "review",
+      "critical": true,
+      "criterion_zh": "画面叙事可读：仅凭成片联系表（不借文字）能按顺序认出：持收拢伞候车 → 路灯熄灭、霓虹照明 → 撑伞踩水 → 车灯照脸、手机贴耳 → 空街、路灯复亮；无字幕或字卡。",
+      "criterion_en": "Narrative legibility from picture: from the contact sheets alone (no text), the sequence wait at the stop with a closed umbrella -> lamp dark, neon-lit corner -> umbrella open and foot in the puddle -> bus light on her face with the phone at her ear -> empty corner with the lamp lit again is recognisable in order; no subtitles or title cards.",
+      "verify": "LLM 评委依据联系表判断；声音完整性由 M02/M03/M10/M11/G05 等确定性判定覆盖，本条不判音频。",
+      "weight": 3.8889
+    },
+    {
+      "id": "X07-G09",
+      "tier": "gate",
+      "group": "review",
+      "critical": false,
+      "criterion_zh": "画面稳定：镜头内除声明的闪烁、复亮、车灯窗口以及切点、叠化外，相邻帧全局亮度跳变不超过 4%。",
+      "criterion_en": "Picture stability: within shots there is no global luma jump > 4% between adjacent frames outside the declared lamp flicker, lamp_on and headlights windows, the cuts and the dissolve.",
+      "verify": "320×180 灰度逐帧平均亮度，排除 lamp_flicker_start–lamp_off+2、lamp_on±2、headlights_on_face±12、切点 143–145/455–457/599–601 与叠化 270–305，相邻帧相对变化 >4% 即否。由 checks 判定。",
+      "weight": 3.8889
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-FILM",
+    "all_critical_items_must_pass": true
+  }
+}

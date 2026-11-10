@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-010",
+  "domain": "CDN",
+  "task_form": "CDN-DOC",
+  "title": "Why a corn mill came down in one night",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "publisher document inputs",
+    "url": "https://www.csb.gov/assets/1/6/didion_milling_report_for_public_release.pdf",
+    "revision": "2026-10-24",
+    "license": "U.S. federal investigation report; separately authored appendices retain their original rights notices",
+    "credits": "environment/CREDITS.md",
+    "distribution": "Government report and news release included; independently authored appendices fetched directly from the publisher.",
+    "preparation": "environment/fetch/sources.json"
+  }
+}

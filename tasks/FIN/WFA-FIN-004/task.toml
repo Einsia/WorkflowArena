@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = ["/workspace/output"]
+
+[task]
+name = "WFA-FIN-004"
+version = "3.1.0"
+description = "REITs: FFO, maintenance investment and distribution coverage"
+
+[metadata]
+domain = "FIN"
+subcategory = "FIN-ANA"
+source_language = "zh"
+evaluation_mode = "harbor_native"
+contract_version = "finance-machine-v3.1"
+profile_id = "base"
+llm_judge = false
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 4
+memory_mb = 8192
+storage_mb = 8192
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 1
+memory_mb = 2048
+storage_mb = 2048

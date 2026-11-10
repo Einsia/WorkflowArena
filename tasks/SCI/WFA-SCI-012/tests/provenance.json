@@ -1,0 +1,28 @@
+{
+  "task_id": "WFA-SCI-012",
+  "sources": [
+    {
+      "what": "paper",
+      "url": "https://doi.org/10.1039/C7CP04913G"
+    },
+    {
+      "what": "SI",
+      "url": "https://www.chemie.uni-bonn.de/grimme/de/software/gmtkn/si_gmtkn55.pdf",
+      "sha256": "c6851552c19dc79d4ab4b5d1efe7a905f3dbd86d06fe8f7c209ec54d2b899d4d"
+    },
+    {
+      "what": "geometries",
+      "url_pattern": "http://www.thch.uni-bonn.de/tc.old/downloads/GMTKN/GMTKN55/<subset>.tar",
+      "note": ".res files and G21EA removed; sha256 over sorted per-file sha256 list of environment/inputs/geometries: 305a8646a4bf64fca57ad5c17f580028f24b8cd263ca2abe96342883712a77bd"
+    },
+    {
+      "what": "per-functional results (gold)",
+      "url_pattern": "http://www.thch.uni-bonn.de/tc.old/downloads/GMTKN/GMTKN55/results/<subset>/PBE0/result.html",
+      "retrieved": "2026-10-23"
+    },
+    {
+      "what": "environment/inputs/reactions.csv (built by A1 from the web result tables; BH76 #39 typo fixed)",
+      "sha256": "47a910aa20bb2f269b113569ac8e8a302777d23b54e5bd350788470f9c21c558"
+    }
+  ]
+}

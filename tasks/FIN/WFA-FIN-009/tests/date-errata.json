@@ -1,0 +1,15 @@
+[
+  {
+    "task_id": "WFA-FIN-009",
+    "criterion": "scope/LHX/report_end",
+    "frozen_expected": "2026-07-24",
+    "corrected_expected": "2026-07-03",
+    "reason": "封面流通股统计日误作财政季度终点。",
+    "source_index": "gold-v2/finance-hard-09/LHX-source.json",
+    "source_locator": {
+      "table": 10,
+      "row": 1
+    },
+    "source_quote": "(In millions, except par value) July 3, 2026 January 2, 2026"
+  }
+]

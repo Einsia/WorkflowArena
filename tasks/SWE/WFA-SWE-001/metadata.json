@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-001",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Spectral coordinates (SpectralCoord / SpectralQuantity) and their integration with reference frames and WCS",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/astropy/astropy/pull/10185",
+    "revision": "merge 8b55e6d9a4af2cb7abc42d9c9901e8979ee0ec68; start = first parent 79860a184c99d44d8e38c22a2ceb7abdc3f671a0",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

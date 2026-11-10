@@ -1,0 +1,20 @@
+{
+  "paper": {
+    "title": "High-dimensional geometry of population responses in visual cortex",
+    "journal": "Nature 571:361-365",
+    "year": 2019,
+    "doi": "10.1038/s41586-019-1346-5"
+  },
+  "data": {
+    "url": "https://doi.org/10.6084/m9.figshare.6845348.v4",
+    "license": "CC BY-NC 4.0",
+    "files": "environment/inputs/MANIFEST.json (33 files, md5)",
+    "downloaded": "2026-10-23"
+  },
+  "code": {
+    "url": "https://github.com/MouseLand/stringer-pachitariu-et-al-2018b",
+    "commit": "58443d1461830315fb35ddfd49c1078228590c4a",
+    "license": "GPL-3.0 (upstream repository LICENSE)"
+  },
+  "gold": "authors' MATLAB analysis functions (compileResps, statsShuffledPCA, decode2800, natimg32PCA, spontPCPowerLaw) re-run under GNU Octave 8.4.0 in Docker with shims (analysis compatibility shims: svdecon=economy svd, nanmean, corr with p-value, no-op graphics) and loop-range wrappers (analysis loop wrappers); OPENBLAS_CORETYPE=Haswell required; exported by the reference-value export script"
+}

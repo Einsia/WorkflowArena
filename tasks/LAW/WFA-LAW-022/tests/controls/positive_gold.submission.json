@@ -1,0 +1,217 @@
+{
+ "defendants": {
+  "[被告A]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 6
+   },
+   "probation": false
+  },
+  "[被告B]": {
+   "charges": [
+    "寻衅滋事罪",
+    "诈骗罪"
+   ],
+   "articles": [
+    266,
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "主犯",
+    "诈骗罪": "主犯"
+   },
+   "leader": true,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {
+    "寻衅滋事罪": {
+     "type": "有期徒刑",
+     "months": 28
+    },
+    "诈骗罪": {
+     "type": "有期徒刑",
+     "months": 28
+    }
+   },
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 28
+   },
+   "probation": false
+  },
+  "[被告C]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 7
+   },
+   "probation": false
+  },
+  "[被告D]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 7
+   },
+   "probation": false
+  },
+  "[被告E]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 6
+   },
+   "probation": false
+  },
+  "[被告F]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 6
+   },
+   "probation": false
+  },
+  "[被告G]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 7
+   },
+   "probation": false
+  },
+  "[被告H]": {
+   "charges": [
+    "寻衅滋事罪"
+   ],
+   "articles": [
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 6
+   },
+   "probation": false
+  },
+  "[被告I]": {
+   "charges": [
+    "寻衅滋事罪",
+    "诈骗罪"
+   ],
+   "articles": [
+    266,
+    293
+   ],
+   "roles": {
+    "寻衅滋事罪": "主犯",
+    "诈骗罪": "主犯"
+   },
+   "leader": true,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {
+    "寻衅滋事罪": {
+     "type": "有期徒刑",
+     "months": 28
+    },
+    "诈骗罪": {
+     "type": "有期徒刑",
+     "months": 28
+    }
+   },
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 28
+   },
+   "probation": false
+  }
+ }
+}

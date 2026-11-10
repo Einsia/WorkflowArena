@@ -1,0 +1,164 @@
+{
+  "task_id": "WFA-CDN-008",
+  "visibility": "reviewer-only",
+  "tier_weights": {
+    "base": 25,
+    "mid": 40,
+    "gate": 35
+  },
+  "total_weight": 100,
+  "whole_task_gates": [
+    "交付物缺失或 solution.mp4 无法解码 → 验收失败（连续分照常报告）",
+    "作弊：访问 reviewer-only 材料（依打开文件日志/工作区清单判定，绝不用文本匹配）、联网、生成式替代 → 验收失败"
+  ],
+  "group_gates": [
+    "某段 B3 诚实检查失败 → 该段对应的 G 项记 0"
+  ],
+  "also_report": "槽位正确数 / 7（G1–G7 通过数）",
+  "decisions": [
+    {
+      "id": "B1",
+      "tier": "base",
+      "group": "deliverable",
+      "critical": true,
+      "criterion_zh": "交付物与编码：output/ 恰为 solution.mp4、solution.json、selection-evidence.json 三个文件；视频可完整解码，H.264/yuv420p、1280×720、SAR 1:1、30/1 CFR、无音轨。",
+      "criterion_en": "Deliverables and encoding: output/ holds exactly the three files; video decodes fully, H.264/yuv420p, 1280×720, SAR 1:1, 30/1 CFR, no audio.",
+      "verify": "ffprobe 流参数 + 全量解码计帧；ls output/。",
+      "weight": 9
+    },
+    {
+      "id": "B2",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "清单一致：7 段；source 为 01–46 中合法且互不相同的 ID；thread/beat 字段齐全；整数半开帧区间自 0 连续无缝；秒=帧/30（≤0.001 s）；最后结束帧=解码帧数；source_frames=[0,该片段帧数]。",
+      "criterion_en": "Manifest consistency: 7 segments; valid distinct IDs 01–46; thread/beat present; integer half-open frames contiguous from 0; seconds=frames/30 (≤0.001 s); last end = decoded count; source_frames=[0, clip frame count].",
+      "verify": "解析 JSON，对照 provenance.json 中各片段帧数确定性检查。",
+      "weight": 8
+    },
+    {
+      "id": "B3",
+      "tier": "base",
+      "group": "honesty",
+      "critical": false,
+      "criterion_zh": "诚实与完整（7 段全部）：每段输出帧数等于所称片段解码帧数，且逐帧 SSIM≥0.95（灰度、最长边 360 px、11×11 高斯窗 σ=1.5），首尾帧均包含。",
+      "criterion_en": "Honesty/coverage for all 7 segments: segment length equals the claimed clip's decoded frame count and every frame SSIM≥0.95 (gray, max side 360 px, 11×11 Gaussian σ=1.5), first and last included.",
+      "verify": "逐段逐帧 SSIM（所称片段 vs 输出对应帧）。某段不过则该段对应的 G 项同时记 0（组级门槛）。",
+      "weight": 8
+    },
+    {
+      "id": "M1",
+      "tier": "mid",
+      "group": "content-A",
+      "critical": false,
+      "criterion_zh": "线索 A 内容判读：A1–A4 四段的 source 都落在各自的“正确内容族”（正确片段、同节选的合成变体、同一原始镜头的相邻窗口，见 answer-key content_family）。",
+      "criterion_en": "Thread-A content reading: the sources for A1–A4 all fall in their \"correct content families\" (the key clip, synthetic variants of the same excerpt, and adjacent windows of the same original shot; see answer-key content_family).",
+      "verify": "查表，确定性。",
+      "weight": 10
+    },
+    {
+      "id": "M2",
+      "tier": "mid",
+      "group": "content-B",
+      "critical": false,
+      "criterion_zh": "线索 B 内容判读：B1–B3 三段的 source 都落在各自的正确内容族（定义同 M1；B2 的内容族另含紧接其后的同一礁檐镜头 27、44，见 answer-key content_family）。",
+      "criterion_en": "Thread-B content reading: the sources for B1–B3 all fall in their correct content families (as in M1; for B2 the family also contains the immediately following shot of the same overhang, 27 and 44; see answer-key content_family).",
+      "verify": "查表，确定性。",
+      "weight": 10
+    },
+    {
+      "id": "M3",
+      "tier": "mid",
+      "group": "intercut",
+      "critical": false,
+      "criterion_zh": "交叉组接结构：输出顺序的 beat 标注恰为 A1,B1,A2,B2,A3,B3,A4，且每段 thread 与 beat 前缀一致。",
+      "criterion_en": "Intercut structure: beat labels in output order are exactly A1,B1,A2,B2,A3,B3,A4, and each segment's thread equals its beat prefix.",
+      "verify": "JSON 字段确定性检查。",
+      "weight": 10
+    },
+    {
+      "id": "M4",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "选择证据：模式合法（7 条、beat 互不相同、source 与 solution.json 中该 beat 的 source 一致、source_frames 在片段内且 b−a ≥ 12、reason 非空），且 7 条中至少 6 条 reason 指出所选片段与一个具名其他候选之间的具体可见差别，并与 answer-key 对该候选的说明不矛盾。",
+      "criterion_en": "Selection evidence: schema valid (7 objects, distinct beats, source equals the solution.json source of that beat, source_frames inside the clip with b−a ≥ 12, non-empty reason), and at least 6 of the 7 reasons name a concrete visible difference between the chosen clip and a named other candidate that does not contradict the answer key's notes for that candidate.",
+      "verify": "模式部分由 checks.py 确定性检查（不满足直接判否）；通过后由评委只对照 answer-key beats.*.why 文本判定 reason 内容，不要求查看源帧，也不要求人工复核。",
+      "weight": 10
+    },
+    {
+      "id": "G1",
+      "tier": "gate",
+      "group": "select-A1",
+      "critical": false,
+      "criterion_zh": "A1 精确选择：所选 ID 等于隐藏答案（13）。近似干扰：25、37、34。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "A1 exact selection: chosen ID equals the hidden key (13). Near-misses: 25, 37, 34. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：25: SAME excerpt time-reversed (camera retreats, mound shrinks); 37: same shot later — slides past the mound flank, mound leaves frame right, sand revealed; 34: deeper darker mound, no surface visible, drifting",
+      "weight": 5
+    },
+    {
+      "id": "G2",
+      "tier": "gate",
+      "group": "select-B1",
+      "critical": false,
+      "criterion_zh": "B1 精确选择：所选 ID 等于隐藏答案（01）。近似干扰：06、26、14、15。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "B1 exact selection: chosen ID equals the hidden key (01). Near-misses: 06, 26, 14, 15. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：06: SAME excerpt + synthetic progressive digital push-in 1.00→1.30 (fails handheld hover); 26: same shot earlier — ~3 s sustained lateral sweep at the start, no dark fish; 14: tang school arriving over a dark mound while camera pushes forward; 15: reef flat with scattered fish, sideways drift, no dense school",
+      "weight": 5
+    },
+    {
+      "id": "G3",
+      "tier": "gate",
+      "group": "select-A2",
+      "critical": false,
+      "criterion_zh": "A2 精确选择：所选 ID 等于隐藏答案（19）。近似干扰：24、43、16。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "A2 exact selection: chosen ID equals the hidden key (19). Near-misses: 24, 43, 16. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：24: SAME excerpt time-reversed (descends back behind the table edge, ends close on branches); 43: same shot earlier — approaches table-coral tree from below, never clears the top; 16: same shot later — starts over sand, lateral drift to another table coral",
+      "weight": 5
+    },
+    {
+      "id": "G4",
+      "tier": "gate",
+      "group": "select-B2",
+      "critical": false,
+      "criterion_zh": "B2 精确选择：所选 ID 等于隐藏答案（39）。近似干扰：02、27、44。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "B2 exact selection: chosen ID equals the hidden key (39). Near-misses: 02, 27, 44. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：02: SAME excerpt time-reversed (pulls away from the overhang, fish recede into shadow); 27/44: next shot — already under the overhang, lit, hovering, fish visible from frame 0",
+      "weight": 5
+    },
+    {
+      "id": "G5",
+      "tier": "gate",
+      "group": "select-A3",
+      "critical": false,
+      "criterion_zh": "A3 精确选择：所选 ID 等于隐藏答案（46）。近似干扰：07、36、41。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "A3 exact selection: chosen ID equals the hidden key (46). Near-misses: 07, 36, 41. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：07: earlier window + synthetic digital zoom 1.0→1.6 toward the urchin (urchin grows but no parallax: near seabed and reef lip scale together, softer pixels); 36: SAME excerpt time-reversed (retreats, urchin shrinks); 41: same shot earlier — hollow/ledge dominant, urchin stays small, lateral component",
+      "weight": 5
+    },
+    {
+      "id": "G6",
+      "tier": "gate",
+      "group": "select-B3",
+      "critical": false,
+      "criterion_zh": "B3 精确选择：所选 ID 等于隐藏答案（42）。近似干扰：45、09、20。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "B3 exact selection: chosen ID equals the hidden key (42). Near-misses: 45, 09, 20. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：45: SAME excerpt mirrored (background streams right→left, camera follows to frame-right); 09: reef slope, camera drifts while a shark crosses briefly, no follow; 20: same shot later — sharks leave frame, camera continues over rubble",
+      "weight": 5
+    },
+    {
+      "id": "G7",
+      "tier": "gate",
+      "group": "select-A4",
+      "critical": false,
+      "criterion_zh": "A4 精确选择：所选 ID 等于隐藏答案（33）。近似干扰：22、04、40、32。前提：该段 B3 诚实检查通过。",
+      "criterion_en": "A4 exact selection: chosen ID equals the hidden key (33). Near-misses: 22, 04, 40, 32. Requires that segment to pass the honesty check.",
+      "verify": "查表，确定性。干扰说明：22: SAME excerpt + synthetic slow digital push-in 1.00→1.25; 04: SAME excerpt + synthetic lateral crop pan (82% window); 40: same shot later — slow real forward push, butterflyfish pass early; 32: other table reef in lighter cyan water with damselfish school, swaying hover, no butterflyfish entry",
+      "weight": 5
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

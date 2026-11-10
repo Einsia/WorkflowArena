@@ -1,0 +1,37 @@
+{
+ "cwd": "/app",
+ "runner": "cargo",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "cargo",
+   "runner": "cargo",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && for t in sync_barrier sync_broadcast sync_broadcast_weak sync_errors sync_mpsc sync_mpsc_weak sync_mutex sync_mutex_owned sync_notify sync_notify_owned sync_once_cell sync_oneshot sync_panic sync_rwlock sync_semaphore sync_semaphore_owned sync_set_once sync_watch; do echo \"=== target $t\"; timeout 300 cargo test --offline -p tokio@1.49.0 --features full --test \"$t\" -- --test-threads=4 2>&1 | awk '/^ *(Running|Doc-tests) /{stem=$0; if (match(stem,/deps\\/[^-)]+-[0-9a-f]+\\)/)) {stem=substr(stem,RSTART+5,RLENGTH-5); sub(/-[0-9a-f]+\\)$/,\"\",stem)} else {stem=\"doc\"}; bin=stem; print; next} /^test [^ ]/ && $2 != \"result:\" {name=$2; gsub(/::/,\"__\",name); $2=bin \"__\" name; print; next} {print}'; done 2>&1 | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the 18 integration-test binaries the verifier restored; they link tokio as an external crate, so they can only reach the public contract. Each test name is qualified with the binary that produced it because cargo's names are flat per binary and 48 of them collide across binaries."
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "cargo",
+   "runner": "cargo",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && for p in tokio-util tokio-stream tokio-test; do echo \"=== target $p\"; timeout 900 cargo test --offline -p \"$p\" --all-features --tests 2>&1 | awk -v pfx=\"${p}__\" '/^ *(Running|Doc-tests) /{stem=$0; if (match(stem,/deps\\/[^-)]+-[0-9a-f]+\\)/)) {stem=substr(stem,RSTART+5,RLENGTH-5); sub(/-[0-9a-f]+\\)$/,\"\",stem)} else {stem=\"doc\"}; bin=pfx stem; print; next} /^test [^ ]/ && $2 != \"result:\" {name=$2; gsub(/::/,\"__\",name); $2=bin \"__\" name; print; next} {print}'; done 2>&1 | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "downstream crates in the same workspace that consume the public sync API; green on the reference implementation and scored for regressions"
+  }
+ ]
+}

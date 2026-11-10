@@ -1,0 +1,83 @@
+{
+  "task_id": "WFA-SCI-012",
+  "gold_source": "per-reaction: GMTKN55 web results pages (PBE0, D3(BJ) column: deviation added to reference); per-subset MD/MAD/RMSD: SI Table S68 (PBE0-D3(BJ))",
+  "targets": [
+    {
+      "id": "U1_W4-11",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U1_W4-11.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U2_BH76",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U2_BH76.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U3_RSE43",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U3_RSE43.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U4_G21IP",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U4_G21IP.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U6_PA26",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U6_PA26.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U7_SIE4x4_ALKBDE10",
+      "file": "reaction_energies.csv",
+      "keys": [
+        "subset",
+        "idx"
+      ],
+      "value": "value",
+      "gold": "gold/U7_SIE4x4_ALKBDE10.csv",
+      "pass_fraction": 0.9
+    },
+    {
+      "id": "U8_subset_stats",
+      "file": "subset_stats.csv",
+      "keys": [
+        "subset",
+        "stat"
+      ],
+      "value": "value",
+      "gold": "gold/subset_stats.csv",
+      "pass_fraction": 0.9
+    }
+  ]
+}

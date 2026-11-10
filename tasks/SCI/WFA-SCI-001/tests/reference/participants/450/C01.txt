@@ -1,0 +1,10 @@
+1 C01_D1687
+2 C01_D0617
+3 C01_D1225
+# rank 4 unmapped (T143_S09.M04 src=T143_U01.M05)
+# rank 5 unmapped (T143_S09.M05 src=T143_U23.M02)
+6 C01_D0764
+# rank 7 unmapped (T143_S09.M07 src=T143_U32.M01)
+8 C01_D0926
+# rank 9 unmapped (T143_S09.M09 src=T143_U33.M08)
+# rank 10 unmapped (T143_S09.M10 src=T143_U07.M22)

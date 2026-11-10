@@ -1,0 +1,269 @@
+{
+  "task_id": "WFA-LAW-014",
+  "source": {
+    "dataset": "CMDL",
+    "file": "valid_big.jsonl",
+    "index": 2670,
+    "fact_sha256": "a850eda9fd7bb16054d53be0c1c27a5ffb256dfc5bbaa684fe7260043a412309"
+  },
+  "ungraded_circumstances": [],
+  "ungraded_per_defendant_circumstances": {
+    "武某B": [
+      "未成年",
+      "自首",
+      "坦白",
+      "累犯"
+    ],
+    "徐某A": [
+      "未成年",
+      "自首",
+      "坦白"
+    ],
+    "武某C": [
+      "未成年",
+      "自首",
+      "坦白"
+    ],
+    "常某某": [
+      "未成年",
+      "自首",
+      "坦白"
+    ],
+    "任某A": [
+      "未成年",
+      "自首",
+      "坦白",
+      "累犯"
+    ],
+    "刘某2": [
+      "未成年",
+      "自首",
+      "坦白"
+    ],
+    "史某某": [
+      "未成年",
+      "自首",
+      "坦白"
+    ],
+    "任某C": [
+      "未成年",
+      "自首",
+      "坦白"
+    ]
+  },
+  "ungraded_fields": {
+    "武某B": [
+      "probation",
+      "term"
+    ],
+    "徐某A": [
+      "probation"
+    ],
+    "武某C": [
+      "probation"
+    ],
+    "常某某": [
+      "probation"
+    ],
+    "任某A": [
+      "probation"
+    ],
+    "刘某2": [
+      "probation",
+      "term"
+    ],
+    "史某某": [
+      "probation"
+    ],
+    "任某C": [
+      "probation"
+    ]
+  },
+  "corrections": [
+    {
+      "name": "武某B",
+      "field": "charges/articles/term",
+      "reason": "Court explicitly establishes second charge; incomplete first-charge-only source labels corrected; final term unknown and masked."
+    },
+    {
+      "name": "刘某2",
+      "field": "charges/articles/term",
+      "reason": "Court explicitly establishes second charge; incomplete first-charge-only source labels corrected; final term unknown and masked."
+    }
+  ],
+  "defendants": {
+    "武某B": {
+      "original_code": "武某B",
+      "charges": [
+        "强迫交易罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        226,
+        293
+      ],
+      "roles": {
+        "强迫交易罪": "主犯",
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "term": null,
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [
+        "源标签仅保存首罪分罪刑期，法院明确认定另一罪及数罪并罚；无最终主文，不将首罪刑期冒充决定执行刑期。"
+      ]
+    },
+    "徐某A": {
+      "original_code": "徐某A",
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 16
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    },
+    "武某C": {
+      "original_code": "武某C",
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 14
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    },
+    "常某某": {
+      "original_code": "常某某",
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 13
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    },
+    "任某A": {
+      "original_code": "任某A",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 16
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    },
+    "刘某2": {
+      "original_code": "刘某2",
+      "charges": [
+        "寻衅滋事罪",
+        "故意伤害罪"
+      ],
+      "articles": [
+        234,
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": null,
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [
+        "源标签仅保存首罪分罪刑期，法院明确认定另一罪及数罪并罚；无最终主文，不将首罪刑期冒充决定执行刑期。"
+      ]
+    },
+    "史某某": {
+      "original_code": "史某某",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 13
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    },
+    "任某C": {
+      "original_code": "任某C",
+      "charges": [
+        "故意伤害罪"
+      ],
+      "articles": [
+        234
+      ],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "term": {
+        "type": "有期徒刑",
+        "months": 15
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": []
+    }
+  }
+}

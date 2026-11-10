@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-020",
+  "domain": "MATH",
+  "task_form": "MATH-THEORY",
+  "title": "feat: define Riemannian manifolds",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github-pr-family",
+    "url": "https://github.com/leanprover-community/mathlib4/pull/27250",
+    "revision": "start = reference head b6e1a5c430cc72a76d8da535650bfecc12323b63 minus family-created modules; reference = b6e1a5c430cc72a76d8da535650bfecc12323b63",
+    "license": "Apache-2.0 (mathlib4)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

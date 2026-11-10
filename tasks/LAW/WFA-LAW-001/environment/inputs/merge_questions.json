@@ -1,0 +1,87 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `mae_di_gaap` across all 16 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `mae_co_political` across all 16 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 16 agreements satisfy ALL of the following: `mae_co_apc` = «Yes» AND `mae_di_wnaf` includes «War or terrorism»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 16 agreements satisfy ALL of the following: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND NOT (`mae_co_wnaf_scope` includes «\"act of God\"»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 16 agreements satisfy ALL of the following: `mae_co_political` = «Yes» AND `mae_co_gaap` = «Yes»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `mae_co_industry` = «Yes» AND `mae_di_economic` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `mae_co_economic` = «Yes» AND `mae_co_market_price` = «Yes» AND NOT (`mae_co_apc_scope` includes «pendency»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `mae_di_industry` = «No» AND `mae_di_law` = «Yes». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `mae_di_political` = «No» AND `mae_di_wnaf` includes «\"act of God\"». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "List every agreement that satisfies: NOT (`mae_co_pandemic` gives the same answer as `mae_di_pandemic`). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "Which agreement(s) have the highest value of the number of options selected for `mae_co_wnaf_scope` (not counting 'No')? List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `mae_co_projections`, list every agreement whose answer is shared by at most 3 of the 16 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "For `mae_co_apc`, list every agreement whose answer is shared by at most 2 of the 16 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Consider the deal points `mae_taken_as_whole`, `mae_co_political`, `mae_co_economic`, `mae_co_industry`, `mae_co_gaap`, `mae_co_apc`, `mae_co_apc_scope`, `mae_co_projections`, `mae_co_market_price`, `mae_co_wnaf_scope`, `mae_co_pandemic`, `mae_di_political`, `mae_di_economic`, `mae_di_industry`, `mae_di_law`, `mae_di_gaap`, `mae_di_pandemic`, `mae_di_wnaf`. For each of them, take the most common answer across the 16 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 10 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `mae_taken_as_whole`, `mae_co_market_price`, `mae_di_pandemic`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M16",
+  "question": "Considering only `mae_co_industry`, `mae_co_apc_scope`, `mae_di_economic`: how many distinct answer combinations occur among the 16 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M17",
+  "question": "Which other agreement(s) give the same answer as A07 on the largest number of the 18 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-021",
+  "domain": "MATH",
+  "task_form": "MATH-THEORY",
+  "title": "feat: Hahn embedding theorem",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github-pr-family",
+    "url": "https://github.com/leanprover-community/mathlib4/pull/27268",
+    "revision": "start = reference head 3da78097737889410d807be7b371213f5058c2ec minus family-created modules; reference = 3da78097737889410d807be7b371213f5058c2ec",
+    "license": "Apache-2.0 (mathlib4)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

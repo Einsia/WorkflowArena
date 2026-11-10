@@ -1,0 +1,175 @@
+{
+  "upstream": "https://github.com/milo-lab/cellular_turnover",
+  "revision": "709ba9cbbe53563d0110c10e4f559e35cd02e428",
+  "distribution": "Fetched directly from upstream during image build; upstream assets are excluded from the Git distribution.",
+  "files": [
+    {
+      "source": "Mouse_comparison_data.xlsx",
+      "target": "data/Mouse_comparison_data.xlsx",
+      "sha256": "bbdd0c9a8810a5d28557f0846f9db97a4ae850c138074a2e2b8fb2ed0dd001b6",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Mouse_comparison_data.xlsx"
+    },
+    {
+      "source": "Brain_data.xlsx",
+      "target": "data/Brain_data.xlsx",
+      "sha256": "cb749e97b6f961d8d04910a2028e06d92a3d5c995c0b717076de8a47e0a05286",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Brain_data.xlsx"
+    },
+    {
+      "source": "Monocytes_data.xlsx",
+      "target": "data/Monocytes_data.xlsx",
+      "sha256": "0e548ef91e53221c8318ef3aff745f58ba26da4efe0c5224c6d75d6d9b901ffe",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Monocytes_data.xlsx"
+    },
+    {
+      "source": "RBC_data.xlsx",
+      "target": "data/RBC_data.xlsx",
+      "sha256": "85ed2a5f487659138e6254e7694f4ae80516db451c8d7b54c103338e52bd9cce",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/RBC_data.xlsx"
+    },
+    {
+      "source": "Lung_cells_data.xlsx",
+      "target": "data/Lung_cells_data.xlsx",
+      "sha256": "ff7a04431313929cf8fa0d167ea2a0cbf90d126acfdee6e114d09db483b35d6b",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Lung_cells_data.xlsx"
+    },
+    {
+      "source": "Myocytes_data.xlsx",
+      "target": "data/Myocytes_data.xlsx",
+      "sha256": "73e96eeb8a6ee360494f274f4cdb5fa96c37b555e19dfeb74a75cac08157029f",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Myocytes_data.xlsx"
+    },
+    {
+      "source": "Neutrophils_data.xlsx",
+      "target": "data/Neutrophils_data.xlsx",
+      "sha256": "454faa92fc1540096112a6e5101ee3f6f8ee8651bbd625cdba4b34834624ffe3",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Neutrophils_data.xlsx"
+    },
+    {
+      "source": "Cardiomyocytes.xlsx",
+      "target": "data/Cardiomyocytes.xlsx",
+      "sha256": "5b3f68fcb5e299b80999c2d8b4ff400129d5b9d15c9d10b1182fbddc6f4f1bd1",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Cardiomyocytes.xlsx"
+    },
+    {
+      "source": "Lymphocytes_data.xlsx",
+      "target": "data/Lymphocytes_data.xlsx",
+      "sha256": "994d8cbc6abdf724cd8d609f3b87e9ee3d73b5af5147652e54646320b114d898",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Lymphocytes_data.xlsx"
+    },
+    {
+      "source": "GIT_epithel_data.xlsx",
+      "target": "data/GIT_epithel_data.xlsx",
+      "sha256": "0cc1dc89842242325944aef78e01a2d277763b17b2d6d811f3eabac8a1180ac8",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/GIT_epithel_data.xlsx"
+    },
+    {
+      "source": "Endothelial_cells_data.xlsx",
+      "target": "data/Endothelial_cells_data.xlsx",
+      "sha256": "ddfac5d720c4e63cc9d5a44aff949a7ca5da6a8db0c5b06f350cdd0ef59f525f",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Endothelial_cells_data.xlsx"
+    },
+    {
+      "source": "Skin_cells_data.xlsx",
+      "target": "data/Skin_cells_data.xlsx",
+      "sha256": "dfc0af53b5304b7b89817de92b6e00d6f1b412704c73f1d1a8b4b7bf291264fa",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Skin_cells_data.xlsx"
+    },
+    {
+      "source": "Adipocytes_data.xlsx",
+      "target": "data/Adipocytes_data.xlsx",
+      "sha256": "e6fc91bb2f019f9a82e9db3cacd48392a0e4cd66fde13d75b4e5d8c495e4d9a9",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Adipocytes_data.xlsx"
+    },
+    {
+      "source": "Liver_cells_data.xlsx",
+      "target": "data/Liver_cells_data.xlsx",
+      "sha256": "aa46ddc6b3f00d430f4c47849e008abde370a2d4551cab6bdbc3227ba6e4b116",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Liver_cells_data.xlsx"
+    },
+    {
+      "source": "Liver_cells.ipynb",
+      "target": "methods/Liver_cells.md",
+      "sha256": "cd478e3a5fa12fb5fa60608973b58bb2c141a1be2704c13268ec06b0512abf51",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Liver_cells.ipynb"
+    },
+    {
+      "source": "Lymphocytes.ipynb",
+      "target": "methods/Lymphocytes.md",
+      "sha256": "664c85e788a25e3f5279f99bc5261420da9929284e0eac2697d305d9d8e6a807",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Lymphocytes.ipynb"
+    },
+    {
+      "source": "Endothelial_cells.ipynb",
+      "target": "methods/Endothelial_cells.md",
+      "sha256": "c07f2c3cfa4f5db0bb26645fa66ca60d604e9584059aae7bfabf4a8e6f9c2cc0",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Endothelial_cells.ipynb"
+    },
+    {
+      "source": "Monocytes.ipynb",
+      "target": "methods/Monocytes.md",
+      "sha256": "ef32e505aa8592e52c51c5e7c3e6b8df3741260c90ddd22967842863db35541a",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Monocytes.ipynb"
+    },
+    {
+      "source": "Lung_cells.ipynb",
+      "target": "methods/Lung_cells.md",
+      "sha256": "5e31226fc132db275fee5b7b20f31612f3eef2ac4f53b8d6d8e9e1c799681ac4",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Lung_cells.ipynb"
+    },
+    {
+      "source": "Neutrophils.ipynb",
+      "target": "methods/Neutrophils.md",
+      "sha256": "ad689c78ca3bc2bfc8c1b7df1fa6578973a77aaf22d70e04fa3ab25964862843",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Neutrophils.ipynb"
+    },
+    {
+      "source": "Brain_cells.ipynb",
+      "target": "methods/Brain_cells.md",
+      "sha256": "33348776896dca54c15d81e02a32f79bce4e0860e9e6481d3a2d1159fca109e6",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Brain_cells.ipynb"
+    },
+    {
+      "source": "Skin_cells.ipynb",
+      "target": "methods/Skin_cells.md",
+      "sha256": "6aba6461f4320654a74f095faf747531c34afdbe336a6326d861c9f5c8b139e6",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Skin_cells.ipynb"
+    },
+    {
+      "source": "Cardiomyocytes.ipynb",
+      "target": "methods/Cardiomyocytes.md",
+      "sha256": "0ca9bd18cd58562f731355a0457281ba05c940e2fcc4d9a0a6930c093a23f727",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Cardiomyocytes.ipynb"
+    },
+    {
+      "source": "Utility_Functions.ipynb",
+      "target": "methods/Utility_Functions.md",
+      "sha256": "98c7666cc6e9301c17c59897d85a7e05ffc7cd81f10ad47f95a81e8d5a026a96",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Utility_Functions.ipynb"
+    },
+    {
+      "source": "GIT_Epithelial_cells.ipynb",
+      "target": "methods/GIT_Epithelial_cells.md",
+      "sha256": "87015b01a18badbdd9795e5d0fb94728c017ca0e1667f8e566a4cb0fa3cff9dd",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/GIT_Epithelial_cells.ipynb"
+    },
+    {
+      "source": "Erythrocytes.ipynb",
+      "target": "methods/Erythrocytes.md",
+      "sha256": "0decae799033f724a2847c727bf95bcbfccd007f09a4e61e334d9d6f51a3e2e8",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Erythrocytes.ipynb"
+    },
+    {
+      "source": "Adipocytes.ipynb",
+      "target": "methods/Adipocytes.md",
+      "sha256": "022f11414c80b0113ea2e4ec7b5eaf359c96c489186112dcbab197f00bd4fd51",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Adipocytes.ipynb"
+    },
+    {
+      "source": "Myocytes.ipynb",
+      "target": "methods/Myocytes.md",
+      "sha256": "120b82b4655d7b8f6755cca8918c170c3a3da95672403bd624b590d323109ee6",
+      "url": "https://raw.githubusercontent.com/milo-lab/cellular_turnover/709ba9cbbe53563d0110c10e4f559e35cd02e428/Myocytes.ipynb"
+    }
+  ]
+}

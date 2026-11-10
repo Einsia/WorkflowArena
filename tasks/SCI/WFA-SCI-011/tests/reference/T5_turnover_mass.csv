@@ -1,0 +1,27 @@
+cell_type,grams_per_day
+Erythrocytes,19.97962278726051
+Neutrophils,18.11155661683278
+Thymocytes,0.1125780819760845
+Mature T cells,0.4094013218279471
+B cells progenitors,1.231430035797596
+Transitional B cells,0.05348460043445636
+Mature B cells,0.9462631870171027
+Monocytes,0.6969880569098859
+Stomach epithelia,1.058116862598053
+Small intestine epithelia,18.8079231482524
+Colon epithelia,14.05588835523112
+Epidermal cells,3.094789090909091
+Dermal fibroblasts,0.6187046479623529
+Endothelial cells,0.2923718847834136
+Alveolar epithelial cells,7.539166666666667
+Alveolar macrophages,0.3674157378864608
+Bronchial epithelial cells,0.0671563101074673
+Lung interstitial cells,2.296457386363636
+Adipocytes,2.987945205479451
+Myocytes,0.9259284799355243
+Cardiomyocytes,0.001982792025627823
+Neurons,0.001902186904812726
+Glial cells,0.02104766313906859
+Hepatocytes,2.72
+Kupffer cells,0.03
+Stellate cells,0.25

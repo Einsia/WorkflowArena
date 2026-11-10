@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#1b1d22"/>
+<g font-family="sans-serif" fill="#ece6d8">
+<text x="40" y="50" font-size="26">Attic floor plan (top view, metres). Layout reference only.</text>
+<rect x="100" y="120" width="800" height="640" fill="#3a3229" stroke="#bfae8f" stroke-width="4"/>
+<text x="110" y="112" font-size="18">north gable wall (+y)</text>
+<rect x="236" y="112" width="112" height="16" fill="#8fb2c9"/>
+<text x="230" y="160" font-size="18">casement window</text>
+<line x1="216" y1="140" x2="368" y2="140" stroke="#c99b45" stroke-width="6"/>
+<text x="380" y="146" font-size="16">curtain rod / CURTAIN</text>
+<rect x="420" y="456" width="192" height="96" fill="#7a5a3a"/>
+<text x="470" y="510" font-size="18">DESK</text>
+<circle cx="516" cy="440" r="14" fill="#e8c46a"/>
+<text x="540" y="436" font-size="16">PENDANT_LAMP hook</text>
+<circle cx="516" cy="600" r="12" fill="#6f8f6a"/>
+<text x="536" y="606" font-size="16">MARA (start, seated)</text>
+<text x="110" y="790" font-size="16">x -></text>
+<text x="60" y="140" font-size="16">y</text>
+</g></svg>

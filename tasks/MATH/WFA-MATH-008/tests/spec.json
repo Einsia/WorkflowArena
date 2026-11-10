@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "PFR.RhoFunctional",
+  "build_targets": [
+    "PFR.RhoFunctional"
+  ],
+  "names": [
+    "better_PFR_conjecture"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "PFR"
+    ],
+    "target_file": "PFR/RhoFunctional.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

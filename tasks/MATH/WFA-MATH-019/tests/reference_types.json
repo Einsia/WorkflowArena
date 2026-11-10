@@ -1,0 +1,19 @@
+{
+  "FirstOrder.Language.presburger": "924282558",
+  "FirstOrder.Language.presburger.definable_iff_isSemilinearSet": "1704536033",
+  "FirstOrder.Language.presburger.definable₁_iff_ultimately_periodic": "3960692819",
+  "FirstOrder.Language.presburger.instStructure": "1211337907",
+  "FirstOrder.Language.presburger.isSemilinearSet_boundedFormula_realize": "4233426756",
+  "FirstOrder.Language.presburger.isSemilinearSet_formula_realize_semilinear": "1376980074",
+  "FirstOrder.Language.presburger.mul_not_definable": "783540803",
+  "FirstOrder.Language.presburger.term_realize_eq_add_dotProduct": "3589690318",
+  "IsLinearSet": "2294098382",
+  "IsLinearSet.definable": "2497729616",
+  "IsProperLinearSet": "2294098382",
+  "IsProperSemilinearSet": "2294098382",
+  "IsSemilinearSet": "2294098382",
+  "IsSemilinearSet.definable": "526689672",
+  "Nat.isSemilinearSet_iff_ultimately_periodic": "285542956",
+  "isProperSemilinearSet_iff": "778552804",
+  "isSemilinearSet_iff": "638523225"
+}

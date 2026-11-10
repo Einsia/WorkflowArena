@@ -1,0 +1,27 @@
+cell_type,source,lifespan_days
+Erythrocytes,human,119.3166666666667
+Neutrophils,human,6.617543859649123
+Thymocytes,rodent,3.785714285714286
+Mature T cells,human,323.0466791325192
+B cells progenitors,rodent,0.8324082309935135
+Transitional B cells,rodent,9.896002599935
+Mature B cells,human,62.86493458200684
+Monocytes,human,3.451409116890697
+Stomach epithelia,human,13.35769230769231
+Small intestine epithelia,human,5.285714285714286
+Colon epithelia,human,3.359423076923077
+Epidermal cells,human,31.31944444444445
+Dermal fibroblasts,rodent,140.0
+Endothelial cells,human,2281.25
+Alveolar epithelial cells,rodent,31.5
+Alveolar macrophages,human,164.5091479959365
+Bronchial epithelial cells,human,138.6823445007129
+Lung interstitial cells,rodent,44.0
+Adipocytes,human,4451.219512195122
+Myocytes,human,18340.24138235819
+Cardiomyocytes,human,55747.79305155358
+Neurons,human,277183.1655758193
+Glial cells,human,20904.34246222576
+Hepatocytes,rodent,360.0
+Kupffer cells,rodent,400.0
+Stellate cells,rodent,30.0

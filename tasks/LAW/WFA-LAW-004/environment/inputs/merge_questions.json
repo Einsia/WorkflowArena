@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `kn_definition` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `dp_cor_match_additional` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `dp_cor_ie_yn` = «Yes» AND `dp_cor_match_initial` = «4 business days»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `dp_noshop_rep_liability` = «Yes» AND NOT (`dp_cor_match_additional` = «3 business days»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `dp_so_stock_threshold` = «Greater than 50% but not \"all or substantially all\"» AND NOT (`dp_so_asset_threshold` = «50%»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `dp_noshop_rep_standard` = «Strict liability» AND NOT (`dp_fidout_standard` = «\"Inconsistent\" with fiduciary duties»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `dp_cor_so_standard` = «\"Inconsistent\" with fiduciary duties» AND NOT (`dp_cor_match_initial` = «3 business days»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `dp_cor_so_standard` = «\"Reasonably likely/expected to be inconsistent\" with fiduciary duties» AND `dp_so_fpov_sole` = «Yes». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `dp_noshop_rep_standard` = «Reasonable standard» AND `dp_cor_match_initial` = «5 business days». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "List every agreement that satisfies: NOT (`dp_so_stock_threshold` gives the same answer as `dp_so_asset_threshold`). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "For `gen_consideration`, list every agreement whose answer is shared by at most 2 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `kn_identified_persons`, list every agreement whose answer is shared by at most 1 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "Consider the deal points `dp_noshop_rep_liability`, `dp_noshop_rep_standard`, `dp_fidout_standard`, `dp_cor_ie_yn`, `dp_cor_match_initial`, `dp_cor_match_additional`, `dp_so_stock_threshold`, `dp_so_asset_threshold`, `dp_so_fpov_sole`, `kn_definition`, `kn_identified_persons`, `rem_specific_performance`, `gen_consideration`. For each of them, take the most common answer across the 15 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 6 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Considering only `dp_fidout_standard`, `dp_cor_board_only`, `dp_cor_ie_yn`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `dp_fidout_trigger`, `dp_so_asset_threshold`, `dp_so_fpov_sole`: how many distinct answer combinations occur among the 15 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M16",
+  "question": "Which other agreement(s) give the same answer as A15 on the largest number of the 16 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

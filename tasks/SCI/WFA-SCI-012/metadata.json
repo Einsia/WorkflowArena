@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-012",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "Main-group thermochemistry benchmark: reaction-energy errors of a dispersion-corrected hybrid functional on 7 subsets",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal article + public database (geometries, reference values, per-functional results) + SI",
+    "url": "https://doi.org/10.1039/C7CP04913G",
+    "revision": "GMTKN55 web database (thch.uni-bonn.de/tc.old/downloads/GMTKN/GMTKN55, retrieved 2026-10-23); SI si_gmtkn55.pdf Table S68",
+    "license": "CC-BY-4.0 (GMTKN55 dataset); MIT (upstream evaluation script)",
+    "license_evidence": "https://github.com/grimme-lab/GMTKN55/blob/8d485b37a1ca8837e395042671ca5ba4e0714691/LICENSE",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

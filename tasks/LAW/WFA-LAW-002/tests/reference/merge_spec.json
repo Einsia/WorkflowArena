@@ -1,0 +1,246 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "mae_relational_scope",
+   "id": "M01",
+   "text": "Give the distribution of answers to `mae_relational_scope` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "mae_relational_terms",
+   "id": "M02",
+   "text": "Give the distribution of answers to `mae_relational_terms` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (count each agreement once for every option included in its answer).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_taken_as_whole",
+      "eq": "Applies to Target and subsidiaries \"taken as a whole\""
+     },
+     {
+      "dp": "mae_co_buyer_consent",
+      "eq": "Yes"
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND `mae_co_buyer_consent` = «Yes»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_fls_yn",
+      "eq": "Yes"
+     },
+     {
+      "dp": "mae_co_disclosure_schedules",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `mae_fls_yn` = «Yes» AND `mae_co_disclosure_schedules` = «No»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_ability_subject_to_carveouts",
+      "eq": "No"
+     },
+     {
+      "not": {
+       "dp": "mae_co_apc_scope",
+       "has": "consummation"
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 15 agreements satisfy ALL of the following: `mae_ability_subject_to_carveouts` = «No» AND NOT (`mae_co_apc_scope` includes «consummation»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_ability_to_consummate",
+      "eq": "Yes"
+     },
+     {
+      "dp": "mae_co_buyer_actions",
+      "eq": "Yes"
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `mae_ability_to_consummate` = «Yes» AND `mae_co_buyer_actions` = «Yes». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_fls_standard",
+      "eq": "\"Would\" (reasonably) be expected to"
+     },
+     {
+      "dp": "mae_fls_applies_to",
+      "has": "ability to consummate transaction"
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `mae_fls_standard` = «\"Would\" (reasonably) be expected to» AND `mae_fls_applies_to` includes «ability to consummate transaction». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_stockholder_litigation",
+      "eq": "No"
+     },
+     {
+      "dp": "mae_co_prohibited_actions",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `mae_co_stockholder_litigation` = «No» AND `mae_co_prohibited_actions` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_taken_as_whole",
+      "eq": "No"
+     },
+     {
+      "dp": "mae_relational_yn",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M09",
+   "text": "List every agreement that satisfies: `mae_taken_as_whole` = «No» AND `mae_relational_yn` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "none"
+  },
+  {
+   "op": "extremum",
+   "mode": "min",
+   "score": {
+    "type": "set_size",
+    "dp": "mae_fls_applies_to",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M10",
+   "text": "Which agreement(s) have the lowest value of the number of options selected for `mae_fls_applies_to` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "mae_fls_yn",
+   "max_holders": 3,
+   "id": "M11",
+   "text": "For `mae_fls_yn`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "mae_relational_scope",
+   "max_holders": 3,
+   "id": "M12",
+   "text": "For `mae_relational_scope`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_ability_subject_to_carveouts",
+    "mae_fls_yn",
+    "mae_fls_standard",
+    "mae_fls_applies_to",
+    "mae_relational_yn",
+    "mae_relational_scope",
+    "mae_co_required_actions",
+    "mae_co_buyer_consent",
+    "mae_co_stockholder_litigation",
+    "mae_co_disclosure_schedules",
+    "mae_co_buyer_actions",
+    "mae_co_prohibited_actions"
+   ],
+   "min_dev": 8,
+   "id": "M13",
+   "text": "Consider the deal points `mae_taken_as_whole`, `mae_ability_to_consummate`, `mae_ability_subject_to_carveouts`, `mae_fls_yn`, `mae_fls_standard`, `mae_fls_applies_to`, `mae_relational_yn`, `mae_relational_scope`, `mae_co_required_actions`, `mae_co_buyer_consent`, `mae_co_stockholder_litigation`, `mae_co_disclosure_schedules`, `mae_co_buyer_actions`, `mae_co_prohibited_actions`. For each of them, take the most common answer across the 15 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 8 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "mae_co_apc_scope",
+    "mae_co_required_actions",
+    "mae_co_disclosure_schedules"
+   ],
+   "id": "M14",
+   "text": "Considering only `mae_co_apc_scope`, `mae_co_required_actions`, `mae_co_disclosure_schedules`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "mae_relational_yn",
+    "mae_relational_terms",
+    "mae_co_required_actions"
+   ],
+   "id": "M15",
+   "text": "Considering only `mae_relational_yn`, `mae_relational_terms`, `mae_co_required_actions`: how many distinct answer combinations occur among the 15 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A06",
+   "dps": [
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_ability_subject_to_carveouts",
+    "mae_fls_yn",
+    "mae_fls_standard",
+    "mae_fls_applies_to",
+    "mae_relational_yn",
+    "mae_relational_scope",
+    "mae_relational_terms",
+    "mae_co_apc_scope",
+    "mae_co_required_actions",
+    "mae_co_buyer_consent",
+    "mae_co_stockholder_litigation",
+    "mae_co_disclosure_schedules",
+    "mae_co_buyer_actions",
+    "mae_co_prohibited_actions"
+   ],
+   "id": "M16",
+   "text": "Which other agreement(s) give the same answer as A06 on the largest number of the 16 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

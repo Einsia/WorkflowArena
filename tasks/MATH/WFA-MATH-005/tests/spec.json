@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "FltRegular.SmallNumbers.SmallNumbers",
+  "build_targets": [
+    "FltRegular.SmallNumbers.SmallNumbers"
+  ],
+  "names": [
+    "FLT_small"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "FltRegular"
+    ],
+    "target_file": "FltRegular/SmallNumbers/SmallNumbers.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

@@ -1,0 +1,199 @@
+{
+ "defendants": {
+  "[被告A]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告B]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告C]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告D]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告E]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告F]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告G]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告H]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告I]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告J]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告K]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告L]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告M]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告N]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告O]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  }
+ }
+}

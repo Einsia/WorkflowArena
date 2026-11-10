@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/workspace/submission"]
+
+[task]
+name = "WFA-LAW-007"
+version = "0.1.0"
+description = "Merger-agreement deal-points survey of 15 agreements (Conditions to closing (bring-down standards, fundamental representations, scrape)): fill a 15x16 standard-option table and answer 14 cross-agreement survey questions"
+
+[metadata]
+domain = "LAW"
+subcategory = "LAW-TXN"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 4
+memory_mb = 8192
+storage_mb = 4096
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 1
+memory_mb = 2048
+storage_mb = 2048

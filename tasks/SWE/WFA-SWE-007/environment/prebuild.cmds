@@ -1,0 +1,2 @@
+BUILD_CMD='cd /work && pip install --no-build-isolation --no-deps -q -Ccompile-args=-j24 . '
+IMPORT_CHECK='cd / && python -c "import scipy, scipy.stats, scipy.signal, scipy.interpolate; print(\"import ok\", scipy.__version__)"'

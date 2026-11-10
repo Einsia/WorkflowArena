@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-FIN-002",
+  "domain": "FIN",
+  "task_form": "FIN-ANA",
+  "title": "银行：拨备改善、信用损失与账面权益压力",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "SEC EDGAR financial filings with an authored machine contract",
+    "external_authenticity_asserted": true,
+    "companies": [
+      "JPM",
+      "BAC",
+      "C",
+      "PNC",
+      "USB",
+      "COF",
+      "FITB",
+      "RF",
+      "HBAN",
+      "CFG",
+      "ZION",
+      "WAL",
+      "EWBC",
+      "WTFC"
+    ],
+    "url": "https://www.sec.gov/edgar/search/",
+    "provenance": "environment/public/SOURCE.json",
+    "verification": "All delivered HTML hashes match original per-filing acquisition records, including source URLs and raw-document hashes."
+  }
+}

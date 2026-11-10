@@ -1,0 +1,10 @@
+{
+  "ContinuousLinearMap.IsFredholm": {
+    "role": "req",
+    "fp": "ind 663057372 11 0 11684959399003199594"
+  },
+  "ContinuousLinearMap.IsFredholm.mk": {
+    "role": "dep",
+    "fp": "ctor 1452174672"
+  }
+}

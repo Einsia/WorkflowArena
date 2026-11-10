@@ -1,0 +1,183 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12"
+ ],
+ "deal_points": {
+  "mae_taken_as_whole": {
+   "options": [
+    "Applies to Target and subsidiaries \"taken as a whole\"",
+    "No"
+   ],
+   "multi": false
+  },
+  "mae_ability_to_consummate": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_fls_standard": {
+   "options": [
+    "\"Could\" (reasonably) be expected to",
+    "\"Would\"",
+    "\"Would\" (reasonably) be expected to",
+    "No",
+    "Other forward-looking standard"
+   ],
+   "multi": false
+  },
+  "mae_co_political": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_industry": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_market_price": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_industry": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_stockholder_litigation": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_disclosure_schedules": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "cc_general_bringdown_timing": {
+   "options": [
+    "At Closing Only",
+    "At Signing & At Closing"
+   ],
+   "multi": false
+  },
+  "cc_cap_bringdown_standard": {
+   "options": [
+    "Accurate in all material respects",
+    "Accurate in all respects",
+    "Accurate in all respects with below-threshold carveout",
+    "Accurate in all respects with de minimis exception"
+   ],
+   "multi": false
+  },
+  "cc_fund_bringdown_standard": {
+   "options": [
+    "Accurate at another materiality standard (e.g., hybrid standard)",
+    "Accurate in all material respects",
+    "Accurate in all respects"
+   ],
+   "multi": false
+  },
+  "cc_scrape_applies_to": {
+   "options": [
+    "Capitalization R&Ws",
+    "General R&Ws",
+    "Specified R&Ws only",
+    "fundamental/Special R&Ws"
+   ],
+   "multi": true
+  },
+  "cc_covenant_compliance": {
+   "options": [
+    "All Covenants",
+    "Each Covenant",
+    "Hybrid/Other Standard"
+   ],
+   "multi": false
+  },
+  "ef_antitrust_standard": {
+   "options": [
+    "Commercially reasonable efforts",
+    "Flat standard",
+    "Reasonable best efforts"
+   ],
+   "multi": false
+  },
+  "oc_efforts_standard": {
+   "options": [
+    "Commercially reasonable efforts",
+    "Flat covenant (no efforts standard)",
+    "Reasonable best efforts"
+   ],
+   "multi": false
+  },
+  "rem_specific_performance": {
+   "options": [
+    "\"entitled to seek\" specific performance",
+    "\"entitled to\" specific performance"
+   ],
+   "multi": false
+  },
+  "kn_definition": {
+   "options": [
+    "Actual knowledge",
+    "Constructive knowledge"
+   ],
+   "multi": false
+  }
+ }
+}

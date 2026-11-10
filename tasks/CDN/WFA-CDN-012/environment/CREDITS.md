@@ -1,0 +1,64 @@
+# Credits
+
+- `input/case-descriptions.pdf` — [case-descriptions.pdf](https://www.eia.gov/outlooks/aeo/assumptions/pdf/case_descriptions.pdf).
+- `input/figure-data.xlsx` — [figure-data.xlsx](https://www.eia.gov/outlooks/aeo/excel/Narrative_Figures.xlsx).
+- `input/outlook-report.pdf` — [outlook-report.pdf](https://www.eia.gov/outlooks/aeo/pdf/AEO_Narrative.pdf).
+- `input/tables/altelec_table1.xlsx` — [altelec_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab1.xlsx).
+- `input/tables/altelec_table2.xlsx` — [altelec_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab2.xlsx).
+- `input/tables/altelec_table20.xlsx` — [altelec_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab20.xlsx).
+- `input/tables/altelec_table3.xlsx` — [altelec_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab3.xlsx).
+- `input/tables/altelec_table8.xlsx` — [altelec_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/altelec/aeotab8.xlsx).
+- `input/tables/alttrnp_table1.xlsx` — [alttrnp_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab1.xlsx).
+- `input/tables/alttrnp_table2.xlsx` — [alttrnp_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab2.xlsx).
+- `input/tables/alttrnp_table20.xlsx` — [alttrnp_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab20.xlsx).
+- `input/tables/alttrnp_table3.xlsx` — [alttrnp_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab3.xlsx).
+- `input/tables/alttrnp_table8.xlsx` — [alttrnp_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/alttrnp/aeotab8.xlsx).
+- `input/tables/cb2026_table1.xlsx` — [cb2026_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/aeotab1.xlsx).
+- `input/tables/cb2026_table2.xlsx` — [cb2026_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/aeotab2.xlsx).
+- `input/tables/cb2026_table20.xlsx` — [cb2026_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/aeotab20.xlsx).
+- `input/tables/cb2026_table3.xlsx` — [cb2026_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/aeotab3.xlsx).
+- `input/tables/cb2026_table8.xlsx` — [cb2026_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/aeotab8.xlsx).
+- `input/tables/electrnp_table1.xlsx` — [electrnp_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab1.xlsx).
+- `input/tables/electrnp_table2.xlsx` — [electrnp_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab2.xlsx).
+- `input/tables/electrnp_table20.xlsx` — [electrnp_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab20.xlsx).
+- `input/tables/electrnp_table3.xlsx` — [electrnp_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab3.xlsx).
+- `input/tables/electrnp_table8.xlsx` — [electrnp_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/electrnp/aeotab8.xlsx).
+- `input/tables/highZTC_table1.xlsx` — [highZTC_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab1.xlsx).
+- `input/tables/highZTC_table2.xlsx` — [highZTC_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab2.xlsx).
+- `input/tables/highZTC_table20.xlsx` — [highZTC_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab20.xlsx).
+- `input/tables/highZTC_table3.xlsx` — [highZTC_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab3.xlsx).
+- `input/tables/highZTC_table8.xlsx` — [highZTC_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highZTC/aeotab8.xlsx).
+- `input/tables/higheldmd_table1.xlsx` — [higheldmd_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab1.xlsx).
+- `input/tables/higheldmd_table2.xlsx` — [higheldmd_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab2.xlsx).
+- `input/tables/higheldmd_table20.xlsx` — [higheldmd_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab20.xlsx).
+- `input/tables/higheldmd_table3.xlsx` — [higheldmd_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab3.xlsx).
+- `input/tables/higheldmd_table8.xlsx` — [higheldmd_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/higheldmd/aeotab8.xlsx).
+- `input/tables/highmacro_table1.xlsx` — [highmacro_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab1.xlsx).
+- `input/tables/highmacro_table2.xlsx` — [highmacro_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab2.xlsx).
+- `input/tables/highmacro_table20.xlsx` — [highmacro_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab20.xlsx).
+- `input/tables/highmacro_table3.xlsx` — [highmacro_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab3.xlsx).
+- `input/tables/highmacro_table8.xlsx` — [highmacro_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highmacro/aeotab8.xlsx).
+- `input/tables/highogs_table1.xlsx` — [highogs_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab1.xlsx).
+- `input/tables/highogs_table2.xlsx` — [highogs_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab2.xlsx).
+- `input/tables/highogs_table20.xlsx` — [highogs_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab20.xlsx).
+- `input/tables/highogs_table3.xlsx` — [highogs_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab3.xlsx).
+- `input/tables/highogs_table8.xlsx` — [highogs_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/highogs/aeotab8.xlsx).
+- `input/tables/lowZTC_table1.xlsx` — [lowZTC_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab1.xlsx).
+- `input/tables/lowZTC_table2.xlsx` — [lowZTC_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab2.xlsx).
+- `input/tables/lowZTC_table20.xlsx` — [lowZTC_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab20.xlsx).
+- `input/tables/lowZTC_table3.xlsx` — [lowZTC_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab3.xlsx).
+- `input/tables/lowZTC_table8.xlsx` — [lowZTC_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowZTC/aeotab8.xlsx).
+- `input/tables/lowmacro_table1.xlsx` — [lowmacro_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab1.xlsx).
+- `input/tables/lowmacro_table2.xlsx` — [lowmacro_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab2.xlsx).
+- `input/tables/lowmacro_table20.xlsx` — [lowmacro_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab20.xlsx).
+- `input/tables/lowmacro_table3.xlsx` — [lowmacro_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab3.xlsx).
+- `input/tables/lowmacro_table8.xlsx` — [lowmacro_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowmacro/aeotab8.xlsx).
+- `input/tables/lowogs_table1.xlsx` — [lowogs_table1.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab1.xlsx).
+- `input/tables/lowogs_table2.xlsx` — [lowogs_table2.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab2.xlsx).
+- `input/tables/lowogs_table20.xlsx` — [lowogs_table20.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab20.xlsx).
+- `input/tables/lowogs_table3.xlsx` — [lowogs_table3.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab3.xlsx).
+- `input/tables/lowogs_table8.xlsx` — [lowogs_table8.xlsx](https://www.eia.gov/outlooks/aeo/excel/sidecases/lowogs/aeotab8.xlsx).
+
+U.S. federal government works; public domain in the United States.
+
+The source documents are unmodified. This independent benchmark does not imply endorsement by the publishers.

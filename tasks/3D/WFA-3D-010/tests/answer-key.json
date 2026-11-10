@@ -1,0 +1,1309 @@
+{
+  "task_id": "WFA-3D-010",
+  "seed": 20261034,
+  "note": "真值已应用 CO-01。单位 m，Z 向上，水面 Z=0。ship.root=设计水线∩中线∩船中(L/2)。",
+  "globals": {
+    "gap_m": 1.5,
+    "land_z_m": 3.5,
+    "seabed_z_m": -8.0,
+    "water_z_m": 0.0,
+    "fps": 24,
+    "frame_start": 1,
+    "frame_end": 240,
+    "roll_amp_deg": 2.0
+  },
+  "change_order": {
+    "id": "CO-01",
+    "items": [
+      {
+        "n": 1,
+        "units": [
+          "S03",
+          "S07"
+        ],
+        "what": "泊位互换",
+        "before": {
+          "S03": "BT06",
+          "S07": "BT10"
+        },
+        "after": {
+          "S03": "BT10",
+          "S07": "BT06"
+        }
+      },
+      {
+        "n": 2,
+        "units": [
+          "S05"
+        ],
+        "what": "brig→brigantine; yards [3,3]→[3,0]; jibs 2→3",
+        "before": {
+          "rig_type": "brig",
+          "yards": [
+            3,
+            3
+          ],
+          "jibs": 2
+        },
+        "after": {
+          "rig_type": "brigantine",
+          "yards": [
+            3,
+            0
+          ],
+          "jibs": 3
+        }
+      },
+      {
+        "n": 3,
+        "units": [
+          "Q02"
+        ],
+        "implicated": [
+          "P01",
+          "C01"
+        ],
+        "what": "Q02 coping raised",
+        "before": 2.54,
+        "after": 3.1
+      },
+      {
+        "n": 4,
+        "units": [
+          "L01"
+        ],
+        "what": "rotation period",
+        "before": 12.0,
+        "after": 9.0
+      }
+    ]
+  },
+  "assignment_original": {
+    "S01": "BT09",
+    "S02": "BT01",
+    "S03": "BT06",
+    "S04": "BT03",
+    "S05": "BT05",
+    "S06": "BT04",
+    "S07": "BT10",
+    "S08": "BT12",
+    "S09": "BT02",
+    "S10": "BT11"
+  },
+  "assignment_final": {
+    "S01": "BT09",
+    "S02": "BT01",
+    "S03": "BT10",
+    "S04": "BT03",
+    "S05": "BT05",
+    "S06": "BT04",
+    "S07": "BT06",
+    "S08": "BT12",
+    "S09": "BT02",
+    "S10": "BT11"
+  },
+  "berths": [
+    {
+      "berth": "BT01",
+      "host": "Q01",
+      "kind": "quay_face",
+      "fender_x1": -205,
+      "fender_y1": 0.0,
+      "fender_x2": -95,
+      "fender_y2": 0.0,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": -186.0,
+      "mark_y": 0.0,
+      "bow_heading_deg": 180.0
+    },
+    {
+      "berth": "BT02",
+      "host": "P03",
+      "kind": "pier_W",
+      "fender_x1": -154.0,
+      "fender_y1": 0.0,
+      "fender_x2": -154.0,
+      "fender_y2": -50.4,
+      "water_nx": -1.0,
+      "water_ny": 0.0,
+      "mark_x": -154.0,
+      "mark_y": -21.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT03",
+      "host": "P03",
+      "kind": "pier_E",
+      "fender_x1": -146.0,
+      "fender_y1": 0.0,
+      "fender_x2": -146.0,
+      "fender_y2": -50.4,
+      "water_nx": 1.0,
+      "water_ny": 0.0,
+      "mark_x": -146.0,
+      "mark_y": -16.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT04",
+      "host": "P03",
+      "kind": "pier_head",
+      "fender_x1": -161.0,
+      "fender_y1": -51.4,
+      "fender_x2": -139.0,
+      "fender_y2": -51.4,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": -150.0,
+      "mark_y": -51.4,
+      "bow_heading_deg": 180.0
+    },
+    {
+      "berth": "BT05",
+      "host": "Q02",
+      "kind": "quay_face",
+      "fender_x1": -85,
+      "fender_y1": 0.0,
+      "fender_x2": 45,
+      "fender_y2": 0.0,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": -58.0,
+      "mark_y": 0.0,
+      "bow_heading_deg": 180.0
+    },
+    {
+      "berth": "BT06",
+      "host": "P01",
+      "kind": "pier_W",
+      "fender_x1": -23.5,
+      "fender_y1": 0.0,
+      "fender_x2": -23.5,
+      "fender_y2": -46.8,
+      "water_nx": -1.0,
+      "water_ny": 0.0,
+      "mark_x": -23.5,
+      "mark_y": -24.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT07",
+      "host": "P01",
+      "kind": "pier_E",
+      "fender_x1": -16.5,
+      "fender_y1": 0.0,
+      "fender_x2": -16.5,
+      "fender_y2": -46.8,
+      "water_nx": 1.0,
+      "water_ny": 0.0,
+      "mark_x": -16.5,
+      "mark_y": -22.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT08",
+      "host": "Q02",
+      "kind": "quay_face",
+      "fender_x1": -85,
+      "fender_y1": 0.0,
+      "fender_x2": 45,
+      "fender_y2": 0.0,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": 22.0,
+      "mark_y": 0.0,
+      "bow_heading_deg": 0.0
+    },
+    {
+      "berth": "BT09",
+      "host": "P02",
+      "kind": "pier_W",
+      "fender_x1": 120.5,
+      "fender_y1": 0.0,
+      "fender_x2": 120.5,
+      "fender_y2": -58.2,
+      "water_nx": -1.0,
+      "water_ny": 0.0,
+      "mark_x": 120.5,
+      "mark_y": -30.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT10",
+      "host": "P02",
+      "kind": "pier_E",
+      "fender_x1": 129.5,
+      "fender_y1": 0.0,
+      "fender_x2": 129.5,
+      "fender_y2": -58.2,
+      "water_nx": 1.0,
+      "water_ny": 0.0,
+      "mark_x": 129.5,
+      "mark_y": -31.0,
+      "bow_heading_deg": -90.0
+    },
+    {
+      "berth": "BT11",
+      "host": "Q03",
+      "kind": "quay_face",
+      "fender_x1": 55,
+      "fender_y1": 0.0,
+      "fender_x2": 200,
+      "fender_y2": 0.0,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": 172.0,
+      "mark_y": 0.0,
+      "bow_heading_deg": 0.0
+    },
+    {
+      "berth": "BT12",
+      "host": "Q03",
+      "kind": "quay_face",
+      "fender_x1": 55,
+      "fender_y1": 0.0,
+      "fender_x2": 200,
+      "fender_y2": 0.0,
+      "water_nx": 0.0,
+      "water_ny": -1.0,
+      "mark_x": 72.0,
+      "mark_y": 0.0,
+      "bow_heading_deg": 180.0
+    }
+  ],
+  "zones": {
+    "A": {
+      "name_zh": "船坞区",
+      "name_en": "Dry-dock yard",
+      "units": [
+        "D01",
+        "C03"
+      ]
+    },
+    "B": {
+      "name_zh": "西码头",
+      "name_en": "West quay",
+      "units": [
+        "Q01",
+        "P03",
+        "S02",
+        "S04",
+        "S06",
+        "S09"
+      ]
+    },
+    "C": {
+      "name_zh": "中码头",
+      "name_en": "Central quay",
+      "units": [
+        "Q02",
+        "P01",
+        "C01",
+        "S05",
+        "S07"
+      ]
+    },
+    "D": {
+      "name_zh": "东码头",
+      "name_en": "East quay",
+      "units": [
+        "Q03",
+        "P02",
+        "C02",
+        "S01",
+        "S03",
+        "S08",
+        "S10"
+      ]
+    },
+    "E": {
+      "name_zh": "仓储带",
+      "name_en": "Warehouse row",
+      "units": [
+        "W01",
+        "W02",
+        "W03",
+        "W04"
+      ]
+    },
+    "F": {
+      "name_zh": "外港",
+      "name_en": "Outer harbour",
+      "units": [
+        "B01",
+        "L01"
+      ]
+    }
+  },
+  "interfaces": {
+    "I1_berthing": {
+      "S01": {
+        "berth": "BT09",
+        "root_xy": [
+          113.4,
+          -30.0
+        ],
+        "heading_deg": -90.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S02": {
+        "berth": "BT01",
+        "root_xy": [
+          -186.0,
+          -6.05
+        ],
+        "heading_deg": 180.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S03": {
+        "berth": "BT10",
+        "root_xy": [
+          135.15,
+          -31.0
+        ],
+        "heading_deg": -90.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S04": {
+        "berth": "BT03",
+        "root_xy": [
+          -140.3,
+          -16.0
+        ],
+        "heading_deg": -90.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S05": {
+        "berth": "BT05",
+        "root_xy": [
+          -58.0,
+          -5.1
+        ],
+        "heading_deg": 180.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S06": {
+        "berth": "BT04",
+        "root_xy": [
+          -150.0,
+          -56.15
+        ],
+        "heading_deg": 180.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S07": {
+        "berth": "BT06",
+        "root_xy": [
+          -28.65,
+          -24.0
+        ],
+        "heading_deg": -90.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S08": {
+        "berth": "BT12",
+        "root_xy": [
+          72.0,
+          -4.1
+        ],
+        "heading_deg": 180.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S09": {
+        "berth": "BT02",
+        "root_xy": [
+          -157.75,
+          -21.0
+        ],
+        "heading_deg": -90.0,
+        "hull_side_gap_m": 1.5
+      },
+      "S10": {
+        "berth": "BT11",
+        "root_xy": [
+          172.0,
+          -8.7
+        ],
+        "heading_deg": 0.0,
+        "hull_side_gap_m": 1.5
+      }
+    },
+    "I2_pier_abutment": {
+      "P01": {
+        "host": "Q02",
+        "root_xy": [
+          -20.0,
+          0.0
+        ],
+        "deck_top_m": 3.1
+      },
+      "P02": {
+        "host": "Q03",
+        "root_xy": [
+          125.0,
+          0.0
+        ],
+        "deck_top_m": 2.47
+      },
+      "P03": {
+        "host": "Q01",
+        "root_xy": [
+          -150.0,
+          0.0
+        ],
+        "deck_top_m": 2.8
+      }
+    },
+    "I3_lighthouse_on_head": {
+      "center_xy": [
+        40.0,
+        -172.0
+      ],
+      "base_z_m": 4.4
+    }
+  },
+  "units": {
+    "S01": {
+      "id": "S01",
+      "type": "ship",
+      "name": "坚韧号",
+      "rig_type": "full_rigged",
+      "loa_m": 45.0,
+      "beam_m": 11.2,
+      "draft_m": 4.7,
+      "freeboard_m": 3.5,
+      "masts": 3,
+      "mast_heights_m": [
+        40.4,
+        43.2,
+        32.6
+      ],
+      "mast_pos_from_stern_m": [
+        35.2,
+        22.7,
+        11.1
+      ],
+      "yards_per_mast": [
+        4,
+        4,
+        3
+      ],
+      "gaff_masts": [
+        3
+      ],
+      "jibs": 3,
+      "ports_per_side_by_deck": [
+        13
+      ],
+      "ports_per_side": 13,
+      "gun_decks": 1,
+      "bowsprit_m": 13.3,
+      "roll_period_s": 7.5,
+      "berth": "BT09",
+      "zone": "D",
+      "root_x": 113.4,
+      "root_y": -30.0,
+      "root_z": 0.0,
+      "heading_deg": -90.0,
+      "keel_z_m": -4.7
+    },
+    "S02": {
+      "id": "S02",
+      "type": "ship",
+      "name": "晨星号",
+      "rig_type": "barque",
+      "loa_m": 37.5,
+      "beam_m": 9.1,
+      "draft_m": 3.8,
+      "freeboard_m": 2.9,
+      "masts": 3,
+      "mast_heights_m": [
+        31.5,
+        35.0,
+        28.2
+      ],
+      "mast_pos_from_stern_m": [
+        28.6,
+        19.3,
+        8.6
+      ],
+      "yards_per_mast": [
+        4,
+        4,
+        0
+      ],
+      "gaff_masts": [
+        3
+      ],
+      "jibs": 3,
+      "ports_per_side_by_deck": [
+        6
+      ],
+      "ports_per_side": 6,
+      "gun_decks": 1,
+      "bowsprit_m": 11.9,
+      "roll_period_s": 6.0,
+      "berth": "BT01",
+      "zone": "B",
+      "root_x": -186.0,
+      "root_y": -6.05,
+      "root_z": 0.0,
+      "heading_deg": 180.0,
+      "keel_z_m": -3.8
+    },
+    "S03": {
+      "id": "S03",
+      "type": "ship",
+      "name": "海燕号",
+      "rig_type": "barquentine",
+      "loa_m": 29.6,
+      "beam_m": 8.3,
+      "draft_m": 3.3,
+      "freeboard_m": 2.7,
+      "masts": 3,
+      "mast_heights_m": [
+        30.3,
+        27.8,
+        24.8
+      ],
+      "mast_pos_from_stern_m": [
+        22.7,
+        14.5,
+        7.4
+      ],
+      "yards_per_mast": [
+        4,
+        0,
+        0
+      ],
+      "gaff_masts": [
+        2,
+        3
+      ],
+      "jibs": 4,
+      "ports_per_side_by_deck": [
+        0
+      ],
+      "ports_per_side": 0,
+      "gun_decks": 0,
+      "bowsprit_m": 9.1,
+      "roll_period_s": 6.3,
+      "berth": "BT10",
+      "zone": "D",
+      "root_x": 135.15,
+      "root_y": -31.0,
+      "root_z": 0.0,
+      "heading_deg": -90.0,
+      "keel_z_m": -3.3
+    },
+    "S04": {
+      "id": "S04",
+      "type": "ship",
+      "name": "迅捷号",
+      "rig_type": "brig",
+      "loa_m": 29.2,
+      "beam_m": 8.4,
+      "draft_m": 3.4,
+      "freeboard_m": 2.9,
+      "masts": 2,
+      "mast_heights_m": [
+        27.4,
+        28.8
+      ],
+      "mast_pos_from_stern_m": [
+        20.5,
+        10.8
+      ],
+      "yards_per_mast": [
+        4,
+        4
+      ],
+      "gaff_masts": [
+        2
+      ],
+      "jibs": 2,
+      "ports_per_side_by_deck": [
+        8
+      ],
+      "ports_per_side": 8,
+      "gun_decks": 1,
+      "bowsprit_m": 8.5,
+      "roll_period_s": 5.3,
+      "berth": "BT03",
+      "zone": "B",
+      "root_x": -140.3,
+      "root_y": -16.0,
+      "root_z": 0.0,
+      "heading_deg": -90.0,
+      "keel_z_m": -3.4
+    },
+    "S05": {
+      "id": "S05",
+      "type": "ship",
+      "name": "信使号",
+      "rig_type": "brigantine",
+      "loa_m": 24.7,
+      "beam_m": 7.2,
+      "draft_m": 3.0,
+      "freeboard_m": 2.6,
+      "masts": 2,
+      "mast_heights_m": [
+        23.9,
+        25.8
+      ],
+      "mast_pos_from_stern_m": [
+        17.1,
+        9.2
+      ],
+      "yards_per_mast": [
+        3,
+        0
+      ],
+      "gaff_masts": [
+        2
+      ],
+      "jibs": 3,
+      "ports_per_side_by_deck": [
+        6
+      ],
+      "ports_per_side": 6,
+      "gun_decks": 1,
+      "bowsprit_m": 7.8,
+      "roll_period_s": 4.6,
+      "berth": "BT05",
+      "zone": "C",
+      "root_x": -58.0,
+      "root_y": -5.1,
+      "root_z": 0.0,
+      "heading_deg": 180.0,
+      "keel_z_m": -3.0
+    },
+    "S06": {
+      "id": "S06",
+      "type": "ship",
+      "name": "白鹭号",
+      "rig_type": "topsail_schooner",
+      "loa_m": 21.9,
+      "beam_m": 6.5,
+      "draft_m": 2.7,
+      "freeboard_m": 2.1,
+      "masts": 2,
+      "mast_heights_m": [
+        21.4,
+        23.3
+      ],
+      "mast_pos_from_stern_m": [
+        14.7,
+        7.9
+      ],
+      "yards_per_mast": [
+        2,
+        0
+      ],
+      "gaff_masts": [
+        1,
+        2
+      ],
+      "jibs": 2,
+      "ports_per_side_by_deck": [
+        4
+      ],
+      "ports_per_side": 4,
+      "gun_decks": 1,
+      "bowsprit_m": 6.3,
+      "roll_period_s": 6.6,
+      "berth": "BT04",
+      "zone": "B",
+      "root_x": -150.0,
+      "root_y": -56.15,
+      "root_z": 0.0,
+      "heading_deg": 180.0,
+      "keel_z_m": -2.7
+    },
+    "S07": {
+      "id": "S07",
+      "type": "ship",
+      "name": "远航号",
+      "rig_type": "schooner",
+      "loa_m": 34.1,
+      "beam_m": 7.3,
+      "draft_m": 3.4,
+      "freeboard_m": 2.5,
+      "masts": 3,
+      "mast_heights_m": [
+        27.8,
+        29.3,
+        28.4
+      ],
+      "mast_pos_from_stern_m": [
+        25.5,
+        17.8,
+        9.7
+      ],
+      "yards_per_mast": [
+        0,
+        0,
+        0
+      ],
+      "gaff_masts": [
+        1,
+        2,
+        3
+      ],
+      "jibs": 3,
+      "ports_per_side_by_deck": [
+        0
+      ],
+      "ports_per_side": 0,
+      "gun_decks": 0,
+      "bowsprit_m": 10.0,
+      "roll_period_s": 6.1,
+      "berth": "BT06",
+      "zone": "C",
+      "root_x": -28.65,
+      "root_y": -24.0,
+      "root_z": 0.0,
+      "heading_deg": -90.0,
+      "keel_z_m": -3.4
+    },
+    "S08": {
+      "id": "S08",
+      "type": "ship",
+      "name": "渔歌号",
+      "rig_type": "ketch",
+      "loa_m": 18.4,
+      "beam_m": 5.2,
+      "draft_m": 2.2,
+      "freeboard_m": 1.7,
+      "masts": 2,
+      "mast_heights_m": [
+        19.6,
+        12.6
+      ],
+      "mast_pos_from_stern_m": [
+        11.4,
+        3.2
+      ],
+      "yards_per_mast": [
+        0,
+        0
+      ],
+      "gaff_masts": [
+        1,
+        2
+      ],
+      "jibs": 2,
+      "ports_per_side_by_deck": [
+        0
+      ],
+      "ports_per_side": 0,
+      "gun_decks": 0,
+      "bowsprit_m": 5.6,
+      "roll_period_s": 6.3,
+      "berth": "BT12",
+      "zone": "D",
+      "root_x": 72.0,
+      "root_y": -4.1,
+      "root_z": 0.0,
+      "heading_deg": 180.0,
+      "keel_z_m": -2.2
+    },
+    "S09": {
+      "id": "S09",
+      "type": "ship",
+      "name": "哨兵号",
+      "rig_type": "sloop",
+      "loa_m": 14.5,
+      "beam_m": 4.5,
+      "draft_m": 1.9,
+      "freeboard_m": 1.6,
+      "masts": 1,
+      "mast_heights_m": [
+        14.5
+      ],
+      "mast_pos_from_stern_m": [
+        8.5
+      ],
+      "yards_per_mast": [
+        0
+      ],
+      "gaff_masts": [
+        1
+      ],
+      "jibs": 1,
+      "ports_per_side_by_deck": [
+        4
+      ],
+      "ports_per_side": 4,
+      "gun_decks": 1,
+      "bowsprit_m": 4.5,
+      "roll_period_s": 7.4,
+      "berth": "BT02",
+      "zone": "B",
+      "root_x": -157.75,
+      "root_y": -21.0,
+      "root_z": 0.0,
+      "heading_deg": -90.0,
+      "keel_z_m": -1.9
+    },
+    "S10": {
+      "id": "S10",
+      "type": "ship",
+      "name": "雷霆号",
+      "rig_type": "full_rigged",
+      "loa_m": 50.5,
+      "beam_m": 14.4,
+      "draft_m": 5.6,
+      "freeboard_m": 6.2,
+      "masts": 3,
+      "mast_heights_m": [
+        49.5,
+        52.5,
+        40.3
+      ],
+      "mast_pos_from_stern_m": [
+        39.3,
+        27.0,
+        11.0
+      ],
+      "yards_per_mast": [
+        3,
+        4,
+        3
+      ],
+      "gaff_masts": [
+        3
+      ],
+      "jibs": 4,
+      "ports_per_side_by_deck": [
+        14,
+        15
+      ],
+      "ports_per_side": 29,
+      "gun_decks": 2,
+      "bowsprit_m": 14.7,
+      "roll_period_s": 5.6,
+      "berth": "BT11",
+      "zone": "D",
+      "root_x": 172.0,
+      "root_y": -8.7,
+      "root_z": 0.0,
+      "heading_deg": 0.0,
+      "keel_z_m": -5.6
+    },
+    "Q01": {
+      "id": "Q01",
+      "type": "quay",
+      "face_x1": -205,
+      "face_x2": -95,
+      "length_m": 110.0,
+      "coping_m": 2.8,
+      "apron_depth_m": 16.0,
+      "toe_m": -8.0,
+      "bollards": 9,
+      "stairs": 2,
+      "stair_pos_from_west_m": [
+        44.0,
+        68.0
+      ],
+      "stair_width_m": 2.4,
+      "zone": "B"
+    },
+    "Q02": {
+      "id": "Q02",
+      "type": "quay",
+      "face_x1": -85,
+      "face_x2": 45,
+      "length_m": 130.0,
+      "coping_m": 3.1,
+      "apron_depth_m": 18.0,
+      "toe_m": -8.0,
+      "bollards": 12,
+      "stairs": 3,
+      "stair_pos_from_west_m": [
+        28.0,
+        56.0,
+        88.0
+      ],
+      "stair_width_m": 2.4,
+      "zone": "C"
+    },
+    "Q03": {
+      "id": "Q03",
+      "type": "quay",
+      "face_x1": 55,
+      "face_x2": 200,
+      "length_m": 145.0,
+      "coping_m": 2.47,
+      "apron_depth_m": 17.0,
+      "toe_m": -8.0,
+      "bollards": 13,
+      "stairs": 2,
+      "stair_pos_from_west_m": [
+        24.0,
+        116.0
+      ],
+      "stair_width_m": 2.4,
+      "zone": "D"
+    },
+    "P01": {
+      "id": "P01",
+      "type": "pier",
+      "host_quay": "Q02",
+      "root_x": -20.0,
+      "root_y": 0.0,
+      "heading_deg": -90.0,
+      "length_m": 46.8,
+      "width_m": 7.0,
+      "bents": 11,
+      "bent_spacing_m": 4.68,
+      "piles_per_bent": 3,
+      "deck_thk_m": 0.6,
+      "piles": 33,
+      "deck_top_m": 3.1,
+      "zone": "C"
+    },
+    "P02": {
+      "id": "P02",
+      "type": "pier",
+      "host_quay": "Q03",
+      "root_x": 125.0,
+      "root_y": 0.0,
+      "heading_deg": -90.0,
+      "length_m": 58.2,
+      "width_m": 9.0,
+      "bents": 13,
+      "bent_spacing_m": 4.85,
+      "piles_per_bent": 4,
+      "deck_thk_m": 0.6,
+      "piles": 52,
+      "deck_top_m": 2.47,
+      "zone": "D"
+    },
+    "P03": {
+      "id": "P03",
+      "type": "pier",
+      "host_quay": "Q01",
+      "root_x": -150.0,
+      "root_y": 0.0,
+      "heading_deg": -90.0,
+      "length_m": 50.4,
+      "width_m": 8.0,
+      "bents": 13,
+      "bent_spacing_m": 4.2,
+      "piles_per_bent": 3,
+      "deck_thk_m": 0.6,
+      "head_bents": 3,
+      "head_width_m": 22.0,
+      "head_piles_per_bent": 6,
+      "piles": 48,
+      "head_length_m": 10.4,
+      "deck_top_m": 2.8,
+      "zone": "B"
+    },
+    "B01": {
+      "id": "B01",
+      "type": "breakwater",
+      "root_x": 232.0,
+      "root_y": -40.0,
+      "head_x": 40.0,
+      "head_y": -172.0,
+      "length_m": 233.0,
+      "crest_m": 4.4,
+      "crest_width_m": 7.0,
+      "head_radius_m": 9.0,
+      "parapet_h_m": 1.6,
+      "parapet_side": "seaward",
+      "segments": 11,
+      "slope": "1:1.5",
+      "toe_m": -8.0,
+      "zone": "F"
+    },
+    "L01": {
+      "id": "L01",
+      "type": "lighthouse",
+      "x": 40.0,
+      "y": -172.0,
+      "base_z_m": 4.4,
+      "section": "octagon",
+      "base_diam_m": 6.4,
+      "top_diam_m": 4.2,
+      "tower_h_m": 21.5,
+      "gallery_h_m": 1.1,
+      "lantern_h_m": 4.0,
+      "total_h_m": 27.6,
+      "focal_h_m": 24.0,
+      "red_bands": 3,
+      "windows": 5,
+      "beams": 2,
+      "beam1_azimuth_deg": 30.0,
+      "period_s": 9.0,
+      "rotation": "CCW",
+      "zone": "F"
+    },
+    "C01": {
+      "id": "C01",
+      "type": "treadwheel_crane",
+      "host_quay": "Q02",
+      "x": 12.0,
+      "y": 7.0,
+      "base_z_m": 3.1,
+      "house_w_m": 6.0,
+      "house_d_m": 6.0,
+      "house_h_m": 9.5,
+      "roof": "gable",
+      "wheels": 2,
+      "wheel_diam_m": 4.4,
+      "jib_len_m": 9.0,
+      "jib_tip_h_m": 13.5,
+      "jib_heading_deg": -90.0,
+      "zone": "C"
+    },
+    "C02": {
+      "id": "C02",
+      "type": "treadwheel_crane",
+      "host_quay": "Q03",
+      "x": 88.0,
+      "y": 6.0,
+      "base_z_m": 2.47,
+      "house_w_m": 5.0,
+      "house_d_m": 5.0,
+      "house_h_m": 8.0,
+      "roof": "pyramid",
+      "wheels": 1,
+      "wheel_diam_m": 5.0,
+      "jib_len_m": 7.5,
+      "jib_tip_h_m": 12.0,
+      "jib_heading_deg": -60.0,
+      "zone": "D"
+    },
+    "C03": {
+      "id": "C03",
+      "type": "sheer_legs",
+      "host_quay": "Q01",
+      "x": -188.0,
+      "y": 3.0,
+      "base_z_m": 2.8,
+      "legs": 2,
+      "leg_len_m": 30.0,
+      "foot_spread_m": 12.0,
+      "rake_deg": 18.0,
+      "rake_heading_deg": -90.0,
+      "apex_h_m": 27.96,
+      "backstays": 2,
+      "zone": "A"
+    },
+    "W01": {
+      "id": "W01",
+      "type": "warehouse",
+      "x": -175.0,
+      "y": 38.0,
+      "base_z_m": 3.5,
+      "front_heading_deg": -90.0,
+      "length_m": 42.0,
+      "depth_m": 16.0,
+      "floors": 4,
+      "bays": 9,
+      "roof": "gable",
+      "hoists": 2,
+      "hoist_bays": [
+        2,
+        6
+      ],
+      "eave_h_m": 13.0,
+      "ridge_h_m": 19.0,
+      "zone": "E"
+    },
+    "W02": {
+      "id": "W02",
+      "type": "warehouse",
+      "x": -55.0,
+      "y": 39.0,
+      "base_z_m": 3.5,
+      "front_heading_deg": -90.0,
+      "length_m": 50.0,
+      "depth_m": 18.0,
+      "floors": 3,
+      "bays": 11,
+      "roof": "hipped",
+      "hoists": 3,
+      "hoist_bays": [
+        4,
+        6,
+        10
+      ],
+      "eave_h_m": 10.5,
+      "ridge_h_m": 17.2,
+      "zone": "E"
+    },
+    "W03": {
+      "id": "W03",
+      "type": "warehouse",
+      "x": 70.0,
+      "y": 37.5,
+      "base_z_m": 3.5,
+      "front_heading_deg": -90.0,
+      "length_m": 36.0,
+      "depth_m": 15.0,
+      "floors": 5,
+      "bays": 7,
+      "roof": "gambrel",
+      "hoists": 1,
+      "hoist_bays": [
+        5
+      ],
+      "eave_h_m": 16.0,
+      "ridge_h_m": 23.1,
+      "zone": "E"
+    },
+    "W04": {
+      "id": "W04",
+      "type": "warehouse",
+      "x": 160.0,
+      "y": 38.5,
+      "base_z_m": 3.5,
+      "front_heading_deg": -90.0,
+      "length_m": 46.0,
+      "depth_m": 17.0,
+      "floors": 4,
+      "bays": 10,
+      "roof": "gable",
+      "hoists": 3,
+      "hoist_bays": [
+        2,
+        3,
+        5
+      ],
+      "eave_h_m": 13.5,
+      "ridge_h_m": 19.9,
+      "zone": "E"
+    },
+    "D01": {
+      "id": "D01",
+      "type": "dry_dock",
+      "entr_x": -232.0,
+      "entr_y": 0.0,
+      "axis_heading_deg": 90.0,
+      "coping_m": 3.5,
+      "length_m": 74.0,
+      "top_width_m": 24.0,
+      "entrance_width_m": 16.0,
+      "floor_m": -7.2,
+      "altars": 4,
+      "head": "semicircle",
+      "keel_blocks": 17,
+      "gate": "mitre",
+      "gate_leaves": 2,
+      "zone": "A"
+    }
+  },
+  "original_before_co": {
+    "S05": {
+      "id": "S05",
+      "type": "ship",
+      "name": "信使号",
+      "rig_type": "brig",
+      "loa_m": 24.7,
+      "beam_m": 7.2,
+      "draft_m": 3.0,
+      "freeboard_m": 2.6,
+      "masts": 2,
+      "mast_heights_m": [
+        23.9,
+        25.8
+      ],
+      "mast_pos_from_stern_m": [
+        17.1,
+        9.2
+      ],
+      "yards_per_mast": [
+        3,
+        3
+      ],
+      "gaff_masts": [
+        2
+      ],
+      "jibs": 2,
+      "ports_per_side_by_deck": [
+        6
+      ],
+      "ports_per_side": 6,
+      "gun_decks": 1,
+      "bowsprit_m": 7.8,
+      "roll_period_s": 4.6
+    },
+    "Q02": {
+      "id": "Q02",
+      "type": "quay",
+      "face_x1": -85,
+      "face_x2": 45,
+      "length_m": 130.0,
+      "coping_m": 2.54,
+      "apron_depth_m": 18.0,
+      "toe_m": -8.0,
+      "bollards": 12,
+      "stairs": 3,
+      "stair_pos_from_west_m": [
+        28.0,
+        56.0,
+        88.0
+      ],
+      "stair_width_m": 2.4
+    },
+    "L01": {
+      "id": "L01",
+      "type": "lighthouse",
+      "x": 40.0,
+      "y": -172.0,
+      "base_z_m": 4.4,
+      "section": "octagon",
+      "base_diam_m": 6.4,
+      "top_diam_m": 4.2,
+      "tower_h_m": 21.5,
+      "gallery_h_m": 1.1,
+      "lantern_h_m": 4.0,
+      "total_h_m": 27.6,
+      "focal_h_m": 24.0,
+      "red_bands": 3,
+      "windows": 5,
+      "beams": 2,
+      "beam1_azimuth_deg": 30.0,
+      "period_s": 12.0,
+      "rotation": "CCW"
+    },
+    "P01": {
+      "id": "P01",
+      "type": "pier",
+      "host_quay": "Q02",
+      "root_x": -20.0,
+      "root_y": 0.0,
+      "heading_deg": -90.0,
+      "length_m": 46.8,
+      "width_m": 7.0,
+      "bents": 11,
+      "bent_spacing_m": 4.68,
+      "piles_per_bent": 3,
+      "deck_thk_m": 0.6,
+      "piles": 33,
+      "deck_top_m": 2.54
+    },
+    "C01": {
+      "id": "C01",
+      "type": "treadwheel_crane",
+      "host_quay": "Q02",
+      "x": 12.0,
+      "y": 7.0,
+      "base_z_m": 2.54,
+      "house_w_m": 6.0,
+      "house_d_m": 6.0,
+      "house_h_m": 9.5,
+      "roof": "gable",
+      "wheels": 2,
+      "wheel_diam_m": 4.4,
+      "jib_len_m": 9.0,
+      "jib_tip_h_m": 13.5,
+      "jib_heading_deg": -90.0
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "task_id": "WFA-CDN-007",
+  "title": "B-Roll: Coral Reefs, Coral Spawning, and Fish",
+  "creator": "NOAA Fisheries",
+  "source_url": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish",
+  "license": "U.S. federal government work; public domain in the United States",
+  "license_url": "https://www.fisheries.noaa.gov/about/website-policies",
+  "license_evidence": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish",
+  "modifications": "silent, 1280x720 SAR 1:1, 29.97->30 fps via fps filter (frame dup, no retime), x264 CRF17 veryfast, all container/x264-info metadata stripped; x264 SEI user-data removed (filter_units=remove_types=6, stream copy)",
+  "files": [
+    {
+      "file": "environment/input/clips/01.mp4",
+      "sha256": "ae60d2eb7d8e0cde3d372134daab6cb423abf6a6f1e112e51c95b6971e07c3c2"
+    },
+    {
+      "file": "environment/input/clips/02.mp4",
+      "sha256": "29468b4b3efceb5fc1268f4d8390a895924101e3ddf32854a3037a7e47d6253d"
+    },
+    {
+      "file": "environment/input/clips/03.mp4",
+      "sha256": "043605e589623caea5c5f7a22ff93408177237dd86ccda3f9eb6f8c9fc50543e"
+    },
+    {
+      "file": "environment/input/clips/04.mp4",
+      "sha256": "2f1017090f9a5053b3308bffca53d6bb7e4c0f90804639bd5b60cea448cc4340"
+    },
+    {
+      "file": "environment/input/clips/05.mp4",
+      "sha256": "1318064f51f71f16e497b3413e01d975279207388fb403443a7ab6e6189c2a9d"
+    },
+    {
+      "file": "environment/input/clips/06.mp4",
+      "sha256": "6fc1944aeb58d1e4d94d441fe67b9265d28ee57585e35d7acc092212ca2dd218"
+    },
+    {
+      "file": "environment/input/clips/07.mp4",
+      "sha256": "49c470b88b9d9df29f560b31bfcac1b1e1b9f831df20bc1a7dd5dd64cb8ff058"
+    },
+    {
+      "file": "environment/input/clips/08.mp4",
+      "sha256": "2f4a9c8b290b93c65895ec965c8f5b85ab78f3422d0d8234cb531272d97ad0c5"
+    },
+    {
+      "file": "environment/input/clips/09.mp4",
+      "sha256": "d1459b4b8841dbca8d998166c310748a90ead2dfb5aafe99b0dc56f5878a3b6d"
+    },
+    {
+      "file": "environment/input/clips/10.mp4",
+      "sha256": "e056d0380e8f1a6721ae6ac6a31a41c3c7863b9b11b85fa8154ecc7bc3103ead"
+    },
+    {
+      "file": "environment/input/clips/11.mp4",
+      "sha256": "4420f09b8b9f5046354c162fdaca3f15f41302dbaa50a228352679d51dd1576e"
+    },
+    {
+      "file": "environment/input/clips/12.mp4",
+      "sha256": "ead5589f6b1f417622173f86c0be0c800d2d6250d22c404f6a5e57c696cb9a3e"
+    },
+    {
+      "file": "environment/input/clips/13.mp4",
+      "sha256": "92afa94fd607f5d44d8f7e234ce9e17729c05792fb7c9702aed29b2f3b6037de"
+    },
+    {
+      "file": "environment/input/clips/14.mp4",
+      "sha256": "97fe2eb21c95d13417cf4ce1e5d49fb4d54bb116c14a35d0240938e7ad2c5c96"
+    },
+    {
+      "file": "environment/input/clips/15.mp4",
+      "sha256": "c38be7276ba77e5a17b750ff349b22e9c02cafa543e236324e681560812176b2"
+    },
+    {
+      "file": "environment/input/clips/16.mp4",
+      "sha256": "9642e856f31a90d4e179a5ba18358ce985b7039869375f537e325c4d002ee465"
+    },
+    {
+      "file": "environment/input/clips/17.mp4",
+      "sha256": "a9e643cb9157a1609a39d7b25f81a1c34f0fd0dbc2cbc67c57601348381f8d2b"
+    },
+    {
+      "file": "environment/input/clips/18.mp4",
+      "sha256": "4735c2280c2743c6f99b6139baac23f3715a0f13bd4b9c5798a953ebbbdca4a3"
+    },
+    {
+      "file": "environment/input/clips/19.mp4",
+      "sha256": "d70edda950956ca924e3b851e3f62f3e8f611758a72f0a7f7daf32b724bee0a6"
+    },
+    {
+      "file": "environment/input/clips/20.mp4",
+      "sha256": "1d9286b60de5356e6876f31ae463cc9fd33fffa5bf4af544cda96621b827ceba"
+    },
+    {
+      "file": "environment/input/clips/21.mp4",
+      "sha256": "ffce986a5b0822ca0da3350cbedb331f3c2e7226679cb3efad946c7d4ed22f6f"
+    },
+    {
+      "file": "environment/input/clips/22.mp4",
+      "sha256": "5d7da3a7fdf1e44a2665094e15b2ce2144cf792d02891f9b1085033c74367ed5"
+    },
+    {
+      "file": "environment/input/clips/23.mp4",
+      "sha256": "2ca57f54caf64ba9e24361601bb650adf91451969a88827ddae4635558e3767c"
+    },
+    {
+      "file": "environment/input/clips/24.mp4",
+      "sha256": "b7cd766e26ba04e8d47d56d25040386247740cd8c4055daff97c4b8b9b6fb873"
+    },
+    {
+      "file": "environment/input/clips/25.mp4",
+      "sha256": "074cc406199662fe8d7285850dcc5cf86836a0caebbf6fc6fedd52d4ead3d064"
+    },
+    {
+      "file": "environment/input/clips/26.mp4",
+      "sha256": "027ad8334e626301aef2053998ad6d1a2c53155992dbfa9f3b9759d81b237441"
+    },
+    {
+      "file": "environment/input/clips/27.mp4",
+      "sha256": "3e375a31037f60c49b269137489ab0e9553ce6eb493de2b56386d5f611acaf81"
+    },
+    {
+      "file": "environment/input/clips/28.mp4",
+      "sha256": "2610ad2f318256d7a6990a148f2f02f535541967ce116c1ce6f18b50b976dbc4"
+    },
+    {
+      "file": "environment/input/clips/29.mp4",
+      "sha256": "aa8e128c599497ec9f703c2dd0aeaa9c3213487f4df79b73f46b0c0e76905f9f"
+    },
+    {
+      "file": "environment/input/clips/30.mp4",
+      "sha256": "6501d3a674e21760fabe1e6b151be62da7bbb77143a006467dceaf67676ac3f8"
+    },
+    {
+      "file": "environment/input/clips/31.mp4",
+      "sha256": "2de355a4c845c710720e17517bff181e9b2f6c081e8c0510d51290013acdb527"
+    },
+    {
+      "file": "environment/input/clips/32.mp4",
+      "sha256": "27f74cc738ef913acefb0dbb9a58d19bdb780c59b8b4a1928fb9fbd4a8d9a2be"
+    },
+    {
+      "file": "environment/input/clips/33.mp4",
+      "sha256": "30e72ee15d9f37ff0964550c375193abcc5af1f908cc0b8bf52ca1266dfd50a4"
+    },
+    {
+      "file": "environment/input/clips/34.mp4",
+      "sha256": "bc195e3a8827a269588dad9bfbd607d246101700b815908b3f222165d655d7a6"
+    },
+    {
+      "file": "environment/input/clips/35.mp4",
+      "sha256": "fc4a3832eabfc4f2dca935c5c7286d2eeff9cc8c7fdc516d042981077d93a9e3"
+    },
+    {
+      "file": "environment/input/clips/36.mp4",
+      "sha256": "28d484d01e448669ff7e19b4b1c9caf8fdc331f8605eaf95b44b567158b9374b"
+    },
+    {
+      "file": "environment/input/clips/37.mp4",
+      "sha256": "8311c99432941c84ad6db59ed72e8963c2aad3104fa03b72d3129b455a4d41ae"
+    }
+  ]
+}

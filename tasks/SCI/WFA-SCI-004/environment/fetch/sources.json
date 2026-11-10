@@ -1,0 +1,74 @@
+{
+  "distribution": "upstream-fetch",
+  "archives": [
+    {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.2016/MediaObjects/41592_2012_BFnmeth2016_MOESM584_ESM.zip",
+      "archive": "DREAM5.zip",
+      "sha256": "7c2210916af5c7047ef504187220c163efd6c0a39529420c2f8c342e185de93b",
+      "format": "zip",
+      "transform": "identity",
+      "files": [
+        {
+          "member": "DREAM5_network_inference_challenge/Network1/input data/net1_chip_features.tsv",
+          "target": "Network1/chip_features.tsv",
+          "sha256": "22174f9e5c1bc6722021811b0fe238a332512b3e66308bf36bdbfb15d5746b79"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network1/input data/net1_expression_data.tsv",
+          "target": "Network1/expression.tsv",
+          "sha256": "fb39ea0bfbede740e28aef21df768dd14c1cb5063d6ed8a384aec1e2fc417663"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network1/input data/net1_transcription_factors.tsv",
+          "target": "Network1/regulators.tsv",
+          "sha256": "ce9ab43c396fbdb0a02091127b895b71689295bff8bc167f25a1b55d92b77478"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network2/input data/net2_chip_features.tsv",
+          "target": "Network2/chip_features.tsv",
+          "sha256": "57ff789c19304afc08e7c901b57bff2795cae88de48d6545ecae27fae8794a2e"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network2/input data/net2_expression_data.tsv",
+          "target": "Network2/expression.tsv",
+          "sha256": "041abc50b3b320fa92c2791287e8fc234871cc8d5dfa8f9b653e63a92971ca79"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network2/input data/net2_transcription_factors.tsv",
+          "target": "Network2/regulators.tsv",
+          "sha256": "04e2a16fabc7a5806b303fad325b6b045b6fecff6d272b6af415b7e70e356a95"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network3/input data/net3_chip_features.tsv",
+          "target": "Network3/chip_features.tsv",
+          "sha256": "65801c68bda99d36236865b7f17af94a5159df97a5833906131bb224868dc765"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network3/input data/net3_expression_data.tsv",
+          "target": "Network3/expression.tsv",
+          "sha256": "b49b67d278b27d988c68652df76d0dc9c5e316abb774e6eac30b35b2712f9e2c"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network3/input data/net3_transcription_factors.tsv",
+          "target": "Network3/regulators.tsv",
+          "sha256": "69dff62d76c1cf5cb45ecfa4301734b8c4885bd8cdbc0d1d1a824fab7ab8cd5b"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network4/input data/net4_chip_features.tsv",
+          "target": "Network4/chip_features.tsv",
+          "sha256": "a95a2363428140da033694a5912853d2767d83a29bbd274ee01182c2bf7096cc"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network4/input data/net4_expression_data.tsv",
+          "target": "Network4/expression.tsv",
+          "sha256": "cdfdc5c4a73dce55195f5c1d91779e9d85653c6246712cfe31afd929efeecb27"
+        },
+        {
+          "member": "DREAM5_network_inference_challenge/Network4/input data/net4_transcription_factors.tsv",
+          "target": "Network4/regulators.tsv",
+          "sha256": "5f5f488db34dee0e895b3eba31ee73d8aa7c0c37c297bcd2331270407196523d"
+        }
+      ]
+    }
+  ]
+}

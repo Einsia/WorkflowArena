@@ -1,0 +1,4 @@
+experiment,model,metric,value,tol_abs,tol_rel
+smact,ElFrac,n_pred_stable,406,0,0.10
+smact,Meredig,n_pred_stable,427,0,0.10
+smact,Magpie,n_pred_stable,473,0,0.10

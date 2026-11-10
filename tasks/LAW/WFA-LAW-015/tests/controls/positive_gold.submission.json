@@ -1,0 +1,392 @@
+{
+ "defendants": {
+  "[被告A]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 42
+   },
+   "probation": false
+  },
+  "[被告B]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 17
+   },
+   "probation": false
+  },
+  "[被告C]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 17
+   },
+   "probation": false
+  },
+  "[被告D]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 45
+   },
+   "probation": false
+  },
+  "[被告E]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 28
+   },
+   "probation": false
+  },
+  "[被告F]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 19
+   },
+   "probation": false
+  },
+  "[被告G]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 48
+   },
+   "probation": false
+  },
+  "[被告H]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 19
+   },
+   "probation": false
+  },
+  "[被告I]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 20
+   },
+   "probation": false
+  },
+  "[被告J]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 20
+   },
+   "probation": false
+  },
+  "[被告K]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 17
+   },
+   "probation": false
+  },
+  "[被告L]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 13
+   },
+   "probation": false
+  },
+  "[被告M]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 16
+   },
+   "probation": false
+  },
+  "[被告N]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 13
+   },
+   "probation": false
+  },
+  "[被告O]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 72
+   },
+   "probation": false
+  },
+  "[被告P]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 18
+   },
+   "probation": false
+  },
+  "[被告Q]": {
+   "charges": [
+    "诈骗罪",
+    "故意伤害罪"
+   ],
+   "articles": [
+    234,
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯",
+    "故意伤害罪": "不区分"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {
+    "诈骗罪": {
+     "type": "有期徒刑",
+     "months": 77
+    },
+    "故意伤害罪": {
+     "type": "有期徒刑",
+     "months": 77
+    }
+   },
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 77
+   },
+   "probation": false
+  },
+  "[被告R]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 31
+   },
+   "probation": false
+  }
+ }
+}

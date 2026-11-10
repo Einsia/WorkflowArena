@@ -1,0 +1,721 @@
+{
+ "A01": {
+  "maud_contract": "contract_30",
+  "entities": [
+   {
+    "original": [
+     "Community Bankers Trust",
+     "Essex Bank"
+    ],
+    "pseudonym": "Quaimur",
+    "original_abbr": [
+     "CBTC"
+    ],
+    "pseudonym_abbr": "QMR"
+   },
+   {
+    "original": [
+     "United Bankshares",
+     "United Bank",
+     "re:United(?!\\s(?:States¦Kingdom¦Nations¦Arab¦Mexican))"
+    ],
+    "pseudonym": "Haerketh",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Haerketh": 633,
+   "Quaimur": 119,
+   "QMR": 701
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 2,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_130",
+  "entities": [
+   {
+    "original": [
+     "Sykes Enterprises",
+     "Sykes"
+    ],
+    "pseudonym": "Lelvian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Sitel Worldwide",
+     "Sitel"
+    ],
+    "pseudonym": "Querex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Florida Mergersub"
+    ],
+    "pseudonym": "Zoulex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Querex": 4,
+   "Zoulex": 3,
+   "Lelvian": 5,
+   "querex": 1,
+   "lelvian": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_87",
+  "entities": [
+   {
+    "original": [
+     "Nicolet Bankshares",
+     "Nicolet National Bank",
+     "Nicolet"
+    ],
+    "pseudonym": "Zurian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Mackinac Financial",
+     "Mackinac",
+     "mBank"
+    ],
+    "pseudonym": "Prentian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Zurian": 636,
+   "Prentian": 17
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 1,
+   "attention_fields": 5
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_44",
+  "entities": [
+   {
+    "original": [
+     "Bridge Bancorp",
+     "BNB Bank",
+     "Bridgehampton"
+    ],
+    "pseudonym": "Trustis",
+    "original_abbr": [
+     "BNB"
+    ],
+    "pseudonym_abbr": "TRS"
+   },
+   {
+    "original": [
+     "Dime Community Bancshares",
+     "Dime Community Bank",
+     "Dime Community",
+     "Dime"
+    ],
+    "pseudonym": "Queasova",
+    "original_abbr": [
+     "DCB"
+    ],
+    "pseudonym_abbr": "QSV"
+   }
+  ],
+  "tickers": {
+   "DCOM": "SMX"
+  },
+  "replacements_by_pseudonym": {
+   "Trustis": 1097,
+   "Queasova": 83,
+   "QSV": 1073,
+   "SMX": 2,
+   "TRS": 13
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 0
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_124",
+  "entities": [
+   {
+    "original": [
+     "First Bancorp",
+     "First Bank"
+    ],
+    "pseudonym": "Naesis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Select Bancorp",
+     "Select Bank & Trust Company",
+     "Select Bank"
+    ],
+    "pseudonym": "Broundane",
+    "original_abbr": [
+     "SB"
+    ],
+    "pseudonym_abbr": "BRN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Broundane": 10,
+   "Naesis": 13,
+   "BRN": 959
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 0,
+   "attention_fields": 4
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_54",
+  "entities": [
+   {
+    "original": [
+     "Enterprise Financial Services",
+     "Enterprise Bank & Trust",
+     "Enterprise"
+    ],
+    "pseudonym": "Lurkian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "First Choice Bancorp",
+     "First Choice Bank",
+     "First Choice"
+    ],
+    "pseudonym": "Groument",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Lurkian": 922,
+   "Groument": 1718
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 4,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_113",
+  "entities": [
+   {
+    "original": [
+     "Eli Lilly and Company",
+     "Eli Lilly",
+     "Lilly"
+    ],
+    "pseudonym": "Laedis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Tyto Acquisition"
+    ],
+    "pseudonym": "Molvell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Prevail Therapeutics",
+     "Prevail"
+    ],
+    "pseudonym": "Dindis",
+    "original_abbr": [
+     "PR001",
+     "PR004",
+     "PR006"
+    ],
+    "pseudonym_abbr": "DND"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Laedis": 7,
+   "Molvell": 3,
+   "Dindis": 4,
+   "DND": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 3,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_25",
+  "entities": [
+   {
+    "original": [
+     "Cincinnati Bell",
+     "Hawaiian Telcom"
+    ],
+    "pseudonym": "Fustell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Red Fiber Parent",
+     "Red Fiber"
+    ],
+    "pseudonym": "Borur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "RF Merger Sub"
+    ],
+    "pseudonym": "Quoustur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Macquarie Infrastructure Partners",
+     "Macquarie"
+    ],
+    "pseudonym": "Thothova",
+    "original_abbr": [
+     "MIP"
+    ],
+    "pseudonym_abbr": "THT"
+   },
+   {
+    "original": [
+     "ASOF Holdings",
+     "ASOF"
+    ],
+    "pseudonym": "Sentyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Brookfield"
+    ],
+    "pseudonym": "Dousent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Charlie AcquireCo"
+    ],
+    "pseudonym": "Drurur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Fustell": 6,
+   "Borur": 3,
+   "Quoustur": 3,
+   "Dousent": 19,
+   "THT": 7,
+   "Sentyn": 1,
+   "Drurur": 1,
+   "Thothova": 2,
+   "thothova": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 5,
+   "name_fields": 5,
+   "attention_fields": 4
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_21",
+  "entities": [
+   {
+    "original": [
+     "Eastern Bankshares",
+     "Eastern Bank"
+    ],
+    "pseudonym": "Geston",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Clarion Acquisition",
+     "Clarion"
+    ],
+    "pseudonym": "Maelell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Century Bancorp",
+     "Century Bank"
+    ],
+    "pseudonym": "Fuson",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Geston": 5,
+   "Maelell": 3,
+   "Fuson": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_39",
+  "entities": [
+   {
+    "original": [
+     "Nicolet Bankshares",
+     "Nicolet National Bank",
+     "Nicolet"
+    ],
+    "pseudonym": "Lulane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "County Bancorp",
+     "Investors Community Bank"
+    ],
+    "pseudonym": "Criolvon",
+    "original_abbr": [
+     "ICBK"
+    ],
+    "pseudonym_abbr": "CRL"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Lulane": 676,
+   "Criolvon": 15
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 1,
+   "attention_fields": 5
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_102",
+  "entities": [
+   {
+    "original": [
+     "Oaktree Strategic Income",
+     "Oaktree Specialty Lending",
+     "Oaktree Fund Advisors",
+     "Oaktree"
+    ],
+    "pseudonym": "Traimyn",
+    "original_abbr": [
+     "OCSI",
+     "OCSL",
+     "OFA"
+    ],
+    "pseudonym_abbr": "TRM"
+   },
+   {
+    "original": [
+     "Lion Merger Sub"
+    ],
+    "pseudonym": "Dreamis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Traimyn": 13,
+   "Dreamis": 3,
+   "TRM": 1764
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 13,
+   "signatures": 5,
+   "name_fields": 5,
+   "attention_fields": 8
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_119",
+  "entities": [
+   {
+    "original": [
+     "Raven Industries",
+     "Raven"
+    ],
+    "pseudonym": "Vaistara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "CNH Industrial South Dakota",
+     "CNH Industrial"
+    ],
+    "pseudonym": "Trindis",
+    "original_abbr": [
+     "CNH"
+    ],
+    "pseudonym_abbr": "TRN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vaistara": 5,
+   "Trindis": 8
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 3
+  }
+ },
+ "A13": {
+  "maud_contract": "contract_55",
+  "entities": [
+   {
+    "original": [
+     "Amgen"
+    ],
+    "pseudonym": "Touthora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Franklin Acquisition Sub"
+    ],
+    "pseudonym": "Prouvix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Five Prime Therapeutics",
+     "Five Prime"
+    ],
+    "pseudonym": "Gaithell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Touthora": 5,
+   "Prouvix": 3,
+   "Gaithell": 7
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A14": {
+  "maud_contract": "contract_89",
+  "entities": [
+   {
+    "original": [
+     "Madeira Holdings",
+     "Madeira Merger Subsidiary",
+     "Madeira"
+    ],
+    "pseudonym": "Sarex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Marlin Business Services",
+     "Marlin Business Bank",
+     "Marlin"
+    ],
+    "pseudonym": "Madyn",
+    "original_abbr": [
+     "MBB"
+    ],
+    "pseudonym_abbr": "MDY"
+   },
+   {
+    "original": [
+     "HPS Investment Partners",
+     "HPS"
+    ],
+    "pseudonym": "Durrix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Sarex": 6,
+   "Madyn": 13,
+   "MDY": 10,
+   "Durrix": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A15": {
+  "maud_contract": "contract_106",
+  "entities": [
+   {
+    "original": [
+     "Banc of California"
+    ],
+    "pseudonym": "Lavian",
+    "original_abbr": [
+     "BoC"
+    ],
+    "pseudonym_abbr": "LVN"
+   },
+   {
+    "original": [
+     "Pacific Mercantile Bancorp",
+     "Pacific Mercantile Bank",
+     "Pacific Mercantile"
+    ],
+    "pseudonym": "Troustion",
+    "original_abbr": [
+     "PM Bank"
+    ],
+    "pseudonym_abbr": "TRS"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Lavian": 5,
+   "Troustion": 5,
+   "TRS": 9,
+   "LVN": 14
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 4
+  }
+ },
+ "A16": {
+  "maud_contract": "contract_136",
+  "entities": [
+   {
+    "original": [
+     "Sanofi"
+    ],
+    "pseudonym": "Kurrara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Vector Merger Sub"
+    ],
+    "pseudonym": "Brealvion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Translate Bio"
+    ],
+    "pseudonym": "Narkent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kurrara": 4,
+   "Brealvion": 3,
+   "Narkent": 5,
+   "kurrara": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ }
+}

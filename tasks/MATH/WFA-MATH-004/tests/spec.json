@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "FltRegular.CaseII.Statement",
+  "build_targets": [
+    "FltRegular.CaseII.Statement"
+  ],
+  "names": [
+    "FltRegular.caseII"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "FltRegular"
+    ],
+    "target_file": "FltRegular/CaseII/Statement.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

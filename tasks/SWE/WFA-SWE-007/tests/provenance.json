@@ -1,0 +1,10 @@
+{
+  "source_url": "https://github.com/scipy/scipy/pull/17408",
+  "repo": "https://github.com/scipy/scipy",
+  "merge_commit": "e1d3f796fa705fb9fcf5443241aca73873348b71",
+  "start_commit": "bdc163d40ab5707cdfe4f95568a12cef9cdbb6be",
+  "reference_patch_sha256": "8aaf00b072f0616811d74a5f8e1eff027574dbea7d10901234767c6e108159bf",
+  "license": "BSD-3-Clause",
+  "retrieved": "2026-10-23",
+  "bench_overlap_check": "PR 编号不在 SWE-bench(test)、FEA-Bench、AInsteinBench(msb) 清单中；SWE-bench Science 只含 issue 级修复题（按标题人工比对无重叠）"
+}

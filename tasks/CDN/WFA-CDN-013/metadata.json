@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-013",
+  "domain": "CDN",
+  "task_form": "CDN-DOC",
+  "title": "The morning the fire outran the warnings: what the record supports, and what it cannot",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "publisher document inputs",
+    "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2252.pdf",
+    "revision": "2026-10-24",
+    "license": "U.S. federal government works; public domain in the United States",
+    "credits": "environment/CREDITS.md"
+  }
+}

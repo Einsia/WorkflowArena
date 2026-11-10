@@ -1,0 +1,197 @@
+[
+ {
+  "anon": "C04",
+  "capri_target": "T097",
+  "pdb": "4XVP",
+  "round": "31",
+  "description": "artificial alpha-repeat eGFP-binder",
+  "stoichiometry": "AB",
+  "interaction_type": "artificial binding",
+  "iface_chains": "C:F",
+  "iface_lengths": "226:158",
+  "difficulty": "",
+  "n_decoys": 1417,
+  "decoy_classes": {
+   "incorrect": 1350,
+   "acceptable": 58,
+   "medium": 9
+  },
+  "n_scorer_groups": 15
+ },
+ {
+  "anon": "C10",
+  "capri_target": "T121",
+  "pdb": "6S3W",
+  "round": "38",
+  "description": "TolA/TolB complex",
+  "stoichiometry": "AB",
+  "interaction_type": "protein/peptide",
+  "iface_chains": "A:B",
+  "iface_lengths": "124:13",
+  "difficulty": "",
+  "n_decoys": 1231,
+  "decoy_classes": {
+   "incorrect": 1145,
+   "acceptable": 81,
+   "medium": 5
+  },
+  "n_scorer_groups": 17
+ },
+ {
+  "anon": "C09",
+  "capri_target": "T122",
+  "pdb": "5MZV",
+  "round": "39",
+  "description": "Cytokine hetero-dimer/receptor complex IL23/IL23r",
+  "stoichiometry": "ABC",
+  "interaction_type": "cytokine/receptor",
+  "iface_chains": "AB:C",
+  "iface_lengths": "303/137:293",
+  "difficulty": "",
+  "n_decoys": 2389,
+  "decoy_classes": {
+   "incorrect": 2252,
+   "acceptable": 122,
+   "medium": 7,
+   "unclassified": 8
+  },
+  "n_scorer_groups": 20
+ },
+ {
+  "anon": "C06",
+  "capri_target": "T131",
+  "pdb": "6GBG",
+  "round": "42",
+  "description": "CEACAM1/HopQ-Type-I",
+  "stoichiometry": "AB",
+  "interaction_type": "host/pathogen",
+  "iface_chains": "A:D",
+  "iface_lengths": "321:110",
+  "difficulty": "",
+  "n_decoys": 2184,
+  "decoy_classes": {
+   "incorrect": 2153,
+   "medium": 9,
+   "acceptable": 22
+  },
+  "n_scorer_groups": 19
+ },
+ {
+  "anon": "C05",
+  "capri_target": "T133",
+  "pdb": "6ERE",
+  "round": "43",
+  "description": "Redesigned Colicin E2 DNase/Im2 complex",
+  "stoichiometry": "AB",
+  "interaction_type": "enzyme/inhibitor",
+  "iface_chains": "A:D",
+  "iface_lengths": "129:83",
+  "difficulty": "",
+  "n_decoys": 2593,
+  "decoy_classes": {
+   "incorrect": 2049,
+   "acceptable": 341,
+   "medium": 203
+  },
+  "n_scorer_groups": 20
+ },
+ {
+  "anon": "C02",
+  "capri_target": "T141",
+  "pdb": "6MXV",
+  "round": "46",
+  "description": "Rhodanese-like family bacterial protein",
+  "stoichiometry": "A2",
+  "interaction_type": "homomeric organization",
+  "iface_chains": "B:A",
+  "iface_lengths": "250:250",
+  "difficulty": "",
+  "n_decoys": 1706,
+  "decoy_classes": {
+   "incorrect": 1674,
+   "acceptable": 30,
+   "unclassified": 1,
+   "medium": 1
+  },
+  "n_scorer_groups": 18
+ },
+ {
+  "anon": "C07",
+  "capri_target": "T142",
+  "pdb": "6TRI",
+  "round": "46",
+  "description": "CI-MOR repressor-antirepressor complex",
+  "stoichiometry": "AB",
+  "interaction_type": "repressor/antirepressor",
+  "iface_chains": "A:B",
+  "iface_lengths": "80:69",
+  "difficulty": "",
+  "n_decoys": 1745,
+  "decoy_classes": {
+   "incorrect": 1581,
+   "medium": 77,
+   "acceptable": 84,
+   "high": 3
+  },
+  "n_scorer_groups": 17
+ },
+ {
+  "anon": "C01",
+  "capri_target": "T143",
+  "pdb": "6UK5",
+  "round": "46",
+  "description": "Cals10 amino pentose methyltransferase",
+  "stoichiometry": "A2",
+  "interaction_type": "homomeric organization",
+  "iface_chains": "B:A",
+  "iface_lengths": "228:236",
+  "difficulty": "",
+  "n_decoys": 1787,
+  "decoy_classes": {
+   "medium": 436,
+   "high": 208,
+   "incorrect": 1058,
+   "acceptable": 85
+  },
+  "n_scorer_groups": 18
+ },
+ {
+  "anon": "C08",
+  "capri_target": "T166",
+  "pdb": "6XOD",
+  "round": "50",
+  "description": "PEX4/PEX22 complex",
+  "stoichiometry": "AB",
+  "interaction_type": "ligase/transport",
+  "iface_chains": "B:A",
+  "iface_lengths": "166:154",
+  "difficulty": "",
+  "n_decoys": 1379,
+  "decoy_classes": {
+   "incorrect": 981,
+   "acceptable": 150,
+   "medium": 246,
+   "high": 2
+  },
+  "n_scorer_groups": 19
+ },
+ {
+  "anon": "C03",
+  "capri_target": "T176",
+  "pdb": "7CWP",
+  "round": "50",
+  "description": "Root induced secreted protein Tsp1",
+  "stoichiometry": "A2",
+  "interaction_type": "homomeric organization",
+  "iface_chains": "A:B",
+  "iface_lengths": "129:125",
+  "difficulty": "",
+  "n_decoys": 1464,
+  "decoy_classes": {
+   "incorrect": 1444,
+   "acceptable": 19,
+   "medium": 1
+  },
+  "n_scorer_groups": 19
+ }
+]

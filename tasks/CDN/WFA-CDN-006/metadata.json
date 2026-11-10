@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-CDN-006",
+  "domain": "CDN",
+  "task_form": "CDN-VIDEO",
+  "title": "One candidate pool, two intents: a comedy trailer and a suspense trailer",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "adapted video excerpts",
+    "url": "https://peach.blender.org",
+    "revision": "2026-10-24",
+    "license": "CC-BY-3.0",
+    "credits": "environment/CREDITS.md",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "license_evidence": "https://peach.blender.org/about/"
+  }
+}

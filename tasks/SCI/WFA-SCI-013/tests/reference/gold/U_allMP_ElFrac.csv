@@ -1,0 +1,6 @@
+experiment,model,metric,value,tol_abs,tol_rel
+allMP,ElFrac,Ef_MAE,0.2313686788897072,0,0.05
+allMP,ElFrac,Ed_MAE,0.1428484503025538,0,0.05
+allMP,ElFrac,Ed_cl_accuracy,0.5797398075611075,0.02,0
+allMP,ElFrac,Ed_cl_f1,0.4974257982838655,0.02,0
+allMP,ElFrac,Ed_cl_fpr,0.38048847420417126,0.02,0

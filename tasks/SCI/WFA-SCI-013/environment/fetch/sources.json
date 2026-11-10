@@ -1,0 +1,19 @@
+{
+  "distribution": "upstream-fetch",
+  "archives": [
+    {
+      "url": "https://raw.githubusercontent.com/CJBartel/TestStabilityML/4559c918da8edecea12f86774910b17cae3c7a09/mlstabilitytest/mp_data/data/hullin.json.tar.gz",
+      "archive": "mls_hullin.json.tar.gz",
+      "sha256": "f249747d16bf63ced97775ca5e8262facfdd2142c48034fd55fb4bdabe2b1015",
+      "format": "tar.gz",
+      "transform": "identity",
+      "files": [
+        {
+          "member": "hullin.json",
+          "target": "data/hullin.json",
+          "sha256": "e7ce907f1d114b8f2d02b330498982651d92d6bdea12d6598f6152ccfe46573c"
+        }
+      ]
+    }
+  ]
+}

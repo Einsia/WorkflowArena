@@ -1,0 +1,43 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "WFA-SWE-015"
+version = "0.1.0"
+description = "Implement the semantic analysis and rewrite rules of a SQL transpiler whose parser, dialects and generators are already in place, judged against fixture files that pin exact output SQL."
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-REIMPL"
+evaluation_mode = "harbor_native"
+recipe = "carve-out"
+language = "Python"
+source_repo = "tobymao/sqlglot"
+base_tag = "v30.20.0"
+carved_files = 23
+carved_code_lines = 6559
+carved_raw_lines_removed = 6634
+contract_symbols = 33
+lines_per_contract_symbol = 199
+required_tests = 5177
+regression_tests = 15577
+data_driven_cases = 3778
+data_driven_fixture_files = 26
+data_driven_fixture_lines = 30768
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 8
+memory_mb = 16384
+storage_mb = 20480
+network_mode = "no-network"
+workdir = "/app"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "shared"
+network_mode = "no-network"

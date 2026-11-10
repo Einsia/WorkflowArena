@@ -1,0 +1,31 @@
+{
+  "task_id": "WFA-CDN-011",
+  "files": [
+    {
+      "file": "environment/input/report.pdf",
+      "sha256": "b17766a85d47888878c0c2e8486dc4343980449f49e0a1a581bde532093f6750",
+      "url": "https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf",
+      "title": "Report of the WHO-China Joint Mission on Coronavirus Disease 2019 (COVID-19), 16-24 Feb 2020; final report submitted 28 Feb 2020; 40 pp; printed page = PDF page"
+    },
+    {
+      "file": "environment/input/sitrep-24.pdf",
+      "sha256": "b25e0fb1337ac93a2a6e9009efa8dc00b0c2d8f8e0573bbe708310939ed9db9f",
+      "url": "https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200213-sitrep-24-covid-19.pdf",
+      "title": "WHO COVID-19 Situation Report 24, data as reported by 13 Feb 2020, 8 pp"
+    },
+    {
+      "file": "environment/input/sitrep-31.pdf",
+      "sha256": "77ac94fa24ed97098a1689d9d214e30294775807d494b2a0c2577e604c4dcbc2",
+      "url": "https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200220-sitrep-31-covid-19.pdf",
+      "title": "WHO COVID-19 Situation Report 31, data as reported by 20 Feb 2020, 7 pp"
+    },
+    {
+      "file": "environment/input/sitrep-35.pdf",
+      "sha256": "3ed806dd6435ad06f9ba742bca7da974ade52b6fed0642503dc0537e2876160b",
+      "url": "https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200224-sitrep-35-covid-19.pdf",
+      "title": "WHO COVID-19 Situation Report 35, data as reported by 24 Feb 2020, 7 pp"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "CC-BY-NC-SA-3.0-IGO (WHO publications; non-commercial use)"
+}

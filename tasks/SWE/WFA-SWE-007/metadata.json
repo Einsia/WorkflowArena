@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-007",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Object-oriented short-time Fourier transform (ShortTimeFFT)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/scipy/scipy/pull/17408",
+    "revision": "merge e1d3f796fa705fb9fcf5443241aca73873348b71; start = first parent bdc163d40ab5707cdfe4f95568a12cef9cdbb6be",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-FIN-003",
+  "files": {
+    "inputs/TRV.html": "7651bfb7f379e8e6bfba8958ce43a72be23e6d3b8be76808ac2ca6a2f94fd623",
+    "inputs/AIG.html": "b7b78c10535757e6e1f72c60cfd5f5891d06c4d79773c8339459c8e6dfe23375",
+    "inputs/WRB.html": "ccc5363e59dc891bef58e1c3abc8636cc123b88e0ba69663254ae8b2095f2589",
+    "inputs/MKL.html": "fdee8722951bec0f252074bf1e64d307dc078ff66630c93e553fee299e95518f",
+    "inputs/SIGI.html": "9a9d2084fe3575f5325151465e9195fdacb3c7f1cfbd2f5b0a7cab5008d9017a",
+    "inputs/KNSL.html": "dcf36cd092aa5f0d447eb9b741c3fee9c3b48c7e82251b0984f40f6f326941f5",
+    "inputs/THG.html": "b8e854037e210b2d685a8bca6fa7df07ecce09dfb1f17b0c11ef12f87b56b8b2",
+    "inputs/AIZ.html": "18ba7a55dedcf63f0cbb7b63b0b7b304c015e758e96accfa30752021c6fa96d4",
+    "inputs/PLMR.html": "77a367dfb95379a7cdcd5bfea5f45cbf59d60d46fc369f50a64d8593822a7feb",
+    "inputs/HCI.html": "02fd9c7242b47fc5de296c3620d24e65933b744e7497316a097e7392c2b210be",
+    "inputs/UFCS.html": "8a58405c3913d1d1b571c7ee214e00e65a374d5fff02414692fd318a81737c96"
+  },
+  "boundary": "This manifest records frozen local files, not an assertion of outside authenticity."
+}

@@ -1,0 +1,2 @@
+BUILD_CMD='cd /work && export FFLAGS=-fallow-argument-mismatch NPY_NUM_BUILD_JOBS=16 && python setup.py build_ext --inplace -j 16'
+IMPORT_CHECK='cd /work && python -c "import scipy, scipy.stats, scipy.optimize; print(\"import ok\", scipy.__version__)"'

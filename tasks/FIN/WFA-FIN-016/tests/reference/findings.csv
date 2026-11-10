@@ -1,0 +1,61 @@
+entity,doc_id,error_type,field,recorded_value,expected_value
+S2,PI-S2-00132,posting_amount_mismatch,gl_amount,5886.66,5868.66
+S1,PI-S1-00073,posting_amount_mismatch,gl_amount,13309.06,13390.06
+S5,PI-S5-00061,posting_amount_mismatch,gl_amount,2868.64,2886.64
+S6,PI-S6-00021,posting_amount_mismatch,gl_amount,14665.50,14656.50
+S4,PI-S4-00080,posting_amount_mismatch,gl_amount,520609.00,520690.00
+S1,SI-S1-00136,extension_error,net,31439.25,31493.25
+S5,SI-S5-00292,extension_error,net,9504.37,9540.37
+P,SI-P-00153,extension_error,net,25912.83,25921.83
+S3,SI-S3-00309,extension_error,net,8572.20,8527.20
+S4,SI-S4-00140,extension_error,net,1485453.00,1485435.00
+P,SI-P-00446,tax_calc_error,tax,3574.35,2780.05
+S2,SI-S2-00110,tax_calc_error,tax,631.57,561.39
+S1,SI-S1-00168,tax_calc_error,tax,1052.05,901.75
+S5,SI-S5-00318,tax_calc_error,tax,264.65,229.36
+S4,SI-S4-00290,tax_calc_error,tax,106023.46,96384.96
+S4,SI-S4-00272,price_anomaly,unit_price,27015.66,30017.40
+S1,SI-S1-00155,price_anomaly,unit_price,157.32,140.46
+S5,SI-S5-00276,price_anomaly,unit_price,114.61,130.24
+S3,SI-S3-00507,price_anomaly,unit_price,161.53,179.48
+P,SI-P-00110,price_anomaly,unit_price,192.13,213.48
+S1,PI-S1-00113,duplicate_posting,doc_ref,posted twice,
+S3,PI-S3-00129,duplicate_posting,doc_ref,posted twice,
+S5,PI-S5-00128,duplicate_posting,doc_ref,posted twice,
+S4,PI-S4-00103,duplicate_posting,doc_ref,posted twice,
+P,PI-P-00096,duplicate_posting,doc_ref,posted twice,
+S4,PI-S4-00024,cutoff_error,posting_date,2026-02-02,2026-01-27
+S1,PI-S1-00071,cutoff_error,posting_date,2026-02-02,2026-01-27
+S3,PI-S3-00120,cutoff_error,posting_date,2026-09-02,2026-08-27
+P,PI-P-00161,cutoff_error,posting_date,2026-10-02,2026-09-29
+S2,PI-S2-00014,cutoff_error,posting_date,2026-02-02,2026-01-26
+S2,PI-S2-00168,misclassification,account,1400,6300
+S1,PI-S1-00187,misclassification,account,6900,6300
+P,PI-P-00150,misclassification,account,6100,6700
+S3,PI-S3-00092,misclassification,account,1400,6700
+S5,PI-S5-00063,misclassification,account,6900,6700
+S5,PI-S5-00062,missing_approval,approver,,
+P,PI-P-00155,missing_approval,approver,,
+S4,PI-S4-00121,missing_approval,approver,,
+S2,PI-S2-00030,missing_approval,approver,,
+S1,PI-S1-00164,missing_approval,approver,,
+S3,PI-S3-00158,sod_violation,approver,S3-bose,
+P,PI-P-00053,sod_violation,approver,P-akim,
+S2,PI-S2-00085,sod_violation,approver,S2-chen,
+S4,PI-S4-00041,sod_violation,approver,S4-chen,
+S5,PI-S5-00049,sod_violation,approver,S5-akim,
+P,MF-S3-2026-05,fx_rate_error,functional_amount,39450.84,39302.01
+S2,ICI-S3-00012,fx_rate_error,functional_amount,-26899.12,-26704.91
+S2,ICI-S3-00010,fx_rate_error,functional_amount,-53363.26,-53254.80
+P,MF-S3-2026-11,fx_rate_error,functional_amount,41469.12,41389.26
+S6,INT-S4-2026-10,fx_rate_error,functional_amount,2068.75,2060.68
+S2,ICI-S1-00102,ic_counterparty_error,account,2000,2100
+P,ICI-S5-00012,ic_counterparty_error,account,2000,2100
+S5,ICI-S1-00124,ic_counterparty_error,account,2000,2100
+P,ICI-S5-00008,ic_counterparty_error,account,2000,2100
+P,ICI-S1-00098,ic_counterparty_error,account,2000,2100
+S3,PI-S3-00163,unrecorded_document,doc_ref,not posted,
+S1,PI-S1-00195,unrecorded_document,doc_ref,not posted,
+P,PI-P-00197,unrecorded_document,doc_ref,not posted,
+S4,PI-S4-00142,unrecorded_document,doc_ref,not posted,
+S6,PI-S6-00070,unrecorded_document,doc_ref,not posted,

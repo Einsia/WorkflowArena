@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SWE-006",
+  "domain": "SWE",
+  "task_form": "SWE-FEAT",
+  "title": "Quasi-Monte Carlo (QMC) sampling submodule scipy.stats.qmc",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github_pr",
+    "url": "https://github.com/scipy/scipy/pull/10844",
+    "revision": "merge 417761e719dcb5cf3c9bb0a25f9f0f792cfb350a; start = first parent 4f49abd9579a6a4510ccf630c32d6ecb2faf9347",
+    "license": "BSD-3-Clause"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores",
+    "coverage_contract": "tests/coverage.json"
+  }
+}

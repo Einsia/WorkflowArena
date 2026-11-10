@@ -1,0 +1,585 @@
+{
+  "task_id": "WFA-CDN-009",
+  "status": "VERIFIED with pdftotext -layout per page (whitespace-normalised substring match) on 2026-10-24",
+  "page_mapping": "final-report.pdf: printed arabic page = PDF page - 14 (PDF 15 = printed 1); PDF 1-14 are cover/roman pages. preliminary-report.pdf: printed = PDF page.",
+  "sha256": {
+    "final-report.pdf": "05d9bf5704ff14c89336d7d1bfa8cda7059089cffa7170d0068e83541f88255e",
+    "preliminary-report.pdf": "2427114cba8421bf3b174a9865f5c6b7d487ad6cdf15083018356bc1aca157f0"
+  },
+  "causal_chain_reference": [
+    "rivet discrepancy found at Renton (NCR 2023-09-01)",
+    "plug opened 2023-09-18 without removal record (no experienced door member on duty)",
+    "rivet rework",
+    "plug closed 2023-09-19 second shift without 4 bolts, no door team on duty",
+    "no removal record -> no QA inspection; insulation blankets installed (IP OK to Install Blankets 09-20) hide area",
+    "delivery 2023-10-31; 154 cycles of incremental upward displacement under dynamic loads",
+    "2024-01-05 1712:33 plug disengages stops, separates at ~14,830 ft",
+    "systemic layer: BPI complexity/10-yr history, unstructured OJT, workforce experience change unmanaged, quality escape guidance, immature VSMS; FAA oversight contributing"
+  ],
+  "checkpoints": [
+    {
+      "id": "K-BASIC",
+      "rubric_items": "A01",
+      "answer": "2024-01-05, Alaska Airlines flight 1282, Boeing 737-9 N704AL, PDX to ONT, returned to PDX.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 10,
+          "printed_page": "x",
+          "quote": "On January 5, 2024, a Boeing 737-9 airplane operated by Alaska Airlines as flight 1282"
+        },
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 1,
+          "printed_page": 1,
+          "quote": "scheduled domestic passenger flight from PDX to Ontario, California (ONT)"
+        }
+      ]
+    },
+    {
+      "id": "K-TL",
+      "rubric_items": "A02",
+      "answer": "1712:33 cabin pressure drop at ~14,830 ft; max 16,320 ft at 1713:41; landed 1726:46 (~14 min later).",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 16,
+          "printed_page": 2,
+          "quote": "FDR data showed that, at 1712:33, the airplane was climbing through about 14,830 ft when the cabin pressure dropped"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 17,
+          "printed_page": 3,
+          "quote": "at 1713:41, the airplane reached its maximum altitude of 16,320 ft then began to descend"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 20,
+          "printed_page": 6,
+          "quote": "FDR data showed that the flight landed at 1726:46, about 14 minutes after the MED plug separated."
+        }
+      ]
+    },
+    {
+      "id": "K-INJ",
+      "rubric_items": "A03",
+      "answer": "1 FA + 7 passengers minor; 2 pilots, 3 FAs, 164 passengers uninjured (177 occupants); 2 extra passengers sought observation without documented injuries.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 10,
+          "printed_page": "x",
+          "quote": "One flight attendant and 7 passengers received minor injuries; the captain, the first officer, 3 flight attendants, and 164 passengers were uninjured"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 20,
+          "printed_page": 6,
+          "quote": "Seven passengers and one flight attendant reported injuries that were classified as minor, and no one was transported to a hospital."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 20,
+          "printed_page": 6,
+          "quote": "two additional passengers independently sought medical observation for a chronic medical condition"
+        }
+      ]
+    },
+    {
+      "id": "K-PHYS",
+      "rubric_items": "A04",
+      "answer": "No bolt contact damage on 4 bolt holes; washer outlines; parallel dirt lines => incremental upward movement on prior flights.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 99,
+          "printed_page": 85,
+          "quote": "These lines were evidence that the left MED plug had moved incrementally upward during previous flight cycles."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 100,
+          "printed_page": 86,
+          "quote": "the absence of bolt contact damage or deformation around the holes associated with the vertical movement arrestor bolts and upper guide track bolts indicates that the four bolts that should have been installed to prevent the left MED plug’s upward movement were missing before the plug moved upward off the stop pads."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 100,
+          "printed_page": 86,
+          "quote": "Faint outlines associated with the upper guide track bolt washers were observed around the upper guide track bolt holes, indicating that hardware was installed at one time."
+        }
+      ]
+    },
+    {
+      "id": "K-ORIGIN",
+      "rubric_items": "A05",
+      "answer": "Rivet rework; plug open by 1053 on 2023-09-18 until at least 1709 on 09-19; closed on second shift 09-19 with no door team on duty; no removal record so no QA; ~1839 photo.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 62,
+          "printed_page": 48,
+          "quote": "The investigation determined the left MED plug was open at least as early as 1053 on September 18, 2023, and remained open until at least 1709 on September 19, 2023"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 64,
+          "printed_page": 50,
+          "quote": "the left MED plug was closed during second shift operations that day, when no door team members were on duty."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 65,
+          "printed_page": 51,
+          "quote": "texts included a photograph sent about 1839 that showed the plug in a closed position with no attachment hardware in the three locations visible"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 60,
+          "printed_page": 46,
+          "quote": "No removal record for opening the left MED plug was identified in CMES"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 134,
+          "printed_page": 120,
+          "quote": "Due to the absence of a removal record indicating that the left mid exit door plug installation had been disturbed, no quality assurance inspection of the plug closure was performed."
+        }
+      ]
+    },
+    {
+      "id": "K-PC",
+      "rubric_items": "A06",
+      "answer": "Probable cause: Boeing failure to provide adequate training, guidance, oversight for parts removal process. Contributing: FAA ineffective compliance enforcement surveillance and audit planning.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 136,
+          "printed_page": 122,
+          "quote": "the probable cause of this accident was the in-flight separation of the left mid exit door (MED) plug due to Boeing Commercial Airplanes’ failure to provide adequate training, guidance, and oversight"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 136,
+          "printed_page": 122,
+          "quote": "Contributing to the accident was the Federal Aviation Administration’s ineffective compliance enforcement surveillance and audit planning activities"
+        }
+      ]
+    },
+    {
+      "id": "K-SYS",
+      "rubric_items": "A07",
+      "answer": "BPI lacked clarity, >=10-yr compliance history; unstructured OJT; no change management for workforce experience.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 133,
+          "printed_page": 119,
+          "quote": "lacked clarity, conciseness, and ease of use necessary to be an effective tool"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 134,
+          "printed_page": 120,
+          "quote": "which had a documented history of compliance issues for at least 10 years before the accident."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 133,
+          "printed_page": 119,
+          "quote": "on-the-job training was unstructured, undocumented, and focused primarily on routine build tasks"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 134,
+          "printed_page": 120,
+          "quote": "did not conduct a change management assessment to identify and address the risks associated with using a workforce with reduced experience"
+        }
+      ]
+    },
+    {
+      "id": "K-REC",
+      "rubric_items": "A08",
+      "answer": "11 new recs to FAA, 8 to Boeing; reiterated 4 to FAA and 1 to A4A/NACA/RAA; e.g. design-enhancement retrofit SB/AD.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 1,
+          "printed_page": "i",
+          "quote": "makes 11 recommendations to the FAA and 8 recommendations to The Boeing Company, and reiterates 4 safety recommendations to the FAA and 1 safety recommendation to Airlines for America, the National Air Carrier Association, and the Regional Airline Association."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 106,
+          "printed_page": 92,
+          "quote": "issue an airworthiness directive to require that all in- service MED plug-equipped airplanes be retrofitted with the design enhancement."
+        }
+      ]
+    },
+    {
+      "id": "K-ALT",
+      "rubric_items": "H01",
+      "answer": "Separation at ~14,830 ft (FDR 1712:33). Prelim also: crew recollection ~16,000 ft; 14,850 ft at 1712:34 (master caution). Max 16,320 ft.",
+      "evidence": [
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 3,
+          "printed_page": 3,
+          "quote": "The captain said that, while climbing through about 16,000 ft, there was a loud bang."
+        },
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 3,
+          "printed_page": 3,
+          "quote": "17:12:33 PST: The recorded cabin pressure dropped from 14.09 to 11.64 pounds per square inch (psi) when the airplane was at an altitude of about 14,830 ft"
+        },
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 4,
+          "printed_page": 4,
+          "quote": "17:12:34 PST: The Master Caution activated. The cabin pressure dropped to 9.08 psi at approximately 14,850 ft and 271 kts."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 10,
+          "printed_page": "x",
+          "quote": "rapid depressurization when climbing through about 14,830 ft"
+        }
+      ]
+    },
+    {
+      "id": "K-INJ177",
+      "rubric_items": "H02",
+      "answer": "Preliminary report header and data block print injuries as \"177 None\" while its own narrative says 7 passengers + 1 FA minor injuries (final: 8 minor, 169 uninjured).",
+      "evidence": [
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 1,
+          "printed_page": 1,
+          "quote": "Injuries: 177 None"
+        },
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 19,
+          "printed_page": 19,
+          "quote": "Total Injuries: 177 None"
+        },
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 1,
+          "printed_page": 1,
+          "quote": "Seven passengers and one flight attendant received minor injuries."
+        }
+      ]
+    },
+    {
+      "id": "K-AUTOFAIL",
+      "rubric_items": "H03,R05",
+      "answer": "Prelim/logbook: 3 previous flights (Dec 7, Jan 3, Jan 4). CPC memory: 4 flights incl. 2023-11-10 (day before entry into service). UART chip fault. Not associated with plug.",
+      "evidence": [
+        {
+          "file": "preliminary-report.pdf",
+          "pdf_page": 8,
+          "printed_page": 8,
+          "quote": "a pressure controller light had illuminated on three previous flights."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 25,
+          "printed_page": 11,
+          "quote": "the cabin pressurization AUTO FAIL light during flights on December 7, 2023; January 3, 2024; and January 4, 2024."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 48,
+          "printed_page": 34,
+          "quote": "since airplane delivery, the AUTO FAIL light illuminated during four different flights."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 48,
+          "printed_page": 34,
+          "quote": "The data showed the events occurred on November 10, 2023; December 7, 2023; January 3, 2024; and January 4, 2024."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 49,
+          "printed_page": 35,
+          "quote": "consistent with an intermittent failure of the CPC’s universal asynchronous receiver-transmitter (UART) microchip."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 132,
+          "printed_page": 118,
+          "quote": "there was no evidence that the previous pressurization system AUTO FAIL light illumination events were associated with the left MED plug’s upward displacement during previous flights."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 25,
+          "printed_page": 11,
+          "quote": "placed it into service on November 11, 2023."
+        }
+      ]
+    },
+    {
+      "id": "K-SEATS",
+      "rubric_items": "H04",
+      "answer": "26A and 26B vacant: two checked-in passengers arrived late and were rebooked.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 18,
+          "printed_page": 4,
+          "quote": "seats 26A and 26B were unoccupied."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 39,
+          "printed_page": 25,
+          "quote": "two individuals had checked in for seats 26A and 26B on the accident flight but were late arriving to the airport and were rebooked onto a later flight."
+        }
+      ]
+    },
+    {
+      "id": "K-WHO",
+      "rubric_items": "H05",
+      "answer": "Nobody identified who opened or finally closed the plug; Boeing SVP \"move crew\" claim at media briefing not supported by interviews; NTSB curtailed Boeing access.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 60,
+          "printed_page": 46,
+          "quote": "None of the personnel who provided information indicated that they had any knowledge of who opened the left MED plug, why no removal record existed, or who performed the final closure."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 66,
+          "printed_page": 52,
+          "quote": "she agreed that the interviews did not identify who performed the closure of the plug on September 19, 2023."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 66,
+          "printed_page": 52,
+          "quote": "“we believe the move crew; we know the move crew closed the plug.”"
+        }
+      ]
+    },
+    {
+      "id": "K-TYPO",
+      "rubric_items": "H06",
+      "answer": "Footnote text (printed p55) says the experienced door member was on leave \"September 18 and 19, 2024\"; timeline elsewhere is 2023.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 69,
+          "printed_page": 55,
+          "quote": "He said that he was on leave September 18 and 19, 2024 (when the accident airplane’s left MED plug was opened)."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 62,
+          "printed_page": 48,
+          "quote": "open at least as early as 1053 on September 18, 2023"
+        }
+      ]
+    },
+    {
+      "id": "K-CULTURE",
+      "rubric_items": "H07",
+      "answer": "Safety culture / adverse production pressure could not be assessed.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 135,
+          "printed_page": 121,
+          "quote": "an assessment of Boeing’s safety culture, including whether adverse pressure existed on the production line, could not be performed as part of this investigation."
+        }
+      ]
+    },
+    {
+      "id": "K-DESIGN",
+      "rubric_items": "H08",
+      "answer": "Design enhancement: secondary retention devices + bolt lanyards; certification ongoing as of May 2025; new production likely from 2026; retrofit via SB.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 106,
+          "printed_page": 92,
+          "quote": "As of May 2025, Boeing and Spirit were continuing certification planning and compliance work"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 106,
+          "printed_page": 92,
+          "quote": "installation in all applicable new production airplanes would likely begin sometime in 2026"
+        }
+      ]
+    },
+    {
+      "id": "K-ARITH",
+      "rubric_items": "R02",
+      "answer": "2023-09-18 -> 2024-01-05 = 109 days; 2023-10-31 -> 66 days; 2023-11-11 -> 55 days; 1712:33 -> 1726:46 = 14 min 13 s; 510 h, 154 cycles.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 25,
+          "printed_page": 11,
+          "quote": "Alaska Airlines took delivery of the accident airplane from Boeing on October 31, 2023, and placed it into service on November 11, 2023. At the time of the accident, the airplane had accumulated 510 hours and 154 cycles."
+        }
+      ]
+    },
+    {
+      "id": "K-REDUND",
+      "rubric_items": "R03",
+      "answer": "One vertical movement arrestor bolt alone, or both upper guide track bolts, would prevent separation; none of the four present.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 98,
+          "printed_page": 84,
+          "quote": "the presence of only one vertical movement arrestor bolt (with the other three bolts missing) would preclude upward movement of an MED plug"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 98,
+          "printed_page": 84,
+          "quote": "However, none of the four bolts were present"
+        }
+      ]
+    },
+    {
+      "id": "K-SHORTSTAMP",
+      "rubric_items": "R04",
+      "answer": "Short stamp correctly applied \"may have provided an opportunity\" to detect; removal record was the required control.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 134,
+          "printed_page": 120,
+          "quote": "it may have provided an opportunity for personnel to detect the left mid exit door plug’s missing bolts and attachment hardware."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 133,
+          "printed_page": 119,
+          "quote": "Whoever opened the left mid exit door plug did not generate a removal record"
+        }
+      ]
+    },
+    {
+      "id": "K-PREFLIGHT",
+      "rubric_items": "R05",
+      "answer": "Upward displacement not detectable in routine preflight walkaround.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 132,
+          "printed_page": 118,
+          "quote": "would not have been readily detectable by a flight crewmember performing a routine preflight walkaround inspection."
+        }
+      ]
+    },
+    {
+      "id": "K-FAA",
+      "rubric_items": "R06",
+      "answer": "Oct 2022-Sep 2023 Renton: 22 PI audits, 1 QS audit, 53 product audits; 68 alleged noncompliances (33 process control, 10 document control, 4 quality escapes, others) none referencing removal BPI; 16 BPI issues 2018-2023 (9 Boeing-disclosed, 7 FAA).",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 81,
+          "printed_page": 67,
+          "quote": "These audits documented 68 alleged noncompliances, which included issues with manufacturing process control (33 alleged noncompliances), document control (10 alleged noncompliances), and quality escapes (4 alleged noncompliances), among others."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 82,
+          "printed_page": 68,
+          "quote": "none specifically referenced BPI “Perform Part or Assembly Removal.”"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 82,
+          "printed_page": 68,
+          "quote": "the 16 regulatory compliance issues related to BPI “Perform Part or Assembly Removal” identified from 2018 to 2023 (9 voluntarily disclosed by Boeing and 7 identified by the FAA)."
+        }
+      ]
+    },
+    {
+      "id": "K-PLUGHIST",
+      "rubric_items": "R07",
+      "answer": "62 instances / 28 airplanes since 2018; Renton 24 instances / 15 airplanes; field 38 / 13; Renton affected airplanes: 2021 one, 2022 two, 2023 four (airplanes, not instances).",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 69,
+          "printed_page": 55,
+          "quote": "there were 62 instances (involving 28 airplanes) of documentation generated for the opening or full removal of an MED plug"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 69,
+          "printed_page": 55,
+          "quote": "Twenty-four instances (involving 15 airplanes) were initiated on airplanes while in production in Boeing’s Renton facility, and 38 instances (involving 13 airplanes) were initiated in field locations"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 69,
+          "printed_page": 55,
+          "quote": "with one affected airplane in the factory in 2021, two in 2022, and four in 2023"
+        }
+      ]
+    },
+    {
+      "id": "K-LOADS",
+      "rubric_items": "R08",
+      "answer": "Static >150 lb (right plug exemplar); dynamic min 0.40-0.45 g -> effective ~25 lb vs nominal 63 lb; error ~±0.15 g; 9 QAR flights, 106,008 values.",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 45,
+          "printed_page": 31,
+          "quote": "Additional force by two people, estimated to exceed 150 lbs, was applied, and the plug moved vertically upward"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 46,
+          "printed_page": 32,
+          "quote": "(The nominal weight of the MED plug at 1.0 g was 63 lbs.)"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 47,
+          "printed_page": 33,
+          "quote": "The 0.40–0.45 g level represented an effective plug weight of 25 lbs."
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 47,
+          "printed_page": 33,
+          "quote": "The group estimated an error of about +/- 0.15 g."
+        }
+      ]
+    },
+    {
+      "id": "K-PROD",
+      "rubric_items": "chart candidates",
+      "answer": "Production ~52/month pre-2018; <10 at pandemic low; 30-38 before accident; experience >10 yrs ~50% a decade ago vs 25-30% (VP quote, approximate).",
+      "evidence": [
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 70,
+          "printed_page": 56,
+          "quote": "Before 2018, Boeing produced about 52 airplanes per month"
+        },
+        {
+          "file": "final-report.pdf",
+          "pdf_page": 71,
+          "printed_page": 57,
+          "quote": "10 years ago, we were closer to 50% of employees with more than 10 years’ [experience]. Today, I would say we are at 25 or 30%"
+        }
+      ]
+    }
+  ]
+}

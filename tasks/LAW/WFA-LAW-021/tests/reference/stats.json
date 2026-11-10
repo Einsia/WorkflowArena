@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-021",
+  "src": "train-2819",
+  "case_no": "（2015）金东刑初字第361号",
+  "year": 2015,
+  "n_defendants": 14,
+  "charges": [
+    "开设赌场罪",
+    "赌博罪"
+  ],
+  "n_principal": 9,
+  "n_accessory": 5,
+  "n_role_items": 14,
+  "n_leaders": 0,
+  "facts_chars": 4219,
+  "n_probation_graded": 2
+}

@@ -1,0 +1,354 @@
+{
+  "task_id": "WFA-LAW-022",
+  "source": {
+    "dataset": "MultiLJP (CURRENTF/HRN dataset-v5, data_v5.03)",
+    "record": "train-18853"
+  },
+  "ungraded_circumstances": [],
+  "corrections": [
+    "D/A: 组织、领导恶势力犯罪集团（刑法97条意义上的首要分子）"
+  ],
+  "defendants": {
+    "[被告A]": {
+      "original_code": "[被告G]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 6,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑六个月"
+      }
+    },
+    "[被告B]": {
+      "original_code": "[被告D]",
+      "charges": [
+        "寻衅滋事罪",
+        "诈骗罪"
+      ],
+      "articles": [
+        266,
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯",
+        "诈骗罪": "主犯"
+      },
+      "leader": true,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 28,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪",
+          "诈骗罪"
+        ],
+        "laws": [
+          293,
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑两年零四个月"
+      }
+    },
+    "[被告C]": {
+      "original_code": "[被告B]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 7,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑七个月"
+      }
+    },
+    "[被告D]": {
+      "original_code": "[被告F]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 7,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑七个月"
+      }
+    },
+    "[被告E]": {
+      "original_code": "[被告I]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 6,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑六个月"
+      }
+    },
+    "[被告F]": {
+      "original_code": "[被告C]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 6,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑六个月"
+      }
+    },
+    "[被告G]": {
+      "original_code": "[被告E]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 7,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑七个月"
+      }
+    },
+    "[被告H]": {
+      "original_code": "[被告H]",
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 6,
+        "death_any": false
+      },
+      "probation": null,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪"
+        ],
+        "laws": [
+          293
+        ],
+        "states": [
+          "从犯",
+          "坦白"
+        ],
+        "term": "有期徒刑六个月"
+      }
+    },
+    "[被告I]": {
+      "original_code": "[被告A]",
+      "charges": [
+        "寻衅滋事罪",
+        "诈骗罪"
+      ],
+      "articles": [
+        266,
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯",
+        "诈骗罪": "主犯"
+      },
+      "leader": true,
+      "circumstances": [
+        "坦白"
+      ],
+      "term": {
+        "type": "有期徒刑",
+        "months": 28,
+        "death_any": false
+      },
+      "probation": false,
+      "prior_sentence_merged": false,
+      "notes": [],
+      "multiljp": {
+        "accusations": [
+          "寻衅滋事罪",
+          "诈骗罪"
+        ],
+        "laws": [
+          293,
+          266
+        ],
+        "states": [
+          "坦白"
+        ],
+        "term": "有期徒刑两年零四个月"
+      }
+    }
+  }
+}

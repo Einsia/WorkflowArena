@@ -1,0 +1,627 @@
+{
+  "task_id": "WFA-CDN-012",
+  "scoring": "each item binary; group score = weight x passed/items; total = sum (100). Group gates zero only that group; overall gates = deliverable missing/unopenable or cheating.",
+  "groups": [
+    {
+      "id": "G1",
+      "name_zh": "叙事与结构",
+      "name_en": "Narrative & structure",
+      "weight": 9,
+      "items": 6
+    },
+    {
+      "id": "G2",
+      "name_zh": "视觉设计与可读性",
+      "name_en": "Visual design & legibility",
+      "weight": 9,
+      "items": 7
+    },
+    {
+      "id": "G3",
+      "name_zh": "材料覆盖与隐藏考点",
+      "name_en": "Coverage & hidden checkpoints",
+      "weight": 21,
+      "items": 11
+    },
+    {
+      "id": "G4",
+      "name_zh": "逐页忠实度",
+      "name_en": "Per-slide fidelity",
+      "weight": 10,
+      "items": 8
+    },
+    {
+      "id": "G5",
+      "name_zh": "情景比较推理与口径归一",
+      "name_en": "Scenario reasoning & unit/price-basis normalisation",
+      "weight": 33,
+      "items": 10
+    },
+    {
+      "id": "G6",
+      "name_zh": "原生对象与交付",
+      "name_en": "Native objects & delivery",
+      "weight": 18,
+      "items": 13
+    }
+  ],
+  "gates": [
+    {
+      "id": "GATE0",
+      "scope": "整题",
+      "zh": "output/ 中 presentation.pptx、slides.pdf、script.md、scenario-data.xlsx、evidence-index.csv、playback-check.md 六件齐全，且 pptx 能被 python-pptx 读出幻灯片。",
+      "en": "All six deliverables exist and the PPTX is parseable.",
+      "effect_zh": "全部判定记否，验收失败。"
+    },
+    {
+      "id": "GATE1",
+      "scope": "G6 组级",
+      "zh": "PowerPoint 无修复打开的结构代理（Linux 评测无法运行 PowerPoint）：pptx 为完整 zip，[Content_Types] 覆盖全部部件，所有内部关系目标存在，XML 良构，python-pptx 可打开，且无任何外部关系（超链接除外）。",
+      "en": "Structural proxy for opening in PowerPoint without repair (PowerPoint cannot run in the Linux verifier): intact zip, content types cover every part, all internal relationship targets exist, well-formed XML, python-pptx opens it, and no external relationship other than hyperlinks.",
+      "effect_zh": "G6 全部判否（checks.postprocess）。"
+    },
+    {
+      "id": "GATE2",
+      "scope": "整题",
+      "zh": "作弊/违规：访问评测隐藏文件、联网取材、用材料包以外来源的数据替换材料数据。",
+      "en": "Cheating / network use / hidden-file access / outside data.",
+      "effect_zh": "整题 0，验收失败。"
+    }
+  ],
+  "items": [
+    {
+      "id": "N01",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "9–11 页、16:9，含标题页与结束页，无空分隔页。",
+      "criterion_en": "9–11 slides, 16:9, title+closing, no empty dividers.",
+      "verify": "python-pptx: slide count, slide size ratio 16:9; every non-title slide has ≥1 fact-bearing element besides its title.",
+      "weight": 1.5
+    },
+    {
+      "id": "N02",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "每页标题都是完整论断（含谓语的判断句），不是话题标签。",
+      "criterion_en": "Every slide title is a claim sentence.",
+      "verify": "Reviewer reads all titles; any noun-phrase title ⇒ NO.",
+      "weight": 1.5
+    },
+    {
+      "id": "N03",
+      "tier": "base",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "script.md 每页给时长，合计 11–13 分钟；每页演讲者备注与讲稿该页文字一致（归一化后相似度 ≥ 0.9）。",
+      "criterion_en": "script.md per-slide timings total 11–13 min; notes match script per slide (normalised similarity ≥0.9).",
+      "verify": "Parse script.md timings; difflib ratio between notes and script per slide.",
+      "weight": 1.5
+    },
+    {
+      "id": "N04",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "结束页直接回答开场问题：给出需求、发电结构、价格三方面 2050 区间的结论，并至少写出一条“该区间不能告诉规划者什么”。",
+      "criterion_en": "Closing slide answers the question: 2050 spread for demand, mix and price, plus ≥1 explicit 'does not tell a planner' limit.",
+      "verify": "Reviewer: all three dimensions + ≥1 limit present on the closing slide (not only in notes).",
+      "weight": 1.5
+    },
+    {
+      "id": "N05",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "术语按听众解释：至少对“情景/案例”“quad（千万亿 Btu）”“不变美元 vs 名义美元”“Henry Hub”在首次出现时给出一句话解释。",
+      "criterion_en": "Terms explained at first use: case/scenario, quad, constant vs nominal dollars, Henry Hub.",
+      "verify": "Reviewer checks slides+notes; any of the four used without explanation ⇒ NO.",
+      "weight": 1.5
+    },
+    {
+      "id": "N06",
+      "tier": "mid",
+      "group": "G1",
+      "critical": false,
+      "criterion_zh": "页面顺序形成论证链：每页论断都被后续页面或结论使用，无两页重复同一论断。",
+      "criterion_en": "Slides form one argument; no two slides make the same claim; each claim feeds the answer.",
+      "verify": "Reviewer maps title claims to the closing answer; any orphan/duplicate ⇒ NO.",
+      "weight": 1.5
+    },
+    {
+      "id": "V01",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "正文 ≥ 20 pt，图注/出处行与表格单元格文字 ≥ 12 pt。",
+      "criterion_en": "Body ≥20 pt; captions, source lines and table-cell text ≥12 pt.",
+      "verify": "checks.py (deterministic): effective run size = explicit size, else shape list style, layout/master placeholder, master text styles or presentation default (18 pt), times normAutofit fontScale. Body text = body/content placeholders and text boxes with >=15 words or >=2 paragraphs averaging >=5 words; source/caption lines (starting 'Source', 'Note', ... or all runs <16 pt) and short labels are not body. Any body run <20 pt, any other run <12 pt, or an explicit table-cell size <12 pt => NO.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V02",
+      "tier": "base",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每页 ≤ 6 条要点。",
+      "criterion_en": "≤6 bullets per slide.",
+      "verify": "checks.py (deterministic): per slide, the non-empty paragraphs of all body text frames (plus multi-paragraph labels) are summed; titles, source/caption lines and single-line callouts are not bullets; any slide with >6 => NO.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V03",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "没有任何形状或原生表格超出页面范围，渲染页面中无明显的文字溢出、重叠或裁切。",
+      "criterion_en": "No shape or native table extends beyond the slide, and the rendered pages show no visibly overflowing, overlapping or clipped text.",
+      "verify": "checks.py (fail-only): every top-level shape, incl. a table frame taken as the sum of its row heights, must lie inside slide width/height (1 pt tolerance); otherwise the judge inspects the rendered page tiles (LibreOffice render) for overflow, overlap and clipping.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V04",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "以一致的视觉编码（颜色/标签/图例）区分“模型预测结果”“机构陈述”“演讲者推断”，并在页面上给出图例。",
+      "criterion_en": "Consistent visual coding distinguishes model result / agency statement / own inference, with an on-slide key.",
+      "verify": "Reviewer: coding present on every content slide that carries such claims; key visible.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V05",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "每个图表的系列均有名称（无空名或“Series N”等默认名），数值轴标题（无数值轴的图表为图表标题）写明单位；货币类图表同时在该处写明价格口径（如 2025 美元、实际、名义）。",
+      "criterion_en": "Every chart has named series (no empty or default 'Series N' names) and a unit in its value-axis title (chart title for charts without a value axis); charts of money values also state the price basis there (e.g. 2025 $, real, nominal).",
+      "verify": "checks.py (deterministic): python-pptx series names, value-axis and chart titles; unit tokens (kWh/TWh/quad/Btu/¢/$/%/...); money detected from price/¢/$/cost words in chart title, axis titles or series names; basis tokens 2025/real/nominal/constant.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V06",
+      "tier": "gate",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "同一情景在出现它的所有图表中颜色相同，且不同情景不共用颜色；图表中情景的排列顺序与名称与原生表格一致。",
+      "criterion_en": "Each case keeps one colour in every chart in which it appears and no two cases share a colour; charts list the cases in the same order and under the same names as the native table.",
+      "verify": "checks.py (deterministic): series fill/line colour (or per-point c:dPt colour for single-series case-category charts; automatic colours by series index) per case across charts; chart case order must follow table row order; case labels compared after normalisation (text in parentheses ignored). No case-coded chart => judge.",
+      "weight": 1.2857
+    },
+    {
+      "id": "V07",
+      "tier": "mid",
+      "group": "G2",
+      "critical": false,
+      "criterion_zh": "至少 1 幅报告原图被干净裁切并保留图例，叠加 ≥ 2 个原生可编辑标注，指向与该页论断相关的具体元素。",
+      "criterion_en": "≥1 report figure cleanly cropped with legend, ≥2 native callouts pointing at specific elements tied to the slide claim.",
+      "verify": "python-pptx picture + overlapping autoshapes; reviewer checks crop and relevance.",
+      "weight": 1.2857
+    },
+    {
+      "id": "C00",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "覆盖题面要求的全部主题：各情景需求、发电结构、电价、天然气价格，以及“用电在能源总量中的位置”，每项至少一页承载数据。",
+      "criterion_en": "Covers every required topic: demand, generation mix, electricity price, natural-gas price across cases, and electricity in the context of total energy use; each on ≥1 data-bearing slide.",
+      "verify": "Reviewer maps slides to topics.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C01",
+      "tier": "base",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "原生表格列出全部 11 个情景，名称与材料一致（基线情景用材料中的现名；若用旧称须注明改名）。",
+      "criterion_en": "Native table lists all 11 cases with names as in the material (baseline under its current name, or rename noted).",
+      "verify": "checks.py: native-table row labels vs the 11 case names and their short forms (Combination row is not counted as AltElec/AltTrnp; cases as rows or columns). Baseline found only as 'Reference' => judge checks for the rename note.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C02",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "总用电（Total Electricity Use）数值正确：2025 ≈ 4,298 十亿kWh；2050 最低 AltTrnp ≈ 5,439、最高 HighElDmd ≈ 6,470、基线 ≈ 5,995（舍入误差内）。若改用售电量，须标明且数值对应表 8 售电行。",
+      "criterion_en": "Electricity use correct: 2025≈4,298 BkWh; 2050 low AltTrnp≈5,439, high HighElDmd≈6,470, baseline≈5,995 (rounding). If sales are used instead, labelled and matching Table 8 sales.",
+      "verify": "Compare deck/table values with answer-key K02 (tolerance: displayed rounding ±0.5%).",
+      "weight": 1.9091
+    },
+    {
+      "id": "C03",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "基线 2050 发电结构份额正确（天然气 ≈ 41%、可再生 ≈ 46%、核电 ≈ 13%、煤 < 1%，±1 个百分点），或逐字引用报告 p16 的近似值并注页码。",
+      "criterion_en": "Baseline 2050 generation shares correct (gas≈41%, renewables≈46%, nuclear≈13%, coal<1%, ±1 pp) or the report p16 approximations quoted with page.",
+      "verify": "answer-key K09; Table 8 Total Net Electricity Generation by Fuel / total.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C04",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "煤电：保留 2024 电厂 CO2 规则的情景 2050 煤电份额 < 1%，去掉该规则（AltElec/Combination）约 5%；并指明是该规则假设拉开差距。",
+      "criterion_en": "Coal: <1% of 2050 generation with the 2024 power-plant CO2 rule vs ≈5% without it (AltElec/Combination); gap attributed to that rule.",
+      "verify": "answer-key K08 (report p16 PDF p19; Table 8).",
+      "weight": 1.9091
+    },
+    {
+      "id": "C05",
+      "tier": "mid",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "价格区间正确（2025 美元）：2050 全部门平均终端电价 HighOGS ≈ 13.1 至 LowOGS ≈ 16.6 ¢/kWh、基线 ≈ 14.0；Henry Hub 2050 ≈ 2.7 至 13.7 $/MMBtu、基线 ≈ 4.6。",
+      "criterion_en": "Price ranges correct in 2025 dollars: 2050 all-sector average electricity price HighOGS≈13.1 to LowOGS≈16.6 ¢/kWh, baseline≈14.0; Henry Hub 2050≈2.7–13.7 $/MMBtu, baseline≈4.6.",
+      "verify": "answer-key K04 (Table 8 'All Sectors Average' 2025-cents row; Table 1 Henry Hub 2025-dollars row).",
+      "weight": 1.9091
+    },
+    {
+      "id": "C06",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "隐藏考点：明确说明基线情景不是预测、不是“最可能”情景（报告 p4，PDF p7，脚注 3），且全稿没有把任何情景或其结果描述为预测、最可能或预期结果（“模型预测为/该情景下”等中性表述不算）。",
+      "criterion_en": "Hidden: states that the baseline is not a forecast and not the most likely case (report p4, PDF p7, fn 3), and nowhere describes any case or its results as a forecast, prediction, most likely or expected outcome (neutral words such as 'projects' or 'in this case' are fine).",
+      "verify": "Judge searches slides+notes+script for 'forecast|predict|most likely|expected outcome|base case' and decides whether a case is being characterised as the likely future.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C07",
+      "tier": "gate",
+      "group": "G3",
+      "critical": true,
+      "criterion_zh": "隐藏考点（附条件）：若简报给出任何数据中心服务器用电数值，须使用报告/图数据（2050 基线 ≈446、HighElDmd ≈819 十亿kWh）或情景说明表 3（800 / 1,440 TWh/yr）之值，并明确指出两份文件不一致（TWh 即十亿kWh，并非单位差异）；只悄悄引用其一或以单位不同解释掉判否。全稿没有服务器用电数值时判通过（计为通过，而非不适用）。",
+      "criterion_en": "Hidden, conditional: if the deck gives any data-centre server electricity figure, it uses the report/figure-data values (2050 baseline ~446, HighElDmd ~819 BkWh) or the case-descriptions Table 3 values (800 / 1,440 TWh/yr) and explicitly flags that the two documents differ (TWh = BkWh, so this is not a unit difference); quoting one document silently, or explaining the gap away as different units, fails. A deck with no server electricity figure passes; the item counts as passed, not as not-applicable.",
+      "verify": "checks.py: no 'data centre/center' or 'server' wording anywhere in slides, tables, charts, notes or script => pass; otherwise the judge searches for 1,440/1440/800/818/819/446 and checks the flag against answer-key K05.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C08",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "高电力需求与高经济增长两情景用电年均增速相近（报告 p14 写 1.6% 与 1.5%/yr；表 8 计算约 1.65% 与 1.57%，任一口径均可），但驱动不同：前者按设计仅商业建筑（数据中心与制冷）增量，后者为全经济增长（报告 p14）。",
+      "criterion_en": "HighElDmd and HighEcon have similar demand growth (report p14: 1.6% vs 1.5%/yr; Table 8 computes ~1.65% vs 1.57%; either basis accepted) but different drivers: commercial (data centres, cooling) by design vs economy-wide (report p14).",
+      "verify": "answer-key K11.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C09",
+      "tier": "gate",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "负荷形态与成本：AltTrnp 需求更低但配电在电价中的占比更高、HighElDmd 发电成本更高，且用表 8 分项电价（2025 美元）支持：AltTrnp 配电 ≈ 5.04 vs 基线 ≈ 4.92 ¢/kWh；HighElDmd 发电 ≈ 6.62 vs 6.41 ¢/kWh。",
+      "criterion_en": "Load shape and cost: AltTrnp lower demand but higher distribution share; HighElDmd higher generation cost; supported with Table 8 service-category prices (2025$): AltTrnp distribution≈5.04 vs 4.92; HighElDmd generation≈6.62 vs 6.41 ¢/kWh.",
+      "verify": "answer-key K14; both directions with numbers ⇒ YES.",
+      "weight": 1.9091
+    },
+    {
+      "id": "C10",
+      "tier": "mid",
+      "group": "G3",
+      "critical": false,
+      "criterion_zh": "把用电放到能源总量背景中：基线 2050 购电 ≈ 19.0 quads，对应交付能源 ≈ 76.5 quads（≈ 25%）或总消费 ≈ 93.2 quads（含电力相关损失 ≈ 16.2 quads），并说明所用分母口径。",
+      "criterion_en": "Electricity in context: baseline 2050 purchased electricity≈19.0 quads vs delivered≈76.5 (≈25%) or total≈93.2 incl. electricity-related losses≈16.2; denominator basis stated.",
+      "verify": "answer-key K06; Table 2 rows.",
+      "weight": 1.9091
+    },
+    {
+      "id": "F00",
+      "tier": "base",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "每张含数字的页面都有可见出处行（文件 + 页或表/工作表）。",
+      "criterion_en": "Every slide with numbers has a visible source line (file + page or table/sheet).",
+      "verify": "python-pptx text search per slide; reviewer.",
+      "weight": 1.25
+    },
+    {
+      "id": "F01",
+      "tier": "gate",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "原生表格中每个 2050/2025 数值都与源表一致（显示舍入内）；任一格错误即否。",
+      "criterion_en": "Every value in the native table matches the source tables within displayed rounding; any wrong cell ⇒ NO.",
+      "verify": "checks.py (deterministic): best native table (cases as rows or columns); each numeric column is fitted to ONE source quantity of input/tables/<case>_table<N>.xlsx (2025 or 2050 value, average annual change, growth, CAGR, change vs baseline, share of generation / delivered / total energy; unit scales x1, x1000, x1/1000, x100, x1/100, BkWh->quads) and every case cell must reproduce it within its displayed rounding; a 2025 reference row must equal the baseline 2025 value of the same row. Any cell off its column's source => NO; a column that cannot be tied to any source row => judge.",
+      "weight": 1.25
+    },
+    {
+      "id": "F02",
+      "tier": "mid",
+      "group": "G4",
+      "critical": true,
+      "criterion_zh": "每个图表系列的绘制数值（须同时存在于该图嵌入工作簿中）在其存储精度内与源表（或 figure-data.xlsx）一致；任一数据点错误或编造即否。",
+      "criterion_en": "Every chart series' plotted values (which must also be in the chart's embedded workbook) reproduce the source tables (or figure-data.xlsx) at their stored precision; any wrong or invented point => NO.",
+      "verify": "checks.py (deterministic): series mapped to cases (series or categories named as cases) are fitted to one source row of input/tables (per point year); unmapped series must equal baseline rows or lie in one row/column of figure-data.xlsx (>=3 points); otherwise judge. Workbook containment is checked in D04.",
+      "weight": 1.25
+    },
+    {
+      "id": "F03",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "需求页：所有数字与论断可追溯且正确。",
+      "criterion_en": "Demand slide: every number and claim traceable and correct.",
+      "verify": "Reviewer vs evidence-index + answer-key.",
+      "weight": 1.25
+    },
+    {
+      "id": "F04",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "发电结构/容量页：所有数字与论断可追溯且正确。",
+      "criterion_en": "Generation-mix slide: every number and claim traceable and correct.",
+      "verify": "Reviewer vs evidence-index + answer-key.",
+      "weight": 1.25
+    },
+    {
+      "id": "F05",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "价格页：所有数字与论断可追溯且正确，且每个价格写明口径。",
+      "criterion_en": "Price slide: every number traceable and correct, each with price basis.",
+      "verify": "Reviewer vs evidence-index + answer-key.",
+      "weight": 1.25
+    },
+    {
+      "id": "F06",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "页面、备注与讲稿中没有任何未列入 evidence-index.csv 或与 answer-key 相矛盾的事实（如州级数据、其他机构数字、报告未载的政策细节）。",
+      "criterion_en": "No slide, note or script line presents a fact that is absent from evidence-index.csv or contradicts the answer key (e.g. state-level data, other agencies' figures, policy details not in the reports).",
+      "verify": "Judge cross-reads slides/notes/script against evidence-index.csv and the answer key.",
+      "weight": 1.25
+    },
+    {
+      "id": "F07",
+      "tier": "mid",
+      "group": "G4",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 按固定随机种子抽 10 行（不足 10 行则全部），全部能在所列文件/页或单元格找到对应值或原文。",
+      "criterion_en": "10 evidence-index rows (fixed-seed random sample; all rows if fewer) all resolve to the cited page or cell.",
+      "verify": "checks.py (deterministic): PDF rows - the cited page (read as PDF page and as printed page + 3 / + 4 for case-descriptions) must contain a number of the claim or a 5-word phrase (or >=75% of the long words) of it; rows marked recalculation/conversion only need an existing cited page. xlsx rows - the cited sheet/cell(s) (A1 refs or 'row N col X') must hold a claim number (recalculated rows: a numeric cell). 10/10 => YES.",
+      "weight": 1.25
+    },
+    {
+      "id": "R01",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "跨情景价格比较全部使用同一年份的不变美元（2025 美元）；任何页面/图/表未用名义价格比较或排序情景（名义下 LowEcon 2050 均价 ≈ 31.9¢ 会被误排为最贵，实际为 ≈ 13.6¢）。",
+      "criterion_en": "All cross-case price comparisons use constant dollars of one year (2025$); no slide/chart/table compares or ranks cases on nominal prices (nominal LowEcon 2050≈31.9¢ would wrongly rank highest; real≈13.6¢).",
+      "verify": "Check plotted/table price values against Table 8/Table 1 2025-dollar rows; any nominal-row value in a cross-case comparison ⇒ NO. answer-key K03.",
+      "weight": 3.3
+    },
+    {
+      "id": "R02",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "价格随时间变化以实际口径表述且正确：基线全部门均价 2025→2050 ≈ +3.8%（≈ +0.15%/yr，2025 美元）；若同时给名义值（≈ 23.2¢，+2.2%/yr）须标明名义且不作“涨价”结论依据。",
+      "criterion_en": "Price change over time stated in real terms and correct: baseline average price 2025→2050 ≈+3.8% (≈0.15%/yr, 2025$); any nominal figure (≈23.2¢, 2.2%/yr) labelled nominal and not used as evidence of a real increase.",
+      "verify": "answer-key K15.",
+      "weight": 3.3
+    },
+    {
+      "id": "R03",
+      "tier": "gate",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "电量换算正确：任何以 quads/Btu 表示的电量使用 3,412 Btu/kWh（结果与表 2 购电行差 ≤ 1%），并标明是交付口径还是含发电/输配损失的一次能源口径；不得把两种口径混比。",
+      "criterion_en": "kWh→Btu conversion correct (3,412 Btu/kWh; within 1% of Table 2 purchased electricity) and basis (delivered vs including electricity-related losses) labelled; no mixing of the two.",
+      "verify": "answer-key K06; recompute deck numbers.",
+      "weight": 3.3
+    },
+    {
+      "id": "R04",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "需求增长计算正确：2025–2050 总用电增长区间下端落在 25%–27%、上端落在 50%–51%（表 8 算得 +26.5% 与 +50.5%）；年均增速下端落在 0.9%–1.0%、上端落在 1.6%–1.7%（表 8 算得 0.95% 与 1.65%）。直接引用报告 p14/p15 的 25%–50%、0.9%–1.6% 也通过。",
+      "criterion_en": "Demand growth computed correctly: 2025–2050 total-use growth low end within 25–27% and high end within 50–51% (Table 8: +26.5% / +50.5%); annual growth low end within 0.9–1.0%/yr and high end within 1.6–1.7%/yr (Table 8: 0.95% / 1.65%). Quoting the report's 25–50% and 0.9–1.6%/yr (p14/p15) also passes.",
+      "verify": "answer-key K02; CAGR = (v2050/v2025)^(1/25)−1.",
+      "weight": 3.3
+    },
+    {
+      "id": "R05",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "AltTrnp 与基线 2050 年电量差须量化并写明所指量：售电量 −10.0% 或总用电 −9.3%（表 8）。若引用报告 p12（PDF p15）“售电少 9%”，须并列表 8 数值并指出差异。未量化即否。",
+      "criterion_en": "The AltTrnp-vs-baseline 2050 electricity gap is quantified with its metric named: sales -10.0% or total electricity use -9.3% (Table 8). If the report's '9% less electricity sales' (printed p12, PDF p15) is quoted, the Table 8 value is shown next to it and the difference is noted. Gap not quantified => NO.",
+      "verify": "answer-key K07.",
+      "weight": 3.3
+    },
+    {
+      "id": "R06",
+      "tier": "mid",
+      "group": "G5",
+      "critical": true,
+      "criterion_zh": "每个差距归因到被改变的单一假设：需求低端←取消 MY2027+ 车辆尾气标准（AltTrnp/Combination）；需求高端←数据中心服务器假设（HighElDmd）/经济增长；价格区间←油气资源与技术假设（High/Low OGS）；煤电份额←2024 电厂 CO2 规则。四项全对才过。",
+      "criterion_en": "Each gap attributed to the single varied assumption: low demand ← removal of MY2027+ vehicle standards; high demand ← data-centre assumption / economic growth; price spread ← oil & gas resource/technology assumption; coal share ← 2024 power-plant CO2 rule. All four required.",
+      "verify": "answer-key K10; case-descriptions pp4–8.",
+      "weight": 3.3
+    },
+    {
+      "id": "R07",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "情景差以“情景 − 基线、同年同单位”表述；Combination 被说明为 AltElec 与 AltTrnp 假设的组合，而不是独立的第五种驱动。",
+      "criterion_en": "Case effects stated as case − baseline in the same year and unit; Combination described as the joint AltElec+AltTrnp assumptions, not an independent driver.",
+      "verify": "Reviewer; answer-key K10 (Combination Δuse −8.6% ≈ AltTrnp −9.3% + AltElec +0.6%).",
+      "weight": 3.3
+    },
+    {
+      "id": "R08",
+      "tier": "gate",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "气价—电价联动论证口径正确：展示 HighOGS/基线/LowOGS 的 2050 Henry Hub（2025 $/MMBtu）与均价（2025 ¢/kWh）同向变化；不得未换算就把 $/MMBtu 与 ¢/kWh 直接相减/相除（1 MMBtu = 293.07 kWh）。",
+      "criterion_en": "Gas–power price linkage on correct bases: HighOGS/baseline/LowOGS 2050 Henry Hub (2025 $/MMBtu) and average price (2025 ¢/kWh) move together; no arithmetic mixing $/MMBtu and ¢/kWh without conversion (1 MMBtu = 293.07 kWh).",
+      "verify": "answer-key K04; reviewer checks any combined arithmetic.",
+      "weight": 3.3
+    },
+    {
+      "id": "R09",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "附条件：若出现 GDP 或能源强度数值，须标明为 2012 年链式美元，且未与 2025 美元数值混用；若给出宏观增速假设，须与情景说明表 2 一致（实际 GDP 1.2%/1.7%/2.2%/年）。全稿未出现 GDP、能源强度或宏观增速数值时判通过。",
+      "criterion_en": "Conditional: any GDP or energy-intensity value is labelled in chained 2012 dollars and never mixed with 2025$ values, and any macro growth assumption stated matches case-descriptions Table 2 (real GDP 1.2% / 1.7% / 2.2% per year). A deck with no GDP, intensity or macro-growth value passes.",
+      "verify": "answer-key K12; judge checks every GDP/intensity/growth-assumption value in slides, notes and script.",
+      "weight": 3.3
+    },
+    {
+      "id": "R10",
+      "tier": "mid",
+      "group": "G5",
+      "critical": false,
+      "criterion_zh": "“区间不能告诉什么”至少两条有材料依据：情景不是概率、区间不是置信区间；全国口径非州级；政策截至 2025 年 12 月；模型不评估实验性技术（报告 p28）等。且全稿无概率化表述。",
+      "criterion_en": "≥2 material-grounded limits (cases are not probabilities/the range is not a confidence interval; national not state; policy as of Dec 2025; model does not assess experimental technologies p28); no probabilistic language anywhere.",
+      "verify": "Reviewer.",
+      "weight": 3.3
+    },
+    {
+      "id": "D00",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "原生表格每个指标列的表头写明单位，货币列写明价格口径（年份美元或名义）。",
+      "criterion_en": "Every native-table indicator header states its unit; money columns state price basis.",
+      "verify": "python-pptx table header cells.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D01",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "六件交付齐全；pptx 可解析。",
+      "criterion_en": "All six deliverables present; PPTX parseable.",
+      "verify": "File check.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D02",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "存在原生表格（a:tbl graphicFrame，非图片/OLE），含 11 情景 × ≥ 5 个 2050 指标，并给出 2025 参照值。",
+      "criterion_en": "Native table (a:tbl, not picture/OLE) with 11 cases × ≥5 2050 indicators plus 2025 reference values.",
+      "verify": "checks.py (deterministic): python-pptx has_table (a:tbl); cases as rows or columns; >=11 case rows + header and >=6 columns; a 2025 reference column/row/value is required ('2025' used only as a price-basis label such as '2025 ¢/kWh' or '2025 $' does not count).",
+      "weight": 1.3846
+    },
+    {
+      "id": "D03",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "≥ 3 个原生图表（c:chart），各带嵌入工作簿。",
+      "criterion_en": "≥3 native charts with embedded workbooks.",
+      "verify": "python-pptx has_chart; chart part has embedded xlsx.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D04",
+      "tier": "gate",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "每个图表的嵌入工作簿包含所绘数值，并另有写明单位、价格口径（货币类图表）与出处位置（文件 + 工作表/单元格或页码）的文字单元格。",
+      "criterion_en": "Every chart's embedded workbook contains the plotted values and, besides them, text cells giving the unit, the price basis (for money charts) and the source location (file + sheet/cell or page).",
+      "verify": "checks.py (deterministic): unzip each embedded workbook; every plotted cache value must be a workbook number; strings must contain a unit token (kWh|TWh|quad|Btu|¢|cents|$|%|unit), a location token (table N|.xlsx|.pdf|sheet|cell|row N|A1 ref|page|p.N|figure-data) and, for money charts, a basis token (2025|nominal|real|constant). 'Edit Data opens in PowerPoint' is covered by the GATE1 structural proxy.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D05",
+      "tier": "gate",
+      "group": "G6",
+      "critical": true,
+      "criterion_zh": "表–图一致：同时出现在原生表格与图表中的每个数值显示完全一致（数字、单位、口径、舍入），且都与源表一致。",
+      "criterion_en": "Table–chart agreement: every value shown in both the native table and a chart is identical as displayed and matches the source.",
+      "verify": "checks.py (deterministic): native-table columns and chart series are each fitted to a source quantity (see F01/F02); wherever both show the same quantity for the same case and year, the chart value formatted with its number format (General format: raw value within the table's rounding) must equal the table cell and use the same unit scale, otherwise NO. No shared value => YES. Table columns that cannot be fitted => judge.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D06",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "电价图：≥ 4 个情景的表 8 全部门平均电价，覆盖 2025–2050（数据点取自源表年份、首末为 2025 与 2050，或各情景 2025–2050 年均值），无编造插值。",
+      "criterion_en": "Price chart: >=4 cases, the Table 8 all-sector average electricity price over 2025-2050 (annual points taken from the source table from 2025 through 2050, or the 2025-2050 mean per case), no invented points.",
+      "verify": "checks.py (deterministic): a chart whose series or categories map to >=4 cases; year categories must start at 2025 and end at 2050 and every point must equal Table 8 'All Sectors Average' (2025 cents, or nominal if the chart says nominal; also accepted in $/kWh) within stored precision; year-less bars must equal the 26-year mean.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D07",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "每页都有演讲者备注。",
+      "criterion_en": "Speaker notes on every slide.",
+      "verify": "python-pptx notes_slide text non-empty.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D08",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "scenario-data.xlsx：≥ 80% 的派生数值为引用源值单元格的实时公式，且每行写明源文件与位置。",
+      "criterion_en": "scenario-data.xlsx: ≥80% of derived numbers are live formulas referencing source-value cells; each row cites file and location.",
+      "verify": "openpyxl formulas vs values.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D09",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "evidence-index.csv 字段齐全（页号、元素、论断、源文件、页/单元格、变换），每个承载事实的元素至少一行。",
+      "criterion_en": "evidence-index.csv has the required fields and ≥1 row per fact-bearing element.",
+      "verify": "CSV schema + count vs slide elements.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D10",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "slides.pdf 与 pptx 页数相同，且每页含对应幻灯片标题（顺序一致）。",
+      "criterion_en": "slides.pdf has the same page count as the PPTX and each page carries the corresponding slide's title (same order).",
+      "verify": "checks.py: pypdf page count vs slide count; >=80% of each slide title's words on the same pdftotext page.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D11",
+      "tier": "mid",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "playback-check.md 写明软件与版本、实际做过的检查及结果，并列出未能验证项；无无法证实的声明。",
+      "criterion_en": "playback-check.md names software/version, actual checks and results, and what was not verified; no unverifiable claims.",
+      "verify": "Judge reads playback-check.md against the delivered files.",
+      "weight": 1.3846
+    },
+    {
+      "id": "D12",
+      "tier": "base",
+      "group": "G6",
+      "critical": false,
+      "criterion_zh": "标明 AI 辅助制作、对源文件署名、未暗示机构背书。",
+      "criterion_en": "AI disclosure, source credit, no implied endorsement.",
+      "verify": "Reviewer.",
+      "weight": 1.3846
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-DOC",
+    "all_critical_items_must_pass": true
+  }
+}

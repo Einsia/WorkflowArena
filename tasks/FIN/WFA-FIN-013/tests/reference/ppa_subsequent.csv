@@ -1,0 +1,22 @@
+item,asset_id,charge_to_date,unamortized_step_up_closing
+Inventory (all lots on hand at acquisition),,37776.74,0.00
+Land,FA-S5-001,0.00,706737.41
+Plant building,FA-S5-002,4282.20,316881.86
+Office building,FA-S5-003,4795.24,282919.61
+Test rig,FA-S5-005,19.08,266.84
+Assembly cell,FA-S5-006,-512.20,-2560.89
+CNC line,FA-S5-007,31.24,437.45
+Racking system,FA-S5-012,1079.84,15117.53
+Racking system,FA-S5-014,221.20,3096.54
+Delivery vans,FA-S5-015,295.32,3248.41
+Packaging line,FA-S5-016,-266.84,-1334.23
+ERP hardware,FA-S5-017,1823.80,20061.65
+Forklift fleet,FA-S5-018,-120.76,-1690.39
+Racking system,FA-S5-020,-687.08,-3435.44
+CNC line,FA-S5-021,-748.80,-5990.23
+Packaging line,FA-S5-022,152.60,2136.40
+IT servers,FA-S5-023,182.04,2548.60
+Packaging line,FA-S5-024,413.92,5795.17
+Customer relationships,,115823.32,1968996.68
+Trade name 'Corvex',,26233.00,760757.00
+Order backlog,,168006.68,84003.32

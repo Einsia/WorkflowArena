@@ -1,0 +1,162 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14",
+  "A15"
+ ],
+ "deal_points": {
+  "dp_noshop_rep_liability": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_noshop_rep_standard": {
+   "options": [
+    "Reasonable standard",
+    "Strict liability"
+   ],
+   "multi": false
+  },
+  "dp_fidout_trigger": {
+   "options": [
+    "Acquisition Proposal only",
+    "Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+   ],
+   "multi": false
+  },
+  "dp_fidout_standard": {
+   "options": [
+    "\"Breach\" of fiduciary duties",
+    "\"Inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected breach\" of fiduciary duties",
+    "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected violation\" of fiduciary duties",
+    "\"Required to comply\" with fiduciary duties",
+    "\"Violation\" of fiduciary duties",
+    "More likely than not violate fiduciary duties",
+    "Other specified standard"
+   ],
+   "multi": false
+  },
+  "dp_cor_board_only": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_cor_so_standard": {
+   "options": [
+    "\"Breach\" of fiduciary duties",
+    "\"Inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected breach\" of fiduciary duties",
+    "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected violation\" of fiduciary duties",
+    "\"Required to comply\" with fiduciary duties",
+    "\"Violation\" of fiduciary duties",
+    "More likely than not violate fiduciary duties",
+    "Other specified standard"
+   ],
+   "multi": false
+  },
+  "dp_cor_ie_yn": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_cor_match_initial": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 calendar days",
+    "4 business days",
+    "4 calendar days",
+    "5 business days",
+    "Greater than 5 business days"
+   ],
+   "multi": false
+  },
+  "dp_cor_match_additional": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 days",
+    "4 business days",
+    "5 business days",
+    "> 5 business days"
+   ],
+   "multi": false
+  },
+  "dp_so_stock_threshold": {
+   "options": [
+    "\"All or substantially all\"",
+    "50%",
+    "Greater than 50% but not \"all or substantially all\"",
+    "Less than 50%"
+   ],
+   "multi": false
+  },
+  "dp_so_asset_threshold": {
+   "options": [
+    "\"All or substantially all\"",
+    "50%",
+    "Greater than 50% but not \"all or substantially all\"",
+    "Less than 50%"
+   ],
+   "multi": false
+  },
+  "dp_so_fpov_sole": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "kn_definition": {
+   "options": [
+    "Actual knowledge",
+    "Constructive knowledge"
+   ],
+   "multi": false
+  },
+  "kn_identified_persons": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "rem_specific_performance": {
+   "options": [
+    "\"entitled to seek\" specific performance",
+    "\"entitled to\" specific performance"
+   ],
+   "multi": false
+  },
+  "gen_consideration": {
+   "options": [
+    "All Cash",
+    "All Stock",
+    "Mixed Cash/Stock",
+    "Mixed Cash/Stock: Election"
+   ],
+   "multi": false
+  }
+ }
+}

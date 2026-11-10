@@ -1,0 +1,214 @@
+{
+  "CompHausLike.LocallyConstant.adjunction": {
+    "role": "dep",
+    "fp": "def 3139114565 3147399110"
+  },
+  "CompHausLike.LocallyConstant.counit": {
+    "role": "dep",
+    "fp": "def 2721009529 984422384"
+  },
+  "CompHausLike.LocallyConstant.counitApp": {
+    "role": "dep",
+    "fp": "def 3460046034 2044924118"
+  },
+  "CompHausLike.LocallyConstant.counitAppApp": {
+    "role": "dep",
+    "fp": "def 704328712 440701403"
+  },
+  "CompHausLike.LocallyConstant.counitAppAppImage": {
+    "role": "dep",
+    "fp": "def 2707860875 1951968864"
+  },
+  "CompHausLike.LocallyConstant.fiber": {
+    "role": "dep",
+    "fp": "def 106112614 2572640412"
+  },
+  "CompHausLike.LocallyConstant.functor": {
+    "role": "dep",
+    "fp": "def 4219574381 2841260862"
+  },
+  "CompHausLike.LocallyConstant.functorToPresheaves": {
+    "role": "dep",
+    "fp": "def 4003559091 3069353218"
+  },
+  "CompHausLike.LocallyConstant.functorToPresheaves.match_1": {
+    "role": "dep",
+    "fp": "def 774480350 1311831901"
+  },
+  "CompHausLike.LocallyConstant.sigmaIso": {
+    "role": "dep",
+    "fp": "def 1945404704 2269551438"
+  },
+  "CompHausLike.LocallyConstant.unit": {
+    "role": "dep",
+    "fp": "def 982078091 3829772604"
+  },
+  "CompHausLike.LocallyConstantModule.functor": {
+    "role": "dep",
+    "fp": "def 2642497518 2816838651"
+  },
+  "CompHausLike.LocallyConstantModule.functorToPresheaves": {
+    "role": "dep",
+    "fp": "def 2997133639 1779328812"
+  },
+  "CompHausLike.LocallyConstantModule.functorToPresheaves.match_1": {
+    "role": "dep",
+    "fp": "def 774480350 1311831901"
+  },
+  "CompHausLike.instHasPropSigma": {
+    "role": "dep",
+    "fp": "def 2263479975 2390416609"
+  },
+  "CompHausLike.sigmaComparison": {
+    "role": "dep",
+    "fp": "def 85238382 3085541602"
+  },
+  "Condensed.IsDiscrete": {
+    "role": "req",
+    "fp": "def 2975369411 563339921"
+  },
+  "Condensed.discrete": {
+    "role": "req",
+    "fp": "def 3269234945 1021522965"
+  },
+  "Condensed.discreteUnderlyingAdj": {
+    "role": "req",
+    "fp": "def 3246691150 474269262"
+  },
+  "Condensed.underlying": {
+    "role": "req",
+    "fp": "def 2724136972 1390263588"
+  },
+  "CondensedMod.LocallyConstant.adjunction": {
+    "role": "req",
+    "fp": "def 1687901871 471609302"
+  },
+  "CondensedMod.LocallyConstant.functor": {
+    "role": "req",
+    "fp": "def 3813044905 1150692295"
+  },
+  "CondensedMod.LocallyConstant.functorIsoDiscrete": {
+    "role": "dep",
+    "fp": "def 2850163599 981886443"
+  },
+  "CondensedMod.LocallyConstant.functorIsoDiscreteAux\u2081": {
+    "role": "dep",
+    "fp": "def 1903428396 1323274423"
+  },
+  "CondensedMod.LocallyConstant.functorIsoDiscreteAux\u2082": {
+    "role": "dep",
+    "fp": "def 36809981 1035624937"
+  },
+  "CondensedMod.LocallyConstant.functorIsoDiscreteComponents": {
+    "role": "dep",
+    "fp": "def 2104815769 2431160225"
+  },
+  "CondensedMod.instHasLimitsOfSizeModuleCat": {
+    "role": "req",
+    "fp": "def 1706339928 169583879"
+  },
+  "CondensedSet.LocallyConstant.adjunction": {
+    "role": "req",
+    "fp": "def 656991360 2633094630"
+  },
+  "CondensedSet.LocallyConstant.functor": {
+    "role": "req",
+    "fp": "def 961773575 84408664"
+  },
+  "Function.Fiber": {
+    "role": "dep",
+    "fp": "def 3404572418 2508718684"
+  },
+  "Function.Fiber.image": {
+    "role": "dep",
+    "fp": "def 4008726907 3154928477"
+  },
+  "LightCondMod.LocallyConstant.adjunction": {
+    "role": "req",
+    "fp": "def 2999948874 332365910"
+  },
+  "LightCondMod.LocallyConstant.functor": {
+    "role": "req",
+    "fp": "def 2234798990 1519164435"
+  },
+  "LightCondMod.LocallyConstant.functorIsoDiscrete": {
+    "role": "dep",
+    "fp": "def 1060360953 555602270"
+  },
+  "LightCondMod.LocallyConstant.functorIsoDiscreteAux\u2081": {
+    "role": "dep",
+    "fp": "def 2381733101 1956619359"
+  },
+  "LightCondMod.LocallyConstant.functorIsoDiscreteAux\u2082": {
+    "role": "dep",
+    "fp": "def 3618267148 538841752"
+  },
+  "LightCondMod.LocallyConstant.functorIsoDiscreteComponents": {
+    "role": "dep",
+    "fp": "def 2411620355 119863606"
+  },
+  "LightCondMod.LocallyConstant.instHasSheafifyLightProfiniteCoherentTopologyModuleCat": {
+    "role": "req",
+    "fp": "def 3187262455 3617679420"
+  },
+  "LightCondSet.LocallyConstant.adjunction": {
+    "role": "req",
+    "fp": "def 3763128677 591022496"
+  },
+  "LightCondSet.LocallyConstant.functor": {
+    "role": "req",
+    "fp": "def 1305381882 1230279627"
+  },
+  "LightCondSet.LocallyConstant.instHasPropAndTotallyDisconnectedSpace\u03b1TopologicalSpaceSecondCountableTopologySubtypeToTop": {
+    "role": "dep",
+    "fp": "def 4029878728 1033621082"
+  },
+  "LightCondensed.IsDiscrete": {
+    "role": "req",
+    "fp": "def 612710850 3503148497"
+  },
+  "LightCondensed.discrete": {
+    "role": "req",
+    "fp": "def 1525628226 794980970"
+  },
+  "LightCondensed.discreteUnderlyingAdj": {
+    "role": "req",
+    "fp": "def 3611037935 3973602206"
+  },
+  "LightCondensed.underlying": {
+    "role": "req",
+    "fp": "def 1944746457 4222214724"
+  },
+  "LightProfinite.asLimitCone": {
+    "role": "req",
+    "fp": "def 1024330739 180402802"
+  },
+  "LightProfinite.asLimitConeAux": {
+    "role": "dep",
+    "fp": "def 1024330739 3210527223"
+  },
+  "LightProfinite.diagram": {
+    "role": "req",
+    "fp": "def 3130961213 376343321"
+  },
+  "LightProfinite.fintypeDiagram": {
+    "role": "dep",
+    "fp": "def 3441237202 855686314"
+  },
+  "LightProfinite.isoMapCone": {
+    "role": "dep",
+    "fp": "def 1861906120 1597867466"
+  },
+  "TopologicalSpace.Fiber.instFiniteFiberCoeLocallyConstant": {
+    "role": "dep",
+    "fp": "def 896444740 812281510"
+  },
+  "TopologicalSpace.Fiber.sigmaIsoHom": {
+    "role": "dep",
+    "fp": "def 2156224938 3603295593"
+  },
+  "TopologicalSpace.Fiber.sigmaIsoHom.match_1": {
+    "role": "dep",
+    "fp": "def 2394127730 3753709861"
+  }
+}

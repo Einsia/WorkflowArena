@@ -1,0 +1,175 @@
+{
+  "task_id": "WFA-CDN-006",
+  "visibility": "reviewer-only",
+  "fps": 24,
+  "scoring": {
+    "zh": "连续分 = Σ 通过判定的 weight（满分 100）。组级门槛：某版本的 F1/F2（格式）或 F4/F5（诚实）不过，则该版本全部 selection 判定记 0。整题验收失败仅限：output/ 交付物缺失/无法解码，或作弊（读取隐藏文件、联网、生成画面）。另报告“槽位正确数/10”与 Perfect（全部判定通过）。",
+    "en": "Continuous score = sum of weights of passed decisions (max 100). Group gate: if a version fails its format (F1/F2) or honesty (F4/F5) decision, all selection decisions of that version score 0. Whole-task acceptance failure only for missing/undecodable deliverables or cheating. Also report correct slots / 10 and Perfect."
+  },
+  "decisions": [
+    {
+      "id": "F1",
+      "tier": "base",
+      "group": "format",
+      "critical": true,
+      "criterion_zh": "comedy.mp4 可解码且格式合规：H.264/yuv420p、640×360、SAR 1:1、24/1 CFR、无音轨。",
+      "criterion_en": "comedy.mp4 decodes and conforms: H.264/yuv420p, 640×360, SAR 1:1, 24/1 CFR, no audio.",
+      "verify": "ffprobe 字段核对 + ffmpeg -f null 全解码无错误；任何一项不符判否。",
+      "weight": 5.0
+    },
+    {
+      "id": "F2",
+      "tier": "base",
+      "group": "format",
+      "critical": true,
+      "criterion_zh": "suspense.mp4 同 F1 全部格式要求。",
+      "criterion_en": "suspense.mp4 meets every F1 format requirement.",
+      "verify": "同 F1。",
+      "weight": 5.0
+    },
+    {
+      "id": "F3",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "edl.json 结构合法：两版各恰 5 段、slot 标签正确、source 为存在的两位编号、同版内互不重复；output_frames 半开连续自 0 起；秒=帧/24 误差≤0.001；每版末帧=对应 mp4 实际解码帧数；source_frames=[0,该片段解码帧数]；output/ 恰为 4 个文件。",
+      "criterion_en": "edl.json is valid: exactly 5 segments per version, correct slot labels, existing two-digit sources, no repeats within a version; half-open contiguous output_frames from 0; seconds=frames/24 within 0.001; final end frame equals decoded count of each mp4; source_frames=[0, clip frame count]; output/ has exactly 4 files.",
+      "verify": "确定性脚本：解析 JSON，ffprobe -count_frames 取每版与每个 input 片段帧数逐项比对。",
+      "weight": 5.0
+    },
+    {
+      "id": "F4",
+      "tier": "base",
+      "group": "honesty",
+      "critical": true,
+      "criterion_zh": "comedy.mp4 诚实与完整：每段帧数等于所声明片段的解码帧数，且逐帧 SSIM≥0.95（灰度、11×11 高斯窗 σ=1.5，原尺寸 640×360），首尾帧均包含（无裁切、变速、调色、转场）。",
+      "criterion_en": "comedy.mp4 honesty/coverage: each segment length equals the declared clip decoded frame count and every frame SSIM≥0.95 (gray, 11×11 Gaussian σ=1.5, native 640×360), first and last frames included.",
+      "verify": "按 edl.json 的 output_frames 切分，逐帧对比所声明 input/NN.mp4；任一段任一帧不达标判否。",
+      "weight": 5.0
+    },
+    {
+      "id": "F5",
+      "tier": "base",
+      "group": "honesty",
+      "critical": true,
+      "criterion_zh": "suspense.mp4 诚实与完整：同 F4。",
+      "criterion_en": "suspense.mp4 honesty/coverage, as F4.",
+      "verify": "同 F4。",
+      "weight": 5.0
+    },
+    {
+      "id": "S-A1",
+      "tier": "mid",
+      "group": "selection-comedy",
+      "critical": false,
+      "criterion_zh": "喜剧 版槽 A1 亮相与反讽 所选 source 等于隐藏答案（23）。近似干扰：08, 22, 03, 33。",
+      "criterion_en": "comedy slot A1: chosen source equals the hidden key (23). Near-miss distractors: 08, 22, 03, 33.",
+      "verify": "确定性：读取 edl.json 中 comedy 第 1 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-A2",
+      "tier": "mid",
+      "group": "selection-comedy",
+      "critical": false,
+      "criterion_zh": "喜剧 版槽 A2 探头包袱 所选 source 等于隐藏答案（35）。近似干扰：15, 18, 25。",
+      "criterion_en": "comedy slot A2: chosen source equals the hidden key (35). Near-miss distractors: 15, 18, 25.",
+      "verify": "确定性：读取 edl.json 中 comedy 第 2 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。 有意设计（同一素材池两种意图）：A2/B3 共用答案 35、A4/B2 共用答案 27，同一辨别在两版各计一次。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-A5",
+      "tier": "mid",
+      "group": "selection-comedy",
+      "critical": false,
+      "criterion_zh": "喜剧 版槽 A5 收尾包袱 所选 source 等于隐藏答案（39）。近似干扰：36, 30, 21, 28。",
+      "criterion_en": "comedy slot A5: chosen source equals the hidden key (39). Near-miss distractors: 36, 30, 21, 28.",
+      "verify": "确定性：读取 edl.json 中 comedy 第 5 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-B1",
+      "tier": "mid",
+      "group": "selection-suspense",
+      "critical": false,
+      "criterion_zh": "悬疑 版槽 B1 被窥视 所选 source 等于隐藏答案（31）。近似干扰：10, 07, 01。",
+      "criterion_en": "suspense slot B1: chosen source equals the hidden key (31). Near-miss distractors: 10, 07, 01.",
+      "verify": "确定性：读取 edl.json 中 suspense 第 1 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-B3",
+      "tier": "mid",
+      "group": "selection-suspense",
+      "critical": false,
+      "criterion_zh": "悬疑 版槽 B3 窥伺与突袭 所选 source 等于隐藏答案（35）。近似干扰：15, 18, 25。",
+      "criterion_en": "suspense slot B3: chosen source equals the hidden key (35). Near-miss distractors: 15, 18, 25.",
+      "verify": "确定性：读取 edl.json 中 suspense 第 3 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。 有意设计（同一素材池两种意图）：A2/B3 共用答案 35、A4/B2 共用答案 27，同一辨别在两版各计一次。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-B5",
+      "tier": "mid",
+      "group": "selection-suspense",
+      "critical": false,
+      "criterion_zh": "悬疑 版槽 B5 尾钩 所选 source 等于隐藏答案（17）。近似干扰：29, 11, 06, 04。",
+      "criterion_en": "suspense slot B5: chosen source equals the hidden key (17). Near-miss distractors: 29, 11, 06, 04.",
+      "verify": "确定性：读取 edl.json 中 suspense 第 5 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 5.714
+    },
+    {
+      "id": "S-A3",
+      "tier": "gate",
+      "group": "selection-comedy",
+      "critical": false,
+      "criterion_zh": "喜剧 版槽 A3 连环险情（须含升级与结果） 所选 source 等于隐藏答案（09）。近似干扰：37, 19, 14, 16。",
+      "criterion_en": "comedy slot A3: chosen source equals the hidden key (09). Near-miss distractors: 37, 19, 14, 16.",
+      "verify": "确定性：读取 edl.json 中 comedy 第 3 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 8.75
+    },
+    {
+      "id": "S-A4",
+      "tier": "gate",
+      "group": "selection-comedy",
+      "critical": false,
+      "criterion_zh": "喜剧 版槽 A4 体量反差（须看到入画） 所选 source 等于隐藏答案（27）。近似干扰：34, 32, 26, 14。",
+      "criterion_en": "comedy slot A4: chosen source equals the hidden key (27). Near-miss distractors: 34, 32, 26, 14.",
+      "verify": "确定性：读取 edl.json 中 comedy 第 4 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。 有意设计（同一素材池两种意图）：A2/B3 共用答案 35、A4/B2 共用答案 27，同一辨别在两版各计一次。",
+      "weight": 8.75
+    },
+    {
+      "id": "S-B2",
+      "tier": "gate",
+      "group": "selection-suspense",
+      "critical": false,
+      "criterion_zh": "悬疑 版槽 B2 身后的威胁（须看到入画） 所选 source 等于隐藏答案（27）。近似干扰：34, 14, 32, 26。",
+      "criterion_en": "suspense slot B2: chosen source equals the hidden key (27). Near-miss distractors: 34, 14, 32, 26.",
+      "verify": "确定性：读取 edl.json 中 suspense 第 2 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。 有意设计（同一素材池两种意图）：A2/B3 共用答案 35、A4/B2 共用答案 27，同一辨别在两版各计一次。",
+      "weight": 8.75
+    },
+    {
+      "id": "S-B4",
+      "tier": "gate",
+      "group": "selection-suspense",
+      "critical": false,
+      "criterion_zh": "悬疑 版槽 B4 延宕与惊吓（结果揭晓前切出） 所选 source 等于隐藏答案（19）。近似干扰：37, 09, 16。",
+      "criterion_en": "suspense slot B4: chosen source equals the hidden key (19). Near-miss distractors: 37, 09, 16.",
+      "verify": "确定性：读取 edl.json 中 suspense 第 4 段 source 与 answer-key.json 比对；所属版本 F1/F2 或 F4/F5 不通过时本组记 0（组级门槛）。",
+      "weight": 8.75
+    },
+    {
+      "id": "E1",
+      "tier": "mid",
+      "group": "evidence",
+      "critical": false,
+      "criterion_zh": "selection-evidence.json 完整：10 条与 edl 版本×槽一致，source_frames 合法（b−a≥12、在片段内），reason 至少 10 个字符；且至少 8 条 reason 指出所选片段与其他候选之间的具体可见差别（起止画面、镜头数、事件有无等），且不与 answer-key 对所提及候选的说明矛盾。",
+      "criterion_en": "selection-evidence.json is complete: 10 entries matching edl version×slot with valid source_frames (b−a≥12, inside the clip) and a reason of at least 10 characters; and at least 8 reasons name a concrete visible difference (opening/ending image, shot count, event present/absent) between the chosen clip and another candidate, without contradicting the answer key's notes for any candidate they name.",
+      "verify": "格式部分由 checks.py 确定性检查（不满足直接判否）；通过后由评委只对照 answer-key 的 why_correct / near_miss.why_wrong 文本判定 reason 内容，不要求查看源片段，也不要求人工复核。",
+      "weight": 5.716
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "CDN-VIDEO",
+    "all_critical_items_must_pass": true
+  }
+}

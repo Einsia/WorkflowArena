@@ -1,0 +1,8 @@
+entity,name,functional_currency,role,group_ownership,income_tax_rate,sales_tax_rate
+P,Halvard Holdings Inc.,USD,parent (holding + wholesale),parent,0.25,0.07
+S1,Halvard Manufacturing LLC,USD,manufacturer,100%,0.25,0.06
+S2,Northline Distribution Inc.,USD,distributor (80% owned),80%,0.25,0.08
+S3,Halvard Europe GmbH,EUR,EU sales and distribution (70% owned),70%,0.3,0.19
+S4,Halvard Japan KK,JPY,Japan manufacturing and sales (100% owned),100%,0.31,0.1
+S5,Corvex Instruments Inc.,USD,"instruments maker, acquired during 2026",100% from 2026-07-01,0.25,0.065
+S6,Halvard Treasury & Services LLC,USD,"group treasury, shared services",100%,0.25,0.0

@@ -1,0 +1,211 @@
+agreement,deal_point,answer
+A01,dp_ie_materiality,Yes
+A01,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A01,dp_ie_after_signing,Must occur or arise after signing
+A01,dp_ie_knowledge_mgmt,Yes
+A01,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A01,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A01,dp_cor_board_only,No
+A01,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A01,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A01,dp_cor_match_initial,4 business days
+A01,dp_cor_match_additional,2 business days or less
+A01,dp_ftr_match_initial,4 business days
+A01,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A01,kn_definition,Constructive knowledge
+A01,kn_identified_persons,Yes
+A02,dp_ie_materiality,Yes
+A02,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A02,dp_ie_after_signing,May occur or arise prior to signing
+A02,dp_ie_knowledge_mgmt,No
+A02,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A02,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A02,dp_cor_board_only,No
+A02,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A02,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A02,dp_cor_match_initial,5 business days
+A02,dp_cor_match_additional,3 business days
+A02,dp_ftr_match_initial,5 business days
+A02,dp_ftr_limitations,(Material) breach of other provisions of agreement | Any breach of no-shop
+A02,kn_definition,Actual knowledge
+A02,kn_identified_persons,Yes
+A03,dp_ie_materiality,Yes
+A03,dp_ie_knowledge,Not known and not reasonably foreseeable at signing
+A03,dp_ie_after_signing,May occur or arise prior to signing
+A03,dp_ie_knowledge_mgmt,No
+A03,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A03,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A03,dp_cor_board_only,No
+A03,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A03,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A03,dp_cor_match_initial,4 business days
+A03,dp_cor_match_additional,3 business days
+A03,dp_ftr_match_initial,4 business days
+A03,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A03,kn_definition,Constructive knowledge
+A03,kn_identified_persons,Yes
+A04,dp_ie_materiality,No
+A04,dp_ie_knowledge,Not known at signing
+A04,dp_ie_after_signing,May occur or arise prior to signing
+A04,dp_ie_knowledge_mgmt,No
+A04,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A04,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A04,dp_cor_board_only,No
+A04,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A04,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A04,dp_cor_match_initial,5 business days
+A04,dp_cor_match_additional,3 business days
+A04,dp_ftr_match_initial,5 business days
+A04,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A04,kn_definition,Actual knowledge
+A04,kn_identified_persons,Yes
+A05,dp_ie_materiality,Yes
+A05,dp_ie_knowledge,Not known and not reasonably foreseeable at signing
+A05,dp_ie_after_signing,May occur or arise prior to signing
+A05,dp_ie_knowledge_mgmt,No
+A05,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A05,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A05,dp_cor_board_only,No
+A05,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A05,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A05,dp_cor_match_initial,5 business days
+A05,dp_cor_match_additional,3 business days
+A05,dp_ftr_match_initial,5 business days
+A05,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A05,kn_definition,Actual knowledge
+A05,kn_identified_persons,Yes
+A06,dp_ie_materiality,Yes
+A06,dp_ie_knowledge,Not known at signing
+A06,dp_ie_after_signing,May occur or arise prior to signing
+A06,dp_ie_knowledge_mgmt,No
+A06,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A06,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A06,dp_cor_board_only,No
+A06,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A06,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A06,dp_cor_match_initial,3 business days
+A06,dp_cor_match_additional,2 business days or less
+A06,dp_ftr_match_initial,3 business days
+A06,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A06,kn_definition,Actual knowledge
+A06,kn_identified_persons,Yes
+A07,dp_ie_materiality,Yes
+A07,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A07,dp_ie_after_signing,May occur or arise prior to signing
+A07,dp_ie_knowledge_mgmt,No
+A07,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A07,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A07,dp_cor_board_only,No
+A07,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A07,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A07,dp_cor_match_initial,2 business days or less
+A07,dp_cor_match_additional,2 business days or less
+A07,dp_ftr_match_initial,2 business days or less
+A07,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A07,kn_definition,Actual knowledge
+A07,kn_identified_persons,Yes
+A08,dp_ie_materiality,Yes
+A08,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A08,dp_ie_after_signing,May occur or arise prior to signing
+A08,dp_ie_knowledge_mgmt,Yes
+A08,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A08,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A08,dp_cor_board_only,No
+A08,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A08,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A08,dp_cor_match_initial,4 business days
+A08,dp_cor_match_additional,2 business days or less
+A08,dp_ftr_match_initial,4 business days
+A08,dp_ftr_limitations,Material breach of no-shop
+A08,kn_definition,Constructive knowledge
+A08,kn_identified_persons,Yes
+A09,dp_ie_materiality,Yes
+A09,dp_ie_knowledge,Not known and not reasonably foreseeable at signing
+A09,dp_ie_after_signing,May occur or arise prior to signing
+A09,dp_ie_knowledge_mgmt,No
+A09,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A09,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A09,dp_cor_board_only,No
+A09,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A09,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A09,dp_cor_match_initial,4 business days
+A09,dp_cor_match_additional,2 business days or less
+A09,dp_ftr_match_initial,4 business days
+A09,dp_ftr_limitations,Material breach of no-shop
+A09,kn_definition,Constructive knowledge
+A09,kn_identified_persons,Yes
+A10,dp_ie_materiality,Yes
+A10,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A10,dp_ie_after_signing,Must occur or arise after signing
+A10,dp_ie_knowledge_mgmt,No
+A10,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A10,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A10,dp_cor_board_only,No
+A10,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A10,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A10,dp_cor_match_initial,3 business days
+A10,dp_cor_match_additional,2 business days or less
+A10,dp_ftr_match_initial,3 business days
+A10,dp_ftr_limitations,Material breach of no-shop
+A10,kn_definition,Actual knowledge
+A10,kn_identified_persons,Yes
+A11,dp_ie_materiality,No
+A11,dp_ie_knowledge,Not known at signing
+A11,dp_ie_after_signing,May occur or arise prior to signing
+A11,dp_ie_knowledge_mgmt,No
+A11,dp_cor_ie_standard,"""Inconsistent"" with fiduciary duties"
+A11,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A11,dp_cor_board_only,No
+A11,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A11,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A11,dp_cor_match_initial,5 business days
+A11,dp_cor_match_additional,3 business days
+A11,dp_ftr_match_initial,5 business days
+A11,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A11,kn_definition,Constructive knowledge
+A11,kn_identified_persons,Yes
+A12,dp_ie_materiality,Yes
+A12,dp_ie_knowledge,"Known, but consequences unknown or not reasonably foreseeable, at signing"
+A12,dp_ie_after_signing,May occur or arise prior to signing
+A12,dp_ie_knowledge_mgmt,No
+A12,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A12,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A12,dp_cor_board_only,No
+A12,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A12,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A12,dp_cor_match_initial,4 business days
+A12,dp_cor_match_additional,2 business days or less
+A12,dp_ftr_match_initial,4 business days
+A12,dp_ftr_limitations,Any breach of no-shop
+A12,kn_definition,Actual knowledge
+A12,kn_identified_persons,Yes
+A13,dp_ie_materiality,Yes
+A13,dp_ie_knowledge,Not known and not reasonably foreseeable at signing
+A13,dp_ie_after_signing,May occur or arise prior to signing
+A13,dp_ie_knowledge_mgmt,Yes
+A13,dp_cor_ie_standard,"""Reasonably likely/expected violation"" of fiduciary duties"
+A13,dp_cor_so_standard,"""Reasonably likely/expected violation"" of fiduciary duties"
+A13,dp_cor_board_only,No
+A13,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A13,dp_fidout_standard,"""Reasonably likely/expected violation"" of fiduciary duties"
+A13,dp_cor_match_initial,4 business days
+A13,dp_cor_match_additional,3 business days
+A13,dp_ftr_match_initial,4 business days
+A13,dp_ftr_limitations,Material breach of no-shop
+A13,kn_definition,Constructive knowledge
+A13,kn_identified_persons,Yes
+A14,dp_ie_materiality,No
+A14,dp_ie_knowledge,Not known and not reasonably foreseeable at signing
+A14,dp_ie_after_signing,Must occur or arise after signing
+A14,dp_ie_knowledge_mgmt,No
+A14,dp_cor_ie_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A14,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A14,dp_cor_board_only,No
+A14,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A14,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A14,dp_cor_match_initial,4 business days
+A14,dp_cor_match_additional,2 business days or less
+A14,dp_ftr_match_initial,4 business days
+A14,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A14,kn_definition,Constructive knowledge
+A14,kn_identified_persons,Yes

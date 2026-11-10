@@ -1,0 +1,11 @@
+pyscf/gw/evgw.py
+pyscf/gw/evgw_exact.py
+pyscf/gw/gw_exact_df.py
+pyscf/gw/qsgw.py
+pyscf/gw/qsgw_exact.py
+pyscf/gw/uevgw.py
+pyscf/gw/uevgw_exact.py
+pyscf/gw/ugw_cd.py
+pyscf/gw/ugw_exact_df.py
+pyscf/gw/uqsgw.py
+pyscf/gw/uqsgw_exact.py

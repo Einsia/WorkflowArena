@@ -1,0 +1,288 @@
+{
+ "defendants": {
+  "[被告A]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 8
+   },
+   "probation": true
+  },
+  "[被告B]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 8
+   },
+   "probation": true
+  },
+  "[被告C]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 7
+   },
+   "probation": true
+  },
+  "[被告D]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 8
+   },
+   "probation": true
+  },
+  "[被告E]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 10
+   },
+   "probation": true
+  },
+  "[被告F]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 12
+   },
+   "probation": true
+  },
+  "[被告G]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 36
+   },
+   "probation": false
+  },
+  "[被告H]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 18
+   },
+   "probation": false
+  },
+  "[被告I]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "坦白",
+    "累犯"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 8
+   },
+   "probation": false
+  },
+  "[被告J]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 14
+   },
+   "probation": true
+  },
+  "[被告K]": {
+   "charges": [
+    "诈骗罪"
+   ],
+   "articles": [
+    266
+   ],
+   "roles": {
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 7
+   },
+   "probation": false
+  },
+  "[被告L]": {
+   "charges": [
+    "开设赌场罪",
+    "诈骗罪"
+   ],
+   "articles": [
+    266,
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "主犯",
+    "诈骗罪": "主犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {
+    "开设赌场罪": {
+     "type": "有期徒刑",
+     "months": 36
+    },
+    "诈骗罪": {
+     "type": "有期徒刑",
+     "months": 36
+    }
+   },
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 36
+   },
+   "probation": false
+  },
+  "[被告M]": {
+   "charges": [
+    "开设赌场罪"
+   ],
+   "articles": [
+    303
+   ],
+   "roles": {
+    "开设赌场罪": "从犯"
+   },
+   "leader": false,
+   "circumstances": [
+    "自首"
+   ],
+   "charge_terms": {},
+   "final_term": {
+    "type": "有期徒刑",
+    "months": 10
+   },
+   "probation": true
+  }
+ }
+}

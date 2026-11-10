@@ -1,0 +1,86 @@
+{
+ "H1215": {
+  "n_models_public": 374,
+  "n_models_tar": 374,
+  "n_models_table": 374,
+  "n_groups": 29,
+  "stoichiometry": "A1B1"
+ },
+ "H1223": {
+  "n_models_public": 373,
+  "n_models_tar": 373,
+  "n_models_table": 373,
+  "n_groups": 30,
+  "stoichiometry": "A1B1C1"
+ },
+ "H1230": {
+  "n_models_public": 370,
+  "n_models_tar": 370,
+  "n_models_table": 370,
+  "n_groups": 30,
+  "stoichiometry": "A1B1"
+ },
+ "H1232": {
+  "n_models_public": 363,
+  "n_models_tar": 363,
+  "n_models_table": 363,
+  "n_groups": 30,
+  "stoichiometry": "A2B2"
+ },
+ "H1236": {
+  "n_models_public": 347,
+  "n_models_tar": 347,
+  "n_models_table": 347,
+  "n_groups": 29,
+  "stoichiometry": "A3B6"
+ },
+ "H1244": {
+  "n_models_public": 360,
+  "n_models_tar": 360,
+  "n_models_table": 360,
+  "n_groups": 30,
+  "stoichiometry": "A2B2C2"
+ },
+ "H1245": {
+  "n_models_public": 372,
+  "n_models_tar": 372,
+  "n_models_table": 372,
+  "n_groups": 30,
+  "stoichiometry": "A1B1"
+ },
+ "T1201o": {
+  "n_models_public": 360,
+  "n_models_tar": 361,
+  "n_models_table": 365,
+  "n_groups": 30,
+  "stoichiometry": "A2"
+ },
+ "T1234o": {
+  "n_models_public": 360,
+  "n_models_tar": 360,
+  "n_models_table": 360,
+  "n_groups": 30,
+  "stoichiometry": "A3"
+ },
+ "T1235o": {
+  "n_models_public": 361,
+  "n_models_tar": 361,
+  "n_models_table": 361,
+  "n_groups": 30,
+  "stoichiometry": "A6"
+ },
+ "T1259o": {
+  "n_models_public": 372,
+  "n_models_tar": 372,
+  "n_models_table": 372,
+  "n_groups": 30,
+  "stoichiometry": "A3"
+ },
+ "T1298o": {
+  "n_models_public": 331,
+  "n_models_tar": 331,
+  "n_models_table": 331,
+  "n_groups": 27,
+  "stoichiometry": "A2"
+ }
+}

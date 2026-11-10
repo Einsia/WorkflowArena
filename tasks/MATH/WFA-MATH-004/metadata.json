@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-004",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Fermat's Last Theorem for regular primes, case II",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/leanprover-community/flt-regular",
+    "revision": "commit cb87aa1c848079f466faf597b2a2401089da01e2 (2026-10-22)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "defendants": {
+    "武某B": {
+      "charges": [
+        "强迫交易罪",
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        226,
+        293
+      ],
+      "roles": {
+        "强迫交易罪": "主犯",
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "charge_terms": {
+        "强迫交易罪": {
+          "type": "有期徒刑",
+          "months": 12
+        },
+        "寻衅滋事罪": {
+          "type": "有期徒刑",
+          "months": 12
+        }
+      },
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 12
+      },
+      "probation": false
+    },
+    "徐某A": {
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 16
+      },
+      "probation": false
+    },
+    "武某C": {
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 14
+      },
+      "probation": false
+    },
+    "常某某": {
+      "charges": [
+        "强迫交易罪"
+      ],
+      "articles": [
+        226
+      ],
+      "roles": {
+        "强迫交易罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 13
+      },
+      "probation": false
+    },
+    "任某A": {
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [
+        "累犯"
+      ],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 16
+      },
+      "probation": false
+    },
+    "刘某2": {
+      "charges": [
+        "寻衅滋事罪",
+        "故意伤害罪"
+      ],
+      "articles": [
+        234,
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "主犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {
+        "寻衅滋事罪": {
+          "type": "有期徒刑",
+          "months": 12
+        },
+        "故意伤害罪": {
+          "type": "有期徒刑",
+          "months": 12
+        }
+      },
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 12
+      },
+      "probation": false
+    },
+    "史某某": {
+      "charges": [
+        "寻衅滋事罪"
+      ],
+      "articles": [
+        293
+      ],
+      "roles": {
+        "寻衅滋事罪": "从犯"
+      },
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 13
+      },
+      "probation": false
+    },
+    "任某C": {
+      "charges": [
+        "故意伤害罪"
+      ],
+      "articles": [
+        234
+      ],
+      "roles": {},
+      "leader": false,
+      "circumstances": [],
+      "charge_terms": {},
+      "final_term": {
+        "type": "有期徒刑",
+        "months": 15
+      },
+      "probation": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "SSet.InnerFibration": {
+    "role": "req",
+    "fp": "ind 886036954 3 0 9398351801329832964"
+  },
+  "SSet.InnerFibration.mk": {
+    "role": "dep",
+    "fp": "ctor 3863123539"
+  },
+  "SSet.innerAnodyneExtensions": {
+    "role": "req",
+    "fp": "def 459652068 276809515"
+  },
+  "SSet.innerFibrations": {
+    "role": "dep",
+    "fp": "def 459652068 129526932"
+  },
+  "SSet.innerHornInclusions": {
+    "role": "dep",
+    "fp": "ind 459652068 0 3 8268633986817138908"
+  },
+  "SSet.innerHornInclusions.intro": {
+    "role": "dep",
+    "fp": "ctor 3914947386"
+  }
+}

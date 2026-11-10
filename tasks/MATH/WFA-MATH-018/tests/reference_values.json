@@ -1,0 +1,10 @@
+{
+  "NumberField.dedekindZeta": {
+    "role": "req",
+    "fp": "def 3652232315 759530547"
+  },
+  "NumberField.dedekindZeta_residue": {
+    "role": "req",
+    "fp": "def 3468814388 2486217641"
+  }
+}

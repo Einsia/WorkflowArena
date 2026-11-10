@@ -1,0 +1,8 @@
+astropy/coordinates/tests/accuracy/data/rv.ecsv
+astropy/coordinates/tests/accuracy/generate_spectralcoord_ref.py
+astropy/coordinates/tests/test_spectral_coordinate.py
+astropy/coordinates/tests/test_spectral_quantity.py
+astropy/io/misc/asdf/tags/coordinates/tests/test_spectralcoord.py
+astropy/wcs/tests/test_utils.py
+astropy/wcs/wcsapi/tests/test_fitswcs.py
+astropy/wcs/wcsapi/tests/test_sliced_low_level_wcs.py

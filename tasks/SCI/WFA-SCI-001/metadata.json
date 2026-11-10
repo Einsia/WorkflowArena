@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-001",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Scoring protein–protein docking decoys (blind prediction)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "community blind prediction (CAPRI docking/scoring experiment), via CAPRI Score_set v2022",
+    "url": "https://scoreset.org/ (archives https://scoreset.org/archive/)",
+    "revision": "Score_set v2022 (scoreset.json sha256 8181735d759aedd687282015173479a0b7c225090845bc98905239915e58602e; archive members dated 2022-03-05; downloaded 2026-10-23)",
+    "license": "Upstream rights retained. Original structural models are fetched directly from the publisher; no blanket redistribution grant is made.",
+    "distribution": "upstream-fetch",
+    "preparation": "environment/fetch/sources.json"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

@@ -1,0 +1,26 @@
+# Octanol-water logP predictions
+# Lines starting with # are comments.
+# Predictions section: one line per molecule: ID, logP, logP SEM, logP model uncertainty
+Predictions:
+LP01,,,
+LP02,,,
+LP03,,,
+LP04,,,
+LP05,,,
+LP06,,,
+LP07,,,
+LP08,,,
+LP09,,,
+LP10,,,
+LP11,,,
+# Name section: short method name
+Name:
+
+# Software section: one line per package with version
+Software:
+
+# Category: Physical (MM) | Physical (QM) | Empirical | Mixed
+Category:
+
+# Method: free-text description (publication level of detail)
+Method:

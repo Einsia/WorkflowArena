@@ -1,0 +1,21 @@
+{
+  "task_id": "WFA-CDN-009",
+  "files": [
+    {
+      "file": "environment/input/final-report.pdf",
+      "sha256": "05d9bf5704ff14c89336d7d1bfa8cda7059089cffa7170d0068e83541f88255e",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf",
+      "title": "NTSB Aviation Investigation Report AIR-25-04, In-Flight Separation of Left Mid Exit Door Plug, Alaska Airlines Flight 1282",
+      "publisher": "National Transportation Safety Board"
+    },
+    {
+      "file": "environment/input/preliminary-report.pdf",
+      "sha256": "2427114cba8421bf3b174a9865f5c6b7d487ad6cdf15083018356bc1aca157f0",
+      "url": "https://www.ntsb.gov/investigations/Documents/DCA24MA063%20Preliminary%20report.pdf",
+      "title": "NTSB Preliminary Report DCA24MA063 (19 pp.)",
+      "publisher": "National Transportation Safety Board"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "U.S. federal government works; public domain in the United States"
+}

@@ -1,0 +1,108 @@
+{
+ "rules": {
+  "restore": [
+   [
+    "曾用名：[被告F]2",
+    "曾用名：□□",
+    null
+   ]
+  ],
+  "code_persons": [
+   "[被告J]2",
+   "[被告J]3",
+   "[被告H]2"
+  ]
+ },
+ "note": "“曾用名：[被告F]2”为被告 F 本人曾用名的残留，改为“□□”。",
+ "counts": {
+  "restorations": 1,
+  "code_person_labels": 0,
+  "person_labels": 70,
+  "distinct_person_labels": 12,
+  "masked_chars_to_box": 219,
+  "number_redactions": 0,
+  "left_ambiguous": 1,
+  "number_boundary_splits": 0
+ },
+ "restorations": {
+  "曾用名：[被告F]2→曾用名：□□": 1
+ },
+ "code_persons": {
+  "[被告J]2": {
+   "label": "案外人甲",
+   "count": 0
+  },
+  "[被告J]3": {
+   "label": "案外人乙",
+   "count": 0
+  },
+  "[被告H]2": {
+   "label": "案外人丙",
+   "count": 0
+  }
+ },
+ "persons": {
+  "阿X2": {
+   "label": "阿某甲",
+   "count": 9
+  },
+  "黎X某": {
+   "label": "黎某甲",
+   "count": 4
+  },
+  "谭X": {
+   "label": "谭某甲",
+   "count": 1
+  },
+  "阿X3": {
+   "label": "阿某乙",
+   "count": 35
+  },
+  "阿X": {
+   "label": "阿某丙",
+   "count": 1
+  },
+  "曾X2": {
+   "label": "曾某甲",
+   "count": 1
+  },
+  "何X": {
+   "label": "何某甲",
+   "count": 1
+  },
+  "覃X2": {
+   "label": "覃某甲",
+   "count": 3
+  },
+  "黎X": {
+   "label": "黎某乙",
+   "count": 9
+  },
+  "李X": {
+   "label": "李某甲",
+   "count": 4
+  },
+  "乐X": {
+   "label": "乐某甲",
+   "count": 1
+  },
+  "蔡X": {
+   "label": "蔡某甲",
+   "count": 1
+  }
+ },
+ "words": {
+  "覃X→覃□": 1,
+  "大X→大□": 128,
+  "石X→石□": 52,
+  "曾X→曾□": 1,
+  "窿X→窿□": 34,
+  "钱X→钱□": 1,
+  "夜X→夜□": 1,
+  "佛X→佛□": 1
+ },
+ "number_boundary_splits": {},
+ "ambiguous_left_unchanged": {
+  "同X5": 1
+ }
+}

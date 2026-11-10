@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-FIN-004",
+  "files": {
+    "inputs/PLD.html": "7e017cf4d548f5e409a2ac1efd62da666669a99b74efc2fbb33ff6984e601e0c",
+    "inputs/EQIX.html": "5c8db146160581dca6b16cd06adc48232b3dccac2822907b13dd797383a96389",
+    "inputs/WELL.html": "52e1c331558b5041ef16fb562afd833fe8860dfe02f239699f5d476107dd0b76",
+    "inputs/ARE.html": "c154f6f39642d52d0270e4da29672bd80699955cc5604af01b8652a2e5346c48",
+    "inputs/EXR.html": "ed60cc4d9a4066d5c7ff009374907ba44a9cd584bfd26bc25e0fd1585fdd9c03",
+    "inputs/KIM.html": "80426d38d04f8eb7e1c3cc3067a59fbe5ec83a5e0a2378f28c416ee9844889f1",
+    "inputs/HST.html": "8aaeb3b8c7610f4ba9889338047c2bf8195b1ac03e87e96745ab0d6a6a25ea31",
+    "inputs/FRT.html": "8dda736f54cd7e2ddd2219dd54dba7c530350944152a036f3a810087b72091c0",
+    "inputs/REXR.html": "c9c589f281ee3ca5e9569c68ee9f77b597cc87733d3726bd4671b1e1728c48df",
+    "inputs/STAG.html": "e8696b306e6cb54bd6f19d5f1d70899857fcfa118674bd54ec3746b0022557fd",
+    "inputs/BRX.html": "f5d6393f4c8872daf0b7756c9ce6babdf2388bf36a0eacd69ce8f3396f1a783a"
+  },
+  "boundary": "This manifest records frozen local files, not an assertion of outside authenticity."
+}

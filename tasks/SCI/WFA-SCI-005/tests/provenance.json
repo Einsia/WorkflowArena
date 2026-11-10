@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "what": "organizer full dataset incl. test truth",
+      "url": "https://osf.io/46dpj/download",
+      "sha256": "0b1201faf5035159d78ab8a09c5c0343d10c593840657a577ffceb2c401ac86f",
+      "downloaded": "2026-10-23",
+      "license": "Competition data: CC-BY under the CHAMPS competition rules (version not specified there); original source rights retained."
+    },
+    {
+      "what": "test truth",
+      "url": "https://raw.githubusercontent.com/larsbratholm/champs_kaggle/master/analysis/data/data_test.csv.gz",
+      "sha256": "7451bbba70268f6961dd0879056490c65b3ec8a5402094bc811aa42e411dad44",
+      "downloaded": "2026-10-23",
+      "license": "Competition data: CC-BY under the CHAMPS competition rules (version not specified there); original source rights retained."
+    },
+    {
+      "what": "top-400 per-type scores",
+      "url": "https://raw.githubusercontent.com/larsbratholm/champs_kaggle/master/analysis/output/scores.csv",
+      "sha256": "d239475bc4cce18789ee5873e390b33147c1ee1a8c0f627cab5874da6b0a466d",
+      "downloaded": "2026-10-23",
+      "license": "Competition data: CC-BY under the CHAMPS competition rules (version not specified there); original source rights retained."
+    },
+    {
+      "what": "Kaggle private leaderboard",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/main/mlebench/competitions/champs-scalar-coupling/leaderboard.csv",
+      "downloaded": "2026-10-23",
+      "license": "Competition data: CC-BY under the CHAMPS competition rules (version not specified there); original source rights retained."
+    },
+    {
+      "what": "team 3 seed submissions",
+      "url": "https://osf.io/tny2v/download",
+      "sha256": "006ee5dd8b914abdc0ddf732f9ef5dbc7ee351569838b29f7cff9d13884511c8",
+      "downloaded": "2026-10-23",
+      "license": "Competition data: CC-BY under the CHAMPS competition rules (version not specified there); original source rights retained."
+    }
+  ],
+  "license_evidence": "https://www.kaggle.com/c/champs-scalar-coupling/rules"
+}

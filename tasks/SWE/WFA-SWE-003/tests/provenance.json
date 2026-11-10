@@ -1,0 +1,21 @@
+{
+  "task_id": "WFA-SWE-003",
+  "sources": [
+    {
+      "what": "repository",
+      "url": "https://github.com/PennyLaneAI/pennylane",
+      "license": "Apache-2.0"
+    },
+    {
+      "what": "pull request",
+      "url": "https://github.com/PennyLaneAI/pennylane/pull/7034",
+      "merged_at": "2025-03-27T21:17:32Z",
+      "merge_commit": "b9f5dba16aa38bbe7e63f87c56f7f4c4e87a947c",
+      "base_commit": "7e94b1379bf7a73a0b24de672399a905477b3a37"
+    }
+  ],
+  "retrieved": "2026-10-23",
+  "start_tree_sha256": "fe97241891e6cd9b7f85151e05d3ce6c7ac34189d0ade6d52b123ce015b0506b",
+  "reference_patch_sha256": "738bf7e041403709a4b04ef89fe95fefa85352f449b0022fc9c1c881f0d6caf2",
+  "hidden_tests_patch_sha256": "d71df430a633f53dfba5ae5eb2e9e2a072b4084f21396f9cc02556ddaac677eb"
+}

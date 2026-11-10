@@ -1,0 +1,265 @@
+agreement,deal_point,answer
+A01,dp_noshop_rep_liability,Yes
+A01,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A01,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A01,dp_cor_board_only,No
+A01,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A01,dp_cor_ie_yn,Yes
+A01,dp_cor_match_initial,4 business days
+A01,dp_cor_match_additional,2 business days or less
+A01,dp_ftr_match_initial,4 business days
+A01,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A01,dp_so_stock_threshold,50%
+A01,dp_so_fpov_sole,Yes
+A01,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A01,dp_tail_public_yn,No
+A01,dp_tail_still_pending,No
+A01,dp_tail_length,within 12 months
+A01,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A01,oc_past_practice,Yes
+A01,oc_efforts_standard,Commercially reasonable efforts
+A01,nc_consent_application,Applies to all negative covenants
+A01,oc_pandemic_carveout,Yes
+A01,nc_pandemic_carveout,Yes
+A02,dp_noshop_rep_liability,Yes
+A02,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A02,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A02,dp_cor_board_only,No
+A02,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A02,dp_cor_ie_yn,Yes
+A02,dp_cor_match_initial,4 calendar days
+A02,dp_cor_match_additional,2 business days or less
+A02,dp_ftr_match_initial,4 calendar days
+A02,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A02,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A02,dp_so_fpov_sole,Yes
+A02,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A02,dp_tail_public_yn,Yes
+A02,dp_tail_still_pending,Yes
+A02,dp_tail_length,within 12 months
+A02,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A02,oc_past_practice,No
+A02,oc_efforts_standard,Flat covenant (no efforts standard)
+A02,nc_consent_application,Applies to all negative covenants
+A02,oc_pandemic_carveout,Yes
+A02,nc_pandemic_carveout,Yes
+A03,dp_noshop_rep_liability,Yes
+A03,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A03,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A03,dp_cor_board_only,No
+A03,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A03,dp_cor_ie_yn,Yes
+A03,dp_cor_match_initial,4 business days
+A03,dp_cor_match_additional,2 business days or less
+A03,dp_ftr_match_initial,4 business days
+A03,dp_ftr_limitations,Material breach of no-shop
+A03,dp_so_stock_threshold,50%
+A03,dp_so_fpov_sole,No
+A03,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A03,dp_tail_public_yn,No
+A03,dp_tail_still_pending,Yes
+A03,dp_tail_length,within 12 months
+A03,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A03,oc_past_practice,Yes
+A03,oc_efforts_standard,Flat covenant (no efforts standard)
+A03,nc_consent_application,Applies only to specified negative covenants
+A03,oc_pandemic_carveout,Yes
+A03,nc_pandemic_carveout,No
+A04,dp_noshop_rep_liability,Yes
+A04,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A04,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A04,dp_cor_board_only,No
+A04,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A04,dp_cor_ie_yn,Yes
+A04,dp_cor_match_initial,4 business days
+A04,dp_cor_match_additional,3 business days
+A04,dp_ftr_match_initial,4 business days
+A04,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A04,dp_so_stock_threshold,50%
+A04,dp_so_fpov_sole,No
+A04,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period | Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period
+A04,dp_tail_public_yn,Yes
+A04,dp_tail_still_pending,Yes
+A04,dp_tail_length,within 9 months
+A04,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A04,oc_past_practice,Yes
+A04,oc_efforts_standard,Flat covenant (no efforts standard)
+A04,nc_consent_application,Applies to all negative covenants
+A04,oc_pandemic_carveout,Yes
+A04,nc_pandemic_carveout,No
+A05,dp_noshop_rep_liability,Yes
+A05,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A05,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A05,dp_cor_board_only,No
+A05,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A05,dp_cor_ie_yn,Yes
+A05,dp_cor_match_initial,5 business days
+A05,dp_cor_match_additional,3 business days
+A05,dp_ftr_match_initial,5 business days
+A05,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A05,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A05,dp_so_fpov_sole,No
+A05,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A05,dp_tail_public_yn,Yes
+A05,dp_tail_still_pending,Yes
+A05,dp_tail_length,Other
+A05,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A05,oc_past_practice,No
+A05,oc_efforts_standard,Reasonable best efforts
+A05,nc_consent_application,Applies to all negative covenants
+A05,oc_pandemic_carveout,Yes
+A05,nc_pandemic_carveout,Yes
+A06,dp_noshop_rep_liability,Yes
+A06,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A06,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A06,dp_cor_board_only,No
+A06,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A06,dp_cor_ie_yn,Yes
+A06,dp_cor_match_initial,3 business days
+A06,dp_cor_match_additional,3 business days
+A06,dp_ftr_match_initial,3 business days
+A06,dp_ftr_limitations,(Material) breach of other provisions of agreement
+A06,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A06,dp_so_fpov_sole,No
+A06,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period | Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period
+A06,dp_tail_public_yn,No
+A06,dp_tail_still_pending,Yes
+A06,dp_tail_length,within 9 months
+A06,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A06,oc_past_practice,Yes
+A06,oc_efforts_standard,Flat covenant (no efforts standard)
+A06,nc_consent_application,Applies to all negative covenants
+A06,oc_pandemic_carveout,Yes
+A06,nc_pandemic_carveout,No
+A07,dp_noshop_rep_liability,No
+A07,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A07,dp_fidout_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A07,dp_cor_board_only,No
+A07,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A07,dp_cor_ie_yn,Yes
+A07,dp_cor_match_initial,5 business days
+A07,dp_cor_match_additional,3 business days
+A07,dp_ftr_match_initial,5 business days
+A07,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A07,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A07,dp_so_fpov_sole,No
+A07,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period | Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period
+A07,dp_tail_public_yn,Yes
+A07,dp_tail_still_pending,Yes
+A07,dp_tail_length,within 12 months
+A07,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A07,oc_past_practice,No
+A07,oc_efforts_standard,Reasonable best efforts
+A07,nc_consent_application,Applies to all negative covenants
+A07,oc_pandemic_carveout,Yes
+A07,nc_pandemic_carveout,No
+A08,dp_noshop_rep_liability,Yes
+A08,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A08,dp_fidout_standard,"""Reasonably likely/expected breach"" of fiduciary duties"
+A08,dp_cor_board_only,Yes
+A08,dp_cor_so_standard,"""Reasonably likely/expected breach"" of fiduciary duties"
+A08,dp_cor_ie_yn,Yes
+A08,dp_cor_match_initial,5 business days
+A08,dp_cor_match_additional,3 business days
+A08,dp_ftr_match_initial,5 business days
+A08,dp_ftr_limitations,Any breach of no-shop
+A08,dp_so_stock_threshold,Less than 50%
+A08,dp_so_fpov_sole,No
+A08,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A08,dp_tail_public_yn,No
+A08,dp_tail_still_pending,No
+A08,dp_tail_length,within 12 months
+A08,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A08,oc_past_practice,No
+A08,oc_efforts_standard,Flat covenant (no efforts standard)
+A08,nc_consent_application,Applies to all negative covenants
+A08,oc_pandemic_carveout,Yes
+A08,nc_pandemic_carveout,No
+A09,dp_noshop_rep_liability,Yes
+A09,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A09,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A09,dp_cor_board_only,No
+A09,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A09,dp_cor_ie_yn,Yes
+A09,dp_cor_match_initial,4 business days
+A09,dp_cor_match_additional,3 business days
+A09,dp_ftr_match_initial,4 business days
+A09,dp_ftr_limitations,Material breach of no-shop resulting in a Superior Offer
+A09,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A09,dp_so_fpov_sole,No
+A09,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period | Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period
+A09,dp_tail_public_yn,No
+A09,dp_tail_still_pending,No
+A09,dp_tail_length,within 12 months
+A09,oc_consent_standard,Flat consent
+A09,oc_past_practice,Yes
+A09,oc_efforts_standard,Flat covenant (no efforts standard)
+A09,nc_consent_application,Applies to all negative covenants
+A09,oc_pandemic_carveout,Yes
+A09,nc_pandemic_carveout,No
+A10,dp_noshop_rep_liability,Yes
+A10,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A10,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A10,dp_cor_board_only,No
+A10,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A10,dp_cor_ie_yn,Yes
+A10,dp_cor_match_initial,4 business days
+A10,dp_cor_match_additional,3 business days
+A10,dp_ftr_match_initial,4 business days
+A10,dp_ftr_limitations,Breach of no-shop resulting in a Superior Offer
+A10,dp_so_stock_threshold,50%
+A10,dp_so_fpov_sole,No
+A10,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period and close after Tail Period | Same Acquisition Proposal - Must sign during Tail Period and close after Tail Period
+A10,dp_tail_public_yn,Yes
+A10,dp_tail_still_pending,Yes
+A10,dp_tail_length,within 12 months
+A10,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A10,oc_past_practice,Yes
+A10,oc_efforts_standard,Commercially reasonable efforts
+A10,nc_consent_application,Applies to all negative covenants
+A10,oc_pandemic_carveout,No
+A10,nc_pandemic_carveout,No
+A11,dp_noshop_rep_liability,Yes
+A11,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A11,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A11,dp_cor_board_only,No
+A11,dp_cor_so_standard,"""Inconsistent"" with fiduciary duties"
+A11,dp_cor_ie_yn,Yes
+A11,dp_cor_match_initial,4 calendar days
+A11,dp_cor_match_additional,3 days
+A11,dp_ftr_match_initial,4 calendar days
+A11,dp_ftr_limitations,Material breach of no-shop
+A11,dp_so_stock_threshold,"Greater than 50% but not ""all or substantially all"""
+A11,dp_so_fpov_sole,No
+A11,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A11,dp_tail_public_yn,Yes
+A11,dp_tail_still_pending,No
+A11,dp_tail_length,within 12 months
+A11,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A11,oc_past_practice,Yes
+A11,oc_efforts_standard,Commercially reasonable efforts
+A11,nc_consent_application,Applies only to specified negative covenants
+A11,oc_pandemic_carveout,Yes
+A11,nc_pandemic_carveout,Yes
+A12,dp_noshop_rep_liability,Yes
+A12,dp_fidout_trigger,"Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+A12,dp_fidout_standard,"""Inconsistent"" with fiduciary duties"
+A12,dp_cor_board_only,No
+A12,dp_cor_so_standard,"""Reasonably likely/expected to be inconsistent"" with fiduciary duties"
+A12,dp_cor_ie_yn,Yes
+A12,dp_cor_match_initial,4 business days
+A12,dp_cor_match_additional,3 business days
+A12,dp_ftr_match_initial,4 business days
+A12,dp_ftr_limitations,(Material) breach of other provisions of agreement | Any breach of no-shop
+A12,dp_so_stock_threshold,50%
+A12,dp_so_fpov_sole,No
+A12,dp_tail_ap_timing,Different Acquisition Proposal - Must sign during Tail Period (no closing requirement) | Same Acquisition Proposal - Must sign during Tail Period (no closing requirement)
+A12,dp_tail_public_yn,Yes
+A12,dp_tail_still_pending,Yes
+A12,dp_tail_length,within 12 months
+A12,oc_consent_standard,"Consent may not be unreasonably withheld, conditioned or delayed"
+A12,oc_past_practice,Yes
+A12,oc_efforts_standard,Flat covenant (no efforts standard)
+A12,nc_consent_application,Applies to all negative covenants
+A12,oc_pandemic_carveout,No
+A12,nc_pandemic_carveout,No

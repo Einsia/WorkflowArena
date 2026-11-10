@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#1d2226"/>
+<g font-family="sans-serif" fill="#e9e6dc">
+<text x="30" y="40" font-size="24">Warehouse aisle C, plan view (layout reference only; data in scene.json)</text>
+<rect x="120.0" y="300.0" width="448.0" height="44.0" fill="#3a5a7a"/>
+<rect x="120.0" y="480.0" width="448.0" height="44.0" fill="#3a5a7a"/>
+<rect x="117.0" y="300.0" width="6" height="44.0" fill="#9ec3e6"/>
+<text x="92.0" y="292.0" font-size="14">UPRIGHT_C1</text>
+<rect x="229.0" y="300.0" width="6" height="44.0" fill="#9ec3e6"/>
+<text x="204.0" y="292.0" font-size="14">UPRIGHT_C2</text>
+<rect x="341.0" y="300.0" width="6" height="44.0" fill="#9ec3e6"/>
+<text x="316.0" y="292.0" font-size="14">UPRIGHT_C3</text>
+<rect x="453.0" y="300.0" width="6" height="44.0" fill="#9ec3e6"/>
+<text x="428.0" y="292.0" font-size="14">UPRIGHT_C4</text>
+<rect x="565.0" y="300.0" width="6" height="44.0" fill="#9ec3e6"/>
+<text x="540.0" y="292.0" font-size="14">UPRIGHT_C5</text>
+<text x="132.0" y="326.0" font-size="16">RACK_C</text>
+<text x="132.0" y="508.0" font-size="16">RACK_D</text>
+<text x="166.0" y="290.0" font-size="14">C1</text>
+<text x="278.0" y="290.0" font-size="14">C2</text>
+<text x="390.0" y="290.0" font-size="14">C3</text>
+<text x="502.0" y="290.0" font-size="14">C4</text>
+<rect x="384.0" y="300.0" width="32.0" height="48.0" fill="none" stroke="#d9a35b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="368.0" y="272.0" font-size="14">PALLET_TOP (z=4.5)</text>
+<line x1="80.0" y1="344.0" x2="1040.0" y2="344.0" stroke="#666" stroke-dasharray="4 6"/>
+<line x1="80.0" y1="480.0" x2="1040.0" y2="480.0" stroke="#666" stroke-dasharray="4 6"/>
+<rect x="476.0" y="373.0" width="92.0" height="46.0" fill="#d8b53a"/>
+<rect x="568.0" y="380.0" width="46.0" height="6" fill="#bbb"/>
+<rect x="568.0" y="406.0" width="46.0" height="6" fill="#bbb"/>
+<text x="476.0" y="432.0" font-size="14">FORKLIFT start, reversing toward -x</text>
+<circle cx="740.0" cy="444.0" r="8" fill="#7ad17a"/>
+<text x="720.0" y="464.0" font-size="14">PICKER + CART</text>
+<rect x="798.0" y="344.0" width="4" height="136.0" fill="#f2d22e"/>
+<text x="804.0" y="336.0" font-size="14">SAFETY_LINE x=17 (safe side +x)</text>
+<line x1="120.0" y1="600.0" x2="200.0" y2="600.0" stroke="#e9e6dc" stroke-width="2"/>
+<text x="204.0" y="596.0" font-size="14">+x (2 m)</text>
+<line x1="120.0" y1="600.0" x2="120.0" y2="520.0" stroke="#e9e6dc" stroke-width="2"/>
+<text x="124.0" y="524.0" font-size="14">+y</text>
+<text x="30" y="730" font-size="16">Scale 40 px = 1 m. Origin at RACK_C/RACK_D west end, aisle centreline y=0.2.</text>
+</g></svg>

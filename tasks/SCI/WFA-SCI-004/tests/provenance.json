@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "what": "Supplementary Data 1: DREAM5 network inference challenge data (inputs, gold standards Net1-4, anonymization maps, MATLAB evaluation scripts, null probability densities)",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.2016/MediaObjects/41592_2012_BFnmeth2016_MOESM584_ESM.zip",
+      "bytes": 37957055,
+      "sha256": "7c2210916af5c7047ef504187220c163efd6c0a39529420c2f8c342e185de93b",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "Supplementary Data 2: official scores (Overall/AUPR/AUROC scores, per-network AUPR/AUROC incl. Net2) for 35 methods + community",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.2016/MediaObjects/41592_2012_BFnmeth2016_MOESM585_ESM.xls",
+      "bytes": 58368,
+      "sha256": "244714913510e9bfc429aebe7efb2b3aa12a1c49afebb77eddcce21f16adc6ce",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "Supplementary Data 3: network predictions of 29 participants, 6 off-the-shelf methods, community integration",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.2016/MediaObjects/41592_2012_BFnmeth2016_MOESM586_ESM.zip",
+      "bytes": 78964139,
+      "sha256": "c43cbcd32ff7b0b73c7a565d7a8654045c56160d903ec5a0139fcb19256ea8d7",
+      "downloaded": "2026-10-23",
+      "license": "Upstream rights retained; no blanket license grant is made by WorkflowArena."
+    },
+    {
+      "what": "paper",
+      "url": "https://doi.org/10.1038/nmeth.2016",
+      "citation": "Marbach D. et al., Wisdom of crowds for robust gene network inference. Nat Methods 9, 796-804 (2012)"
+    }
+  ],
+  "derived": {
+    "environment/inputs/Network*/chip_features.tsv": "Supplementary Data 1 network input tables, renamed without data changes.",
+    "environment/inputs/Network*/regulators.tsv": "Supplementary Data 1 network regulator lists, renamed without data changes.",
+    "tests/reference/gold": "Supplementary Data 1 gold-standard edge tables.",
+    "tests/reference/null_pdfs": "Supplementary Data 1 evaluation probability densities.",
+    "tests/reference/leaderboard_official.csv": "Supplementary Data 2, sheet 1 columns B-M; method names from Supplementary Data 3.",
+    "evaluator": "tests/verify.py"
+  },
+  "distribution": "Original model/input files are fetched from the publisher using environment/fetch/sources.json; locally prepared files are excluded from Git. Evaluator reference values are derived numerical assessments with source attribution."
+}

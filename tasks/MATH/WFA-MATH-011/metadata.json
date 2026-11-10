@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-011",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Prime number theorem with classical error term",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
+    "revision": "commit 127b50e33f6033e2147921167a117af96d9ba4ea (2026-10-20)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

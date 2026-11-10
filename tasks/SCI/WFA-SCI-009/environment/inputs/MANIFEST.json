@@ -1,0 +1,60 @@
+{
+ "systems": [
+  {
+   "system": "Al-FCC",
+   "structure": "structures/Al-FCC.xsf",
+   "atoms_in_cell": 1
+  },
+  {
+   "system": "Si-Diamond",
+   "structure": "structures/Si-Diamond.xsf",
+   "atoms_in_cell": 2
+  },
+  {
+   "system": "Cu-FCC",
+   "structure": "structures/Cu-FCC.xsf",
+   "atoms_in_cell": 1
+  },
+  {
+   "system": "W-BCC",
+   "structure": "structures/W-BCC.xsf",
+   "atoms_in_cell": 1
+  },
+  {
+   "system": "Na-BCC",
+   "structure": "structures/Na-BCC.xsf",
+   "atoms_in_cell": 1
+  },
+  {
+   "system": "Pb-FCC",
+   "structure": "structures/Pb-FCC.xsf",
+   "atoms_in_cell": 1
+  },
+  {
+   "system": "Mg-XO",
+   "structure": "structures/Mg-XO.xsf",
+   "atoms_in_cell": 2
+  },
+  {
+   "system": "Ti-XO2",
+   "structure": "structures/Ti-XO2.xsf",
+   "atoms_in_cell": 3
+  },
+  {
+   "system": "Zn-XO",
+   "structure": "structures/Zn-XO.xsf",
+   "atoms_in_cell": 2
+  },
+  {
+   "system": "Li-X2O",
+   "structure": "structures/Li-X2O.xsf",
+   "atoms_in_cell": 3
+  }
+ ],
+ "pseudopotentials": {
+  "library": "SSSP 1.3.0 PBE precision",
+  "file": "SSSP_1.3.0_PBE_precision.tar.gz",
+  "md5": "fde94756886f32ada7bf597547557eb5",
+  "note": "placed in inputs/pseudos/ by the harness, together with SSSP_1.3.0_PBE_precision.json (recommended cutoffs)"
+ }
+}

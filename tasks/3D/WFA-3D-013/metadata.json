@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-3D-013",
+  "domain": "3D",
+  "task_form": "3D-FILM",
+  "title": "Attic Storm",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "authored",
+    "url": null,
+    "revision": "2026-10-24",
+    "license": "CC0-1.0 (original synthetic input material)",
+    "credits": "environment/CREDITS.md"
+  }
+}

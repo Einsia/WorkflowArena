@@ -1,0 +1,41 @@
+schema_version = "1.4"
+artifacts = ["/workspace/output"]
+
+[task]
+name = "WFA-CDN-004"
+version = "0.1.0"
+description = "Machine Runaway: 6-slot state-change assembly cut to beats"
+
+[metadata]
+domain = "CDN"
+subcategory = "CDN-VIDEO"
+evaluation_mode = "harbor_native"
+benchmark = "Agentic-VBench assembly"
+family = "CDC-A"
+difficulty = "hard"
+created_date = "2026-10-24"
+grader = "rubric_score.py (checks.py deterministic + gemini-3.8-flash per-item judge)"
+llm_judge = "gemini-3.8-flash"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 1800
+cpus = 2
+memory_mb = 8192
+storage_mb = 32768
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "separate"
+# public: the rubric's non-deterministic items are judged by gemini-3.8-flash (verifier-only Gemini credentials)
+network_mode = "public"
+
+[verifier.environment]
+cpus = 2
+memory_mb = 8192
+storage_mb = 32768

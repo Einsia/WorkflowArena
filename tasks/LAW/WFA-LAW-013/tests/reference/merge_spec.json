@@ -1,0 +1,230 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "mae_co_disclosure_schedules",
+   "id": "M01",
+   "text": "Give the distribution of answers to `mae_co_disclosure_schedules` across all 20 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "mae_ability_subject_to_carveouts",
+   "id": "M02",
+   "text": "Give the distribution of answers to `mae_ability_subject_to_carveouts` across all 20 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_cap_bringdown_standard",
+      "eq": "Accurate in all respects with de minimis exception"
+     },
+     {
+      "dp": "cc_covenant_compliance",
+      "eq": "All Covenants"
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 20 agreements satisfy ALL of the following: `cc_cap_bringdown_standard` = «Accurate in all respects with de minimis exception» AND `cc_covenant_compliance` = «All Covenants»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_buyer_actions",
+      "eq": "No"
+     },
+     {
+      "dp": "mae_ability_subject_to_carveouts",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 20 agreements satisfy ALL of the following: `mae_co_buyer_actions` = «No» AND `mae_ability_subject_to_carveouts` = «No»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_fund_rw_types",
+      "has": "Opinion of Financial Advisor"
+     },
+     {
+      "dp": "cc_general_bringdown_standard",
+      "eq": "All/The R&Ws accurate at MAE standard"
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 20 agreements satisfy ALL of the following: `cc_fund_rw_types` includes «Opinion of Financial Advisor» AND `cc_general_bringdown_standard` = «All/The R&Ws accurate at MAE standard»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_general_bringdown_timing",
+      "eq": "At Signing & At Closing"
+     },
+     {
+      "not": {
+       "dp": "cc_covenant_compliance",
+       "eq": "All Covenants"
+      }
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `cc_general_bringdown_timing` = «At Signing & At Closing» AND NOT (`cc_covenant_compliance` = «All Covenants»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_fund_bringdown_standard",
+      "eq": "Accurate at another materiality standard (e.g., hybrid standard)"
+     },
+     {
+      "not": {
+       "dp": "cc_scrape_applies_to",
+       "has": "Specified R&Ws only"
+      }
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `cc_fund_bringdown_standard` = «Accurate at another materiality standard (e.g., hybrid standard)» AND NOT (`cc_scrape_applies_to` includes «Specified R&Ws only»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_disclosure_schedules",
+      "eq": "No"
+     },
+     {
+      "dp": "mae_co_stockholder_litigation",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `mae_co_disclosure_schedules` = «No» AND `mae_co_stockholder_litigation` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "extremum",
+   "mode": "max",
+   "score": {
+    "type": "set_size",
+    "dp": "cc_scrape_applies_to",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M09",
+   "text": "Which agreement(s) have the highest value of the number of options selected for `cc_scrape_applies_to` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "rem_specific_performance",
+   "max_holders": 3,
+   "id": "M10",
+   "text": "For `rem_specific_performance`, list every agreement whose answer is shared by at most 3 of the 20 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "ef_antitrust_standard",
+   "max_holders": 3,
+   "id": "M11",
+   "text": "For `ef_antitrust_standard`, list every agreement whose answer is shared by at most 3 of the 20 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "cc_fund_rw_types",
+    "cc_fund_bringdown_standard",
+    "cc_cap_bringdown_standard",
+    "cc_scrape_applies_to",
+    "cc_general_bringdown_timing",
+    "cc_general_bringdown_standard",
+    "cc_covenant_compliance",
+    "kn_definition",
+    "kn_identified_persons",
+    "mae_co_disclosure_schedules",
+    "mae_co_buyer_actions",
+    "mae_co_stockholder_litigation",
+    "mae_ability_subject_to_carveouts",
+    "ef_antitrust_standard",
+    "rem_specific_performance"
+   ],
+   "min_dev": 8,
+   "id": "M12",
+   "text": "Consider the deal points `cc_fund_rw_types`, `cc_fund_bringdown_standard`, `cc_cap_bringdown_standard`, `cc_scrape_applies_to`, `cc_general_bringdown_timing`, `cc_general_bringdown_standard`, `cc_covenant_compliance`, `kn_definition`, `kn_identified_persons`, `mae_co_disclosure_schedules`, `mae_co_buyer_actions`, `mae_co_stockholder_litigation`, `mae_ability_subject_to_carveouts`, `ef_antitrust_standard`, `rem_specific_performance`. For each of them, take the most common answer across the 20 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 8 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "cc_cap_bringdown_standard",
+    "cc_general_bringdown_timing",
+    "cc_general_bringdown_standard"
+   ],
+   "id": "M13",
+   "text": "Considering only `cc_cap_bringdown_standard`, `cc_general_bringdown_timing`, `cc_general_bringdown_standard`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "mae_co_buyer_actions",
+    "mae_co_stockholder_litigation",
+    "mae_ability_subject_to_carveouts"
+   ],
+   "id": "M14",
+   "text": "Considering only `mae_co_buyer_actions`, `mae_co_stockholder_litigation`, `mae_ability_subject_to_carveouts`: how many distinct answer combinations occur among the 20 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A05",
+   "dps": [
+    "cc_fund_rw_types",
+    "cc_fund_bringdown_standard",
+    "cc_cap_bringdown_standard",
+    "cc_scrape_applies_to",
+    "cc_general_bringdown_timing",
+    "cc_general_bringdown_standard",
+    "cc_covenant_compliance",
+    "kn_definition",
+    "kn_identified_persons",
+    "mae_co_disclosure_schedules",
+    "mae_co_buyer_actions",
+    "mae_co_stockholder_litigation",
+    "mae_ability_subject_to_carveouts",
+    "ef_antitrust_standard",
+    "rem_specific_performance"
+   ],
+   "id": "M15",
+   "text": "Which other agreement(s) give the same answer as A05 on the largest number of the 15 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

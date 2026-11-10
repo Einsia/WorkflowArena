@@ -1,0 +1,17 @@
+joint,end_a,end_b
+J01,D01.main_end,T01.start
+J02,T01.end,D02.main_end
+J03,D01.div_end,T02.start
+J04,T02.end,D02.div_end
+J05,D02.toe,D03.toe
+J06,D03.main_end,T03.start
+J07,T03.end,T04.start
+J08,T04.end,T05.start
+J09,T05.end,T06.start
+J10,T06.end,T07.start
+J11,T07.end,T08.start
+J12,T08.end,T09.start
+J13,T09.end,D01.toe
+J14,D03.div_end,T10.start
+J15,T10.end,T11.start
+J16,T11.end,T12.start

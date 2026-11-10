@@ -1,0 +1,301 @@
+agreement,deal_point,answer
+A01,mae_relational_yn,Yes
+A01,mae_relational_scope,All MAE carveouts
+A01,mae_relational_terms,"""Arising from/out of"" | ""Attributable to"" | ""Resulting from"""
+A01,mae_di_political,Yes
+A01,mae_di_economic,Yes
+A01,mae_di_industry,Yes
+A01,mae_di_law,Yes
+A01,mae_di_gaap,Yes
+A01,mae_di_pandemic,No
+A01,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A01,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A01,mae_co_apc_scope,announcement
+A01,mae_co_pandemic_covid,Yes
+A01,mae_co_pandemic_measures,Yes
+A01,mae_fls_applies_to,business and operation of Target
+A02,mae_relational_yn,No
+A02,mae_relational_scope,No
+A02,mae_relational_terms,No
+A02,mae_di_political,Yes
+A02,mae_di_economic,No
+A02,mae_di_industry,Yes
+A02,mae_di_law,Yes
+A02,mae_di_gaap,Yes
+A02,mae_di_pandemic,Yes
+A02,mae_di_wnaf,War or terrorism
+A02,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A02,mae_co_apc_scope,announcement
+A02,mae_co_pandemic_covid,Yes
+A02,mae_co_pandemic_measures,No
+A02,mae_fls_applies_to,ability to consummate transaction
+A03,mae_relational_yn,Yes
+A03,mae_relational_scope,All MAE carveouts
+A03,mae_relational_terms,"""Arising from/out of"" | ""Relating to"""
+A03,mae_di_political,Yes
+A03,mae_di_economic,Yes
+A03,mae_di_industry,Yes
+A03,mae_di_law,No
+A03,mae_di_gaap,No
+A03,mae_di_pandemic,Yes
+A03,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A03,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A03,mae_co_apc_scope,announcement
+A03,mae_co_pandemic_covid,Yes
+A03,mae_co_pandemic_measures,Yes
+A03,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A04,mae_relational_yn,Yes
+A04,mae_relational_scope,Some MAE carveouts
+A04,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"" | Relational language varies among carveouts"
+A04,mae_di_political,Yes
+A04,mae_di_economic,No
+A04,mae_di_industry,Yes
+A04,mae_di_law,Yes
+A04,mae_di_gaap,Yes
+A04,mae_di_pandemic,Yes
+A04,mae_di_wnaf,Natural disaster | War or terrorism
+A04,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A04,mae_co_apc_scope,announcement | consummation
+A04,mae_co_pandemic_covid,Yes
+A04,mae_co_pandemic_measures,Yes
+A04,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A05,mae_relational_yn,Yes
+A05,mae_relational_scope,All MAE carveouts
+A05,mae_relational_terms,"""Resulting from"" | Other"
+A05,mae_di_political,Yes
+A05,mae_di_economic,Yes
+A05,mae_di_industry,Yes
+A05,mae_di_law,Yes
+A05,mae_di_gaap,Yes
+A05,mae_di_pandemic,No
+A05,mae_di_wnaf,Natural disaster | War or terrorism
+A05,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A05,mae_co_apc_scope,announcement | consummation
+A05,mae_co_pandemic_covid,Yes
+A05,mae_co_pandemic_measures,Yes
+A05,mae_fls_applies_to,business and operation of Target
+A06,mae_relational_yn,Yes
+A06,mae_relational_scope,Some MAE carveouts
+A06,mae_relational_terms,"""Arising from/out of"" | ""Relating to"""
+A06,mae_di_political,Yes
+A06,mae_di_economic,Yes
+A06,mae_di_industry,No
+A06,mae_di_law,Yes
+A06,mae_di_gaap,Yes
+A06,mae_di_pandemic,Yes
+A06,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A06,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A06,mae_co_apc_scope,announcement
+A06,mae_co_pandemic_covid,Yes
+A06,mae_co_pandemic_measures,Yes
+A06,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A07,mae_relational_yn,Yes
+A07,mae_relational_scope,All MAE carveouts
+A07,mae_relational_terms,"""Arising from/out of"" | ""Relating to"""
+A07,mae_di_political,Yes
+A07,mae_di_economic,Yes
+A07,mae_di_industry,Yes
+A07,mae_di_law,Yes
+A07,mae_di_gaap,Yes
+A07,mae_di_pandemic,Yes
+A07,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A07,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A07,mae_co_apc_scope,announcement
+A07,mae_co_pandemic_covid,Yes
+A07,mae_co_pandemic_measures,Yes
+A07,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A08,mae_relational_yn,Yes
+A08,mae_relational_scope,All MAE carveouts
+A08,mae_relational_terms,"""Arising from/out of"" | ""Relating to"" | ""Resulting from"""
+A08,mae_di_political,Yes
+A08,mae_di_economic,Yes
+A08,mae_di_industry,Yes
+A08,mae_di_law,Yes
+A08,mae_di_gaap,Yes
+A08,mae_di_pandemic,Yes
+A08,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A08,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A08,mae_co_apc_scope,announcement | consummation
+A08,mae_co_pandemic_covid,Yes
+A08,mae_co_pandemic_measures,Yes
+A08,mae_fls_applies_to,No
+A09,mae_relational_yn,Yes
+A09,mae_relational_scope,Some MAE carveouts
+A09,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A09,mae_di_political,Yes
+A09,mae_di_economic,Yes
+A09,mae_di_industry,Yes
+A09,mae_di_law,Yes
+A09,mae_di_gaap,Yes
+A09,mae_di_pandemic,Yes
+A09,mae_di_wnaf,Natural disaster | War or terrorism
+A09,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A09,mae_co_apc_scope,announcement
+A09,mae_co_pandemic_covid,No
+A09,mae_co_pandemic_measures,No
+A09,mae_fls_applies_to,No
+A10,mae_relational_yn,Yes
+A10,mae_relational_scope,All MAE carveouts
+A10,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A10,mae_di_political,No
+A10,mae_di_economic,Yes
+A10,mae_di_industry,Yes
+A10,mae_di_law,No
+A10,mae_di_gaap,No
+A10,mae_di_pandemic,Yes
+A10,mae_di_wnaf,Natural disaster | War or terrorism | force majeure
+A10,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A10,mae_co_apc_scope,announcement | pendency
+A10,mae_co_pandemic_covid,Yes
+A10,mae_co_pandemic_measures,Yes
+A10,mae_fls_applies_to,ability to consummate transaction
+A11,mae_relational_yn,Yes
+A11,mae_relational_scope,Some MAE carveouts
+A11,mae_relational_terms,"""Resulting from"""
+A11,mae_di_political,Yes
+A11,mae_di_economic,No
+A11,mae_di_industry,Yes
+A11,mae_di_law,Yes
+A11,mae_di_gaap,Yes
+A11,mae_di_pandemic,Yes
+A11,mae_di_wnaf,Natural disaster | War or terrorism
+A11,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A11,mae_co_apc_scope,announcement | consummation
+A11,mae_co_pandemic_covid,Yes
+A11,mae_co_pandemic_measures,Yes
+A11,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A12,mae_relational_yn,Yes
+A12,mae_relational_scope,All MAE carveouts
+A12,mae_relational_terms,"""Arising from/out of"" | ""Attributable to"" | ""Relating to"" | ""Resulting from"" | Relational language varies among carveouts"
+A12,mae_di_political,Yes
+A12,mae_di_economic,Yes
+A12,mae_di_industry,Yes
+A12,mae_di_law,Yes
+A12,mae_di_gaap,Yes
+A12,mae_di_pandemic,Yes
+A12,mae_di_wnaf,Natural disaster | War or terrorism | force majeure
+A12,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A12,mae_co_apc_scope,announcement | consummation
+A12,mae_co_pandemic_covid,Yes
+A12,mae_co_pandemic_measures,Yes
+A12,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A13,mae_relational_yn,Yes
+A13,mae_relational_scope,Some MAE carveouts
+A13,mae_relational_terms,"""Arising from/out of"" | ""Relating to"" | ""Resulting from"" | Relational language varies among carveouts"
+A13,mae_di_political,Yes
+A13,mae_di_economic,Yes
+A13,mae_di_industry,Yes
+A13,mae_di_law,Yes
+A13,mae_di_gaap,Yes
+A13,mae_di_pandemic,Yes
+A13,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A13,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A13,mae_co_apc_scope,announcement | pendency
+A13,mae_co_pandemic_covid,Yes
+A13,mae_co_pandemic_measures,Yes
+A13,mae_fls_applies_to,business and operation of Target
+A14,mae_relational_yn,Yes
+A14,mae_relational_scope,All MAE carveouts
+A14,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A14,mae_di_political,Yes
+A14,mae_di_economic,Yes
+A14,mae_di_industry,No
+A14,mae_di_law,Yes
+A14,mae_di_gaap,Yes
+A14,mae_di_pandemic,Yes
+A14,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A14,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A14,mae_co_apc_scope,announcement | pendency
+A14,mae_co_pandemic_covid,Yes
+A14,mae_co_pandemic_measures,No
+A14,mae_fls_applies_to,No
+A15,mae_relational_yn,Yes
+A15,mae_relational_scope,Some MAE carveouts
+A15,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"" | Relational language varies among carveouts"
+A15,mae_di_political,No
+A15,mae_di_economic,No
+A15,mae_di_industry,No
+A15,mae_di_law,Yes
+A15,mae_di_gaap,Yes
+A15,mae_di_pandemic,Yes
+A15,mae_di_wnaf,Natural disaster
+A15,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A15,mae_co_apc_scope,announcement | consummation
+A15,mae_co_pandemic_covid,Yes
+A15,mae_co_pandemic_measures,Yes
+A15,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A16,mae_relational_yn,Yes
+A16,mae_relational_scope,Some MAE carveouts
+A16,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"" | Relational language varies among carveouts"
+A16,mae_di_political,Yes
+A16,mae_di_economic,No
+A16,mae_di_industry,Yes
+A16,mae_di_law,Yes
+A16,mae_di_gaap,Yes
+A16,mae_di_pandemic,Yes
+A16,mae_di_wnaf,Natural disaster | War or terrorism
+A16,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A16,mae_co_apc_scope,announcement | consummation
+A16,mae_co_pandemic_covid,Yes
+A16,mae_co_pandemic_measures,Yes
+A16,mae_fls_applies_to,ability to consummate transaction | business and operation of Target
+A17,mae_relational_yn,No
+A17,mae_relational_scope,No
+A17,mae_relational_terms,No
+A17,mae_di_political,Yes
+A17,mae_di_economic,Yes
+A17,mae_di_industry,Yes
+A17,mae_di_law,Yes
+A17,mae_di_gaap,No
+A17,mae_di_pandemic,No
+A17,mae_di_wnaf,Natural disaster | War or terrorism | force majeure
+A17,mae_co_wnaf_scope,Natural disaster | War or terrorism | force majeure
+A17,mae_co_apc_scope,announcement | consummation | pendency
+A17,mae_co_pandemic_covid,Yes
+A17,mae_co_pandemic_measures,Yes
+A17,mae_fls_applies_to,No
+A18,mae_relational_yn,No
+A18,mae_relational_scope,No
+A18,mae_relational_terms,No
+A18,mae_di_political,No
+A18,mae_di_economic,Yes
+A18,mae_di_industry,Yes
+A18,mae_di_law,Yes
+A18,mae_di_gaap,Yes
+A18,mae_di_pandemic,Yes
+A18,mae_di_wnaf,Natural disaster | War or terrorism
+A18,mae_co_wnaf_scope,Natural disaster | War or terrorism
+A18,mae_co_apc_scope,announcement | pendency
+A18,mae_co_pandemic_covid,Yes
+A18,mae_co_pandemic_measures,No
+A18,mae_fls_applies_to,business and operation of Target
+A19,mae_relational_yn,Yes
+A19,mae_relational_scope,All MAE carveouts
+A19,mae_relational_terms,"""Relating to"" | ""Resulting from"""
+A19,mae_di_political,Yes
+A19,mae_di_economic,Yes
+A19,mae_di_industry,Yes
+A19,mae_di_law,Yes
+A19,mae_di_gaap,Yes
+A19,mae_di_pandemic,Yes
+A19,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism"
+A19,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism"
+A19,mae_co_apc_scope,announcement | consummation | pendency
+A19,mae_co_pandemic_covid,Yes
+A19,mae_co_pandemic_measures,No
+A19,mae_fls_applies_to,ability to consummate transaction
+A20,mae_relational_yn,Yes
+A20,mae_relational_scope,All MAE carveouts
+A20,mae_relational_terms,"""Arising from/out of"" | ""Resulting from"""
+A20,mae_di_political,Yes
+A20,mae_di_economic,Yes
+A20,mae_di_industry,Yes
+A20,mae_di_law,No
+A20,mae_di_gaap,No
+A20,mae_di_pandemic,Yes
+A20,mae_di_wnaf,"""act of God"" | Natural disaster | War or terrorism | force majeure"
+A20,mae_co_wnaf_scope,"""act of God"" | Natural disaster | War or terrorism | force majeure"
+A20,mae_co_apc_scope,announcement | consummation | pendency
+A20,mae_co_pandemic_covid,Yes
+A20,mae_co_pandemic_measures,Yes
+A20,mae_fls_applies_to,No

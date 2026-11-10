@@ -1,0 +1,12 @@
+[
+  {
+    "task_id": "WFA-FIN-004",
+    "criterion": "scope/FRT/report_end",
+    "frozen_expected": "2026-07-27",
+    "corrected_expected": "2026-06-30",
+    "reason": "封面流通股统计日误作财报终点。",
+    "source_index": "gold-v2/finance-hard-04/FRT-source.json",
+    "source_pointer": "/paragraphs/20",
+    "source_quote": "This report combines the quarterly reports on Form 10-Q for the quarter ended June 30, 2026"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "FirstOrder.Language.instIsAlgebraicPresburger": {
+    "role": "dep",
+    "fp": "def 342271776 1175145142"
+  },
+  "FirstOrder.Language.presburger": {
+    "role": "req",
+    "fp": "def 924282558 1605530132"
+  },
+  "FirstOrder.Language.presburger.instStructure": {
+    "role": "req",
+    "fp": "def 1211337907 835250840"
+  },
+  "FirstOrder.Language.presburger.instStructure.match_1": {
+    "role": "dep",
+    "fp": "def 3449029324 3286892396"
+  },
+  "FirstOrder.presburgerFunc": {
+    "role": "dep",
+    "fp": "ind 3972626760 0 1 7705096901697747921"
+  },
+  "FirstOrder.presburgerFunc.add": {
+    "role": "dep",
+    "fp": "ctor 1752185816"
+  },
+  "FirstOrder.presburgerFunc.casesOn": {
+    "role": "dep",
+    "fp": "def 3638442051 81795114"
+  },
+  "FirstOrder.presburgerFunc.one": {
+    "role": "dep",
+    "fp": "ctor 2001248291"
+  },
+  "FirstOrder.presburgerFunc.rec": {
+    "role": "dep",
+    "fp": "rec 3573875617"
+  },
+  "FirstOrder.presburgerFunc.zero": {
+    "role": "dep",
+    "fp": "ctor 2001248291"
+  },
+  "IsLinearSet": {
+    "role": "req",
+    "fp": "def 2294098382 2860873972"
+  },
+  "IsProperLinearSet": {
+    "role": "req",
+    "fp": "def 2294098382 398668460"
+  },
+  "IsProperSemilinearSet": {
+    "role": "req",
+    "fp": "def 2294098382 1888152830"
+  },
+  "IsSemilinearSet": {
+    "role": "req",
+    "fp": "def 2294098382 1047531288"
+  }
+}

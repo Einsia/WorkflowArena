@@ -1,0 +1,13 @@
+pyscf/gw/test/test_evgw.py
+pyscf/gw/test/test_evgw_exact.py
+pyscf/gw/test/test_gw.py
+pyscf/gw/test/test_gw_cd.py
+pyscf/gw/test/test_gw_exact_df.py
+pyscf/gw/test/test_qsgw.py
+pyscf/gw/test/test_qsgw_exact.py
+pyscf/gw/test/test_uevgw.py
+pyscf/gw/test/test_uevgw_exact.py
+pyscf/gw/test/test_ugw_cd.py
+pyscf/gw/test/test_ugw_exact_df.py
+pyscf/gw/test/test_uqsgw.py
+pyscf/gw/test/test_uqsgw_exact.py

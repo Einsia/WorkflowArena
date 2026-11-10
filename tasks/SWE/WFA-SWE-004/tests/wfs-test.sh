@@ -1,0 +1,2 @@
+# hidden test command (original private/env/task.sh do_test)
+do_test() { cd $WS && PYTHONPATH=$WS python -m pytest -p no:cacheprovider -q -n 12 --timeout 3000 pyscf/gw/test/test_evgw.py pyscf/gw/test/test_evgw_exact.py pyscf/gw/test/test_gw.py pyscf/gw/test/test_gw_cd.py pyscf/gw/test/test_gw_exact_df.py pyscf/gw/test/test_qsgw.py pyscf/gw/test/test_qsgw_exact.py pyscf/gw/test/test_uevgw.py pyscf/gw/test/test_uevgw_exact.py pyscf/gw/test/test_ugw_cd.py pyscf/gw/test/test_ugw_exact_df.py pyscf/gw/test/test_uqsgw.py pyscf/gw/test/test_uqsgw_exact.py; }

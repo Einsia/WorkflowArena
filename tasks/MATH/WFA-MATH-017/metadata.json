@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-017",
+  "domain": "MATH",
+  "task_form": "MATH-THEORY",
+  "title": "feat(Condensed): characterisation of discrete (light) condensed sets and modules",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github-pr-family",
+    "url": "https://github.com/leanprover-community/mathlib4/pull/14027",
+    "revision": "start = reference head 21bb8348b419e6365e8b174cebc3ce95714da087 minus family-created modules; reference = 21bb8348b419e6365e8b174cebc3ce95714da087",
+    "license": "Apache-2.0 (mathlib4)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

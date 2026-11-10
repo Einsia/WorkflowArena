@@ -1,0 +1,61 @@
+{
+  "units": "metre",
+  "hall": {
+    "room": [
+      12,
+      8,
+      3.4
+    ],
+    "description": "chess club hall at night; rows of empty tables in darkness, one table lit by a single hanging lamp",
+    "wall_demo_board": {
+      "size": [
+        1.2,
+        1.2
+      ],
+      "mounted_on": "north wall",
+      "pieces": "flat magnetic tokens"
+    }
+  },
+  "game_table": {
+    "top": [
+      1.2,
+      0.8
+    ],
+    "height": 0.74,
+    "board_square_size": 0.055
+  },
+  "chess_clock": {
+    "type": "analog twin-face mechanical chess clock with a flag on each face and two rocker buttons",
+    "faces": "white player's face on the white player's side of the clock"
+  },
+  "position": {
+    "fen": "8/5k2/8/3r4/8/4N3/5PK1/8 w - - 0 58",
+    "moves_san": [
+      "58. Nf5",
+      "58... Rxf5"
+    ],
+    "piece_style": "tournament Staunton, weighted wood"
+  },
+  "characters": {
+    "PLAYER_W": {
+      "plays": "white",
+      "look": "adult, grey cardigan, reading glasses pushed up on the forehead"
+    },
+    "PLAYER_B": {
+      "plays": "black",
+      "look": "adult, dark green hooded jacket"
+    },
+    "ARBITER": {
+      "look": "adult, navy blazer, red lanyard with arbiter card"
+    }
+  },
+  "dialogue": {
+    "line_black": "Your flag is hanging.",
+    "line_arbiter": "Time. Black wins."
+  },
+  "identity_constraints": [
+    "the same two players, table, board and clock in every shot that shows them",
+    "the wall demo board shows the same game as the table"
+  ],
+  "task_id": "WFA-3D-012"
+}

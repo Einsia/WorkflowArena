@@ -1,0 +1,82 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `mae_relational_scope` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `mae_relational_terms` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (count each agreement once for every option included in its answer).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND `mae_co_buyer_consent` = «Yes»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `mae_fls_yn` = «Yes» AND `mae_co_disclosure_schedules` = «No»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `mae_ability_subject_to_carveouts` = «No» AND NOT (`mae_co_apc_scope` includes «consummation»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `mae_ability_to_consummate` = «Yes» AND `mae_co_buyer_actions` = «Yes». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `mae_fls_standard` = «\"Would\" (reasonably) be expected to» AND `mae_fls_applies_to` includes «ability to consummate transaction». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `mae_co_stockholder_litigation` = «No» AND `mae_co_prohibited_actions` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `mae_taken_as_whole` = «No» AND `mae_relational_yn` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "Which agreement(s) have the lowest value of the number of options selected for `mae_fls_applies_to` (not counting 'No')? List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "For `mae_fls_yn`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `mae_relational_scope`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "Consider the deal points `mae_taken_as_whole`, `mae_ability_to_consummate`, `mae_ability_subject_to_carveouts`, `mae_fls_yn`, `mae_fls_standard`, `mae_fls_applies_to`, `mae_relational_yn`, `mae_relational_scope`, `mae_co_required_actions`, `mae_co_buyer_consent`, `mae_co_stockholder_litigation`, `mae_co_disclosure_schedules`, `mae_co_buyer_actions`, `mae_co_prohibited_actions`. For each of them, take the most common answer across the 15 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 8 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Considering only `mae_co_apc_scope`, `mae_co_required_actions`, `mae_co_disclosure_schedules`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `mae_relational_yn`, `mae_relational_terms`, `mae_co_required_actions`: how many distinct answer combinations occur among the 15 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M16",
+  "question": "Which other agreement(s) give the same answer as A06 on the largest number of the 16 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

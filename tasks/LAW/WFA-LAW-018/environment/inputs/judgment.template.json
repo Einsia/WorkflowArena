@@ -1,0 +1,121 @@
+{
+ "defendants": {
+  "[被告A]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告B]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告C]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告D]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告E]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告F]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告G]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告H]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  },
+  "[被告I]": {
+   "charges": [],
+   "articles": [],
+   "roles": {},
+   "leader": false,
+   "circumstances": [],
+   "charge_terms": {},
+   "final_term": {
+    "type": "",
+    "months": null
+   },
+   "probation": false
+  }
+ }
+}

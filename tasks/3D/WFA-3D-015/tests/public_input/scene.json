@@ -1,0 +1,63 @@
+{
+  "task_id": "WFA-3D-015",
+  "units": "metre; +x east, +y north, +z up",
+  "studio": {
+    "room": [
+      4.5,
+      3.8,
+      2.7
+    ],
+    "desk": {
+      "centre": [
+        0.0,
+        0.0,
+        0.74
+      ],
+      "size": [
+        1.8,
+        0.9,
+        0.04
+      ],
+      "finish": "dark oak veneer"
+    },
+    "host_a_seat": [
+      -0.75,
+      -0.15,
+      0.0
+    ],
+    "host_b_seat": [
+      0.75,
+      -0.15,
+      0.0
+    ],
+    "mics": "one boom-arm broadcast microphone in front of each host",
+    "console": "mixing console on the desk between the hosts, includes one labelled CALLER fader",
+    "on_air_lamp": {
+      "position": [
+        0.0,
+        1.85,
+        2.15
+      ],
+      "text": "ON AIR",
+      "colour": "red"
+    },
+    "window": "north wall glass into a dark producer booth"
+  },
+  "taxi": {
+    "vehicle": "four-door sedan taxi, left-hand drive, stopped at a red light, engine idling",
+    "driver_seat": "front left",
+    "radio": "car radio in the centre console, amber display, round volume knob",
+    "phone": "hand-held mobile phone, black",
+    "exterior": "empty wet city street at night, traffic light ahead, no rain falling"
+  },
+  "characters": {
+    "host_a": "adult, grey cardigan, closed-back headphones",
+    "host_b": "adult, dark green shirt, closed-back headphones",
+    "driver": "adult, navy jacket, flat cap"
+  },
+  "identity_constraints": [
+    "same studio, desk, console and ON AIR lamp in S1 and S4",
+    "same taxi, radio and driver in S2, S3 and S5",
+    "the hosts keep their seats throughout"
+  ]
+}

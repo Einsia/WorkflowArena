@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-014",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Gelfand and Kolmogorov numbers bounded by Bernstein numbers",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/mario-ullrich/Lean-SNumbers",
+    "revision": "commit f1c8456c0c2c5154f30d1186663199a8959b460b (2026-10-22)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

@@ -1,0 +1,279 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "mae_di_economic",
+   "id": "M01",
+   "text": "Give the distribution of answers to `mae_di_economic` across all 12 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "rem_specific_performance",
+   "id": "M02",
+   "text": "Give the distribution of answers to `rem_specific_performance` across all 12 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_taken_as_whole",
+      "eq": "Applies to Target and subsidiaries \"taken as a whole\""
+     },
+     {
+      "not": {
+       "dp": "cc_fund_bringdown_standard",
+       "eq": "Accurate in all respects"
+      }
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 12 agreements satisfy ALL of the following: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND NOT (`cc_fund_bringdown_standard` = «Accurate in all respects»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_political",
+      "eq": "Yes"
+     },
+     {
+      "dp": "mae_co_market_price",
+      "eq": "Yes"
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 12 agreements satisfy ALL of the following: `mae_co_political` = «Yes» AND `mae_co_market_price` = «Yes»? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_disclosure_schedules",
+      "eq": "No"
+     },
+     {
+      "not": {
+       "dp": "cc_scrape_applies_to",
+       "has": "fundamental/Special R&Ws"
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 12 agreements satisfy ALL of the following: `mae_co_disclosure_schedules` = «No» AND NOT (`cc_scrape_applies_to` includes «fundamental/Special R&Ws»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_stockholder_litigation",
+      "eq": "Yes"
+     },
+     {
+      "dp": "oc_efforts_standard",
+      "eq": "Commercially reasonable efforts"
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `mae_co_stockholder_litigation` = «Yes» AND `oc_efforts_standard` = «Commercially reasonable efforts». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "cc_cap_bringdown_standard",
+      "eq": "Accurate in all material respects"
+     },
+     {
+      "not": {
+       "dp": "cc_covenant_compliance",
+       "eq": "Each Covenant"
+      }
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `cc_cap_bringdown_standard` = «Accurate in all material respects» AND NOT (`cc_covenant_compliance` = «Each Covenant»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_co_economic",
+      "eq": "No"
+     },
+     {
+      "dp": "ef_antitrust_standard",
+      "eq": "Flat standard"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `mae_co_economic` = «No» AND `ef_antitrust_standard` = «Flat standard». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "mae_fls_standard",
+      "eq": "No"
+     },
+     {
+      "dp": "mae_di_pandemic",
+      "eq": "No"
+     }
+    ]
+   },
+   "id": "M09",
+   "text": "List every agreement that satisfies: `mae_fls_standard` = «No» AND `mae_di_pandemic` = «No». If no agreement qualifies, answer with an empty list [].",
+   "kind": "none"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "not": {
+       "dp": "mae_di_industry",
+       "same_as": "mae_di_pandemic"
+      }
+     }
+    ]
+   },
+   "id": "M10",
+   "text": "List every agreement that satisfies: NOT (`mae_di_industry` gives the same answer as `mae_di_pandemic`). If no agreement qualifies, answer with an empty list [].",
+   "kind": "cross"
+  },
+  {
+   "op": "extremum",
+   "mode": "max",
+   "score": {
+    "type": "set_size",
+    "dp": "cc_scrape_applies_to",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M11",
+   "text": "Which agreement(s) have the highest value of the number of options selected for `cc_scrape_applies_to` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "mae_co_industry",
+   "max_holders": 3,
+   "id": "M12",
+   "text": "For `mae_co_industry`, list every agreement whose answer is shared by at most 3 of the 12 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "mae_co_pandemic",
+   "max_holders": 1,
+   "id": "M13",
+   "text": "For `mae_co_pandemic`, list every agreement whose answer is shared by at most 1 of the 12 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_fls_standard",
+    "mae_co_political",
+    "mae_co_economic",
+    "mae_co_industry",
+    "mae_co_market_price",
+    "mae_co_pandemic",
+    "mae_di_economic",
+    "mae_di_industry",
+    "mae_di_pandemic",
+    "mae_co_stockholder_litigation",
+    "mae_co_disclosure_schedules",
+    "cc_general_bringdown_timing",
+    "cc_cap_bringdown_standard",
+    "cc_fund_bringdown_standard",
+    "cc_scrape_applies_to",
+    "cc_covenant_compliance",
+    "ef_antitrust_standard",
+    "oc_efforts_standard",
+    "rem_specific_performance"
+   ],
+   "min_dev": 9,
+   "id": "M14",
+   "text": "Consider the deal points `mae_taken_as_whole`, `mae_ability_to_consummate`, `mae_fls_standard`, `mae_co_political`, `mae_co_economic`, `mae_co_industry`, `mae_co_market_price`, `mae_co_pandemic`, `mae_di_economic`, `mae_di_industry`, `mae_di_pandemic`, `mae_co_stockholder_litigation`, `mae_co_disclosure_schedules`, `cc_general_bringdown_timing`, `cc_cap_bringdown_standard`, `cc_fund_bringdown_standard`, `cc_scrape_applies_to`, `cc_covenant_compliance`, `ef_antitrust_standard`, `oc_efforts_standard`, `rem_specific_performance`. For each of them, take the most common answer across the 12 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 9 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "mae_di_pandemic",
+    "cc_general_bringdown_timing",
+    "kn_definition"
+   ],
+   "id": "M15",
+   "text": "Considering only `mae_di_pandemic`, `cc_general_bringdown_timing`, `kn_definition`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "mae_ability_to_consummate",
+    "mae_co_political",
+    "kn_definition"
+   ],
+   "id": "M16",
+   "text": "Considering only `mae_ability_to_consummate`, `mae_co_political`, `kn_definition`: how many distinct answer combinations occur among the 12 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A01",
+   "dps": [
+    "mae_taken_as_whole",
+    "mae_ability_to_consummate",
+    "mae_fls_standard",
+    "mae_co_political",
+    "mae_co_economic",
+    "mae_co_industry",
+    "mae_co_market_price",
+    "mae_co_pandemic",
+    "mae_di_economic",
+    "mae_di_industry",
+    "mae_di_pandemic",
+    "mae_co_stockholder_litigation",
+    "mae_co_disclosure_schedules",
+    "cc_general_bringdown_timing",
+    "cc_cap_bringdown_standard",
+    "cc_fund_bringdown_standard",
+    "cc_scrape_applies_to",
+    "cc_covenant_compliance",
+    "ef_antitrust_standard",
+    "oc_efforts_standard",
+    "rem_specific_performance",
+    "kn_definition"
+   ],
+   "id": "M17",
+   "text": "Which other agreement(s) give the same answer as A01 on the largest number of the 22 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

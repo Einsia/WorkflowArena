@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "PrimeNumberTheoremAnd.StrongPNT",
+  "build_targets": [
+    "PrimeNumberTheoremAnd.StrongPNT"
+  ],
+  "names": [
+    "StrongPNT"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "PrimeNumberTheoremAnd"
+    ],
+    "target_file": "PrimeNumberTheoremAnd/StrongPNT.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

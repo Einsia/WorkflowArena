@@ -1,0 +1,231 @@
+{
+  "task_id": "WFA-CDN-002",
+  "reviewer_only": true,
+  "fps": 24,
+  "correct_sources": [
+    "42",
+    "41",
+    "05",
+    "18",
+    "02",
+    "31"
+  ],
+  "clip_frames": {
+    "42": 230,
+    "41": 240,
+    "05": 212,
+    "18": 269,
+    "02": 264,
+    "31": 276
+  },
+  "reference_layout": {
+    "picture_output_frames": [
+      [
+        0,
+        230
+      ],
+      [
+        230,
+        470
+      ],
+      [
+        470,
+        682
+      ],
+      [
+        682,
+        951
+      ],
+      [
+        951,
+        1215
+      ],
+      [
+        1215,
+        1467
+      ]
+    ],
+    "picture_source_frames": [
+      [
+        0,
+        230
+      ],
+      [
+        0,
+        240
+      ],
+      [
+        0,
+        212
+      ],
+      [
+        0,
+        269
+      ],
+      [
+        0,
+        264
+      ],
+      [
+        24,
+        276
+      ]
+    ],
+    "sound_output_frames": [
+      [
+        0,
+        230
+      ],
+      [
+        230,
+        470
+      ],
+      [
+        470,
+        682
+      ],
+      [
+        682,
+        951
+      ],
+      [
+        951,
+        1191
+      ],
+      [
+        1191,
+        1467
+      ]
+    ],
+    "sound_source_frames": [
+      [
+        0,
+        230
+      ],
+      [
+        0,
+        240
+      ],
+      [
+        0,
+        212
+      ],
+      [
+        0,
+        269
+      ],
+      [
+        0,
+        240
+      ],
+      [
+        0,
+        276
+      ]
+    ],
+    "total_frames": 1467,
+    "total_seconds": 61.125,
+    "note": "layout is only valid for the correct selection; for other selections the grader derives the expected layout from the chosen clips' frame counts"
+  },
+  "gate_slots": [
+    1,
+    4,
+    6
+  ],
+  "phase_windows_clip_frames": {
+    "1": {
+      "clip": "42",
+      "window": [
+        20,
+        70
+      ],
+      "what": "bowed head with hair over face -> face lifts (approx clip frames 25-63)"
+    },
+    "4": {
+      "clip": "18",
+      "window": [
+        40,
+        80
+      ],
+      "what": "huge head dives in from top of frame after the lone glide (approx 46-75)"
+    },
+    "6": {
+      "clip": "31",
+      "window": [
+        70,
+        110
+      ],
+      "what": "creature flies in low from left and lands (approx 78-96); crawl-away begins ~204",
+      "alt_window": [
+        195,
+        276
+      ]
+    }
+  },
+  "distractors": {
+    "1": {
+      "near_miss": [
+        "25",
+        "29",
+        "37",
+        "36"
+      ],
+      "loose": [
+        "35"
+      ],
+      "why": "25: same close shot but starts after the lift began (face already visible) [event phase]; 29: cliff wide -> cut -> bowed head, ends before gaze turns right (not a single shot); 37: starts mid-gaze, ends after cut to ground shot; 36: sunset close-up push-in of her face (different scene/light)"
+    },
+    "2": {
+      "near_miss": [
+        "10",
+        "19",
+        "27",
+        "04"
+      ],
+      "why": "10: starts on her smiling face, no wing spread/fold; 19: opens on a low-angle shot of her, ends mid perched shot; 27: perched-with-birds then cut to rooftop run; 04: market close-up looking up -> low angle"
+    },
+    "3": {
+      "near_miss": [
+        "14",
+        "17",
+        "13",
+        "03"
+      ],
+      "why": "14: starts mid-walk already close to camera, ends on clapping/cheering shot; 17: ruins wide -> tower walk -> call, ends before backlit images; 13: starts on backlit images, then cheering, flock over city; 03: cheering -> flock -> smiling face -> creature flying"
+    },
+    "4": {
+      "near_miss": [
+        "28",
+        "34",
+        "24",
+        "30"
+      ],
+      "why": "28: starts on the wide over roofs (no lone glide/dive), ends on her face [onset phase]; 34: earlier start, ends mid-grab in the over-back shot, no foreground-hand image [end phase]; 24: starts mid over-back shot, ends after her fall on the roof; 30: starts on the foreground-hand image, then face, fall, dragon flying off"
+    },
+    "5": {
+      "near_miss": [
+        "12",
+        "39",
+        "33"
+      ],
+      "loose": [
+        "22"
+      ],
+      "why": "12: tree-trunk wide then cut to cliff; 39: cliff then cut to bowed-head close shot; 33: ruins face -> lone figure on rooftop against sunset -> close-up; 22 (loose): ruins wide at sunset with small dragons"
+    },
+    "6": {
+      "near_miss": [
+        "40",
+        "16",
+        "21",
+        "20"
+      ],
+      "why": "40: creature enters and lands but the clip ends during the pause, no crawl-away [end phase]; 16: creature already landed at the start [onset phase]; 21: creature already on the ground/leaving at start [onset phase]; 20: she walks away only, no creature"
+    }
+  },
+  "motion_or_phase_dependent_slots": [
+    1,
+    4,
+    6
+  ]
+}

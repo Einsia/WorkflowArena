@@ -1,0 +1,2 @@
+line_dispatch（调度员，经对讲机）：Aisle C, I heard a crash. Report.（C 排，我听到撞击声，报告情况。）
+line_picker（拣货员）：Top pallet came down. Nobody's hurt.（顶层托盘掉下来了，没人受伤。）

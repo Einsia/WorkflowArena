@@ -1,0 +1,188 @@
+{
+  "task_id": "WFA-CDN-004",
+  "title": "Elephants Dream (2006)",
+  "creator": "Orange Open Movie Project / Blender Foundation",
+  "source_url": "https://orange.blender.org",
+  "license": "CC-BY-2.5",
+  "license_url": "https://creativecommons.org/licenses/by/2.5/",
+  "license_evidence": "https://orange.blender.org/blog/creative-commons-license-2/",
+  "modifications": "video only, 24->30 fps by frame repetition (no retiming), scaled 720x405->1280x720, SAR 1:1, x264 veryfast CRF17, container/x264-info metadata stripped",
+  "files": [
+    {
+      "file": "environment/input/clips/01.mp4",
+      "sha256": "0c6aedf3ce67efeb6e36bed80b12cffa97e60062c9ecbeb87b57fbdfddc2f447"
+    },
+    {
+      "file": "environment/input/clips/02.mp4",
+      "sha256": "687144b10901ca5bd40d6e2ec75b53d24b0ecbfae483ae1b81985fdb47a9643f"
+    },
+    {
+      "file": "environment/input/clips/03.mp4",
+      "sha256": "f81b59b3c4573f4830c88e875e33f2bcc90a5abd1786a6e62fe005f7ab21e072"
+    },
+    {
+      "file": "environment/input/clips/04.mp4",
+      "sha256": "b039450d715cbd39c630d969df9b4eee989983fb16032c147ead8f10b63d5518"
+    },
+    {
+      "file": "environment/input/clips/05.mp4",
+      "sha256": "b5c434766c85b30ebc61ce68413b9221b37a138a1f2fbc3ac50b68ce605e7ab5"
+    },
+    {
+      "file": "environment/input/clips/06.mp4",
+      "sha256": "c4ed138dbf2a99b8d06108f1e9a0db3a2ecbf65f7a3e90f15f879aa6681316c1"
+    },
+    {
+      "file": "environment/input/clips/07.mp4",
+      "sha256": "539541c1a6f1785dfa200b055f01b8832656d427b04d9a733bf2ec013e716fbf"
+    },
+    {
+      "file": "environment/input/clips/08.mp4",
+      "sha256": "2ddfe1231a6d9e4fe8708f4454d20a40000008818c37828f5e233b22db3f83e9"
+    },
+    {
+      "file": "environment/input/clips/09.mp4",
+      "sha256": "c9a6b15abe8d218a6c1a609187fb0da62c0d555f01454d1e2917115672a47682"
+    },
+    {
+      "file": "environment/input/clips/10.mp4",
+      "sha256": "92132c93b7b6b5af5810852b8f4f73e7f9957a163958e6e6d68022f63aa78ced"
+    },
+    {
+      "file": "environment/input/clips/11.mp4",
+      "sha256": "235b77621837b59c555541b3ea3840509ccf8988ac00bfa2f1c62f4cb29ea21a"
+    },
+    {
+      "file": "environment/input/clips/12.mp4",
+      "sha256": "4226c5b1d9a3a837d207f0bb3e2980b5300ccefdcf8d1ddd7a3cf1857b4975b2"
+    },
+    {
+      "file": "environment/input/clips/13.mp4",
+      "sha256": "5c3541a44f442241e3da4d915661b8a621e761d9ab80380d802c33607f356a0c"
+    },
+    {
+      "file": "environment/input/clips/14.mp4",
+      "sha256": "b9bb7e18d58effa8a988125f459472ed2b1a43aa14424b6f11af3855cf424c92"
+    },
+    {
+      "file": "environment/input/clips/15.mp4",
+      "sha256": "7d3b2126f6e078ae3abeceed66d8ba3036b658961ac1d32f222590c7d64f669d"
+    },
+    {
+      "file": "environment/input/clips/16.mp4",
+      "sha256": "1a5ef7d2e40bdfff686028b8f9ef323dd7e6fb823769d789187fdeae674553c3"
+    },
+    {
+      "file": "environment/input/clips/17.mp4",
+      "sha256": "15c64861cf456e9b6d2602ed3de9393827ebb1e326fe13ec386d611486d53e23"
+    },
+    {
+      "file": "environment/input/clips/18.mp4",
+      "sha256": "32a75b177e4651a3dced50d16be20260b11ccc161f968edb8d61e94bf3f97055"
+    },
+    {
+      "file": "environment/input/clips/19.mp4",
+      "sha256": "c9f5042f97e69d4d204fd9d2cf5e0cc55eee25b38c16b13f2cbdd2017d0ed032"
+    },
+    {
+      "file": "environment/input/clips/20.mp4",
+      "sha256": "a9cf0f75a518114db510385666fd655178b09045895dd4713ac801ba038dbcce"
+    },
+    {
+      "file": "environment/input/clips/21.mp4",
+      "sha256": "a6480154f7b024f9307fc874ec632d7431193fb0c38c05324b9fb630aa0fd124"
+    },
+    {
+      "file": "environment/input/clips/22.mp4",
+      "sha256": "e3f1a578fd7bc79a94615db0add9cb880fb330d61e89da1c222591553223c717"
+    },
+    {
+      "file": "environment/input/clips/23.mp4",
+      "sha256": "cb474477b198ce824aa9f5e786dd848b89be4d3b05f0ffd609a3185ee927813b"
+    },
+    {
+      "file": "environment/input/clips/24.mp4",
+      "sha256": "9a254e006b1ee4a1bf002970690e29a912c2503b3c461ea646672f098e667c0e"
+    },
+    {
+      "file": "environment/input/clips/25.mp4",
+      "sha256": "75fd56d3114b02d86181d1c8dfc99314f6b84bce10ad5429e7f99c3483b5db22"
+    },
+    {
+      "file": "environment/input/clips/26.mp4",
+      "sha256": "cd67985b22da62f399333ea3d26a26bc4406637ef57f89058921e98995df0d4c"
+    },
+    {
+      "file": "environment/input/clips/27.mp4",
+      "sha256": "6e086b07307afa8eed91dc84c539979def3ec88c82c19b4296f5c258cdc2dc2c"
+    },
+    {
+      "file": "environment/input/clips/28.mp4",
+      "sha256": "578e6cf251ec349e3dff156bf2e4112cefe40303697fccdf979ca45672e73b51"
+    },
+    {
+      "file": "environment/input/clips/29.mp4",
+      "sha256": "75e4604934b2054f1d6de2ebb63847297ec7b14642db8f378a54685f5025d13d"
+    },
+    {
+      "file": "environment/input/clips/30.mp4",
+      "sha256": "d0cf57a8bace91d2484b6de6e075be8c41ba4ec117af57170f6e1f01df52bb6d"
+    },
+    {
+      "file": "environment/input/clips/31.mp4",
+      "sha256": "542f354b93c058415840998041ab2af889effd39e4c6206ee23cf2de0c947165"
+    },
+    {
+      "file": "environment/input/clips/32.mp4",
+      "sha256": "727c521bce6f3794037231181573e4a2896e0524e814c733d75561a3b40ea99c"
+    },
+    {
+      "file": "environment/input/clips/33.mp4",
+      "sha256": "1fc807358c68fe6da7fc2ae0abf381c05f8be17c823c48716a082908f1df9697"
+    },
+    {
+      "file": "environment/input/clips/34.mp4",
+      "sha256": "e3d032a31f42e9fd58ec2fc14b0925e38932429931e968f834d5d2f9a00cab85"
+    },
+    {
+      "file": "environment/input/clips/35.mp4",
+      "sha256": "8109f417bb0e0a29b7a2a979c5daf2dd998ae1aa97b304b09e063079500d1b93"
+    },
+    {
+      "file": "environment/input/clips/36.mp4",
+      "sha256": "aae7041a81bd408c456ff5cf1d177d1760cdcca0aacd3e530503e200ac31bf8e"
+    },
+    {
+      "file": "environment/input/clips/37.mp4",
+      "sha256": "fbbdf91691d75e43b0c36fcade7978bd5fda518000ce740a4ddbfc8863432c35"
+    },
+    {
+      "file": "environment/input/clips/38.mp4",
+      "sha256": "8e06a2c5ab682b8953cc9f32e32a96909f45cfe23f65a4d8164a8a66c452e996"
+    },
+    {
+      "file": "environment/input/clips/39.mp4",
+      "sha256": "f392ccbab38ff982b4f45a30a3cc94a3d4c5f4d6411571e3aa3737b4b8261698"
+    },
+    {
+      "file": "environment/input/clips/40.mp4",
+      "sha256": "74f559c22feca740c2638c0034974b5264711e6a9d892ee349eac1b13066f946"
+    },
+    {
+      "file": "environment/input/clips/41.mp4",
+      "sha256": "bcbb3828f7b22ef74aef2823e38f4e4bdc039a46ac7a9b0b17dee1309bdff267"
+    },
+    {
+      "file": "environment/input/clips/42.mp4",
+      "sha256": "3482759a351979ff01f9863b0190976976ad3b78592b4725790ab58641119450"
+    },
+    {
+      "file": "environment/input/clips/43.mp4",
+      "sha256": "8b849c9c555f10239032211e236df95eceb37eca86282e63932cd848373b8814"
+    },
+    {
+      "file": "environment/input/clips/44.mp4",
+      "sha256": "bcd49d8443665b85360fbe7a9ef0fb0d9eca9f93e521b22c001855dd76e0efaf"
+    }
+  ]
+}

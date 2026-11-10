@@ -1,0 +1,472 @@
+{
+  "task_id": "WFA-3D-003",
+  "version": "w03-v2 (2026-10-25 rubric cleanup)",
+  "scoring": "每条判定二元（部分满足即否），连续分=Σweight×pass（0–100）。组级门槛：B02 失败（场景可测时）→zone_*、integration、change 组全部记 0。scene.blend 缺失/无法打开（B01）时全部场景项判否，B06–B08 照常评分。评分只以 .blend 实测为准；manifest 仅用于 B08 格式与 M12 一致性。仅 G14 由评审模型看渲染图判定（权重 2.5/100）。",
+  "measurement": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。",
+  "tolerances": {
+    "pos_m": 0.1,
+    "angle_deg": 2,
+    "dim": "±3% 或 ±0.10 m 取大",
+    "tracking_deg": 3,
+    "ee_m": 0.15,
+    "counts": "精确"
+  },
+  "check_frames": [
+    1,
+    60,
+    120,
+    180,
+    240
+  ],
+  "tier_counts": {
+    "base": 8,
+    "mid": 15,
+    "gate": 14
+  },
+  "tier_weight": {
+    "base": 25.0,
+    "mid": 40.0,
+    "gate": 35.0
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "中央枢纽与尾段",
+      "name_en": "Core hub & aft",
+      "units": [
+        "N1",
+        "K1",
+        "T1",
+        "N3",
+        "L5",
+        "L4",
+        "V3"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "前向轴线",
+      "name_en": "Forward spine",
+      "units": [
+        "L1",
+        "A1",
+        "N2",
+        "V1",
+        "V2"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "前向侧舱",
+      "name_en": "Forward lateral modules",
+      "units": [
+        "L2",
+        "L3",
+        "E1",
+        "A2"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "右舷桁架",
+      "name_en": "Starboard truss",
+      "units": [
+        "T2",
+        "S1",
+        "T3",
+        "S2",
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "左舷桁架",
+      "name_en": "Port truss",
+      "units": [
+        "T4",
+        "S3",
+        "T5",
+        "S4",
+        "R2",
+        "R4"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "B01",
+      "tier": "base",
+      "group": "delivery",
+      "critical": true,
+      "criterion_zh": "output/scene.blend 存在，Blender 4.3 后台可打开；unit_settings.system=METRIC 且 scale_length=1。",
+      "criterion_en": "output/scene.blend exists and opens headless in Blender 4.3; unit_settings.system = METRIC and scale_length = 1.",
+      "verify": "blender -b output/scene.blend 读取 scene.unit_settings；无法打开/无法测量→全部场景项判否（B06–B08 只看文件，照常评分）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B02",
+      "tier": "base",
+      "group": "contract",
+      "critical": true,
+      "criterion_zh": "28 个单元集合名逐一精确存在，另有 SITE 集合（组级门槛：失败则 zone/integration/change 组全 0）。",
+      "criterion_en": "All 28 unit collections exist with exact names, plus a SITE collection (group gate: if this fails, every zone/integration/change item scores 0).",
+      "verify": "场景集合树（scene.collection 递归）中存在 28 个单元编号集合与 SITE；大小写、空格严格。B02 失败且场景可测时，zone_*/integration/change 组全部判否（postprocess gate）。",
+      "weight": 3.125
+    },
+    {
+      "id": "B03",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "每个单元集合内都有 `<ID>_ROOT` 空物体，且有非空网格 `<ID>_BODY`（顶点数>0），BODY 以 ROOT 为祖先。",
+      "criterion_en": "Every unit collection contains an empty <ID>_ROOT and a non-empty mesh <ID>_BODY (evaluated vertex count > 0), and BODY has ROOT as an ancestor.",
+      "verify": "逐单元：ROOT 在单元集合内且 type=='EMPTY'；BODY 在单元集合内、type=='MESH'，evaluated 顶点数>0（修改器/几何节点生效后，含 GN/集合实例几何）；沿 parent 链能到 ROOT。28/28 才通过。",
+      "weight": 3.125
+    },
+    {
+      "id": "B04",
+      "tier": "base",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "SITE 中有日光灯 SUN（type=SUN）与相机 CAM_OVERVIEW、CAM_STBD、CAM_FWD。",
+      "criterion_en": "SITE contains the sun light SUN (type SUN) and the cameras CAM_OVERVIEW, CAM_STBD and CAM_FWD.",
+      "verify": "SITE.all_objects 名称与类型检查。",
+      "weight": 3.125
+    },
+    {
+      "id": "B05",
+      "tier": "base",
+      "group": "animation",
+      "critical": false,
+      "criterion_zh": "场景帧范围 1–240，fps=24（fps_base=1）。",
+      "criterion_en": "Scene frame range 1–240 at fps = 24 (fps_base = 1).",
+      "verify": "scene.frame_start==1, frame_end==240, render.fps==24, fps_base==1.0。",
+      "weight": 3.125
+    },
+    {
+      "id": "B06",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "renders/overview.png 为 1920×1080 PNG 且非空白。",
+      "criterion_en": "renders/overview.png is a 1920×1080 PNG and not blank.",
+      "verify": "PIL 读尺寸；灰度标准差>8 且非单色像素占比>2%。",
+      "weight": 3.125
+    },
+    {
+      "id": "B07",
+      "tier": "base",
+      "group": "render",
+      "critical": false,
+      "criterion_zh": "renders/stbd_truss.png 与 forward.png 均为 1920×1080 PNG 且非空白。",
+      "criterion_en": "renders/stbd_truss.png and renders/forward.png are both 1920×1080 PNGs and not blank.",
+      "verify": "同 B06，两张都过才通过。",
+      "weight": 3.125
+    },
+    {
+      "id": "B08",
+      "tier": "base",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest.json 可解析，units 恰 28 项，每项含 id/collection/built/params，params 字段名与题面类型表一致。",
+      "criterion_en": "manifest.json parses, units has exactly 28 entries, each with id/collection/built/params, and the params field names equal the type table in the instructions.",
+      "verify": "json.load；按 id 首字母查字段集合完全相等（多/少字段均否）。",
+      "weight": 3.125
+    },
+    {
+      "id": "M01",
+      "tier": "mid",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "A 区（中央枢纽与尾段：N1,K1,T1,N3,L5,L4,V3）全部单元 ROOT 位姿正确（原点 ±0.10 m，三根轴方向各 ≤2°）。",
+      "criterion_en": "Zone A (Core hub & aft: N1,K1,T1,N3,L5,L4,V3): every unit ROOT pose is correct (origin ±0.10 m, each of the three axes within 2°).",
+      "verify": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。 对区内每个 U：ROOT.matrix_world 平移 vs origin_world ≤0.10 m；ROOT 局部 X/Y/Z 轴 vs axes_world 夹角 ≤2°；scale 各分量 1±0.01。V2 在第 180 帧测。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M02",
+      "tier": "mid",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "B 区（前向轴线：L1,A1,N2,V1,V2）全部单元 ROOT 位姿正确（原点 ±0.10 m，三根轴方向各 ≤2°）。",
+      "criterion_en": "Zone B (Forward spine: L1,A1,N2,V1,V2): every unit ROOT pose is correct (origin ±0.10 m, each of the three axes within 2°).",
+      "verify": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。 对区内每个 U：ROOT.matrix_world 平移 vs origin_world ≤0.10 m；ROOT 局部 X/Y/Z 轴 vs axes_world 夹角 ≤2°；scale 各分量 1±0.01。V2 在第 180 帧测。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M03",
+      "tier": "mid",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "C 区（前向侧舱：L2,L3,E1,A2）全部单元 ROOT 位姿正确（原点 ±0.10 m，三根轴方向各 ≤2°）。",
+      "criterion_en": "Zone C (Forward lateral modules: L2,L3,E1,A2): every unit ROOT pose is correct (origin ±0.10 m, each of the three axes within 2°).",
+      "verify": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。 对区内每个 U：ROOT.matrix_world 平移 vs origin_world ≤0.10 m；ROOT 局部 X/Y/Z 轴 vs axes_world 夹角 ≤2°；scale 各分量 1±0.01。V2 在第 180 帧测。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M04",
+      "tier": "mid",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "D 区（右舷桁架：T2,S1,T3,S2,R1,R3）全部单元 ROOT 位姿正确（原点 ±0.10 m，三根轴方向各 ≤2°）。",
+      "criterion_en": "Zone D (Starboard truss: T2,S1,T3,S2,R1,R3): every unit ROOT pose is correct (origin ±0.10 m, each of the three axes within 2°).",
+      "verify": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。 对区内每个 U：ROOT.matrix_world 平移 vs origin_world ≤0.10 m；ROOT 局部 X/Y/Z 轴 vs axes_world 夹角 ≤2°；scale 各分量 1±0.01。V2 在第 180 帧测。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M05",
+      "tier": "mid",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "E 区（左舷桁架：T4,S3,T5,S4,R2,R4）全部单元 ROOT 位姿正确（原点 ±0.10 m，三根轴方向各 ≤2°）。",
+      "criterion_en": "Zone E (Port truss: T4,S3,T5,S4,R2,R4): every unit ROOT pose is correct (origin ±0.10 m, each of the three axes within 2°).",
+      "verify": "通用：bpy 打开 output/scene.blend；depsgraph=evaluated；单元 U 的局部系 = 答案键 units[U].origin_world/axes_world；ROOT=bpy.data.objects[f'{U}_ROOT']；所有静态量在第 1 帧取（scene.frame_set(1)），V2 在声明帧取。 对区内每个 U：ROOT.matrix_world 平移 vs origin_world ≤0.10 m；ROOT 局部 X/Y/Z 轴 vs axes_world 夹角 ≤2°；scale 各分量 1±0.01。V2 在第 180 帧测。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M06",
+      "tier": "mid",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "A 区全部单元主结构尺寸正确（±3% 或 ±0.10 m 取大）。主结构 <U>_BODY 仅含舱体/桁架框/基座/转接杆/平台/底座本体，不含端口法兰环、对接机构、喷管等附件（附件为独立对象）。",
+      "criterion_en": "Zone A: the main structure (<U>_BODY = bare hull / truss frame / base / mast / deck / pedestal, without port collars, docking mechanisms, nozzles or other attached parts) of every unit has the sheet dimensions (±3% or ±0.10 m, whichever is larger).",
+      "verify": "把 <U>_BODY evaluated 顶点（含其 GN/集合实例几何）变换到 ROOT 局部系取包围盒：N/L/V 取 x 向长度=L、y/z 向=D；K 取 x 向=L、最大径向=D；T 取 L、W、H；S 取基座 L；R 取转接杆 x 向长度=mast；E 取 L、W、H；A 取基座顶面高度=h0。答案键 units[U].body / extra（已含变更单）。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M07",
+      "tier": "mid",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "B 区全部单元主结构尺寸正确（±3% 或 ±0.10 m 取大）。主结构 <U>_BODY 仅含舱体/桁架框/基座/转接杆/平台/底座本体，不含端口法兰环、对接机构、喷管等附件（附件为独立对象）。",
+      "criterion_en": "Zone B: the main structure (<U>_BODY = bare hull / truss frame / base / mast / deck / pedestal, without port collars, docking mechanisms, nozzles or other attached parts) of every unit has the sheet dimensions (±3% or ±0.10 m, whichever is larger).",
+      "verify": "把 <U>_BODY evaluated 顶点（含其 GN/集合实例几何）变换到 ROOT 局部系取包围盒：N/L/V 取 x 向长度=L、y/z 向=D；K 取 x 向=L、最大径向=D；T 取 L、W、H；S 取基座 L；R 取转接杆 x 向长度=mast；E 取 L、W、H；A 取基座顶面高度=h0。答案键 units[U].body / extra（已含变更单）。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M08",
+      "tier": "mid",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "C 区全部单元主结构尺寸正确（±3% 或 ±0.10 m 取大）。主结构 <U>_BODY 仅含舱体/桁架框/基座/转接杆/平台/底座本体，不含端口法兰环、对接机构、喷管等附件（附件为独立对象）。",
+      "criterion_en": "Zone C: the main structure (<U>_BODY = bare hull / truss frame / base / mast / deck / pedestal, without port collars, docking mechanisms, nozzles or other attached parts) of every unit has the sheet dimensions (±3% or ±0.10 m, whichever is larger).",
+      "verify": "把 <U>_BODY evaluated 顶点（含其 GN/集合实例几何）变换到 ROOT 局部系取包围盒：N/L/V 取 x 向长度=L、y/z 向=D；K 取 x 向=L、最大径向=D；T 取 L、W、H；S 取基座 L；R 取转接杆 x 向长度=mast；E 取 L、W、H；A 取基座顶面高度=h0。答案键 units[U].body / extra（已含变更单）。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M09",
+      "tier": "mid",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "D 区全部单元主结构尺寸正确（±3% 或 ±0.10 m 取大）。主结构 <U>_BODY 仅含舱体/桁架框/基座/转接杆/平台/底座本体，不含端口法兰环、对接机构、喷管等附件（附件为独立对象）。",
+      "criterion_en": "Zone D: the main structure (<U>_BODY = bare hull / truss frame / base / mast / deck / pedestal, without port collars, docking mechanisms, nozzles or other attached parts) of every unit has the sheet dimensions (±3% or ±0.10 m, whichever is larger).",
+      "verify": "把 <U>_BODY evaluated 顶点（含其 GN/集合实例几何）变换到 ROOT 局部系取包围盒：N/L/V 取 x 向长度=L、y/z 向=D；K 取 x 向=L、最大径向=D；T 取 L、W、H；S 取基座 L；R 取转接杆 x 向长度=mast；E 取 L、W、H；A 取基座顶面高度=h0。答案键 units[U].body / extra（已含变更单）。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M10",
+      "tier": "mid",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "E 区全部单元主结构尺寸正确（±3% 或 ±0.10 m 取大）。主结构 <U>_BODY 仅含舱体/桁架框/基座/转接杆/平台/底座本体，不含端口法兰环、对接机构、喷管等附件（附件为独立对象）。",
+      "criterion_en": "Zone E: the main structure (<U>_BODY = bare hull / truss frame / base / mast / deck / pedestal, without port collars, docking mechanisms, nozzles or other attached parts) of every unit has the sheet dimensions (±3% or ±0.10 m, whichever is larger).",
+      "verify": "把 <U>_BODY evaluated 顶点（含其 GN/集合实例几何）变换到 ROOT 局部系取包围盒：N/L/V 取 x 向长度=L、y/z 向=D；K 取 x 向=L、最大径向=D；T 取 L、W、H；S 取基座 L；R 取转接杆 x 向长度=mast；E 取 L、W、H；A 取基座顶面高度=h0。答案键 units[U].body / extra（已含变更单）。全部单元通过才通过。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M11",
+      "tier": "mid",
+      "group": "contract",
+      "critical": false,
+      "criterion_zh": "每个单元的端口空物体集合与答案键端口集合完全一致（含未连接端口；N2 为 Mk-B 的 5 个端口）。",
+      "criterion_en": "Each unit's set of port empties equals the answer-key port set exactly (including unconnected ports; N2 is the Mk-B with 5 ports).",
+      "verify": "names = {o.name for o in coll.all_objects if re.fullmatch(rf'{U}_P\\d+', o.name)}；== {U}_P* from answer-key ports_world。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M12",
+      "tier": "mid",
+      "group": "manifest",
+      "critical": false,
+      "criterion_zh": "manifest 声明与 .blend 实测一致：计数字段等于对应代号对象数，尺寸字段与 BODY 实测相符（±3%），built 与实际一致。",
+      "criterion_en": "The manifest agrees with the measured .blend: count fields equal the number of objects with the matching code, size fields match the measured BODY (±3%), and built matches what exists.",
+      "verify": "对每个 built:true 单元：port_count=端口空物体数；ring_count=RING 数；window_count=WIN；payload_sites=SITE；tank_count=TANK；bay_count=BAY；blanket_count=BLANKET；segments_per_blanket=每块 BLANKET 子级 SEG 数（各块相等）；panel_count=PANEL；dof=JNT；solar_wings=WING；rcs_quads=RCS；slots_occupied=PL；length_m 与 BODY 实测 x 向长度、diameter_m 与 BODY 实测 max(y,z) 向尺寸（K 取 2·最大径向）相差 ≤3%；built 必须等于“BODY 存在且非空”。slots_total、blanket_length_m、panel_length_m 与字符串字段（bracing/gimbal/end_effector）不比较。全部一致才通过（不看对错，只看一致）。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M13",
+      "tier": "mid",
+      "group": "animation",
+      "critical": false,
+      "criterion_zh": "SUN 灯光每个检查帧的局部 +Z 与 S(f) 夹角 ≤2°。",
+      "criterion_en": "At every check frame the local +Z of the SUN light is within 2° of S(f).",
+      "verify": "帧 1/60/120/180/240：SUN.matrix_world 第 3 列 vs answer-key sun.check_frames。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M14",
+      "tier": "mid",
+      "group": "animation",
+      "critical": false,
+      "criterion_zh": "V2 运动形式：帧 1→180 为匀速直线（帧 60、120 的位置与首末连线按时间比例插值偏差 ≤0.3 m），首末距离 40±0.5 m，全程姿态不变（≤1°），帧 180–240 静止（≤0.02 m）。",
+      "criterion_en": "V2 motion: uniform straight-line approach over frames 1→180 (positions at frames 60 and 120 within 0.3 m of time-proportional interpolation between start and end), start-to-end distance 40 ± 0.5 m, constant attitude throughout (≤1°), stationary over frames 180–240 (≤0.02 m).",
+      "verify": "取 V2_ROOT 世界矩阵于帧 1/60/120/180/200/240 比较（不检查泊位是否正确，泊位见 G07）。",
+      "weight": 2.6667
+    },
+    {
+      "id": "M15",
+      "tier": "mid",
+      "group": "arms",
+      "critical": false,
+      "criterion_zh": "A1、A2 的 `<ID>_EE` 世界位置与答案键 ee_world 偏差均 ≤0.15 m。",
+      "criterion_en": "The world positions of A1_EE and A2_EE are each within 0.15 m of the answer-key ee_world.",
+      "verify": "bpy.data.objects['A1_EE'].matrix_world.translation vs units.A1.ee_world；A2 同。",
+      "weight": 2.6667
+    },
+    {
+      "id": "G01",
+      "tier": "gate",
+      "group": "zone_A",
+      "critical": false,
+      "criterion_zh": "A 区（中央枢纽与尾段）全部单元图上离散特征全对（计数精确、形制正确，已应用变更单）。",
+      "criterion_en": "Zone A (Core hub & aft): every sheet-only discrete feature of every unit is exact (exact counts, correct form, change order applied).",
+      "verify": "按代号对象计数与答案键 units[U].params 精确比较；逐类型：K: tank_count(TANK)；L: window_count(WIN)、payload_sites(SITE)，且 SITE 质心位于 ROOT 局部 +Z 侧、WIN 质心位于 −Z 侧；N: port_count(端口空物体数)、ring_count(RING)；T: bay_count(BAY)、bracing（每个 BAY 在 ROOT 局部 +Y 侧面两条对角线 25%/75% 处采样点到网格最近距离 ≤0.15 m：X=两条都有，warren=恰一条）；V: solar_wings(WING)、rcs_quads(RCS)。全部单元全部特征对才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G02",
+      "tier": "gate",
+      "group": "zone_B",
+      "critical": false,
+      "criterion_zh": "B 区（前向轴线）全部单元图上离散特征全对（计数精确、形制正确，已应用变更单）。",
+      "criterion_en": "Zone B (Forward spine): every sheet-only discrete feature of every unit is exact (exact counts, correct form, change order applied).",
+      "verify": "按代号对象计数与答案键 units[U].params 精确比较；逐类型：A: dof(JNT)、end_effector（几何 = <ID>_EFFECTOR 及其全部子级网格，含实例几何；末端轴线 = 答案键 ee_world − 倒数第二关节，位置取场景 <ID>_EE；gripper：≥2 个松散部件伸出 EE 平面 ≥0.2 m；snare：恰 1 个松散部件，EE 前后 ±0.5 m 内轴线射线不击中网格，且该段轴线 0.1 m 半径内无顶点）；L: window_count(WIN)、payload_sites(SITE)，且 SITE 质心位于 ROOT 局部 +Z 侧、WIN 质心位于 −Z 侧；N: port_count(端口空物体数)、ring_count(RING)；V: solar_wings(WING)、rcs_quads(RCS)。全部单元全部特征对才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G03",
+      "tier": "gate",
+      "group": "zone_C",
+      "critical": false,
+      "criterion_zh": "C 区（前向侧舱）全部单元图上离散特征全对（计数精确、形制正确，已应用变更单）。",
+      "criterion_en": "Zone C (Forward lateral modules): every sheet-only discrete feature of every unit is exact (exact counts, correct form, change order applied).",
+      "verify": "按代号对象计数与答案键 units[U].params 精确比较；逐类型：A: dof(JNT)、end_effector（几何 = <ID>_EFFECTOR 及其全部子级网格，含实例几何；末端轴线 = 答案键 ee_world − 倒数第二关节，位置取场景 <ID>_EE；gripper：≥2 个松散部件伸出 EE 平面 ≥0.2 m；snare：恰 1 个松散部件，EE 前后 ±0.5 m 内轴线射线不击中网格，且该段轴线 0.1 m 半径内无顶点）；E: slots_occupied(PL)；L: window_count(WIN)、payload_sites(SITE)，且 SITE 质心位于 ROOT 局部 +Z 侧、WIN 质心位于 −Z 侧。全部单元全部特征对才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G04",
+      "tier": "gate",
+      "group": "zone_D",
+      "critical": false,
+      "criterion_zh": "D 区（右舷桁架）全部单元图上离散特征全对（计数精确、形制正确，已应用变更单）。",
+      "criterion_en": "Zone D (Starboard truss): every sheet-only discrete feature of every unit is exact (exact counts, correct form, change order applied).",
+      "verify": "按代号对象计数与答案键 units[U].params 精确比较；逐类型：R: panel_count(PANEL)；S: blanket_count(BLANKET)、segments_per_blanket(每块 SEG 子级数)；T: bay_count(BAY)、bracing（每个 BAY 在 ROOT 局部 +Y 侧面两条对角线 25%/75% 处采样点到网格最近距离 ≤0.15 m：X=两条都有，warren=恰一条）。全部单元全部特征对才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G05",
+      "tier": "gate",
+      "group": "zone_E",
+      "critical": false,
+      "criterion_zh": "E 区（左舷桁架）全部单元图上离散特征全对（计数精确、形制正确，已应用变更单）。",
+      "criterion_en": "Zone E (Port truss): every sheet-only discrete feature of every unit is exact (exact counts, correct form, change order applied).",
+      "verify": "按代号对象计数与答案键 units[U].params 精确比较；逐类型：R: panel_count(PANEL)；S: blanket_count(BLANKET)、segments_per_blanket(每块 SEG 子级数)；T: bay_count(BAY)、bracing（每个 BAY 在 ROOT 局部 +Y 侧面两条对角线 25%/75% 处采样点到网格最近距离 ≤0.15 m：X=两条都有，warren=恰一条）。全部单元全部特征对才通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G06",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "CO-01 C1 落实：N2 为 Mk-B（BODY 长度、RING 数、5 个端口按附图位置），且 L1.P2–N2.P1、N2.P4–V1.P1、N2.P2–L2.P1、N2.P3–L3.P1 四对端口同轴对接。",
+      "criterion_en": "CO-01 C1 applied: N2 is the Mk-B (BODY length, RING count, 5 ports at the attachment positions), and the four port pairs L1.P2–N2.P1, N2.P4–V1.P1, N2.P2–L2.P1, N2.P3–L3.P1 mate coaxially.",
+      "verify": "N2 BODY 尺寸/RING 计数/端口空物体世界位姿 vs 答案键；四对端口按 G10 口径判定。",
+      "weight": 2.5
+    },
+    {
+      "id": "G07",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "CO-01 C2 落实：V2 泊于 N2.P5——第 180 帧 V2_P1 与 N2_P5 同轴对接（位置 ≤0.10 m、法向反向 ≤2°、键向 ≤2°），第 1 帧 V2_P1 位于 N2_P5 外法向 40±0.5 m；N3_P3 空置。",
+      "criterion_en": "CO-01 C2 applied: V2 berths at N2.P5 — at frame 180 V2_P1 and N2_P5 mate coaxially (position ≤0.10 m, normals opposite ≤2°, keys ≤2°); at frame 1 V2_P1 lies 40 ± 0.5 m out along the outward normal of N2_P5; N3_P3 is left vacant.",
+      "verify": "帧 180、1 取端口空物体世界矩阵（答案键 units.V2.v2_port_world_track）；N3_P3 空置：帧 1/180/240 逐帧检查，N3 以外任何空物体原点、网格（含无面的线框网格、曲线及实例几何，按顶点/边距离）不得落在 N3_P3 0.5 m 内；三帧都须测到才可通过。",
+      "weight": 2.5
+    },
+    {
+      "id": "G08",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "CO-01 C3 及牵连落实：T4 长度/节间数按变更单，且 S3、T5、S4、R2、R4 的 ROOT 原点均在答案键位置 ±0.10 m（按原图纸会偏 1.2–2.4 m）。",
+      "criterion_en": "CO-01 C3 and its ripple applied: T4 length / bay count follow the change order, and the ROOT origins of S3, T5, S4, R2 and R4 are all within ±0.10 m of the answer key (the original sheets would put them 1.2–2.4 m off).",
+      "verify": "T4 BODY x 向长度、BAY 数；五个牵连单元 ROOT 平移 vs origin_world（pre_CO_shift_m 记录了忽略变更的偏移量）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G09",
+      "tier": "gate",
+      "group": "change",
+      "critical": false,
+      "criterion_zh": "CO-01 C4 落实：S4 为双轴——各检查帧 S4 全部 BLANKET 局部 +Z 与 S(f) 夹角 ≤3°。",
+      "criterion_en": "CO-01 C4 applied: S4 is two-axis — at every check frame every S4 BLANKET local +Z is within 3° of S(f).",
+      "verify": "帧 1/60/120/180/240；目标 units.S4.blanket_normal_target。",
+      "weight": 2.5
+    },
+    {
+      "id": "G10",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "全部 27 条连接（变更后拓扑）的端口对同轴对接：位置 ≤0.10 m、法向反向 ≤2°、键向同向 ≤2°（V2 在第 180 帧测）。",
+      "criterion_en": "All 27 links of the post-change topology mate coaxially: position ≤0.10 m, normals opposite ≤2°, keys equal ≤2° (V2 measured at frame 180).",
+      "verify": "对 answer-key.links 每条 (a,pa,b,pb)：两个端口空物体世界矩阵比较；此外要求端口空物体相对本单元 ROOT 的局部位姿与图纸端口表一致（≤0.05 m、≤2°），防止只移空物体不移几何。",
+      "weight": 2.5
+    },
+    {
+      "id": "G11",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "太阳翼对日跟踪：S1、S2、S3 的全部 BLANKET 在各检查帧电池面法向与目标夹角 ≤3°（S1/S3 单轴取 S 在 α 轴法平面上的投影，S2 双轴取 S）。",
+      "criterion_en": "Solar array sun tracking: at every check frame the cell-side normal of every BLANKET of S1, S2 and S3 is within 3° of its target (S1/S3 single-axis: projection of S onto the plane normal to the α axis; S2 two-axis: S).",
+      "verify": "帧 1/60/120/180/240：BLANKET.matrix_world 第 3 列 vs units.Sx.blanket_normal_target；另查单轴毯的转轴不漂移（毯局部系中 α 轴方向变化 ≤2°）。",
+      "weight": 2.5
+    },
+    {
+      "id": "G12",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "散热器侧对太阳：R1–R4 全部 PANEL 在各检查帧 |n·S(f)| ≤ sin3°，且板组绕各自转轴转动（PANEL 局部 +Z 始终 ⟂ 转轴 ±2°）。",
+      "criterion_en": "Radiators edge-on to the Sun: for every PANEL of R1–R4 at every check frame |n·S(f)| ≤ sin 3°, and the panel stack rotates about its own rotary axis (PANEL local +Z stays perpendicular to the axis within ±2°).",
+      "verify": "帧 1/60/120/180/240：PANEL 第 3 列与 sun.check_frames 点积；转轴=units.Rx.rotary_axis_world。",
+      "weight": 2.5
+    },
+    {
+      "id": "G13",
+      "tier": "gate",
+      "group": "integration",
+      "critical": false,
+      "criterion_zh": "无穿插：检查帧 1/120/240 中，任意两个不同单元集合的 evaluated 网格（含 GN/集合实例几何）不相交；对接界面的接触除外——交对中任一三角形有顶点/质心落在已连接端口中心 1.0 m 内，或两三角形都有顶点位于该端口面平面 ±0.15 m 内且距端口中心 ≤2.5 m。28 个单元在三帧都必须有带面几何（否则判否，防止空几何空过）。",
+      "criterion_en": "No interpenetration: at frames 1/120/240 the evaluated meshes (incl. geometry-nodes / collection instances) of any two different unit collections do not intersect, except contact at a mating interface — a triangle pair is excused if either triangle has a vertex/centroid within 1.0 m of a linked port centre, or both triangles have a vertex within ±0.15 m of that port's face plane and within 2.5 m of its centre. All 28 units must have faced geometry at all three frames (otherwise fail, no vacuous pass).",
+      "verify": "每单元合并 evaluated 多边形（含实例几何）建 BVHTree；两两 bvh.overlap()（最多 20000 对/单元对）；按上述端口界面规则剔除；扫描总时长上限 900 s，超时判否。端口位姿：场景端口空物体（每帧）+ 答案键静态端口。",
+      "weight": 2.5
+    },
+    {
+      "id": "G14",
+      "tier": "gate",
+      "group": "visual",
+      "critical": false,
+      "criterion_zh": "视觉审查：overview/stbd_truss/forward 三图中站体完整、可辨认各类单元、太阳翼深蓝毯面与白色散热板可辨、无明显破面或悬空件。",
+      "criterion_en": "Visual review of overview/stbd_truss/forward: the station is complete, unit types are recognisable, deep-blue solar blankets and white radiator panels are distinguishable, and there are no obvious broken faces or floating parts.",
+      "verify": "评审模型看三张渲染图按 4 项清单逐项判，任一项否即否。",
+      "weight": 2.5
+    }
+  ],
+  "release_acceptance": {
+    "task_form": "3D-SCENE",
+    "all_critical_items_must_pass": true
+  }
+}

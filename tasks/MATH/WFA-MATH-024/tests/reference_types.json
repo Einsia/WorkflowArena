@@ -1,0 +1,19 @@
+{
+  "CategoryTheory.GradedObject.HasGoodTensorTensor₂₃": "588992102",
+  "CategoryTheory.GradedObject.HasGoodTensor₁₂Tensor": "588992102",
+  "CategoryTheory.GradedObject.HasTensor": "4211404251",
+  "CategoryTheory.GradedObject.HasTensor₄ObjExt": "1542988420",
+  "CategoryTheory.GradedObject.Monoidal.associator": "1340391300",
+  "CategoryTheory.GradedObject.Monoidal.braiding": "1651594090",
+  "CategoryTheory.GradedObject.Monoidal.braiding_naturality_left": "1146137708",
+  "CategoryTheory.GradedObject.Monoidal.braiding_naturality_right": "677427393",
+  "CategoryTheory.GradedObject.Monoidal.hexagon_forward": "2122350458",
+  "CategoryTheory.GradedObject.Monoidal.hexagon_reverse": "129951532",
+  "CategoryTheory.GradedObject.Monoidal.symmetry": "1108642151",
+  "CategoryTheory.GradedObject.Monoidal.tensorObj": "2282782299",
+  "CategoryTheory.GradedObject.Monoidal.whiskerLeft": "1271616281",
+  "CategoryTheory.GradedObject.Monoidal.whiskerRight": "957181043",
+  "CategoryTheory.GradedObject.braidedCategory": "1592209060",
+  "CategoryTheory.GradedObject.monoidalCategory": "4170988407",
+  "CategoryTheory.GradedObject.symmetricCategory": "3183404063"
+}

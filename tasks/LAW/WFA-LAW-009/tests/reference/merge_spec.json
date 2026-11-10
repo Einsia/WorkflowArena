@@ -1,0 +1,264 @@
+{
+ "questions": [
+  {
+   "op": "distribution",
+   "dp": "dp_cor_so_standard",
+   "id": "M01",
+   "text": "Give the distribution of answers to `dp_cor_so_standard` across all 14 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "distribution",
+   "dp": "dp_cor_ie_standard",
+   "id": "M02",
+   "text": "Give the distribution of answers to `dp_cor_ie_standard` across all 14 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+   "kind": "distribution"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ie_knowledge_mgmt",
+      "eq": "No"
+     },
+     {
+      "not": {
+       "dp": "dp_cor_match_initial",
+       "eq": "3 business days"
+      }
+     }
+    ]
+   },
+   "id": "M03",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_ie_knowledge_mgmt` = «No» AND NOT (`dp_cor_match_initial` = «3 business days»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ie_materiality",
+      "eq": "Yes"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_match_initial",
+       "eq": "5 business days"
+      }
+     }
+    ]
+   },
+   "id": "M04",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_ie_materiality` = «Yes» AND NOT (`dp_ftr_match_initial` = «5 business days»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "count",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_fidout_standard",
+      "eq": "\"Inconsistent\" with fiduciary duties"
+     },
+     {
+      "not": {
+       "dp": "dp_ftr_limitations",
+       "has": "Material breach of no-shop resulting in a Superior Offer"
+      }
+     }
+    ]
+   },
+   "id": "M05",
+   "text": "How many of the 14 agreements satisfy ALL of the following: `dp_fidout_standard` = «\"Inconsistent\" with fiduciary duties» AND NOT (`dp_ftr_limitations` includes «Material breach of no-shop resulting in a Superior Offer»)? Answer with an integer.",
+   "kind": "count"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ie_knowledge",
+      "eq": "Not known and not reasonably foreseeable at signing"
+     },
+     {
+      "not": {
+       "dp": "dp_cor_so_standard",
+       "eq": "\"Inconsistent\" with fiduciary duties"
+      }
+     }
+    ]
+   },
+   "id": "M06",
+   "text": "List every agreement that satisfies: `dp_ie_knowledge` = «Not known and not reasonably foreseeable at signing» AND NOT (`dp_cor_so_standard` = «\"Inconsistent\" with fiduciary duties»). If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ie_after_signing",
+      "eq": "May occur or arise prior to signing"
+     },
+     {
+      "dp": "dp_cor_match_initial",
+      "eq": "3 business days"
+     }
+    ]
+   },
+   "id": "M07",
+   "text": "List every agreement that satisfies: `dp_ie_after_signing` = «May occur or arise prior to signing» AND `dp_cor_match_initial` = «3 business days». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_cor_match_additional",
+      "eq": "3 business days"
+     },
+     {
+      "dp": "dp_ftr_limitations",
+      "has": "(Material) breach of other provisions of agreement"
+     }
+    ]
+   },
+   "id": "M08",
+   "text": "List every agreement that satisfies: `dp_cor_match_additional` = «3 business days» AND `dp_ftr_limitations` includes «(Material) breach of other provisions of agreement». If no agreement qualifies, answer with an empty list [].",
+   "kind": "list"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "dp": "dp_ie_after_signing",
+      "eq": "Must occur or arise after signing"
+     },
+     {
+      "dp": "dp_ftr_match_initial",
+      "eq": "5 business days"
+     }
+    ]
+   },
+   "id": "M09",
+   "text": "List every agreement that satisfies: `dp_ie_after_signing` = «Must occur or arise after signing» AND `dp_ftr_match_initial` = «5 business days». If no agreement qualifies, answer with an empty list [].",
+   "kind": "none"
+  },
+  {
+   "op": "list",
+   "cond": {
+    "all": [
+     {
+      "not": {
+       "dp": "dp_cor_so_standard",
+       "same_as": "dp_fidout_standard"
+      }
+     }
+    ]
+   },
+   "id": "M10",
+   "text": "List every agreement that satisfies: NOT (`dp_cor_so_standard` gives the same answer as `dp_fidout_standard`). If no agreement qualifies, answer with an empty list [].",
+   "kind": "cross"
+  },
+  {
+   "op": "extremum",
+   "mode": "max",
+   "score": {
+    "type": "set_size",
+    "dp": "dp_ftr_limitations",
+    "exclude": [
+     "No"
+    ]
+   },
+   "id": "M11",
+   "text": "Which agreement(s) have the highest value of the number of options selected for `dp_ftr_limitations` (not counting 'No')? List all tied agreements.",
+   "kind": "extremum"
+  },
+  {
+   "op": "minority",
+   "dp": "dp_fidout_standard",
+   "max_holders": 1,
+   "id": "M12",
+   "text": "For `dp_fidout_standard`, list every agreement whose answer is shared by at most 1 of the 14 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "minority",
+   "dp": "dp_cor_ie_standard",
+   "max_holders": 2,
+   "id": "M13",
+   "text": "For `dp_cor_ie_standard`, list every agreement whose answer is shared by at most 2 of the 14 agreements (counting the agreement itself).",
+   "kind": "minority"
+  },
+  {
+   "op": "outlier",
+   "dps": [
+    "dp_ie_materiality",
+    "dp_ie_knowledge",
+    "dp_ie_after_signing",
+    "dp_ie_knowledge_mgmt",
+    "dp_cor_ie_standard",
+    "dp_cor_so_standard",
+    "dp_fidout_standard",
+    "dp_cor_match_initial",
+    "dp_cor_match_additional",
+    "dp_ftr_match_initial"
+   ],
+   "min_dev": 7,
+   "id": "M14",
+   "text": "Consider the deal points `dp_ie_materiality`, `dp_ie_knowledge`, `dp_ie_after_signing`, `dp_ie_knowledge_mgmt`, `dp_cor_ie_standard`, `dp_cor_so_standard`, `dp_fidout_standard`, `dp_cor_match_initial`, `dp_cor_match_additional`, `dp_ftr_match_initial`. For each of them, take the most common answer across the 14 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 7 of these deal points.",
+   "kind": "outlier"
+  },
+  {
+   "op": "groups",
+   "dps": [
+    "dp_ie_knowledge",
+    "dp_fidout_trigger",
+    "dp_cor_match_initial"
+   ],
+   "id": "M15",
+   "text": "Considering only `dp_ie_knowledge`, `dp_fidout_trigger`, `dp_cor_match_initial`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+   "kind": "groups"
+  },
+  {
+   "op": "n_profiles",
+   "dps": [
+    "dp_ie_materiality",
+    "dp_cor_board_only",
+    "dp_fidout_trigger",
+    "dp_ftr_limitations"
+   ],
+   "id": "M16",
+   "text": "Considering only `dp_ie_materiality`, `dp_cor_board_only`, `dp_fidout_trigger`, `dp_ftr_limitations`: how many distinct answer combinations occur among the 14 agreements? Answer with an integer.",
+   "kind": "n_profiles"
+  },
+  {
+   "op": "most_similar",
+   "target": "A02",
+   "dps": [
+    "dp_ie_materiality",
+    "dp_ie_knowledge",
+    "dp_ie_after_signing",
+    "dp_ie_knowledge_mgmt",
+    "dp_cor_ie_standard",
+    "dp_cor_so_standard",
+    "dp_cor_board_only",
+    "dp_fidout_trigger",
+    "dp_fidout_standard",
+    "dp_cor_match_initial",
+    "dp_cor_match_additional",
+    "dp_ftr_match_initial",
+    "dp_ftr_limitations",
+    "kn_definition",
+    "kn_identified_persons"
+   ],
+   "id": "M17",
+   "text": "Which other agreement(s) give the same answer as A02 on the largest number of the 15 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+   "kind": "most_similar"
+  }
+ ]
+}

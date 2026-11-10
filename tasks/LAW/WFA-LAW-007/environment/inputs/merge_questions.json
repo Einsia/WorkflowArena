@@ -1,0 +1,72 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `kn_definition` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `gen_consideration` across all 15 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `cc_general_bringdown_standard` = «All/The R&Ws accurate at MAE standard» AND NOT (`cc_fund_bringdown_standard` = «Accurate in all respects»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `cc_cap_bringdown_standard` = «Accurate in all respects with de minimis exception» AND NOT (`cc_scrape_applies_to` includes «fundamental/Special R&Ws»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 15 agreements satisfy ALL of the following: `mae_fls_yn` = «Yes» AND NOT (`mae_fls_standard` = «\"Would\"»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `mae_taken_as_whole` = «Applies to Target and subsidiaries \"taken as a whole\"» AND NOT (`mae_fls_standard` = «\"Would\" (reasonably) be expected to»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `cc_general_bringdown_timing` = «At Signing & At Closing» AND NOT (`cc_fund_rw_types` includes «Takeover Statutes»). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `cc_fund_rw_types` includes «No MAE» AND `cc_covenant_compliance` = «Each Covenant». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "Which agreement(s) have the highest value of the number of options selected for `cc_scrape_applies_to` (not counting 'No')? List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "For `kn_identified_persons`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "For `rem_specific_performance`, list every agreement whose answer is shared by at most 3 of the 15 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "Considering only `mae_taken_as_whole`, `mae_ability_to_consummate`, `mae_fls_standard`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "Considering only `cc_general_bringdown_timing`, `cc_general_bringdown_standard`, `cc_fund_bringdown_standard`: how many distinct answer combinations occur among the 15 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M14",
+  "question": "Which other agreement(s) give the same answer as A07 on the largest number of the 16 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

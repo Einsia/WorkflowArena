@@ -1,0 +1,52 @@
+[
+  {
+    "ticker": "EOG",
+    "company_name": "EOG RESOURCES INC",
+    "filing": "EOG.html"
+  },
+  {
+    "ticker": "DVN",
+    "company_name": "DEVON ENERGY CORP/DE",
+    "filing": "DVN.html"
+  },
+  {
+    "ticker": "FANG",
+    "company_name": "Diamondback Energy, Inc.",
+    "filing": "FANG.html"
+  },
+  {
+    "ticker": "MTDR",
+    "company_name": "Matador Resources Co",
+    "filing": "MTDR.html"
+  },
+  {
+    "ticker": "PR",
+    "company_name": "Permian Resources Corp",
+    "filing": "PR.html"
+  },
+  {
+    "ticker": "RRC",
+    "company_name": "RANGE RESOURCES CORP",
+    "filing": "RRC.html"
+  },
+  {
+    "ticker": "CRK",
+    "company_name": "COMSTOCK RESOURCES INC",
+    "filing": "CRK.html"
+  },
+  {
+    "ticker": "KOS",
+    "company_name": "Kosmos Energy Ltd.",
+    "filing": "KOS.html"
+  },
+  {
+    "ticker": "TALO",
+    "company_name": "TALOS ENERGY INC.",
+    "filing": "TALO.html"
+  },
+  {
+    "ticker": "GPOR",
+    "company_name": "GULFPORT ENERGY CORP",
+    "filing": "GPOR.html"
+  }
+]

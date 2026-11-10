@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-008",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Blind prediction: octanol/water partition coefficients (log P) of 11 kinase-inhibitor fragment-like molecules",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/samplchallenges/SAMPL6",
+    "revision": "commit c661d3985af7fa0ba8c64a1774cfb2363cd31bda (2022-03-29)",
+    "license": "MIT (repo LICENSE, code); data files under repo distributed without separate CC file in SAMPL6 — verified LICENSE text 'MIT License, Copyright (c) 2017 Mobley Lab at UC Irvine'"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

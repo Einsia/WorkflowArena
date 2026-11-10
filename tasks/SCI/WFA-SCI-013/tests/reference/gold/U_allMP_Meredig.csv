@@ -1,0 +1,6 @@
+experiment,model,metric,value,tol_abs,tol_rel
+allMP,Meredig,Ef_MAE,0.16903863270933597,0,0.05
+allMP,Meredig,Ed_MAE,0.13771101815040418,0,0.05
+allMP,Meredig,Ed_cl_accuracy,0.6090291010892324,0.02,0
+allMP,Meredig,Ed_cl_f1,0.5504247146026079,0.02,0
+allMP,Meredig,Ed_cl_fpr,0.3839383722753646,0.02,0

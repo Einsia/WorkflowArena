@@ -1,0 +1,164 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14"
+ ],
+ "deal_points": {
+  "dp_cor_match_initial": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 calendar days",
+    "4 business days",
+    "4 calendar days",
+    "5 business days",
+    "Greater than 5 business days"
+   ],
+   "multi": false
+  },
+  "dp_cor_match_additional": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 days",
+    "4 business days",
+    "5 business days",
+    "> 5 business days"
+   ],
+   "multi": false
+  },
+  "dp_ftr_match_initial": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 calendar days",
+    "4 business days",
+    "4 calendar days",
+    "5 business days",
+    "5 calendar days",
+    "Greater than 5 business days"
+   ],
+   "multi": false
+  },
+  "dp_ftr_match_additional": {
+   "options": [
+    "2 business days or less",
+    "3 business days",
+    "3 days",
+    "4 business days",
+    "5 business days",
+    ">5 business days"
+   ],
+   "multi": false
+  },
+  "dp_ftr_limitations": {
+   "options": [
+    "(Material) breach of other provisions of agreement",
+    "Any breach of no-shop",
+    "Breach of no-shop resulting in a Superior Offer",
+    "Material breach of no-shop",
+    "Material breach of no-shop resulting in a Superior Offer",
+    "Other"
+   ],
+   "multi": true
+  },
+  "dp_so_stock_threshold": {
+   "options": [
+    "\"All or substantially all\"",
+    "50%",
+    "Greater than 50% but not \"all or substantially all\"",
+    "Less than 50%"
+   ],
+   "multi": false
+  },
+  "dp_so_asset_threshold": {
+   "options": [
+    "\"All or substantially all\"",
+    "50%",
+    "Greater than 50% but not \"all or substantially all\"",
+    "Less than 50%"
+   ],
+   "multi": false
+  },
+  "dp_so_fpov_sole": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_cor_so_standard": {
+   "options": [
+    "\"Breach\" of fiduciary duties",
+    "\"Inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected breach\" of fiduciary duties",
+    "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties",
+    "\"Reasonably likely/expected violation\" of fiduciary duties",
+    "\"Required to comply\" with fiduciary duties",
+    "\"Violation\" of fiduciary duties",
+    "More likely than not violate fiduciary duties",
+    "Other specified standard"
+   ],
+   "multi": false
+  },
+  "dp_fidout_trigger": {
+   "options": [
+    "Acquisition Proposal only",
+    "Superior Offer, or Acquisition Proposal reasonably likely/expected to result in a Superior Offer"
+   ],
+   "multi": false
+  },
+  "dp_noshop_rep_liability": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_tail_length": {
+   "options": [
+    "12 months or longer",
+    "Other",
+    "within 12 months",
+    "within 6 months",
+    "within 9 months"
+   ],
+   "multi": false
+  },
+  "dp_tail_still_pending": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "dp_tail_public_yn": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "gen_consideration": {
+   "options": [
+    "All Cash",
+    "All Stock",
+    "Mixed Cash/Stock",
+    "Mixed Cash/Stock: Election"
+   ],
+   "multi": false
+  }
+ }
+}

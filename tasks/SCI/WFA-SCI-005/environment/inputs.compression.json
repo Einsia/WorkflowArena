@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "compression": "gzip",
+  "files": [
+    {
+      "path": "magnetic_shielding_tensors_train.csv",
+      "bytes": 139968668,
+      "sha256": "aca2d836a55ca1dec92acde8cc328a44ed30fa32bb69e2735aef3ad9eeb8d104",
+      "archive": "magnetic_shielding_tensors_train.csv.gz",
+      "archive_bytes": 53858475,
+      "archive_sha256": "d52468ada430465b9495f69818b234d845ff56aa9729796aa0be318fe4ad4d2a"
+    },
+    {
+      "path": "scalar_coupling_contributions_train.csv",
+      "bytes": 302033887,
+      "sha256": "077ea5dd13257303360d9f3a5ed05b6da1f6ea46bdb4d8b18f8534edaf59bca6",
+      "archive": "scalar_coupling_contributions_train.csv.gz",
+      "archive_bytes": 92198403,
+      "archive_sha256": "dcc2a9040a30f47677b9f7a074ed90d5224587d399c4c1f79b94a7776221d701"
+    },
+    {
+      "path": "structures.csv",
+      "bytes": 139143354,
+      "sha256": "a44e7344bbcfa34e09a956726d10fa65c0d8ef8abe8cc797a99d7c54f39aaa98",
+      "archive": "structures.csv.gz",
+      "archive_bytes": 49346036,
+      "archive_sha256": "2d4a35899f4f37ae2d24ff40889d400790d51d7652388fef595f3428de14d76b"
+    },
+    {
+      "path": "train.csv",
+      "bytes": 206876159,
+      "sha256": "bdb539ae26b02f58b500362ad10bb3eeb17857062592381cf6a340a69ac39111",
+      "archive": "train.csv.gz",
+      "archive_bytes": 43929234,
+      "archive_sha256": "db1f1f94c599111ab2929214591488b35ca02b752e48dfab5c2b51980f95a554"
+    }
+  ]
+}

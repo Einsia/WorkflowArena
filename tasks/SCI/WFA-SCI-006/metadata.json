@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-006",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Blind prediction: hydration free energies of 47 organic molecules",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/samplchallenges/SAMPL4",
+    "revision": "commit 743a38da2b7dc6e97a14764a54d458f5ba651ae6",
+    "license": "MIT (code) + CC-BY-4.0 (LICENSE_other)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

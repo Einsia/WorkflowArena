@@ -1,0 +1,20 @@
+{
+  "task_id": "WFA-SCI-008",
+  "sources": [
+    {
+      "type": "github",
+      "url": "https://github.com/samplchallenges/SAMPL6",
+      "version": "commit c661d3985af7fa0ba8c64a1774cfb2363cd31bda (2022-03-29)",
+      "archive_sha256": "79699260d4dc93c837085ee4e39b4a608d1d2d073ad84a499e8efb979c385296 (codeload tar.gz of that commit)",
+      "license": "MIT (repo LICENSE, code); data files under repo distributed without separate CC file in SAMPL6 — verified LICENSE text 'MIT License, Copyright (c) 2017 Mobley Lab at UC Irvine'",
+      "date": "2019-03-22 (submission deadline); experimental values released 2019-03-25",
+      "paths": [
+        "physical_properties/logP/molecule_ID_and_SMILES.csv",
+        "physical_properties/logP/experimental_data/logP_experimental_values.csv",
+        "physical_properties/logP/analysis_with_reassigned_categories/analysis_outputs/StatisticsTables/statistics.csv",
+        "physical_properties/logP/analysis_with_reassigned_categories/logP_predictions/"
+      ]
+    }
+  ],
+  "release_checksums": "../../../../provenance/files.jsonl (paths relative to the dataset root)"
+}

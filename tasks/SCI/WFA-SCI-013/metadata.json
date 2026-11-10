@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-013",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "Can machine-learned formation energies predict compound stability? A systematic test of three composition-based models",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal article + author repository with data and stored model outputs",
+    "url": "https://doi.org/10.1038/s41524-020-00362-y",
+    "revision": "github.com/CJBartel/TestStabilityML commit 4559c918da8edecea12f86774910b17cae3c7a09 (master HEAD, 2020-07-12; pinned by P2 2026-10-24)",
+    "license": "MIT (upstream repository); Materials Project-derived data retain upstream terms",
+    "license_evidence": "https://github.com/CJBartel/TestStabilityML/blob/4559c918da8edecea12f86774910b17cae3c7a09/LICENSE.txt",
+    "distribution": "upstream-fetch",
+    "preparation": "environment/fetch/sources.json"
+  }
+}

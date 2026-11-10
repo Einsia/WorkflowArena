@@ -1,0 +1,18 @@
+{
+ "consideration": 14300000.0,
+ "fair_value_identifiable_net_assets": 11517168.94,
+ "goodwill": 6071831.06,
+ "nci_at_acquisition": 3289000.0,
+ "s5_post_acquisition_net_income_own_books": -19541.43,
+ "ppa_charges_to_date": 358800.54,
+ "up_closing_on_s5_sales": 13368.8,
+ "s5_adjusted_post_acquisition_profit": -391710.77,
+ "nci_share_of_profit_S5": -78342.15,
+ "nci_closing_S5": 3210657.85,
+ "contingent_consideration_liability_closing": 980000.0,
+ "change_in_fv_contingent_consideration": -120000.0,
+ "acquisition_costs_expensed": 240000.0,
+ "ic_sales_with_s5_eliminated": 732811.37,
+ "ic_balances_with_s5_eliminated": 1467991.75,
+ "sales_s5_to_p_before_acquisition": 514112.0
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "WFA-SWE-004",
+  "sources": [
+    {
+      "what": "repository",
+      "url": "https://github.com/pyscf/pyscf",
+      "license": "Apache-2.0"
+    },
+    {
+      "what": "pull request",
+      "url": "https://github.com/pyscf/pyscf/pull/3236",
+      "merged_at": "2026-07-13T05:36:04Z",
+      "merge_commit": "edbefc387a82012020a1eac7a4ef5cf3829fe319",
+      "base_commit": "d3305ac1caca551dafb12d1a95a53ff7497e97ee"
+    }
+  ],
+  "retrieved": "2026-10-23",
+  "start_tree_sha256": "332e10d828886c8fa0c7c99fc76ed04041d55f090954447e242e632d3830f6cc",
+  "reference_patch_sha256": "87a9fc8ecf798925883905f7c8da0fba4a1b5e0cf5030c09d4cf2b3b88ae416f",
+  "hidden_tests_patch_sha256": "7340e50914b3056341cbfbab66b62c363d24c549b420c8a853477b03385d230a"
+}

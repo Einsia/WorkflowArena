@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "BasicResults.John",
+  "build_targets": [
+    "BasicResults.John"
+  ],
+  "names": [
+    "John.exists_projection_ker"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "BasicResults"
+    ],
+    "target_file": "BasicResults/John.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

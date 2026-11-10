@@ -1,0 +1,76 @@
+{
+ "M01": {
+  "\"Breach\" of fiduciary duties": 0,
+  "\"Inconsistent\" with fiduciary duties": 7,
+  "\"Reasonably likely/expected breach\" of fiduciary duties": 0,
+  "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties": 6,
+  "\"Reasonably likely/expected violation\" of fiduciary duties": 1,
+  "\"Required to comply\" with fiduciary duties": 0,
+  "\"Violation\" of fiduciary duties": 0,
+  "More likely than not violate fiduciary duties": 0,
+  "Other specified standard": 0
+ },
+ "M02": {
+  "\"Breach\" of fiduciary duties": 0,
+  "\"Inconsistent\" with fiduciary duties": 7,
+  "\"Reasonably likely/expected breach\" of fiduciary duties": 0,
+  "\"Reasonably likely/expected to be inconsistent\" with fiduciary duties": 6,
+  "\"Reasonably likely/expected violation\" of fiduciary duties": 1,
+  "\"Required to comply\" with fiduciary duties": 0,
+  "\"Violation\" of fiduciary duties": 0,
+  "More likely than not violate fiduciary duties": 0,
+  "Other specified standard": 0
+ },
+ "M03": 9,
+ "M04": 9,
+ "M05": 7,
+ "M06": [
+  "A05",
+  "A13",
+  "A14"
+ ],
+ "M07": [
+  "A06"
+ ],
+ "M08": [
+  "A02"
+ ],
+ "M09": [],
+ "M10": [
+  "A03",
+  "A08"
+ ],
+ "M11": [
+  "A02"
+ ],
+ "M12": [
+  "A13"
+ ],
+ "M13": [
+  "A13"
+ ],
+ "M14": [
+  "A05"
+ ],
+ "M15": [
+  [
+   "A01",
+   "A08",
+   "A12"
+  ],
+  [
+   "A03",
+   "A09",
+   "A13",
+   "A14"
+  ],
+  [
+   "A04",
+   "A11"
+  ]
+ ],
+ "M16": 6,
+ "M17": [
+  "A04"
+ ]
+}

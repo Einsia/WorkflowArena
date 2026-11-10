@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-MATH-001",
+  "domain": "MATH",
+  "task_form": "MATH-PROOF",
+  "title": "Norm discretization in infinite dimensions via generalized BSS sparsification",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/mario-ullrich/Lean-Discretization",
+    "revision": "commit 061fd9b02456656041e3de020032505c0105effe (2026-10-20)",
+    "license": "Apache-2.0"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "score_contract": "tests/normalize_score.py",
+    "native_components": "reward.json retains the underlying task check counts and component scores"
+  }
+}

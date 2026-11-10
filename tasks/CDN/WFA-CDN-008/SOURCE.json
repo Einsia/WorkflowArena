@@ -1,0 +1,196 @@
+{
+  "task_id": "WFA-CDN-008",
+  "title": "B-Roll: Coral Reefs, Coral Spawning, and Fish",
+  "creator": "NOAA Fisheries",
+  "source_url": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish",
+  "license": "U.S. federal government work; public domain in the United States",
+  "license_url": "https://www.fisheries.noaa.gov/about/website-policies",
+  "license_evidence": "https://videos.fisheries.noaa.gov/detail/video/1553921798001/b-roll%3A-coral-reefs-coral-spawning-and-fish",
+  "modifications": "silent, 1280x720, 30 fps CFR, SAR 1:1, H.264 CRF17 veryfast, container/x264-info metadata stripped; synthetic kinds as listed",
+  "files": [
+    {
+      "file": "environment/input/01.mp4",
+      "sha256": "f9f8da4ab045edb3a4317d1ac334aa871aa6b7cb522772f48811b320fd7f691f"
+    },
+    {
+      "file": "environment/input/02.mp4",
+      "sha256": "980e5cae476d6ef9e269161a75d570f4175a61a768d12b6b0a85e3e449824a3f"
+    },
+    {
+      "file": "environment/input/03.mp4",
+      "sha256": "06dba824f94401ebdd7a4aedb76e2edf7d8e2ca9d9ec4d70b22439d05919b749"
+    },
+    {
+      "file": "environment/input/04.mp4",
+      "sha256": "40a657e01e39594c657dfcdb5b74bb40e3694d0a993fe2d5e58fb0d64cf34549"
+    },
+    {
+      "file": "environment/input/05.mp4",
+      "sha256": "b7e43e6d897efc16914750cb642384ee5ceb7210fbadb776d72d6f3e8308ff0c"
+    },
+    {
+      "file": "environment/input/06.mp4",
+      "sha256": "0291dc6904ac7fc3bc7fa0cd0de89e6c85373737e41c1982c1a9c12e1cecbee1"
+    },
+    {
+      "file": "environment/input/07.mp4",
+      "sha256": "97fc4676518393d64b120de52bb0efd6bdf310520966466535639290516550dd"
+    },
+    {
+      "file": "environment/input/08.mp4",
+      "sha256": "2069d8d66d1e7cc2dbe7a4f005a88db0430a5cdf002cd6cd77c2f09207803570"
+    },
+    {
+      "file": "environment/input/09.mp4",
+      "sha256": "6020ca8d89013aeb4c14f3b40383f017f5c61e3d8ebeadfec900f83eb83f88cc"
+    },
+    {
+      "file": "environment/input/10.mp4",
+      "sha256": "2cd9b1e325f91ed594497ab79e851f30d9c3e9e079a26cdbd6029949f94120b5"
+    },
+    {
+      "file": "environment/input/11.mp4",
+      "sha256": "f6294d7490488b65663231ccf7b60be00b5fd2033459e1b9a5e0b4687637879b"
+    },
+    {
+      "file": "environment/input/12.mp4",
+      "sha256": "1e9ba0777c7febb548a67b48f6689a8d91dd00b96721f69d979e52230309e75c"
+    },
+    {
+      "file": "environment/input/13.mp4",
+      "sha256": "ca14b7084ac5a036e976943cba15fc0039a6d3309952f3f74893ec4aca95fb18"
+    },
+    {
+      "file": "environment/input/14.mp4",
+      "sha256": "d7ab99f2e553aba2c3def244db1389c4ae2c0ecc4ebacf9acd31104f05eec077"
+    },
+    {
+      "file": "environment/input/15.mp4",
+      "sha256": "9da0ad0583052755e63af4acf2e141ef5fe85e38a8f244fcba4792afdcd9751d"
+    },
+    {
+      "file": "environment/input/16.mp4",
+      "sha256": "476b478eb8c7705d5f69861ad35639e089d5e8abf1cb937fd4f57ce9f803a7a8"
+    },
+    {
+      "file": "environment/input/17.mp4",
+      "sha256": "5976fd7a67b50dc408d7d8ca2b9f280f3e2a78a59058a43b728e2b894c690d25"
+    },
+    {
+      "file": "environment/input/18.mp4",
+      "sha256": "f386fd98b127058393e4af9bd12d7d85a110c2ba4eda9a7c0bdf7ff05e49d057"
+    },
+    {
+      "file": "environment/input/19.mp4",
+      "sha256": "9675fc65c5f739ecee66551763684ef50be728c3d43a9f21ceee719315d7fc7e"
+    },
+    {
+      "file": "environment/input/20.mp4",
+      "sha256": "d1d8b51fff747ed641a24196e75ddeb99fbb8bf8bfce95ca4afae51368c0c2f8"
+    },
+    {
+      "file": "environment/input/21.mp4",
+      "sha256": "b67b620c62584f4159486f8e8157c798e4061901e1de43b3e575cb7810b34cfc"
+    },
+    {
+      "file": "environment/input/22.mp4",
+      "sha256": "cf9be50265869c1eedee280a2bdb663a9fa3870c1eb464bca87fda2cf00d0f27"
+    },
+    {
+      "file": "environment/input/23.mp4",
+      "sha256": "a64b692e855eafaed865b4842a96db1ef2cdcd42b259f77e9f8c236b01dee01b"
+    },
+    {
+      "file": "environment/input/24.mp4",
+      "sha256": "2b6deaf90a7fe9f399347e9c3078e2765c3c17deb67286dda0983a751a76deae"
+    },
+    {
+      "file": "environment/input/25.mp4",
+      "sha256": "3724a73ea9d5036ae93eff0e5c9c09c0feba474847675829fd7066e23b3a305b"
+    },
+    {
+      "file": "environment/input/26.mp4",
+      "sha256": "742757ac65686834eda742f8be677301f4ab21d5d776d2794f115fc442311ef2"
+    },
+    {
+      "file": "environment/input/27.mp4",
+      "sha256": "d1332824fe8531e06d175ae7aba971d1e2a99668cfc9df991817e8f872609b86"
+    },
+    {
+      "file": "environment/input/28.mp4",
+      "sha256": "a036edee8998a0890d33a00a4bd37056f2d3e47f31c8047b4cc28ff8a8310d6f"
+    },
+    {
+      "file": "environment/input/29.mp4",
+      "sha256": "8effa0ec99e3d0087151fdb62d7c64240acbdac997289e5074a10af638999d11"
+    },
+    {
+      "file": "environment/input/30.mp4",
+      "sha256": "64f929114fc1130205791b6d90d4a2f1f6d94b299b274b043d876716fbbecb5e"
+    },
+    {
+      "file": "environment/input/31.mp4",
+      "sha256": "f2d4473298dbca274c61ec1e6d1072cc243e1d156948adf76b1978001b7ce1ed"
+    },
+    {
+      "file": "environment/input/32.mp4",
+      "sha256": "dd6f4f42ed3c83a1000f29f2e473f352d45ebf454fd9fd5f3f4ba5907b45aea0"
+    },
+    {
+      "file": "environment/input/33.mp4",
+      "sha256": "0f72fcca901d0523a1ad86296f5b3bbae4cb22ff520519f0784007462a6a0815"
+    },
+    {
+      "file": "environment/input/34.mp4",
+      "sha256": "f5ba6b5eac60e2e733639397656fcbb50d65aa0650e14d5dee0e682fc05e0833"
+    },
+    {
+      "file": "environment/input/35.mp4",
+      "sha256": "8ada2305d6062d2f553ba06c3b9132ab13b25479ee3d084c72f267f639267fa8"
+    },
+    {
+      "file": "environment/input/36.mp4",
+      "sha256": "f8a103f6312431fd4d160ef76cef9dd81473dbe2052e28664abd8c40c235df82"
+    },
+    {
+      "file": "environment/input/37.mp4",
+      "sha256": "320c22ec414f498e060ec25aba8299cc2ac01f821ed695c1cdb7f6803f1a4990"
+    },
+    {
+      "file": "environment/input/38.mp4",
+      "sha256": "85c606f31ed1d52b6a81b8a3f052db0eb75b11442fb5d07e3a722f8560f3c505"
+    },
+    {
+      "file": "environment/input/39.mp4",
+      "sha256": "9588ea4f89c6d48113ab4037ce9b421f727cc1f00496285938ef81eb7cbcbb0c"
+    },
+    {
+      "file": "environment/input/40.mp4",
+      "sha256": "4da1ea51848c41381b30db18a124bc8bf3f035aa5faefa0c0109e4460602273c"
+    },
+    {
+      "file": "environment/input/41.mp4",
+      "sha256": "ed2b9736393beff5303d3ac112dfe2cdca7b1af0a2ddd84090c8d24cb1f62118"
+    },
+    {
+      "file": "environment/input/42.mp4",
+      "sha256": "746fd494710b40c49c2cb04f764add44a1534946e8086c19a3a000bfacedf453"
+    },
+    {
+      "file": "environment/input/43.mp4",
+      "sha256": "238429e5391a34b658b41ed0a7b2677fe91302cf449bb8ff5744209f97772e62"
+    },
+    {
+      "file": "environment/input/44.mp4",
+      "sha256": "13ef5959960facc513ba2a9a8fb70cbe04f3a4eee14f19b0a0d22b75bcfa2538"
+    },
+    {
+      "file": "environment/input/45.mp4",
+      "sha256": "aa05e4f14d87964cc3473f510baa0946d842da05ca9126fc54489e8b5473004a"
+    },
+    {
+      "file": "environment/input/46.mp4",
+      "sha256": "bcb34ef0090843ce7d30046baac3bb8d90f6b5be2d69822697a88dfcfbc913e6"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+1 C02_D1229
+# rank 2 unmapped (T141_S02.M02 src=T141_U27.M49)
+3 C02_D1530
+4 C02_D0178
+# rank 5 unmapped (T141_S02.M05 src=T141_U27.M26)
+6 C02_D0518
+# rank 7 unmapped (T141_S02.M07 src=T141_U27.M95)
+# rank 8 unmapped (T141_S02.M08 src=T141_U27.M47)
+9 C02_D0107
+# rank 10 unmapped (T141_S02.M10 src=T141_U27.M76)

@@ -1,0 +1,15 @@
+unit,ref_section,measure,value_m,side,facade_offset_m
+P01,T01,from_start,80.00,R,
+P02,T02,from_start,78.92,L,
+P03,T12,from_end,34.00,L,
+S01,T01,from_start,80.00,R,9.75
+S02,T12,from_end,34.00,L,8.25
+X01,T01,from_start,150.00,R,
+X02,T02,from_start,124.00,L,
+X03,T04,from_start,10.00,R,
+X04,T09,from_start,60.00,R,
+X05,T12,from_end,70.00,R,
+G01,T11,from_start,20.00,,
+G02,T11,from_start,100.00,,
+B01,T06,from_start,20.00,,
+B02,T12,river_crossing,,,

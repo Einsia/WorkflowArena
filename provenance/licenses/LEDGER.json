@@ -1,0 +1,149 @@
+{
+  "collection": "WorkflowArena",
+  "domain": "OPS",
+  "built": "2026-10-26T02:55:51+0800",
+  "what_we_redistribute": [
+    "Supplier/beneficiary names and payment amounts from UK public bodies' published spend-over-£500 returns, frozen and shipped inside task images.",
+    "Counterparty organisation names from the same returns, used in the COORD track.",
+    "Nothing else: rules, thresholds, people, exception items, policy documents and all code are authored by us."
+  ],
+  "what_we_do_not_redistribute": [
+    "The source CSVs themselves are NOT shipped. Only individual supplier names and amounts, extracted deterministically, appear in the task images."
+  ],
+  "sources": {
+    "City_of_York_Council.csv": {
+      "body": "City of York Council",
+      "dataset": "All Payments to Suppliers",
+      "url": "https://data.yorkopendata.org/dataset/27bc1dc6-d62f-4b93-a326-13989f5bfb56/resource/58bd7c54-e93b-4c74-b4b0-3613229d8be7/download/over500payments2011.csv",
+      "licence_id": "uk-ogl",
+      "licence_title": "Open Government Licence 2.0 (United Kingdom)",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
+      "strength": "A",
+      "note": "The portal licenses THIS dataset under OGL 2.0, not 3.0. The packages' source note saying 'OGL v3.0' is wrong for this source. OGL 2.0 grants the same commercial re-use rights and carries the same personal-data exclusion.",
+      "file": "City_of_York_Council.csv",
+      "local_sha256": "16293e4f06d085ba0df8346bbb98483b72b70a88c7d56900b11ab0b4327f69ed",
+      "local_bytes": 5789486
+    },
+    "Plymouth_City_Council.csv": {
+      "body": "Plymouth City Council",
+      "dataset": "Council spend over £500",
+      "url": "https://plymouth.thedata.place/dataset/9e9b0128-9095-4bde-b24b-d04e60789016/resource/4e120b86-ffc2-4a87-a9f3-5d70c7faf923/download/spend500march2015.csv",
+      "licence_id": "uk-ogl",
+      "licence_title": "UK Open Government Licence (OGL)",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "A",
+      "note": "Portal metadata says 'UK Open Government Licence (OGL)' without a version. Treat as OGL; version unstated by the publisher.",
+      "file": "Plymouth_City_Council.csv",
+      "local_sha256": "ac327490306ab2ea4fa4045bd9b2bd14aee4784d19a5e3a9d7efb2ad9b9f84df",
+      "local_bytes": 1224893
+    },
+    "Calderdale_Metropolitan_Borough_Council.csv": {
+      "body": "Calderdale Metropolitan Borough Council",
+      "dataset": "Payments to suppliers with a value over £500 from Calderdale",
+      "url": "https://dataworks.calderdale.gov.uk/download/em6jp/c4k/March%202026.csv",
+      "licence_id": "uk-ogl",
+      "licence_title": "Open Government Licence",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "B",
+      "note": "Not resolvable from the portal's own CKAN API (the dataset we downloaded is not in the API's result set). data.gov.uk records uk-ogl for this publisher's £500 dataset, and the portal's about page says data is re-usable under OGL. Two independent statements, neither versioned.",
+      "file": "Calderdale_Metropolitan_Borough_Council.csv",
+      "local_sha256": "bb917705baeef348a263373dcb0506a42417b8f411097c9632b199f85d4a5af1",
+      "local_bytes": 1617311
+    },
+    "Cambridgeshire_Insight.csv": {
+      "body": "Cambridgeshire Insight",
+      "dataset": "Cambridgeshire County Council Expenditure over £500",
+      "url": "https://data.cambridgeshireinsight.org.uk/sites/default/files/CambsPayments2026-04.csv",
+      "licence_id": "OGL-UK-2.0",
+      "licence_title": "Open Government Licence 2.0 (United Kingdom)",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
+      "strength": "A",
+      "note": "Publisher explicitly licenses the expenditure dataset under the linked Open Government Licence.",
+      "file": "Cambridgeshire_Insight.csv",
+      "local_sha256": "032adda25581cb41d2642fdbc9630481858424853ed8e21031e19b91536cb4a7",
+      "local_bytes": 4473394,
+      "evidence_url": "https://opendata.cambridgeshireinsight.org.uk/node/804",
+      "verified_date": "2026-11-10"
+    },
+    "Bristol_City_Council.csv": {
+      "body": "Bristol City Council",
+      "dataset": "Payments to suppliers over £500",
+      "url": "https://www.bristol.gov.uk/968/500/2020/01/",
+      "licence_id": "OGL-UK-3.0",
+      "licence_title": "Open Government Licence 3.0 (United Kingdom)",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "A",
+      "note": "Publisher explicitly licenses the expenditure dataset under the linked Open Government Licence.",
+      "file": "Bristol_City_Council.csv",
+      "local_sha256": "29edb19ebfad65c08414637328525bb72424deb6281e2068c3c3b5e08f839a11",
+      "local_bytes": 1242332,
+      "evidence_url": "https://www.bristol.gov.uk/council/council-spending-and-performance/spending-over-500",
+      "verified_date": "2026-11-10"
+    },
+    "Wirral_Metropolitan_Borough_Council.csv": {
+      "body": "Wirral Metropolitan Borough Council",
+      "dataset": "Wirral Expenditure Exceeding £500",
+      "url": "https://www.wirral.gov.uk/media/18377/download?inline",
+      "licence_id": "uk-ogl",
+      "licence_title": "Open Government Licence",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "B",
+      "note": "The council's own page 404s from the current site. data.gov.uk records uk-ogl for this publisher's £500 dataset.",
+      "file": "Wirral_Metropolitan_Borough_Council.csv",
+      "local_sha256": "a66ca603866d06c0f3fa59df396467bd71450d77f0026d62acb13445d75e217a",
+      "local_bytes": 1004290
+    },
+    "Cheltenham_Borough_Council.csv": {
+      "body": "Cheltenham Borough Council",
+      "dataset": "Payments to suppliers with a value over £500 from Cheltenham",
+      "url": "https://www.cheltenham.gov.uk/media/a1ibfa2h/january2020_bank_payments.csv",
+      "licence_id": "uk-ogl",
+      "licence_title": "Open Government Licence",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "B",
+      "note": "data.gov.uk records uk-ogl for this publisher's £500 dataset.",
+      "file": "Cheltenham_Borough_Council.csv",
+      "local_sha256": "f3424470bb0f205faa5600f69728d84b860bcc5692962a70b3431cb279086687",
+      "local_bytes": 71602
+    },
+    "Eden_District_Council.csv": {
+      "body": "Eden District Council",
+      "dataset": "Payments to suppliers with a value over £500",
+      "url": "https://www.eden.gov.uk/media/2370/period_10_2012.csv",
+      "licence_id": "uk-ogl",
+      "licence_title": "Open Government Licence",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "strength": "B",
+      "note": "data.gov.uk records uk-ogl. Eden District Council was abolished in 2023 and its functions transferred to Westmorland and Furness; the archived dataset remains published under OGL.",
+      "file": "Eden_District_Council.csv",
+      "local_sha256": "750835e820dc438c4435d4cd774154fdaa5b905736de66bb703879f5442721a3",
+      "local_bytes": 31781
+    }
+  },
+  "licences_captured": {
+    "OGL-v3": {
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "fetched": "2026-10-26T02:55:52+0800",
+      "html_sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+      "html_bytes": 10450
+    },
+    "LGTC-2015": {
+      "url": "https://www.gov.uk/government/publications/local-government-transparency-code-2015/local-government-transparency-code-2015",
+      "fetched": "2026-10-26T02:55:54+0800",
+      "html_sha256": "7e81c09c59da92913e445bb23790070bba5ee1b277602d2cb28481da40cdc162",
+      "html_bytes": 290400
+    }
+  },
+  "constraints": [
+    {
+      "licence": "OGL v3.0",
+      "clause": "Exemptions",
+      "quote": "This licence does not cover: personal data in the Information; Information that has not been accessed by way of publication or disclosure under information access legislation (including the Freedom of Information Acts for the UK and Scotland) by or with the consent of the Information Provider; departmental or public sector organisation logos, crests and the Royal Arms except where they form an integral part of a document or dataset; military insignia; third party rights the Information Provider is not authorised to license; other intellectual property rights, including patents, trade marks, and design rights; and identity documents such as the British Passport Non-endorsement This licence does not grant you any right to use the Information in a way that suggests any official status or that the Information Provider and/or Licensor endorse you or your use of the Information.",
+      "consequence": "OGL excludes personal data. The sole-trader fixture in WFA-OPS-008 uses an authored synthetic name consistently in the supplied database and verifier. The legal form and numerical task conditions are preserved."
+    }
+  ],
+  "scope": "Source-license evidence for OPS task inputs only; this is not a collection-wide license grant.",
+  "modifications": [
+    "WFA-OPS-008 applicant A-R06: supplier and bank holder replaced with a synthetic sole-trader name; legal form, amount and exemption rule preserved."
+  ]
+}

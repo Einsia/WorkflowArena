@@ -1,0 +1,17 @@
+{
+  "task_id": "WFA-LAW-020",
+  "src": "train-4547",
+  "case_no": "（2017）桂0481刑初345号",
+  "year": 2017,
+  "n_defendants": 11,
+  "charges": [
+    "寻衅滋事罪",
+    "开设赌场罪"
+  ],
+  "n_principal": 6,
+  "n_accessory": 5,
+  "n_role_items": 12,
+  "n_leaders": 0,
+  "facts_chars": 15329,
+  "n_probation_graded": 3
+}

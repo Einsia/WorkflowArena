@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-007",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Blind prediction: binding free energies of two deep-cavity aromatic hosts (OA and TEMOA) with the same set of 8 carboxylic-acid guests",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "github",
+    "url": "https://github.com/samplchallenges/SAMPL6",
+    "revision": "commit c661d3985af7fa0ba8c64a1774cfb2363cd31bda",
+    "license": "MIT (repo LICENSE)"
+  },
+  "evaluation": {
+    "continuous_score": "100 * reward.json.reward",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties."
+  }
+}

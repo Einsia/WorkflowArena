@@ -1,0 +1,17 @@
+{
+  "metric": "tracks.dG.metrics",
+  "thresholds": {
+    "RMSE": {
+      "le": 1.25
+    },
+    "MAE": {
+      "le": 1.0
+    },
+    "kendall_tau": {
+      "ge": 0.75
+    }
+  },
+  "baseline_type": "existing_task_absolute_thresholds",
+  "task_id": "WFA-SCI-006",
+  "equality_passes": true
+}

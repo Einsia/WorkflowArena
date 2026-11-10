@@ -1,0 +1,278 @@
+{
+ "info": {
+  "up_opening": {
+   "('S1', 'P')": 4688808,
+   "('S1', 'S2')": 5217318,
+   "('S4', 'S2')": 5199950,
+   "('S3', 'S2')": 2338927,
+   "('S1', 'S3')": 3982130
+  },
+  "up_closing": {
+   "('S1', 'P')": 5035900,
+   "('S5', 'P')": 1311567,
+   "('S1', 'S2')": 5083951,
+   "('S3', 'S2')": 1841143,
+   "('S4', 'S2')": 2227681,
+   "('S1', 'S3')": 3997698,
+   "('S1', 'S5')": 1703558
+  },
+  "goodwill": 308596935,
+  "book_na": 605180005,
+  "total_stepup": 436223060,
+  "consideration": 1350000000,
+  "nci_fv": 0,
+  "ppa_dep": 1358082,
+  "ppa_amort": 44688384,
+  "ppa_inv_release": 3616450,
+  "ppa_items": [
+   [
+    "Inventory (all acquisition-date lots)",
+    3616450
+   ],
+   [
+    "FA-S5-002",
+    908706
+   ],
+   [
+    "FA-S5-003",
+    227682
+   ],
+   [
+    "FA-S5-004",
+    14622
+   ],
+   [
+    "FA-S5-005",
+    29550
+   ],
+   [
+    "FA-S5-006",
+    -467142
+   ],
+   [
+    "FA-S5-007",
+    62286
+   ],
+   [
+    "FA-S5-011",
+    135888
+   ],
+   [
+    "FA-S5-012",
+    79752
+   ],
+   [
+    "FA-S5-015",
+    63744
+   ],
+   [
+    "FA-S5-016",
+    31266
+   ],
+   [
+    "FA-S5-017",
+    89022
+   ],
+   [
+    "FA-S5-018",
+    47826
+   ],
+   [
+    "FA-S5-021",
+    155106
+   ],
+   [
+    "FA-S5-022",
+    -20226
+   ],
+   [
+    "Customer relationships",
+    16840836
+   ],
+   [
+    "Trade name 'Corvex'",
+    4192548
+   ],
+   [
+    "Order backlog",
+    23655000
+   ]
+  ],
+  "ppa_pl_effect": -49662916,
+  "s5_equity_at_acq": {
+   "3000": 20000000,
+   "3100": 230000000,
+   "3200": 355180005
+  },
+  "designated_fx_current": -2940000,
+  "designated_fx_cum_open": -9722613,
+  "ni_nci": {
+   "S2": 32745241,
+   "S3": 21241088
+  },
+  "nci_by": {
+   "S1": 0,
+   "S2": 231258495,
+   "S3": 228094431,
+   "S4": 0,
+   "S6": 0,
+   "S5": 0
+  }
+ },
+ "ppa": {
+  "pct": 1.0,
+  "cash": 1260000000,
+  "cc_fv": 90000000,
+  "nci_fv": 0,
+  "stepups": [
+   {
+    "item": "Inventory (all acquisition-date lots)",
+    "account": "1300",
+    "kind": "inventory",
+    "stepup": 3616450,
+    "life_m": 0
+   },
+   {
+    "item": "FA-S5-001",
+    "account": "1600",
+    "kind": "ppe",
+    "stepup": 51744790,
+    "life_m": 0
+   },
+   {
+    "item": "FA-S5-002",
+    "account": "1610",
+    "kind": "ppe",
+    "stepup": 54522214,
+    "life_m": 360
+   },
+   {
+    "item": "FA-S5-003",
+    "account": "1610",
+    "kind": "ppe",
+    "stepup": 13660877,
+    "life_m": 360
+   },
+   {
+    "item": "FA-S5-004",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 146239,
+    "life_m": 60
+   },
+   {
+    "item": "FA-S5-005",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 295519,
+    "life_m": 60
+   },
+   {
+    "item": "FA-S5-006",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": -1868557,
+    "life_m": 24
+   },
+   {
+    "item": "FA-S5-007",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 622853,
+    "life_m": 60
+   },
+   {
+    "item": "FA-S5-011",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 1087103,
+    "life_m": 48
+   },
+   {
+    "item": "FA-S5-012",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 319011,
+    "life_m": 24
+   },
+   {
+    "item": "FA-S5-015",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 254978,
+    "life_m": 24
+   },
+   {
+    "item": "FA-S5-016",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 375218,
+    "life_m": 72
+   },
+   {
+    "item": "FA-S5-017",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 890225,
+    "life_m": 60
+   },
+   {
+    "item": "FA-S5-018",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 191300,
+    "life_m": 24
+   },
+   {
+    "item": "FA-S5-021",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": 930653,
+    "life_m": 36
+   },
+   {
+    "item": "FA-S5-022",
+    "account": "1620",
+    "kind": "ppe",
+    "stepup": -161813,
+    "life_m": 48
+   },
+   {
+    "item": "Customer relationships",
+    "account": "1700",
+    "kind": "intangible",
+    "stepup": 202090000,
+    "life_m": 72
+   },
+   {
+    "item": "Trade name 'Corvex'",
+    "account": "1700",
+    "kind": "intangible",
+    "stepup": 83851000,
+    "life_m": 120
+   },
+   {
+    "item": "Order backlog",
+    "account": "1700",
+    "kind": "intangible",
+    "stepup": 23655000,
+    "life_m": 6
+   }
+  ],
+  "date": "2026-07-01"
+ },
+ "elimination_categories": [
+  "acquisition",
+  "fx_designated_loan",
+  "ic_balances",
+  "ic_dividends",
+  "ic_pl",
+  "investment",
+  "nci_oci",
+  "nci_opening",
+  "nci_profit",
+  "ppa_subsequent",
+  "up_closing",
+  "up_opening"
+ ]
+}

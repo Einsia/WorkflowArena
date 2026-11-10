@@ -1,0 +1,1346 @@
+{
+  "task_id": "WFA-3D-002",
+  "seed": 20261026,
+  "terrain": {
+    "extent": [
+      -160.0,
+      160.0
+    ],
+    "px": 0.5,
+    "npx": 641,
+    "zmax": 48.0,
+    "note": "z = pixel/65535*48; row 0 = y=+160, col 0 = x=-160; bilinear"
+  },
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "南门区",
+      "name_en": "South gate",
+      "units": [
+        "G01",
+        "B01",
+        "W07",
+        "W14"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "东外环",
+      "name_en": "East outer ring",
+      "units": [
+        "T06",
+        "T07",
+        "W08",
+        "W09"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "北外环",
+      "name_en": "North outer ring",
+      "units": [
+        "T08",
+        "T09",
+        "T10",
+        "W10",
+        "W11",
+        "W15"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西外环",
+      "name_en": "West outer ring",
+      "units": [
+        "T11",
+        "T12",
+        "W12",
+        "W13",
+        "S01"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "内环东",
+      "name_en": "Inner ring east",
+      "units": [
+        "G02",
+        "T01",
+        "T02",
+        "W01",
+        "W02",
+        "W03"
+      ]
+    },
+    {
+      "id": "F",
+      "name_zh": "内环西",
+      "name_en": "Inner ring west",
+      "units": [
+        "T03",
+        "T04",
+        "T05",
+        "W04",
+        "W05",
+        "W06"
+      ]
+    },
+    {
+      "id": "G",
+      "name_zh": "内院",
+      "name_en": "Inner ward",
+      "units": [
+        "K01",
+        "C01",
+        "P01"
+      ]
+    }
+  ],
+  "change_order": {
+    "T02": {
+      "original": {
+        "shape": "square",
+        "side": 7.8,
+        "roof": "platform",
+        "shell": 1.8,
+        "walk_level": 10.1,
+        "storeys": 4,
+        "platform_level": 15.0,
+        "parapet": 2.0,
+        "slits_per_storey": 8,
+        "merlons": 12
+      },
+      "changed": {
+        "shape": "D",
+        "radius": 5.0,
+        "back_depth": 3.5,
+        "merlons": 15
+      }
+    },
+    "T08": {
+      "original": {
+        "shape": "round",
+        "diameter": 9.8,
+        "roof": "platform",
+        "shell": 1.9,
+        "walk_level": 8.7,
+        "storeys": 3,
+        "platform_level": 13.8,
+        "parapet": 2.2,
+        "slits_per_storey": 4,
+        "merlons": 15
+      },
+      "changed": {
+        "shape": "square",
+        "side": 9.0,
+        "roof": "pyramid",
+        "merlons": 0,
+        "roof_rise": 5.0,
+        "slits_per_storey": 8
+      }
+    },
+    "S01": {
+      "original": {
+        "stall_doors": 8
+      },
+      "changed": {
+        "stall_doors": 6
+      }
+    },
+    "W15": {
+      "original": null,
+      "changed": "new traverse wall T08-T02",
+      "merlons": 15
+    }
+  },
+  "units": {
+    "T01": {
+      "type": "tower",
+      "ring": "inner",
+      "x": 42.59,
+      "y": 2.13,
+      "facing": 2.9,
+      "params": {
+        "shape": "D",
+        "radius": 5.4,
+        "back_depth": 3.2,
+        "roof": "platform",
+        "shell": 1.9,
+        "walk_level": 11.7,
+        "storeys": 4,
+        "platform_level": 16.1,
+        "parapet": 1.9,
+        "slits_per_storey": 3,
+        "merlons": 18
+      },
+      "z0": 30.62
+    },
+    "T02": {
+      "type": "tower",
+      "ring": "inner",
+      "x": 18.29,
+      "y": 37.63,
+      "facing": 64.1,
+      "params": {
+        "shape": "D",
+        "roof": "platform",
+        "shell": 1.8,
+        "walk_level": 10.1,
+        "storeys": 4,
+        "platform_level": 15.0,
+        "parapet": 2.0,
+        "slits_per_storey": 8,
+        "merlons": 15,
+        "radius": 5.0,
+        "back_depth": 3.5
+      },
+      "z0": 31.12
+    },
+    "T03": {
+      "type": "tower",
+      "ring": "inner",
+      "x": -17.95,
+      "y": 38.15,
+      "facing": 115.2,
+      "params": {
+        "shape": "square",
+        "side": 9.7,
+        "roof": "pyramid",
+        "shell": 2.1,
+        "walk_level": 10.3,
+        "storeys": 4,
+        "platform_level": 13.9,
+        "parapet": 1.9,
+        "slits_per_storey": 4,
+        "merlons": 0,
+        "roof_rise": 4.1
+      },
+      "z0": 28.18
+    },
+    "T04": {
+      "type": "tower",
+      "ring": "inner",
+      "x": -44.29,
+      "y": -2.15,
+      "facing": -177.2,
+      "params": {
+        "shape": "square",
+        "side": 9.3,
+        "roof": "pyramid",
+        "shell": 2.0,
+        "walk_level": 10.3,
+        "storeys": 3,
+        "platform_level": 15.7,
+        "parapet": 1.9,
+        "slits_per_storey": 4,
+        "merlons": 0,
+        "roof_rise": 5.0
+      },
+      "z0": 24.86
+    },
+    "T05": {
+      "type": "tower",
+      "ring": "inner",
+      "x": -18.98,
+      "y": -36.67,
+      "facing": -117.4,
+      "params": {
+        "shape": "D",
+        "radius": 5.0,
+        "back_depth": 3.2,
+        "roof": "platform",
+        "shell": 1.7,
+        "walk_level": 10.1,
+        "storeys": 4,
+        "platform_level": 13.7,
+        "parapet": 1.8,
+        "slits_per_storey": 5,
+        "merlons": 17
+      },
+      "z0": 26.22
+    },
+    "T06": {
+      "type": "tower",
+      "ring": "outer",
+      "x": 56.64,
+      "y": -61.37,
+      "facing": -47.3,
+      "params": {
+        "shape": "square",
+        "side": 8.8,
+        "roof": "platform",
+        "shell": 1.9,
+        "walk_level": 7.7,
+        "storeys": 4,
+        "platform_level": 13.6,
+        "parapet": 2.2,
+        "slits_per_storey": 8,
+        "merlons": 12
+      },
+      "z0": 22.59
+    },
+    "T07": {
+      "type": "tower",
+      "ring": "outer",
+      "x": 83.25,
+      "y": -5.82,
+      "facing": -4.0,
+      "params": {
+        "shape": "round",
+        "diameter": 9.7,
+        "roof": "platform",
+        "shell": 2.4,
+        "walk_level": 8.4,
+        "storeys": 4,
+        "platform_level": 13.6,
+        "parapet": 2.1,
+        "slits_per_storey": 6,
+        "merlons": 14
+      },
+      "z0": 23.24
+    },
+    "T08": {
+      "type": "tower",
+      "ring": "outer",
+      "x": 53.61,
+      "y": 63.76,
+      "facing": 49.9,
+      "params": {
+        "shape": "square",
+        "roof": "pyramid",
+        "shell": 1.9,
+        "walk_level": 8.7,
+        "storeys": 3,
+        "platform_level": 13.8,
+        "parapet": 2.2,
+        "slits_per_storey": 8,
+        "merlons": 0,
+        "side": 9.0,
+        "roof_rise": 5.0
+      },
+      "z0": 26.78
+    },
+    "T09": {
+      "type": "tower",
+      "ring": "outer",
+      "x": -6.97,
+      "y": 85.44,
+      "facing": 94.7,
+      "params": {
+        "shape": "round",
+        "diameter": 8.6,
+        "roof": "cone",
+        "shell": 1.8,
+        "walk_level": 8.7,
+        "storeys": 3,
+        "platform_level": 13.3,
+        "parapet": 2.1,
+        "slits_per_storey": 3,
+        "merlons": 0,
+        "roof_rise": 4.2
+      },
+      "z0": 22.92
+    },
+    "T10": {
+      "type": "tower",
+      "ring": "outer",
+      "x": -59.77,
+      "y": 57.81,
+      "facing": 136.0,
+      "params": {
+        "shape": "square",
+        "side": 8.5,
+        "roof": "pyramid",
+        "shell": 1.8,
+        "walk_level": 7.7,
+        "storeys": 3,
+        "platform_level": 12.1,
+        "parapet": 2.1,
+        "slits_per_storey": 8,
+        "merlons": 0,
+        "roof_rise": 5.7
+      },
+      "z0": 22.96
+    },
+    "T11": {
+      "type": "tower",
+      "ring": "outer",
+      "x": -81.07,
+      "y": -2.24,
+      "facing": -178.4,
+      "params": {
+        "shape": "D",
+        "radius": 4.5,
+        "back_depth": 4.0,
+        "roof": "platform",
+        "shell": 1.8,
+        "walk_level": 7.9,
+        "storeys": 3,
+        "platform_level": 11.2,
+        "parapet": 2.1,
+        "slits_per_storey": 4,
+        "merlons": 13
+      },
+      "z0": 20.92
+    },
+    "T12": {
+      "type": "tower",
+      "ring": "outer",
+      "x": -59.2,
+      "y": -58.55,
+      "facing": -135.3,
+      "params": {
+        "shape": "round",
+        "diameter": 8.0,
+        "roof": "platform",
+        "shell": 2.0,
+        "walk_level": 8.4,
+        "storeys": 4,
+        "platform_level": 13.6,
+        "parapet": 2.2,
+        "slits_per_storey": 5,
+        "merlons": 11
+      },
+      "z0": 20.76
+    },
+    "G01": {
+      "type": "gatehouse",
+      "ring": "outer",
+      "x": 0.0,
+      "y": -82.0,
+      "facing": -90.0,
+      "params": {
+        "width": 16.3,
+        "depth": 11.9,
+        "passage_w": 3.7,
+        "passage_h": 5.2,
+        "arch": "pointed",
+        "portcullises": 2,
+        "flank_towers": "round",
+        "flank_size": 5.2,
+        "shell": 2.0,
+        "walk_level": 8.6,
+        "height": 13.7,
+        "merlons": 7,
+        "parapet": 2.0
+      },
+      "z0": 20.75
+    },
+    "G02": {
+      "type": "gatehouse",
+      "ring": "inner",
+      "x": 21.0,
+      "y": -36.37,
+      "facing": -60.0,
+      "params": {
+        "width": 16.9,
+        "depth": 11.7,
+        "passage_w": 3.7,
+        "passage_h": 4.6,
+        "arch": "round",
+        "portcullises": 1,
+        "flank_towers": "square",
+        "flank_size": 4.8,
+        "shell": 2.0,
+        "walk_level": 10.5,
+        "height": 14.8,
+        "merlons": 7,
+        "parapet": 2.0
+      },
+      "z0": 26.87
+    },
+    "W01": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "G02",
+        "node_b": "T01",
+        "thickness": 3.5,
+        "parapet": 2.0,
+        "merlons": 13,
+        "slits": 3,
+        "buttresses": 2
+      },
+      "geom": {
+        "end_a": [
+          25.808,
+          -27.797,
+          37.37
+        ],
+        "end_b": [
+          39.651,
+          -3.11,
+          42.32
+        ],
+        "clear_length": 28.303,
+        "axis_azimuth": 60.72,
+        "walk_grade_pct": 17.49,
+        "min_walk_above_ground": 9.24,
+        "max_walk_above_ground": 11.96,
+        "min_terrain": 28.13
+      }
+    },
+    "W02": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "T01",
+        "node_b": "T02",
+        "thickness": 3.5,
+        "parapet": 2.0,
+        "merlons": 15,
+        "slits": 6,
+        "buttresses": 0
+      },
+      "geom": {
+        "end_a": [
+          39.13,
+          7.185,
+          42.32
+        ],
+        "end_b": [
+          21.542,
+          32.88,
+          41.22
+        ],
+        "clear_length": 31.138,
+        "axis_azimuth": 124.39,
+        "walk_grade_pct": -3.53,
+        "min_walk_above_ground": 8.7,
+        "max_walk_above_ground": 10.74,
+        "min_terrain": 31.58
+      }
+    },
+    "W03": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "T02",
+        "node_b": "T03",
+        "thickness": 3.0,
+        "parapet": 2.0,
+        "merlons": 12,
+        "slits": 6,
+        "buttresses": 4
+      },
+      "geom": {
+        "end_a": [
+          12.77,
+          37.709,
+          41.22
+        ],
+        "end_b": [
+          -12.553,
+          38.073,
+          38.48
+        ],
+        "clear_length": 25.326,
+        "axis_azimuth": 179.18,
+        "walk_grade_pct": -10.82,
+        "min_walk_above_ground": 9.76,
+        "max_walk_above_ground": 10.49,
+        "min_terrain": 28.72
+      }
+    },
+    "W04": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "T03",
+        "node_b": "T04",
+        "thickness": 3.5,
+        "parapet": 2.1,
+        "merlons": 16,
+        "slits": 7,
+        "buttresses": 0
+      },
+      "geom": {
+        "end_a": [
+          -21.066,
+          33.382,
+          38.48
+        ],
+        "end_b": [
+          -41.147,
+          2.659,
+          35.16
+        ],
+        "clear_length": 36.703,
+        "axis_azimuth": -123.17,
+        "walk_grade_pct": -9.05,
+        "min_walk_above_ground": 9.81,
+        "max_walk_above_ground": 10.41,
+        "min_terrain": 25.35
+      }
+    },
+    "W05": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "T04",
+        "node_b": "T05",
+        "thickness": 3.8,
+        "parapet": 1.8,
+        "merlons": 14,
+        "slits": 7,
+        "buttresses": 2
+      },
+      "geom": {
+        "end_a": [
+          -40.995,
+          -6.644,
+          35.16
+        ],
+        "end_b": [
+          -22.279,
+          -32.17,
+          36.32
+        ],
+        "clear_length": 31.652,
+        "axis_azimuth": -53.75,
+        "walk_grade_pct": 3.66,
+        "min_walk_above_ground": 9.53,
+        "max_walk_above_ground": 9.92,
+        "min_terrain": 25.26
+      }
+    },
+    "W06": {
+      "type": "wall",
+      "ring": "inner",
+      "params": {
+        "node_a": "T05",
+        "node_b": "G02",
+        "thickness": 3.0,
+        "parapet": 2.1,
+        "merlons": 15,
+        "slits": 4,
+        "buttresses": 2
+      },
+      "geom": {
+        "end_a": [
+          -13.326,
+          -36.628,
+          36.32
+        ],
+        "end_b": [
+          11.285,
+          -36.443,
+          37.37
+        ],
+        "clear_length": 24.612,
+        "axis_azimuth": 0.43,
+        "walk_grade_pct": 4.27,
+        "min_walk_above_ground": 9.82,
+        "max_walk_above_ground": 10.4,
+        "min_terrain": 26.5
+      }
+    },
+    "W07": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "G01",
+        "node_b": "T06",
+        "thickness": 2.6,
+        "parapet": 1.9,
+        "merlons": 24,
+        "slits": 6,
+        "buttresses": 5
+      },
+      "geom": {
+        "end_a": [
+          8.15,
+          -79.032,
+          29.35
+        ],
+        "end_b": [
+          52.159,
+          -63.002,
+          30.29
+        ],
+        "clear_length": 46.837,
+        "axis_azimuth": 20.01,
+        "walk_grade_pct": 2.01,
+        "min_walk_above_ground": 7.88,
+        "max_walk_above_ground": 8.65,
+        "min_terrain": 20.78
+      }
+    },
+    "W08": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T06",
+        "node_b": "T07",
+        "thickness": 2.4,
+        "parapet": 2.0,
+        "merlons": 22,
+        "slits": 4,
+        "buttresses": 0
+      },
+      "geom": {
+        "end_a": [
+          58.686,
+          -57.099,
+          30.29
+        ],
+        "end_b": [
+          81.155,
+          -10.194,
+          31.64
+        ],
+        "clear_length": 52.009,
+        "axis_azimuth": 64.4,
+        "walk_grade_pct": 2.6,
+        "min_walk_above_ground": 6.52,
+        "max_walk_above_ground": 8.12,
+        "min_terrain": 23.05
+      }
+    },
+    "W09": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T07",
+        "node_b": "T08",
+        "thickness": 2.8,
+        "parapet": 1.9,
+        "merlons": 27,
+        "slits": 8,
+        "buttresses": 4
+      },
+      "geom": {
+        "end_a": [
+          81.349,
+          -1.358,
+          31.64
+        ],
+        "end_b": [
+          55.586,
+          59.121,
+          35.48
+        ],
+        "clear_length": 65.737,
+        "axis_azimuth": 113.07,
+        "walk_grade_pct": 5.84,
+        "min_walk_above_ground": 4.27,
+        "max_walk_above_ground": 8.07,
+        "min_terrain": 23.57
+      }
+    },
+    "W10": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T08",
+        "node_b": "T09",
+        "thickness": 3.1,
+        "parapet": 1.8,
+        "merlons": 26,
+        "slits": 5,
+        "buttresses": 5
+      },
+      "geom": {
+        "end_a": [
+          49.089,
+          65.378,
+          35.48
+        ],
+        "end_b": [
+          -2.922,
+          83.991,
+          31.62
+        ],
+        "clear_length": 55.241,
+        "axis_azimuth": 160.31,
+        "walk_grade_pct": -6.99,
+        "min_walk_above_ground": 8.67,
+        "max_walk_above_ground": 9.88,
+        "min_terrain": 22.95
+      }
+    },
+    "W11": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T09",
+        "node_b": "T10",
+        "thickness": 2.6,
+        "parapet": 2.0,
+        "merlons": 19,
+        "slits": 7,
+        "buttresses": 0
+      },
+      "geom": {
+        "end_a": [
+          -10.78,
+          83.446,
+          31.62
+        ],
+        "end_b": [
+          -55.802,
+          59.886,
+          30.66
+        ],
+        "clear_length": 50.814,
+        "axis_azimuth": -152.38,
+        "walk_grade_pct": -1.89,
+        "min_walk_above_ground": 6.34,
+        "max_walk_above_ground": 8.26,
+        "min_terrain": 23.36
+      }
+    },
+    "W12": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T10",
+        "node_b": "T11",
+        "thickness": 2.4,
+        "parapet": 2.1,
+        "merlons": 22,
+        "slits": 4,
+        "buttresses": 0
+      },
+      "geom": {
+        "end_a": [
+          -61.331,
+          53.409,
+          30.66
+        ],
+        "end_b": [
+          -79.457,
+          2.307,
+          28.82
+        ],
+        "clear_length": 54.222,
+        "axis_azimuth": -109.53,
+        "walk_grade_pct": -3.39,
+        "min_walk_above_ground": 7.67,
+        "max_walk_above_ground": 7.83,
+        "min_terrain": 21.14
+      }
+    },
+    "W13": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T11",
+        "node_b": "T12",
+        "thickness": 2.9,
+        "parapet": 1.9,
+        "merlons": 24,
+        "slits": 4,
+        "buttresses": 5
+      },
+      "geom": {
+        "end_a": [
+          -79.34,
+          -6.693,
+          28.82
+        ],
+        "end_b": [
+          -60.648,
+          -54.821,
+          29.16
+        ],
+        "clear_length": 51.631,
+        "axis_azimuth": -68.77,
+        "walk_grade_pct": 0.66,
+        "min_walk_above_ground": 7.88,
+        "max_walk_above_ground": 8.34,
+        "min_terrain": 20.82
+      }
+    },
+    "W14": {
+      "type": "wall",
+      "ring": "outer",
+      "params": {
+        "node_a": "T12",
+        "node_b": "G01",
+        "thickness": 2.4,
+        "parapet": 2.1,
+        "merlons": 23,
+        "slits": 3,
+        "buttresses": 3
+      },
+      "geom": {
+        "end_a": [
+          -55.481,
+          -60.023,
+          29.16
+        ],
+        "end_b": [
+          -8.15,
+          -78.772,
+          29.35
+        ],
+        "clear_length": 50.909,
+        "axis_azimuth": -21.61,
+        "walk_grade_pct": 0.37,
+        "min_walk_above_ground": 6.7,
+        "max_walk_above_ground": 7.97,
+        "min_terrain": 21.21
+      }
+    },
+    "B01": {
+      "type": "drawbridge",
+      "ring": "outer",
+      "params": {
+        "deck_length": 10.7,
+        "deck_width": 4.1,
+        "deck_thickness": 0.3,
+        "planks": 16,
+        "chains": 2,
+        "abutment_length": 2.0
+      },
+      "geom": {
+        "hinge_mid": [
+          0.0,
+          -87.95,
+          20.75
+        ],
+        "hinge_axis_azimuth": 0.0,
+        "deck_top_level": 20.75,
+        "tip_lowered": [
+          0.0,
+          -98.65,
+          20.75
+        ],
+        "abutment_span_from_hinge": [
+          9.2,
+          11.2
+        ],
+        "abutment_top": 20.45,
+        "terrain_under_tip": 19.31,
+        "ditch_bottom_min": 14.74,
+        "anim": {
+          "frame_start": 1,
+          "frame_end": 120,
+          "raised_frame": 1,
+          "lowered_frame": 72,
+          "deck_angle_raised_deg": 90,
+          "deck_angle_lowered_deg": 0
+        }
+      }
+    },
+    "K01": {
+      "type": "keep",
+      "ring": "ward",
+      "x": -9.0,
+      "y": 4.0,
+      "facing": -58.8,
+      "params": {
+        "length": 18.9,
+        "width": 14.9,
+        "storeys": 5,
+        "platform_level": 22.4,
+        "turrets": 4,
+        "turret_diameter": 3.9,
+        "roof": "pyramid",
+        "windows_per_long_side": 2,
+        "forebuilding": {
+          "length": 6.0,
+          "depth": 5.0,
+          "height": 8.0
+        },
+        "parapet": 2.0,
+        "roof_rise": 5.0
+      },
+      "z0": 30.07
+    },
+    "C01": {
+      "type": "chapel",
+      "ring": "ward",
+      "x": 15.0,
+      "y": 10.0,
+      "facing": 180.0,
+      "params": {
+        "nave_length": 15.2,
+        "nave_width": 7.4,
+        "eave": 6.8,
+        "ridge": 11.2,
+        "bays": 6,
+        "apse": "flat",
+        "bell_openings": 2
+      },
+      "z0": 32.32
+    },
+    "P01": {
+      "type": "well",
+      "ring": "ward",
+      "x": 3.0,
+      "y": -17.0,
+      "facing": 46.0,
+      "params": {
+        "diameter": 2.5,
+        "curb_height": 0.9,
+        "posts": 2,
+        "canopy_top": 3.6,
+        "roof": "gable"
+      },
+      "z0": 29.6
+    },
+    "S01": {
+      "type": "stables",
+      "ring": "outer",
+      "params": {
+        "host_wall": "W12",
+        "length": 21.5,
+        "depth": 6.7,
+        "front_height": 3.2,
+        "back_height": 5.3,
+        "stall_doors": 6,
+        "loft_openings": 2
+      },
+      "x": -69.26,
+      "y": 27.46,
+      "facing": -19.5,
+      "anchor_on_wall_axis": [
+        -70.39,
+        27.86
+      ],
+      "z0": 22.08
+    },
+    "W15": {
+      "type": "wall",
+      "ring": "traverse",
+      "params": {
+        "node_a": "T08",
+        "node_b": "T02",
+        "thickness": 2.6,
+        "parapet": 2.0,
+        "merlons": 15,
+        "slits": 4,
+        "buttresses": 2,
+        "merlon_side": "east"
+      },
+      "geom": {
+        "end_a": [
+          49.891,
+          61.009,
+          35.48
+        ],
+        "end_b": [
+          22.309,
+          40.604,
+          41.22
+        ],
+        "clear_length": 34.309,
+        "axis_azimuth": -143.51,
+        "walk_grade_pct": 16.73,
+        "min_walk_above_ground": 8.13,
+        "max_walk_above_ground": 10.3,
+        "min_terrain": 27.35
+      }
+    }
+  },
+  "interfaces": {
+    "wall_node_joints": [
+      {
+        "wall": "W01",
+        "node": "G02",
+        "point": [
+          25.808,
+          -27.797,
+          37.37
+        ]
+      },
+      {
+        "wall": "W01",
+        "node": "T01",
+        "point": [
+          39.651,
+          -3.11,
+          42.32
+        ]
+      },
+      {
+        "wall": "W02",
+        "node": "T01",
+        "point": [
+          39.13,
+          7.185,
+          42.32
+        ]
+      },
+      {
+        "wall": "W02",
+        "node": "T02",
+        "point": [
+          21.542,
+          32.88,
+          41.22
+        ]
+      },
+      {
+        "wall": "W03",
+        "node": "T02",
+        "point": [
+          12.77,
+          37.709,
+          41.22
+        ]
+      },
+      {
+        "wall": "W03",
+        "node": "T03",
+        "point": [
+          -12.553,
+          38.073,
+          38.48
+        ]
+      },
+      {
+        "wall": "W04",
+        "node": "T03",
+        "point": [
+          -21.066,
+          33.382,
+          38.48
+        ]
+      },
+      {
+        "wall": "W04",
+        "node": "T04",
+        "point": [
+          -41.147,
+          2.659,
+          35.16
+        ]
+      },
+      {
+        "wall": "W05",
+        "node": "T04",
+        "point": [
+          -40.995,
+          -6.644,
+          35.16
+        ]
+      },
+      {
+        "wall": "W05",
+        "node": "T05",
+        "point": [
+          -22.279,
+          -32.17,
+          36.32
+        ]
+      },
+      {
+        "wall": "W06",
+        "node": "T05",
+        "point": [
+          -13.326,
+          -36.628,
+          36.32
+        ]
+      },
+      {
+        "wall": "W06",
+        "node": "G02",
+        "point": [
+          11.285,
+          -36.443,
+          37.37
+        ]
+      },
+      {
+        "wall": "W07",
+        "node": "G01",
+        "point": [
+          8.15,
+          -79.032,
+          29.35
+        ]
+      },
+      {
+        "wall": "W07",
+        "node": "T06",
+        "point": [
+          52.159,
+          -63.002,
+          30.29
+        ]
+      },
+      {
+        "wall": "W08",
+        "node": "T06",
+        "point": [
+          58.686,
+          -57.099,
+          30.29
+        ]
+      },
+      {
+        "wall": "W08",
+        "node": "T07",
+        "point": [
+          81.155,
+          -10.194,
+          31.64
+        ]
+      },
+      {
+        "wall": "W09",
+        "node": "T07",
+        "point": [
+          81.349,
+          -1.358,
+          31.64
+        ]
+      },
+      {
+        "wall": "W09",
+        "node": "T08",
+        "point": [
+          55.586,
+          59.121,
+          35.48
+        ]
+      },
+      {
+        "wall": "W10",
+        "node": "T08",
+        "point": [
+          49.089,
+          65.378,
+          35.48
+        ]
+      },
+      {
+        "wall": "W10",
+        "node": "T09",
+        "point": [
+          -2.922,
+          83.991,
+          31.62
+        ]
+      },
+      {
+        "wall": "W11",
+        "node": "T09",
+        "point": [
+          -10.78,
+          83.446,
+          31.62
+        ]
+      },
+      {
+        "wall": "W11",
+        "node": "T10",
+        "point": [
+          -55.802,
+          59.886,
+          30.66
+        ]
+      },
+      {
+        "wall": "W12",
+        "node": "T10",
+        "point": [
+          -61.331,
+          53.409,
+          30.66
+        ]
+      },
+      {
+        "wall": "W12",
+        "node": "T11",
+        "point": [
+          -79.457,
+          2.307,
+          28.82
+        ]
+      },
+      {
+        "wall": "W13",
+        "node": "T11",
+        "point": [
+          -79.34,
+          -6.693,
+          28.82
+        ]
+      },
+      {
+        "wall": "W13",
+        "node": "T12",
+        "point": [
+          -60.648,
+          -54.821,
+          29.16
+        ]
+      },
+      {
+        "wall": "W14",
+        "node": "T12",
+        "point": [
+          -55.481,
+          -60.023,
+          29.16
+        ]
+      },
+      {
+        "wall": "W14",
+        "node": "G01",
+        "point": [
+          -8.15,
+          -78.772,
+          29.35
+        ]
+      },
+      {
+        "wall": "W15",
+        "node": "T08",
+        "point": [
+          49.891,
+          61.009,
+          35.48
+        ]
+      },
+      {
+        "wall": "W15",
+        "node": "T02",
+        "point": [
+          22.309,
+          40.604,
+          41.22
+        ]
+      }
+    ],
+    "stables_host": {
+      "unit": "S01",
+      "wall": "W12",
+      "back_face_line_offset_from_axis": 1.2
+    },
+    "drawbridge": {
+      "hinge_mid": [
+        0.0,
+        -87.95,
+        20.75
+      ],
+      "hinge_axis_azimuth": 0.0,
+      "deck_top_level": 20.75,
+      "tip_lowered": [
+        0.0,
+        -98.65,
+        20.75
+      ],
+      "abutment_span_from_hinge": [
+        9.2,
+        11.2
+      ],
+      "abutment_top": 20.45,
+      "terrain_under_tip": 19.31,
+      "ditch_bottom_min": 14.74,
+      "anim": {
+        "frame_start": 1,
+        "frame_end": 120,
+        "raised_frame": 1,
+        "lowered_frame": 72,
+        "deck_angle_raised_deg": 90,
+        "deck_angle_lowered_deg": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#1d2326"/>
+<g fill="#eeeae0" font-family="sans-serif">
+<text x="40" y="50" font-size="30">CDC-C-X06  layout reference (plan view, not to scale)</text>
+<rect x="60" y="100" width="640" height="460" rx="8" fill="#3c4a45"/>
+<text x="80" y="135" font-size="24">BIKE SHOP</text>
+<rect x="60" y="560" width="1080" height="110" fill="#5b5f62"/>
+<text x="760" y="620" font-size="24">PAVEMENT / STREET</text>
+<rect x="200" y="548" width="300" height="24" fill="#9fc6d6"/>
+<text x="220" y="540" font-size="18">front window</text>
+<rect x="540" y="548" width="90" height="24" fill="#c9b78f"/>
+<text x="548" y="540" font-size="18">door</text>
+<rect x="110" y="170" width="300" height="70" fill="#b49a72"/>
+<text x="125" y="212" font-size="20">workbench</text>
+<circle cx="380" cy="380" r="16" fill="#d9d4c8"/>
+<text x="405" y="386" font-size="20">repair stand</text>
+<path d="M250 380H510" stroke="#3f7a52" stroke-width="12"/>
+<circle cx="250" cy="380" r="40" fill="none" stroke="#cfd3d6" stroke-width="5"/>
+<circle cx="510" cy="380" r="40" fill="none" stroke="#cfd3d6" stroke-width="5"/>
+<text x="210" y="450" font-size="18">front</text>
+<circle cx="380" cy="610" r="12" fill="#f2d33a"/>
+<text x="300" y="650" font-size="18">courier waits here</text>
+<text x="760" y="140" font-size="20">Bike: 44T ring, 16T cog, 106-link chain + quick link</text>
+<text x="760" y="175" font-size="20">Courier: yellow hi-vis, watch on LEFT wrist</text>
+<text x="760" y="210" font-size="20">Mechanic: grey apron, orange shirt</text>
+<text x="760" y="245" font-size="20">Data: scene.json</text>
+</g></svg>

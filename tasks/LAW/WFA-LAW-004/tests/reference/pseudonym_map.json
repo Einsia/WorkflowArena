@@ -1,0 +1,692 @@
+{
+ "A01": {
+  "maud_contract": "contract_77",
+  "entities": [
+   {
+    "original": [
+     "Stock Yards Bancorp",
+     "Stock Yards Bank & Trust Company",
+     "Stock Yards"
+    ],
+    "pseudonym": "Kulent",
+    "original_abbr": [
+     "SYBT",
+     "SY Bank"
+    ],
+    "pseudonym_abbr": "KLN"
+   },
+   {
+    "original": [
+     "H. Meyer Merger Subsidiary"
+    ],
+    "pseudonym": "Dumian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Kentucky Bancshares",
+     "Kentucky Bank"
+    ],
+    "pseudonym": "Fenian",
+    "original_abbr": [
+     "KTYB",
+     "KY Bank"
+    ],
+    "pseudonym_abbr": "FNN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kulent": 16,
+   "Dumian": 5,
+   "Fenian": 10,
+   "FNN": 1144,
+   "KLN": 670
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 11,
+   "signatures": 3,
+   "name_fields": 0,
+   "attention_fields": 8
+  }
+ },
+ "A02": {
+  "maud_contract": "contract_132",
+  "entities": [
+   {
+    "original": [
+     "Tiffany & Co",
+     "Tiffany"
+    ],
+    "pseudonym": "Biorrur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "LVMH Moët Hennessy-Louis Vuitton",
+     "Louis Vuitton",
+     "Hennessy-Louis",
+     "Vuitton",
+     "LVMH",
+     "LBMH"
+    ],
+    "pseudonym": "Drethis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Breakfast Holdings Acquisition",
+     "Breakfast Acquisition",
+     "Breakfast"
+    ],
+    "pseudonym": "Paintis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Biorrur": 14,
+   "Drethis": 9,
+   "Paintis": 8
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 5
+  }
+ },
+ "A03": {
+  "maud_contract": "contract_17",
+  "entities": [
+   {
+    "original": [
+     "CIT Group",
+     "CIT Bank"
+    ],
+    "pseudonym": "Troumix",
+    "original_abbr": [
+     "CIT"
+    ],
+    "pseudonym_abbr": "TRM"
+   },
+   {
+    "original": [
+     "First Citizens BancShares",
+     "First-Citizens Bank & Trust Company",
+     "First-Citizens",
+     "First Citizens"
+    ],
+    "pseudonym": "Raerent",
+    "original_abbr": [
+     "BancShares",
+     "FCB"
+    ],
+    "pseudonym_abbr": "RRN"
+   },
+   {
+    "original": [
+     "FC Merger Subsidiary"
+    ],
+    "pseudonym": "Trerkora",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Troumix": 8,
+   "Raerent": 9,
+   "Trerkora": 4,
+   "TRM": 1050,
+   "RRN": 1051
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 4,
+   "name_fields": 4,
+   "attention_fields": 4
+  }
+ },
+ "A04": {
+  "maud_contract": "contract_50",
+  "entities": [
+   {
+    "original": [
+     "Eagle Parent Holdings",
+     "Eagle Merger Sub"
+    ],
+    "pseudonym": "Dreandent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Extended Stay America",
+     "ESH Hospitality"
+    ],
+    "pseudonym": "Traethex",
+    "original_abbr": [
+     "ESA",
+     "ESH"
+    ],
+    "pseudonym_abbr": "TRT"
+   },
+   {
+    "original": [
+     "Blackstone Real Estate Partners",
+     "Blackstone"
+    ],
+    "pseudonym": "Fisara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Starwood Distressed Opportunity Fund",
+     "Starwood"
+    ],
+    "pseudonym": "Stealyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Dreandent": 16,
+   "Traethex": 16,
+   "Fisara": 12,
+   "Stealyn": 11,
+   "fisara": 2,
+   "TRT": 3
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 11,
+   "signatures": 16,
+   "name_fields": 16,
+   "attention_fields": 5
+  }
+ },
+ "A05": {
+  "maud_contract": "contract_15",
+  "entities": [
+   {
+    "original": [
+     "WSFS Financial",
+     "WSFS Bank",
+     "WSFS"
+    ],
+    "pseudonym": "Queastix",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Bryn Mawr Bank Corporation",
+     "Bryn Mawr Trust Company",
+     "Bryn Mawr"
+    ],
+    "pseudonym": "Lairkara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Queastix": 707,
+   "Lairkara": 1079
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 7,
+   "signatures": 2,
+   "name_fields": 2,
+   "attention_fields": 7
+  }
+ },
+ "A06": {
+  "maud_contract": "contract_112",
+  "entities": [
+   {
+    "original": [
+     "Peoples Bancorp",
+     "Peoples Bank",
+     "Peoples"
+    ],
+    "pseudonym": "Bindova",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Premier Financial Bancorp",
+     "Premier Financial",
+     "Premier Bank",
+     "Citizens Deposit Bank and Trust",
+     "Citizens Deposit Bank",
+     "Citizens Bank",
+     "Premier"
+    ],
+    "pseudonym": "Kudara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Bindova": 474,
+   "Kudara": 868
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 0,
+   "attention_fields": 4
+  }
+ },
+ "A07": {
+  "maud_contract": "contract_136",
+  "entities": [
+   {
+    "original": [
+     "Sanofi"
+    ],
+    "pseudonym": "Kurrara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Vector Merger Sub"
+    ],
+    "pseudonym": "Brealvion",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Translate Bio"
+    ],
+    "pseudonym": "Narkent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Kurrara": 4,
+   "Brealvion": 3,
+   "Narkent": 5,
+   "kurrara": 1
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A08": {
+  "maud_contract": "contract_78",
+  "entities": [
+   {
+    "original": [
+     "Elanco Animal Health",
+     "Elanco"
+    ],
+    "pseudonym": "Ziomis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Knight Merger Sub"
+    ],
+    "pseudonym": "Haendur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Kindred Biosciences",
+     "KindredBio",
+     "Kindred"
+    ],
+    "pseudonym": "Nesane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Ziomis": 4,
+   "Haendur": 4,
+   "Nesane": 4
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 3,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A09": {
+  "maud_contract": "contract_0",
+  "entities": [
+   {
+    "original": [
+     "Cisco Systems",
+     "Cisco"
+    ],
+    "pseudonym": "Raendian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Amarone"
+    ],
+    "pseudonym": "Tairara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Acacia Communications",
+     "Acacia"
+    ],
+    "pseudonym": "Trorkent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Raendian": 5,
+   "Tairara": 3,
+   "Trorkent": 5,
+   "raendian": 1
+  },
+  "redactions": {
+   "urls": 2,
+   "emails": 6,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A10": {
+  "maud_contract": "contract_62",
+  "entities": [
+   {
+    "original": [
+     "Roche Holdings",
+     "F. Hoffmann-La Roche",
+     "Hoffmann-La Roche",
+     "Hoffmann-La",
+     "Roche"
+    ],
+    "pseudonym": "Deathane",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Chugai"
+    ],
+    "pseudonym": "Bruntur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Geronimo Acquisition"
+    ],
+    "pseudonym": "Tholara",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "GenMark Diagnostics",
+     "GenMark"
+    ],
+    "pseudonym": "Helvur",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Deathane": 6,
+   "Tholara": 3,
+   "Helvur": 14,
+   "deathane": 1,
+   "Bruntur": 3
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A11": {
+  "maud_contract": "contract_124",
+  "entities": [
+   {
+    "original": [
+     "First Bancorp",
+     "First Bank"
+    ],
+    "pseudonym": "Naesis",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Select Bancorp",
+     "Select Bank & Trust Company",
+     "Select Bank"
+    ],
+    "pseudonym": "Broundane",
+    "original_abbr": [
+     "SB"
+    ],
+    "pseudonym_abbr": "BRN"
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Broundane": 10,
+   "Naesis": 13,
+   "BRN": 959
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 4,
+   "signatures": 2,
+   "name_fields": 0,
+   "attention_fields": 4
+  }
+ },
+ "A12": {
+  "maud_contract": "contract_64",
+  "entities": [
+   {
+    "original": [
+     "Electronic Arts"
+    ],
+    "pseudonym": "Grailell",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Giants Acquisition Sub"
+    ],
+    "pseudonym": "Zaendeth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Glu Mobile",
+     "Glu"
+    ],
+    "pseudonym": "Kearian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Grailell": 4,
+   "Zaendeth": 3,
+   "Kearian": 4
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 5,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 4
+  }
+ },
+ "A13": {
+  "maud_contract": "contract_151",
+  "entities": [
+   {
+    "original": [
+     "Open Text Corporation",
+     "OpenText",
+     "Open Text"
+    ],
+    "pseudonym": "Vunent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Zix"
+    ],
+    "pseudonym": "Prainian",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Vunent": 4,
+   "Prainian": 5,
+   "vunent": 1
+  },
+  "redactions": {
+   "urls": 1,
+   "emails": 6,
+   "signatures": 0,
+   "name_fields": 2,
+   "attention_fields": 4
+  }
+ },
+ "A14": {
+  "maud_contract": "contract_27",
+  "entities": [
+   {
+    "original": [
+     "Coherent"
+    ],
+    "pseudonym": "Dunyn",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "II-VI"
+    ],
+    "pseudonym": "Stionent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Watson Merger Sub"
+    ],
+    "pseudonym": "Rodex",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "Finisar"
+    ],
+    "pseudonym": "Tinteth",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Dunyn": 8,
+   "Stionent": 7,
+   "Rodex": 3,
+   "Tinteth": 4,
+   "dunyn": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 8,
+   "signatures": 3,
+   "name_fields": 3,
+   "attention_fields": 5
+  }
+ },
+ "A15": {
+  "maud_contract": "contract_133",
+  "entities": [
+   {
+    "original": [
+     "Telenav99",
+     "Telenav",
+     "TeleNav"
+    ],
+    "pseudonym": "Colent",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   },
+   {
+    "original": [
+     "V99"
+    ],
+    "pseudonym": "Souvon",
+    "original_abbr": [],
+    "pseudonym_abbr": null
+   }
+  ],
+  "tickers": {},
+  "replacements_by_pseudonym": {
+   "Souvon": 6,
+   "Colent": 13,
+   "colent": 2
+  },
+  "redactions": {
+   "urls": 0,
+   "emails": 6,
+   "signatures": 6,
+   "name_fields": 6,
+   "attention_fields": 5
+  }
+ }
+}

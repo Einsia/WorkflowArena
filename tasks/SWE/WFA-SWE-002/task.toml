@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = ["/work"]
+
+[task]
+name = "WFA-SWE-002"
+version = "0.1.0"
+description = "Generic masked array class (Masked): re-implement the whole new feature of an upstream PR in the astropy source snapshot with the target feature removed"
+
+[metadata]
+domain = "SWE"
+subcategory = "SWE-FEAT"
+evaluation_mode = "harbor_native"
+
+[agent]
+timeout_sec = 14400
+network_mode = "no-network"
+
+[environment]
+build_timeout_sec = 3600
+cpus = 16
+memory_mb = 32768
+storage_mb = 20480
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 16
+memory_mb = 32768
+storage_mb = 20480

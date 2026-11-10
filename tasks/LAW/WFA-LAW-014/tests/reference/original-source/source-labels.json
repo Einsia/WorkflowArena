@@ -1,0 +1,191 @@
+[
+  {
+    "name": "武某B",
+    "judgment": [
+      {
+        "accusation": "强迫交易罪",
+        "standard_accusation": "强迫交易罪",
+        "article": [
+          "226"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 20,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 5000,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "徐某A",
+    "judgment": [
+      {
+        "accusation": "强迫交易罪",
+        "standard_accusation": "强迫交易罪",
+        "article": [
+          "226"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 16,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 3000,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "武某C",
+    "judgment": [
+      {
+        "accusation": "强迫交易罪",
+        "standard_accusation": "强迫交易罪",
+        "article": [
+          "226"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 14,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 3000,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "常某某",
+    "judgment": [
+      {
+        "accusation": "强迫交易罪",
+        "standard_accusation": "强迫交易罪",
+        "article": [
+          "226"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 13,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 2000,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "武某A",
+    "judgment": [
+      {
+        "accusation": "强迫交易罪",
+        "standard_accusation": "强迫交易罪",
+        "article": [
+          "226"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 7,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 2000,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "任某A",
+    "judgment": [
+      {
+        "accusation": "寻衅滋事罪",
+        "standard_accusation": "寻衅滋事罪",
+        "article": [
+          "293"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 16,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 0,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "刘某2",
+    "judgment": [
+      {
+        "accusation": "寻衅滋事罪",
+        "standard_accusation": "寻衅滋事罪",
+        "article": [
+          "293"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 14,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 0,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "史某某",
+    "judgment": [
+      {
+        "accusation": "寻衅滋事罪",
+        "standard_accusation": "寻衅滋事罪",
+        "article": [
+          "293"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 13,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 0,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "任某C",
+    "judgment": [
+      {
+        "accusation": "故意伤害罪",
+        "standard_accusation": "故意伤害罪",
+        "article": [
+          "234-1"
+        ],
+        "penalty": {
+          "surveillance": 0,
+          "detention": 0,
+          "imprisonment": 15,
+          "death_penalty": false,
+          "life_imprisonment": false,
+          "fine": 0,
+          "fine_without_amount": false
+        }
+      }
+    ]
+  }
+]

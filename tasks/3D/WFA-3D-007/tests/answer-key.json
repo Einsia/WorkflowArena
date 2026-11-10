@@ -1,0 +1,2023 @@
+{
+  "task_id": "WFA-3D-007",
+  "seed": 7007,
+  "fps": 24,
+  "frame_start": 1,
+  "frame_end": 720,
+  "path_z": 0.05,
+  "entry_gap_m": 2.0,
+  "spur_width_m": 3.0,
+  "units": {
+    "R01": {
+      "kind": "FW",
+      "params": {
+        "diameter_m": 46.0,
+        "hub_height_m": 26.0,
+        "gondolas": 32,
+        "gondola_type": "closed",
+        "support": "A-frame-double",
+        "period_s": 60.0,
+        "direction": "cw"
+      },
+      "pad": "PE1",
+      "envelope_R_m": 25.5,
+      "envelope_H_m": 51.0,
+      "built": true,
+      "position": {
+        "x": 106.5,
+        "y": 66.0,
+        "rot_deg": 180.0
+      },
+      "entry": {
+        "x": 79.0,
+        "y": 66.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 79.0,
+        "y1": 66.0,
+        "x2": 75.0,
+        "y2": 66.0
+      }
+    },
+    "R07": {
+      "kind": "FW",
+      "params": {
+        "diameter_m": 24.0,
+        "hub_height_m": 14.0,
+        "gondolas": 15,
+        "gondola_type": "open",
+        "support": "single-tower",
+        "period_s": 36.0,
+        "direction": "cw"
+      },
+      "pad": "PW3",
+      "envelope_R_m": 14.5,
+      "envelope_H_m": 28.0,
+      "built": true,
+      "position": {
+        "x": -97.5,
+        "y": -32.0,
+        "rot_deg": 0.0
+      },
+      "entry": {
+        "x": -81.0,
+        "y": -32.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -81.0,
+        "y1": -32.0,
+        "x2": -75.0,
+        "y2": -32.0
+      }
+    },
+    "R02": {
+      "kind": "CR",
+      "params": {
+        "diameter_m": 18.0,
+        "rows": 3,
+        "horses_per_row": [
+          22,
+          16,
+          10
+        ],
+        "roof": "scallop",
+        "period_s": 20.0,
+        "direction": "ccw",
+        "bob_per_rev": 4,
+        "bob_amp_m": 0.4,
+        "horses": 48
+      },
+      "pad": "PE2",
+      "envelope_R_m": 10.0,
+      "envelope_H_m": 9.0,
+      "built": true,
+      "position": {
+        "x": 91.0,
+        "y": 18.0,
+        "rot_deg": 180.0
+      },
+      "entry": {
+        "x": 79.0,
+        "y": 18.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 79.0,
+        "y1": 18.0,
+        "x2": 75.0,
+        "y2": 18.0
+      }
+    },
+    "R09": {
+      "kind": "CR",
+      "params": {
+        "diameter_m": 11.0,
+        "rows": 2,
+        "horses_per_row": [
+          14,
+          9
+        ],
+        "roof": "onion",
+        "period_s": 14.0,
+        "direction": "cw",
+        "bob_per_rev": 2,
+        "bob_amp_m": 0.35,
+        "horses": 23
+      },
+      "pad": "PN1",
+      "envelope_R_m": 6.5,
+      "envelope_H_m": 7.5,
+      "built": true,
+      "position": {
+        "x": -66.0,
+        "y": 107.5,
+        "rot_deg": 270.0
+      },
+      "entry": {
+        "x": -66.0,
+        "y": 99.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -66.0,
+        "y1": 99.0,
+        "x2": -66.0,
+        "y2": 95.0
+      }
+    },
+    "R03": {
+      "kind": "PS",
+      "params": {
+        "pivot_height_m": 16.0,
+        "arm_m": 13.0,
+        "hull_length_m": 16.0,
+        "seat_rows": 11,
+        "amplitude_deg": 70.0,
+        "period_s": 7.5,
+        "swing_axis": "X",
+        "first_swing": "+X"
+      },
+      "pad": "PE3",
+      "envelope_R_m": 22.0,
+      "envelope_H_m": 21.5,
+      "built": true,
+      "position": {
+        "x": 103.0,
+        "y": -32.0,
+        "rot_deg": 180.0
+      },
+      "entry": {
+        "x": 79.0,
+        "y": -32.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 79.0,
+        "y1": -32.0,
+        "x2": 75.0,
+        "y2": -32.0
+      }
+    },
+    "R04": {
+      "kind": "DT",
+      "params": {
+        "tower_height_m": 60.0,
+        "faces": 3,
+        "seats_per_face": 5,
+        "z_bottom_m": 1.0,
+        "z_top_m": 54.0,
+        "lift_s": 14.0,
+        "hold_s": 4.0,
+        "drop_s": 3.0,
+        "rest_s": 9.0,
+        "cycle_s": 30.0
+      },
+      "pad": "PN2",
+      "envelope_R_m": 7.0,
+      "envelope_H_m": 62.0,
+      "built": true,
+      "position": {
+        "x": -22.0,
+        "y": 116.0,
+        "rot_deg": 270.0
+      },
+      "entry": {
+        "x": -22.0,
+        "y": 107.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -22.0,
+        "y1": 107.0,
+        "x2": -22.0,
+        "y2": 95.0
+      }
+    },
+    "R05": {
+      "kind": "CS",
+      "params": {
+        "tower_height_m": 14.0,
+        "canopy_radius_m": 5.5,
+        "chain_m": 5.5,
+        "seat_type": "single",
+        "seats": 28,
+        "fly_angle_deg": 42.0,
+        "period_s": 8.0,
+        "direction": "ccw"
+      },
+      "pad": "PW1",
+      "envelope_R_m": 11.0,
+      "envelope_H_m": 16.0,
+      "built": true,
+      "position": {
+        "x": -93.0,
+        "y": 66.0,
+        "rot_deg": 0.0
+      },
+      "entry": {
+        "x": -80.0,
+        "y": 66.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -80.0,
+        "y1": 66.0,
+        "x2": -75.0,
+        "y2": 66.0
+      }
+    },
+    "R10": {
+      "kind": "CS",
+      "params": {
+        "tower_height_m": 16.0,
+        "canopy_radius_m": 7.0,
+        "chain_m": 6.5,
+        "seat_type": "double",
+        "seats": 36,
+        "fly_angle_deg": 40.0,
+        "period_s": 10.0,
+        "direction": "cw"
+      },
+      "pad": "PE4",
+      "envelope_R_m": 13.0,
+      "envelope_H_m": 18.0,
+      "built": true,
+      "position": {
+        "x": 50.0,
+        "y": -26.0,
+        "rot_deg": 0.0
+      },
+      "entry": {
+        "x": 65.0,
+        "y": -26.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 65.0,
+        "y1": -26.0,
+        "x2": 75.0,
+        "y2": -26.0
+      }
+    },
+    "R06": {
+      "kind": "TC",
+      "params": {
+        "platter_diameter_m": 17.0,
+        "sub_platters": 4,
+        "cups_per_sub": 4,
+        "canopy": true,
+        "main_period_s": 12.0,
+        "main_direction": "cw",
+        "sub_period_s": 5.0,
+        "sub_direction": "ccw",
+        "cups": 16
+      },
+      "pad": "PW2",
+      "envelope_R_m": 9.5,
+      "envelope_H_m": 6.0,
+      "built": true,
+      "position": {
+        "x": -91.5,
+        "y": 18.0,
+        "rot_deg": 0.0
+      },
+      "entry": {
+        "x": -80.0,
+        "y": 18.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -80.0,
+        "y1": 18.0,
+        "x2": -75.0,
+        "y2": 18.0
+      }
+    },
+    "R11": {
+      "kind": "TC",
+      "params": {
+        "platter_diameter_m": 14.0,
+        "sub_platters": 3,
+        "cups_per_sub": 5,
+        "canopy": false,
+        "main_period_s": 11.0,
+        "main_direction": "ccw",
+        "sub_period_s": 5.0,
+        "sub_direction": "cw",
+        "cups": 15
+      },
+      "pad": "PN3",
+      "envelope_R_m": 8.0,
+      "envelope_H_m": 3.0,
+      "built": true,
+      "position": {
+        "x": 22.0,
+        "y": 110.0,
+        "rot_deg": 270.0
+      },
+      "entry": {
+        "x": 22.0,
+        "y": 100.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 22.0,
+        "y1": 100.0,
+        "x2": 22.0,
+        "y2": 95.0
+      }
+    },
+    "R08": {
+      "kind": "FB",
+      "params": {
+        "pivot_height_m": 18.0,
+        "arm_m": 12.0,
+        "amplitude_deg": 75.0,
+        "period_s": 10.0,
+        "disc_diameter_m": 9.0,
+        "seats": 32,
+        "disc_period_s": 6.0,
+        "disc_direction": "cw",
+        "swing_axis": "Y",
+        "first_swing": "+Y"
+      },
+      "pad": "PW4",
+      "envelope_R_m": 18.0,
+      "envelope_H_m": 21.0,
+      "built": true,
+      "position": {
+        "x": -50.0,
+        "y": -26.0,
+        "rot_deg": 180.0
+      },
+      "entry": {
+        "x": -70.0,
+        "y": -26.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": -70.0,
+        "y1": -26.0,
+        "x2": -75.0,
+        "y2": -26.0
+      }
+    },
+    "R12": {
+      "kind": "RT",
+      "params": {
+        "mast_height_m": 45.0,
+        "cabin_diameter_m": 8.0,
+        "seats": 30,
+        "z_bottom_m": 1.5,
+        "z_top_m": 37.0,
+        "rise_s": 10.0,
+        "hold_s": 6.0,
+        "descend_s": 10.0,
+        "rest_s": 5.0,
+        "spin_period_s": 20.0,
+        "spin_direction": "ccw",
+        "cycle_s": 31.0
+      },
+      "pad": "PN4",
+      "envelope_R_m": 5.5,
+      "envelope_H_m": 48.0,
+      "built": true,
+      "position": {
+        "x": 66.0,
+        "y": 106.5,
+        "rot_deg": 270.0
+      },
+      "entry": {
+        "x": 66.0,
+        "y": 99.0,
+        "z": 0.05
+      },
+      "spur": {
+        "width": 3.0,
+        "x1": 66.0,
+        "y1": 99.0,
+        "x2": 66.0,
+        "y2": 95.0
+      }
+    },
+    "G01": {
+      "kind": "G",
+      "params": {
+        "width_m": 36.0,
+        "depth_m": 6.0,
+        "arches": 5,
+        "towers": 4,
+        "tower_height_m": 16.0,
+        "spire": "onion",
+        "arch_clear_height_m": 5.5
+      },
+      "position": {
+        "x": 0.0,
+        "y": -121.0,
+        "rot_deg": 270.0
+      },
+      "built": true
+    },
+    "V01": {
+      "kind": "V",
+      "params": {
+        "length_m": 24.0,
+        "width_m": 12.0,
+        "storeys": 2,
+        "roof": "hip",
+        "bays": 8,
+        "eave_height_m": 7.2
+      },
+      "position": {
+        "x": -36.0,
+        "y": -108.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "F01": {
+      "kind": "F",
+      "params": {
+        "basin_diameter_m": 14.0,
+        "tiers": 3,
+        "jets": 16,
+        "basin_wall_m": 0.6
+      },
+      "position": {
+        "x": 0.0,
+        "y": -60.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "M01": {
+      "kind": "M",
+      "params": {
+        "height_m": 22.0,
+        "base_m": 4.5,
+        "clock_faces": 2,
+        "tiers": 3,
+        "spire": "cone"
+      },
+      "position": {
+        "x": 34.0,
+        "y": -104.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "K01": {
+      "kind": "K",
+      "params": {
+        "length_m": 4.5,
+        "width_m": 3.0,
+        "eave_height_m": 2.8,
+        "roof": "cone",
+        "windows": 1
+      },
+      "position": {
+        "x": -9.5,
+        "y": -92.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "K02": {
+      "kind": "K",
+      "params": {
+        "length_m": 6.0,
+        "width_m": 3.0,
+        "eave_height_m": 3.0,
+        "roof": "gable",
+        "windows": 2
+      },
+      "position": {
+        "x": 9.5,
+        "y": -96.0,
+        "rot_deg": 180.0
+      },
+      "built": true
+    },
+    "K03": {
+      "kind": "K",
+      "params": {
+        "length_m": 4.5,
+        "width_m": 3.0,
+        "eave_height_m": 3.0,
+        "roof": "awning",
+        "windows": 3,
+        "awning_stripes": 7
+      },
+      "position": {
+        "x": 67.0,
+        "y": 42.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "K04": {
+      "kind": "K",
+      "params": {
+        "length_m": 5.5,
+        "width_m": 4.0,
+        "eave_height_m": 3.0,
+        "roof": "awning",
+        "windows": 2,
+        "awning_stripes": 9
+      },
+      "position": {
+        "x": -67.0,
+        "y": 58.0,
+        "rot_deg": 180.0
+      },
+      "built": true
+    },
+    "K05": {
+      "kind": "K",
+      "params": {
+        "length_m": 6.0,
+        "width_m": 3.0,
+        "eave_height_m": 2.8,
+        "roof": "gable",
+        "windows": 3
+      },
+      "position": {
+        "x": 34.0,
+        "y": 89.0,
+        "rot_deg": 90.0
+      },
+      "built": false
+    },
+    "L01": {
+      "kind": "L",
+      "params": {
+        "semi_axis_x_m": 40.0,
+        "semi_axis_y_m": 26.0,
+        "water_level_m": -0.4,
+        "bottom_m": -1.6,
+        "island_radius_m": 10.0,
+        "island_top_m": 0.05,
+        "edging": "stone"
+      },
+      "position": {
+        "x": 0.0,
+        "y": 20.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "B01": {
+      "kind": "B",
+      "params": {
+        "span_m": 16.0,
+        "deck_width_m": 3.5,
+        "form": "arch",
+        "rise_m": 1.6,
+        "rail_posts_per_side": 9
+      },
+      "position": {
+        "x": 0.0,
+        "y": 2.0,
+        "rot_deg": 90.0
+      },
+      "built": true
+    },
+    "B02": {
+      "kind": "B",
+      "params": {
+        "span_m": 16.0,
+        "deck_width_m": 5.0,
+        "form": "beam-3span",
+        "piers": 2,
+        "rail_posts_per_side": 11
+      },
+      "position": {
+        "x": 0.0,
+        "y": 38.0,
+        "rot_deg": 90.0
+      },
+      "built": true
+    },
+    "P01": {
+      "kind": "P",
+      "params": {
+        "sides": 8,
+        "diameter_m": 8.0,
+        "columns": 8,
+        "roof": "ogee",
+        "platform_height_m": 0.9,
+        "height_m": 7.5
+      },
+      "position": {
+        "x": 0.0,
+        "y": 20.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    },
+    "H01": {
+      "kind": "H",
+      "params": {
+        "length_m": 22.0,
+        "width_m": 16.0,
+        "storeys": 1,
+        "roof": "gable",
+        "bays": 6,
+        "terrace_depth_m": 5.0,
+        "eave_height_m": 4.2
+      },
+      "position": {
+        "x": -58.0,
+        "y": 20.0,
+        "rot_deg": 0.0
+      },
+      "built": true
+    }
+  },
+  "pads": {
+    "PE1": {
+      "x": 106.5,
+      "y": 66.0,
+      "facing_deg": 180.0,
+      "unit": "R01"
+    },
+    "PE2": {
+      "x": 91.0,
+      "y": 18.0,
+      "facing_deg": 180.0,
+      "unit": "R02"
+    },
+    "PE3": {
+      "x": 103.0,
+      "y": -32.0,
+      "facing_deg": 180.0,
+      "unit": "R03"
+    },
+    "PE4": {
+      "x": 50.0,
+      "y": -26.0,
+      "facing_deg": 0.0,
+      "unit": "R10"
+    },
+    "PW1": {
+      "x": -93.0,
+      "y": 66.0,
+      "facing_deg": 0.0,
+      "unit": "R05"
+    },
+    "PW2": {
+      "x": -91.5,
+      "y": 18.0,
+      "facing_deg": 0.0,
+      "unit": "R06"
+    },
+    "PW3": {
+      "x": -97.5,
+      "y": -32.0,
+      "facing_deg": 0.0,
+      "unit": "R07"
+    },
+    "PW4": {
+      "x": -50.0,
+      "y": -26.0,
+      "facing_deg": 180.0,
+      "unit": "R08"
+    },
+    "PN1": {
+      "x": -66.0,
+      "y": 107.5,
+      "facing_deg": 270.0,
+      "unit": "R09"
+    },
+    "PN2": {
+      "x": -22.0,
+      "y": 116.0,
+      "facing_deg": 270.0,
+      "unit": "R04"
+    },
+    "PN3": {
+      "x": 22.0,
+      "y": 110.0,
+      "facing_deg": 270.0,
+      "unit": "R11"
+    },
+    "PN4": {
+      "x": 66.0,
+      "y": 106.5,
+      "facing_deg": 270.0,
+      "unit": "R12"
+    }
+  },
+  "paths": [
+    {
+      "id": "E01",
+      "kind": "segment",
+      "x1": 0,
+      "y1": -117,
+      "x2": 0,
+      "y2": -78,
+      "width": 8.0,
+      "note": "主入口大道"
+    },
+    {
+      "id": "E02",
+      "kind": "ring",
+      "cx": 0,
+      "cy": -60,
+      "r": 18.0,
+      "width": 6.0,
+      "note": "喷泉环形广场路"
+    },
+    {
+      "id": "E03",
+      "kind": "segment",
+      "x1": -75.0,
+      "y1": -60,
+      "x2": -18.0,
+      "y2": -60,
+      "width": 6.0,
+      "note": "环园大道 南西段"
+    },
+    {
+      "id": "E04",
+      "kind": "segment",
+      "x1": 18.0,
+      "y1": -60,
+      "x2": 75.0,
+      "y2": -60,
+      "width": 6.0,
+      "note": "环园大道 南东段"
+    },
+    {
+      "id": "E05",
+      "kind": "segment",
+      "x1": 75.0,
+      "y1": -60,
+      "x2": 75.0,
+      "y2": 95,
+      "width": 6.0,
+      "note": "环园大道 东段"
+    },
+    {
+      "id": "E06",
+      "kind": "segment",
+      "x1": 75.0,
+      "y1": 95,
+      "x2": -75.0,
+      "y2": 95,
+      "width": 6.0,
+      "note": "环园大道 北段"
+    },
+    {
+      "id": "E07",
+      "kind": "segment",
+      "x1": -75.0,
+      "y1": 95,
+      "x2": -75.0,
+      "y2": -60,
+      "width": 6.0,
+      "note": "环园大道 西段"
+    },
+    {
+      "id": "E08",
+      "kind": "segment",
+      "x1": 0,
+      "y1": -42,
+      "x2": 0,
+      "y2": -6,
+      "width": 4.0,
+      "note": "南轴步道（至 B01 南桥头）"
+    },
+    {
+      "id": "E09",
+      "kind": "segment",
+      "x1": 0,
+      "y1": 46,
+      "x2": 0,
+      "y2": 95,
+      "width": 5.0,
+      "note": "北轴步道（自 B02 北桥头）"
+    },
+    {
+      "id": "E10",
+      "kind": "segment",
+      "x1": -75.0,
+      "y1": 20,
+      "x2": -66,
+      "y2": 20,
+      "width": 3.0,
+      "note": "餐厅支路"
+    },
+    {
+      "id": "E11",
+      "kind": "segment",
+      "x1": 0,
+      "y1": -117,
+      "x2": 0,
+      "y2": -121,
+      "width": 8.0,
+      "note": "门楼通道"
+    }
+  ],
+  "zones": [
+    {
+      "id": "A",
+      "name_zh": "入口广场区",
+      "name_en": "Entrance plaza",
+      "units": [
+        "G01",
+        "V01",
+        "F01",
+        "M01",
+        "K01",
+        "K02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "湖区",
+      "name_en": "Lake",
+      "units": [
+        "L01",
+        "B01",
+        "B02",
+        "P01",
+        "H01"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东翼",
+      "name_en": "East wing",
+      "units": [
+        "R01",
+        "R02",
+        "R03",
+        "R10",
+        "K03"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西翼",
+      "name_en": "West wing",
+      "units": [
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "K04"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "北翼",
+      "name_en": "North wing",
+      "units": [
+        "R09",
+        "R04",
+        "R11",
+        "R12",
+        "K05"
+      ]
+    }
+  ],
+  "zones_original": [
+    {
+      "id": "A",
+      "name_zh": "入口广场区",
+      "name_en": "Entrance plaza",
+      "units": [
+        "G01",
+        "V01",
+        "F01",
+        "M01",
+        "K01",
+        "K02"
+      ]
+    },
+    {
+      "id": "B",
+      "name_zh": "湖区",
+      "name_en": "Lake",
+      "units": [
+        "L01",
+        "B01",
+        "B02",
+        "P01",
+        "H01"
+      ]
+    },
+    {
+      "id": "C",
+      "name_zh": "东翼",
+      "name_en": "East wing",
+      "units": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "K03"
+      ]
+    },
+    {
+      "id": "D",
+      "name_zh": "西翼",
+      "name_en": "West wing",
+      "units": [
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "K04"
+      ]
+    },
+    {
+      "id": "E",
+      "name_zh": "北翼",
+      "name_en": "North wing",
+      "units": [
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "K05"
+      ]
+    }
+  ],
+  "change_order": [
+    {
+      "item": 1,
+      "text_zh": "R04 与 R10 互换地块：R04 移至 PN2，R10 移至 PE4；各自按新地块的朝向布置，入口支路随之重建。",
+      "units": [
+        "R04",
+        "R10"
+      ],
+      "interface": true
+    },
+    {
+      "item": 2,
+      "text_zh": "R07 旋转周期由原图纸值调整为 36 s（方向不变）。",
+      "units": [
+        "R07"
+      ],
+      "interface": false
+    },
+    {
+      "item": 3,
+      "text_zh": "B02 桥面净宽改为 5.0 m；与其北桥头相接的北轴步道 E09 同步加宽至 5.0 m。",
+      "units": [
+        "B02"
+      ],
+      "interface": true
+    },
+    {
+      "item": 4,
+      "text_zh": "K05 取消，不建造。",
+      "units": [
+        "K05"
+      ],
+      "interface": false
+    }
+  ],
+  "original_state": {
+    "units": {
+      "R01": {
+        "kind": "FW",
+        "params": {
+          "diameter_m": 46.0,
+          "hub_height_m": 26.0,
+          "gondolas": 32,
+          "gondola_type": "closed",
+          "support": "A-frame-double",
+          "period_s": 60.0,
+          "direction": "cw"
+        },
+        "pad": "PE1",
+        "envelope_R_m": 25.5,
+        "envelope_H_m": 51.0
+      },
+      "R07": {
+        "kind": "FW",
+        "params": {
+          "diameter_m": 24.0,
+          "hub_height_m": 14.0,
+          "gondolas": 15,
+          "gondola_type": "open",
+          "support": "single-tower",
+          "period_s": 32.0,
+          "direction": "cw"
+        },
+        "pad": "PW3",
+        "envelope_R_m": 14.5,
+        "envelope_H_m": 28.0
+      },
+      "R02": {
+        "kind": "CR",
+        "params": {
+          "diameter_m": 18.0,
+          "rows": 3,
+          "horses_per_row": [
+            22,
+            16,
+            10
+          ],
+          "roof": "scallop",
+          "period_s": 20.0,
+          "direction": "ccw",
+          "bob_per_rev": 4,
+          "bob_amp_m": 0.4,
+          "horses": 48
+        },
+        "pad": "PE2",
+        "envelope_R_m": 10.0,
+        "envelope_H_m": 9.0
+      },
+      "R09": {
+        "kind": "CR",
+        "params": {
+          "diameter_m": 11.0,
+          "rows": 2,
+          "horses_per_row": [
+            14,
+            9
+          ],
+          "roof": "onion",
+          "period_s": 14.0,
+          "direction": "cw",
+          "bob_per_rev": 2,
+          "bob_amp_m": 0.35,
+          "horses": 23
+        },
+        "pad": "PN1",
+        "envelope_R_m": 6.5,
+        "envelope_H_m": 7.5
+      },
+      "R03": {
+        "kind": "PS",
+        "params": {
+          "pivot_height_m": 16.0,
+          "arm_m": 13.0,
+          "hull_length_m": 16.0,
+          "seat_rows": 11,
+          "amplitude_deg": 70.0,
+          "period_s": 7.5,
+          "swing_axis": "X",
+          "first_swing": "+X"
+        },
+        "pad": "PE3",
+        "envelope_R_m": 22.0,
+        "envelope_H_m": 21.5
+      },
+      "R04": {
+        "kind": "DT",
+        "params": {
+          "tower_height_m": 60.0,
+          "faces": 3,
+          "seats_per_face": 5,
+          "z_bottom_m": 1.0,
+          "z_top_m": 54.0,
+          "lift_s": 14.0,
+          "hold_s": 4.0,
+          "drop_s": 3.0,
+          "rest_s": 9.0,
+          "cycle_s": 30.0
+        },
+        "pad": "PE4",
+        "envelope_R_m": 7.0,
+        "envelope_H_m": 62.0
+      },
+      "R05": {
+        "kind": "CS",
+        "params": {
+          "tower_height_m": 14.0,
+          "canopy_radius_m": 5.5,
+          "chain_m": 5.5,
+          "seat_type": "single",
+          "seats": 28,
+          "fly_angle_deg": 42.0,
+          "period_s": 8.0,
+          "direction": "ccw"
+        },
+        "pad": "PW1",
+        "envelope_R_m": 11.0,
+        "envelope_H_m": 16.0
+      },
+      "R10": {
+        "kind": "CS",
+        "params": {
+          "tower_height_m": 16.0,
+          "canopy_radius_m": 7.0,
+          "chain_m": 6.5,
+          "seat_type": "double",
+          "seats": 36,
+          "fly_angle_deg": 40.0,
+          "period_s": 10.0,
+          "direction": "cw"
+        },
+        "pad": "PN2",
+        "envelope_R_m": 13.0,
+        "envelope_H_m": 18.0
+      },
+      "R06": {
+        "kind": "TC",
+        "params": {
+          "platter_diameter_m": 17.0,
+          "sub_platters": 4,
+          "cups_per_sub": 4,
+          "canopy": true,
+          "main_period_s": 12.0,
+          "main_direction": "cw",
+          "sub_period_s": 5.0,
+          "sub_direction": "ccw",
+          "cups": 16
+        },
+        "pad": "PW2",
+        "envelope_R_m": 9.5,
+        "envelope_H_m": 6.0
+      },
+      "R11": {
+        "kind": "TC",
+        "params": {
+          "platter_diameter_m": 14.0,
+          "sub_platters": 3,
+          "cups_per_sub": 5,
+          "canopy": false,
+          "main_period_s": 11.0,
+          "main_direction": "ccw",
+          "sub_period_s": 5.0,
+          "sub_direction": "cw",
+          "cups": 15
+        },
+        "pad": "PN3",
+        "envelope_R_m": 8.0,
+        "envelope_H_m": 3.0
+      },
+      "R08": {
+        "kind": "FB",
+        "params": {
+          "pivot_height_m": 18.0,
+          "arm_m": 12.0,
+          "amplitude_deg": 75.0,
+          "period_s": 10.0,
+          "disc_diameter_m": 9.0,
+          "seats": 32,
+          "disc_period_s": 6.0,
+          "disc_direction": "cw",
+          "swing_axis": "Y",
+          "first_swing": "+Y"
+        },
+        "pad": "PW4",
+        "envelope_R_m": 18.0,
+        "envelope_H_m": 21.0
+      },
+      "R12": {
+        "kind": "RT",
+        "params": {
+          "mast_height_m": 45.0,
+          "cabin_diameter_m": 8.0,
+          "seats": 30,
+          "z_bottom_m": 1.5,
+          "z_top_m": 37.0,
+          "rise_s": 10.0,
+          "hold_s": 6.0,
+          "descend_s": 10.0,
+          "rest_s": 5.0,
+          "spin_period_s": 20.0,
+          "spin_direction": "ccw",
+          "cycle_s": 31.0
+        },
+        "pad": "PN4",
+        "envelope_R_m": 5.5,
+        "envelope_H_m": 48.0
+      },
+      "G01": {
+        "kind": "G",
+        "params": {
+          "width_m": 36.0,
+          "depth_m": 6.0,
+          "arches": 5,
+          "towers": 4,
+          "tower_height_m": 16.0,
+          "spire": "onion",
+          "arch_clear_height_m": 5.5
+        },
+        "position": {
+          "x": 0.0,
+          "y": -121.0,
+          "rot_deg": 270.0
+        }
+      },
+      "V01": {
+        "kind": "V",
+        "params": {
+          "length_m": 24.0,
+          "width_m": 12.0,
+          "storeys": 2,
+          "roof": "hip",
+          "bays": 8,
+          "eave_height_m": 7.2
+        },
+        "position": {
+          "x": -36.0,
+          "y": -108.0,
+          "rot_deg": 0.0
+        }
+      },
+      "F01": {
+        "kind": "F",
+        "params": {
+          "basin_diameter_m": 14.0,
+          "tiers": 3,
+          "jets": 16,
+          "basin_wall_m": 0.6
+        },
+        "position": {
+          "x": 0.0,
+          "y": -60.0,
+          "rot_deg": 0.0
+        }
+      },
+      "M01": {
+        "kind": "M",
+        "params": {
+          "height_m": 22.0,
+          "base_m": 4.5,
+          "clock_faces": 2,
+          "tiers": 3,
+          "spire": "cone"
+        },
+        "position": {
+          "x": 34.0,
+          "y": -104.0,
+          "rot_deg": 0.0
+        }
+      },
+      "K01": {
+        "kind": "K",
+        "params": {
+          "length_m": 4.5,
+          "width_m": 3.0,
+          "eave_height_m": 2.8,
+          "roof": "cone",
+          "windows": 1
+        },
+        "position": {
+          "x": -9.5,
+          "y": -92.0,
+          "rot_deg": 0.0
+        }
+      },
+      "K02": {
+        "kind": "K",
+        "params": {
+          "length_m": 6.0,
+          "width_m": 3.0,
+          "eave_height_m": 3.0,
+          "roof": "gable",
+          "windows": 2
+        },
+        "position": {
+          "x": 9.5,
+          "y": -96.0,
+          "rot_deg": 180.0
+        }
+      },
+      "K03": {
+        "kind": "K",
+        "params": {
+          "length_m": 4.5,
+          "width_m": 3.0,
+          "eave_height_m": 3.0,
+          "roof": "awning",
+          "windows": 3,
+          "awning_stripes": 7
+        },
+        "position": {
+          "x": 67.0,
+          "y": 42.0,
+          "rot_deg": 0.0
+        }
+      },
+      "K04": {
+        "kind": "K",
+        "params": {
+          "length_m": 5.5,
+          "width_m": 4.0,
+          "eave_height_m": 3.0,
+          "roof": "awning",
+          "windows": 2,
+          "awning_stripes": 9
+        },
+        "position": {
+          "x": -67.0,
+          "y": 58.0,
+          "rot_deg": 180.0
+        }
+      },
+      "K05": {
+        "kind": "K",
+        "params": {
+          "length_m": 6.0,
+          "width_m": 3.0,
+          "eave_height_m": 2.8,
+          "roof": "gable",
+          "windows": 3
+        },
+        "position": {
+          "x": 34.0,
+          "y": 89.0,
+          "rot_deg": 90.0
+        }
+      },
+      "L01": {
+        "kind": "L",
+        "params": {
+          "semi_axis_x_m": 40.0,
+          "semi_axis_y_m": 26.0,
+          "water_level_m": -0.4,
+          "bottom_m": -1.6,
+          "island_radius_m": 10.0,
+          "island_top_m": 0.05,
+          "edging": "stone"
+        },
+        "position": {
+          "x": 0.0,
+          "y": 20.0,
+          "rot_deg": 0.0
+        }
+      },
+      "B01": {
+        "kind": "B",
+        "params": {
+          "span_m": 16.0,
+          "deck_width_m": 3.5,
+          "form": "arch",
+          "rise_m": 1.6,
+          "rail_posts_per_side": 9
+        },
+        "position": {
+          "x": 0.0,
+          "y": 2.0,
+          "rot_deg": 90.0
+        }
+      },
+      "B02": {
+        "kind": "B",
+        "params": {
+          "span_m": 16.0,
+          "deck_width_m": 4.0,
+          "form": "beam-3span",
+          "piers": 2,
+          "rail_posts_per_side": 11
+        },
+        "position": {
+          "x": 0.0,
+          "y": 38.0,
+          "rot_deg": 90.0
+        }
+      },
+      "P01": {
+        "kind": "P",
+        "params": {
+          "sides": 8,
+          "diameter_m": 8.0,
+          "columns": 8,
+          "roof": "ogee",
+          "platform_height_m": 0.9,
+          "height_m": 7.5
+        },
+        "position": {
+          "x": 0.0,
+          "y": 20.0,
+          "rot_deg": 0.0
+        }
+      },
+      "H01": {
+        "kind": "H",
+        "params": {
+          "length_m": 22.0,
+          "width_m": 16.0,
+          "storeys": 1,
+          "roof": "gable",
+          "bays": 6,
+          "terrace_depth_m": 5.0,
+          "eave_height_m": 4.2
+        },
+        "position": {
+          "x": -58.0,
+          "y": 20.0,
+          "rot_deg": 0.0
+        }
+      }
+    },
+    "pads": {
+      "PE1": {
+        "x": 106.5,
+        "y": 66.0,
+        "facing_deg": 180.0,
+        "unit": "R01"
+      },
+      "PE2": {
+        "x": 91.0,
+        "y": 18.0,
+        "facing_deg": 180.0,
+        "unit": "R02"
+      },
+      "PE3": {
+        "x": 103.0,
+        "y": -32.0,
+        "facing_deg": 180.0,
+        "unit": "R03"
+      },
+      "PE4": {
+        "x": 50.0,
+        "y": -26.0,
+        "facing_deg": 0.0,
+        "unit": "R04"
+      },
+      "PW1": {
+        "x": -93.0,
+        "y": 66.0,
+        "facing_deg": 0.0,
+        "unit": "R05"
+      },
+      "PW2": {
+        "x": -91.5,
+        "y": 18.0,
+        "facing_deg": 0.0,
+        "unit": "R06"
+      },
+      "PW3": {
+        "x": -97.5,
+        "y": -32.0,
+        "facing_deg": 0.0,
+        "unit": "R07"
+      },
+      "PW4": {
+        "x": -50.0,
+        "y": -26.0,
+        "facing_deg": 180.0,
+        "unit": "R08"
+      },
+      "PN1": {
+        "x": -66.0,
+        "y": 107.5,
+        "facing_deg": 270.0,
+        "unit": "R09"
+      },
+      "PN2": {
+        "x": -22.0,
+        "y": 116.0,
+        "facing_deg": 270.0,
+        "unit": "R10"
+      },
+      "PN3": {
+        "x": 22.0,
+        "y": 110.0,
+        "facing_deg": 270.0,
+        "unit": "R11"
+      },
+      "PN4": {
+        "x": 66.0,
+        "y": 106.5,
+        "facing_deg": 270.0,
+        "unit": "R12"
+      }
+    },
+    "paths": [
+      {
+        "id": "E01",
+        "kind": "segment",
+        "x1": 0,
+        "y1": -117,
+        "x2": 0,
+        "y2": -78,
+        "width": 8.0,
+        "note": "主入口大道"
+      },
+      {
+        "id": "E02",
+        "kind": "ring",
+        "cx": 0,
+        "cy": -60,
+        "r": 18.0,
+        "width": 6.0,
+        "note": "喷泉环形广场路"
+      },
+      {
+        "id": "E03",
+        "kind": "segment",
+        "x1": -75.0,
+        "y1": -60,
+        "x2": -18.0,
+        "y2": -60,
+        "width": 6.0,
+        "note": "环园大道 南西段"
+      },
+      {
+        "id": "E04",
+        "kind": "segment",
+        "x1": 18.0,
+        "y1": -60,
+        "x2": 75.0,
+        "y2": -60,
+        "width": 6.0,
+        "note": "环园大道 南东段"
+      },
+      {
+        "id": "E05",
+        "kind": "segment",
+        "x1": 75.0,
+        "y1": -60,
+        "x2": 75.0,
+        "y2": 95,
+        "width": 6.0,
+        "note": "环园大道 东段"
+      },
+      {
+        "id": "E06",
+        "kind": "segment",
+        "x1": 75.0,
+        "y1": 95,
+        "x2": -75.0,
+        "y2": 95,
+        "width": 6.0,
+        "note": "环园大道 北段"
+      },
+      {
+        "id": "E07",
+        "kind": "segment",
+        "x1": -75.0,
+        "y1": 95,
+        "x2": -75.0,
+        "y2": -60,
+        "width": 6.0,
+        "note": "环园大道 西段"
+      },
+      {
+        "id": "E08",
+        "kind": "segment",
+        "x1": 0,
+        "y1": -42,
+        "x2": 0,
+        "y2": -6,
+        "width": 4.0,
+        "note": "南轴步道（至 B01 南桥头）"
+      },
+      {
+        "id": "E09",
+        "kind": "segment",
+        "x1": 0,
+        "y1": 46,
+        "x2": 0,
+        "y2": 95,
+        "width": 4.0,
+        "note": "北轴步道（自 B02 北桥头）"
+      },
+      {
+        "id": "E10",
+        "kind": "segment",
+        "x1": -75.0,
+        "y1": 20,
+        "x2": -66,
+        "y2": 20,
+        "width": 3.0,
+        "note": "餐厅支路"
+      },
+      {
+        "id": "E11",
+        "kind": "segment",
+        "x1": 0,
+        "y1": -117,
+        "x2": 0,
+        "y2": -121,
+        "width": 8.0,
+        "note": "门楼通道"
+      }
+    ]
+  },
+  "r07_period_original_s": 32.0,
+  "conventions": {
+    "angle_sign": "main_angle/spin/disc/sub 角：ccw 为正。竖轴设施绕局部+Z（俯视逆时针为正）；摩天轮绕局部+X（指向入口、即指向观看者，自入口看逆时针为正）；TC 子盘角为相对主盘角。",
+    "swing_sign": "PS swing_angle 正值=船体偏向局部+X；FB swing_angle 正值=转盘偏向局部+Y；θ(t)=A·sin(2πt/T)。",
+    "time": "t=(frame-1)/24；DT/RT 高度为座底/舱底 z，分段线性循环。",
+    "sheets_state": "图纸为原始状态（R07 周期为 r07_period_original_s）；units 为应用 CO-01 后的真值；original_state 为变更前。"
+  },
+  "checks": {
+    "min_envelope_gap_m": 14.94,
+    "min_envelope_path_clear_m": 3.0,
+    "note": "答案键状态（已应用 CO-01）下：包络两两净距≥3.0 m、包络与非本设施步道边缘≥1.5 m、园区建筑离包络≥6 m，均已断言。"
+  },
+  "motion_samples": {
+    "R01": {
+      "1": {
+        "main_angle_deg": -0.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": -15.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "133": {
+        "main_angle_deg": -33.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "241": {
+        "main_angle_deg": -60.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "361": {
+        "main_angle_deg": -90.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "487": {
+        "main_angle_deg": -121.5,
+        "gondola_pitch_deg": 0.0
+      },
+      "600": {
+        "main_angle_deg": -149.75,
+        "gondola_pitch_deg": 0.0
+      },
+      "720": {
+        "main_angle_deg": -179.75,
+        "gondola_pitch_deg": 0.0
+      }
+    },
+    "R02": {
+      "1": {
+        "main_angle_deg": 0.0,
+        "horse_bob_phase_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": 45.0,
+        "horse_bob_phase_deg": 180.0
+      },
+      "133": {
+        "main_angle_deg": 99.0,
+        "horse_bob_phase_deg": 396.0
+      },
+      "241": {
+        "main_angle_deg": 180.0,
+        "horse_bob_phase_deg": 720.0
+      },
+      "361": {
+        "main_angle_deg": 270.0,
+        "horse_bob_phase_deg": 1080.0
+      },
+      "487": {
+        "main_angle_deg": 364.5,
+        "horse_bob_phase_deg": 1458.0
+      },
+      "600": {
+        "main_angle_deg": 449.25,
+        "horse_bob_phase_deg": 1797.0
+      },
+      "720": {
+        "main_angle_deg": 539.25,
+        "horse_bob_phase_deg": 2157.0
+      }
+    },
+    "R03": {
+      "1": {
+        "swing_angle_deg": 0.0
+      },
+      "61": {
+        "swing_angle_deg": 60.622
+      },
+      "133": {
+        "swing_angle_deg": -69.617
+      },
+      "241": {
+        "swing_angle_deg": 60.622
+      },
+      "361": {
+        "swing_angle_deg": -0.0
+      },
+      "487": {
+        "swing_angle_deg": -66.574
+      },
+      "600": {
+        "swing_angle_deg": 61.806
+      },
+      "720": {
+        "swing_angle_deg": -2.443
+      }
+    },
+    "R04": {
+      "1": {
+        "gondola_z_m": 1.0
+      },
+      "61": {
+        "gondola_z_m": 10.464
+      },
+      "133": {
+        "gondola_z_m": 21.821
+      },
+      "241": {
+        "gondola_z_m": 38.857
+      },
+      "361": {
+        "gondola_z_m": 54.0
+      },
+      "487": {
+        "gondola_z_m": 14.25
+      },
+      "600": {
+        "gondola_z_m": 1.0
+      },
+      "720": {
+        "gondola_z_m": 1.0
+      }
+    },
+    "R05": {
+      "1": {
+        "main_angle_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": 112.5
+      },
+      "133": {
+        "main_angle_deg": 247.5
+      },
+      "241": {
+        "main_angle_deg": 450.0
+      },
+      "361": {
+        "main_angle_deg": 675.0
+      },
+      "487": {
+        "main_angle_deg": 911.25
+      },
+      "600": {
+        "main_angle_deg": 1123.125
+      },
+      "720": {
+        "main_angle_deg": 1348.125
+      }
+    },
+    "R06": {
+      "1": {
+        "main_angle_deg": -0.0,
+        "sub_rel_angle_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": -75.0,
+        "sub_rel_angle_deg": 180.0
+      },
+      "133": {
+        "main_angle_deg": -165.0,
+        "sub_rel_angle_deg": 396.0
+      },
+      "241": {
+        "main_angle_deg": -300.0,
+        "sub_rel_angle_deg": 720.0
+      },
+      "361": {
+        "main_angle_deg": -450.0,
+        "sub_rel_angle_deg": 1080.0
+      },
+      "487": {
+        "main_angle_deg": -607.5,
+        "sub_rel_angle_deg": 1458.0
+      },
+      "600": {
+        "main_angle_deg": -748.75,
+        "sub_rel_angle_deg": 1797.0
+      },
+      "720": {
+        "main_angle_deg": -898.75,
+        "sub_rel_angle_deg": 2157.0
+      }
+    },
+    "R07": {
+      "1": {
+        "main_angle_deg": -0.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": -25.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "133": {
+        "main_angle_deg": -55.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "241": {
+        "main_angle_deg": -100.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "361": {
+        "main_angle_deg": -150.0,
+        "gondola_pitch_deg": 0.0
+      },
+      "487": {
+        "main_angle_deg": -202.5,
+        "gondola_pitch_deg": 0.0
+      },
+      "600": {
+        "main_angle_deg": -249.583,
+        "gondola_pitch_deg": 0.0
+      },
+      "720": {
+        "main_angle_deg": -299.583,
+        "gondola_pitch_deg": 0.0
+      }
+    },
+    "R08": {
+      "1": {
+        "swing_angle_deg": 0.0,
+        "disc_angle_deg": -0.0
+      },
+      "61": {
+        "swing_angle_deg": 75.0,
+        "disc_angle_deg": -150.0
+      },
+      "133": {
+        "swing_angle_deg": -23.176,
+        "disc_angle_deg": -330.0
+      },
+      "241": {
+        "swing_angle_deg": -0.0,
+        "disc_angle_deg": -600.0
+      },
+      "361": {
+        "swing_angle_deg": 0.0,
+        "disc_angle_deg": -900.0
+      },
+      "487": {
+        "swing_angle_deg": 11.733,
+        "disc_angle_deg": -1215.0
+      },
+      "600": {
+        "swing_angle_deg": 1.963,
+        "disc_angle_deg": -1497.5
+      },
+      "720": {
+        "swing_angle_deg": -1.963,
+        "disc_angle_deg": -1797.5
+      }
+    },
+    "R09": {
+      "1": {
+        "main_angle_deg": -0.0,
+        "horse_bob_phase_deg": 0.0
+      },
+      "61": {
+        "main_angle_deg": -64.286,
+        "horse_bob_phase_deg": 128.571
+      },
+      "133": {
+        "main_angle_deg": -141.429,
+        "horse_bob_phase_deg": 282.857
+      },
+      "241": {
+        "main_angle_deg": -257.143,
+        "horse_bob_phase_deg": 514.286
+      },
+      "361": {
+        "main_angle_deg": -385.714,
+        "horse_bob_phase_deg": 771.429
+      },
+      "487": {
+        "main_angle_deg": -520.714,
+        "horse_bob_phase_deg": 1041.429
+      },
+      "600": {
+        "main_angle_deg": -641.786,
+        "horse_bob_phase_deg": 1283.571
+      },
+      "720": {
+        "main_angle_deg": -770.357,
+        "horse_bob_phase_deg": 1540.714
+      }
+    },
+    "R10": {
+      "1": {
+        "main_angle_deg": -0.0
+      },
+      "61": {
+        "main_angle_deg": -90.0
+      },
+      "133": {
+        "main_angle_deg": -198.0
+      },
+      "241": {
+        "main_angle_deg": -360.0
+      },
+      "361": {
+        "main_angle_deg": -540.0
+      },
+      "487": {
+        "main_angle_deg": -729.0
+      },
+      "600": {
+        "main_angle_deg": -898.5
+      },
+      "720": {
+        "main_angle_deg": -1078.5
+      }
+    },
+    "R11": {
+      "1": {
+        "main_angle_deg": 0.0,
+        "sub_rel_angle_deg": -0.0
+      },
+      "61": {
+        "main_angle_deg": 81.818,
+        "sub_rel_angle_deg": -180.0
+      },
+      "133": {
+        "main_angle_deg": 180.0,
+        "sub_rel_angle_deg": -396.0
+      },
+      "241": {
+        "main_angle_deg": 327.273,
+        "sub_rel_angle_deg": -720.0
+      },
+      "361": {
+        "main_angle_deg": 490.909,
+        "sub_rel_angle_deg": -1080.0
+      },
+      "487": {
+        "main_angle_deg": 662.727,
+        "sub_rel_angle_deg": -1458.0
+      },
+      "600": {
+        "main_angle_deg": 816.818,
+        "sub_rel_angle_deg": -1797.0
+      },
+      "720": {
+        "main_angle_deg": 980.455,
+        "sub_rel_angle_deg": -2157.0
+      }
+    },
+    "R12": {
+      "1": {
+        "cabin_z_m": 1.5,
+        "spin_angle_deg": 0.0
+      },
+      "61": {
+        "cabin_z_m": 10.375,
+        "spin_angle_deg": 45.0
+      },
+      "133": {
+        "cabin_z_m": 21.025,
+        "spin_angle_deg": 99.0
+      },
+      "241": {
+        "cabin_z_m": 37.0,
+        "spin_angle_deg": 180.0
+      },
+      "361": {
+        "cabin_z_m": 37.0,
+        "spin_angle_deg": 270.0
+      },
+      "487": {
+        "cabin_z_m": 21.913,
+        "spin_angle_deg": 364.5
+      },
+      "600": {
+        "cabin_z_m": 5.198,
+        "spin_angle_deg": 449.25
+      },
+      "720": {
+        "cabin_z_m": 1.5,
+        "spin_angle_deg": 539.25
+      }
+    }
+  }
+}

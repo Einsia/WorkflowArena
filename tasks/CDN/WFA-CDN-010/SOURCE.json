@@ -1,0 +1,31 @@
+{
+  "task_id": "WFA-CDN-010",
+  "files": [
+    {
+      "file": "environment/input/report.pdf",
+      "sha256": "a760f56d24bf1795e743737f4393e5cc2dbc3cbdf6a4f6288a8b9da0e108f518",
+      "url": "https://www.csb.gov/assets/1/6/didion_milling_report_for_public_release.pdf",
+      "title": "U.S. CSB Investigation Report 'Fatal Combustible Dust Explosions at Didion Milling Inc.', No. 2017-07-I-WI, published Dec 2023, 196 PDF pages"
+    },
+    {
+      "file": "environment/input/appendix-e.pdf",
+      "sha256": "28ca94249a2d05c9c4c67a8f86b105638ab83703f14286efe8f3237a21f900d2",
+      "url": "https://csb.gov/assets/1/20/didion_appendix_e_abs_blast_analysis_final_report_r0_9-19-182.pdf",
+      "title": "Appendix E: ABS Group 'Didion Milling Explosion Assessment' Final Report R0, 19 Sep 2018, 109 pages (prepared for CSB)"
+    },
+    {
+      "file": "environment/input/appendix-g.pdf",
+      "sha256": "a445ff099b9cd2cbbfa6b4b79b795a9986b973ef2142403515536b34d84ec9b7",
+      "url": "https://www.csb.gov/assets/1/20/didion_appendix_g_dust_explosibility_testing_report.pdf",
+      "title": "Appendix G: ioKinetic 'Combustible Dust Test Report — Didion Milling Dusts', ioK18065-2, 10 Aug 2018, 84 pages (prepared for CSB)"
+    },
+    {
+      "file": "environment/input/news-release.html",
+      "sha256": "7ba9d0ec1fd9dc33d0500c6b0a1c41e85f43fc780e2ba22441cce0e4fcacf0c9",
+      "url": "https://www.csb.gov/csb-releases-final-investigation-report-for-fatal-dust-explosion-and-fire-at-didion-milling-facility-in-cambria-wisconsin/",
+      "title": "CSB news release, 6 Dec 2023"
+    }
+  ],
+  "modifications": "File names normalized for the task; source contents unchanged.",
+  "license": "U.S. federal investigation report; separately authored appendices retain their original rights notices"
+}

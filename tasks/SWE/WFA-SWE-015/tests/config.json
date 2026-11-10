@@ -1,0 +1,36 @@
+{
+ "cwd": "/app",
+ "runner": "pytest",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 2400,
+   "framework": "pytest",
+   "runner": "pytest",
+   "command": [
+    "bash", "-lc",
+    "cd /app && /opt/venv/bin/python -m pytest tests/test_optimizer.py tests/test_executor.py -q --no-header -p no:cacheprovider --report-log=/logs/verifier/F1.jsonl > /logs/verifier/F1.pytest.txt 2>&1; /opt/venv/bin/python -I /tests/leafreport.py /logs/verifier/F1.jsonl 2>/logs/verifier/F1.counts.txt | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the optimizer's own acceptance surface: the data-driven fixture files the verifier restored, scored one case at a time, plus the exported-API checks the fixture format cannot express. The leaf report goes to stdout because that is what grade.py parses; report_file is the same content, kept as evidence."
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 2400,
+   "framework": "pytest",
+   "runner": "pytest",
+   "command": [
+    "bash", "-lc",
+    "cd /app && /opt/venv/bin/python -m pytest tests/ --ignore=tests/test_optimizer.py --ignore=tests/test_executor.py -q --no-header -p no:cacheprovider --report-log=/logs/verifier/P2P.jsonl > /logs/verifier/P2P.pytest.txt 2>&1; /opt/venv/bin/python -I /tests/leafreport.py /logs/verifier/P2P.jsonl 2>/logs/verifier/P2P.counts.txt | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "the rest of the suite: parser, generator, every dialect, lineage, schema and the SQL builders all call into the optimizer. Green on the reference implementation apart from one recorded pre-existing failure, and scored for regressions"
+  }
+ ],
+ "note": "pytest is run with --report-log and the log is rewritten into the one-line-per-test form grade.py parses, on stdout. Two reasons for the rewrite: passing `subTest` cases never appear in -v output, so one fixture file would be worth a single unit instead of its hundreds of cases; and grade.py keys verdicts on the bare test name, which is not unique across this suite's files. grade.py itself is the batch template, unmodified. Every command uses the absolute interpreter path: `bash -lc` re-runs the login profile and must not be relied on for PATH."
+}

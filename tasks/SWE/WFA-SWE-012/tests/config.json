@@ -1,0 +1,37 @@
+{
+ "cwd": "/app",
+ "runner": "cargo",
+ "groups": [
+  {
+   "id": "F1",
+   "role": "required",
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "cargo",
+   "runner": "cargo",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && { cargo test --offline --locked -p nu-cli --test tests -- --test-threads 8 completions 2>&1 | sed -E 's/^test ([^ ]*)/test nucli__\\1/' ; cargo test --offline --locked -p nu --test tests -- --test-threads 8 repl::test_commandline integration::completions 2>&1 | sed -E 's/^test ([^ ]*)/test nuroot__\\1/' ; } | sed -E '/^test /s/::/__/g' | tee /logs/verifier/F1.txt"
+   ],
+   "report_file": "/logs/verifier/F1.txt",
+   "note": "the completion engine's acceptance surface: the nu-cli completion suite plus the commandline-complete behaviour driven through the shell, both restored by the verifier"
+  },
+  {
+   "id": "P2P",
+   "role": "regression",
+   "regression": true,
+   "weight": 1,
+   "timeout_sec": 3000,
+   "framework": "cargo",
+   "runner": "cargo",
+   "command": [
+    "bash",
+    "-c",
+    "cd /app && { cargo test --offline --locked -p nu-lsp --lib -- --test-threads 8 2>&1 | sed -E 's/^test ([^ ]*)/test nulsp__\\1/' ; cargo test --offline --locked -p nu-cli --test tests -- --test-threads 8 --skip completions 2>&1 | sed -E 's/^test ([^ ]*)/test nucliother__\\1/' ; } | sed -E '/^test /s/::/__/g' | tee /logs/verifier/P2P.txt"
+   ],
+   "report_file": "/logs/verifier/P2P.txt",
+   "note": "the language server's completion/hover/goto features, which consume CompletionEngine, plus nu-cli's non-completion tests; green on the reference implementation and scored for regressions"
+  }
+ ]
+}

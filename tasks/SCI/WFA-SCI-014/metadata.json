@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-014",
+  "domain": "SCI",
+  "task_form": "SCI-REPRO",
+  "title": "The momentum-mixing Hatsugai–Kohmoto model: approaching Hubbard physics from a solvable model",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "journal article + Zenodo Source Data",
+    "url": "https://doi.org/10.1038/s41567-025-03095-1",
+    "revision": "Zenodo 10.5281/zenodo.17096693 v1 (Mai_etal_twist_Hubbard_HK.zip, md5 65691e0f6bd06b0e41f5665b69513bc2)",
+    "license": "Source Data CC-BY-4.0; author code for 4-MMHK not public ('available upon request'); 16-MMHK ED via public quantum_basis"
+  }
+}

@@ -1,0 +1,87 @@
+[
+ {
+  "id": "M01",
+  "question": "Give the distribution of answers to `mae_di_wnaf` across all 18 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (count each agreement once for every option included in its answer).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M02",
+  "question": "Give the distribution of answers to `mae_co_pandemic_covid` across all 18 agreements as an object mapping every standard option of that deal point (include options with count 0) to the number of agreements (each agreement counts once).",
+  "answer_type": "object option->integer"
+ },
+ {
+  "id": "M03",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `nc_pandemic_carveout` = «No» AND NOT (`oc_efforts_standard` = «Reasonable best efforts»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M04",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `oc_consent_standard` = «Consent may not be unreasonably withheld, conditioned or delayed» AND `nc_consent_standard` = «Consent may not be unreasonably withheld, conditioned or delayed»? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M05",
+  "question": "How many of the 18 agreements satisfy ALL of the following: `mae_co_pandemic` = «Yes» AND NOT (`mae_di_wnaf` includes «\"act of God\"»)? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M06",
+  "question": "List every agreement that satisfies: `mae_co_pandemic_measures` = «Yes» AND `mae_co_wnaf_scope` includes «\"act of God\"». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M07",
+  "question": "List every agreement that satisfies: `oc_pandemic_carveout` = «No» AND `nc_consent_application` = «Applies to all negative covenants». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M08",
+  "question": "List every agreement that satisfies: `mae_di_economic` = «No» AND `mae_co_required_actions` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M09",
+  "question": "List every agreement that satisfies: `mae_co_economic` = «Yes» AND `mae_di_economic` = «No». If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M10",
+  "question": "List every agreement that satisfies: NOT (`mae_di_pandemic` gives the same answer as `mae_di_economic`). If no agreement qualifies, answer with an empty list [].",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M11",
+  "question": "Which agreement(s) have the lowest value of the number of options selected for `mae_co_wnaf_scope` (not counting 'No')? List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M12",
+  "question": "For `mae_co_pandemic_covid`, list every agreement whose answer is shared by at most 3 of the 18 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M13",
+  "question": "For `nc_consent_standard`, list every agreement whose answer is shared by at most 3 of the 18 agreements (counting the agreement itself).",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M14",
+  "question": "Consider the deal points `mae_co_pandemic`, `mae_co_pandemic_covid`, `mae_co_pandemic_measures`, `mae_di_pandemic`, `mae_co_economic`, `mae_di_economic`, `mae_co_wnaf_scope`, `mae_di_wnaf`, `mae_co_required_actions`, `mae_co_prohibited_actions`, `nc_pandemic_carveout`, `oc_past_practice`, `oc_efforts_standard`, `oc_consent_standard`, `nc_consent_standard`, `nc_consent_application`. For each of them, take the most common answer across the 18 agreements (complete answer; for each listed deal point the most common answer is unique). List every agreement whose answer differs from that most common answer on at least 11 of these deal points.",
+  "answer_type": "list of agreement ids"
+ },
+ {
+  "id": "M15",
+  "question": "Considering only `oc_pandemic_carveout`, `oc_past_practice`, `oc_consent_standard`: group together agreements whose answers are identical on every one of these deal points. Report every group with two or more agreements, as a list of lists of agreement ids (agreements with a unique combination are omitted).",
+  "answer_type": "list of lists of agreement ids"
+ },
+ {
+  "id": "M16",
+  "question": "Considering only `mae_co_pandemic_measures`, `mae_di_pandemic`, `mae_co_prohibited_actions`: how many distinct answer combinations occur among the 18 agreements? Answer with an integer.",
+  "answer_type": "integer"
+ },
+ {
+  "id": "M17",
+  "question": "Which other agreement(s) give the same answer as A01 on the largest number of the 17 deal points in the questionnaire? (A multi-select answer counts as the same only if the full set matches.) List all tied agreements.",
+  "answer_type": "list of agreement ids"
+ }
+]

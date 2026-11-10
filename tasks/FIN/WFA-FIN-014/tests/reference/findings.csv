@@ -1,0 +1,12 @@
+entity,month,error_type,reference
+P,2026-11,unrecorded_bank_fee,BKF-P-2026-11
+P,2026-10,duplicate_invoice,PI-P-00168
+S1,2026-10,transposition,RC-S1-00456
+S1,2026-11,misclassification,PI-S1-00174
+S1,2026-12,unrecorded_bank_interest,BKR-S1-2026-12
+S2,2026-10,missing_accrual,ACR-S2-2026-10
+S2,2026-12,missing_ic_entry,MF-S2-2026-12
+S5,2026-10,missing_depreciation,FA-S5-022
+S5,2026-11,missing_depreciation,FA-S5-022
+S5,2026-12,missing_depreciation,FA-S5-022
+S5,2026-12,missing_prepaid_amortization,PPD-S5-2026-12

@@ -1,0 +1,10 @@
+# rank 1 unmapped (T143_S18.M01 src=T143_U07.M37)
+# rank 2 unmapped (T143_S18.M02 src=T143_U07.M85)
+# rank 3 unmapped (T143_S18.M03 src=T143_U23.M03)
+# rank 4 unmapped (T143_S18.M04 src=T143_U07.M16)
+# rank 5 unmapped (T143_S18.M05 src=T143_U07.M29)
+6 C01_D0275
+# rank 7 unmapped (T143_S18.M07 src=T143_U05.M21)
+# rank 8 unmapped (T143_S18.M08 src=T143_U07.M57)
+# rank 9 unmapped (T143_S18.M09 src=T143_U07.M55)
+# rank 10 unmapped (T143_S18.M10 src=T143_U07.M39)

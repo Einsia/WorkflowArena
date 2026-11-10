@@ -1,0 +1,19 @@
+{
+  "kind": "lean-blueprint",
+  "import": "PFR.WeakPFR",
+  "build_targets": [
+    "PFR.WeakPFR"
+  ],
+  "names": [
+    "weak_PFR_int_sumset"
+  ],
+  "ref_types_file": "/opt/wfs/stub_ref.json",
+  "collect": {
+    "dirs": [
+      "PFR"
+    ],
+    "target_file": "PFR/WeakPFR.lean",
+    "pristine_tar": "/opt/wfs/start-src.tar"
+  },
+  "build_timeout": 10800
+}

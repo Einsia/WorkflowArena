@@ -1,0 +1,5 @@
+statsmodels/tsa/tests/results/fit_ets.R
+statsmodels/tsa/tests/results/fit_ets_results.json
+statsmodels/tsa/tests/results/fit_ets_results_nonseasonal.json
+statsmodels/tsa/tests/results/fit_ets_results_seasonal.json
+statsmodels/tsa/tests/test_exponential_smoothing.py

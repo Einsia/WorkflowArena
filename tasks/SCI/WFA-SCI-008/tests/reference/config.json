@@ -1,0 +1,59 @@
+{
+  "task_id": "WFA-SCI-008",
+  "tracks": [
+    {
+      "name": "logP",
+      "submission_file": "logP-prediction.csv",
+      "format": "sampl",
+      "value_index": 1,
+      "truth": "reference/truth_logP.csv",
+      "required_ids": "all_truth",
+      "required_sections": [
+        "Name",
+        "Method"
+      ],
+      "field": "reference/field.csv",
+      "field_track": "logP",
+      "primary": "RMSE",
+      "lower_is_better": true,
+      "extra_metrics": [
+        "MAE",
+        "ME",
+        "R2",
+        "slope",
+        "kendall_tau"
+      ]
+    }
+  ],
+  "controls": {
+    "positive": [
+      {
+        "track": "logP",
+        "entry_id": "hmz0n",
+        "dir": "controls/positive/hmz0n",
+        "tolerance": 1e-06
+      },
+      {
+        "track": "logP",
+        "entry_id": "pcv32",
+        "dir": "controls/positive/pcv32",
+        "tolerance": 1e-06
+      },
+      {
+        "track": "logP",
+        "entry_id": "5585v",
+        "dir": "controls/positive/5585v",
+        "tolerance": 1e-06
+      }
+    ],
+    "negative": {
+      "logP": {
+        "constant": 2.0,
+        "random_range": [
+          -1.0,
+          6.0
+        ]
+      }
+    }
+  }
+}

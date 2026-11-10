@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "WFA-SCI-005",
+  "domain": "SCI",
+  "task_form": "SCI-PRED",
+  "title": "Predicting scalar coupling constants in molecules (NMR J-coupling)",
+  "budget_seconds": 14400,
+  "source": {
+    "type": "Kaggle scientific competition",
+    "url": "https://www.kaggle.com/c/champs-scalar-coupling ; https://github.com/larsbratholm/champs_kaggle ; https://osf.io/46dpj",
+    "revision": "organizer release (OSF kaggle_dataset.tar.gz sha256 0b1201fa...ac86f; GitHub analysis/ data)",
+    "license": "CC-BY (competition data; version not stated in the competition rules); MIT (organizer code)",
+    "license_evidence": "https://www.kaggle.com/c/champs-scalar-coupling/rules"
+  },
+  "evaluation": {
+    "continuous_score": "100 * fraction of reference scores strictly worse than the submission under the same organizer-half-split log-MAE",
+    "success_field": "reward.json.full_success",
+    "acceptance_contract": "tests/acceptance.json",
+    "criterion": "Valid submission with required coverage; fixed task metric meets its reference baseline, including ties.",
+    "reference_population": "382 scored submissions from the frozen organizer top-400 table, evaluated on the same stratified half split"
+  }
+}

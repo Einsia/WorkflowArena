@@ -1,0 +1,150 @@
+{
+ "agreements": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14",
+  "A15",
+  "A16",
+  "A17",
+  "A18"
+ ],
+ "deal_points": {
+  "mae_co_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_pandemic_covid": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_pandemic_measures": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_pandemic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_di_economic": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_wnaf_scope": {
+   "options": [
+    "\"act of God\"",
+    "Natural disaster",
+    "No",
+    "War or terrorism",
+    "force majeure"
+   ],
+   "multi": true
+  },
+  "mae_di_wnaf": {
+   "options": [
+    "\"act of God\"",
+    "Natural disaster",
+    "No",
+    "War or terrorism",
+    "force majeure"
+   ],
+   "multi": true
+  },
+  "mae_co_required_actions": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "mae_co_prohibited_actions": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "oc_pandemic_carveout": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "nc_pandemic_carveout": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "oc_past_practice": {
+   "options": [
+    "No",
+    "Yes"
+   ],
+   "multi": false
+  },
+  "oc_efforts_standard": {
+   "options": [
+    "Commercially reasonable efforts",
+    "Flat covenant (no efforts standard)",
+    "Reasonable best efforts"
+   ],
+   "multi": false
+  },
+  "oc_consent_standard": {
+   "options": [
+    "Consent may not be unreasonably withheld, conditioned or delayed",
+    "Flat consent"
+   ],
+   "multi": false
+  },
+  "nc_consent_standard": {
+   "options": [
+    "Consent may not be unreasonably withheld, conditioned or delayed",
+    "Flat consent"
+   ],
+   "multi": false
+  },
+  "nc_consent_application": {
+   "options": [
+    "Applies only to specified negative covenants",
+    "Applies to all negative covenants"
+   ],
+   "multi": false
+  }
+ }
+}
