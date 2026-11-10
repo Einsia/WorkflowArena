@@ -1,0 +1,75 @@
+{
+  "paper": {
+    "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+    "pdf_sha256": "624ab944aa778a949c1eb7e383fd6b977b815e9113c955063cd59ffca5323e13",
+    "kind": "paper_reported_aggregate"
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "path": "docs/assets/overview.png",
+      "caption": "Task coverage and representative deliverables.",
+      "source_sha256": "936d2e4b521f6cb92a33fd5a3122d681329dde93a451e20b699b412d640c0cd8"
+    },
+    {
+      "figure": 2,
+      "path": "docs/assets/construction.png",
+      "caption": "Benchmark construction and evaluation protocol.",
+      "source_sha256": "67f0a1c4437b97592a7ae459a41c18d07059ee812e870c4bc274a43ebd4f5469"
+    },
+    {
+      "figure": 3,
+      "path": "docs/assets/resolved-vs-tokens.png",
+      "caption": "Resolved rate versus mean tokens per task; input, output and cached input include main agents and workers.",
+      "source_sha256": "1077ab92a84353ae04db8883dd9e48d1ead1af289475a068e0641f399337902a"
+    },
+    {
+      "figure": 4,
+      "path": "docs/assets/resolved-vs-cost.png",
+      "caption": "Resolved rate versus estimated mean inference cost per task, using the paper's pricing snapshot.",
+      "source_sha256": "2d71ed3120fa550ced11c968db392ea91b8b9d0844aa16d5e572338f398c95d8"
+    },
+    {
+      "figure": 5,
+      "path": "docs/assets/workflow-and-workers.png",
+      "caption": "Workflow invocation frequency and worker invocations per Workflow at high effort.",
+      "source_sha256": "83723c9867f48c8d4ee571adbb1e94d140f168d9a8b6fd68e2bee2bca565282b"
+    },
+    {
+      "figure": 6,
+      "path": "docs/assets/workflow-distributions.png",
+      "caption": "Delegation frequency and size distributions, conditioned on nonempty tasks and Workflows.",
+      "source_sha256": "8dfe058493d6421f201892badd5694aa0f6bd86928a8c94484402fb7784db8f7"
+    },
+    {
+      "figure": 7,
+      "path": "docs/assets/effort-profiles.png",
+      "caption": "Delegation across reasoning effort settings.",
+      "source_sha256": "53c0b0a7cfe84fa2bcaa09330963002ecf9030553617d3a83aac27eeb0722b79"
+    },
+    {
+      "figure": 8,
+      "path": "docs/assets/domain-workflows.png",
+      "caption": "Delegation across eight domains and nine models, at max effort except Doubao at high.",
+      "source_sha256": "bf1f619187e300ae75cdbe823587ea0c62eb68dee2d59ffe30949bf541b789cb"
+    },
+    {
+      "figure": 9,
+      "path": "docs/assets/case-studies.png",
+      "caption": "Artifacts and workflows for three 3D construction tasks.",
+      "source_sha256": "074a42e471f5e2675f5fc96b2148512c73ff4ee8c880f1a4cfb2eafbd05c2a37"
+    },
+    {
+      "figure": 10,
+      "path": "docs/assets/score-vs-tokens.png",
+      "caption": "Continuous score versus mean tokens per task.",
+      "source_sha256": "5d4f6938f0c2f61603f30e786d764a74801d93f0b3ad092ee8420f4c8fe30496"
+    },
+    {
+      "figure": 11,
+      "path": "docs/assets/score-vs-cost.png",
+      "caption": "Continuous score versus estimated mean inference cost per task.",
+      "source_sha256": "9d31f584fe307d8705f937adf66ae6f2ddb95aa08a573da196465e29c447efd8"
+    }
+  ]
+}

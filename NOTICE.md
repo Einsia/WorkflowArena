@@ -2,7 +2,7 @@
 
 WorkflowArena combines benchmark task material with upstream software, scientific data, public records and media. Source-specific terms apply to those components; inclusion in this collection does not replace an upstream license or grant rights that the upstream publisher has not granted.
 
-Each task's `metadata.json` identifies its source. Additional attribution appears in `SOURCE.json`, `CREDITS`, `tests/provenance.json` and the task's supplied license files where applicable. The ledger under `provenance/licenses/` covers the OPS source records identified there, not the entire collection.
+Each task's `metadata.json` identifies its source. Additional attribution appears in `SOURCE.json`, `CREDITS`, `evaluation/tasks/<task-id>/provenance.json` and the task's supplied license files where applicable. The ledger under `benchmark/provenance/licenses/` covers the OPS source records identified there, not the entire collection.
 
 - MAUD contract data retains its CC BY 4.0 attribution.
 - CHAMPS competition data is identified as CC-BY by its competition rules; those rules do not specify a version. Organizer code retains its own license.

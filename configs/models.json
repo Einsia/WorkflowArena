@@ -1,0 +1,127 @@
+[
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "Claude Code",
+    "effort": "max"
+  },
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "Claude Code",
+    "effort": "high"
+  },
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "Claude Code",
+    "effort": "xhigh"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "Claude Code",
+    "effort": "max"
+  },
+  {
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "effort": "xhigh"
+  },
+  {
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "effort": "high"
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "harness": "Codex",
+    "effort": "xhigh"
+  },
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "Claude Code",
+    "effort": "medium"
+  },
+  {
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "effort": "medium"
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "harness": "Codex",
+    "effort": "max"
+  },
+  {
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "effort": "low"
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "harness": "Codex",
+    "effort": "low"
+  },
+  {
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "effort": "max"
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "harness": "Codex",
+    "effort": "medium"
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "harness": "Codex",
+    "effort": "high"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "Claude Code",
+    "effort": "high"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "Claude Code",
+    "effort": "xhigh"
+  },
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "Claude Code",
+    "effort": "low"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "Claude Code",
+    "effort": "medium"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "Claude Code",
+    "effort": "low"
+  },
+  {
+    "model": "Kimi K3.1 Pro",
+    "harness": "Claude Code",
+    "effort": "max"
+  },
+  {
+    "model": "GPT-6 Luna",
+    "harness": "Codex",
+    "effort": "max"
+  },
+  {
+    "model": "Doubao-Seed-Evolving",
+    "harness": "Claude Code",
+    "effort": "high"
+  },
+  {
+    "model": "DeepSeek V4.1 Flash",
+    "harness": "Claude Code",
+    "effort": "max"
+  },
+  {
+    "model": "GLM-5.3 Flash",
+    "harness": "Claude Code",
+    "effort": "max"
+  }
+]

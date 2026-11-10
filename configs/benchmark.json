@@ -1,0 +1,20 @@
+{
+  "tasks": 145,
+  "domains": {
+    "SWE": 17,
+    "OPS": 18,
+    "SCI": 16,
+    "MATH": 24,
+    "FIN": 16,
+    "LAW": 22,
+    "CDN": 14,
+    "3D": 18
+  },
+  "task_forms": 17,
+  "agent_budget_seconds": 14400,
+  "task_manifest": "benchmark/manifest.jsonl",
+  "file_manifest": "benchmark/provenance/files.jsonl",
+  "media_image_manifest": "evaluation/runtime/media/images/manifest.json",
+  "media_judge_model": "gemini-3.8-flash",
+  "media_judge_expected_version": "gemini-3.8-flash-n"
+}
