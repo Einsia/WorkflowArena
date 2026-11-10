@@ -6,7 +6,7 @@ WorkflowArena evaluates how agents organize and execute realistic, long-horizon 
 
 ![WorkflowArena task coverage and representative deliverables](docs/assets/overview.png)
 
-[Task index](benchmark/manifest.jsonl) · [Data and setup](#prepare-and-verify) · [Paper results](results/README.md) · [Paper figures](docs/figures.md) · [Evaluation](evaluation/README.md)
+[Paper](https://arxiv.org/abs/2611.12856) · [Citation](#citation) · [Task index](benchmark/manifest.jsonl) · [Data and setup](#prepare-and-verify) · [Paper results](results/README.md) · [Paper figures](docs/figures.md) · [Evaluation](evaluation/README.md)
 
 ## Benchmark
 
@@ -151,3 +151,18 @@ Keep evaluator files separate from solver-visible inputs and follow each task's 
 Task source records distinguish original acquisition hashes from source-identity checks. Finance packages include `environment/public/SOURCE.json` records for all 154 supplied reports. Source-specific licenses and attribution accompany the inputs; see [source notices](NOTICE.md).
 
 This repository contains task data, evaluation materials and paper-reported aggregates. Execution frameworks, per-task experimental records, participant submissions and development logs are outside this release.
+
+## Citation
+
+If you use WorkflowArena in your research, please cite [our paper](https://arxiv.org/abs/2611.12856):
+
+```bibtex
+@misc{jiang2026workflowarena,
+  title = {WorkflowArena: Benchmarking Executable Workflow Orchestration in {LLM}-Based Multi-Agent Systems},
+  author = {Zheng Jiang and Fang Niu and Bo Peng and Houde Qian and Wenyi Li and Deyao Hong and Mingju Gao and Yizhe Chi and Youjie Zheng and Kaisen Yang and Calvin Xiao and Lifeng Sun and Huan-ang Gao},
+  year = {2026},
+  eprint = {2611.12856},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2611.12856}
+}
+```
